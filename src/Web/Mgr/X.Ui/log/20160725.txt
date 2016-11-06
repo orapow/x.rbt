@@ -1,0 +1,21 @@
+
+时间：2016-07-25 10:42:02,096 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(d:\Pro\o2o\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(用户名或密码不正确)","code":"用户名或密码不正确"} 
+时间：43653 
+
+时间：2016-07-25 10:44:47,108 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(d:\Pro\o2o\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 mgr.mch.save","code":"0x0002"} 
+时间：208665 
+
+时间：2016-07-25 11:06:53,249 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(d:\Pro\o2o\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 mgr.mch.list","code":"0x0002"} 
+时间：1534806 

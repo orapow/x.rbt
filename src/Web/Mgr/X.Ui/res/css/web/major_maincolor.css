@@ -1,0 +1,65 @@
+/*style1-导航最上边边框*/
+.header_nav .nav_style1_content_li .nav_style1_content_li_noborder{border-top: 1px solid #fff;}
+/*style2-导航最上边边框*/
+.header_nav .nav_style1_content_li .nav_style2_content_li_noborder{border-top: 1px solid #fff;}
+.header_nav .nav_style1_content .nav_style1_content_hover1{border-top: 1px solid #6c390a;border-left: 1px solid #6c390a;border-bottom: 1px solid #6c390a;border-right: 1px solid #6c390a;background: #6c390a;z-index: 15;color: #fff;}
+/*全部分类导航头部标题*/
+.header_nav .Nav_TitleStyleBox{border: 2px solid #9d4f0f;border-top: none;background: #fdfdf2;}
+.header_nav .nav_style1_color1, .header_nav .nav_style1_color2{background: #fdfdf2;}
+.header_nav .nav_style1_content_li{border-top: 1px solid #FFFFFF;border-bottom: 1px solid #edede1;}
+.header_nav .nav_style1_content_li:last-child{border-bottom: 1px solid #fdfdf2;}
+/*搜索框-搜宝贝搜店铺*/
+.header_style0 .header_search .Header_Search_TypeBox .Checked {background:#6c390a;}
+.header_style0 .header_search .Header_Search_TypeBox .Checked:hover{background:#6c390a}
+/*搜索框*/
+.patt_bg_search{background: #6c390a;}
+.patt_border_search{border: 1px solid #6c390a;}
+.patt_font_search{color: white;font-size: 16px;}
+
+.patt_border_bottom_nav{border-bottom: 3px solid #6c390a;color: #6c390a !important;}
+
+/*主导航*/
+.patt_bg_nav{background: #6c390a;}
+.patt_bg_sort{background-color: #9c5810;}
+.patt_bg_header_checked{background: #462106;}
+.header_style0 .header_navbox .header_nav .header_sortnav li:hover{background: #572c07;}
+.header_style0 .header_navbox .header_nav .header_sortnav li:active{background: #462106;}
+/*时尚宽屏主导航处理*/
+.shopheader_nav .header_cheaked  a{color: #6c390a !important;}
+.shopheader_nav a:hover{color:  #6c390a !important;}
+/*左边导航-鼠标经过li换边框颜色*/
+.header_nav .nav_style1_contentBg{width: 100%;height: 100%;background: #9c5810;}
+.header_nav .nav_style1_content .nav_style1_content_hover{border-top: 1px solid #462106;border-left: 1px solid #462106;border-bottom: 1px solid #462106;border-right: 1px solid #FFFFFF;background: #fff;z-index: 15;}
+.patt_header_leftnav{border: 1px solid #462106;}
+/*主导航下边二级导航*/
+.patt_header_subnav{border: 1px solid #462106;}	
+/*二级导航-鼠标经过li换边框颜色*/
+.subnav_header{border: 1px solid #462106;border-bottom: 1px solid white;background-color: white;Z-index: 8;}
+/*确认购买*/
+.patt_bg_buy_type4{background: #c51b00;font-size: 16px;color: #fff;}
+.patt_bg_buy_type4:hover{background: #b31600;color: #fff;}
+.patt_bg_buy_type4:active{background: #9a0e00;color: #fff;}
+.patt_bg_join_cart_dimmed {background: #e1e1e1;color: #999;font-size: 16px;border:1px solid #dddddd;}
+.patt_bg_join_cart_dimmed:active {cursor:not-allowed;}
+/*加入购物车*/
+.patt_bg_join_cart{background: #c51b00;color: #fff;font-size: 16px;}
+.patt_bg_join_cart:hover{background: #b31600;color: #fff;}
+.patt_bg_join_cart:active{background: #9a0e00;color: #fff;}
+/*立即购买*/
+.patt_bg_buy_now{background: #b67136;color: #fff;font-size: 16px;}
+.patt_bg_buy_now:hover{background: #aa612d;color: #fff;}
+.patt_bg_buy_now:active{background: #91491f;color: #fff;}
+/*添加到购物车*/
+.patt_border_addcart{border: 3px solid #6c390a;}
+.patt_bg_addcart{background: #6c390a;}
+.patt_font_cart{color: #fff;}
+/*个人会员中心-近三月-鼠标经过效果*/
+.order_search .order_search_title .order_search_time:hover{background: #6c390a;color: white;}
+.order_search .order_search_title .order_search_time1:hover{background: #6c390a;color: white;}
+.order_search .order_search_title .order_search_time1:hover a{color: white;}
+.order_search .order_search_title .order_search_time:hover a{color: #fff;}
+/*在线客服-背景*/
+.patt_bg_online{font-size: 15px;background-color: #6c390a;}
+/*展开后-标题背景*/
+.patt_bg_title_online{background-color: #6c390a;}
+.patt_border_online_popup{border: solid 1px #6c390a;}

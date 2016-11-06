@@ -1,0 +1,21 @@
+
+时间：2016-07-12 13:46:16,318 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(d:\Pro\o2o\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：18435 
+
+时间：2016-07-12 13:49:29,653 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(d:\Pro\o2o\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 mgr.dict.save","code":"0x0002"} 
+时间：211769 
+
+时间：2016-07-12 13:52:16,655 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(d:\Pro\o2o\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：37347 

@@ -1,0 +1,54 @@
+
+时间：2016-10-11 09:10:37,485 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(e:\源码文件\公司O2O项目\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(用户名或密码不正确)","code":"用户名或密码不正确"} 
+时间：33416 
+
+时间：2016-10-11 11:37:22,117 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(e:\源码文件\公司O2O项目\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 mgr.goods.status","code":"0x0002"} 
+时间：2070575 
+
+时间：2016-10-11 11:38:03,192 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(e:\源码文件\公司O2O项目\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 mgr.goods.status","code":"0x0002"} 
+时间：7937 
+
+时间：2016-10-11 11:51:09,914 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(e:\源码文件\公司O2O项目\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：6055 
+System.InvalidOperationException: 不能添加已经存在的实体。
+   在 System.Data.Linq.Table`1.InsertOnSubmit(TEntity entity)
+   在 X.App.Apis.mgr.goods.save.Execute() 位置 e:\源码文件\公司O2O项目\src\Web\O2O\X.App\Apis\mgr\goods\save.cs:行号 74
+   在 X.Web.Apis.Api.GetResponse() 位置 e:\源码文件\公司O2O项目\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 e:\源码文件\公司O2O项目\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-11 14:24:30,910 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(e:\源码文件\公司O2O项目\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 mgr.goods.del","code":"0x0002"} 
+时间：9017171 
+
+时间：2016-10-11 14:24:34,656 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(e:\源码文件\公司O2O项目\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 mgr.goods.del","code":"0x0002"} 
+时间：9020916 
+
+时间：2016-10-11 14:24:40,659 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(e:\源码文件\公司O2O项目\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 mgr.goods.del","code":"0x0002"} 
+时间：9026919 

@@ -1,0 +1,411 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("wx/_head.html")
+    <title>最新房源 - $cfg.name</title>
+    <style type="text/css">
+        body { margin: 0; padding: 0; font-family: "微软雅黑"; background-color: #f6f6f6; }
+
+        .list { padding: 0; margin-top: 10px; }
+        .list .item { border-bottom: 1px solid #e3e3e3; border-top: 1px solid #e3e3e3; padding: 10px; margin-bottom: -1px; min-width: 300px; background-color: white; }
+        .item .img { width: 35%; display: inline-block; min-width: 112px; border: 1px solid #eceaea; border-radius: 5px; height: 96px; }
+        .item .info { margin-left: 2%; width: 58%; display: inline-block; position: relative; vertical-align: top; }
+        .item .info .t1 { font-size: 1.1em; line-height: 28px; color: #333; width: 60%; height: 28px; overflow: hidden; }
+        .item .info .t2 { font-size: 0.75em; color: #656565; line-height: 22px; height: 22px; overflow: hidden; }
+        .item .info .p { color: #ff6401; font-size: 1em; line-height: 30px; position: absolute; top: 0; right: 0; }
+        .item .info .p .u { font-size: 0.8em; }
+
+        .search { padding: 8px 10px; position: relative; background-color: #0078d8; }
+        .search .ipt { width: 100%; line-height: 32px; font-size: 0.85em; text-indent: 1em; border: 1px solid white; border-radius: 5px; padding: 0; height: 32px; }
+        .search .bt { position: absolute; right: 8px; top: 8px; background-color: #ff6401; color: white; font-size: 0.85em; padding: 0 10px; border-radius: 0 5px 5px 0; height: 34px; line-height: 34px; }
+
+        .cond { font-size: 0.88em; }
+        .cond .m1 { background-color: white; border-bottom: 1px solid #eceaea; }
+        .cond .m1 .m { display: inline-block; width: 25%; text-align: center; height: 40px; line-height: 40px; border-right: 1px solid #eceaea; margin-right: -1px; }
+        .cond .m1 .m:last-child { margin-left: 0; border: none; }
+        .cond .m1 .m.on { color: #ff6401; }
+        .cond .m2 { display: none; position: absolute; background-color: white; width: 100%; box-shadow: 0 0 5px 0px #ccc; padding-bottom: 15px; z-index: 9; }
+
+        .m2.ar { padding-bottom: 0; }
+        .m2.ar .left { position: absolute; height: 245px; border-right: 1px solid #ccc; background: white; }
+        .m2.ar .left .li { display: block; width: 110px; text-align: center; line-height: 2.5em; border-bottom: 1px solid #ccc; }
+        .m2.ar .left .li.on { background-color: rgba(236, 234, 234, 0.5); color: #ff6401; }
+        .m2.ar .right { margin-left: 111px; }
+        .m2.ar .right .li { display: block; line-height: 2.5em; }
+        .m2.ar .right .t1 { background-color: rgba(236, 234, 234, 0.5); height: 245px; overflow-y: auto; }
+        .m2.ar .right .t1 .li { text-indent: 2em; border-bottom: 1px solid #ccc; }
+        .m2.ar .right .t1 .li.on { background-color: #e8e8e8; color: #ff6401; }
+        .m2.ar .right .t2 { position: absolute; right: 0; top: 0; background-color: #e8e8e8; width: 40%; height: 245px; overflow-y: auto; border-left: 1px solid #ccc; }
+        .m2.ar .right .t2 .li { text-align: center; border-bottom: 1px solid #ccc; }
+        .m2.ar .right .t2 .li.on { text-align: center; color: #ff6401; }
+
+        .m2.zh { padding-bottom: 0; }
+        .m2.zh .left { position: absolute; height: 245px; border-right: 1px solid #ccc; background: white; }
+        .m2.zh .left .li { display: block; width: 110px; text-align: center; line-height: 2.5em; border-bottom: 1px solid #ccc; }
+        .m2.zh .left .li.on { background-color: rgba(236, 234, 234, 0.5); color: #ff6401; }
+        .m2.zh .right { margin-left: 111px; }
+        .m2.zh .right .li { display: block; line-height: 2.5em; }
+        .m2.zh .right .t1 { background-color: rgba(236, 234, 234, 0.5); height: 245px; overflow-y: auto; display: none; }
+        .m2.zh .right .t1 .li { text-indent: 2em; border-bottom: 1px solid #ccc; }
+        .m2.zh .right .t1 .li.on { background-color: #e8e8e8; color: #ff6401; }
+
+        .m2.pr { }
+        .m2.pr .li { display: block; text-align: center; line-height: 2.5em; border-bottom: 1px solid #e3e3e3; }
+        .m2.pr .li.on { color: #ff6401; }
+        .m2.pr .li:last-child { border: none; }
+
+        .m2.px { }
+        .m2.px .li { display: block; text-align: center; line-height: 2.5em; border-bottom: 1px solid #e3e3e3; }
+        .m2.px .li.on { color: #ff6401; }
+        .m2.px .li:last-child { border: none; }
+
+        .dropload-up, .dropload-down { position: relative; height: 0; overflow: hidden; font-size: 16px; -webkit-transform: translateZ(0); transform: translateZ(0); }
+        .dropload-down { height: 50px; }
+        .dropload-refresh, .dropload-update, .dropload-load, .dropload-noData { height: 50px; line-height: 50px; text-align: center; }
+        .dropload-load .loading { display: inline-block; height: 15px; width: 15px; border-radius: 100%; margin: 6px; border: 2px solid #666; border-bottom-color: transparent; vertical-align: middle; -webkit-animation: rotate 0.75s linear infinite; animation: rotate 0.75s linear infinite; }
+
+        input { -webkit-appearance: none; }
+
+        .pin { z-index: 999; background-color: white; }
+        .pined { position: fixed; left: 0; top: 0; width: 100%; }
+
+        .loading { background: url(/img/loading.gif); background-repeat: no-repeat; background-size: contain; display: inline-block; height: 20px; vertical-align: middle; margin-right: 10px; text-indent: 2em; }
+    </style>
+</head>
+<body>
+    <div class="pin">
+        <div class="search">
+            <input placeholder="请输入您想租住的小区/区域" class="ipt" id="txt_key" value="$!key" /><span class="bt" onclick="do_search()">搜索</span>
+        </div>
+        <div class="cond">
+            <div class="m1">
+                <span class="m" id="mqy">地域</span><span class="m" id="mzh">租赁</span><span class="m" id="mpr">价格</span><span class="m" id="mpx">排序</span>
+            </div>
+            <div class="m2 ar">
+                <div class="left">
+                    <span class="li">生活圈</span>
+                    <span class="li">地铁</span>
+                    <span class="li">附近</span>
+                </div>
+                <div class="right">
+                    <div class="t1">
+                    </div>
+                    <div class="t2">
+                    </div>
+                </div>
+            </div>
+            <div class="m2 zh">
+                <div class="left">
+                    <span class="li">不限</span>
+                    <span class="li">整租</span>
+                    <span class="li">合租</span>
+                </div>
+                <div class="right">
+                    <div class="t1">
+                        <span class="li">不限</span>
+                        <span class="li" data-val="99">大开间</span>
+                        <span class="li" data-val="1">1室</span>
+                        <span class="li" data-val="2">2室</span>
+                        <span class="li" data-val="3">3室</span>
+                        <span class="li" data-val="4">3室以上</span>
+                    </div>
+                    <div class="t1">
+                        <span class="li">不限</span>
+                        #foreach($r in $lea_rooms)
+                        <span class="li" data-val="$r.value">$r.name</span>
+                        #end
+                    </div>
+                </div>
+            </div>
+            <div class="m2 pr">
+                <span class="li" data-val=",">不限</span>
+                <span class="li" data-val=",1500">1500元以下</span>
+                <span class="li" data-val="1500,2500">1500-2500元</span>
+                <span class="li" data-val="2500,4000">2500-4000元</span>
+                <span class="li" data-val="4000,6000">4000-6000元</span>
+                <span class="li" data-val="6000,8000">6000-8000元</span>
+                <span class="li" data-val="8000,">8000元以上</span>
+            </div>
+            <div class="m2 px">
+                <span class="li" data-val="0">默认排序</span>
+                <span class="li" data-val="2">低价优先</span>
+                <span class="li" data-val="3">高价优先</span>
+            </div>
+        </div>
+    </div>
+    <div class="sec list">
+        <div class="lists">
+        </div>
+    </div>
+    #parse("wx/_foot.html")
+    <script src="/js/swp.min.js"></script>
+    <script type="text/javascript">
+        var m1 = null;
+        var m2 = null;
+        var l1 = null;
+        var l2 = null;
+        var l3 = null;
+        var pr = null;
+        var px = null;
+        var zh = null;
+        var data={key:"$!key",page:1};
+        var count=0;
+
+        var load_t=null;
+        var isloaded=false;
+        var dt=new Date();
+
+        sharedata={
+            title: "最新合作房源",
+            desc: "找房网最新合作房源，最快，最准，最全，100%真实",
+            img:document.location.origin+ "/img/wx/yb.jpg"
+        }
+
+        function wxready(){
+            wx.getLocation({
+                type: 'gcj02', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+                success: function (d) {
+                    if(load_t)clearTimeout(load_t);
+                    if(isloaded)return;
+                    data.t1=d.longitude;
+                    data.t2=d.latitude;
+                    loaddata(1);
+                }
+            });
+        }
+
+        function do_search(){
+            data.key=$("#txt_key").val();
+            loaddata(1);
+        }
+
+        function set_share(k){
+            sharedata.title=k+(dt.getMonth()+1)+"月"+dt.getDate()+"日最新合作房源[共"+count+"条]";
+            if(k){
+                sharedata.desc="找房网实时更新【"+k+"】最新合作房源，最快，最准，最全，100%真实";
+                sharedata.link=document.location.origin +"/wx/list-"+escape(escape(k))+".html";
+            }
+            else sharedata.desc="找房网最新合作房源，最快，最准，最全，100%真实";
+            set_share_data();
+        }
+
+        $(function () {
+            load_t=setTimeout(function(){
+                isloaded=true;
+                loaddata(1);
+            },500);
+
+            $(".m1 .m").click(function () {
+                if (m1) m1.removeClass("on");
+                m1 = $(this);
+                m1.addClass("on");
+                if (m2) m2.hide();
+                m2 = $(".m2:eq(" + m1.index() + ")");
+                m2.show();
+                if(m1.index()==0&&l1==null)$(".m2.ar .left .li:eq(0)").click();
+                else if(m1.index()==1&&l1==null)$(".m2.zh .left .li:eq(1)").click();
+            });
+
+            $(".m2.ar .left .li").click(function () {
+                if(l1)l1.removeClass("on");
+                l1=$(this);
+                l1.addClass("on");
+                data.ar=l1.index()+1;
+                loadt1(data.ar-1);
+            });
+
+            $(".m2.zh .left .li").click(function () {
+                if(l1)l1.removeClass("on");
+                l1=$(this);
+                l1.addClass("on");
+                var ind=l1.index();
+                data.room="";
+                data.lea=ind+1;
+                if(zh)zh.hide();
+                if(data.lea>1){
+                    zh=$(".m2.zh .right .t1:eq("+(ind-1)+")");
+                    zh.show();
+                }
+                else loaddata(1);
+                $("#mzh").text(data.lea==1?"租赁":l1.text());
+            });
+
+            $(".m2.zh .right .t1 .li").click(function () {
+                if(l2)l2.removeClass("on");
+                l2=$(this);
+                l2.addClass("on");
+                data.room=l2.attr("data-val");
+                loaddata(1);
+                if(data.room)$("#mzh").text(l2.text());
+                else l1.click();
+            });
+
+            $(".m2.pr .li").click(function(){
+                if(pr)pr.removeClass("on");
+                pr=$(this);
+                pr.addClass("on");
+                data.pr=pr.attr("data-val");
+                loaddata(1);
+                $("#mpr").text(data.pr==","?"价格":pr.text());
+            });
+
+            $(".m2.px .li").click(function(){
+                if(px)px.removeClass("on");
+                px=$(this);
+                px.addClass("on");
+                data.px=px.attr("data-val");
+                loaddata(1);
+                $("#mpx").text(data.px=="0"?"排序":px.text());
+            });
+
+            $(".m2.zh .ic").click(function(){
+                var p=$(this).parent().attr("data-p");
+                $(this).parent().find(".ic").removeClass("on");
+                $(this).addClass("on");
+                data[p]=$(this).attr("data-val");
+                data.page=1;
+                loaddata();
+            });
+
+            $('.sec.list').dropload({
+                scrollArea: window,
+                domUp: {
+                    domClass: 'dropload-up',
+                    domRefresh: '<div class="dropload-refresh">↓下拉刷新</div>',
+                    domUpdate: '<div class="dropload-update">↑释放刷新</div>',
+                    domLoad: '<div class="dropload-load"><span class="loading"></span>正在加载中...</div>'
+                },
+                domDown: {
+                    domClass: 'dropload-down',
+                    domRefresh: '<div class="dropload-refresh">↑上拉加载更多</div>',
+                    domLoad: '<div class="dropload-load"><span class="loading"></span>正在加载中...</div>',
+                    domNoData: '<div class="dropload-noData">没有更多数据了</div>'
+                },
+                loadUpFn: function (me) {
+                    data.page=1;
+                    loaddata(function () {
+                        me.resetload();
+                    });
+                },
+                loadDownFn: function (me) {
+                    loaddata(function (end) {
+                        setTimeout(function () {
+                            me.resetload();
+                            if (end) {
+                                me.lock();
+                                me.noData();
+                            } else {
+                                data.page++;
+                            }
+                        }, 1000)
+                    });
+                },
+                threshold: 50
+            });
+
+        });
+
+        function chk_pin(){
+            var pin=$("div.pin");
+            var top=$(this).scrollTop();
+            if(top<62&&pin.hasClass("pined")){pin.removeClass("pined");$(".sec.list").css("margin-top","10px")}
+            else if(top>62&&!pin.hasClass("pined")){pin.addClass("pined");$(".sec.list").css("margin-top","104px")}
+        }
+
+        document.onscroll=chk_pin;
+        //document.ontouchmove=chk_pin;
+        //document.ontouchend=function(){
+        //    setTimeout(chk_pin,10);
+        //}
+
+        function t2_click(obj){
+            if(l3)l3.removeClass("on");
+            l3=$(obj);
+            l3.addClass("on");
+            data.t2=l3.attr("data-val");
+            if(data.ar==1&&data.t2>0)set_share(l3.text());
+            $("#mqy").text( data.t2?l3.text():l2.text());
+            loaddata(1);
+        }
+
+        function t1_click(obj){
+            if(l2)l2.removeClass("on");
+            l2=$(obj);
+            l2.addClass("on");
+            var ind=l2.index()-1;
+            var t2=$(".m2.ar .right .t2").empty();
+            data.t1=l2.attr("data-val");
+            data.t2="";
+            if(data.ar==1)set_share(l2.text());
+            if(!data.t1){
+                data.ar="";
+                loaddata(1);
+            }else{
+                data.ar=l1.index()+1;
+                var list=ar[data.ar-1][ind].sub;
+                if(list){
+                    if(data.ar==1)t2.append("<span class=\"li\" data-val='' onclick='t2_click(this)'>不限</span>")
+                    for(var c in list){
+                        var d=list[c];
+                        t2.append("<span class=\"li\" data-val='"+d.id+"' onclick='t2_click(this)'>"+d.name+"</span>");
+                    }
+                    t2.show();
+                }else{
+                    loaddata(1);
+                }
+            }
+            $("#mqy").text(data.t1?l2.text():"区域");
+        }
+
+        function loaddata(cb){
+            if(m1)m1.removeClass("on");
+            m1=null;$(".m2").hide();
+            var url="/wx/coop-"+(data.ar||"")+"-"+(data.t1||"")+"-"+(data.t2||"")+"-"+(data.pr||"")+"-"+(data.px||"")+"-"+((data.lea-1)||"")+"-"+(data.room||"")+"-"+(escape(escape(data.key))||"")+"-"+(data.page||"")+".html";
+            jQuery.get(url,function(d){
+                if (d) {
+                    if (data.page >= 2) $(".sec.list .lists").append(d);
+                    else $(".sec.list .lists").html(d);
+                }
+                if (cb) cb(!d);
+                set_share($("#txt_key").val());
+            });
+        }
+
+        function loadt1(i){
+            var list=ar[i];
+            var t1= $(".m2.ar .right .t1").empty();
+            var t2= $(".m2.ar .right .t2").empty().hide();
+            t1.append("<span class=\"li\" data-val='' onclick='t1_click(this)'>不限</span>");
+            for(var c in list){
+                var d=list[c];
+                t1.append("<span class=\"li\" data-val='"+d.id+"' onclick='t1_click(this)'>"+d.name+"</span>");
+            }
+        }
+
+        var ar=[[],[],[{name:"1千米内",id:1},{name:"3千米内",id:2},{name:"5千米内",id:3}]];
+        #foreach($c in $T.GetDictList("coop.dt",""))
+        var l={
+            name:"$c.name",
+            id:"$c.value",
+            sub:[]
+        }
+            #foreach($c2 in $T.GetDictList("coop.dt",$c.value))
+        l.sub.push({name:"$c2.name",id:"$c2.value"});
+            #end
+        ar[1].push(l);
+        #end
+
+        #foreach($c in $T.GetDictList("coop.qy",""))
+        var q={
+            name:"$c.name",
+            id:"$c.value",
+            sub:[]
+        }
+            #foreach($c2 in $T.GetDictList("coop.qy",$c.value))
+        q.sub.push({name:"$c2.name",id:"$c2.value"});
+            #end
+        ar[0].push(q);
+        #end
+    </script>
+</body>
+</html>

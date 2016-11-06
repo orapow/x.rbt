@@ -1,0 +1,278 @@
+
+时间：2016-07-02 08:14:42,844 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：88081 
+System.InvalidOperationException: ExecuteReader 要求已打开且可用的 Connection。连接的当前状态为正在连接。
+   在 System.Data.SqlClient.SqlConnection.GetOpenConnection(String method)
+   在 System.Data.SqlClient.SqlConnection.ValidateConnectionForExecute(String method, SqlCommand command)
+   在 System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader()
+   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.Data.x_com.GetDictList(String code, String upval) 位置 D:\Pro\zfw\Web\Erp\src\Xc\Data\DataClasses.cs:行号 671
+   在 X.Data.x_com.GetDictName(String code, String value) 位置 D:\Pro\zfw\Web\Erp\src\Xc\Data\DataClasses.cs:行号 633
+   在 X.Data.x_com.GetDictName(String code, Nullable`1 val) 位置 D:\Pro\zfw\Web\Erp\src\Xc\Data\DataClasses.cs:行号 654
+   在 X.Data.x_coop.get_type_name() 位置 D:\Pro\zfw\Web\Erp\src\Xc\Data\DataClasses.cs:行号 259
+   在 Read_<>f__AnonymousType37`18(ObjectMaterializer`1 )
+   在 System.Data.Linq.SqlClient.ObjectReaderCompiler.ObjectReader`2.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.coop.InitDict() 位置 D:\Pro\zfw\Web\Erp\src\Web\Erp\X.App\Views\wx\coop.cs:行号 176
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\zfw\Web\Erp\src\Web\X.Web\Views\View.cs:行号 94
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\zfw\Web\Erp\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-07-02 08:14:47,621 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: D5R1Fa0496ssz4 ]"} 
+时间：92859 
+
+时间：2016-07-02 08:14:58,610 
+级别：INFO  
+出错类：info property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Info(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:79) - 
+错误：get_city->127.0.0.1:-2 
+时间：103847 
+
+时间：2016-07-02 08:15:00,116 
+级别：INFO  
+出错类：info property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Info(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:79) - 
+错误：get_city->127.0.0.1:-2 
+时间：105354 
+
+时间：2016-07-02 08:15:01,014 
+级别：INFO  
+出错类：info property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Info(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:79) - 
+错误：get_city->127.0.0.1:-2 
+时间：106252 
+
+时间：2016-07-02 08:15:16,396 
+级别：INFO  
+出错类：info property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Info(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:79) - 
+错误：get_city->127.0.0.1:-2 
+时间：121633 
+
+时间：2016-07-02 08:15:52,218 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: G0HHDA0560ssz3 ]"} 
+时间：1429 
+
+时间：2016-07-02 08:17:26,542 
+级别：INFO  
+出错类：info property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Info(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:79) - 
+错误：get_city->127.0.0.1:1	-1	-1	?й?	????	???				 
+时间：95753 
+
+时间：2016-07-02 08:17:32,155 
+级别：INFO  
+出错类：info property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Info(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:79) - 
+错误：get_city->127.0.0.1:1	-1	-1	?й?	????	???				 
+时间：101366 
+
+时间：2016-07-02 08:17:33,497 
+级别：INFO  
+出错类：info property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Info(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:79) - 
+错误：get_city->127.0.0.1:1	-1	-1	?й?	????	???				 
+时间：102708 
+
+时间：2016-07-02 08:17:36,819 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 6xe7cA0665ssz2 ]"} 
+时间：106029 
+
+时间：2016-07-02 08:17:46,326 
+级别：INFO  
+出错类：info property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Info(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:79) - 
+错误：get_city->127.0.0.1:1	-1	-1	?й?	????	???				 
+时间：115537 
+
+时间：2016-07-02 08:17:47,300 
+级别：INFO  
+出错类：info property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Info(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:79) - 
+错误：get_city->127.0.0.1:1	-1	-1	?й?	????	???				 
+时间：116510 
+
+时间：2016-07-02 08:17:47,980 
+级别：INFO  
+出错类：info property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Info(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:79) - 
+错误：get_city->127.0.0.1:1	-1	-1	?й?	????	???				 
+时间：117190 
+
+时间：2016-07-02 08:25:06,566 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 0BABJa0115ssz4 ]"} 
+时间：1290 
+
+时间：2016-07-02 08:25:15,508 
+级别：INFO  
+出错类：info property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Info(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:79) - 
+错误：get_city->127.0.0.1:1	-1	-1	中国	湖南	长沙				 
+时间：10233 
+
+时间：2016-07-02 08:27:25,489 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: fKqzQA0254ssz4 ]"} 
+时间：556 
+
+时间：2016-07-02 08:27:31,208 
+级别：INFO  
+出错类：info property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Info(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:79) - 
+错误：get_city->127.0.0.1:1	-1	-1	中国	湖南	长沙				 
+时间：6274 
+
+时间：2016-07-02 08:27:46,507 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: K79c.a0275ssz5 ]"} 
+时间：21574 
+
+时间：2016-07-02 08:44:04,201 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 9mrGsA0252ssz4 ]"} 
+时间：511 
+
+时间：2016-07-02 08:53:17,973 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: wDHOda0806ssz3 ]"} 
+时间：554283 
+
+时间：2016-07-02 08:53:18,679 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: qlTaSa0807ssz1 ]"} 
+时间：554989 
+
+时间：2016-07-02 08:53:34,006 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: e0822ssz1 ]"} 
+时间：570316 
+
+时间：2016-07-02 08:53:58,576 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: lZmkta0847ssz2 ]"} 
+时间：594886 
+
+时间：2016-07-02 08:54:08,200 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: h_5ofA0856ssz2 ]"} 
+时间：604510 
+
+时间：2016-07-02 08:54:50,399 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 82XBua0898ssz3 ]"} 
+时间：646708 
+
+时间：2016-07-02 08:55:05,608 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: XKUqZa0914ssz5 ]"} 
+时间：661918 
+
+时间：2016-07-02 08:55:15,386 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: x13MLA0923ssz1 ]"} 
+时间：671695 
+
+时间：2016-07-02 08:55:58,500 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: vPivCA0967ssz4 ]"} 
+时间：714810 
+
+时间：2016-07-02 08:56:50,048 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 8EBwsa0018ssz1 ]"} 
+时间：766358 
+
+时间：2016-07-02 08:57:03,746 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: Dmavha0032ssz4 ]"} 
+时间：780055 
+
+时间：2016-07-02 09:01:14,729 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: qjgjkA0283ssz1 ]"} 
+时间：1480 
+
+时间：2016-07-02 09:02:44,868 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: sws70a0373ssz2 ]"} 
+时间：91618 
+
+时间：2016-07-02 09:04:39,390 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: w5ZfCa0487ssz1 ]"} 
+时间：2141 
+
+时间：2016-07-02 09:04:46,652 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: SPm.ya0495ssz5 ]"} 
+时间：9403 
+
+时间：2016-07-02 09:04:59,869 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\zfw\Web\Erp\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 1LMfkA0508ssz4 ]"} 
+时间：22620 

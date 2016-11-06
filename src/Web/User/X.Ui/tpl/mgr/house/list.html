@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("com/_head.html")
+    <title>楼盘管理 - $cfg.name</title>
+    <style type="text/css">
+        .search .li { display: inline-block; }
+        .search .lbe { display: none; }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <span class="main">楼盘管理</span>
+    </div>
+    <div class="search">
+        <form method="post">
+            $F.GetPicker("region","区域","","","dict:coop.qy:businessarea")
+            $F.GetPicker("businessarea","商圈","","","dict:coop.qy:::1","$!item.region")
+            $F.GetPicker("subwayline","地铁线","","","dict:coop.dt:subwaystation")
+            $F.GetPicker("subwaystation","地铁站","","","dict:coop.dt:::1","$!item.subwayline")
+            <input type="text" placeholder="卡号" name="key" data-check="" />
+            <button type="submit" class="btn btn-primary"><i class="icon-search"></i>搜索</button>
+            <button type="reset" class="btn"><i class="icon-remove"></i>清除</button>
+            <div class="btns">
+                <span class="btn btn-primary" id="btn_add" onclick="show_house_edit('')"><i class="icon-plus"></i>录入楼盘</span>
+            </div>
+        </form>
+    </div>
+    <div class="gridpanel">
+    </div>
+    <script type="text/javascript">
+        x.form.init({
+            postedcallback: function (d) {
+                d.page = 1;
+                g.getlist(d);
+            },
+            m: 1
+        });
+
+        var cfg = {
+            el: ".gridpanel",
+            searchcon: { page: 1, limit: 30 },
+            api: "mgr.houses.list",
+            fs: [
+              { t: "名称", f: "{name}", w: 120, align: "left" },
+
+              { t: "区域", f: "{region_name}-{businessarea_name}", w: 100, align: "center" },
+              { t: "地铁线", f: "{subwayline_name}-{subwaystation_name}", w: 100, align: "center" },
+
+              { t: "开盘时间", f: "{opentime}", w: 80, align: "center" },
+
+              { t: "详细地址", f: "{address}", w: 180, align: "left" },
+
+              { t: "开发商", f: "{developers}", w: 80, align: "center" },
+              { t: "物业", f: "{propertycompany}-{propertytype}-{propertyfee}", w: 260, align: "left" },
+
+              { t: "状态", f: "{state_name}", w: 60, align: "center" },
+            ],
+            btns: []
+        };
+        cfg.getbtns = function (d) {
+            var btns = [];
+            if (d.state == 1) {
+                btns.push({ txt: "通过", ico: "file-alt", act: "tg" });
+                btns.push({ txt: "不通过", ico: "file-alt", act: "btg" });
+            } else if (d.state == 2) {
+                btns.push({ txt: "不通过", ico: "file-alt", act: "btg" });
+            } else {
+                btns.push({ txt: "删除", ico: "remove", act: "del" });
+                btns.push({ txt: "编辑", ico: "edit", act: "edit", confirm: false });
+            }
+            return btns;
+        }
+        //(初始:1,通过:2,不通过:3)
+        cfg.cellclick = function (act, d) {
+            switch (act) {
+                case "tg":
+                    doCheck(d.id, 2);
+                    break;
+                case "btg":
+                    doCheck(d.id, 3);
+                    break;
+                case "edit":
+                    show_house_edit(d.id);
+                    break;
+                case "del":
+                    doDel(d.id);
+                    break;
+                default:
+                    x.dialog.alert("动作" + act + "未定义");
+                    break;
+            }
+        };
+        var g = x.grid.init(cfg);
+
+        function doCheck(id, state) {
+            x.com.doapi("mgr.houses.check", { id: id, state: state }, function () {
+                g.getlist();
+            });
+        }
+
+        function show_house_edit(id) {
+            x.com.openwin("edit-" + id + ".html", "楼盘编辑", function () {
+                g.getlist();
+            }, { w: 800, h: $(document).height() * 0.85 });
+        }
+    </script>
+</body>
+</html>

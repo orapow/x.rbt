@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 26, 24.75" name="RbtDB">
+  <DataContextMoniker Name="/RbtDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="fa9c08e2-f123-473b-b686-912b870246a3" absoluteBounds="19.75, 19.375, 2, 2.2764815266927085">
+      <DataClassMoniker Name="/RbtDBDataContext/x_logon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e580f64b-4d81-4e0c-a02c-c38e05a686ce" absoluteBounds="19.765, 19.835, 1.9700000000000002, 1.7164815266927085" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="be6ba748-f532-48c8-a1e6-0cb3c21e4639" absoluteBounds="19.5, 11.375, 2, 2.2764815266927094">
+      <DataClassMoniker Name="/RbtDBDataContext/x_buy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bfaeb609-27a0-4632-9c4d-503849a44aaf" absoluteBounds="19.515, 11.835, 1.9700000000000002, 1.7164815266927085" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c2f9ab70-acea-447d-b0ee-d57221243a48" absoluteBounds="19.75, 15.5, 2, 2.8308638509114594">
+      <DataClassMoniker Name="/RbtDBDataContext/x_task" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c0b9dd06-a688-48ba-8683-a8306afe62a6" absoluteBounds="19.765, 15.96, 1.9700000000000002, 2.270863850911458" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="84d15114-d62e-432a-a667-0e96e10b0adf" absoluteBounds="11, 19.5, 2, 3.0156579589843773">
+      <DataClassMoniker Name="/RbtDBDataContext/x_contact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="345f9f8a-829b-4985-af07-cdbacdc0ad4c" absoluteBounds="11.015, 19.96, 1.9700000000000002, 2.455657958984375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="78236263-d79f-4994-a018-754121421c6e" absoluteBounds="11.125, 14.875, 2, 1.9068933105468737">
+      <DataClassMoniker Name="/RbtDBDataContext/x_group" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e8f523cc-9113-4598-9404-7442962ae633" absoluteBounds="11.14, 15.335, 1.9700000000000002, 1.346893310546875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5b06d6b5-5549-4060-a463-6964172bd066" absoluteBounds="15.5, 21.5, 2, 3.0156579589843773">
+      <DataClassMoniker Name="/RbtDBDataContext/x_order" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d8c7bd1-6c1e-4257-aaf8-6582b860f2f1" absoluteBounds="15.515, 21.96, 1.9700000000000002, 2.455657958984375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3327a93e-37b5-4cce-b951-1df2408e0eea" absoluteBounds="23.75, 11.625, 2, 3.2004520670572916">
+      <DataClassMoniker Name="/RbtDBDataContext/x_store" />
+      <nestedChildShapes>
+        <elementListCompartment Id="35ab4825-00a6-4db1-9148-80d3ac8f0c82" absoluteBounds="23.765, 12.085, 1.9700000000000002, 2.6404520670572915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b67361bf-3a77-4253-9461-2bb4e0734ef9" absoluteBounds="15.5, 14.75, 2, 4.6788049316406237">
+      <DataClassMoniker Name="/RbtDBDataContext/x_user" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c22574af-41df-4e86-a895-74beecacaca6" absoluteBounds="15.515, 15.21, 1.9700000000000002, 4.118804931640625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(23.75 : 12.6382407633464); (21.5 : 12.6382407633464)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/RbtDBDataContext/x_store/x_store_x_buy" />
+      <nodes>
+        <classShapeMoniker Id="3327a93e-37b5-4cce-b951-1df2408e0eea" />
+        <classShapeMoniker Id="be6ba748-f532-48c8-a1e6-0cb3c21e4639" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(24.75 : 14.8254520670573); (24.75 : 16.9154319254557); (21.75 : 16.9154319254557)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/RbtDBDataContext/x_store/x_store_x_task" />
+      <nodes>
+        <classShapeMoniker Id="3327a93e-37b5-4cce-b951-1df2408e0eea" />
+        <classShapeMoniker Id="c2f9ab70-acea-447d-b0ee-d57221243a48" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.5 : 14.75); (16.5 : 12.3433658672823); (19.5 : 12.3433658672823)]" fixedFrom="Algorithm" fixedTo="Caller">
+      <AssociationMoniker Name="/RbtDBDataContext/x_user/x_user_x_buy" />
+      <nodes>
+        <classShapeMoniker Id="b67361bf-3a77-4253-9461-2bb4e0734ef9" />
+        <classShapeMoniker Id="be6ba748-f532-48c8-a1e6-0cb3c21e4639" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.5 : 16.9154319254557); (19.75 : 16.9154319254557)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/RbtDBDataContext/x_user/x_user_x_task" />
+      <nodes>
+        <classShapeMoniker Id="b67361bf-3a77-4253-9461-2bb4e0734ef9" />
+        <classShapeMoniker Id="c2f9ab70-acea-447d-b0ee-d57221243a48" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.5 : 17.8865991210938); (12.46875 : 17.8865991210938); (12.46875 : 19.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/RbtDBDataContext/x_user/x_user_x_contact" />
+      <nodes>
+        <classShapeMoniker Id="b67361bf-3a77-4253-9461-2bb4e0734ef9" />
+        <classShapeMoniker Id="84d15114-d62e-432a-a667-0e96e10b0adf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.5 : 15.8284466552734); (13.125 : 15.8284466552734)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/RbtDBDataContext/x_user/x_user_x_group" />
+      <nodes>
+        <classShapeMoniker Id="b67361bf-3a77-4253-9461-2bb4e0734ef9" />
+        <classShapeMoniker Id="78236263-d79f-4994-a018-754121421c6e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.5 : 19.4288049316406); (16.5 : 21.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/RbtDBDataContext/x_user/x_user_x_order" />
+      <nodes>
+        <classShapeMoniker Id="b67361bf-3a77-4253-9461-2bb4e0734ef9" />
+        <classShapeMoniker Id="5b06d6b5-5549-4060-a463-6964172bd066" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

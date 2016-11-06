@@ -1,0 +1,35 @@
+/*插件-标题*/
+.patt_bg_plugin_title
+{
+    border-bottom-width:2px;
+    border-bottom-style:solid;
+}
+.patt_border_plugin_title 
+{
+    border-top-color:#e6e6e6;
+}
+.patt_border_plugin_untitle {
+    border-top-color:#e6e6e6
+}
+.patt_border_showcase_type1_title li
+{
+	border-right: 1px solid #e6e6e6;
+    border-top-color:#e6e6e6;
+    border-top-style:solid;
+
+
+}
+.patt_border_showcase_type1_title
+{
+    border-bottom-width:2px;
+}
+.showcase_TitleBox {
+	height:39px;
+}
+..patt_border_showcase_type1_inner {
+	border-bottom-width:2px;
+	border-bottom-style:solid;
+}
+.showcase_type1-inner-border {
+	margin-top:1px;
+}

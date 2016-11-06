@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("com/_head.html")
+    <title>二房东资料 - $cfg.name</title>
+    <style type="text/css">
+        body { margin: 0; padding: 0; }
+        .upload.imgs img { border: 1px white solid; padding: 2px; border-radius: 5px; max-width: 80px; max-height: 60px; margin-right: 5px; }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <form method="post" id="frm_house" api="mgr.agent.save">
+            <div class="inputs">
+                <input type="hidden" name="id" value="$!item.id" data-check="" />
+                $F.GetUploader("logo","Logo","img","$!item.logo",1,"")
+                $F.GetPicker("status","合作状态","$!item.status","","dict:agent.st")
+
+                $F.GetInput("name","名称","no","$!item.name")
+                $F.GetInput("uid","帐号","","$!item.uid")
+                $F.GetInput("pwd","密码","no","$!item.pwd")
+
+                $F.GetInput("contract","联系人","no","$!item.contract")
+                $F.GetInput("tel","联系电话","no","$!item.tel")
+
+                $F.GetInput("addr","公司地址","","$!item.addr")
+                $F.GetInput("point","公司坐标","","$!item.point")
+                $F.GetMuti("intro","公司简介","$!item.intro","")
+
+            </div><hr />
+            <div class="btns" style="padding-left:90px">
+                <button type="submit" class="btn btn-primary"><i class="icon-ok"></i>提交保存</button>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+
+        x.form.init({
+            postedcallback: function (r) {
+                //x.com.closewin();
+                parent.x.com.closewin();
+            }
+        });
+
+        function uploadfile() {
+            x.com.doupload("#id_file", "img", function (d) {
+                id_logo.src = d.msg;
+                txt_logo.value = d.msg;
+            })
+        }
+
+        $(function () {
+            $("#id_point").click(function () {
+                x.com.getbdpoint($(this));
+            });
+        });
+
+    </script>
+</body>
+</html>

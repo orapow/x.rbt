@@ -1,0 +1,46 @@
+/* 全分类导航 style3 */
+.nav_style4_Class12{background: #9c5810;border-bottom: 1px solid #85450c;border-top: 1px solid #b06512;}
+.nav_style3_SubClass2 .checked{background-color: #9c5810;}
+/*style1-导航最上边边框*/
+.nav_style1_content_li .nav_style1_content_li_noborder{border-top: 1px solid #fff;}
+/*style2-导航最上边边框*/
+.nav_style1_content_li .nav_style2_content_li_noborder{border-top: 1px solid #fff;}
+.nav_style1_content .nav_style1_content_hover1{border-top: 1px solid #6c390a;border-left: 1px solid #6c390a;border-bottom: 1px solid #6c390a;border-right: 1px solid #6c390a;background: #6c390a;z-index: 15;color: #fff;}
+/*全部分类导航头部标题*/
+.plugin_containers .Nav_TitleStyleBox, .Nav_TitleStyleBox{border: 2px solid #9d4f0f;border-top: none;background: #fdfdf2;}
+.Nav_TitleStyleBox .patt_bg_plugin_title{
+	/* 底色 */
+	background-color: #063053;
+	/* chrome 2+, safari 4+; multiple color stops */
+	background-image:-webkit-gradient(linear, left bottom, left top, color-stop(0.32, #965d2c), color-stop(0.66, #6c390a));
+	/* chrome 10+, safari 5.1+ */
+	background-image: -webkit-linear-gradient(#965d2c, #6c390a);
+	/* firefox; multiple color stops */
+	background-image: -moz-linear-gradient(top,#965d2c, #6c390a);
+	/* ie 6+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#965d2c', endColorstr='#6c390a');
+	/* ie8 + */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#965d2c', endColorstr='#6c390a')";
+	/* ie10 */
+	background-image: -ms-linear-gradient(#965d2c, #6c390a);
+	/* opera 11.1 */
+	background-image: -o-linear-gradient(#965d2c, #6c390a);
+	/* 标准写法 */
+	background-image: linear-gradient(#965d2c, #6c390a);
+}
+.nav_style1_color1, .nav_style1_color2{background: #fdfdf2;}
+.nav_style1_content_li{border-top: 1px solid #FFFFFF;border-bottom: 1px solid #edede1;}
+.nav_style1_content_li:last-child{border-bottom: 1px solid #fdfdf2;}
+/*左边导航-鼠标经过li换边框颜色*/
+.nav_style1_contentBg{width: 100%;height: 100%;background: #9c5810;}
+.nav_style1_content .nav_style1_content_hover{border-top: 1px solid #462106;border-left: 1px solid #462106;border-bottom: 1px solid #462106;border-right: 1px solid #FFFFFF;background: #fff;z-index: 15;}
+.patt_border_leftnav{border: 1px solid #462106;}
+/*插件-标题*/
+.patt_bg_plugin_title{border-bottom-color: #6c390a;}
+.patt_border_plugin_title{border-bottom-color: #6c390a;border: 1px solid #e6e6e6;border-top-color: #6c390a;}
+.patt_border_plugin_untitle{border: 1px solid #e6e6e6;border-top-color: #6c390a;}
+/*插件-多标签橱窗*/
+.patt_border_showcase_type1_inner{border-left: 1px solid #e6e6e6;border-right: 1px solid #e6e6e6;border-top: 1px solid #e6e6e6;border-bottom: 1px solid #e6e6e6;}
+.patt_border_showcase_type1_title{border-bottom: 1px solid #e6e6e6;border-bottom-color: #6c390a;}
+.patt_border_showcase_type1_title li{border-right: 1px solid #e6e6e6;border-top-color: #6c390a;border-top-width: 1px;border-top-style: solid;}
+.patt_border_showcase_type1_title li:first-child{border-left: 1px solid #e6e6e6;}

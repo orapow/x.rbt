@@ -1,0 +1,8 @@
+﻿#foreach($cp in $list)
+<div class="weui_media_box weui_media_text" onclick="document.location.href='detail-${cp.id}.html'">
+    <h4 class="weui_media_title">#if($cp.city.length>0)[$cp.city]#end$cp.title ${cp.area}㎡</h4>
+    <p class="weui_media_desc">#if($cp.hits>0)$cp.hits人看过 #end$cp.desc</p>
+    <p class="pr">$cp.price</p>
+    #if($cp.calltimes>0)<p class="iscalled">我已联系（$cp.calltimes次）</p>#end
+</div>
+#end

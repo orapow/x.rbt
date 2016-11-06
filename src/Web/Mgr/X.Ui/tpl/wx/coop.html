@@ -1,0 +1,19 @@
+﻿#foreach($cp in $list)
+<a href="detail-$!{cp.coop_id}.html" style="text-decoration: none;">
+    <div class="item">
+        <img src="#if($cp.cover.length>0) $cp.cover #else /img/no.jpg #end" class="img" />
+        <div class="info">
+            <div class="li t1">$!cp.house</div>
+            <div class="li t2">$!cp.door_no_name $!cp.lea_way_name$!cp.lea_room_name </div>
+            <div class="li t2">$!cp.room_name $!cp.area㎡ $!cp.floor_name $!cp.toward_name</div>
+            <div class="li t2" title="$!cp.more">$!cp.more</div>
+            <div class="li p">$!cp.price.tostring("F0") <span class="u">$!cp.unit</span></div>
+        </div>
+    </div>
+</a>
+#end
+#if($page==1)
+<script type="text/javascript">
+    count = $count;
+</script>
+#end

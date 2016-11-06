@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("com/_head.html")
+    <title>短信记录 - $cfg.name</title>
+    <style>
+        body { font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <span class="main">短信记录</span>
+    </div>
+    <div class="search">
+        <form method="post">
+            <input type="text" placeholder="电话" name="key" data-check="" />
+            <button type="submit" class="btn btn-primary"><i class="icon-search"></i>搜索</button>
+            <button type="reset" class="btn"><i class="icon-remove"></i>清除</button>
+        </form>
+    </div>
+    <div class="gridpanel">
+    </div>
+    <script type="text/javascript">
+        x.form.init({
+            postedcallback: function (d) {
+                d.page = 1;
+                g.getlist(d);
+            },
+            m: 1
+        });
+
+        var cfg = {
+            el: ".gridpanel",
+            searchcon: { page: 1, limit: 30 },
+            api: "mgr.sms.list",
+            fs: [
+                { t: "电话", f: "{tel}", w: 120, align: "left" },
+                { t: "内容", f: "{content}", w: 320, align: "left" },
+                { t: "时间", f: "{ctime}", w: 120, align: "left" },
+                { t: "结果", f: "{result}", w: 200, align: "left" }
+            ]
+        };
+
+        var g = x.grid.init(cfg);
+
+    </script>
+</body>
+</html>

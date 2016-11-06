@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("com/_head.html")
+    <title>服务日志管理 - $cfg.name</title>
+</head>
+<body>
+    <div class="title">
+        <span class="main">服务日志管理</span>
+    </div>
+    <div class="search">
+        <form method="post">
+            <input type="text" placeholder="关键字" name="key" data-check="" />
+            <button type="submit" class="btn btn-primary"><i class="icon-search"></i>搜索</button>
+            <button type="reset" class="btn"><i class="icon-remove"></i>清除</button>
+            <div class="btns">
+                <a class="btn btn-primary" href="edit_log--$!{id}.html" id="btn_add"><i class="icon-plus"></i>录入</a>
+            </div>
+        </form>
+    </div>
+    <div class="gridpanel">
+    </div>
+    <script type="text/javascript">
+        x.form.init({
+            postedcallback: function (d) {
+                d.page = 1;
+                g.getlist(d);
+            },
+            m: 1
+        });
+
+        var cfg = {
+            el: ".gridpanel",
+            searchcon: { page: 1, limit: 30, id: "$!id" },
+            api: "agent.log_list",
+            fs: [
+              { t: "二房东", f: "{agent_name}", w: 120 },
+              { t: "管理员", f: "{user_name}", w: 120 },
+              { t: "跟踪内容", f: "{content}", w: 120, align: "center" },
+              { t: "跟踪时间", f: "{time}", w: 100, align: "center" },
+            ]
+        };
+        var g = x.grid.init(cfg);
+        
+    </script>
+</body>
+</html>

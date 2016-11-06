@@ -1,0 +1,380 @@
+
+时间：2016-10-17 11:17:27,540 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：24101 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:17:43,164 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：169 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:17:55,088 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：623 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:17:55,088 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：623 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'index.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:29,423 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：94959 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:44,789 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：3763 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:45,609 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：4583 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:46,159 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：5133 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:46,403 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：5376 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:46,615 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：5588 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:46,763 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：5736 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:46,981 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：5954 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:47,121 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：6095 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:47,257 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：6231 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:47,721 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：6694 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:47,854 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：6827 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:47,910 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：6883 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:47,994 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：6967 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:48,093 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：7066 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:48,139 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：7112 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:48,226 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：7200 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:48,264 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：7237 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:48,368 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：7341 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:48,453 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：7426 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:48,595 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：7568 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:48,692 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：7665 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:48,722 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：7696 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:48,814 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：7788 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:48,897 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：7871 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:48,971 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：7945 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:19:55,115 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：747 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:20:03,613 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：9245 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:20:05,227 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：10859 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:20:05,570 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：11202 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:20:05,755 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：11387 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:20:05,922 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：11554 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:20:06,081 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：11713 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/login.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 11:20:15,053 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(:0) - 
+错误：致命错误 
+时间：20685 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'index.html'
+   在 X.Web.Views.View.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)

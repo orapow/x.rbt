@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("wx/_head.html")
+    <title>$cp.house房源 - $cfg.name</title>
+    <script src="/js/swipe.js"></script>
+    <style type="text/css">
+        body { margin: 0; padding: 0; font-family: "微软雅黑"; background-color: #f6f6f6; }
+        .sec { margin-bottom: 15px; padding: 10px; }
+        .top { background-color: #0078d8; margin: 0; text-align: center; color: white; padding: 10px; font-size: 0.97em; }
+        .top a { float: left; text-decoration: none; color: white; }
+
+        .pic { padding: 0; margin: 0; font-size: 0; position: relative; height: 240px; overflow: hidden; }
+        .pic img { width: 100%; position: absolute; top: 0; left: 0; height: 240px; }
+        .pic .nav { position: absolute; left: 0; bottom: 0; width: 100%; text-align: center; height: 10px; padding: 15px 0; }
+        .pic .nav .p { width: 10px; height: 10px; border-radius: 5px; background-color: white; display: inline-block; margin: 0 5px; border: 1px solid green; }
+        .pic .nav .p.on { background-color: green; border-color: white; }
+
+        .base { padding: 0; margin-bottom: 10px; background-color: white; border-bottom: 1px solid #dedcdc; border-top: 1px solid #dedcdc; }
+        .base .ti { padding: 10px; position: relative; border-bottom: 1px solid #eceaea; }
+        .base .ti .house { font-size: 1.1em; }
+        .base .ti .dist { position: absolute; right: 5px; font-size: 0.9em; color: #b5b5b5; }
+
+        .base .info { padding: 10px 0px; border-bottom: 1px solid #eceaea; vertical-align: top; }
+        .base .info .li { font-size: 0.9em; display: inline-block; width: 25%; text-align: center; vertical-align: top; border-right: 1px solid #eceaea; margin-right: -1px; }
+        .base .info .li:last-child { border: none; margin-right: 0; }
+        .base .info .li .t { display: block; color: #333333; font-size: 0.85em; margin-bottom: 10px; }
+
+        .base .tags { padding-bottom: 10px; text-align: center; }
+        .base .tags .tg { display: inline-block; padding: 3px 5px; margin: 0 3px; border-radius: 3px; border: 1px solid #ff9000; font-size: 0.65em; color: #ff9000; margin-bottom: 5px; }
+
+        .base .price { text-align: center; padding: 10px 0; }
+        .base .price .p { color: #ff6401; font-size: 1.5em; }
+        .base .price .u { font-size: 0.65em; }
+        .base .price .f { margin-left: 20px; font-size: 1.2em; color: #ff6401; }
+        .base .price .f .t { background-color: #ff6401; color: white; font-style: italic; padding: 3px 15px; font-size: 0.85em; }
+
+        .list { border-top: 1px solid #dedcdc; background-color: white; margin-bottom: 10px; border-bottom: 1px solid #dedcdc; }
+        .list .li { display: inline-block; width: 49%; line-height: 35px; font-size: 0.8em; }
+        .list .li .t { color: #666; padding: 0 10px; font-size: 0.85em; }
+
+        .dt { padding: 10px; margin-bottom: 10px; border-top: 1px solid #dedcdc; border-bottom: 1px solid #dedcdc; background-color: white; }
+        .dt .item, .fy .item { padding: 5px; font-size: 0.8em; }
+        .fy { background: white; border-top: 1px solid #dedcdc; margin-bottom: 10px; }
+        .fy .item { border-bottom: 1px solid #eceaea; line-height: 40px; padding: 0 10px; display: block; text-decoration: none; color: #333; }
+        .fy .item .p { float: right; color: #ff6401; }
+
+        .more { margin-bottom: 10px; border-top: 1px solid #dedcdc; border-bottom: 1px solid #dedcdc; padding: 10px; font-size: 0.85em; background: white; }
+
+        .pz, .zj { background-color: white; margin-bottom: 10px; border-bottom: 1px solid #dedcdc; border-top: 1px solid #dedcdc; }
+
+        .tbs { padding: 10px; }
+        .tbs .tb { display: inline-block; font-size: 0.78em; color: #777; }
+
+        .pz .tbs .tb { width: 33%; }
+        .pz .tbs img { width: 40px; vertical-align: middle; }
+
+        .zj .tbs .tb { width: 25%; text-align: center; margin-bottom: 10px; }
+        .zj .tbs img { display: block; width: 30px; margin: 0 auto; }
+
+        .ct { position: fixed; bottom: 0; color: green; font-size: 1em; background-color: white; text-align: center; padding: 8px; width: 100%; border-top: 1px solid #dedcdc; }
+        figure { margin: 0; }
+    </style>
+</head>
+<body>
+    <div class="top"><a href="list.html">< 返回</a> $cp.house</div>
+    #if($cp.images.length>0&&$cp.images.get_item(0)!="")
+    <div class="sec pic">
+        <div class="swipe-wrap">
+            #foreach($p in $cp.images)
+            <figure>
+                <div class="wrap">
+                    <img src='#if($p=="")/img/no.jpg#else$p#end' />
+                </div>
+            </figure>
+            #end
+        </div>
+        <div class="nav">
+            #foreach($p in $cp.images)
+            <span class="p"></span>
+            #end
+        </div>
+    </div>
+    #end
+    <div class="sec base">
+        <div class="ti">
+            <span class="house">$!cp.house</span><span class="dist">
+                <img src="/img/wx/i3.jpg" style="vertical-align: middle; width: 15px;" />
+                <span id="sp_dist"></span></span>
+        </div>
+        <div class="info">
+            <span class="li"><span class="t">户型</span>$!cp.room_name</span><span class="li"><span class="t">面积</span>$!cp.area㎡</span><span class="li"><span class="t">付款方式</span>$!cp.pay_way_name</span><span class="li"><span class="t">出租方式</span>$!cp.lea_way_name</span>
+        </div>
+        <div class="price">
+            <span class="p">#if($cp.lea_way==2)$!cp.lea_room_name#end￥$!cp.price.tostring("F0")<span class="u">元/月</span></span>
+        </div>
+        #if($cp.ms.length>0&&$cp.ms.get_item(0)!="")
+        <div class="tags">
+            #foreach($m in $cp.ms)<span class="tg">$m</span>#end
+        </div>
+        #end
+    </div>
+    <div class="list">
+        <div class="ti" style="border-bottom: 1px solid #eceaea; margin: 0 10px; line-height: 36px; padding: 0;"><span style="color: red">|</span> 房屋信息</div>
+        <div class="" style="padding: 10px 5px;">
+            <span class="li"><span class="t">类型：</span>$!cp.type_name</span>
+            <span class="li"><span class="t">朝向：</span>$!cp.toward_name</span>
+            <span class="li"><span class="t">楼层：</span>$!cp.floor_name</span>
+            <span class="li"><span class="t">装修：</span>$!cp.decorate_name</span>
+            <span class="li"><span class="t">年代：</span>$!cp.build_age</span>
+            <span class="li" style="display: block; width: 100%;"><span class="t">门牌：</span>$!cp.door_no_name</span>
+        </div>
+    </div>
+    #if($cp.more.length>0)
+    <div class="more">$!cp.more</div>
+    #end
+    #if($stas.count>0)
+    <div class="dt" style="max-height: 120px; overflow-y: auto;">
+        #foreach($d in $stas)
+        <div class="item">距离 地铁$!d.line <span style="color: green">$d.name</span> $d.dist.ToString("F2")km</div>
+        #end
+    </div>
+    #end
+    #if($rooms.count>0)
+    <div class="fy">
+        #foreach($r in $rooms)
+        <a class="item" href="detail-$!{r.cpid}.html">$r.title<span class="p">$r.price<span style="color: #333;">$r.unit ></span></span></a>
+        #end
+    </div>
+    #end
+    <div class="pz">
+        <div class="ti" style="border-bottom: 1px solid #eceaea; margin: 0 10px; line-height: 36px; padding: 0;"><span style="color: red">|</span> 房屋配置</div>
+        <div class="tbs">
+            <span class="tb">
+                <img src="/img/wx/ic_xs_nohas.png" />洗漱用品
+            </span><span class="tb">
+                <img src="/img/wx/ic_qj_nohas.png" />寝具
+            </span><span class="tb">
+                <img src="/img/wx/ic_wbl_nohas.png" />微波炉
+            </span><span class="tb">
+                <img src="/img/wx/ic_canj_nohas.png" />餐具
+            </span><span class="tb">
+                <img src="/img/wx/ic_c_nohas.png" />床
+            </span><span class="tb">
+                <img src="/img/wx/ic_rsq_nohas.png" />热水器
+            </span><span class="tb">
+                <img src="/img/wx/ic_chuj_nohas.png" />厨具
+            </span><span class="tb">
+                <img src="/img/wx/ic_sz_nohas.png" />书桌
+            </span><span class="tb">
+                <img src="/img/wx/ic_bx_nohas.png" />电冰箱
+            </span><span class="tb">
+                <img src="/img/wx/ic_yc_nohas.png" />衣柜
+            </span><span class="tb">
+                <img src="/img/wx/ic_wifi_nohas.png" />无线网
+            </span><span class="tb">
+                <img src="/img/wx/ic_kt_nohas.png" />空调
+            </span><span class="tb">
+                <img src="/img/wx/ic_sf_nohas.png" />沙发
+            </span><span class="tb">
+                <img src="/img/wx/ic_rqz_nohas.png" />燃气灶
+            </span><span class="tb">
+                <img src="/img/wx/ic_dsj_nohas.png" />电视
+            </span><span class="tb">
+                <img src="/img/wx/ic_cz_nohas.png" />餐桌
+            </span><span class="tb">
+                <img src="/img/wx/ic_cyyj_nohas.png" />油烟机
+            </span><span class="tb">
+                <img src="/img/wx/ic_xyj_nohas.png" />洗衣机
+            </span><span class="tb">
+                <img src="/img/wx/ic_yz_nohas.png" />椅子
+            </span><span class="tb">
+                <img src="/img/wx/ic_cg_nohas.png" />橱柜
+            </span>
+        </div>
+    </div>
+    <div class="zj">
+        <div class="ti" style="border-bottom: 1px solid #eceaea; margin: 0 10px; line-height: 36px; padding: 0;"><span style="color: red">|</span> 租金包含</div>
+        <div class="ti1" style="display: none; font-size: 0.7em; padding: 10px;"><span style="display: inline-block; width: 10px; height: 10px; margin-right: 5px; background-color: green; border-radius: 5px;"></span>租金已经包含的费用</div>
+        <div class="tbs" style="display: none;">
+        </div>
+        <div class="ti1" style="font-size: 0.7em; padding: 10px;"><span style="display: inline-block; width: 10px; height: 10px; background-color: red; border-radius: 5px; margin-right: 5px;"></span>租客需自理的费用</div>
+        <div class="tbs">
+            <span class="tb">
+                <img src="/img/wx/ic_publish_wy_has.png" />物业费
+            </span><span class="tb">
+                <img src="/img/wx/ic_publish_ws_has.png" />卫生费
+            </span><span class="tb">
+                <img src="/img/wx/ic_publish_qn_has.png" />取暖费
+            </span><span class="tb">
+                <img src="/img/wx/ic_publish_tv_has.png" />有线电视
+            </span><span class="tb">
+                <img src="/img/wx/ic_publish_kd_has.png" />宽带费
+            </span><span class="tb">
+                <img src="/img/wx/ic_publish_tc_has.png" />车位费
+            </span>
+        </div>
+    </div>
+    <br />
+    <br />
+    <a class="ct" href="tel:$cp.agtel">
+        <img src="/img/wx/icon_call_green.png" style="vertical-align: middle; margin-right: 5px;" />拔打电话</a>
+    #parse("wx/_foot.html")
+    <script type="text/javascript">
+        var img = "$!cp.cover";
+        if (!img) img = document.location.origin + "/img/no.jpg";
+        sharedata = {
+            title: "$cp.house房源详情！",
+            desc: "找房网实时更新最快，最全，最准合作房源，100%真实",
+            img: img
+        }
+
+        $(function () {
+            $(".sec.pic img").click(function () {
+                wx.previewImage({
+                    current: '$!{cp.cover}', // 当前显示图片的http链接
+                    urls: pushImgs()// 需要预览的图片http链接列表
+                });
+            });
+
+            var slider = Swipe($(".pic")[0], {
+                auto: 3000,
+                continuous: true,
+                callback: function (pos) {
+                    $(".pic .nav .p").removeClass("on");
+                    $(".pic .nav .p:eq(" + pos + ")").addClass("on");
+                }
+            });
+
+
+            setTimeout(function () {
+                if ("$!cp.longitude" && "$!cp.latitude") {
+                    wx.getLocation({
+                        type: 'gcj02', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+                        success: function (d) {
+                            $("#sp_dist").html("离我" + GetDistance(parseFloat("$!cp.latitude"), parseFloat("$!cp.longitude"), d.latitude, d.longitude) + "km");
+                        }
+                    });
+                }
+            }, 2000);
+
+            var cfgs = "$!cp.cfgs".split(",");
+            for (var c in cfgs) {
+                if (!cfgs[c]) continue;
+                c = parseInt(cfgs[c].replace("c", "")) - 1;
+                var img = $(".pz .tb:eq(" + c + ") img");
+                img.attr("src", img.attr("src").replace("_nohas", "_has"));
+            }
+
+            var fys = "$!cp.fys".split(",");
+            for (var f in fys) {
+                if (!fys[f]) continue;
+                console.log("->" + f);
+                c = parseInt(fys[f].replace("d", "")) - 1;
+                var tb = $(".zj .tb:eq(" + c + ")");
+                var tbs = $(".zj .tbs:eq(0)");
+                tbs.show().append(tb);
+                tbs.prev().show();
+            }
+
+        });
+
+        function GetDistance(blat, blng, elat, elng) {
+
+            function toRad(d) { return d * Math.PI / 180; }
+
+            var dis = 0;
+            var radLat1 = toRad(blat);
+            var radLat2 = toRad(elat);
+            var deltaLat = radLat1 - radLat2;
+            var deltaLng = toRad(blng) - toRad(elng);
+            var dis = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(deltaLat / 2), 2) + Math.cos(radLat1) * Math.cos(radLat2) * Math.pow(Math.sin(deltaLng / 2), 2)));
+            return (dis * 6378137 / 1000).toFixed(2);
+
+        }
+
+        function pushImgs() {
+            var arryImg = [];
+            $(".pic img").each(function () {
+                arryImg.push($(this).attr("src"));
+            });
+            return arryImg;
+        }
+    </script>
+</body>
+</html>

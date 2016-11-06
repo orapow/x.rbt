@@ -1,0 +1,826 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("mgr/com/_head.html")
+    <title>鲜橙O2O商业系统 - $cfg.name</title>
+    <base target="mainifrm" />
+    <style type="text/css">
+        iframe { margin: 0; padding: 0; border: 0; }
+        body { padding: 0; line-height: normal; overflow: hidden; margin: 0; }
+        .menu { background: none repeat scroll 0 0 #e8e8e8; color: #303030; text-align: right; border-bottom: 1px solid #3086c8; }
+        .menu .btn { color: #303030; padding: 10px 12px; font-size: 14px; }
+        .menu .btn i { margin-right: 5px; }
+        .menu .btn-link:hover, .btn-link:focus { background-color: none; text-decoration: none; }
+        .menu .btn-primary { color: white; }
+
+        .leftpan { float: left; border-right: 1px solid #3086c8; position: relative; }
+        .leftpan i { margin-right: 5px; text-indent: 0; }
+        .leftpan > ul { margin-left: 0; display: none; }
+        .leftpan ul li { display: block; }
+        .leftpan ul li .btn { border-top: 0; font-size: 12px; }
+        .leftpan > ul > li .btn { line-height: 20px; text-align: left; width: 100px; font-weight: bold; }
+        .leftpan > ul > li ul { margin-left: 0; }
+        .leftpan > ul > li ul li .btn { text-indent: 5px; font-weight: normal; }
+        .leftpan { width: 120px; overflow-y: auto; overflow-x: hidden; }
+        .leftpan ul li ul { display: none; }
+        .leftpan .arrow { position: absolute; height: 90px; width: 10px; top: 50%; right: -10px; background-color: red; }
+
+        .rightpan { margin-left: 121px; }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <span class="btn btn-link" style="float: left; padding: 0;">
+            <img src="/img/logo.png" style="height: 40px;" />
+        </span>
+        <a class="btn btn-link btn-large m">
+            <i class="icon-home"></i>首页
+        </a>
+        <a class="btn btn-link btn-large m">
+            <i class="icon-desktop"></i>内容
+        </a>
+        <a class="btn btn-link btn-large m">
+            <i class="icon-shopping-cart"></i>订单
+        </a>
+        <a class="btn btn-link btn-large m">
+            <i class="icon-coffee"></i>商家
+        </a>
+        <a class="btn btn-link btn-large m">
+            <i class="icon-user"></i>会员
+        </a>
+        <a class="btn btn-link btn-large m">
+            <i class="icon-bullhorn"></i>营销
+        </a>
+        <a class="btn btn-link btn-large m">
+            <i class="icon-cog"></i>系统
+        </a>
+        <a class="btn btn-link btn-large" href="main.html" style="border-left: 1px solid #3086c8;">
+            <i class="icon-user"></i>$!mg.Name <i class="icon-angle-down"></i>
+        </a>
+        <span class="btn btn-large btn-warning" style="color: white; border: none;" onclick="dologout()">
+            <i class="icon-off" style="margin: 0;"></i>
+        </span>
+    </div>
+    <div class="leftpan">
+        <ul class="smenu"></ul>
+        <ul class="smenu">
+            <li>
+                <a class="btn m">
+                    <i class="icon-bolt"></i>待处理
+                </a>
+                <ul>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>商户入驻
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>门店审核
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>商户提现
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>邀请返利
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>用户提现
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="btn m">
+                    <i class="icon-bar-chart"></i>数据统计
+                </a>
+                <ul>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>今日统计
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>今日明细
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>数据报表
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>营收报表
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="smenu">
+            <li>
+                <a class="btn m">
+                    <i class="icon-shopping-cart"></i>商城管理
+                </a>
+                <ul>
+                    <li>
+                        <a href="/mgr/goods/edit-1.html" class="btn">
+                            <i class="icon-angle-right"></i>新增商品
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/mgr/goods/list-1.html" class="btn">
+                            <i class="icon-angle-right"></i>商品列表
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/mgr/cate/list-goods.cate.html" class="btn">
+                            <i class="icon-angle-right"></i>分类管理
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/wx/reply/list.html" class="btn">
+                            <i class="icon-angle-right"></i>回收站
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/wx/menu.html" class="btn">
+                            <i class="icon-angle-right"></i>商家商品
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/mgr/brand/list.html" class="btn">
+                            <i class="icon-angle-right"></i>品牌管理
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="btn m">
+                    <i class="icon-bell-alt"></i>服务管理
+                </a>
+                <ul>
+                    <li>
+                        <a href="/wx/msg/send.html" class="btn">
+                            <i class="icon-angle-right"></i>发布服务
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/wx/msg/list.html" class="btn">
+                            <i class="icon-angle-right"></i>服务列表
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/wx/menu.html" class="btn">
+                            <i class="icon-angle-right"></i>分类管理
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/wx/reply/list.html" class="btn">
+                            <i class="icon-angle-right"></i>回收站
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/wx/menu.html" class="btn">
+                            <i class="icon-angle-right"></i>商家服务
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="btn m">
+                    <i class="icon-gift"></i>优惠券管理
+                </a>
+                <ul>
+                    <li>
+                        <a href="/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>发布优惠券
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>商户券审核
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>全部券
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>领取记录
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>消费记录
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="btn m">
+                    <i class="icon-bullhorn"></i>活动管理
+                </a>
+                <ul>
+                    <li>
+                        <a href="/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>新增活动
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>进行中
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>全部活动
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>活动分类
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>商家活动
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="btn m">
+                    <i class="icon-book"></i>文章管理
+                </a>
+                <ul>
+                    <li>
+                        <a href="/comp/list.html" class="btn">
+                            <i class="icon-angle-right"></i>新增文章
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/comp/list.html" class="btn">
+                            <i class="icon-angle-right"></i>全部文章
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/comp/list.html" class="btn">
+                            <i class="icon-angle-right"></i>分类管理
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/comp/list.html" class="btn">
+                            <i class="icon-angle-right"></i>友情链接
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="smenu">
+            <li>
+                <a class="btn m">
+                    <i class="icon-shopping-cart"></i>订单管理
+                </a>
+                <ul>
+                    <li>
+                        <a href="/system/dict/list-car_brand.html" class="btn">
+                            <i class="icon-angle-right"></i>待发货
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/system/dict/list-car_brand.html" class="btn">
+                            <i class="icon-angle-right"></i>售后订单
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/system/dict/list-car_brand.html" class="btn">
+                            <i class="icon-angle-right"></i>全部订单
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/system/dict/list-car_brand.html" class="btn">
+                            <i class="icon-angle-right"></i>商户收款单
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/system/dict/list-car_brand.html" class="btn">
+                            <i class="icon-angle-right"></i>抽奖号列表
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="btn m">
+                    <i class="icon-money"></i>支付管理
+                </a>
+                <ul>
+                    <li>
+                        <a href="/system/user/list.html" class="btn">
+                            <i class="icon-angle-right"></i>支付接口
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/system/role/list.html" class="btn">
+                            <i class="icon-angle-right"></i>支付配置
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="btn m">
+                    <i class="icon-truck"></i>配送管理
+                </a>
+                <ul>
+                    <li>
+                        <a href="/system/role/list.html" class="btn">
+                            <i class="icon-angle-right"></i>配送方式
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/system/user/list.html" class="btn">
+                            <i class="icon-angle-right"></i>快递管理
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/system/user/list.html" class="btn">
+                            <i class="icon-angle-right"></i>快递查询
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="smenu">
+            <li>
+                <a class="btn m">
+                    <i class="icon-coffee"></i>商户管理
+                </a>
+                <ul>
+                    <li>
+                        <a href="/mgr/mch/edit.html" class="btn">
+                            <i class="icon-angle-right"></i>新增商户
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>入驻申请
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/mgr/mch/list.html" class="btn">
+                            <i class="icon-angle-right"></i>商户列表
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>商户提现
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>结算报表
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="btn m">
+                    <i class="icon-coffee"></i>门店管理
+                </a>
+                <ul>
+                    <li>
+                        <a href="/mgr/store/edit.html" class="btn">
+                            <i class="icon-angle-right"></i>新增门店
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/mgr/store/list.html" class="btn">
+                            <i class="icon-angle-right"></i>门店列表
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="btn m">
+                    <i class="icon-star"></i>点评管理
+                </a>
+                <ul>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>评价记录
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>评论分类
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>评分属性
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="smenu">
+            <li>
+                <a class="btn m">
+                    <i class="icon-group"></i>会员管理
+                </a>
+                <ul>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>会员列表
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>禁闭室
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>会员提现
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>达人申请
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>邀请返利
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>邀请结构
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="btn m">
+                    <i class="icon-comments"></i>社区管理
+                </a>
+                <ul>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>发起话题
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>话题管理
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>版块管理
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>跟贴管理
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>社区设置
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="btn m">
+                    <i class="icon-cog"></i>会员配置
+                </a>
+                <ul>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>会员分组
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>等级配置
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>会员设置
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>会员奖励
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="smenu">
+            <li>
+                <a class="btn m">
+                    <i class="icon-magic"></i>消息推送
+                </a>
+                <ul>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>站内群发
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>App推送
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>邮件群发
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>短信群发
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="btn m">
+                    <i class="icon-bullhorn"></i>消息管理
+                </a>
+                <ul>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>站内消息
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>推送记录
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>邮件列表
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>短信列表
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="btn m">
+                    <i class="icon-envelope-alt"></i>订阅管理
+                </a>
+                <ul>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>邮件订阅
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>短信订阅
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>App订阅
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>用户收藏
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="btn m">
+                    <i class="icon-bar-chart"></i>数据统计
+                </a>
+                <ul>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>活跃用户
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>商户排行
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>畅销商品\服务
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>用户最爱
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="btn m">
+                    <i class="icon-cog"></i>消息配置
+                </a>
+                <ul>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>邮件模板
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>短信模板
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>App模板
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
+                            <i class="icon-angle-right"></i>发送设置
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="smenu">
+            <li>
+                <a class="btn m">
+                    <i class="icon-cog"></i>系统配置
+                </a>
+                <ul>
+                    <li>
+                        <a href="/system/dict/list-car_brand.html" class="btn">
+                            <i class="icon-angle-right"></i>基础配置
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/system/dict/list-car_brand.html" class="btn">
+                            <i class="icon-angle-right"></i>图片配置
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/system/dict/list-car_brand.html" class="btn">
+                            <i class="icon-angle-right"></i>站点配置
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/system/dict/list-car_brand.html" class="btn">
+                            <i class="icon-angle-right"></i>微信配置
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="btn m">
+                    <i class="icon-user"></i>权限管理
+                </a>
+                <ul>
+                    <li>
+                        <a href="/system/dict/list-car_brand.html" class="btn">
+                            <i class="icon-angle-right"></i>添加管理员
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/system/dict/list-car_brand.html" class="btn">
+                            <i class="icon-angle-right"></i>管理员列表
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/system/dict/list-car_brand.html" class="btn">
+                            <i class="icon-angle-right"></i>角色管理
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="btn m">
+                    <i class="icon-book"></i>字典管理
+                </a>
+                <ul>
+                    <li>
+                        <a href="/mgr/sys/dict/list.html" class="btn">
+                            <i class="icon-angle-right"></i>字典一
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/system/dict/list-car_brand.html" class="btn">
+                            <i class="icon-angle-right"></i>字典二
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/system/dict/list-car_brand.html" class="btn">
+                            <i class="icon-angle-right"></i>字典三
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="btn m">
+                    <i class="icon-file-alt"></i>系统日志
+                </a>
+                <ul>
+                    <li>
+                        <a href="/system/user/list.html" class="btn">
+                            <i class="icon-angle-right"></i>登陆日志
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/system/role/list.html" class="btn">
+                            <i class="icon-angle-right"></i>系统日志
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/system/log/list.html" class="btn">
+                            <i class="icon-angle-right"></i>商家日志
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/system/log/list.html" class="btn">
+                            <i class="icon-angle-right"></i>用户日志
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="rightpan">
+        <iframe id="mainifrm" name="mainifrm" frameborder="0" src="main.html" style="height: 100%; width: 100%; border: none; margin: 0; padding: 0; float: left;"></iframe>
+    </div>
+    <script type="text/javascript">
+        var cmenu = null;
+        var csmenu = [];
+        var csmenua = [];
+        $(function () {
+            $(window).resize(function () {
+                var h = $(window).innerHeight() - $(".menu").height() + 1;
+                $(".rightpan").height(h - 2);
+                $(".leftpan").height(h - 2);
+            });
+            $(window).resize();
+            $(".menu .m").click(function () {
+                if (cmenu) { $(".leftpan .smenu:eq(" + (cmenu.index()) + ")").hide(); cmenu.removeClass("btn-primary"); }
+                cmenu = $(this).addClass("btn-primary");
+                if (!cmenu.hasClass("nosub")) {
+                    $(".leftpan").show();
+                    $(".leftpan .smenu:eq(" + (cmenu.index()) + ")").show();//.find("li:eq(0) .m").click();
+                    $(".rightpan").css("margin-left", "121px");
+                }
+                else {
+                    $(".leftpan").hide();
+                    $(".rightpan").css("margin-left", 0);
+                }
+            });
+            $(".menu > .m:eq(0)").click();
+            $(".leftpan .smenu .m").click(function () {
+                if (csmenu[cmenu.index()]) csmenu[cmenu.index()].next().slideUp();
+                if (csmenu[cmenu.index()] != $(this)) {
+                    csmenu[cmenu.index()] = $(this);
+                    csmenu[cmenu.index()].next().slideDown();
+                } else { csmenu[cmenu.index()] = null; }
+            });
+            $(".smenu ul a").click(function () {
+                if (csmenua[cmenu.index()]) csmenua[cmenu.index()].removeClass("btn-primary");
+                $(this).addClass("btn-primary");
+                csmenua[cmenu.index()] = $(this);
+            });
+        });
+
+        function dologout() {
+            x.dialog.confirm("是否注销并退出当前帐号", function () {
+                x.com.doapi("logout", null, function (d) {
+                    if (d.issucc) {
+                        x.dialog.alert("当前帐户已经注销，系统安全退出", function () {
+                            document.location.href = "/login.html";
+                        });
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>

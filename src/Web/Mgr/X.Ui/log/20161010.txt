@@ -1,0 +1,66 @@
+
+时间：2016-10-10 17:56:19,403 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(e:\源码文件\公司O2O项目\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：19363 
+System.Data.SqlClient.SqlException (0x80131904): 用户 'o2o' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.Linq.SqlClient.SqlConnectionManager.UseConnection(IConnectionUser user)
+   在 System.Data.Linq.SqlClient.SqlProvider.get_IsSqlCe()
+   在 System.Data.Linq.SqlClient.SqlProvider.InitializeProviderMode()
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.Table`1.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 X.App.Views.mgr.xmg.InitDict() 位置 e:\源码文件\公司O2O项目\src\Web\O2O\X.App\Views\mgr\xmg.cs:行号 56
+   在 X.Web.Views.View.GetResponse() 位置 e:\源码文件\公司O2O项目\src\Web\X.Web\Views\View.cs:行号 93
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 e:\源码文件\公司O2O项目\src\Web\X.Web\XApp.cs:行号 31
+ClientConnectionId:fdfb8c05-815d-47a3-91af-00a8e3e05094
+
+时间：2016-10-10 19:32:04,836 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(e:\源码文件\公司O2O项目\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T分类不存在)","code":"T分类不存在"} 
+时间：83843 
+
+时间：2016-10-10 19:50:57,623 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(e:\源码文件\公司O2O项目\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：754999 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'mgr/store/edit.html'
+   在 X.Web.Views.View.GetResponse() 位置 e:\源码文件\公司O2O项目\src\Web\X.Web\Views\View.cs:行号 103
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 e:\源码文件\公司O2O项目\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-10 19:50:59,847 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(e:\源码文件\公司O2O项目\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：757222 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'mgr/store/list.html'
+   在 X.Web.Views.View.GetResponse() 位置 e:\源码文件\公司O2O项目\src\Web\X.Web\Views\View.cs:行号 103
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 e:\源码文件\公司O2O项目\src\Web\X.Web\XApp.cs:行号 31

@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("com/_head.html")
+    <title>生成分享</title>
+    <style type="text/css">
+        .search { margin: 0; }
+        .search .lbe { display: none; }
+        .search .li { margin-bottom: 10px; display: inline-block; }
+        body { margin: 0; padding: 0; }
+        #id_key { width: 180px; }
+    </style>
+</head>
+<body>
+    <div class="search">
+        <form>
+            $F.GetInput("key","楼盘、房东、地铁、联系人","","$!item.point")
+            <button type="submit" class="btn btn-primary"><i class="icon-search"></i>生成</button>
+        </form>
+    </div>
+    <div class="result">
+        <textarea rows="10" cols="20" id="share_txt" style="width: 90%; height: 320px; margin: 0 auto;"></textarea>
+    </div>
+    <script type="text/javascript">
+        x.form.init({
+            m: 1,
+            postedcallback: function (d) {
+                load_list(d);
+            }
+        });
+
+        $(function () {
+            $("#share_txt").click(function () {
+                $(this)[0].selectionStart = 0;
+                $(this)[0].selectionEnd = $(this).val().length;
+            });
+        });
+
+        function load_list(d) {
+            x.com.doapi("mgr.coop.toshare", d, function (d) {
+                var txt = "";
+                var fr = { c: "", h: "" };
+                var da = null;
+                for (var i = 0; i < d.items.length; i++) {
+
+                    da = d.items[i];
+                    if (fr.c != da.name) {
+                        if (fr.c != "") txt += "联系人：" + da.contract + " " + da.tel + "\n\n";
+                    }
+
+                    txt += "🌴【" + da.house + "】" + da.door_no_name + "\n";
+                    txt += "" + da.room_name + "\n";
+
+                    fr.c = da.name;
+                    fr.h = da.house;
+
+                    txt += "💰" + da.area + "平 " + da.lea_room_name + " " + da.price + "元/月\n";
+                    txt += "[微笑]" + da.more + "\n";
+                    txt += "~~~~~~~~~~~~~~~~~~~\n";
+                }
+                if (da != null) txt += "联系人：" + da.contract + " " + da.tel + "\n更多真房源：http://dwz.cn/3iiIj3"
+                $("#share_txt").val(txt);
+            });
+        }
+
+    </script>
+</body>
+</html>

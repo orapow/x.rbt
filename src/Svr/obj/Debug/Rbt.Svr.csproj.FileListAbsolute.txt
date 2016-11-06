@@ -1,0 +1,10 @@
+D:\Pro\wxbot\src\Svr\bin\Debug\Rbt.Svr.exe
+D:\Pro\wxbot\src\Svr\bin\Debug\Rbt.Svr.pdb
+D:\Pro\wxbot\src\Svr\obj\Debug\Rbt.Svr.csprojResolveAssemblyReference.cache
+D:\Pro\wxbot\src\Svr\obj\Debug\Rbt.Svr.Properties.Resources.resources
+D:\Pro\wxbot\src\Svr\obj\Debug\Rbt.Svr.csproj.GenerateResource.Cache
+D:\Pro\wxbot\src\Svr\obj\Debug\Rbt.Svr.exe
+D:\Pro\wxbot\src\Svr\obj\Debug\Rbt.Svr.pdb
+D:\Pro\wxbot\src\Svr\obj\Debug\Rbt.Svr.Form1.resources
+D:\Pro\wxbot\src\Svr\bin\Debug\Rbt.Data.dll
+D:\Pro\wxbot\src\Svr\bin\Debug\Rbt.Data.pdb

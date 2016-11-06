@@ -1,0 +1,85 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+        body, html { margin: 0; font-size: 12px; padding: 0; }
+        div { font-size: 12px; }
+        .searchbar { background-color: #FFFFFF; border: 1px solid #CCCCCC; left: 0; padding: 10px; position: absolute; top: 0; z-index: 99999; }
+        .searchbar input { height: auto; padding: 5px; }
+    </style>
+    <script src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=${cfg.syscfg.bdkey}"></script>
+    <title>获取地理位置</title>
+</head>
+<body>
+    <div class="searchbar">
+        <input type="text" value="$!key" id="name" style="width: 120px;" />
+        <input type="button" value="搜索" onclick="search()" class="submit" /><br />
+        #if($point)
+        当前坐标：$point<br />
+        #end
+        找到地址后右键地图获取坐标
+    </div>
+    <div id="allmap" style="overflow: hidden; *zoom: 1; position: relative; width: 500px; height: 400px;">
+        <div id="map" style="width: 100%; height: 100%; -webkit-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;">
+        </div>
+    </div>
+    <script type="text/javascript">
+        var map = new BMap.Map('map', { enableMapClick: false });
+        map.enableScrollWheelZoom();
+        map.centerAndZoom("$!cfg.syscfg.city");
+        var point = "$!point";
+
+        var menu = new BMap.ContextMenu();
+        menu.addItem(new BMap.MenuItem('获取此处坐标', function (a) {
+            pointok({ lng: a.lng, lat: a.lat });
+        }));
+
+        if (point) {
+            point = point.split(",");
+            var p = new BMap.Point(point[0], point[1]);
+            var m = new BMap.Marker(p);
+            m.setLabel(new BMap.Label("$!key", { offset: new BMap.Size(-5, -20) }));
+            m.setTitle("点击选择当前点");
+            m.addEventListener("click", function (d) {
+                pointok({ lng: d.point.lng, lat: d.point.lat });
+            });
+            m.enableDragging();
+            map.addOverlay(m);
+            map.zoomTo(16);
+            setTimeout(function () {
+                map.panTo(p);
+            }, 500);
+        }
+
+        map.addContextMenu(menu);
+        function search() {
+            var local = new BMap.LocalSearch(map, {
+                renderOptions: { map: map, panel: "panel" },
+                onMarkersSet: function (pois) {
+                    for (var i = 0; i < pois.length; i++) {
+                        var po = pois[i];
+                        po.marker.pos = po;
+                        po.marker.addEventListener("click", function (d) {
+                            pointok({ lng: d.point.lng, lat: d.point.lat, addr: d.target.pos.address });
+                        })
+                    }
+                }
+            });
+            local.search($("#name").val());
+        }
+        if ("$!key" && !"$!point") {
+            setTimeout(function () {
+                search();
+            }, 1000);
+        }
+
+        function pointok(p) {
+            var w = parent.x.dialog.getCurrent();
+            w.returnValue = p;
+            w.close().remove();
+        }
+
+    </script>
+</body>
+</html>

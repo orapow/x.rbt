@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("com/_head.html")
+    <title>预约记录 - $cfg.name</title>
+    <style>
+        body { font-size: 14px; margin: 0; }
+        .div_coop .grid-item { border-bottom: 1px dashed #ccc; padding: 15px; }
+        .div_coop .grid-item:last-child { border: none; }
+        .div_coop .grid-item .c { display: inline-block; vertical-align: top; }
+        .c.c1 img { height: 90px; width: 120px; }
+        .c.c1 { width: 120px; position: relative; border-radius: 5px; border: 1px solid #ccc; padding: 3px; margin-right: 10px; }
+        .c.c1 .ag { position: absolute; bottom: 0; left: 0; background-color: white; width: 100%; text-align: center; font-size: 0.8em; padding: 5px 0; opacity: 0.8; }
+        .c.c2 { line-height: 40px; width: 460px; }
+        .c.c2 .h { font-size: 18px; }
+        .c.c2 .c { font-size: 12px; line-height: 24px; display: block; color: #888; }
+        .c.c3 { color: #ff6400; font-size: 24px; line-height: 80px; width: 140px; text-align: center; }
+        .c.c3 .u { font-size: 12px; }
+        .c.c4 { padding-top: 20px; font-size: 1em; }
+        .c.c4.t2 { color: green; }
+        .c.c4.t3 { color: red; }
+        .c.c4 .s { display: block; color: #666; line-height: 24px; }
+        .c.c5 { float: right; width: 280px; text-align: center; line-height: 60px; }
+        .c.c5 .btn { font-size: 14px; padding: 5px 6px; display: none; }
+        .c.c5 .btn.s1 { display: inline-block; }
+        .c.c.c5 .t3 { color: red; }
+        .c.c.c5 .t2 { color: green; }
+        .c.c.c5 .t1 { display: none; }
+        .grid.body { font-size: 16px; }
+
+        .top { margin-bottom: 15px; margin-top: 10px; }
+        .top .logo { margin-left: 20px; padding: 2px; border-radius: 3px; border: 1px solid #ccc; display: inline-block; text-align: center; overflow: hidden; width: 70px; height: 70px; vertical-align: top; }
+        .top .cont { display: inline-block; margin-left: 10px; vertical-align: top; }
+        .top .t { font-size: 18px; line-height: 32px; }
+        .top .c { color: #999; }
+
+        .basic #img_logo { max-height: 80px; max-width: 80px; }
+        .basic .li { padding: 5px 0; }
+
+        .inputs .li .imgs { position: relative; }
+        .inputs .li .imgs img { width: 80px; margin-right: 5px; }
+    </style>
+</head>
+<body>
+    <div class="search">
+        <form method="post" style="display: inline-block;">
+            <input type="text" id="id_key" name="key" placeholder="二房东" class="input-xlarge" data-check="" />
+            <button type="submit" class="btn btn-primary"><i class="icon-search"></i>搜索</button>
+            <button type="reset" class="btn"><i class="icon-remove"></i>清除</button>
+        </form>
+    </div>
+    <hr />
+    <div class="div_coop"></div>
+    <div class="item tpl coop" style="display: none;">
+        <div class="c c2">
+            <div class="h"><a href="/detail-{coop_id}.html" target="_blank">{house} {door_no_name} {lea_way_name}{lea_room_name}</a></div>
+            <div class="c">{region_name}-{businessarea_name} {room_name} {area}㎡ {floor_name} {price}<span class="u">{unit}</span></div>
+            <div class="c">{agname}-{agman}-{agtel}</div>
+        </div>
+        <div class="c c4 t" style="width: 240px;">
+            <span class="s">预约人：</span>
+            <span class="s">{uname}（{utel}）</span>
+        </div>
+        <div class="c c4 t">
+            <span class="s">预约时间</span>
+            <span class="s s{status}">{reserve_date_name} {reserve_time}</span>
+        </div>
+        <div class="c c5">
+            <span class="t t{status}">{status_name}</span>
+            <span class="btn btn-link bup s{status}" onclick="do_read({yid});"><i class="icon-upload-alt"></i>标为已处理</span>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var yue_cfg = {
+            el: ".div_coop",
+            searchcon: { page: 1, limit: 30, st: 1 },
+            api: "mgr.yue.list",
+            tpl: $(".item.tpl.coop").html(),
+            exheight: 40
+        };
+
+        x.form.init({
+            postedcallback: function (d) {
+                d.page = 1;
+                g_yue.getlist(d);
+            },
+            m: 1
+        });
+
+        var g_yue = x.grid.init(yue_cfg);
+
+        function do_read(id) {
+            x.dialog.confirm("确认要标示已读么？", function () {
+                x.com.doapi("mgr.yue.read", { id: id, }, function () {
+                    g_yue.getlist();
+                });
+            });
+        }
+
+    </script>
+</body>
+</html>

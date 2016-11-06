@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("mgr/com/_head.html")
+    <title>商户管理 - $cfg.name</title>
+</head>
+<body>
+    <div class="title">
+        <span class="main">商户列表</span> - <span class="sub">商户管理</span>
+    </div>
+    <div class="search">
+        <x:form>
+            <x:text title="" tip="名称、帐号、电话、说明" name="key" size="4" />
+            <button type="submit" class="btn btn-primary"><i class="icon-search"></i>搜索</button>
+            <button type="reset" class="btn"><i class="icon-remove"></i>清除</button>
+            <div class="btns">
+                <a class="btn btn-primary" id="btn_add" href="edit.html"><i class="icon-plus"></i>录入商户</a>
+            </div>
+        </x:form>
+    </div>
+    <div class="gridpanel">
+    </div>
+    <script type="text/javascript">
+        $("form:eq(0)").xform({
+            callback: function (d) {
+                d.page = 1;
+                g.getlist(d);
+            }
+        });
+
+        var cfg = {
+            el: ".gridpanel",
+            searchcon: { page: 1, limit: 30 },
+            api: "mgr.mch.list",
+            fs: [
+                { t: "商户名称", f: "{name}", w: 120, align: "left" },
+                { t: "商户账号", f: "{account}", w: 100, align: "left" },
+                { t: "电话座机", f: "{tel}", w: 100, align: "left" },
+                { t: "Logo", f: "{logo}", w: 100, align: "left" },
+                { t: "公司名称", f: "{cp_name}", w: 100, align: "left" },
+                { t: "法人", f: "{cp_man}", w: 100, align: "left" },
+                { t: "银行户名", f: "{bank_ac_name}", w: 100, align: "left" },
+                { t: "收佣比率", f: "{rate}", w: 100, align: "left" }
+            ],
+            btns: [
+                { txt: "编辑", ico: "edit", link: "edit-{mch_id}.html" },
+                { txt: "删除", ico: "remove", act: "del" }
+            ]
+        };
+
+        //(初始:1,通过:2,不通过:3)
+        cfg.cellclick = function (act, d) {
+            switch (act) {
+                case "del":
+                    dodel(d.mch_id);
+                    break;
+            }
+        };
+
+        var g = x.grid.init(cfg);
+
+        function dodel(id) {
+            x.doapi("mgr.mch.del", { id: id, }, function () {
+                g.getlist();
+            });
+        }
+
+    </script>
+</body>
+</html>

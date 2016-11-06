@@ -1,0 +1,9 @@
+https://github.com/sherlockchou86/WeChat.NET
+
+https://segmentfault.com/a/1190000004471678
+
+https://github.com/liuwons/wxBot/blob/master/wxbot.py
+
+https://github.com/Urinx/WeixinBot/blob/master/weixin.py
+
+https://github.com/biezhi/wechat-robot

@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("wx/_head.html")
+    <title>业主房源 - $cfg.name</title>
+    <link href="/css/weui.min.css" rel="stylesheet" />
+    <style type="text/css">
+        body { margin: 0; padding: 0; font-family: "微软雅黑"; background-color: #f6f6f6; }
+
+        .search { padding: 8px 10px; position: relative; background-color: #0078d8; }
+        .search .ipt { width: 100%; line-height: 32px; font-size: 0.85em; text-indent: 1em; border: 1px solid white; border-radius: 5px; padding: 0; height: 32px; }
+        .search .bt { position: absolute; right: 8px; top: 8px; background-color: #ff6401; color: white; font-size: 0.85em; padding: 0 10px; border-radius: 0 5px 5px 0; height: 34px; line-height: 34px; }
+
+        .pr { color: red; margin-top: 10px; }
+
+        .dropload-up, .dropload-down { position: relative; height: 0; overflow: hidden; font-size: 16px; -webkit-transform: translateZ(0); transform: translateZ(0); }
+        .dropload-down { height: 50px; }
+        .dropload-refresh, .dropload-update, .dropload-load, .dropload-noData { height: 50px; line-height: 50px; text-align: center; }
+        .dropload-load .loading { display: inline-block; height: 15px; width: 15px; border-radius: 100%; margin: 6px; border: 2px solid #666; border-bottom-color: transparent; vertical-align: middle; -webkit-animation: rotate 0.75s linear infinite; animation: rotate 0.75s linear infinite; }
+
+        input { -webkit-appearance: none; }
+
+        .pin { z-index: 999; background-color: white; }
+        .pined { position: fixed; left: 0; top: 0; width: 100%; }
+        .sel_city { position: absolute; line-height: 30px; color: white; }
+        p.iscalled { position: absolute; right: 15px; top: 40px; color: green; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <div class="pin">
+        <div class="search">
+            <a class="sel_city" href="javascript:;">$!cu.city <span style="font-size: 12px;vertical-align:top;">▼</span></a><div style="margin-left: 60px;"><input placeholder="请输入您想租住的小区/区域" class="ipt" id="txt_key" value="$!key" /><span class="bt" onclick="do_search()">搜索</span></div>
+        </div>
+    </div>
+    <div class="weui_panel weui_panel_access list">
+        <div class="weui_panel_bd lists">
+        </div>
+    </div>
+    #parse("wx/_foot.html")
+    <script src="/js/swp.min.js"></script>
+    <script type="text/javascript">
+        var data = {
+            page: 1
+        };
+        var isloaded = false;
+        sharedata = {
+            title: "最新业主房源",
+            desc: "最新合作房源，最快，最准，最全业主房源",
+            img: document.location.origin + "/img/wx/yb.jpg"
+        }
+
+        function wxready() {
+            wx.getLocation({
+                type: 'gcj02', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+                success: function (d) {
+                    if (load_t) clearTimeout(load_t);
+                    if (isloaded) return;
+                    data.lng = d.longitude;
+                    data.lat = d.latitude;
+                    loaddata(null);
+                }
+            });
+        }
+
+        function do_search() {
+            data.key = escape(escape($("#txt_key").val()));
+            data.page = 1;
+            loaddata(null);
+        }
+
+        $(function () {
+            load_t = setTimeout(function () {
+                isloaded = true;
+                loaddata(null);
+            }, 500);
+
+            $('.weui_panel.list').dropload({
+                scrollArea: window,
+                domUp: {
+                    domClass: 'dropload-up',
+                    domRefresh: '<div class="dropload-refresh">↓下拉刷新</div>',
+                    domUpdate: '<div class="dropload-update">↑释放刷新</div>',
+                    domLoad: '<div class="dropload-load"><span class="loading"></span>正在加载中...</div>'
+                },
+                domDown: {
+                    domClass: 'dropload-down',
+                    domRefresh: '<div class="dropload-refresh">↑上拉加载更多</div>',
+                    domLoad: '<div class="dropload-load"><span class="loading"></span>正在加载中...</div>',
+                    domNoData: '<div class="dropload-noData">没有更多数据了</div>'
+                },
+                loadUpFn: function (me) {
+                    data.page = 1;
+                    loaddata(function () {
+                        me.resetload();
+                    });
+                },
+                loadDownFn: function (me) {
+                    loaddata(function (end) {
+                        setTimeout(function () {
+                            me.resetload();
+                            if (end) {
+                                me.lock();
+                                me.noData();
+                            } else {
+                                data.page++;
+                            }
+                        }, 1000)
+                    });
+                },
+                threshold: 50
+            });
+
+        });
+
+        function loaddata(cb) {
+            var url = "/wx/bw/coop--" + (data.key || "") + "-" + data.page + ".html";
+            jQuery.get(url, function (d) {
+                if (d) {
+                    if (data.page >= 2) $(".weui_panel.list .lists").append(d);
+                    else $(".weui_panel.list .lists").html(d);
+                }
+                if (cb) cb(!d);
+            });
+        }
+
+    </script>
+</body>
+</html>

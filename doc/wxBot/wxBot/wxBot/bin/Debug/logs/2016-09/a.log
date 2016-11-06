@@ -1,0 +1,260 @@
+﻿{
+"BaseResponse": {
+"Ret": 0,
+"ErrMsg": ""
+}
+,
+"AddMsgCount": 1,
+"AddMsgList": [{
+"MsgId": "1126225764868529071",
+"FromUserName": "@19a4eb37e5763ce05418c5ea7bd2103ae4ad338234a2ca887ae70ee84d463c9f",
+"ToUserName": "@19a4eb37e5763ce05418c5ea7bd2103ae4ad338234a2ca887ae70ee84d463c9f",
+"MsgType": 51,
+"Content": "&lt;msg&gt;<br/>&lt;op id='4'&gt;<br/>&lt;username&gt;7317539037@chatroom,7342076969@chatroom,2625353391@chatroom,7334478624@chatroom,wxid_fpito2m64qs422,wxid_ow3zyj9hh6bt22,zk-520-mj,lei1527358884,ccq19720523,7361478047@chatroom,7325478153@chatroom,wxid_5evoze3yxsfq22,wxid_gk8mcjc7zvzz22,xaiodongping,gh_3dfda90e39d6,wxid_cmxv52i4zbea22,wxid_mt83n7462gmi22,wxid_08794magg7db12,wxid_v3z7tprrt33b22,qq386523610,wxid_3b0iv4tliaws22,wxid_yf9p17ibo9g921,wxid_g0eo2somhy3e12,ncl4566732,wxid_1mh9ve4oggpd22,gh_0891ec9f728f,wxid_q64kr9n5r8fd22,wxid_dwlt4m5orxy031,wxid_5lue0i2ajlri21,wxid_5jvydo45gztg22,wxid_ckw77j5s736j22,wxid_19r6zfo3jw3h22,wxid_gk9tuzvvooq222,a728377660,wxid_0jlloqeynnx742,wxid_1ouug9sezi0q22,wxid_rzyxjhrne31j21,wxid_yr2ibt1gupvp22,lkmgydx,gh_9989c9147e44,gh_a9e2d3168207,wxid_brfd32a36r1222,q329684273,wxid_wuwtnsdexeoh12,kangxingxing7703,wxid_5akoj9zm30dr21,wxid_mown94dz4osr22,wxid_wr82gncpgxw122,wxid_wgf6rbst6cf621,wxid_vx0qmikanewl1,gh_00ad5eca0ea4,wxid_ex9308572a7p22,wxid_96t6fqredbgz22,wxid_ddqdbfkm9xz922,wxid_g8oo4jbfhpq222,aiwudinie,wxid_6jrtp4eyafeu22,ll1111118,wxid_v9ndffu85tjx22,w2581582,wxid_0aqdxs38sj3r22,wxid_g2d7rhnu5gh841,bailan2360,wxid_omrqa3bekg4x22,wxid_m7mvybcr06qw11,wxid_8mobd3hvhbtq21,baobao945201314999,wxid_d98zn3pydyro21,wxid_jrhye5ombszt42,q316668439,wxid_9a5cclo741vj22,wxid_s8f1vqhd5cc521,wxid_211ncuo4vl6912,gh_b9826bdc8d64,wxid_fmh8mwgl4daa21,qq691383565,wxid_hpjgnjzinams22,wxid_vqmauy2c6gdr22,wxid_ykfmo6diccv612,CX573192115,wxid_tbc415v0u7c522,wxid_1skjrxd54bh221,wxid_8fhhlsoho1yn52,wxid_n0me87oq67xb11,wxid_vc9zm19dbkhl22,wxid_lxt9546tgk0322,wxid_pbzloe14gcu922,wxid_pjve99a2g1ka22,zhoutao426624,wxid_2uvxao84b50n22,wxid_8iuuc5kvzp7522,wxid_vv6uo3kjrion22,wxid_o7m93b00wvm821,wxid_3i2bs0jmxl5a12,wxid_73l4kvcyxnat21,malx67,gh_7aac992b0363,wxid_zhotzgow551922,wxid_damk7nwml6mf22,wxid_e4v1f1pg0hfq22,wxid_ud8acn8l6syn22,amymeixi88,wxid_we188psa72b921,wxid_vkyhonep0qz622,wxid_uoosgbaacaw212,wxid_rdvuwunm5cyk22,wxid_jz90omw1ym1w22,cscs652,mphelper,wxid_ta2ppdpjxys422,wxid_d5dzv9d8j4m822,wxid_pvfsia17pfci22,wxid_wctzozhctfxr22,wxid_6018040181022,wxid_gecjgsshael921,amb_weixin,wxid_le4e9kiik92m22,wxid_9rsgfgbi4pbc21,wxid_2m6n301z60sr21,wxid_5afvobkzvx7e22,wxid_ikr8x6zyczwl22,wxid_7282362824221,mingming_lxm,1383984373@chatroom,2692398002@chatroom,wxid_1wc4f0dip5hv22,wxid_v1inkao71ypw21,wxid_pwkjkpuap2vf22,wxid_8zyeisw8wcsb22,Sakura5151,wxid_1ejsgfrclmbc12,wxid_o3yrpl7w4np22,wxid_sh14b0gatmpq22,wxid_uepdew2q7qu622,wxid_vortd6tnxlbc22,wxid_femygbpaxr8r22,wxid_9c3mlquvhgm822,beeveryday,wxid_s9mem75vcvr822,wxid_ukirt1gvuakx22,wxid_j8m9udfhekml22,wxid_77mctpfy9v9u22,wanshuntongxun123,wxid_jslw9ivohcpj22,wxid_fdirwctak7gj22,xiaoqi19880922,chenliangqin734310,wxid_fvejlobw4o521,xiaolushooter,yanxuegang8978,ly276820478,wxid_v8z1x4afoezd12,wxid_r5kh7etpvnt022,wxid_e2ll8vy3oxzm22,gh_741491a485a0,wxid_8bfbkmm16ypg22,biao892985793,w834642556,wxid_3923179229012,wf924394342,wxid_quwezxwf9skj21,wxid_cfxcxgwdheo422,wxid_gk2n9ll0ur6m22,wxid_5717blt8ja522,wxid_sjnv6bwakngc22,wxid_9iteuav63jsy22,wxid_s91zgyexrpkj22,wxid_tmnvp4usyavc22,wxid_dp8ljwosxw7b21,wxid_5625406253711,wxid_5t3whyvz71bd22,wxid_v9jpsqzot55q21,wxid_oizffpdjlfxr21,wxid_1887858879612,wxid_f1u4zgc7472m21,wxid_epj4gym6xtih22,wxid_fcgrnhldfw1m22,wxid_fromf82e9jvj21,wxid_a2lm0fu6d41t22,wxid_m3zwz5uyasrv11,wxid_a1un7d3eoqa922,wxid_7008610086311,yhx6866,wxid_o40e19s19uyg22,wxid_vdc9kgx5jrw542,wxid_fedojf6enrad22,wxid_kpyr9bzyq47222,wxid_y2hajkhvg5xe22,wxid_bvvgqbdnl8wv22,abcd717652881,wxid_yp5265ml12fk22,wxid_qmgmu11ril3r22,wxid_bqj4m70zf0r822,wxid_yj9bn1aq5mc821,lwchengloveher,wxid_gf5zc0t4ozie22,jianzao8812,wxid_kv99n1wbyrw822,ID15022290643,wxid_8wc89wxonzbc22&lt;/username&gt;<br/>&lt;unreadchatlist&gt;<br/>&lt;chat&gt;<br/>&lt;username&gt;2625353391@chatroom&lt;/username&gt;<br/>&lt;lastreadtime&gt;1472877961&lt;/lastreadtime&gt;<br/>&lt;/chat&gt;<br/>&lt;chat&gt;<br/>&lt;username&gt;MomentsUnreadMsgStatus&lt;/username&gt;<br/>&lt;lastreadtime&gt;1457878636&lt;/lastreadtime&gt;<br/>&lt;/chat&gt;<br/>&lt;/unreadchatlist&gt;<br/>&lt;unreadfunctionlist&gt;<br/>&lt;/unreadfunctionlist&gt;<br/>&lt;/op&gt;<br/>&lt;/msg&gt;",
+"Status": 3,
+"ImgStatus": 1,
+"CreateTime": 1472878189,
+"VoiceLength": 0,
+"PlayLength": 0,
+"FileName": "",
+"FileSize": "",
+"MediaId": "",
+"Url": "",
+"AppMsgType": 0,
+"StatusNotifyCode": 4,
+"StatusNotifyUserName": "@@8c294da50f172625697ee02273a5a563d8b5d7a80d52621c6110b2a5d9a5995a,@@b4ee1616ec26bdd38f8fabbd25de7b65c0ffa51588d7f2693c82d731b88bf134,@@33e0bff7fb68243c7917fa2585159f3aec9f9b6dec50e88aac4da6b33ffcc8d9,@@937c45c682f18b1bee30bcd18d2abe00579e0d5ec784554ef0c83e35a51de118,@ed7211b10c2e6eb8f357f76a0093bd8d6b32b12677f3345f1927a0cb280a4572,@f7e29c57de68e0f593aefee8b8115acc65934556d848c758181f9ef74239e00f,@19812e54136a9f35b10573e36bebb37b,@9fdfe58c9fb499657b95945128eb6a9a,@978c8eab5faa000855a4d8095b30ee01,@@57a927d005847b4a586b2c7b28a9b46892d5540bc3e1c1922c60205e281540ba,@@28a32eeed8c5dbf04a44c69d6bfddae1b8b77aadf5685619773eb199ef01196f,@c97bed25efd956b9e3b2d78a398c42b990d9d7e1d45c5c1a54a9c25d6f875580,@ba7b42376456cf39dee58a22f1b6f22cd6315c430271fee255ad567bf5a6bee0,@aab5c453e6a98d18ebdce6f84edf92ed,@dc85408b22a54c41d1a6a79f9a3520da,@d4b14230b2f625d0eb3e8091c92669a7563dd0358edd945b13b0c073dc7e3369,@98fba10f55fd508df8f89f82046c4ebe570b2004e347740e00acaf7587416041,@16413268a46a66cfefa89247b9625874f43f5e7f30947f80c39bc24cd1371a0d,@63035717ab751fb37dc4205346130744e1344773f1ae0432782f7692d56c2e38,@94bf51bd56b242d28ad9c18ac27ceda7,@b43893f796fd6fa54d2d5d91c64b6bafeea9ec7bd7aed37261008e81e158db03,@d1449ebd9b0dce6adcb9e56208689642d2df8a6a3fe2b7ca60aee036da397e10,@53d00790f38c322a33d51faa7c9222e6c3fb04142fa1723ff4450788c3505805,@38345d502a041fe85222f999684d41bb,@db39a8b1e894229740722ae04c17d5b4a80e127047836ede66df237dc2690d5e,@f8b0d028e98c7f463eae5c2fe4b973b5,@0776aab917048b9b7fe0f8c0b0e89b6fcd38f2fa77b2dcec74a64e353146ce00,@758154cd657f66a2e7da77d81de858789c41a06142d76b99f36622bbfc2e5974,@70e4bc2c14d7991cc7ac426e9d753d3765d78abcb2229ded1ace35834c039ee0,@2ee165c4502a655e84eeca0dde1af7a8c6f6894a33d5b19d3e01ac145ed42ec2,@8fde50fbf96964dd659f16367c2e4a5c9cd666327e6c227b55c2bea4440e0564,@b3fa0aef3b75b082a772d67a0bf4184cf9f5d2fb3a79f41f311da886a12e1a2f,@c1c7ae0ef9096b487a28d7cd7ea852ea9bd4269b62d2205b5108a14b57f8b20c,@e2b8ef27f00178be7e0d8d387318ff1e,@a5559458729b8338a1c993d75a7e9474fa1ce0febbac4fabb84bf07152f301ac,@29fb13672efc32ed03f50c5bf708ba914f1094cbd9570a9a119ee51efe5535b1,@19a4eb37e5763ce05418c5ea7bd2103ae4ad338234a2ca887ae70ee84d463c9f,@ed9beaf862d22bdb6160aa7df9c6a80a492c2fea2fea41927683a133b38f9f99,@25dac58540089e5c5b3be49725867b3f,@2411105770155cf4729c235c19f924da,@e5d607fa8b73bcb6cb49da6266804be0,@3770872853c6a91c180b87020bf34d7c69f4fc87369fcc90f3484175eb7e7871,@4fdecb22da92cd01506b76d00c2018a8,@a1e86c6515c582d2dc62d8b79403e49880e90541473a9f83e65563d0a3771219,@24a29a6889af2a5ef20d9c4d5a9da88b841e58eb59aab741ae88b061c45a0ca8,@d647c9a2a7d0f8a04669176907fa97f74bf91dc16efb96e49d4c1ae036cf56c6,@ad0bbc142b75a8eba0c99580602324fd4b104ba6daac26d860e52dfb989006ec,@231da45d75547911384ad4f74a42695c550a55535a361cc98142474fe1ba9022,@9d51e18c46d7c45d4bf4fe3ca4737fa7175b8697042f7961f269e26a62b0679d,@ddbf6e9b5f55d3ecaca1f34544c1b14541b0af5f6879bb17aeff9a6bd4bd36e9,@d444d0a09ded71f77d139bbdd963898a,@8bf0dc0e7046f0da369474eb79b44031aade869afa01dd10961646d7d9ff65e4,@b802edf846020684e83c1aa0ba87ec9877b520c4da332169c8b1ea1091a1537d,@145cede12f5efb08df291428156a74d65fbeec869403ad762741d8630a2797ab,@ac81203acdb2adbdaea74f0ca6c7b3ad5b2c6ea3548f730234f16982e1e030c3,@f73e187643d0c780d4a71991073eeca9,@ee18ff54df5bc657a08bdda9ade7cd6e63def61f644e8a5b735ed803416c098b,@7186cba3ec79ef8186d2762709832580,@019618f9ae0422cbd08d67aefd9b64a54837b2acc8381b440b919b3f01a8aab6,@c51f3603923bdd9aa7a8de777331929c,@a0792b953652ebef0580a21943c149d21b7734e63ef8ec64c9917f1331b7c1a5,@c251eae7fe2c4f287aaeee34d97ec3c8a51574f347f70771db30b96a8eb81da9,@e3358dd7a6047d94f3588642b807de9d,@597f7179e9e4205b20c9b9146dd466a19b5aa83d1f129d5366ebc0689cd8c4a0,@776ef913ad2d9316048c01ced54230678dbfd89c530ffa57a7076216a0ce85dc,@5bc1ac9828a55b4b2439ba4cd2ed906ace793b129dc36425f1e147c261e70938,@3e4684403e4db2d5e0afbdf779886cb51f5c09bd15d7e5d0eb760a454126ec60,@7f5978b4c184c2dffc0d5f1bcc38a210eb04f9f4fddd2459e85b89758e9ead77,@2e3d3609611ad787627543b6f4bef326b69699b396500f94f3f9519b027df798,@95d459235befa2d4f44340a941707c43,@ca4b03e95557b88e7f6816ab743c0998442f04f0553d76a892a9d151b88a944e,@a33374ef218e3d7fe579f233c2538b2a11146575e50aeb94246c210cf09821d1,@aca483417dbc3f6a637998e70d3ced38ccb78e738d5fd14addc9c386c8c70260,@5bf072d151ad848e667c924c2030b532,@956cce3bfca1e5c45b3b9cb69cb069693f4475e114350080e4b62919e527e17d,@8c658e6adfdc4c3ce9245b80998e117f,@9b23abc06399186e7a46a791e360a3029b28ccc10794e7d1f6bae77fdabd7f6e,@d3ae7b13c08da02f9b102fb29265e633b7fe803acffbc5cef195ca13969ec5a2,@729d1c637af4655343c57d9d33987a63e208229039ce4ffa014bc0bdb78e5ac4,@25043c497d56a2cadf0142642c8f5d76,@87347249cdba6972e6fb8f4131f8430c26d2dc9267a75b25855a6ee1e21c52a1,@c6694c593f8075c0ddb00b750bdeb6f98f90f87e00d51a825b7957f659ed142a,@33f84c89b9a27402a77af21b21f4a87b8d3fffa508306a8c53be9fa2aca50975,@a1a4d53bf8a7a29e04598c1f464adaa91590c5f5c598ed3afd65c0d2ead447ae,@d041c143c0fe0aa4aa13cd70800adff44b7b09d034a00440b9fb9b3647840319,@810f04a2b3b3a03036ef414da49cc9af6241069ccacbe4dd9be851981bca443a,@a8d3006b2c2f4f9d3a585941e16edf48c3435ceac2547e6415586578c9ad0398,@09a783be21e62c13241b44ccc3155c82ca5f9effe73db497f5c7cfe943f84963,@86afd961b6d330860652af5684c6ff9b,@0626af62f280dcc5152ea3bfef37aa2a450bbb19462d63ff687900056601a402,@930964b06b04509b3158af336019f53b600136d9aa22827e4ffc8b1198372754,@1bc503c621eae16708422e64258c62dfb36138355c3bc18b6b7be5384749a5c3,@74978c29fa37e8de0cf8c2502d7e5fd40679e91fe22e15e037f44ed1aeec0bfa,@2d301ef92b4f137a6a715bc35df07c34f438847edaa7a0088c4bb4d702bb898a,@2dc3e9cd74fc45705ee14a09ce2f26b55b400586eec13f632753397e54b6c424,@6ef0f22fad12018b0002d39dc1288d39,@10fcbc7a0e0aacbf4ad8750f468d480a,@71b93f0157d6b18a7eab8b8c375659a34a62bb2e523fc1c85961f973ed076086,@eaede50aa4a359d43bdf75b1a4ef6b611e70f9a02ca6904fa5dc8804d0f55c9d,@1c160f0f232160ce2c750c1a9c813be8d842a9baccd2dd064bdb942af85229fc,@6ad42502faf8d21e4ade0999670dbe52cca5997c2c9b98dd747bce79c1d82739,@5409e87e72f29d04220b1166f437d4ae,@c49a9185a5e3fa90ccd130d246c65eec78f25463ae3eaf707fe4e7bb327686c7,@04b88c54dde90f3453abc538d153bda93d141f474bb3e11ac36fc2a2538b19a3,@82481339068fbda879bbe0e88670fd25e94c262bee298231c49c86ddf614ea8c,@7f2e304350ef5facc9a04f6d94c4fb10da406650504ee68a0938e285001d7b80,@f708ddfbf1b1685fb26bc5601cd6e1120417e06630734af1063df2d787bdafae,@2ce056a8d0b82c88b668df586b978364,@db51a82a780a57ca5be3eabb0689e4ac,@d2f07c296c31641a3f1a381a18c336f96c40719d77f7bee7a8b5045bca45508d,@974842f8d53ba82bc4ca862515bed762eac0883933f380e327352e2da9af50e1,@34ae5d2643cfbda5fee2568eaf2fe83f906735faa0fbb6ee81b4ff1302aa285b,@533def10955a0e7f885bcf05b4a3780261c623351d819e9622268513f2b1e67d,@65f206dc9e6c89c2e8a7c7685333b2bd754e9deb815de2e0a2cb33bfb2f571a8,@0f956a3a7f36d3640f0779f5b621820729281f44b6d1c781afeda42febd96272,@149f47a64d58a3f2f8c5d16372e5bd55,@728404291136800f53050ce437cfda3ccc571481bd7b82205a59267cf18a4aa2,@369fa5add0d7d97ad668d8c1ef23e0de796839dab68eb78b62936138f261ceac,@c2bf26addb6944525bb2b48f3b0c5dbed164b37b8d3513a807c02328a64099c7,@45a5d64c32f0741e88eaa00e7a92acc5039c2ffb39151bc60492ca5dfbff4e5a,@ac314aaf8b5f8bb4c3899055e59b7740293b138f40e5530eaf32d237b4c51c3a,@c83ed0ef86a7cecf4c31d75d05b829352eaed6b067a0a858f59bb15cfef38219,@970af236c10f47e20b709a4b75b54ddf,@@53942777e70e61a570e34ea26dcefda3afb917abb17bf1d6a6e1f5fca5ffe7b7,@@6eeaf806840137dfe4240fefc3db0fad9b83f6a2ee66f3d600de5ae3ea3e41f6,@a57784061250d9c18ed7e05aa8b487099f8e6d3b84ef875bbf0047d7a56835ec,@74921a314df758ef847417ac4242eab21e57af3156d38d870d28eb3b1fe69e3c,@e1890b295e82704aa78f4059b99bee53f767b6bc77d98e381f841279c1cf8b35,@a87133fabe9f3395a0d7bee0483084c2a69493663565e3c7a3b7560b78ac1403,@525b11ffadacb4f4b78cc5b222433407,@2fffc338bca4e99965ef0ec0ee9f3cc2e5c7e2c748abb6d891aaaa439bfdd937,@f7b3378cee68b51a767297f27ad572ceb7284b64a0dfb23edfbcf135cf681712,@13209a8cc8252b30f52084af0275611331ed5304a8bd447727dc73e61293080a,@a5912d2812fe3594cc934a2c157716d4dbd24014e9fb29c2301298c462ae0112,@8fe4f7aeac2f6fbf28fbed3d14c32a2260953e60fb0801e111d40aeaa2e4bd15,@4f4d9bdc3cea27ab08de35013f4cbe20f9acde357e982c185f59613e85f886ba,@617219db87d08cd099c7cd9a7adb906e2b35e999ba519e69d698be6accadee3d,@fca586729fd38a6feefff9ded4240aea,@56072988e8ded935a2f85f57c70bcc2bd0911e3c34274ce9ac50633e338e49fa,@3ca25390f930901da4775e84b7676cc3834dccf4f7be59aab32f1332f740cf0e,@ab706d3840d4274135f93fff7a734f964bc360f376565e786941c2d078555efc,@4588be853ab498bf6afbfc422ad14004a3911ea7a6004064bebbe3ffa5ef142e,@c8418d090e7428d66baa4426e42cf5d95b52d125fd0fcc1a7b0ad92bc164d36c,@b52419413de2ac52753736f999a374f3ad2032c046930295535e9604a34e51db,@27f6685fb8deca1aaeba17a196d3a942c88f4e7229adbb1b72ba3a410153182a,@e8a1348580f08926ccb8d057946867b9,@cb53073bdd35aa776a37ced7440d0cdd9b55c378f8fce3bf9c5f7be4a66fd6f6,@c7c611d7d09353275d313cca89f0127e4f23c19dd1297f5a0552031ac9015665,@2469d08d31e7ec4b092519212bd6d6b2,@85d24852186dcc77044050d1faab1e43,@873be381476b75c9cb62465fce8e93d4,@0773457d2dee976a1443a829f0980f049ec0e6de42aa53ed4d4ac39a99fc2036,@55ac16632f4618fd6229dffd49c53073ea0d455a63586a77fc696be1acf110a6,@37e5f43f4f2f93a076a5d2c64585f40ea668709739283b94742cb5c2e5547952,@7160b7f0366369820201be108c6c00f4,@d95c447991da44f26a5d9c190ac3f71649da87556a2e3fe5ce7c4493af4ab425,@8c20b8e96ccc3f87443bdc84efefb7d1,@e8eb4bb1d4f292573f3318f4ff3f03a3,@ca84e343f03111c4a9dd40a86bdaf0787f4bbafc2250694ff803f0988db18345,@fe1fd1fd86210bc49015346f4110a63b,@fcdfe4a74ca3a02c745273d70101af4dcadecfc3ae354a1f12f9abe93550171f,@1cdbc118462196227344a6467759853f085d6383df81c251963595e3522558e3,@e4d42bca36ebfd596ee61972331df30fc9fc6223659b4935ea1916051c3d1f76,@05ba11550c018a801423fbca4f57c643017faece0e13c3f4ca9a2c5bae2b602d,@cf5b9a61cdcf3e798a7bf43fb4152aff61c22b8275eadc63625f572dd670c5bc,@f977e363d91299e1d43d655f13f0690520e526201bc18948e0a7835fed6fde7e,@94b9d0a4e3cccde20de22e03e2a21c63098b38ff8ee57ec4bb95d9df185a8d7e,@7b8342f136a8e0fd6f4e7d72a340323a29e0473eeae017bdd3abd133445be45c,@665c031227f3487e0a8b5860a0410ca2d3820b8cd118b45ec5e5724c88f562e0,@8eebdba715e516016eb2cc1ec9b74c09556d29b66fa715ff40abc306d3fa9cbe,@4364a8fe2984b5b9aaeff81fd047d41971a032ee7c3b039a89f66e3954efe6a2,@acdbc8b79cb9268a3cf1cb9e37b0733bd6961f4aa33a9833e1ecbf915e1ce456,@a87699ef93950bad248eaddce1b740987ce7111ca79f3ccabfa15711ca3b6094,@817d89b2742f5329b0eb84a783fbd805166db4105b647b5338d641264b6d1c07,@1e95fcaf7e9124f741f337afc975acd1ab5c43eca206803a95b620f937344c23,@b38bc74ec227768dc5a1377e58acd7aedf9a513e7de6ab0fa3e28834dab5769c,@cdcf230461a4a960ae21124c59b0460e063b71ff9e466c4b89e9684d4e26f98e,@1f6dc217ee6efe87b2766e48ed6213618b520311cb4d023d6eeabc0d5a22635e,@ceace4df166f71545169bd6c877401b007e8695b1fd8f1ccb565bed4853320dc,@2b3e05302353ce2673c61cefb01cfb5d79860fd4c3f8cb63aa625e048c061b75,@1f72880900e8490c6c91723ab4d02d84f021cc95442991af15751fbe40cfd27f,@9169774071d5e7a008489da010f11ac9f08dd641ec1d47e4a9b75cc153bf24ba,@4f02fe40b966967f85cb36c5ca621e2a,@5db6e6783cacd65bd14c9302a63f9041946647e3a91c0219314bb63d04dbbeb3,@c47797e773de271929ed54433930d0f7595432cf33a5429f9bd4b83770f574fc,@827137bb18950ffa5ec7b3c1bd46574fc88936cc82fee80394b557f0cdd6725c,@a81a6311805e074df3f30baab5b06d36d1ad2ca981b6435705ab24046fab2dd5,@ff039c7d513d289268fc22073630b52a551d56e6d9a3665dcbd48c295decf5bb,@7bb59376e5f89ea800cfd897be06c98f30fd7c5bf00afd09746602e07d84d353,@18c1748a77228a4eacffe0b600ee4b6f,@18f635b0dc78380431c1ff74e676b3692d6401bfa39f0af356dbd366b7400b09,@35470647f34603e529178a8bca72a9ba33e051eadf1a261f2159b0a219f61d6d,@235f00a95787b29a49b697a371df0fc4fea18f730a9a57193110ad9e669bd36e,@ca693814f8f62a3f6b24c3fd7d16f1a6d87082e633d109e844ea0bbc81ade25d,@7ec16cce37e97ee12cc75e2ad9a12b65,@df4cf7aad3ccb6ed10ab3e5fe0d67be8434c2c4a5246edfc00eac34ab625e707,@a7be1d584164f0403f7559d8112fc9fa,@4824dec62b4048e523d2001fc85c2700b464489a033f918e494b843f54c35e71,@8bd23acb303f9240526eee277e6a81dd,@059163b2ae27c5c303ba90e6836b383b89a6f2b6ac77c680398b0ae6fad19b7d",
+"RecommendInfo": {
+"UserName": "",
+"NickName": "",
+"QQNum": 0,
+"Province": "",
+"City": "",
+"Content": "",
+"Signature": "",
+"Alias": "",
+"Scene": 0,
+"VerifyFlag": 0,
+"AttrStatus": 0,
+"Sex": 0,
+"Ticket": "",
+"OpCode": 0
+}
+,
+"ForwardFlag": 0,
+"AppInfo": {
+"AppID": "",
+"Type": 0
+}
+,
+"HasProductId": 0,
+"Ticket": "",
+"ImgHeight": 0,
+"ImgWidth": 0,
+"SubMsgType": 0,
+"NewMsgId": 1126225764868529071
+}
+],
+"ModContactCount": 2,
+"ModContactList": [{
+"UserName": "@@8c294da50f172625697ee02273a5a563d8b5d7a80d52621c6110b2a5d9a5995a",
+"NickName": "",
+"Sex": 0,
+"HeadImgUpdateFlag": 1,
+"ContactType": 0,
+"Alias": "",
+"ChatRoomOwner": "@19a4eb37e5763ce05418c5ea7bd2103ae4ad338234a2ca887ae70ee84d463c9f",
+"HeadImgUrl": "/cgi-bin/mmwebwx-bin/webwxgetheadimg?seq=0&username=@@8c294da50f172625697ee02273a5a563d8b5d7a80d52621c6110b2a5d9a5995a&skey=@crypt_824100a9_d68c452bfb98dd60ac6e39c1a80f2b95",
+"ContactFlag": 2050,
+"MemberCount": 3,
+"MemberList": [{
+"Uin": 11166007166,
+"UserName": "@2d301ef92b4f137a6a715bc35df07c34f438847edaa7a0088c4bb4d702bb898a",
+"NickName": "周1",
+"AttrStatus": 103205,
+"PYInitial": "",
+"PYQuanPin": "",
+"RemarkPYInitial": "",
+"RemarkPYQuanPin": "",
+"MemberStatus": 0,
+"DisplayName": "",
+"KeyWord": ""
+}
+,{
+"Uin": 1740039985,
+"UserName": "@19a4eb37e5763ce05418c5ea7bd2103ae4ad338234a2ca887ae70ee84d463c9f",
+"NickName": "不服输1",
+"AttrStatus": 235813,
+"PYInitial": "",
+"PYQuanPin": "",
+"RemarkPYInitial": "",
+"RemarkPYQuanPin": "",
+"MemberStatus": 0,
+"DisplayName": "",
+"KeyWord": ""
+}
+,{
+"Uin": 2629397701,
+"UserName": "@a5559458729b8338a1c993d75a7e9474fa1ce0febbac4fabb84bf07152f301ac",
+"NickName": "朱攀1",
+"AttrStatus": 185,
+"PYInitial": "",
+"PYQuanPin": "",
+"RemarkPYInitial": "",
+"RemarkPYQuanPin": "",
+"MemberStatus": 0,
+"DisplayName": "",
+"KeyWord": ""
+}
+],
+"HideInputBarFlag": 0,
+"Signature": "",
+"VerifyFlag": 0,
+"RemarkName": "",
+"Statues": 1,
+"AttrStatus": 0,
+"Province": "",
+"City": "",
+"SnsFlag": 0,
+"KeyWord": ""
+}
+,{
+"UserName": "@@b4ee1616ec26bdd38f8fabbd25de7b65c0ffa51588d7f2693c82d731b88bf134",
+"NickName": "这是测试",
+"Sex": 0,
+"HeadImgUpdateFlag": 1,
+"ContactType": 0,
+"Alias": "",
+"ChatRoomOwner": "@a5559458729b8338a1c993d75a7e9474fa1ce0febbac4fabb84bf07152f301ac",
+"HeadImgUrl": "/cgi-bin/mmwebwx-bin/webwxgetheadimg?seq=0&username=@@b4ee1616ec26bdd38f8fabbd25de7b65c0ffa51588d7f2693c82d731b88bf134&skey=@crypt_824100a9_d68c452bfb98dd60ac6e39c1a80f2b95",
+"ContactFlag": 3,
+"MemberCount": 3,
+"MemberList": [{
+"Uin": 2629397701,
+"UserName": "@a5559458729b8338a1c993d75a7e9474fa1ce0febbac4fabb84bf07152f301ac",
+"NickName": "朱攀",
+"AttrStatus": 185,
+"PYInitial": "",
+"PYQuanPin": "",
+"RemarkPYInitial": "",
+"RemarkPYQuanPin": "",
+"MemberStatus": 0,
+"DisplayName": "",
+"KeyWord": ""
+}
+,{
+"Uin": 1740039985,
+"UserName": "@19a4eb37e5763ce05418c5ea7bd2103ae4ad338234a2ca887ae70ee84d463c9f",
+"NickName": "不服输",
+"AttrStatus": 235813,
+"PYInitial": "",
+"PYQuanPin": "",
+"RemarkPYInitial": "",
+"RemarkPYQuanPin": "",
+"MemberStatus": 0,
+"DisplayName": "",
+"KeyWord": ""
+}
+,{
+"Uin": 66007166,
+"UserName": "@2d301ef92b4f137a6a715bc35df07c34f438847edaa7a0088c4bb4d702bb898a",
+"NickName": "周",
+"AttrStatus": 103205,
+"PYInitial": "",
+"PYQuanPin": "",
+"RemarkPYInitial": "",
+"RemarkPYQuanPin": "",
+"MemberStatus": 0,
+"DisplayName": "",
+"KeyWord": ""
+}
+],
+"HideInputBarFlag": 0,
+"Signature": "",
+"VerifyFlag": 0,
+"RemarkName": "",
+"Statues": 1,
+"AttrStatus": 0,
+"Province": "",
+"City": "",
+"SnsFlag": 0,
+"KeyWord": ""
+}
+],
+"DelContactCount": 0,
+"DelContactList": [],
+"ModChatRoomMemberCount": 0,
+"ModChatRoomMemberList": [],
+"Profile": {
+"BitFlag": 0,
+"UserName": {
+"Buff": ""
+}
+,
+"NickName": {
+"Buff": ""
+}
+,
+"BindUin": 0,
+"BindEmail": {
+"Buff": ""
+}
+,
+"BindMobile": {
+"Buff": ""
+}
+,
+"Status": 0,
+"Sex": 0,
+"PersonalCard": 0,
+"Alias": "",
+"HeadImgUpdateFlag": 0,
+"HeadImgUrl": "",
+"Signature": ""
+}
+,
+"ContinueFlag": 0,
+"SyncKey": {
+"Count": 9,
+"List": [{
+"Key": 1,
+"Val": 644995582
+}
+,{
+"Key": 2,
+"Val": 644998485
+}
+,{
+"Key": 3,
+"Val": 644998450
+}
+,{
+"Key": 11,
+"Val": 644998475
+}
+,{
+"Key": 13,
+"Val": 644960002
+}
+,{
+"Key": 201,
+"Val": 1472878189
+}
+,{
+"Key": 203,
+"Val": 1472878054
+}
+,{
+"Key": 1000,
+"Val": 1472877029
+}
+,{
+"Key": 1001,
+"Val": 1472863711
+}
+]
+}
+,
+"SKey": ""
+}
+
+

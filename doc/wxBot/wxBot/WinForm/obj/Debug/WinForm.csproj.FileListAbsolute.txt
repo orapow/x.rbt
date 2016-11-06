@@ -1,0 +1,13 @@
+D:\Pro\wxbot\doc\wxBot\wxBot\WinForm\bin\Debug\WinForm.exe.config
+D:\Pro\wxbot\doc\wxBot\wxBot\WinForm\bin\Debug\WinForm.exe
+D:\Pro\wxbot\doc\wxBot\wxBot\WinForm\bin\Debug\WinForm.pdb
+D:\Pro\wxbot\doc\wxBot\wxBot\WinForm\bin\Debug\wxBot.dll
+D:\Pro\wxbot\doc\wxBot\wxBot\WinForm\bin\Debug\log4net.dll
+D:\Pro\wxbot\doc\wxBot\wxBot\WinForm\bin\Debug\Newtonsoft.Json.Net20.dll
+D:\Pro\wxbot\doc\wxBot\wxBot\WinForm\bin\Debug\wxBot.pdb
+D:\Pro\wxbot\doc\wxBot\wxBot\WinForm\obj\Debug\WinForm.csprojResolveAssemblyReference.cache
+D:\Pro\wxbot\doc\wxBot\wxBot\WinForm\obj\Debug\WinForm.Form1.resources
+D:\Pro\wxbot\doc\wxBot\wxBot\WinForm\obj\Debug\WinForm.Properties.Resources.resources
+D:\Pro\wxbot\doc\wxBot\wxBot\WinForm\obj\Debug\WinForm.csproj.GenerateResource.Cache
+D:\Pro\wxbot\doc\wxBot\wxBot\WinForm\obj\Debug\WinForm.exe
+D:\Pro\wxbot\doc\wxBot\wxBot\WinForm\obj\Debug\WinForm.pdb

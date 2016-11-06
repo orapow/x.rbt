@@ -1,0 +1,336 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("com/_head.html")
+    <title>二房东详细 - $cfg.name</title>
+    <style>
+        body { font-size: 14px; margin: 0; }
+        .coop .grid-item { border-bottom: 1px dashed #ccc; padding: 15px; }
+        .coop .grid-item:last-child { border: none; }
+        .grid-item .c { display: inline-block; vertical-align: top; }
+        .c.c1 img { height: 90px; width: 120px; border-radius: 5px; }
+        .c.c1 { width: 135px; }
+        .c.c2 { line-height: 40px; width: 400px; }
+        .c.c2 .h { font-size: 18px; }
+        .c.c2 .c { font-size: 12px; line-height: 24px; display: block; color: #888; }
+        .c.c3 { color: #ff6400; font-size: 24px; line-height: 60px; width: 200px; text-align: center; }
+        .c.c3 .u { font-size: 12px; }
+        .c.c4 { font-size: 16px; }
+        .c.c4.t2 { color: green; }
+        .c.c4.t3 { color: red; }
+        .c.c4 .st { font-size: 12px; color: #666; display: none; }
+        .c.c5 { float: right; width: 280px; text-align: center; line-height: 60px; }
+        .c.c5 .btn { display: none; font-size: 14px; padding: 5px 6px; }
+        .c.c5 .btn.show { display: inline-block; }
+        .grid.body { font-size: 16px; }
+        .tabs { margin-bottom: 20px; border-bottom: 1px solid #ccc; padding-left: 20px; }
+        .tabs .btn { background-color: white; border: none; color: #333; padding: 6px 40px; font-size: 16px; }
+        .tabs .btn.btn-primary { background-color: white; background-image: none; color: #333; border: 1px solid #ccc; margin-bottom: -1px; border-bottom-color: white; }
+
+        .div_yue .c.c2 { line-height: 40px; width: 460px; }
+        .div_yue .c.c2 .h { font-size: 18px; }
+        .div_yue .c.c2 .c { font-size: 12px; line-height: 24px; display: block; color: #888; }
+        .div_yue .c.c3 { color: #ff6400; font-size: 24px; line-height: 80px; width: 140px; text-align: center; }
+        .div_yue .c.c3 .u { font-size: 12px; }
+        .div_yue .c.c4 { padding-top: 10px; font-size: 1em; }
+        .div_yue .c.c4.t2 { color: green; }
+        .div_yue .c.c4.t3 { color: red; }
+        .div_yue .c.c4 .s { display: block; color: #666; line-height: 24px; }
+        .div_yue .c.c4 .s3 { color: red; }
+        .div_yue .c.c4 .s2 { color: green; }
+        .div_yue .c.c5 { float: right; width: 280px; text-align: center; line-height: 60px; }
+        .div_yue .c.c5 .btn { font-size: 14px; padding: 5px 6px; }
+        .div_yue .c.c5 .btn.s1 { display: inline-block; }
+        .div_yue .c.c5 .t3 { color: red; }
+        .div_yue .c.c5 .t2 { color: green; }
+        .div_yue .c.c5 .t1 { display: none; }
+        .div_yue .grid-item { padding: 20px 0; border-bottom: 1px solid #ccc; }
+        .div_yue .grid-item:last-child { border: none; }
+
+        .top { margin-bottom: 15px; margin-top: 10px; }
+        .top .logo { margin-left: 20px; padding: 2px; border-radius: 3px; border: 1px solid #ccc; display: inline-block; text-align: center; overflow: hidden; width: 70px; height: 70px; vertical-align: top; }
+        .top .cont { display: inline-block; margin-left: 10px; vertical-align: top; }
+        .top .t { font-size: 18px; line-height: 32px; }
+        .top .c { color: #999; }
+
+        .basic #img_logo { max-height: 80px; max-width: 80px; }
+        .basic .li { padding: 5px 0; }
+
+        .div_log { font-size: 14px; }
+        .div_log .grid-item { font-size: 14px; padding: 10px 0; }
+        .log.l1 { width: 100%; }
+        .log.l1 .tag { color: #ccc; width: auto; }
+
+        .inputs .li .imgs { position: relative; }
+        .inputs .li .imgs img { width: 80px; margin-right: 5px; }
+    </style>
+</head>
+<body>
+    <div class="search">
+        <div class="top">
+            <div class="logo">
+                <img src="$item.logo" onerror="this.src='/img/no.jpg'" style="max-width: 70px; max-height: 70px;" />
+            </div>
+            <div class="cont">
+                <div class="t">$item.name</div>
+                <div class="c">$item.contract $item.tel</div>
+            </div>
+        </div>
+        <div class="tabs" style="margin-top: 15px;">
+            <span class="btn">待租房源($!s1)</span><span class="btn">已租房源($!s2)</span><span class="btn">下架房源($!s3)</span><span class="btn">基本资料</span><span class="btn">预约记录#if($s4>0)($!{s4}条)#end</span><span class="btn">服务日志</span>
+        </div>
+    </div>
+    <div class="tab coop">
+        <div class="btns" style="margin-right: 30px;">
+            <a class="btn btn-primary" href="/mgr/coop/edit--${item.id}-1.html" id="btn_add" style="font-size: 16px;"><i class="icon-plus"></i>录入房源</a>
+        </div>
+        <div class="div_coop"></div>
+    </div>
+    <div class="tab basic">
+        <form method="post" id="frm_house" api="mgr.agent.save" class="form">
+            <div class="inputs">
+                <input type="hidden" name="id" value="$!item.id" data-check="" />
+
+                $F.GetUploader("logo","Logo","img","$!item.logo",1,"no")
+
+                $F.GetPicker("status","合作状态","$!item.status","","dict:agent.st")
+
+                $F.GetInput("zz","整租返现","t:ndecimal","$!item.c_zz")
+                $F.GetInput("hz","合租返现","t:ndecimal","$!item.c_hz")
+
+                $F.GetInput("name","名称","no","$!item.name")
+                $F.GetInput("uid","帐号","","$!item.uid")
+                $F.GetInput("pwd","密码","","$!item.pwd")
+
+                $F.GetInput("contract","联系人","","$!item.contract")
+                $F.GetInput("tel","联系电话","","$!item.tel")
+
+                $F.GetInput("addr","公司地址","","$!item.addr")
+                $F.GetInput("point","公司坐标","","$!item.point")
+                $F.GetMuti("intro","公司简介","$!item.intro","")
+
+            </div>
+            <hr />
+            <div class="btns" style="padding-left: 90px;">
+                <button type="submit" class="btn btn-primary"><i class="icon-ok"></i>提交保存</button>
+            </div>
+        </form>
+    </div>
+    <div class="tab yue">
+        <div class="div_yue"></div>
+    </div>
+    <div class="tab serlog">
+        <div style="margin-bottom: 10px;"><span class="btn btn-warning" onclick="show_log_add()"><i class="icon-plus"></i>添加日志</span></div>
+        <div class="div_log"></div>
+    </div>
+    <div class="item tpl log" style="display: none;">
+        <div class="log l1">
+            <div class="tag">跟踪人:{agent_name}&nbsp;&nbsp;&nbsp;&nbsp;跟踪时间:{time}</div>
+            <div class="content">{content}</div>
+        </div>
+    </div>
+    <div class="item tpl coop" style="display: none;">
+        <div class="c c1">
+            <a href="/detail-{id}.html" target="_blank">
+                <img src="{cover}" onerror="this.src='/img/no.jpg'" /></a>
+        </div>
+        <div class="c c2">
+            <div class="h"><a href="/detail-{id}.html" target="_blank">{house} {door_no_name} {lea_way_name} {lea_room_name}</a></div>
+            <div class="c">{region_name}-{businessarea_name} {room_name} {area}㎡ {floor_name}</div>
+            <div class="c">{intime_name} {more}</div>
+        </div>
+        <div class="c c3">{price}<span class="u">元/月</span></div>
+        <div class="c c4 t{status}">{status_name}<span class="st s1" title="上架时间">上架时间：{up_time}</span><span class="st s2" title="下架时间">租出时间：{d_time}</span><span class="st s2" title="到期时间：">到期时间：{etime}</span><span class="st s3" title="下架时间：">下架时间：{down_time}</span></div>
+        <div class="c c5">
+            <span class="btn btn-link bup" onclick="do_up({id},{price});"><i class="icon-upload-alt"></i>重新上架</span>
+            <span class="btn btn-link bdown" onclick="do_down({id});"><i class="icon-download-alt"></i>下架房源</span>
+            <span class="btn btn-link bdeal" onclick="do_deal({id},{price});"><i class="icon-signout"></i>已入住</span>
+            <a class="btn btn-link" href="/mgr/coop/edit-{id}-${item.id}-{status}.html" style="display: inline-block;"><i class="icon-edit"></i>编辑</a>
+            <span class="btn btn-link bdel" onclick="do_del({id});"><i class="icon-remove"></i>删除</span>
+        </div>
+    </div>
+    <div class="item tpl yue" style="display: none;">
+        <div class="c c2">
+            <div class="h"><a href="/detail-{coop_id}.html" target="_blank">{house} {door_no_name} {lea_way_name}{lea_room_name}</a></div>
+            <div class="c">{region_name}-{businessarea_name} {room_name} {area}㎡ {floor_name} {price}<span class="u">{unit}</span></div>
+        </div>
+        <div class="c c4 t" style="width: 240px;">
+            <span class="s">预约人：</span>
+            <span class="s">{uname}（{utel}）</span>
+        </div>
+        <div class="c c4 t">
+            <span class="s">预约时间</span>
+            <span class="s s{status}">{reserve_date_name} {reserve_time}</span>
+        </div>
+        <div class="c c5">
+            <span class="t t{status}">{status_name}</span>
+            <span class="btn btn-link bup s{status}" onclick="do_read({yid});"><i class="icon-upload-alt"></i>标为已处理</span>
+        </div>
+    </div>
+    <div style="display: none;">
+        <div id="id_deal">
+            到期时间：<input type="text" id="txt_etime" style="width: 160px;" value="" /><br />
+            成交价格：<input type="text" id="txt_price" style="width: 160px;" value="" />
+        </div>
+    </div>
+    <script type="text/javascript">
+        var coop_cfg = {
+            el: ".div_coop",
+            searchcon: { page: 1, limit: 30, agid: "$!agid", st: 1 },
+            api: "mgr.coop.list",
+            tpl: $(".item.tpl.coop").html(),
+            exheight: 45,
+            rended: function () {
+                $(".c4 .s2").hide();
+                $(".tpl.coop .gridpanel .c5 span.btn").removeClass("show  ");
+                if (this.searchcon.st == 1) { $(".c4 .s1").css("display", "block"); $(".btn.bdown").addClass("show"); $(".btn.bdeal").addClass("show"); }
+                else if (this.searchcon.st == 2) { $(".c4 .s2").css("display", "block"); $(".btn.bup").addClass("show"); $(".btn.bdown").addClass("show"); }
+                else if (this.searchcon.st == 3) { $(".c4 .s3").css("display", "block"); $(".btn.bup").addClass("show"); $(".btn.bdel").addClass("show"); }
+            }
+        };
+        var log_cfg = {
+            el: ".div_log",
+            exheight: 45,
+            searchcon: { page: 1, limit: 30, agid: "$!agid" },
+            api: "mgr.track.list",
+            tpl: $(".item.tpl.log").html()
+        };
+
+        var yue_cfg = {
+            el: ".div_yue",
+            exheight: 45,
+            searchcon: { page: 1, limit: 30, agid: "$!agid" },
+            api: "mgr.yue.list",
+            tpl: $(".item.tpl.yue").html()
+        }
+
+        var g_coop = null;
+        var g_log = null;
+        var g_yue = null;
+
+        $(function () {
+            $(".tabs .btn").click(function () {
+                var i = $(this).index();
+                $("div.tab").hide();
+                $(".tabs .btn").removeClass("btn-primary");
+                $(this).addClass("btn-primary");
+                if (i < 3) {
+                    $("div.tab.coop").show();
+                    load_coop(i);
+                }
+                else {
+                    $("div.tab:eq(" + (i - 2) + ")").show();
+                    if (i == 5) load_log();
+                    else if (i == 4) load_yue();
+                }
+            });
+            if ("$!page") $(".tabs .btn:eq($!page)").click();
+            else $(".tabs .btn:eq(0)").click();
+        });
+
+        function show_log_add() {
+            x.com.openwin("log_edit--" + "$!agid" + ".html", "", function () {
+                g_log.getlist();
+            }, { w: 500, h: 300 });
+        }
+
+        function load_log() {
+            if (g_log == null) g_log = x.grid.init(log_cfg);
+            else g_log.getlist();
+        }
+
+        function do_read(id) {
+            x.dialog.confirm("确认要标示已读么？", function () {
+                x.com.doapi("mgr.yue.read", { id: id, }, function () {
+                    g_yue.getlist();
+                });
+            });
+        }
+
+        function load_yue() {
+            if (g_yue == null) g_yue = x.grid.init(yue_cfg);
+            else g_yue.getlist();
+        }
+
+        function load_coop(i) {
+            coop_cfg.searchcon.st = i + 1;
+            if (g_coop == null) g_coop = x.grid.init(coop_cfg);
+            else g_coop.getlist({ st: i + 1 });
+            $("#btn_add").attr("href", "/mgr/coop/edit--${item.id}-" + (i + 1) + ".html");
+        }
+
+        function do_del(id) {
+            x.dialog.confirm("确认要删除此房源吗？", function () {
+                x.com.doapi("mgr.coop.del", { cpid: id, }, function () {
+                    g_coop.getlist();
+                });
+            });
+        }
+
+        function do_down(id) {
+            x.dialog.confirm("确认要下架此房源吗？", function () {
+                x.com.doapi("mgr.coop.down", { cpid: id, }, function () {
+                    g_coop.getlist();
+                });
+            });
+        }
+
+        function do_deal(id, pr) {
+            $("#txt_price").val(pr);
+            $("#txt_etime").val(addDate(365));
+            new x.dialog({
+                title: "房屋成交",
+                content: $(id_deal).clone(),
+                ok: function () {
+                    var pr = $(this.node).find("#txt_price").val();
+                    var et = $(this.node).find("#txt_etime").val();
+                    if (!et || !pr) x.dialog.alert("不能为空");
+                    else {
+                        x.dialog.confirm("确认此房已经入住吗？", function () {
+                            x.com.doapi("mgr.coop.deal", { cpid: id, etime: et, price: pr }, function () {
+                                g_coop.getlist();
+                            });
+                        });
+                    }
+                }, okValue: "确定", cancelValue: "取消", cancel: function () { }
+            }).showModal();
+        }
+
+        function do_up(id, pr) {
+            x.dialog.input("出租价格", function (d) {
+                x.dialog.confirm("确认要以" + d + "元/月上架吗？", function () {
+                    x.com.doapi("mgr.coop.up", { cpid: id, price: d }, function () {
+                        g_coop.getlist();
+                    });
+                });
+            }, 1, true, pr);
+        }
+
+        function addDate(days) {
+            var d = new Date();
+            d.setDate(d.getDate() + days);
+            var month = d.getMonth() + 1;
+            var day = d.getDate();
+            if (month < 10) month = "0" + month;
+            if (day < 10) day = "0" + day;
+            var val = d.getFullYear() + "-" + month + "-" + day;
+            return val;
+        }
+
+        x.form.init({
+            postedcallback: function (r) {
+                x.dialog.alert("保存成功", function () {
+                    document.location.reload();
+                });
+            }
+        });
+
+        $(function () {
+            $("#id_point").click(function () {
+                x.com.getbdpoint($(this));
+            });
+        });
+
+    </script>
+</body>
+</html>

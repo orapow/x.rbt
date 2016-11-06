@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("mgr/com/_head.html")
+    <title>商品资料 - $cfg.name</title>
+    <link href="/res/plug/um/themes/default/css/umeditor.min.css" rel="stylesheet" />
+    <script src="/res/plug/um/umeditor.config.js"></script>
+    <script src="/res/plug/um/umeditor.min.js"></script>
+    <style type="text/css">
+        .edui-container { display: inline-block; vertical-align: top; }
+        #id_desc { width: 800px; }
+        .imgs .img { padding: 2px; border: 1px solid #ccc; cursor: pointer; }
+        .imgs .img.on { border-color: red; }
+        .navs { border-bottom: 1px solid #ccc; width: 50%; }
+        .navs .btn { margin-right: -1px; margin-bottom: -1px; }
+        .tab { display: none; padding-top: 15px; }
+        .tab > .li { margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <span class="main">商品编辑</span> - <span class="sub">商品管理</span>
+    </div>
+    <div class="form">
+        <x:form api="mgr.goods.save">
+            <input type="hidden" name="id" value="$!item.goods_id" x-check="" />
+            <input type="hidden" name="tp" value="$tp" x-check="" />
+            <input type="hidden" name="action" value="$action" x-check="" />
+            <div class="navs">
+                <span class="btn btn-primary">基本信息</span><span class="btn">图片和详情</span><span class="btn">扩展属性</span><span class="btn">SEO数据</span>
+            </div>
+            <div class="tab" style="display:block">
+                <x:text title="商品标题" def="$!item.name" name="name" size="6" />
+                <x:pick title="分类" src="url:/mgr/cate/select.html" name="cate" count="1" def="$!{cate}" />
+                <x:row>
+                    <x:text title="库存" name="stock" def="$!item.stock" />
+                    <x:text title="限购" name="limit" def="$!item.limit" />
+                </x:row>
+                <x:row>
+                    <x:text title="原价" name="op" def="$!item.old_price" />
+                    <x:text title="现价" name="np" def="$!item.new_price" />
+                    <x:text title="返积分" name="re_it" def="$!item.return_exp" />
+                </x:row>
+                <x:row>
+                    <x:pick title="支持退款" name="red" src="loc:是|否" mode="2" def="$!red" />
+                    <x:pick title="需要配送" name="rnd" src="loc:是|否" mode="2" def="$!rnd" />
+                </x:row>
+                <x:pick title="标签" name="tags" src="dict:goods.tags" mode="2" def="$!item.tags" count="0" />
+            </div>
+            <div class="tab">
+                <input type="hidden" name="cover" value="$!item.cover" x-check="" />
+                <x:upload name="imgs" title="图片" count="1" tp="img" def="$!item.imgs" />
+                <x:text tp="3" title="简介" name="remark" def="$!item.remark" />
+                <x:text tp="3" title="商品描述" name="desc" size="6" def="$!item.desc" />
+            </div>
+            <div class="tab">
+                <x:text title="原价" name="op" def="$!item.old_price" />
+                <x:text title="原价" name="op" def="$!item.old_price" />
+                <x:text title="原价" name="op" def="$!item.old_price" />
+            </div>
+            <div class="tab">
+                <x:text title="标题" def="$!item.name" name="seo_title" size="4" />
+                <x:text title="关键字" def="$!item.name" name="seo_key" size="4" />
+                <x:text tp="3" title="描述" name="seo_desc" size="5" def="$!item.desc" />
+            </div>
+            <div class="btns">
+                <button type="submit" class="btn btn-primary">
+                    <i class="icon-ok"></i>提交保存
+                </button>
+                <a class="btn">
+                    <i class="icon-reply"></i>返回上一页
+                </a>
+            </div>
+        </x:form>
+    </div>
+    <br />
+    <br />
+    <script type="text/javascript">
+
+        $(function () {
+            $(".imgs .img").click(function (e) {
+                $(".img.on").removeClass("on");
+                $(this).addClass("on");
+                $("[name='cover']").val($(this).attr("x-val"));
+                return false;
+            });
+            if ("$!item.cover") $(".img[x-val='$!item.cover']").addClass("on");
+
+            $(".navs .btn").click(function () {
+                $(".tab").hide();
+                $(".tab:eq(" + $(this).index() + ")").show();
+                $(".navs .btn").removeClass("btn-primary");
+                $(this).addClass("btn-primary");
+            });
+
+        })
+
+        var um = UM.getEditor("id_desc");
+
+        $("form:eq(0)").xform({
+            callback: function (d) {
+
+            }
+        });
+    </script>
+</body>
+</html>

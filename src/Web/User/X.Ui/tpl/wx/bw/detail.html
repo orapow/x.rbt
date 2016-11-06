@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("wx/_head.html")
+    <title>房源详情 - $cfg.name</title>
+    <link href="/css/weui.min.css" rel="stylesheet" />
+    <style type="text/css">
+        body { margin: 0; padding: 0; font-family: "微软雅黑"; background-color: #f6f6f6; }
+        .left { position: absolute; left: 15px; }
+        .right { margin-left: 60px; }
+        .li { height: 34px; line-height: 34px; }
+        .panel { margin: 10px; padding-bottom: 30px; }
+        h1 { font-size: 22px; font-weight: normal; padding: 20px; }
+        .btn { display: block; width: 80%; text-align: center; margin: 0 auto; border-radius: 5px; background-color: green; color: white; padding: 8px 0; }
+        .weui_dialog_confirm .weui_dialog .weui_dialog_bd { text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="panel">
+        <div class="top" style="margin-bottom:30px;">
+            <h1>$cp.title</h1>
+            #if($show_tel)<a class="btn" href="javascript:show_tel();">联系我</a>#else<a class="btn" href="/wx/bw/pay.html">联系我</a>#end
+            #if($call_times>0)<p style="text-align:center;color:#b9b9b9;padding-top:15px;font-size:12px;">$call_times 人联系过，我联系过$my_call_times次</p>#end
+        </div>
+        <hr style="margin-bottom:20px;" />
+        <div class="left">
+            <div class="li">小区：</div>
+            <div class="li">面积：</div>
+            <div class="li">价格：</div>
+            <div class="li">楼层：</div>
+            <div class="li">类型：</div>
+            <div class="li">户型：</div>
+            <div class="li">朝向：</div>
+            <div class="li">描述：</div>
+        </div>
+        <div class="right">
+            <div class="li">$!cp.house</div>
+            <div class="li">$!{cp.area}㎡</div>
+            <div class="li">$!{cp.price}</div>
+            <div class="li">$!{cp.onfloor}/$cp.floor</div>
+            <div class="li">$!cp.house_type</div>
+            <div class="li">#if($cp.rooms>0)$cp.rooms室#end#if($cp.halls>0)$cp.halls厅#end#if($cp.toiles>0)$cp.toiles卫#end</div>
+            <div class="li">$!cp.orientation</div>
+            <div class="li" style="height:auto;">$!cp.desc</div>
+        </div>
+    </div>
+    #if($show_tel)
+    <div class="weui_dialog_confirm" id="dg_showtel" style="display:none;">
+        <div class="weui_mask"></div>
+        <div class="weui_dialog">
+            <div class="weui_dialog_hd"><strong class="weui_dialog_title">联系我</strong></div>
+            #if($cp.contact_tel.indexOf("http://")==0)
+            <div class="weui_dialog_bd"><img src="$cp.contact_tel" /></div>
+            <div class="weui_dialog_bd"><input type="tel" style="padding:5px;" placeholder="请输入上方电话号码" onfocus="start_timer()" id="tb_tel" /></div>
+            #else
+            <div class="weui_dialog_bd">联系电话：$cp.contact_tel</div>
+            #end
+            <div class="weui_dialog_ft">
+                <a href="javascript:;" class="weui_btn_dialog default" onclick='$("#dg_showtel").hide();if(timer)clearInterval(timer)'>取消</a>
+                <a id="btn_call" href="tel:$!cp.contact_tel" class="weui_btn_dialog primary" style='#if($cp.contact_tel.indexOf("http://")==0)display:none;#end' onclick="do_set_call()">立即拔打</a>
+            </div>
+        </div>
+    </div>
+    #end
+    #parse("wx/_foot.html")
+    <script type="text/javascript">
+        var timer = null;
+        function show_tel() {
+            $("#dg_showtel").show();
+        }
+        function start_timer() {
+            if (timer) clearInterval(timer);
+            timer = setInterval(function () {
+                show_call_btn("#tb_tel");
+            }, 500);
+        }
+        function show_call_btn(obj) {
+            var tel = $(obj).val().trim();
+            console.log(tel == "");
+            if (!tel) {
+                $("#btn_call").hide();
+                return;
+            }
+            $("#btn_call").attr("href", "tel:" + tel).show();
+        }
+        function do_set_call() {
+            doapi("wx.bw.set_call", { cpid: "$id" });
+        }
+    </script>
+</body>
+</html>

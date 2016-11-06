@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("com/_head.html")
+    <title>楼盘 - $cfg.name</title>
+    <style type="text/css">
+        body { margin: 0; padding: 0; }
+        .li.row .li { display: inline-block; margin: 0; width: auto; }
+        .li.row .li .lbe { display: none; }
+        .li.attr .li input { width: 120px; }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <form method="post" id="frm_house" api="houses.save_houses">
+            <div class="inputs">
+                <input type="hidden" name="id" data-check="" value="$!item.id" />
+                <input type="hidden" name="house" data-check="" id="id_house" value="$!item.name" />
+                <input type="hidden" name="jianpin" data-check="" />
+                <input type="hidden" name="quanpin" data-check="" />
+
+                $F.GetInput("hid","楼盘","no","$!item.name")
+                $F.GetInput("address","详细地址","no","$!item.address")
+                <div class="li row">
+                    <label class="lbe">生活圈：</label>$F.GetPicker("region","区域","$!item.region","","dict:coop.qy:businessarea") $F.GetPicker("businessarea","商圈","$!item.businessarea","","dict:coop.qy:::1","$!item.region")
+                </div>
+                <div class="li row">
+                    <label class="lbe">地铁：</label>$F.GetPicker("subwayline","地铁线","$!item.subwayline","","dict:coop.dt:subwaystation") $F.GetPicker("subwaystation","地铁站","$!item.subwaystation","","dict:coop.dt:::1:stationback","$!item.subwayline")
+                </div>
+                $F.GetInput("point","楼盘坐标","","$!item.point")
+                <hr />
+                <div class="li row attr">
+                    <label class="lbe">楼盘属性：</label>$F.GetInput("volume","容积","","$!item.volume") $F.GetInput("parkingspace","停车位","","$!item.parkingspace") $F.GetInput("greenrate","绿化率","","$!item.greenrate")
+                </div>
+                $F.GetInput("developers","开发商","","$!item.developers") 
+                $F.GetInput("opentime","开盘时间","","$!item.opentime") 
+                $F.GetInput("checkintime","入住时间","","$!item.checkintime") 
+                <hr />
+                $F.GetInput("propertycompany","物业公司","","$!item.propertycompany")
+                $F.GetInput("propertytype","物业类型","","$!item.propertytype")
+                $F.GetInput("propertyfee","物业费用","","$!item.propertyfee")
+                <hr />
+                $F.GetMuti("intro","简介","$!item.intro","") 
+
+            </div><hr />
+            <div class="btns" style="padding-left:90px;">
+                <button type="submit" class="btn btn-primary"><i class="icon-ok"></i>提交保存</button>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+
+        x.form.init({
+            postedcallback: function (r) {
+                parent.x.com.closewin();
+            }
+        });
+
+        $(function () {
+            $("#id_point").click(function () {
+                x.com.getbdpoint($(this), "#id_hid");
+            });
+            $("#id_name").blur(function () {
+                $("[name='quanpin']").val(x.com.getpy.quanpin($(this).val()));
+                $("[name='jianpin']").val(x.com.getpy.jianpin($(this).val()));
+            })
+        });
+
+    </script>
+</body>
+</html>

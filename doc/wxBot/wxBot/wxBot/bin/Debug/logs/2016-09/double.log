@@ -1,0 +1,540 @@
+2016-09-03 00:01:37,249
+SyncCheck
+
+2016-09-03 00:01:37,260
+window.synccheck={retcode:"0",selector:"2"}
+
+2016-09-03 00:01:37,771
+WebwxSync
+
+2016-09-03 00:01:37,771
+{
+"BaseResponse": {
+"Ret": 0,
+"ErrMsg": ""
+}
+,
+"AddMsgCount": 1,
+"AddMsgList": [{
+"MsgId": "5526827399600935625",
+"FromUserName": "@4b0b9d9831b2d344495b7a913aeb6361f34c7f48fd905abda64e2be44c2c736e",
+"ToUserName": "@4b0b9d9831b2d344495b7a913aeb6361f34c7f48fd905abda64e2be44c2c736e",
+"MsgType": 51,
+"Content": "",
+"Status": 3,
+"ImgStatus": 1,
+"CreateTime": 1472832095,
+"VoiceLength": 0,
+"PlayLength": 0,
+"FileName": "",
+"FileSize": "",
+"MediaId": "",
+"Url": "",
+"AppMsgType": 0,
+"StatusNotifyCode": 4,
+"StatusNotifyUserName": "",
+"RecommendInfo": {
+"UserName": "",
+"NickName": "",
+"QQNum": 0,
+"Province": "",
+"City": "",
+"Content": "",
+"Signature": "",
+"Alias": "",
+"Scene": 0,
+"VerifyFlag": 0,
+"AttrStatus": 0,
+"Sex": 0,
+"Ticket": "",
+"OpCode": 0
+}
+,
+"ForwardFlag": 0,
+"AppInfo": {
+"AppID": "",
+"Type": 0
+}
+,
+"HasProductId": 0,
+"Ticket": "",
+"ImgHeight": 0,
+"ImgWidth": 0,
+"SubMsgType": 0,
+"NewMsgId": 5526827399600935625
+}
+],
+"ModContactCount": 2,
+"ModContactList": [{
+"UserName": "@@6d260591e3d63a5455991b750d1e5bd5c985f9e7a1eeec2116bcd847bd313158",
+"NickName": "这是测试",
+"Sex": 0,
+"HeadImgUpdateFlag": 1,
+"ContactType": 0,
+"Alias": "",
+"ChatRoomOwner": "@27a1e09a7ebbb4da5fede1aa99a0cc4a06f663c91e03f850cb5a939c7baf0c72",
+"HeadImgUrl": "/cgi-bin/mmwebwx-bin/webwxgetheadimg?seq=0&username=@@6d260591e3d63a5455991b750d1e5bd5c985f9e7a1eeec2116bcd847bd313158&skey=@crypt_824100a9_3fdbb5f7db5d2eba1e6809786e8752cd",
+"ContactFlag": 2051,
+"MemberCount": 3,
+"MemberList": [{
+"Uin": 2629397701,
+"UserName": "@27a1e09a7ebbb4da5fede1aa99a0cc4a06f663c91e03f850cb5a939c7baf0c72",
+"NickName": "朱攀",
+"AttrStatus": 185,
+"PYInitial": "",
+"PYQuanPin": "",
+"RemarkPYInitial": "",
+"RemarkPYQuanPin": "",
+"MemberStatus": 0,
+"DisplayName": "",
+"KeyWord": ""
+}
+,{
+"Uin": 1740039985,
+"UserName": "@4b0b9d9831b2d344495b7a913aeb6361f34c7f48fd905abda64e2be44c2c736e",
+"NickName": "不服输",
+"AttrStatus": 235813,
+"PYInitial": "",
+"PYQuanPin": "",
+"RemarkPYInitial": "",
+"RemarkPYQuanPin": "",
+"MemberStatus": 0,
+"DisplayName": "",
+"KeyWord": ""
+}
+,{
+"Uin": 66007166,
+"UserName": "@3b1f5dc131a3e4c3f819edbc26c5dfde68fbbf000f2e72ddb49c35c8742b69df",
+"NickName": "周",
+"AttrStatus": 103205,
+"PYInitial": "",
+"PYQuanPin": "",
+"RemarkPYInitial": "",
+"RemarkPYQuanPin": "",
+"MemberStatus": 0,
+"DisplayName": "",
+"KeyWord": ""
+}
+],
+"HideInputBarFlag": 0,
+"Signature": "",
+"VerifyFlag": 0,
+"RemarkName": "",
+"Statues": 1,
+"AttrStatus": 0,
+"Province": "",
+"City": "",
+"SnsFlag": 0,
+"KeyWord": ""
+}
+,{
+"UserName": "@@3fb4cd99a5b2aa81454b9edb9425239cc9a0c0b56e2bfb22160a5d82cfbe73b6",
+"NickName": "一群",
+"Sex": 0,
+"HeadImgUpdateFlag": 1,
+"ContactType": 0,
+"Alias": "",
+"ChatRoomOwner": "@3b83ea8427bd554ad87806e83cf8c339548f8248b9b0b173266ac086c06d2218",
+"HeadImgUrl": "/cgi-bin/mmwebwx-bin/webwxgetheadimg?seq=0&username=@@3fb4cd99a5b2aa81454b9edb9425239cc9a0c0b56e2bfb22160a5d82cfbe73b6&skey=@crypt_824100a9_3fdbb5f7db5d2eba1e6809786e8752cd",
+"ContactFlag": 3,
+"MemberCount": 5,
+"MemberList": [{
+"Uin": 127252414,
+"UserName": "@3b83ea8427bd554ad87806e83cf8c339548f8248b9b0b173266ac086c06d2218",
+"NickName": "奇点娱乐",
+"AttrStatus": 4197,
+"PYInitial": "",
+"PYQuanPin": "",
+"RemarkPYInitial": "",
+"RemarkPYQuanPin": "",
+"MemberStatus": 0,
+"DisplayName": "",
+"KeyWord": ""
+}
+,{
+"Uin": 247023537,
+"UserName": "@66b50ac56009062c2fe112fa9d1017351b424c1fb6e73046920c37e3c45c435c",
+"NickName": "计划员",
+"AttrStatus": 233507,
+"PYInitial": "",
+"PYQuanPin": "",
+"RemarkPYInitial": "",
+"RemarkPYQuanPin": "",
+"MemberStatus": 0,
+"DisplayName": "",
+"KeyWord": ""
+}
+,{
+"Uin": 1740039985,
+"UserName": "@4b0b9d9831b2d344495b7a913aeb6361f34c7f48fd905abda64e2be44c2c736e",
+"NickName": "不服输",
+"AttrStatus": 235813,
+"PYInitial": "",
+"PYQuanPin": "",
+"RemarkPYInitial": "",
+"RemarkPYQuanPin": "",
+"MemberStatus": 0,
+"DisplayName": "",
+"KeyWord": ""
+}
+,{
+"Uin": 1740179612,
+"UserName": "@08d965e776e716a5a185fc26cc94785f82c4e0cfdf6295139789653898a85527",
+"NickName": "<span class=\"emoji emoji1f233\"></span>门",
+"AttrStatus": 69733,
+"PYInitial": "",
+"PYQuanPin": "",
+"RemarkPYInitial": "",
+"RemarkPYQuanPin": "",
+"MemberStatus": 0,
+"DisplayName": "",
+"KeyWord": ""
+}
+,{
+"Uin": 474506287,
+"UserName": "@9604afd6cb0b8aef28027f13f19293a81b4adaf74ce96ad673b51d08448887a4",
+"NickName": "群主",
+"AttrStatus": 135203,
+"PYInitial": "",
+"PYQuanPin": "",
+"RemarkPYInitial": "",
+"RemarkPYQuanPin": "",
+"MemberStatus": 0,
+"DisplayName": "",
+"KeyWord": ""
+}
+],
+"HideInputBarFlag": 0,
+"Signature": "",
+"VerifyFlag": 0,
+"RemarkName": "",
+"Statues": 1,
+"AttrStatus": 0,
+"Province": "",
+"City": "",
+"SnsFlag": 0,
+"KeyWord": ""
+}
+],
+"DelContactCount": 0,
+"DelContactList": [],
+"ModChatRoomMemberCount": 0,
+"ModChatRoomMemberList": [],
+"Profile": {
+"BitFlag": 0,
+"UserName": {
+"Buff": ""
+}
+,
+"NickName": {
+"Buff": ""
+}
+,
+"BindUin": 0,
+"BindEmail": {
+"Buff": ""
+}
+,
+"BindMobile": {
+"Buff": ""
+}
+,
+"Status": 0,
+"Sex": 0,
+"PersonalCard": 0,
+"Alias": "",
+"HeadImgUpdateFlag": 0,
+"HeadImgUrl": "",
+"Signature": ""
+}
+,
+"ContinueFlag": 0,
+"SyncKey": {
+"Count": 9,
+"List": [{
+"Key": 1,
+"Val": 644995582
+}
+,{
+"Key": 2,
+"Val": 644998360
+}
+,{
+"Key": 3,
+"Val": 644998277
+}
+,{
+"Key": 11,
+"Val": 644998347
+}
+,{
+"Key": 13,
+"Val": 644960002
+}
+,{
+"Key": 201,
+"Val": 1472832095
+}
+,{
+"Key": 203,
+"Val": 1472831370
+}
+,{
+"Key": 1000,
+"Val": 1472829486
+}
+,{
+"Key": 1001,
+"Val": 1472812412
+}
+]
+}
+,
+"SKey": ""
+}
+
+
+2016-09-03 00:01:38,421
+SyncCheck
+
+2016-09-03 00:01:38,421
+window.synccheck={retcode:"0",selector:"2"}
+
+2016-09-03 00:01:38,596
+WebwxSync
+
+2016-09-03 00:01:38,596
+{
+"BaseResponse": {
+"Ret": 0,
+"ErrMsg": ""
+}
+,
+"AddMsgCount": 0,
+"AddMsgList": [],
+"ModContactCount": 0,
+"ModContactList": [],
+"DelContactCount": 0,
+"DelContactList": [],
+"ModChatRoomMemberCount": 0,
+"ModChatRoomMemberList": [],
+"Profile": {
+"BitFlag": 0,
+"UserName": {
+"Buff": ""
+}
+,
+"NickName": {
+"Buff": ""
+}
+,
+"BindUin": 0,
+"BindEmail": {
+"Buff": ""
+}
+,
+"BindMobile": {
+"Buff": ""
+}
+,
+"Status": 0,
+"Sex": 0,
+"PersonalCard": 0,
+"Alias": "",
+"HeadImgUpdateFlag": 0,
+"HeadImgUrl": "",
+"Signature": ""
+}
+,
+"ContinueFlag": 0,
+"SyncKey": {
+"Count": 9,
+"List": [{
+"Key": 1,
+"Val": 644995582
+}
+,{
+"Key": 2,
+"Val": 644998363
+}
+,{
+"Key": 3,
+"Val": 644998277
+}
+,{
+"Key": 11,
+"Val": 644998347
+}
+,{
+"Key": 13,
+"Val": 644960002
+}
+,{
+"Key": 201,
+"Val": 1472832095
+}
+,{
+"Key": 203,
+"Val": 1472831370
+}
+,{
+"Key": 1000,
+"Val": 1472829486
+}
+,{
+"Key": 1001,
+"Val": 1472812412
+}
+]
+}
+,
+"SKey": ""
+}
+
+
+2016-09-03 00:01:46,378
+SyncCheck
+
+2016-09-03 00:01:46,378
+window.synccheck={retcode:"0",selector:"2"}
+
+2016-09-03 00:01:46,496
+WebwxSync
+
+2016-09-03 00:01:46,496
+{
+"BaseResponse": {
+"Ret": 0,
+"ErrMsg": ""
+}
+,
+"AddMsgCount": 1,
+"AddMsgList": [{
+"MsgId": "5473450649723443466",
+"FromUserName": "@4b0b9d9831b2d344495b7a913aeb6361f34c7f48fd905abda64e2be44c2c736e",
+"ToUserName": "@@6d260591e3d63a5455991b750d1e5bd5c985f9e7a1eeec2116bcd847bd313158",
+"MsgType": 51,
+"Content": "&lt;msg&gt;<br/>&lt;op id='2'&gt;<br/>&lt;username&gt;7342076969@chatroom&lt;/username&gt;<br/>&lt;/op&gt;<br/>&lt;/msg&gt;",
+"Status": 3,
+"ImgStatus": 1,
+"CreateTime": 1472832106,
+"VoiceLength": 0,
+"PlayLength": 0,
+"FileName": "",
+"FileSize": "",
+"MediaId": "",
+"Url": "",
+"AppMsgType": 0,
+"StatusNotifyCode": 2,
+"StatusNotifyUserName": "@@6d260591e3d63a5455991b750d1e5bd5c985f9e7a1eeec2116bcd847bd313158",
+"RecommendInfo": {
+"UserName": "",
+"NickName": "",
+"QQNum": 0,
+"Province": "",
+"City": "",
+"Content": "",
+"Signature": "",
+"Alias": "",
+"Scene": 0,
+"VerifyFlag": 0,
+"AttrStatus": 0,
+"Sex": 0,
+"Ticket": "",
+"OpCode": 0
+}
+,
+"ForwardFlag": 0,
+"AppInfo": {
+"AppID": "",
+"Type": 0
+}
+,
+"HasProductId": 0,
+"Ticket": "",
+"ImgHeight": 0,
+"ImgWidth": 0,
+"SubMsgType": 0,
+"NewMsgId": 5473450649723443466
+}
+],
+"ModContactCount": 0,
+"ModContactList": [],
+"DelContactCount": 0,
+"DelContactList": [],
+"ModChatRoomMemberCount": 0,
+"ModChatRoomMemberList": [],
+"Profile": {
+"BitFlag": 0,
+"UserName": {
+"Buff": ""
+}
+,
+"NickName": {
+"Buff": ""
+}
+,
+"BindUin": 0,
+"BindEmail": {
+"Buff": ""
+}
+,
+"BindMobile": {
+"Buff": ""
+}
+,
+"Status": 0,
+"Sex": 0,
+"PersonalCard": 0,
+"Alias": "",
+"HeadImgUpdateFlag": 0,
+"HeadImgUrl": "",
+"Signature": ""
+}
+,
+"ContinueFlag": 0,
+"SyncKey": {
+"Count": 9,
+"List": [{
+"Key": 1,
+"Val": 644995582
+}
+,{
+"Key": 2,
+"Val": 644998364
+}
+,{
+"Key": 3,
+"Val": 644998277
+}
+,{
+"Key": 11,
+"Val": 644998347
+}
+,{
+"Key": 13,
+"Val": 644960002
+}
+,{
+"Key": 201,
+"Val": 1472832106
+}
+,{
+"Key": 203,
+"Val": 1472831370
+}
+,{
+"Key": 1000,
+"Val": 1472829486
+}
+,{
+"Key": 1001,
+"Val": 1472812412
+}
+]
+}
+,
+"SKey": ""
+}
+
+

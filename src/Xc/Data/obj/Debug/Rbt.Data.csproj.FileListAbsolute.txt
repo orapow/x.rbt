@@ -1,0 +1,10 @@
+D:\Pro\wxbot\src\Rbt.Data\bin\Debug\Rbt.Data.dll.config
+D:\Pro\wxbot\src\Rbt.Data\bin\Debug\Rbt.Data.dll
+D:\Pro\wxbot\src\Rbt.Data\bin\Debug\Rbt.Data.pdb
+D:\Pro\wxbot\src\Rbt.Data\obj\Debug\Rbt.Data.dll
+D:\Pro\wxbot\src\Rbt.Data\obj\Debug\Rbt.Data.pdb
+D:\Pro\wxbot\src\Data\bin\Debug\Rbt.Data.dll.config
+D:\Pro\wxbot\src\Data\bin\Debug\Rbt.Data.dll
+D:\Pro\wxbot\src\Data\bin\Debug\Rbt.Data.pdb
+D:\Pro\wxbot\src\Data\obj\Debug\Rbt.Data.dll
+D:\Pro\wxbot\src\Data\obj\Debug\Rbt.Data.pdb
