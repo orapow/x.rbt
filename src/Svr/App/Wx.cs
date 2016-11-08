@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -48,16 +49,28 @@ namespace Rbt.Svr.App
         #endregion
 
         #region 私有方法
+        /// <summary>
+        /// 获取时间戳
+        /// </summary>
+        /// <returns></returns>
         static long getcurrentseconds()
         {
             return (long)(DateTime.UtcNow - BaseTime).TotalMilliseconds;
         }
 
+        /// <summary>
+        /// 输出日志
+        /// </summary>
+        /// <param name="msg"></param>
         void outLog(string msg)
         {
             Debug.WriteLine(lg.logon_id + "->" + msg);
         }
 
+        /// <summary>
+        /// 加载二维码
+        /// </summary>
+        /// <returns></returns>
         bool loadQrcode()
         {
             try
@@ -144,6 +157,9 @@ namespace Rbt.Svr.App
 
         }
 
+        /// <summary>
+        /// 获取用户登陆凭证
+        /// </summary>
         void login()
         {
             outLog("login");
@@ -168,6 +184,9 @@ namespace Rbt.Svr.App
 
         }
 
+        /// <summary>
+        /// 登陆后初始化
+        /// </summary>
         void wxInit()
         {
             outLog("init");
@@ -184,6 +203,9 @@ namespace Rbt.Svr.App
 
         }
 
+        /// <summary>
+        /// 更新状态提示
+        /// </summary>
         void wxStatusNotify()
         {
             string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxstatusnotify?lang=zh_CN&pass_ticket={1}", gateway, passticket);
@@ -198,6 +220,9 @@ namespace Rbt.Svr.App
             wc.PostData(url, Serialize.ToJson(o));
         }
 
+        /// <summary>
+        /// 加载通讯录
+        /// </summary>
         void loadContact()
         {
             string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxgetcontact?pass_ticket={1}&skey={2}&r={3}", gateway, passticket, baseRequest.Skey, getcurrentseconds());
@@ -206,6 +231,9 @@ namespace Rbt.Svr.App
             //grouplist = userlist.Where(o => o.NickName.StartsWith("@@")).ToList();
         }
 
+        /// <summary>
+        /// 同步检测
+        /// </summary>
         void SyncCheck()
         {
             outLog("synccheck");
@@ -229,6 +257,9 @@ namespace Rbt.Svr.App
 
         }
 
+        /// <summary>
+        /// 消息同步
+        /// </summary>
         void wxSync()
         {
             outLog("sync");
@@ -251,6 +282,103 @@ namespace Rbt.Svr.App
             var msglist = Serialize.FromJson<List<Msg>>(rsp.data + "", "AddMsgList");
 
             foreach (var m in msglist) if (m.FromUserName != user.UserName) outLog("msg->" + user.Uin + "->" + m.Content);// Debug.WriteLine(user.Uin + "收到消息->" + m.MsgId + "--->>>" + m.Content);
+
+        }
+
+        /// <summary>
+        /// 发送消息
+        /// </summary>
+        /// <param name="ToUserName"></param>
+        /// <param name="Content"></param>
+        void wxSendMsg(string ToUserName, string Content)
+        {
+            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxsendmsg?pass_ticket={1}", gateway, passticket);
+            Content = Content.Replace("<br/>", "\n");
+            var o = new
+            {
+                BaseRequest = baseRequest,
+                Msg = new
+                {
+                    Type = 1,
+                    Content = Content,
+                    FromUserName = user.UserName,
+                    ToUserName = ToUserName,
+                    LocalID = getcurrentseconds(),
+                    ClientMsgId = getcurrentseconds()
+                }
+            };
+
+            var rsp = wc.PostData(url, Serialize.ToJson(o));
+
+            outLog(Serialize.ToJson(rsp));
+
+        }
+
+        /// <summary>
+        /// 发送图片
+        /// </summary>
+        /// <param name="ToUserName"></param>
+        /// <param name="mmid"></param>
+        void wxSendImg(string ToUserName, string mmid)
+        {
+            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxsendmsgimg?fun=async&f=json&pass_ticket={1}", gateway, passticket);
+            var o = new
+            {
+                BaseRequest = baseRequest,
+                Msg = new
+                {
+                    Type = 3,
+                    MediaId = mmid,
+                    FromUserName = user.UserName,
+                    ToUserName = ToUserName,
+                    LocalID = getcurrentseconds(),
+                    ClientMsgId = getcurrentseconds()
+                },
+                Scene = 0
+            };
+
+            var rsp = wc.PostData(url, Serialize.ToJson(o));
+            outLog("sendimg->" + Serialize.ToJson(rsp));
+
+        }
+
+        /// <summary>
+        /// 上传图片
+        /// </summary>
+        /// <param name="img"></param>
+        /// <returns></returns>
+        string wxUpload(string img)
+        {
+            var fi = new FileInfo(img);
+            if (!fi.Exists) return "";
+
+            const string url = "https://file.wx2.qq.com/cgi-bin/mmwebwx-bin/webwxuploadmedia?f=json";
+            var o = new
+            {
+                BaseRequest = baseRequest,
+                ClientMediaId = getcurrentseconds(),
+                TotalLen = fi.Length,
+                StartPos = 0,
+                DataLen = fi.Length,
+                MediaType = 4
+            };
+
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            dict.Add("id", "WU_FILE_0");
+            dict.Add("name", fi.Name);
+            dict.Add("type", "image/jpeg");
+            dict.Add("lastModifiedDate", fi.LastWriteTime.ToString());
+            dict.Add("size", fi.Length + "");
+            dict.Add("mediatype", "pic");
+            dict.Add("uploadmediarequest", Serialize.ToJson(o));
+            dict.Add("webwx_data_ticket", wc.GetCookie("webwx_data_ticket"));
+
+            var rsp = wc.PostFile(url, dict, fi);
+            outLog("upimg->" + Serialize.ToJson(rsp));
+
+            if (rsp.err) return "";
+
+            return Serialize.FromJson<string>(rsp.data + "", "MediaId");
 
         }
 

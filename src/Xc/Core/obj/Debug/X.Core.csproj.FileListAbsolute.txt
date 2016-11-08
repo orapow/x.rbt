@@ -15,3 +15,4 @@ D:\Pro\x.rbt\src\Xc\Core\bin\Debug\NVelocity.dll
 D:\Pro\x.rbt\src\Xc\Core\bin\Debug\X.Json.dll
 D:\Pro\x.rbt\src\Xc\Core\obj\Debug\X.Core.dll
 D:\Pro\x.rbt\src\Xc\Core\obj\Debug\X.Core.pdb
+D:\Pro\x.rbt\src\Xc\Core\obj\Debug\X.Core.csprojResolveAssemblyReference.cache

@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using X.Core.Utility;
 
 namespace Rbt.Svr.App
 {
@@ -117,7 +118,77 @@ namespace Rbt.Svr.App
                 return new Resp() { err = true, msg = ex.Message };
             }
         }
+        /// <summary>
+        /// 上传文件
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="dict"></param>
+        /// <param name="fi"></param>
+        /// <returns></returns>
+        public Resp PostFile(string url, Dictionary<string, string> dict, FileInfo fi)
+        {
+            var tk = "------WebKitFormBoundary" + Tools.GetRandRom(16, 3);
+            var body = new StringBuilder();
+            foreach (var k in dict.Keys)
+            {
+                body.Append(tk + "\r\n");
+                body.Append("Content - Disposition: form - data; name = \"id\"\r\n\r\n");
+                body.Append(dict[k] + "\r\n");
+            }
+            body.Append(tk + "\r\n");
+            body.Append("Content - Disposition: form - data; name = \"filename\"; filename = \"" + fi.Name + "\"\r\n");
+            body.Append("Content - Type: image / png\r\n");
+            body.Append("\r\n\r\n");
+            body.Append(tk + "\r\n");
 
+            #region
+            //------WebKitFormBoundaryeR4fLqVKn7HbtWSt
+            //Content - Disposition: form - data; name = "id"
+
+            //WU_FILE_0
+            //------WebKitFormBoundaryeR4fLqVKn7HbtWSt
+            //Content - Disposition: form - data; name = "name"
+
+            //untitled1.png
+            //------WebKitFormBoundaryeR4fLqVKn7HbtWSt
+            //Content - Disposition: form - data; name = "type"
+
+            //image / png
+            //------WebKitFormBoundaryeR4fLqVKn7HbtWSt
+            //Content - Disposition: form - data; name = "lastModifiedDate"
+
+            //2016 / 11 / 8 下午10: 20:16
+            //     ------WebKitFormBoundaryeR4fLqVKn7HbtWSt
+            //Content - Disposition: form - data; name = "size"
+
+            //5126
+            //------WebKitFormBoundaryeR4fLqVKn7HbtWSt
+            //Content - Disposition: form - data; name = "mediatype"
+
+            //pic
+            //------WebKitFormBoundaryeR4fLqVKn7HbtWSt
+            //Content - Disposition: form - data; name = "uploadmediarequest"
+
+            //{ "UploadType":2,"BaseRequest":{ "Uin":269785315,"Sid":"q64ER3s7XP4zK3mQ","Skey":"@crypt_618f1218_96ac7ed2e46f41c0df9ed8ae7b25e29a","DeviceID":"e361467430833727"},"ClientMediaId":1478614816970,"TotalLen":5126,"StartPos":0,"DataLen":5126,"MediaType":4,"FromUserName":"@094ac46c504ea6d2cdb72d46ae4f94de","ToUserName":"filehelper","FileMd5":"1178e646540a10c5f78cf873525bab91"}
+            //            ------WebKitFormBoundaryeR4fLqVKn7HbtWSt
+            //Content - Disposition: form - data; name = "webwx_data_ticket"
+
+            //gSfJvnKy4GKvRmS6efapzhfm
+            //------WebKitFormBoundaryeR4fLqVKn7HbtWSt
+            //Content - Disposition: form - data; name = "pass_ticket"
+
+            //undefined
+            //------WebKitFormBoundaryeR4fLqVKn7HbtWSt
+            //Content - Disposition: form - data; name = "filename"; filename = "untitled1.png"
+            //Content - Type: image / png
+
+
+            //  ------WebKitFormBoundaryeR4fLqVKn7HbtWSt--
+            #endregion
+
+            return PostData(url, body.ToString());
+
+        }
         /// <summary>
         /// 获得指定 URL 的源文件
         /// </summary>
@@ -134,7 +205,6 @@ namespace Rbt.Svr.App
                 return new Resp() { err = true, msg = ex.Message };
             }
         }
-
         /// <summary>
         /// 从指定的 URL 下载文件到本地
         /// </summary>
@@ -150,6 +220,17 @@ namespace Rbt.Svr.App
             {
                 return new Resp() { err = true, msg = ex.Message };
             }
+        }
+        /// <summary>
+        /// 获取Cookie
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public string GetCookie(string name)
+        {
+            if (cookie == null) return "";
+            var cks = cookie.GetCookies(new Uri("http://qq.com"));
+            return cks[name]?.Value;
         }
 
         public class Resp
