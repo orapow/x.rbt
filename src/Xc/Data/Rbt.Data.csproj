@@ -46,6 +46,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="RbtDB.cs">
+      <DependentUpon>RbtDB.dbml</DependentUpon>
+    </Compile>
     <Compile Include="RbtDB.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -71,6 +74,12 @@
     <None Include="RbtDB.dbml.layout">
       <DependentUpon>RbtDB.dbml</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\X.Core.csproj">
+      <Project>{9364F44B-C253-4A46-A86B-F9248325543D}</Project>
+      <Name>X.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -7,6 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Web;
+using X.Core.Utility;
 
 namespace Rbt.Svr.App
 {
@@ -67,7 +68,7 @@ namespace Rbt.Svr.App
                 var rsp = wc.GetStr("https://login.weixin.qq.com/jslogin?appid=wx782c26e4c19acffb&redirect_uri=https%3A%2F%2Fwx2.qq.com%2Fcgi-bin%2Fmmwebwx-bin%2Fwebwxnewloginpage&fun=new&lang=zh_CN&_=" + getcurrentseconds());
                 if (rsp.err) return false;
 
-                outLog("loaduuid->" + Com.ToJson(rsp));
+                outLog("loaduuid->" + Serialize.ToJson(rsp));
 
                 var reg = new Regex(@"QRLogin.uuid = ""(\S+?)""");
                 var m = reg.Match(rsp.data + "");
@@ -83,7 +84,7 @@ namespace Rbt.Svr.App
 
                 outLog("qrcode");
                 rsp = wc.GetFile(String.Format("https://login.weixin.qq.com/qrcode/{0}?t=webwx&_={1}", uuid, getcurrentseconds()));
-                outLog("qrcode->" + Com.ToJson(rsp));
+                outLog("qrcode->" + Serialize.ToJson(rsp));
 
                 if (rsp.err) return false;
 
@@ -114,7 +115,7 @@ namespace Rbt.Svr.App
             outLog("wait->" + t + "->" + c);
             string url = String.Format("https://login.weixin.qq.com/cgi-bin/mmwebwx-bin/login?loginicon=true&uuid={0}&tip=0&r={1}&_={2}", uuid, ~getcurrentseconds(), getcurrentseconds());
             var rsp = wc.GetStr(url);
-            outLog("wait->" + t + "->" + c + "->" + Com.ToJson(rsp));
+            outLog("wait->" + t + "->" + c + "->" + Serialize.ToJson(rsp));
 
             if (rsp.err) return waitFor(t, c + 1);
 
@@ -147,7 +148,7 @@ namespace Rbt.Svr.App
         {
             outLog("login");
             var rsp = wc.GetStr(redirecturl + "&fun=new&version=v2");
-            outLog("login->" + Com.ToJson(rsp));
+            outLog("login->" + Serialize.ToJson(rsp));
 
             if (rsp.err) return;
 
@@ -172,14 +173,14 @@ namespace Rbt.Svr.App
             outLog("init");
 
             string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxinit?pass_ticket={1}&skey={2}&r={3}", gateway, passticket, baseRequest.Skey, getcurrentseconds());
-            var rsp = wc.PostData(url, Com.ToJson(new { BaseRequest = baseRequest }));
+            var rsp = wc.PostData(url, Serialize.ToJson(new { BaseRequest = baseRequest }));
 
-            outLog("init->" + Com.ToJson(rsp));
+            outLog("init->" + Serialize.ToJson(rsp));
 
             if (rsp.err) return;
 
-            user = Com.FromJson<Contact>(rsp.data + "", "User");
-            _syncKey = Com.FromJson<SyncKey>(rsp.data + "", "SyncKey");
+            user = Serialize.FromJson<Contact>(rsp.data + "", "User");
+            _syncKey = Serialize.FromJson<SyncKey>(rsp.data + "", "SyncKey");
 
         }
 
@@ -194,7 +195,7 @@ namespace Rbt.Svr.App
                 ToUserName = user.UserName,
                 ClientMsgId = getcurrentseconds()
             };
-            wc.PostData(url, Com.ToJson(o));
+            wc.PostData(url, Serialize.ToJson(o));
         }
 
         void loadContact()
@@ -212,7 +213,7 @@ namespace Rbt.Svr.App
             var url = String.Format("{0}/cgi-bin/mmwebwx-bin/synccheck?r={1}&sid={2}&uin={3}&skey={4}&deviceid={5}&synckey={6}&_{7}", gateway, getcurrentseconds(), baseRequest.Sid, baseRequest.Uin, baseRequest.Skey, baseRequest.DeviceID, synckey, getcurrentseconds());
             var rsp = wc.GetStr(url);
 
-            outLog("synccheck->" + Com.ToJson(rsp));
+            outLog("synccheck->" + Serialize.ToJson(rsp));
 
             if (rsp.err) { return; }
 
@@ -239,15 +240,15 @@ namespace Rbt.Svr.App
                 SyncKey = _syncKey,
                 rr = getcurrentseconds()
             };
-            var rsp = wc.PostData(url, Com.ToJson(o));
+            var rsp = wc.PostData(url, Serialize.ToJson(o));
 
-            outLog("sync->" + Com.ToJson(rsp));
+            outLog("sync->" + Serialize.ToJson(rsp));
 
             if (rsp.err) { Exit(1); return; }
 
-            _syncKey = Com.FromJson<SyncKey>(rsp.data + "", "SyncKey");
+            _syncKey = Serialize.FromJson<SyncKey>(rsp.data + "", "SyncKey");
 
-            var msglist = Com.FromJson<List<Msg>>(rsp.data + "", "AddMsgList");
+            var msglist = Serialize.FromJson<List<Msg>>(rsp.data + "", "AddMsgList");
 
             foreach (var m in msglist) if (m.FromUserName != user.UserName) outLog("msg->" + user.Uin + "->" + m.Content);// Debug.WriteLine(user.Uin + "收到消息->" + m.MsgId + "--->>>" + m.Content);
 
@@ -346,7 +347,6 @@ namespace Rbt.Svr.App
 
         #endregion
 
-
         class BaseRequest
         {
             public BaseRequest()
@@ -368,32 +368,30 @@ namespace Rbt.Svr.App
             public int Count { get; set; }
             public IList<KeyValuePair> List { get; set; }
         }
-
+        class Contact
+        {
+            public long Uin { get; set; }
+            public string UserName { get; set; }
+            public string NickName { get; set; }
+            /// <summary>
+            /// 1-好友， 2-群组， 3-公众号
+            /// </summary>
+            public int ContactFlag { get; set; }
+            public int MemberCount { get; set; }
+            public List<Contact> MemberList { get; set; }
+            public string Signature { get; set; }
+            public string RemarkName { get; set; }
+            public string HeadImgUrl { get; set; }
+            public string EncryChatRoomId { get; set; }
+        }
+        class Msg
+        {
+            public string MsgId { get; set; }
+            public string FromUserName { get; set; }
+            public string ToUserName { get; set; }
+            public int MsgType { get; set; }
+            public string Content { get; set; }
+        }
     }
 
-    public class Contact
-    {
-        public long Uin { get; set; }
-        public string UserName { get; set; }
-        public string NickName { get; set; }
-        /// <summary>
-        /// 1-好友， 2-群组， 3-公众号
-        /// </summary>
-        public int ContactFlag { get; set; }
-        public int MemberCount { get; set; }
-        public List<Contact> MemberList { get; set; }
-        public string Signature { get; set; }
-        public string RemarkName { get; set; }
-        public string HeadImgUrl { get; set; }
-        public string EncryChatRoomId { get; set; }
-    }
-
-    public class Msg
-    {
-        public string MsgId { get; set; }
-        public string FromUserName { get; set; }
-        public string ToUserName { get; set; }
-        public int MsgType { get; set; }
-        public string Content { get; set; }
-    }
 }

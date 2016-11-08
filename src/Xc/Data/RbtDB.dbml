@@ -137,4 +137,15 @@
       <Association Name="x_user_x_order" Member="x_order" ThisKey="user_id" OtherKey="user_id" Type="x_order" />
     </Type>
   </Table>
+  <Table Name="dbo.x_dict" Member="x_dict">
+    <Type Name="x_dict">
+      <Column Name="dict_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="code" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="img" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="jp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="upval" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="value" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

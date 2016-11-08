@@ -1,11 +1,9 @@
-﻿using System;
+﻿using Rbt.Data;
+using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Data.Linq;
-using System.Linq;
 using System.Web;
-using X.Core.Cache;
-using X.Data;
 using X.Web.Cache;
 
 namespace X.Web
@@ -23,7 +21,7 @@ namespace X.Web
         /// <summary>
         /// 数据库对象
         /// </summary>
-        protected DataClassesDataContext DB = null;
+        protected RbtDBDataContext DB = null;
         /// <summary>
         /// 会话缓存
         /// </summary>
@@ -41,7 +39,7 @@ namespace X.Web
         /// </summary>
         public void Init(HttpContext c)
         {
-            DB = new DataClassesDataContext() { DeferredLoadingEnabled = true };
+            DB = new RbtDBDataContext() { DeferredLoadingEnabled = true };
             Session = new SessionCache();
             XCache = new ContextCache();
             Context = c;

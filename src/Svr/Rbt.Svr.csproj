@@ -49,7 +49,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App\Com.cs" />
     <Compile Include="App\Svr.cs" />
     <Compile Include="App\Wc.cs" />
     <Compile Include="App\Wx.cs" />
@@ -86,6 +85,16 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xc\Core\X.Core.csproj">
+      <Project>{9364f44b-c253-4a46-a86b-f9248325543d}</Project>
+      <Name>X.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xc\Data\Rbt.Data.csproj">
+      <Project>{aab73d4e-97ac-45c8-8e33-fd4c975f330a}</Project>
+      <Name>Rbt.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

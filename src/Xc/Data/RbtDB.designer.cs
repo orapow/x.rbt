@@ -54,6 +54,9 @@ namespace Rbt.Data
     partial void Insertx_user(x_user instance);
     partial void Updatex_user(x_user instance);
     partial void Deletex_user(x_user instance);
+    partial void Insertx_dict(x_dict instance);
+    partial void Updatex_dict(x_dict instance);
+    partial void Deletex_dict(x_dict instance);
     #endregion
 		
 		public RbtDBDataContext() : 
@@ -147,6 +150,14 @@ namespace Rbt.Data
 			get
 			{
 				return this.GetTable<x_user>();
+			}
+		}
+		
+		public System.Data.Linq.Table<x_dict> x_dict
+		{
+			get
+			{
+				return this.GetTable<x_dict>();
 			}
 		}
 	}
@@ -3119,6 +3130,212 @@ namespace Rbt.Data
 		{
 			this.SendPropertyChanging();
 			entity.x_user = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.x_dict")]
+	public partial class x_dict : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private long _dict_id;
+		
+		private string _code;
+		
+		private string _img;
+		
+		private string _name;
+		
+		private string _jp;
+		
+		private string _upval;
+		
+		private string _value;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Ondict_idChanging(long value);
+    partial void Ondict_idChanged();
+    partial void OncodeChanging(string value);
+    partial void OncodeChanged();
+    partial void OnimgChanging(string value);
+    partial void OnimgChanged();
+    partial void OnnameChanging(string value);
+    partial void OnnameChanged();
+    partial void OnjpChanging(string value);
+    partial void OnjpChanged();
+    partial void OnupvalChanging(string value);
+    partial void OnupvalChanged();
+    partial void OnvalueChanging(string value);
+    partial void OnvalueChanged();
+    #endregion
+		
+		public x_dict()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dict_id", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public long dict_id
+		{
+			get
+			{
+				return this._dict_id;
+			}
+			set
+			{
+				if ((this._dict_id != value))
+				{
+					this.Ondict_idChanging(value);
+					this.SendPropertyChanging();
+					this._dict_id = value;
+					this.SendPropertyChanged("dict_id");
+					this.Ondict_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_code", DbType="NVarChar(20)")]
+		public string code
+		{
+			get
+			{
+				return this._code;
+			}
+			set
+			{
+				if ((this._code != value))
+				{
+					this.OncodeChanging(value);
+					this.SendPropertyChanging();
+					this._code = value;
+					this.SendPropertyChanged("code");
+					this.OncodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_img", DbType="NVarChar(200)")]
+		public string img
+		{
+			get
+			{
+				return this._img;
+			}
+			set
+			{
+				if ((this._img != value))
+				{
+					this.OnimgChanging(value);
+					this.SendPropertyChanging();
+					this._img = value;
+					this.SendPropertyChanged("img");
+					this.OnimgChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(50)")]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this.OnnameChanging(value);
+					this.SendPropertyChanging();
+					this._name = value;
+					this.SendPropertyChanged("name");
+					this.OnnameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_jp", DbType="NVarChar(50)")]
+		public string jp
+		{
+			get
+			{
+				return this._jp;
+			}
+			set
+			{
+				if ((this._jp != value))
+				{
+					this.OnjpChanging(value);
+					this.SendPropertyChanging();
+					this._jp = value;
+					this.SendPropertyChanged("jp");
+					this.OnjpChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_upval", DbType="NVarChar(10)")]
+		public string upval
+		{
+			get
+			{
+				return this._upval;
+			}
+			set
+			{
+				if ((this._upval != value))
+				{
+					this.OnupvalChanging(value);
+					this.SendPropertyChanging();
+					this._upval = value;
+					this.SendPropertyChanged("upval");
+					this.OnupvalChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_value", DbType="NVarChar(100)")]
+		public string value
+		{
+			get
+			{
+				return this._value;
+			}
+			set
+			{
+				if ((this._value != value))
+				{
+					this.OnvalueChanging(value);
+					this.SendPropertyChanging();
+					this._value = value;
+					this.SendPropertyChanged("value");
+					this.OnvalueChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 }
