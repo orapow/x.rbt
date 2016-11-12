@@ -1,8 +1,0 @@
-D:\Pro\wxbot\src\Web\bin\Rbt.Web.dll.config
-D:\Pro\wxbot\src\Web\bin\Rbt.Web.dll
-D:\Pro\wxbot\src\Web\bin\Rbt.Web.pdb
-D:\Pro\wxbot\src\Web\bin\Rbt.Data.dll
-D:\Pro\wxbot\src\Web\bin\Rbt.Data.pdb
-D:\Pro\wxbot\src\Web\obj\Debug\Rbt.Web.csprojResolveAssemblyReference.cache
-D:\Pro\wxbot\src\Web\obj\Debug\Rbt.Web.dll
-D:\Pro\wxbot\src\Web\obj\Debug\Rbt.Web.pdb

@@ -1,2 +1,0 @@
-D:\Pro\wxbot\src\Svr\Svr\bin\Debug\Svr.exe.config
-D:\Pro\wxbot\src\Svr\bin\Debug\Svr.exe.config

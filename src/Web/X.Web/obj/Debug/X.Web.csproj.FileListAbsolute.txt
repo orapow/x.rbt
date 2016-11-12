@@ -13,14 +13,14 @@ D:\Pro\x.shop\src\Web\X.Web\obj\Debug\X.Web.dll
 D:\Pro\x.shop\src\Web\X.Web\obj\Debug\X.Web.pdb
 D:\Pro\x.rbt\src\Web\X.Web\bin\Debug\X.Web.dll
 D:\Pro\x.rbt\src\Web\X.Web\bin\Debug\X.Web.pdb
-D:\Pro\x.rbt\src\Web\X.Web\bin\Debug\Rbt.Data.dll
 D:\Pro\x.rbt\src\Web\X.Web\bin\Debug\X.Core.dll
+D:\Pro\x.rbt\src\Web\X.Web\bin\Debug\X.Data.dll
 D:\Pro\x.rbt\src\Web\X.Web\bin\Debug\log4net.dll
 D:\Pro\x.rbt\src\Web\X.Web\bin\Debug\X.Json.dll
 D:\Pro\x.rbt\src\Web\X.Web\bin\Debug\NVelocity.dll
 D:\Pro\x.rbt\src\Web\X.Web\bin\Debug\Enyim.Caching.dll
 D:\Pro\x.rbt\src\Web\X.Web\bin\Debug\X.Core.pdb
-D:\Pro\x.rbt\src\Web\X.Web\bin\Debug\Rbt.Data.pdb
+D:\Pro\x.rbt\src\Web\X.Web\bin\Debug\X.Data.pdb
 D:\Pro\x.rbt\src\Web\X.Web\obj\Debug\X.Web.csprojResolveAssemblyReference.cache
 D:\Pro\x.rbt\src\Web\X.Web\obj\Debug\X.Web.dll
 D:\Pro\x.rbt\src\Web\X.Web\obj\Debug\X.Web.pdb

@@ -1,0 +1,23 @@
+﻿正在安装程序集“D:\Pro\x.rbt\src\Rbt\Svr\bin\Debug\Rbt.Svr.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\Pro\x.rbt\src\Rbt\Svr\bin\Debug\Rbt.Svr.InstallLog
+   assemblypath = D:\Pro\x.rbt\src\Rbt\Svr\bin\Debug\Rbt.Svr.exe
+正在回滚程序集“D:\Pro\x.rbt\src\Rbt\Svr\bin\Debug\Rbt.Svr.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\Pro\x.rbt\src\Rbt\Svr\bin\Debug\Rbt.Svr.InstallLog
+   assemblypath = D:\Pro\x.rbt\src\Rbt\Svr\bin\Debug\Rbt.Svr.exe
+正在安装程序集“D:\Pro\x.rbt\src\Rbt\Svr\bin\Debug\Rbt.Svr.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\Pro\x.rbt\src\Rbt\Svr\bin\Debug\Rbt.Svr.InstallLog
+   assemblypath = D:\Pro\x.rbt\src\Rbt\Svr\bin\Debug\Rbt.Svr.exe
+正在安装服务 微信机器人服务程序...
+已成功安装服务 微信机器人服务程序。
+正在日志 Application 中创建 EventLog 源 微信机器人服务程序...
+正在提交程序集“D:\Pro\x.rbt\src\Rbt\Svr\bin\Debug\Rbt.Svr.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\Pro\x.rbt\src\Rbt\Svr\bin\Debug\Rbt.Svr.InstallLog
+   assemblypath = D:\Pro\x.rbt\src\Rbt\Svr\bin\Debug\Rbt.Svr.exe
