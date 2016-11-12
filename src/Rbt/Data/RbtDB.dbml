@@ -95,6 +95,30 @@
       <Association Name="x_store_x_task" Member="x_task" ThisKey="store_id" OtherKey="store_id" Type="x_task" />
     </Type>
   </Table>
+  <Table Name="dbo.x_dict" Member="x_dict">
+    <Type Name="x_dict">
+      <Column Name="dict_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="code" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="img" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="jp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="upval" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="value" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.x_logon" Member="x_logon">
+    <Type Name="x_logon">
+      <Column Name="logon_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="code" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="uuid" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="uin" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="qrcode" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="headimg" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="x_user_x_logon" Member="x_user" ThisKey="user_id" OtherKey="user_id" Type="x_user" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.x_user" Member="x_user">
     <Type Name="x_user">
       <Column Name="user_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -118,36 +142,13 @@
       <Column Name="reward" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="last_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ukey" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
       <Association Name="x_user_x_buy" Member="x_buy" ThisKey="user_id" OtherKey="user_id" Type="x_buy" />
       <Association Name="x_user_x_task" Member="x_task" ThisKey="user_id" OtherKey="user_id" Type="x_task" />
       <Association Name="x_user_x_contact" Member="x_contact" ThisKey="user_id" OtherKey="user_id" Type="x_contact" />
       <Association Name="x_user_x_group" Member="x_group" ThisKey="user_id" OtherKey="user_id" Type="x_group" />
       <Association Name="x_user_x_order" Member="x_order" ThisKey="user_id" OtherKey="user_id" Type="x_order" />
       <Association Name="x_user_x_logon" Member="x_logon" ThisKey="user_id" OtherKey="user_id" Type="x_logon" />
-    </Type>
-  </Table>
-  <Table Name="dbo.x_dict" Member="x_dict">
-    <Type Name="x_dict">
-      <Column Name="dict_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="code" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-      <Column Name="img" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="jp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="upval" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
-      <Column Name="value" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.x_logon" Member="x_logon">
-    <Type Name="x_logon">
-      <Column Name="logon_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="user_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="code" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
-      <Column Name="uuid" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
-      <Column Name="uin" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="qrcode" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="headimg" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="x_user_x_logon" Member="x_user" ThisKey="user_id" OtherKey="user_id" Type="x_user" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

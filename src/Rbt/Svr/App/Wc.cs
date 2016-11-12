@@ -7,6 +7,9 @@ using X.Core.Utility;
 
 namespace Rbt.Svr
 {
+    /// <summary>
+    /// Http通讯类
+    /// </summary>
     public class Wc
     {
         // Cookie 容器

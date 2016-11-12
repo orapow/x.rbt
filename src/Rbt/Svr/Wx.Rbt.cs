@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Diagnostics;
-using System.Dynamic;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -55,7 +53,6 @@ namespace Rbt.Svr
                 }
 
             }).Start();
-
             new Thread(() =>
             {
                 while (!stop)
@@ -67,7 +64,9 @@ namespace Rbt.Svr
                     {
                         var wx = new Wx((long)o);
                         if (wx == null) return;
-
+                        wx.LoadQr += Wx_LoadQr;
+                        wx.Scaned += Wx_Scaned;
+                        wx.Loged += Wx_Loged;
                         wx.Logout += Wx_Logout; ;
 
                         lock (wxs) wxs.Add(wx);
@@ -92,26 +91,60 @@ namespace Rbt.Svr
             tcps.Clear();
         }
 
-        void Tcp_Closed(Tcp ct)
+        void Wx_Loged(Wx w)
         {
-            lock (tcps) tcps.Remove(ct);
+            var tc = tcps.FirstOrDefault(o => o.ukey == wx.ukey);
+            dynamic msg = new msg();
+            msg.act = "loged";
+            tc.Send(msg);
         }
 
-        void Tcp_NewMsg(string json, Tcp ct)
+        void Wx_Scaned(Wx w)
         {
-            dynamic msg = Serialize.FromJson<msg>(json);
-            if (msg == null || string.IsNullOrEmpty(msg.ukey + "") || string.IsNullOrEmpty(msg.act)) { ct.Quit(); return; }
+            var tc = tcps.FirstOrDefault(o => o.ukey == w.ukey);
+            dynamic msg = new msg();
+            msg.act = "scaned";
+            msg.headimg = w.headimg;
+            tc.Send(msg);
+        }
 
-            if (msg.act == "loadqr" && !string.IsNullOrEmpty(msg.id + ""))
-            {
-                lock (newwx) newwx.Enqueue((long)msg.id);
-            }
-
+        void Wx_LoadQr(Wx w)
+        {
+            var tc = tcps.FirstOrDefault(o => o.ukey == w.ukey);
+            dynamic msg = new msg();
+            msg.act = "qrcode";
+            msg.qrcode = w.qrcode;
+            tc.Send(msg);
         }
 
         void Wx_Logout(Wx wx)
         {
             lock (wxs) wxs.Remove(wx);
+        }
+
+        void Tcp_Closed(Tcp ct)
+        {
+            lock (tcps) tcps.Remove(ct);
+        }
+
+        void Tcp_NewMsg(string json, Tcp tc)
+        {
+            dynamic msg = Serialize.FromJson<msg>(json);
+            if (msg == null) throw new Exception("消息格式不正确，解析失败！");
+
+            if (string.IsNullOrEmpty(msg.ukey + "") || string.IsNullOrEmpty(msg.lgid + "") || string.IsNullOrEmpty(msg.act)) throw new Exception("缺少必要参数，请检查（ukey,lgid,act）参数是否有值！");
+
+            long id = long.Parse(msg.lgid + "");
+            var lg = db.x_logon.FirstOrDefault(o => o.logon_id == id);
+
+            if (lg == null || string.IsNullOrEmpty(lg.x_user.ukey)) throw new Exception(lg == null ? "登陆器不存在，请重新发起！" : "用户未登陆，请重新登陆");
+            if (lg.x_user.ukey != msg.ukey) throw new Exception("用户越权，登陆器不属于你");
+
+            if (msg.act == "loadqr")
+            {
+                tc.ukey = lg.x_user.ukey;
+                lock (newwx) newwx.Enqueue((long)msg.id);
+            }
         }
 
     }

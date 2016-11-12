@@ -9,13 +9,11 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Web;
 using X.Core.Utility;
-using Rbt.Svr.App;
 
 namespace Rbt.Svr
 {
     public class Wx
     {
-
         /// <summary>
         /// 构造函数
         /// </summary>
@@ -24,7 +22,7 @@ namespace Rbt.Svr
         {
             db = new RbtDBDataContext();
             lg = db.x_logon.FirstOrDefault(o => o.logon_id == id);
-            code = lg.code;
+            ukey = lg.x_user.ukey;
             baseRequest = new BaseRequest();
             wc = new Wc();
         }
@@ -48,12 +46,16 @@ namespace Rbt.Svr
                 var lr = loadQrcode();
                 if (!lr) continue;
 
+                LoadQr?.Invoke(this);
+
                 Thread.Sleep(500);
 
                 var wr = waitFor(1, 0);
                 if (wr != 1) continue;
 
                 if (string.IsNullOrEmpty(redirecturl)) continue;
+
+                Scaned?.Invoke(this);
 
                 break;
             }
@@ -67,6 +69,8 @@ namespace Rbt.Svr
 
             lg.status = 6;//初始化完成
             db.SubmitChanges();
+
+            Loged?.Invoke(this);
 
             while (!isquit) { SyncCheck(); Thread.Sleep(2 * 1000); }
 
@@ -83,28 +87,29 @@ namespace Rbt.Svr
         #endregion
 
         #region 公开属性
+        public string ukey { get; private set; }
+        public string qrcode { get; private set; }
+        public string headimg { get; private set; }
+        #endregion
 
-        public string code { get; private set; }
-
-        public delegate void LoadQrHandler(string qrcode);
+        #region 公开事件
+        public delegate void LoadQrHandler(Wx wx);
         public event LoadQrHandler LoadQr;
 
-        public delegate void ScanedHandler(string headimg);
+        public delegate void ScanedHandler(Wx wx);
         public event ScanedHandler Scaned;
 
         public delegate void LogedHandler(Wx wx);
-        public event LogedHandler Logded;
+        public event LogedHandler Loged;
 
         public delegate void LogoutHandler(Wx wx);
         public event LogoutHandler Logout;
-
         #endregion
 
         #region 私有变量
         RbtDBDataContext db = null;
         x_logon lg = null;
         Wc wc = null;
-        Tcp tcp = null;
         BaseRequest baseRequest = null;
         Contact user = null;//当前用户信息
         SyncKey _syncKey;
@@ -177,11 +182,9 @@ namespace Rbt.Svr
 
                 if (rsp.err) return false;
 
-                lg.qrcode = "data:img/jpg;base64," + Convert.ToBase64String(rsp.data as byte[]);
+                lg.qrcode = qrcode = "data:img/jpg;base64," + Convert.ToBase64String(rsp.data as byte[]);
                 lg.status = 3;//已获取二维码
                 db.SubmitChanges();
-
-                LoadQr?.Invoke(lg.qrcode);
 
                 return true;
 
@@ -215,7 +218,7 @@ namespace Rbt.Svr
             if (str.Contains("code=201"))
             {
                 var img = str.Split('\'')[1].TrimEnd('\'');
-                lg.headimg = img;
+                lg.headimg = headimg = img;
                 lg.status = 4;//使用中
                 db.SubmitChanges();
                 return waitFor(2, 0);

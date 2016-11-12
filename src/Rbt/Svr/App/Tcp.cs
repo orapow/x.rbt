@@ -12,24 +12,40 @@ using X.Core.Utility;
 
 namespace Rbt.Svr.App
 {
+    /// <summary>
+    /// WebSocket通讯类
+    /// </summary>
     public class Tcp
     {
+        #region 公开属性
         public string ukey { get; set; }
+        #endregion
 
-        public delegate void NewMsgHandler(string content, Tcp ct);
+        #region 公开事件
+        /// <summary>
+        /// 新消息事件
+        /// </summary>
+        /// <param name="content">内容</param>
+        /// <param name="tc">连接对象</param>
+        public delegate void NewMsgHandler(string content, Tcp tc);
         public event NewMsgHandler NewMsg;
 
-        public delegate void ClosedHandler(Tcp ct);
+        /// <summary>
+        /// 断开事件
+        /// </summary>
+        /// <param name="tc">连接对象</param>
+        public delegate void ClosedHandler(Tcp tc);
         public event ClosedHandler Closed;
+        #endregion
 
-        #region
+        #region 私有属性
         TcpClient tc = null;
         bool stop = false;
         List<byte> data = new List<byte>();
         bool ready = false;
         #endregion
 
-        #region
+        #region 公开方法
         public Tcp(TcpClient tc)
         {
             this.tc = tc;
@@ -85,7 +101,7 @@ namespace Rbt.Svr.App
         }
         #endregion
 
-        #region
+        #region 私有方法
         /// <summary>
         /// 接收消息
         /// </summary>
@@ -149,8 +165,18 @@ namespace Rbt.Svr.App
 
                 Debug.WriteLine("newmsg->" + Serialize.ToJson(fd));
 
-                NewMsg?.Invoke(fd.data, this);
-
+                try
+                {
+                    NewMsg?.Invoke(fd.data, this);
+                }
+                catch (Exception ex)
+                {
+                    dynamic m = new msg();
+                    m.act = "err";
+                    m.err = ex.Message;
+                    Send(m);
+                    Quit();
+                }
             }
         }
         /// <summary>
@@ -228,6 +254,9 @@ namespace Rbt.Svr.App
         }
     }
 
+    /// <summary>
+    /// 帧类
+    /// </summary>
     class Frame
     {
         /// <summary>
