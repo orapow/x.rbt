@@ -35,9 +35,11 @@ namespace Rbt.Svr
 
         protected override void OnStart(string[] args)
         {
+            ServicePointManager.DefaultConnectionLimit = int.MaxValue;
 
             stop = false;
-            new Thread(() =>
+
+            ((Action)(delegate ()
             {
 
                 var svr = new TcpListener(IPAddress.Any, tcp_port);
@@ -52,33 +54,44 @@ namespace Rbt.Svr
                     lock (tcps) tcps.Add(tcp);
                 }
 
-            }).Start();
-            new Thread(() =>
+            })).BeginInvoke(null, null);
+
+            ((Action)(delegate ()
             {
                 while (!stop)
                 {
                     if (newwx.Count == 0) { Thread.Sleep(2000); continue; }
 
                     var id = newwx.Dequeue();
+                    var wx = wxs.FirstOrDefault(o => o.lgid == id);
+                    if (wx != null) { Wx_Logout(wx); wx.Quit(); }
+
                     new Thread(o =>
                     {
-                        var wx = new Wx((long)o);
+                        wx = new Wx((long)o);
                         if (wx == null) return;
                         wx.LoadQr += Wx_LoadQr;
                         wx.Scaned += Wx_Scaned;
                         wx.Loged += Wx_Loged;
-                        wx.Logout += Wx_Logout; ;
-
+                        wx.NewMsg += Wx_NewMsg;
+                        wx.Logout += Wx_Logout;
                         lock (wxs) wxs.Add(wx);
-
                         wx.Run();
-
                     }).Start(id);
 
                 }
 
-            }).Start();
+            })).BeginInvoke(null, null);
 
+        }
+
+        private void Wx_NewMsg(Wx.Msg m, string ukey)
+        {
+            var tc = tcps.FirstOrDefault(o => o.ukey == ukey);
+            dynamic msg = new msg();
+            msg.act = "newmsg";
+            msg.msg = m.Content;
+            tc.Send(msg);
         }
 
         protected override void OnStop()
@@ -93,7 +106,7 @@ namespace Rbt.Svr
 
         void Wx_Loged(Wx w)
         {
-            var tc = tcps.FirstOrDefault(o => o.ukey == wx.ukey);
+            var tc = tcps.FirstOrDefault(o => o.ukey == w.ukey);
             dynamic msg = new msg();
             msg.act = "loged";
             tc.Send(msg);
@@ -134,16 +147,19 @@ namespace Rbt.Svr
 
             if (string.IsNullOrEmpty(msg.ukey + "") || string.IsNullOrEmpty(msg.lgid + "") || string.IsNullOrEmpty(msg.act)) throw new Exception("缺少必要参数，请检查（ukey,lgid,act）参数是否有值！");
 
+            string uk = msg.ukey + "";
+            var user = db.x_user.FirstOrDefault(o => o.ukey == uk);
+            if (user == null) throw new Exception("用户未登陆");
+
             long id = long.Parse(msg.lgid + "");
             var lg = db.x_logon.FirstOrDefault(o => o.logon_id == id);
 
-            if (lg == null || string.IsNullOrEmpty(lg.x_user.ukey)) throw new Exception(lg == null ? "登陆器不存在，请重新发起！" : "用户未登陆，请重新登陆");
-            if (lg.x_user.ukey != msg.ukey) throw new Exception("用户越权，登陆器不属于你");
+            if (lg.user_id != user.user_id) throw new Exception("用户越权，登陆器不属于你");
 
             if (msg.act == "loadqr")
             {
-                tc.ukey = lg.x_user.ukey;
-                lock (newwx) newwx.Enqueue((long)msg.id);
+                tc.ukey = user.ukey;
+                lock (newwx) newwx.Enqueue(lg.logon_id);
             }
         }
 

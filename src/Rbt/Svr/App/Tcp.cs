@@ -70,6 +70,8 @@ namespace Rbt.Svr.App
         /// <param name="msg"></param>
         public void Send(msg msg)
         {
+            if (tc.Client == null) { Exit(1); return; }
+
             var frame = new List<byte>();
             frame.Add(128 | 1);
 

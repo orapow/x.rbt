@@ -148,6 +148,7 @@
     <Content Include="tpl\com\dict.html" />
     <Content Include="tpl\com\getpos.html" />
     <Content Include="tpl\com\_head.html" />
+    <Content Include="tpl\login.html" />
     <Content Include="tpl\index.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -196,7 +197,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>15010</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:17815/</IISUrl>
+          <IISUrl>http://localhost:17800/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

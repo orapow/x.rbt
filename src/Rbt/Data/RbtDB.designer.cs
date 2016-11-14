@@ -2708,7 +2708,9 @@ namespace X.Data
 		
 		private System.Nullable<long> _upid;
 		
-		private string _openid;
+		private string _uin;
+		
+		private string _pwd;
 		
 		private string _nickname;
 		
@@ -2744,6 +2746,8 @@ namespace X.Data
 		
 		private System.Nullable<System.DateTime> _ctime;
 		
+		private string _openid;
+		
 		private System.Nullable<System.DateTime> _last_time;
 		
 		private string _ukey;
@@ -2768,8 +2772,10 @@ namespace X.Data
     partial void Onuser_idChanged();
     partial void OnupidChanging(System.Nullable<long> value);
     partial void OnupidChanged();
-    partial void OnopenidChanging(string value);
-    partial void OnopenidChanged();
+    partial void OnuinChanging(string value);
+    partial void OnuinChanged();
+    partial void OnpwdChanging(string value);
+    partial void OnpwdChanged();
     partial void OnnicknameChanging(string value);
     partial void OnnicknameChanged();
     partial void OntelChanging(string value);
@@ -2804,6 +2810,8 @@ namespace X.Data
     partial void OnrewardChanged();
     partial void OnctimeChanging(System.Nullable<System.DateTime> value);
     partial void OnctimeChanged();
+    partial void OnopenidChanging(string value);
+    partial void OnopenidChanged();
     partial void Onlast_timeChanging(System.Nullable<System.DateTime> value);
     partial void Onlast_timeChanged();
     partial void OnukeyChanging(string value);
@@ -2861,22 +2869,42 @@ namespace X.Data
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_openid", DbType="NVarChar(64)")]
-		public string openid
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_uin", DbType="NVarChar(32)")]
+		public string uin
 		{
 			get
 			{
-				return this._openid;
+				return this._uin;
 			}
 			set
 			{
-				if ((this._openid != value))
+				if ((this._uin != value))
 				{
-					this.OnopenidChanging(value);
+					this.OnuinChanging(value);
 					this.SendPropertyChanging();
-					this._openid = value;
-					this.SendPropertyChanged("openid");
-					this.OnopenidChanged();
+					this._uin = value;
+					this.SendPropertyChanged("uin");
+					this.OnuinChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pwd", DbType="NVarChar(64)")]
+		public string pwd
+		{
+			get
+			{
+				return this._pwd;
+			}
+			set
+			{
+				if ((this._pwd != value))
+				{
+					this.OnpwdChanging(value);
+					this.SendPropertyChanging();
+					this._pwd = value;
+					this.SendPropertyChanged("pwd");
+					this.OnpwdChanged();
 				}
 			}
 		}
@@ -3217,6 +3245,26 @@ namespace X.Data
 					this._ctime = value;
 					this.SendPropertyChanged("ctime");
 					this.OnctimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_openid", DbType="NVarChar(64)")]
+		public string openid
+		{
+			get
+			{
+				return this._openid;
+			}
+			set
+			{
+				if ((this._openid != value))
+				{
+					this.OnopenidChanging(value);
+					this.SendPropertyChanging();
+					this._openid = value;
+					this.SendPropertyChanged("openid");
+					this.OnopenidChanged();
 				}
 			}
 		}

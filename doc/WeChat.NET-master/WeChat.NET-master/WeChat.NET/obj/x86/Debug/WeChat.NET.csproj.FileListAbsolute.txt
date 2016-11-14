@@ -29,3 +29,6 @@ D:\Pro\wxbot\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\obj\x86\Debug\We
 D:\Pro\wxbot\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\obj\x86\Debug\WeChat.NET.Properties.Resources.resources
 D:\Pro\wxbot\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\obj\x86\Debug\WeChat.NET.csproj.GenerateResource.Cache
 D:\Pro\wxbot\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\bin\Debug\WeChat.NET.pdb
+D:\Pro\x.rbt\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\bin\Debug\WeChat.NET.exe.config
+D:\Pro\x.rbt\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\obj\x86\Debug\WeChat.NET.exe
+D:\Pro\x.rbt\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\obj\x86\Debug\WeChat.NET.pdb

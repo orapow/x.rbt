@@ -1,6 +1,6 @@
 {
-	"domain":"localhost:17815",
-	"name":"鲜橙O2O系统",
+	"domain":"localhost:17800",
+	"name":"鲜橙机器人",
 	"bdkey":"dlkf7DmjykwrgTuuqGYYRTid",
 	"city":"北京",
 	"cache":2,

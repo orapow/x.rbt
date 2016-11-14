@@ -1,0 +1,17 @@
+D:\Pro\x.rbt\src\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+D:\Pro\x.rbt\src\UnitTest\bin\Debug\UnitTest.dll
+D:\Pro\x.rbt\src\UnitTest\bin\Debug\UnitTest.pdb
+D:\Pro\x.rbt\src\UnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Pro\x.rbt\src\UnitTest\bin\Debug\Rbt.Svr.exe
+D:\Pro\x.rbt\src\UnitTest\bin\Debug\X.Core.dll
+D:\Pro\x.rbt\src\UnitTest\bin\Debug\log4net.dll
+D:\Pro\x.rbt\src\UnitTest\bin\Debug\X.Json.dll
+D:\Pro\x.rbt\src\UnitTest\bin\Debug\NVelocity.dll
+D:\Pro\x.rbt\src\UnitTest\bin\Debug\Enyim.Caching.dll
+D:\Pro\x.rbt\src\UnitTest\bin\Debug\X.Data.dll
+D:\Pro\x.rbt\src\UnitTest\bin\Debug\X.Core.pdb
+D:\Pro\x.rbt\src\UnitTest\bin\Debug\Rbt.Svr.pdb
+D:\Pro\x.rbt\src\UnitTest\bin\Debug\X.Data.pdb
+D:\Pro\x.rbt\src\UnitTest\bin\Debug\zh-Hans\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\Pro\x.rbt\src\UnitTest\obj\Debug\UnitTest.dll
+D:\Pro\x.rbt\src\UnitTest\obj\Debug\UnitTest.pdb

@@ -2,8 +2,39 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     #parse("com/_head.html")
+    <title>帐号管理 - $cfg.name</title>
 </head>
 <body>
+    <img src="" id="img" width="120" />
+    $cu.ukey
+    <x:form>
+        <x:text title="内容" name="cot" tp="3" size="6" />
+        <button type="submit">发送</button>
+    </x:form>
+    <script type="text/javascript">
+        var ws = new WebSocket("ws://127.0.0.1:9999");
+        ws.onopen = function () {
+            console.log("服务器已经连接");
+        }
+        ws.onmessage = function (evt) {
+            var msg = JSON.parse(evt.data);
+            console.log("收到消息->" + evt.data);
+            if (msg.act == "qrcode") img.src = msg.qrcode;
+            else if (msg.act == "scaned") img.src = msg.headimg;
+        }
+        ws.onerror = function (evt) {
+            console.log("出现错误：" + JSON.stringify(evt))
+        }
+        ws.onclose = function () {
+            console.log("服务器已经断开");
+        }
 
+        $("form:eq(0)").xform({
+            callback: function (d) {
+                ws.send(d.cot);
+            }
+        })
+
+    </script>
 </body>
 </html>
