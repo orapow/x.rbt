@@ -5,6 +5,7 @@ using X.Core.Cache;
 
 namespace X.Data
 {
+    [Serializable]
     partial class x_group
     {
     }

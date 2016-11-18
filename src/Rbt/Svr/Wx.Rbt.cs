@@ -112,21 +112,21 @@ namespace Rbt.Svr
             tc.Send(msg);
         }
 
-        void Wx_Scaned(Wx w)
+        void Wx_Scaned(string hdimg, string uk)
         {
-            var tc = tcps.FirstOrDefault(o => o.ukey == w.ukey);
+            var tc = tcps.FirstOrDefault(o => o.ukey == uk);
             dynamic msg = new msg();
             msg.act = "scaned";
-            msg.headimg = w.headimg;
+            msg.headimg = hdimg;
             tc.Send(msg);
         }
 
-        void Wx_LoadQr(Wx w)
+        void Wx_LoadQr(string qr, string uk)
         {
-            var tc = tcps.FirstOrDefault(o => o.ukey == w.ukey);
+            var tc = tcps.FirstOrDefault(o => o.ukey == uk);
             dynamic msg = new msg();
             msg.act = "qrcode";
-            msg.qrcode = w.qrcode;
+            msg.qrcode = qr;
             tc.Send(msg);
         }
 

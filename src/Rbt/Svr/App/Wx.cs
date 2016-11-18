@@ -9,6 +9,8 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Web;
 using X.Core.Utility;
+using Rbt.Svr.App;
+using System.Net;
 
 namespace Rbt.Svr
 {
@@ -23,8 +25,8 @@ namespace Rbt.Svr
             db = new RbtDBDataContext();
             lg = db.x_logon.FirstOrDefault(o => o.logon_id == id);
             ukey = lg.x_user.ukey;
+            cookies = new CookieContainer();
             baseRequest = new BaseRequest();
-            wc = new Wc();
         }
 
         #region 公开方法
@@ -45,14 +47,10 @@ namespace Rbt.Svr
             {
                 loadQrcode();
 
-                LoadQr?.Invoke(this);
-
-                waitFor(1, 0);
+                Thread.Sleep(500);
 
                 login();
-
                 wxInit();
-
                 wxStatusNotify();
                 //loadContact();
 
@@ -61,7 +59,9 @@ namespace Rbt.Svr
 
                 Loged?.Invoke(this);
 
-                while (!isquit) { new Thread(o => { SyncCheck(); Thread.Sleep(5 * 1000); }).Start(); }
+                Thread.Sleep(500);
+
+                while (!isquit) { SyncCheck(); }
 
             }
             catch (Exception ex)
@@ -85,15 +85,13 @@ namespace Rbt.Svr
         #region 公开属性
         public long lgid { get { return lg.logon_id; } }
         public string ukey { get; private set; }
-        public string qrcode { get; private set; }
-        public string headimg { get; private set; }
         #endregion
 
         #region 公开事件
-        public delegate void LoadQrHandler(Wx w);
+        public delegate void LoadQrHandler(string qr, string ukey);
         public event LoadQrHandler LoadQr;
 
-        public delegate void ScanedHandler(Wx w);
+        public delegate void ScanedHandler(string hd, string ukey);
         public event ScanedHandler Scaned;
 
         public delegate void LogedHandler(Wx w);
@@ -108,13 +106,13 @@ namespace Rbt.Svr
 
         #region 私有变量
         RbtDBDataContext db = null;
+        CookieContainer cookies = null;
         x_logon lg = null;
-        Wc wc = null;
+        Wc wc { get { return new Wc(cookies); } }
         BaseRequest baseRequest = null;
         Contact user = null;//当前用户信息
         SyncKey _syncKey;
         static readonly DateTime BaseTime = new DateTime(1970, 1, 1);
-        string uuid = "";
         string redirecturl = "";
         string passticket = "";
         string gateway = "";
@@ -155,79 +153,44 @@ namespace Rbt.Svr
         /// <returns></returns>
         void loadQrcode()
         {
-            outLog("loaduuid");
+            outLog("loadqrcode");
+            var psi = new ProcessStartInfo(AppDomain.CurrentDomain.BaseDirectory + "phantomjs", AppDomain.CurrentDomain.BaseDirectory + "run.js");
+            psi.RedirectStandardOutput = true;
+            psi.RedirectStandardError = true;
+            psi.CreateNoWindow = true;
+            psi.UseShellExecute = false;
+            var p = new Process();
 
-            var rsp = wc.GetStr("https://login.weixin.qq.com/jslogin?appid=wx782c26e4c19acffb&fun=new&lang=zh_CN&_=" + getcurrentseconds());//&redirect_uri=https%3A%2F%2Fwx2.qq.com%2Fcgi-bin%2Fmmwebwx-bin%2Fwebwxnewloginpage
-            if (rsp.err) throw new Exception("uuid获取失败" + Serialize.ToJson(rsp));
+            p.StartInfo = psi;
+            p.Start();
 
-            var reg = new Regex("\"(\\S+?)\"");
-            var m = reg.Match(rsp.data + "");
-            if (rsp.err) throw new Exception("uuid获取失败->" + Serialize.ToJson(rsp));
+            p.OutputDataReceived += new DataReceivedEventHandler(P_OutputDataReceived);
+            p.BeginOutputReadLine();
 
-            uuid = m.Groups[1].Value;
-            lg.uuid = uuid;
-
-            Thread.Sleep(500);
-
-            outLog("qrcode");
-            rsp = wc.GetFile(String.Format("https://login.weixin.qq.com/qrcode/{0}?t=webwx&_={1}", uuid, getcurrentseconds()));
-
-            if (rsp.err) throw new Exception("qrcode获取失败->" + Serialize.ToJson(rsp));
-
-            lg.qrcode = qrcode = "data:img/jpg;base64," + rsp.data;
-            lg.status = 3;//已获取二维码
-            db.SubmitChanges();
-
+            p.WaitForExit();
+            p.Close();
         }
 
-        /// <summary>
-        /// 等待中。。。
-        /// 1、扫描
-        /// 2、登陆
-        /// </summary>
-        /// <param name="t"></param>
-        /// <returns>
-        /// 0 超时
-        /// 1 已登陆
-        /// </returns>
-        void waitFor(int t, int c)
+        private void P_OutputDataReceived(object sender, DataReceivedEventArgs e)
         {
-            if (c >= 5 || isquit) throw new Exception("wait 已退出");
-
-            Thread.Sleep(500);
-
-            outLog("wait->" + t + "->" + c);
-            string url = String.Format("https://login.weixin.qq.com/cgi-bin/mmwebwx-bin/login?loginicon=true&uuid={0}&tip=0&r={1}&_={2}", uuid, ~getcurrentseconds(), getcurrentseconds());
-            var rsp = wc.GetStr(url);
-            outLog("wait->" + t + "->" + c + "->" + Serialize.ToJson(rsp));
-
-            if (rsp.err) waitFor(t, c + 1);
-
-            var str = rsp.data + "";
-
-            if (str.Contains("code=201"))
+            if (e.Data == null) return;
+            outLog(e.Data);
+            var ps = e.Data.Split('|');
+            switch (ps[0])
             {
-                var img = str.Split('\'')[1].TrimEnd('\'');
-                lg.headimg = headimg = img;
-                lg.status = 4;//已扫描
-                db.SubmitChanges();
-
-                Scaned?.Invoke(this);
-
-                waitFor(2, 0);
+                case "qrcode":
+                    LoadQr?.Invoke(ps[1], ukey);
+                    break;
+                case "hdimg":
+                    Scaned?.Invoke(ps[1], ukey);
+                    break;
+                case "login":
+                    redirecturl = HttpUtility.HtmlDecode(ps[1]);
+                    if (!String.IsNullOrEmpty(redirecturl)) gateway = "https://" + new Uri(redirecturl).Host;
+                    lg.status = 5;//已登陆
+                    db.SubmitChanges();
+                    break;
             }
-
-            if (str.Contains("code=200"))
-            {
-                var reg = new Regex("window.redirect_uri=\"(\\S+?)\"");
-                redirecturl = reg.Match(str).Groups[1].Value;
-                if (!String.IsNullOrEmpty(redirecturl)) gateway = "https://" + new Uri(redirecturl).Host;
-                lg.status = 5;//已登陆
-                db.SubmitChanges();
-                return;
-            }
-
-            waitFor(t, c + 1);
         }
 
         /// <summary>
@@ -236,8 +199,10 @@ namespace Rbt.Svr
         void login()
         {
             outLog("login");
-            var rsp = wc.GetStr(redirecturl + "&fun=new&version=v2");
+            var rsp = wc.GetStr(redirecturl + "&fun=new&version=v2"); //
             if (rsp.err) if (rsp.err) throw new Exception("登陆失败->" + Serialize.ToJson(rsp));
+
+            cookies = wc.Cookies;
 
             Regex reg = new Regex(@"<skey>(\S+?)</skey><wxsid>(\S+?)</wxsid><wxuin>(\d+)</wxuin><pass_ticket>(\S+?)</pass_ticket>");
             passticket = String.Empty;
@@ -251,7 +216,6 @@ namespace Rbt.Svr
 
             lg.uin = baseRequest.Uin = Convert.ToInt64(m.Groups[3].Value);
             db.SubmitChanges();
-
         }
 
         /// <summary>
@@ -262,7 +226,7 @@ namespace Rbt.Svr
             outLog("init");
 
             string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxinit?pass_ticket={1}&skey={2}&r={3}", gateway, passticket, baseRequest.Skey, getcurrentseconds());
-            var rsp = wc.PostData(url, Serialize.ToJson(new { BaseRequest = baseRequest }));
+            var rsp = wc.PostStr(url, Serialize.ToJson(new { BaseRequest = baseRequest }));
 
             if (rsp.err) throw new Exception("初始化失败->" + Serialize.ToJson(rsp));
 
@@ -285,7 +249,8 @@ namespace Rbt.Svr
                 ToUserName = user.UserName,
                 ClientMsgId = getcurrentseconds()
             };
-            wc.PostData(url, Serialize.ToJson(o));
+            var rsp = wc.PostStr(url, Serialize.ToJson(o));
+            outLog("notify->" + Serialize.ToJson(rsp));
         }
 
         /// <summary>
@@ -336,7 +301,7 @@ namespace Rbt.Svr
                 SyncKey = _syncKey,
                 rr = getcurrentseconds()
             };
-            var rsp = wc.PostData(url, Serialize.ToJson(o));
+            var rsp = wc.PostStr(url, Serialize.ToJson(o));
 
             outLog("sync->" + Serialize.ToJson(rsp));
 
@@ -373,7 +338,7 @@ namespace Rbt.Svr
                 }
             };
 
-            var rsp = wc.PostData(url, Serialize.ToJson(o));
+            var rsp = wc.PostStr(url, Serialize.ToJson(o));
 
             outLog(Serialize.ToJson(rsp));
 
@@ -402,7 +367,7 @@ namespace Rbt.Svr
                 Scene = 0
             };
 
-            var rsp = wc.PostData(url, Serialize.ToJson(o));
+            var rsp = wc.PostStr(url, Serialize.ToJson(o));
             outLog("sendimg->" + Serialize.ToJson(rsp));
 
         }
@@ -438,7 +403,7 @@ namespace Rbt.Svr
             dict.Add("uploadmediarequest", Serialize.ToJson(o));
             dict.Add("webwx_data_ticket", wc.GetCookie("webwx_data_ticket"));
 
-            var rsp = wc.PostFile(url, dict, fi);
+            var rsp = wc.PostData(url, dict, fi);
             outLog("upimg->" + Serialize.ToJson(rsp));
 
             if (rsp.err) return "";
@@ -463,7 +428,7 @@ namespace Rbt.Svr
                 UserName = username
             };
 
-            var rsp = wc.PostData(url, Serialize.ToJson(o));
+            var rsp = wc.PostStr(url, Serialize.ToJson(o));
 
             outLog(Serialize.ToJson(rsp));
         }
@@ -491,7 +456,7 @@ namespace Rbt.Svr
                 skey = baseRequest.Skey
             };
 
-            var rsp = wc.PostData(url, Serialize.ToJson(o));
+            var rsp = wc.PostStr(url, Serialize.ToJson(o));
 
             outLog(Serialize.ToJson(rsp));
         }
@@ -511,7 +476,7 @@ namespace Rbt.Svr
                 DelMemberList = username
             };
 
-            var rsp = wc.PostData(url, Serialize.ToJson(o));
+            var rsp = wc.PostStr(url, Serialize.ToJson(o));
 
             outLog(Serialize.ToJson(rsp));
         }
@@ -531,7 +496,7 @@ namespace Rbt.Svr
                 ChatRoomName = groupname
             };
 
-            var rsp = wc.PostData(url, Serialize.ToJson(o));
+            var rsp = wc.PostStr(url, Serialize.ToJson(o));
 
             outLog(Serialize.ToJson(rsp));
         }
@@ -555,7 +520,7 @@ namespace Rbt.Svr
                 Topic = groupname
             };
 
-            var rsp = wc.PostData(url, Serialize.ToJson(o));
+            var rsp = wc.PostStr(url, Serialize.ToJson(o));
 
             outLog(Serialize.ToJson(rsp));
         }
@@ -576,7 +541,7 @@ namespace Rbt.Svr
                 UserName = username
             };
 
-            var rsp = wc.PostData(url, Serialize.ToJson(o));
+            var rsp = wc.PostStr(url, Serialize.ToJson(o));
 
             outLog(Serialize.ToJson(rsp));
         }
@@ -597,7 +562,7 @@ namespace Rbt.Svr
                 UserName = username
             };
 
-            var rsp = wc.PostData(url, Serialize.ToJson(o));
+            var rsp = wc.PostStr(url, Serialize.ToJson(o));
 
             outLog(Serialize.ToJson(rsp));
         }
@@ -628,10 +593,7 @@ namespace Rbt.Svr
             }
             catch { }
 
-            wc.Dispose();
-
             if (c == 1) Logout?.Invoke(this);
-
         }
 
         #endregion

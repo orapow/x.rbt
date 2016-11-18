@@ -28,25 +28,27 @@ namespace UnitTest
                 {
                     try
                     {
-                        var wc = new Wc();
-                        lock (txt)
-                        {
-                            var rsp = wc.GetStr("https://login.weixin.qq.com/jslogin?appid=wx782c26e4c19acffb&fun=new&lang=zh_CN&_=" + Tools.GetGreenTime(""));
-                            var reg = new Regex("\"(\\S+?)\"");
-                            var m = reg.Match(rsp.data + "");
-                            txt.AppendLine(o + "->" + m.Groups[1].Value + "->" + wc.GetFile("https://login.weixin.qq.com/qrcode/" + m.Groups[1].Value + "?t=webwx&_=" + Tools.GetGreenTime("")).data);
-                            string url = String.Format("https://login.weixin.qq.com/cgi-bin/mmwebwx-bin/login?loginicon=true&uuid={0}&tip=0&r={1}&_={2}", m.Groups[1].Value, "", getcurrentseconds());
-                            new Thread(y => { wc.GetStr(url); }).Start();
-                        }
+                        var wc = new Wc(null);
+                        var uuid = "";
+                        var rsp = wc.GetStr("https://login.weixin.qq.com/jslogin?appid=wx782c26e4c19acffb&fun=new&lang=zh_CN&_=" + Tools.GetGreenTime(""));
+                        var reg = new Regex("\"(\\S+?)\"");
+                        var m = reg.Match(rsp.data + "");
+                        uuid = m.Groups[1].Value;
+                        var qrcode = wc.GetFile("https://login.weixin.qq.com/qrcode/" + uuid + "?t=webwx&_=" + Tools.GetGreenTime("")).data;
+                        lock (txt) txt.AppendLine(o + "->" + uuid + "->" + qrcode);
+                        string url = String.Format("https://login.weixin.qq.com/cgi-bin/mmwebwx-bin/login?loginicon=true&uuid={0}&tip=0&r={1}&_={2}", uuid, ~getcurrentseconds(), getcurrentseconds());
+                        new Thread(tts => { var st = wc.GetStr(url); Console.WriteLine(Serialize.ToJson(st)); s++; });
+                        //lock (txt) txt.AppendLine("->" + Serialize.ToJson(wait));
                     }
                     catch (Exception ex)
                     {
                         lock (txt) txt.AppendLine(o + "->err," + ex.Message);
                     }
-                    finally { s++; }
+                    //finally { s++; }
                 }).Start(i);
-                //Thread.Sleep(2 * 1000);
+                Thread.Sleep(2 * 1000);
             }
+
             while (s <= 5) ;
             System.IO.File.WriteAllText("d:\\s.txt", txt.ToString());
 

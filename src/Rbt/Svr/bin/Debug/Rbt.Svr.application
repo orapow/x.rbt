@@ -4,17 +4,17 @@
   <description asmv2:publisher="Rbt.Svr" asmv2:product="Rbt.Svr" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.6" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Rbt.Svr.exe.manifest" size="7291">
+    <dependentAssembly dependencyType="install" codebase="Rbt.Svr.exe.manifest" size="7147">
       <assemblyIdentity name="Rbt.Svr.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CQg2XOHjh+4gEYe+62Hf3wGkR4Y97KOQoyze8u8U/T4=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>OZpj2LDz7PducdVWdXn0BkRWI8U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

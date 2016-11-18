@@ -31,7 +31,7 @@
             // 
             // RbtServer
             // 
-            this.ServiceName = "微信机器人服务程序";
+            this.ServiceName = "Rbt_Server";
 
         }
 
