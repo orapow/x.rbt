@@ -44,6 +44,8 @@
     <Compile Include="Views\com\err.cs" />
     <Compile Include="Views\com\code.cs" />
     <Compile Include="Views\com\dict.cs" />
+    <Compile Include="Views\func\contact.cs" />
+    <Compile Include="Views\func\reply.cs" />
     <Compile Include="Views\login.cs" />
     <Compile Include="Views\index.cs" />
     <Compile Include="Views\xview.cs" />

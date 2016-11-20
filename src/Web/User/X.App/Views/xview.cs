@@ -21,6 +21,8 @@ namespace X.App.Views
         /// </summary>
         protected x_user cu = null;
 
+        protected virtual string menu_id { get { return ""; } }
+
         protected override void InitView()
         {
 
@@ -31,6 +33,7 @@ namespace X.App.Views
             cu = DB.x_user.FirstOrDefault(o => o.user_id == 1);
             dict.Add("cu", cu);
 
+            dict.Add("m" + menu_id, "selected");
         }
     }
 }

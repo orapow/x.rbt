@@ -5,7 +5,7 @@ using System.Net;
 using System.Text;
 using X.Core.Utility;
 
-namespace Rbt.Svr
+namespace Rbt.Svr.App
 {
     /// <summary>
     /// Http通讯类
@@ -19,10 +19,9 @@ namespace Rbt.Svr
 
         public CookieContainer Cookies { get { return cookie; } }
 
-        public Wc(CookieContainer ck)
+        public Wc()
         {
-            if (ck == null) ck = new CookieContainer();
-            cookie = ck;
+            cookie = new CookieContainer();
             guid = Guid.NewGuid().ToString();
         }
 
@@ -32,6 +31,7 @@ namespace Rbt.Svr
 
             var req = (HttpWebRequest)WebRequest.Create(url);
             req.ServicePoint.ConnectionLimit = 512;
+
             #region head
             req.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";
             req.UserAgent = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Maxthon/4.9.3.1000 Chrome/39.0.2146.0 Safari/537.36";
@@ -39,7 +39,7 @@ namespace Rbt.Svr
             req.Headers.Set("Pragma", "no-cache");
             req.Method = "GET";
             req.ReadWriteTimeout = timeout * 1000;
-            req.KeepAlive = false;
+            req.KeepAlive = true;
             req.Timeout = timeout * 1000;
             req.CookieContainer = cookie;  //启用cookie
             #endregion
@@ -92,7 +92,7 @@ namespace Rbt.Svr
             req.Headers.Set("Pragma", "no-cache");
             req.Method = "POST";
             req.ReadWriteTimeout = timeout * 1000;
-            req.KeepAlive = false;
+            req.KeepAlive = true;
             req.Timeout = timeout * 1000;
             req.ContentLength = data.Length;
             req.CookieContainer = cookie;  //启用cookie
@@ -110,6 +110,7 @@ namespace Rbt.Svr
             finally { }
 
             var rsp = (HttpWebResponse)req.GetResponse();
+
             try
             {
                 int count = (int)rsp.ContentLength;
@@ -134,7 +135,6 @@ namespace Rbt.Svr
                 req.Abort();
                 req = null;
             }
-
 
         }
 

@@ -1,0 +1,794 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    #parse("com/_head.html")
+    <title>橙铺运营助手</title>
+    <style type="text/css">
+        .tab_navs { *zoom: 1; text-align: center; line-height: 30px; border-bottom: 1px solid #e7e7eb; box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.5); -moz-box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.5); -webkit-box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.5); }
+        .tab_navs:after { content: "\200B"; display: block; height: 0; clear: both; }
+        .tab_nav { float: left; font-size: 14px; }
+        .tab_nav a { display: block; *height: 1%; text-decoration: none; color: #222; outline: 0; padding: 0 20px; }
+        .tab_nav.selected { background-color: #d4d5d5; }
+        .mt .tab_nav a { border-right: 1px solid #e7e7eb; }
+        .mt .tab_nav.selected { border-top: 3px solid #757474; position: relative; top: -1px; }
+        .mt .tab_nav.selected a { position: relative; background-color: #d4d5d5; line-height: 29px; margin-bottom: -2px; }
+        .mt .tab_nav.no_extra a { border-right-width: 0; }
+        .section_tab .tab_navs { border: 0; box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; line-height: 14px; *line-height: 18px; }
+        .section_tab .tab_nav { border-top: 1px solid #c9cace; border-bottom: 1px solid #c9cace; border-left: 1px solid #c9cace; line-height: 30px; }
+        .section_tab .tab_nav:hover { text-decoration: none; }
+        .section_tab .tab_nav:last-child a { border: 0; }
+        .section_tab .tab_nav:first-child { border-top-left-radius: 3px; -moz-border-radius-topleft: 3px; -webkit-border-top-left-radius: 3px; border-bottom-left-radius: 3px; -moz-border-radius-bottomleft: 3px; -webkit-border-bottom-left-radius: 3px; }
+        .section_tab .tab_nav.no_extra { border-top-right-radius: 3px; -moz-border-radius-topright: 3px; -webkit-border-top-right-radius: 3px; border-bottom-right-radius: 3px; -moz-border-radius-bottomright: 3px; -webkit-border-bottom-right-radius: 3px; border-right: 1px solid #c9cace; }
+        .section_tab .tab_nav.selected { background-color: #576477; border-color: #576477; text-decoration: none; position: relative; margin-right: -1px; }
+        .section_tab .tab_nav.selected a { color: #fff; }
+        .section_tab.with_table { padding: 10px 20px; border-bottom: 1px solid #e7e7eb; background-color: #f4f5f9; }
+        .section_tab.gap_bottom { padding-bottom: 20px; }
+        .page_advanced_reply .inner_main .bd { border-width: 0; }
+        .page_advanced_reply .content_wrap { margin: 0 30px; }
+        .page_advanced_reply .sub_title_bar { margin-bottom: 16px; padding: 0; }
+        .page_advanced_reply .sub_title_bar .btn { height: 30px; line-height: 30px; *line-height: 28px; padding: 0 12px; }
+        .page_advanced_reply .sub_title_bar .reply_title_tips { margin-left: .5em; }
+        .page_advanced_reply .sub_title_bar .ext_info { float: right; }
+        .page_advanced_reply .sub_title_bar .links { margin-left: -1em; }
+        .page_advanced_reply .sub_title_bar .links_item.selected a { color: #7fba4f; }
+        .page_advanced_reply .msg_sender { margin-bottom: 20px; }
+        .page_advanced_reply .tool_bar { text-align: left; margin: 0; padding-top: 0; border-top-width: 0; box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; }
+        .page_advanced_reply .tool_bar .btn { margin-left: 0; }
+        .page_advanced_reply .reply_pop_tips { margin: -12px 30px 20px; }
+        .page_advanced_reply .reply_pop_tips.pos_right .popover_arrow { right: 38px; }
+        .page_advanced_reply .reply_tab_wrp { margin-top: 20px; margin-bottom: 20px; }
+        .page_advanced_reply .plugin_update_tips { margin: 0 30px 20px; }
+        .page_advanced_reply .msg_tips { margin-bottom: 20px; color: #8d8d8d; }
+        .page_advanced_reply .msg_tips .icon_msg_mini { margin: 0 5px; cursor: pointer; }
+        .icon_msg_sender { margin-right: 3px; margin-top: -2px; *margin-top: 2px; width: 20px; height: 20px; vertical-align: middle; display: inline-block; }
+        .tab_text .icon_msg_sender { background: url("/mpres/zh_CN/htmledition/comm_htmledition/style/widget/msg_tab_z25df2d.png") 0 0 no-repeat; }
+        .tab_text.selected .icon_msg_sender, .tab_text:hover .icon_msg_sender { background: url("/mpres/zh_CN/htmledition/comm_htmledition/style/widget/msg_tab_z25df2d.png") 0 -30px no-repeat; }
+        .tab_img .icon_msg_sender { background: url("/mpres/zh_CN/htmledition/comm_htmledition/style/widget/msg_tab_z25df2d.png") 0 -60px no-repeat; }
+        .tab_img.selected .icon_msg_sender, .tab_img:hover .icon_msg_sender { background: url("/mpres/zh_CN/htmledition/comm_htmledition/style/widget/msg_tab_z25df2d.png") 0 -90px no-repeat; }
+        .tab_video .icon_msg_sender { background: url("/mpres/zh_CN/htmledition/comm_htmledition/style/widget/msg_tab_z25df2d.png") 0 -120px no-repeat; }
+        .tab_video.selected .icon_msg_sender, .tab_video:hover .icon_msg_sender { background: url("/mpres/zh_CN/htmledition/comm_htmledition/style/widget/msg_tab_z25df2d.png") 0 -150px no-repeat; }
+        .tab_audio .icon_msg_sender { background: url("/mpres/zh_CN/htmledition/comm_htmledition/style/widget/msg_tab_z25df2d.png") 0 -180px no-repeat; }
+        .tab_audio.selected .icon_msg_sender, .tab_audio:hover .icon_msg_sender { background: url("/mpres/zh_CN/htmledition/comm_htmledition/style/widget/msg_tab_z25df2d.png") 0 -210px no-repeat; }
+        .tab_appmsg .icon_msg_sender { background: url("/mpres/zh_CN/htmledition/comm_htmledition/style/widget/msg_tab_z25df2d.png") 0 -240px no-repeat; }
+        .tab_appmsg.selected .icon_msg_sender, .tab_appmsg:hover .icon_msg_sender { background: url("/mpres/zh_CN/htmledition/comm_htmledition/style/widget/msg_tab_z25df2d.png") 0 -270px no-repeat; }
+        .tab_commondity_appmsg .icon_msg_sender { background: url("/mpres/zh_CN/htmledition/comm_htmledition/style/widget/msg_tab_z25df2d.png") 0 -300px no-repeat; }
+        .tab_commondity_appmsg.selected .icon_msg_sender, .tab_commondity_appmsg:hover .icon_msg_sender { background: url("/mpres/zh_CN/htmledition/comm_htmledition/style/widget/msg_tab_z25df2d.png") 0 -330px no-repeat; }
+        .tab_card .icon_msg_sender { background: transparent url(/mpres/htmledition/images/icon/msg-sender/icon_msg_sender_card.png?__sprite) no-repeat 0 0; }
+        .tab_card.selected .icon_msg_sender, .tab_card:hover .icon_msg_sender { background: transparent url(/mpres/htmledition/images/icon/msg-sender/icon_msg_sender_card_selected.png?__sprite) no-repeat 0 0; }
+        .tab_cardmsg .icon_msg_sender { background: url("/mpres/zh_CN/htmledition/comm_htmledition/style/widget/msg_tab_z25df2d.png") 0 -360px no-repeat; }
+        .tab_cardmsg.selected .icon_msg_sender, .tab_cardmsg:hover .icon_msg_sender { background: url("/mpres/zh_CN/htmledition/comm_htmledition/style/widget/msg_tab_z25df2d.png") 0 -390px no-repeat; }
+        .msg_sender .tab_navs { background-color: #fff; line-height: 38px; height: 38px; }
+        .msg_sender .tab_nav.selected { background-color: #fff; }
+        .msg_sender .tab_nav.selected .msg_tab_title { color: #222; }
+        .msg_sender .tab_nav .msg_tab_title { color: #8d8d8d; }
+        .tab_panel { background-color: #fff; min-height: 216px; }
+        .tab_content { padding: 35px 30px 0; }
+        .tab_content .inner { border: 1px solid #c6c6c6; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; padding: 14px 20px; }
+        .tab_content .inner.no_extra { padding: 0; border-width: 0; }
+        .msg_card { width: 297px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border: 1px solid #e7e7eb; }
+        .msg_card .card_content { position: relative; padding: 21px 13px 21px 84px; height: 60px; line-height: 57px; background-color: #3274bb; font-size: 18px; border-radius: 3px 3px 0 0; -moz-border-radius: 3px 3px 0 0; -webkit-border-radius: 3px 3px 0 0; color: #fff; font-weight: normal; }
+        .msg_card .card_content .logo { position: absolute; top: 21px; left: 13px; display: block; width: 60px; height: 60px; border-radius: 30px; -moz-border-radius: 30px; -webkit-border-radius: 30px; padding-top: 0; margin-top: 0; }
+        .msg_card .card_content h4 { font-weight: normal; }
+        .msg_card .card_content .deco { position: absolute; bottom: -1px; left: -1px; width: 297px; height: 5px; background: url(https://res.wx.qq.com/mpres/htmledition/images/icon/cardticket/card_tpl_deco.png) repeat-x center; border-left: 1px solid #e7e7eb; border-right: 1px solid #e7e7eb; }
+        .msg_card .store { border-radius: 0 0 3px 3px; -moz-border-radius: 0 0 3px 3px; -webkit-border-radius: 0 0 3px 3px; padding: 7px 13px; color: #8d8d8d; }
+        .msg_card.small_card { width: auto; border: 1px solid #dbdbdb; }
+        .msg_card.small_card .card_content { padding: 10px 6px 10px 42px; height: 31px; line-height: 28px; font-size: 14px; }
+        .msg_card.small_card .card_content .logo { width: 30px; height: 30px; border-radius: 15px; -moz-border-radius: 15px; -webkit-border-radius: 15px; top: 10px; left: 6px; }
+        .msg_card.small_card .store { padding: 3px 6px; background-color: #fff; }
+        .tab_cont_cover { overflow: hidden; }
+        .tab_cont_cover .create_access { padding: 82px 0; margin-bottom: 0; line-height: normal; position: relative; }
+        .tab_cont_cover .create_access strong { padding-top: 2px; }
+        .tab_cont_cover .upload_file_box { bottom: 0; top: auto; width: 100%; }
+        .tab_cont_cover .appmsg_cover, .tab_cont_cover .media_cover { width: 48%; *width: 47%; margin-right: 2%; float: left; }
+        .tab_cont_cover .create_access .add_gray_wrp, .tab_cont_cover .create_access_primary .add_gray_wrp { display: inline-block; }
+        .tab_cont_cover .appmsg_cover .create_access:hover .add_gray_wrp { display: none; }
+        .tab_cont_cover .media_cover .create_access:hover .add_gray { display: inline-block; }
+        .msg_sender { border: 1px solid #e7e7eb; }
+        .msg_sender .tab_navs { border-top-width: 0; }
+        .msg_sender .tab_content { padding: 0; }
+        .msg_sender .tab_content .inner { border-width: 0; }
+        .msg_sender .tab_panel { border-bottom-left-radius: 3px; -moz-border-radius-bottomleft: 3px; -webkit-border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; -moz-border-radius-bottomright: 3px; -webkit-border-bottom-right-radius: 3px; }
+        .msg_sender .emotion_editor { border-width: 0; }
+        .msg_sender .richvideo, .msg_sender .appmsg, .msg_sender .richvideo_msg_box { margin-bottom: 0; }
+        .msg_sender .richvideo .richvideo_content .play_mask { display: none; }
+        .msg_sender.small .tab_nav a { padding-left: 10px; padding-right: 10px; }
+        .msg_sender .simple_img .title { display: none; }
+        .msg_sender .editor_tip.opr_tips { display: none; }
+        .msg_sender .tab_navs_panel { overflow: hidden; *zoom: 1; border-bottom: 1px solid #e7e7eb; }
+        .msg_sender .tab_navs_wrp { overflow: hidden; *zoom: 1; }
+        .msg_sender .tab_navs { white-space: nowrap; text-align: left; font-size: 0; border-bottom-width: 0; }
+        .msg_sender .tab_nav { float: none; display: inline-block; *display: inline; *zoom: 1; vertical-align: top; }
+        .msg_sender .tab_navs_switch_wrp { display: none; margin-top: 6px; }
+        .msg_sender .tab_navs_switch_wrp.switch_prev { float: left; }
+        .msg_sender .tab_navs_switch_wrp.switch_next { float: right; }
+        .msg_sender .tab_navs_switch { line-height: 300px; overflow: hidden; cursor: pointer; }
+        .msg_sender .switch_prev .tab_navs_switch { background: transparent url(/mpres/htmledition/images/icon/msg-sender/icon_menu_nav_prev2968da.png) no-repeat 0 0; width: 24px; height: 24px; vertical-align: middle; display: inline-block; background-position: 50% 50%; }
+        .msg_sender .switch_next .tab_navs_switch { background: transparent url(/mpres/htmledition/images/icon/msg-sender/icon_menu_nav_next2968da.png) no-repeat 0 0; width: 24px; height: 24px; vertical-align: middle; display: inline-block; background-position: 50% 50%; }
+    </style>
+</head>
+<body>
+    #parse("_top.html")
+    <div id="body" class="body page_user">
+        <div id="js_container_box" class="container_box cell_layout side_l">
+            #parse("_left.html")
+            <div class="col_main">
+                <div class="main_hd">
+                    <h2>自动回复</h2>
+                </div>
+                <div class="main_bd" style="padding:0;">
+                    <div class="highlight_box icon_wrap icon_small border" id="div_start" style="">        <div class="opr">            <a href="javascript:;" class="btn btn_warn" id="btn_stop">停用</a>        </div>        <span class="icon unlock">                    </span>        <h4 class="title">已开启自动回复设置</h4>        <p class="desc">            通过编辑内容或关键词规则，快速进行自动回复设置。如具备开发能力，可更灵活地使用该功能。<a href="javascript:;" class="detail_desc">查看详情</a>        </p>    </div>
+                    <div class="content_wrap" id="div_replyContent" style="">
+                        <div class="global_mod mt_layout reply_tab_wrp"><div class="section_tab"><ul class="tab_navs"><li class="tab_nav  selected"><a href="/advanced/autoreply?t=ivr/reply&amp;action=beadded&amp;token=2127285058&amp;lang=zh_CN">被添加自动回复</a></li>                                                            <li class="tab_nav  ">                        <a href="/advanced/autoreply?t=ivr/reply&amp;action=autoreply&amp;token=2127285058&amp;lang=zh_CN">消息自动回复</a>                    </li>                                                            <li class="tab_nav no_extra ">                        <a href="/advanced/autoreply?t=ivr/keywords&amp;action=smartreply&amp;token=2127285058&amp;lang=zh_CN">关键词自动回复</a>                    </li>                                    </ul>            </div>                        <div class="global_extra">                                <span class="reply_title_tips mini_tips icon_after"><a href="http://kf.qq.com/info/80935.html" target="_blank">公众平台如何设置被添加自动回复 <i class="icon_mini_tips document_link"></i></a></span>                            </div>                    </div>                <div class="msg_sender" id="js_msgSender">
+                            <div class="msg_tab">
+                                <div class="tab_navs_panel">
+                                    <span class="tab_navs_switch_wrp switch_prev js_switch_prev">
+                                        <span class="tab_navs_switch"></span>
+                                    </span>
+                                    <span class="tab_navs_switch_wrp switch_next js_switch_next">
+                                        <span class="tab_navs_switch"></span>
+                                    </span>
+                                    <div class="tab_navs_wrp">
+                                        <ul class="tab_navs js_tab_navs" style="margin-left:0;">
+
+                                            <li class="tab_nav tab_text width4 selected" data-type="1" data-tab=".js_textArea" data-tooltip="文字">
+                                                <a href="javascript:void(0);" onclick="return false;">&nbsp;<i class="icon_msg_sender"></i><span class="msg_tab_title">文字</span></a>
+                                            </li>
+
+                                            <li class="tab_nav tab_img width4" data-type="2" data-tab=".js_imgArea" data-tooltip="图片">
+                                                <a href="javascript:void(0);" onclick="return false;">&nbsp;<i class="icon_msg_sender"></i><span class="msg_tab_title">图片</span></a>
+                                            </li>
+
+                                            <li class="tab_nav tab_audio width4" data-type="3" data-tab=".js_audioArea" data-tooltip="语音">
+                                                <a href="javascript:void(0);" onclick="return false;">&nbsp;<i class="icon_msg_sender"></i><span class="msg_tab_title">语音</span></a>
+                                            </li>
+
+                                            <li class="tab_nav tab_video width4 no_extra" data-type="15" data-tab=".js_videoArea" data-tooltip="视频">
+                                                <a href="javascript:void(0);" onclick="return false;">&nbsp;<i class="icon_msg_sender"></i><span class="msg_tab_title">视频</span></a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab_panel">
+
+                                    <div class="tab_content">
+                                        <div class="js_textArea inner no_extra">
+                                            <div class="emotion_editor">
+                                                <div class="edit_area js_editorArea" style="display: none;"></div><div class="edit_area js_editorArea" contenteditable="true" style="overflow-y: auto; overflow-x: hidden;"></div>
+                                                <div class="editor_toolbar">
+
+                                                    <a href="javascript:void(0);" class="icon_emotion emotion_switch js_switch">表情</a>
+
+
+                                                    <p class="editor_tip opr_tips">，按下Shift+Enter键换行</p>
+                                                    <p class="editor_tip js_editorTip">还可以输入<em>600</em>字</p>
+                                                    <div class="emotion_wrp js_emotionArea">
+                                                        <span class="hook">
+                                                            <span class="hook_dec hook_top"></span>
+                                                            <span class="hook_dec hook_btm"></span>
+                                                        </span>
+                                                        <ul class="emotions" onselectstart="return false;">
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/0.gif" data-title="微笑" style="background-position:0px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/1.gif" data-title="撇嘴" style="background-position:-24px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/2.gif" data-title="色" style="background-position:-48px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/3.gif" data-title="发呆" style="background-position:-72px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/4.gif" data-title="得意" style="background-position:-96px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/5.gif" data-title="流泪" style="background-position:-120px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/6.gif" data-title="害羞" style="background-position:-144px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/7.gif" data-title="闭嘴" style="background-position:-168px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/8.gif" data-title="睡" style="background-position:-192px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/9.gif" data-title="大哭" style="background-position:-216px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/10.gif" data-title="尴尬" style="background-position:-240px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/11.gif" data-title="发怒" style="background-position:-264px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/12.gif" data-title="调皮" style="background-position:-288px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/13.gif" data-title="呲牙" style="background-position:-312px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/14.gif" data-title="惊讶" style="background-position:-336px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/15.gif" data-title="难过" style="background-position:-360px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/16.gif" data-title="酷" style="background-position:-384px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/17.gif" data-title="冷汗" style="background-position:-408px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/18.gif" data-title="抓狂" style="background-position:-432px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/19.gif" data-title="吐" style="background-position:-456px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/20.gif" data-title="偷笑" style="background-position:-480px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/21.gif" data-title="可爱" style="background-position:-504px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/22.gif" data-title="白眼" style="background-position:-528px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/23.gif" data-title="傲慢" style="background-position:-552px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/24.gif" data-title="饥饿" style="background-position:-576px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/25.gif" data-title="困" style="background-position:-600px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/26.gif" data-title="惊恐" style="background-position:-624px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/27.gif" data-title="流汗" style="background-position:-648px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/28.gif" data-title="憨笑" style="background-position:-672px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/29.gif" data-title="大兵" style="background-position:-696px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/30.gif" data-title="奋斗" style="background-position:-720px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/31.gif" data-title="咒骂" style="background-position:-744px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/32.gif" data-title="疑问" style="background-position:-768px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/33.gif" data-title="嘘" style="background-position:-792px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/34.gif" data-title="晕" style="background-position:-816px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/35.gif" data-title="折磨" style="background-position:-840px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/36.gif" data-title="衰" style="background-position:-864px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/37.gif" data-title="骷髅" style="background-position:-888px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/38.gif" data-title="敲打" style="background-position:-912px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/39.gif" data-title="再见" style="background-position:-936px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/40.gif" data-title="擦汗" style="background-position:-960px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/41.gif" data-title="抠鼻" style="background-position:-984px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/42.gif" data-title="鼓掌" style="background-position:-1008px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/43.gif" data-title="糗大了" style="background-position:-1032px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/44.gif" data-title="坏笑" style="background-position:-1056px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/45.gif" data-title="左哼哼" style="background-position:-1080px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/46.gif" data-title="右哼哼" style="background-position:-1104px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/47.gif" data-title="哈欠" style="background-position:-1128px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/48.gif" data-title="鄙视" style="background-position:-1152px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/49.gif" data-title="委屈" style="background-position:-1176px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/50.gif" data-title="快哭了" style="background-position:-1200px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/51.gif" data-title="阴险" style="background-position:-1224px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/52.gif" data-title="亲亲" style="background-position:-1248px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/53.gif" data-title="吓" style="background-position:-1272px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/54.gif" data-title="可怜" style="background-position:-1296px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/55.gif" data-title="菜刀" style="background-position:-1320px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/56.gif" data-title="西瓜" style="background-position:-1344px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/57.gif" data-title="啤酒" style="background-position:-1368px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/58.gif" data-title="篮球" style="background-position:-1392px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/59.gif" data-title="乒乓" style="background-position:-1416px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/60.gif" data-title="咖啡" style="background-position:-1440px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/61.gif" data-title="饭" style="background-position:-1464px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/62.gif" data-title="猪头" style="background-position:-1488px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/63.gif" data-title="玫瑰" style="background-position:-1512px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/64.gif" data-title="凋谢" style="background-position:-1536px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/65.gif" data-title="示爱" style="background-position:-1560px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/66.gif" data-title="爱心" style="background-position:-1584px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/67.gif" data-title="心碎" style="background-position:-1608px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/68.gif" data-title="蛋糕" style="background-position:-1632px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/69.gif" data-title="闪电" style="background-position:-1656px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/70.gif" data-title="炸弹" style="background-position:-1680px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/71.gif" data-title="刀" style="background-position:-1704px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/72.gif" data-title="足球" style="background-position:-1728px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/73.gif" data-title="瓢虫" style="background-position:-1752px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/74.gif" data-title="便便" style="background-position:-1776px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/75.gif" data-title="月亮" style="background-position:-1800px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/76.gif" data-title="太阳" style="background-position:-1824px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/77.gif" data-title="礼物" style="background-position:-1848px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/78.gif" data-title="拥抱" style="background-position:-1872px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/79.gif" data-title="强" style="background-position:-1896px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/80.gif" data-title="弱" style="background-position:-1920px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/81.gif" data-title="握手" style="background-position:-1944px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/82.gif" data-title="胜利" style="background-position:-1968px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/83.gif" data-title="抱拳" style="background-position:-1992px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/84.gif" data-title="勾引" style="background-position:-2016px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/85.gif" data-title="拳头" style="background-position:-2040px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/86.gif" data-title="差劲" style="background-position:-2064px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/87.gif" data-title="爱你" style="background-position:-2088px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/88.gif" data-title="NO" style="background-position:-2112px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/89.gif" data-title="OK" style="background-position:-2136px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/90.gif" data-title="爱情" style="background-position:-2160px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/91.gif" data-title="飞吻" style="background-position:-2184px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/92.gif" data-title="跳跳" style="background-position:-2208px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/93.gif" data-title="发抖" style="background-position:-2232px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/94.gif" data-title="怄火" style="background-position:-2256px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/95.gif" data-title="转圈" style="background-position:-2280px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/96.gif" data-title="磕头" style="background-position:-2304px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/97.gif" data-title="回头" style="background-position:-2328px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/98.gif" data-title="跳绳" style="background-position:-2352px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/99.gif" data-title="挥手" style="background-position:-2376px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/100.gif" data-title="激动" style="background-position:-2400px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/101.gif" data-title="街舞" style="background-position:-2424px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/102.gif" data-title="献吻" style="background-position:-2448px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/103.gif" data-title="左太极" style="background-position:-2472px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                            <li class="emotions_item">
+                                                                <i class="js_emotion_i" data-gifurl="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/104.gif" data-title="右太极" style="background-position:-2496px 0;">
+                                                                </i>
+                                                            </li>
+
+                                                        </ul>
+                                                        <span class="emotions_preview js_emotionPreviewArea"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="tab_content" style="display: none;">
+                                        <div class="js_imgArea inner ">
+                                            <!--type 10图文 2图片  3语音 15视频 11商品消息-->
+
+                                            <div class="tab_cont_cover jsMsgSendTab" data-index="1" data-type="2">
+                                                <div class="media_cover">
+                                                    <span class="create_access">
+                                                        <a class="add_gray_wrp jsMsgSenderPopBt" href="javascript:;" data-type="2" data-index="1">
+                                                            <i class="icon36_common add_gray"></i>
+                                                            <strong>从素材库中选择</strong>
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                                <div class="media_cover">
+                                                    <span class="create_access">
+                                                        <a class="add_gray_wrp" id="msgSendImgUploadBt" data-type="2" href="javascript:;">
+                                                            <i class="icon36_common add_gray"></i>
+                                                            <strong>上传图片</strong>
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="tab_content" style="display: none;">
+                                        <div class="js_audioArea inner ">
+                                            <!--type 10图文 2图片  3语音 15视频 11商品消息-->
+
+                                            <div class="tab_cont_cover jsMsgSendTab" data-index="2" data-type="3">
+                                                <div class="media_cover">
+                                                    <span class="create_access">
+                                                        <a class="add_gray_wrp jsMsgSenderPopBt" href="javascript:;" data-type="3" data-index="2">
+                                                            <i class="icon36_common add_gray"></i>
+                                                            <strong>从素材库中选择</strong>
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                                <div class="media_cover">
+                                                    <span class="create_access">
+                                                        <a class="add_gray_wrp " id="msgSendAudioUploadBt" href="javascript:;">
+                                                            <i class="icon36_common add_gray"></i>
+                                                            <strong>新建语音</strong>
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="tab_content" style="display: none;">
+                                        <div class="js_videoArea inner ">
+                                            <!--type 10图文 2图片  3语音 15视频 11商品消息-->
+
+                                            <div class="tab_cont_cover jsMsgSendTab" data-index="3">
+                                                <div class="media_cover">
+                                                    <span class="create_access">
+                                                        <a class="add_gray_wrp jsMsgSenderPopBt" href="javascript:;" data-type="15" data-index="3">
+                                                            <i class="icon36_common add_gray"></i>
+                                                            <strong>从素材库中选择</strong>
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                                <div class="media_cover">
+                                                    <span class="create_access">
+                                                        <a target="_blank" class="add_gray_wrp" href="/cgi-bin/appmsg?t=media/videomsg_edit&amp;action=video_edit&amp;type=15&amp;lang=zh_CN&amp;token=2127285058">
+                                                            <i class="icon36_common add_gray"></i>
+                                                            <strong>新建视频</strong>
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>                        <p class="mini_tips warn dn js_warn profile_link_msg_global reply" style="display: none;">            请勿添加其他公众号的主页链接        </p>        <div class="tool_bar">            <span id="js_save" class="btn btn_primary btn_input"><button>保存</button></span>            <span id="js_del" class="btn btn_default btn_input btn_disabled"><button disabled="disabled">删除回复</button></span>        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    #parse("_foot.html")
+</body>
+</html>

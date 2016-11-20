@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    #parse("com/_head.html")
+    <title>橙铺运营助手</title>
+    <style type="text/css">
+        .page_user .main_bd { padding: 30px; }
+        .user_group_opr { padding: 10px 20px; border-bottom: 1px solid #e7e7eb; }
+        .search_bar { margin-bottom: 30px; }
+        .tool_area { padding: 20px; }
+        .user_list { padding: 15px; }
+        .user_list .li:nth-child(8n+1) { margin-left: 0px; }
+        .user_list .li { display: inline-block; width: 72px; text-align: center; margin-left: 10px; }
+        .user_list .li .nickname { width: 100%; overflow: hidden; text-overflow: ellipsis; height: 24px; display: block; }
+        .user_list .li img { width: 100%; }
+        .frm_input_append.jsSearchInputBt { font-size: 14px; }
+    </style>
+</head>
+<body>
+    #parse("_top.html")
+    <div id="body" class="body page_user">
+        <div id="js_container_box" class="container_box cell_layout side_l">
+            #parse("_left.html")
+            <div class="col_main">
+                <div class="main_hd">
+                    <h2>通讯录</h2><div class="title_tab">
+                        <ul class="tab_navs title_tab">
+                            <li class="tab_nav first js_top selected"><a href="">橙子兄弟</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main_bd">
+                    <div class="global_mod user_global_opr float_layout">
+                        <div class="global_info">
+                            <div class="search_bar" id="searchBar">
+                                <span class="frm_input_box search with_del append ">
+                                    <a class="del_btn jsSearchInputClose" href="javascript:" style="display: none;"><i class="icon-remove-circle"></i>&nbsp;</a>
+                                    <a href="javascript:" class="frm_input_append jsSearchInputBt"><i class="icon-search"></i></a>
+                                    <input type="text" value="" class="frm_input jsSearchInput" placeholder="用户昵称">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner_container_box side_r cell_layout">
+                        <div class="inner_main">
+                            <div class="bd">
+                                <div class="global_mod user_group_opr"><span class="group_name" id="js_groupName">好友</span></div>
+                                <div class="table_wrp user_list">
+                                    <div class="li">
+                                        <img src="http://wx.qlogo.cn/mmopen/JZmYJOtQToKVBsszm88Rg9Axu8EbaaPibUt0Hc8UKyyzaicZjhk8Uuia471LicSLPMUsGDFFia0ibiaZUV28SkCQBzdxjHGqDvv3L7P/0" />
+                                        <span class="nickname">橙子兄弟橙子兄弟</span>
+                                    </div><div class="li">
+                                        <img src="http://wx.qlogo.cn/mmopen/JZmYJOtQToKVBsszm88Rg9Axu8EbaaPibUt0Hc8UKyyzaicZjhk8Uuia471LicSLPMUsGDFFia0ibiaZUV28SkCQBzdxjHGqDvv3L7P/0" />
+                                        <span class="nickname">橙子兄弟</span>
+                                    </div><div class="li">
+                                        <img src="http://wx.qlogo.cn/mmopen/JZmYJOtQToKVBsszm88Rg9Axu8EbaaPibUt0Hc8UKyyzaicZjhk8Uuia471LicSLPMUsGDFFia0ibiaZUV28SkCQBzdxjHGqDvv3L7P/0" />
+                                        <span class="nickname">橙子兄弟</span>
+                                    </div><div class="li">
+                                        <img src="http://wx.qlogo.cn/mmopen/JZmYJOtQToKVBsszm88Rg9Axu8EbaaPibUt0Hc8UKyyzaicZjhk8Uuia471LicSLPMUsGDFFia0ibiaZUV28SkCQBzdxjHGqDvv3L7P/0" />
+                                        <span class="nickname">橙子兄弟</span>
+                                    </div><div class="li">
+                                        <img src="http://wx.qlogo.cn/mmopen/JZmYJOtQToKVBsszm88Rg9Axu8EbaaPibUt0Hc8UKyyzaicZjhk8Uuia471LicSLPMUsGDFFia0ibiaZUV28SkCQBzdxjHGqDvv3L7P/0" />
+                                        <span class="nickname">橙子兄弟</span>
+                                    </div><div class="li">
+                                        <img src="http://wx.qlogo.cn/mmopen/JZmYJOtQToKVBsszm88Rg9Axu8EbaaPibUt0Hc8UKyyzaicZjhk8Uuia471LicSLPMUsGDFFia0ibiaZUV28SkCQBzdxjHGqDvv3L7P/0" />
+                                        <span class="nickname">橙子兄弟</span>
+                                    </div><div class="li">
+                                        <img src="http://wx.qlogo.cn/mmopen/JZmYJOtQToKVBsszm88Rg9Axu8EbaaPibUt0Hc8UKyyzaicZjhk8Uuia471LicSLPMUsGDFFia0ibiaZUV28SkCQBzdxjHGqDvv3L7P/0" />
+                                        <span class="nickname">橙子兄弟</span>
+                                    </div><div class="li">
+                                        <img src="http://wx.qlogo.cn/mmopen/JZmYJOtQToKVBsszm88Rg9Axu8EbaaPibUt0Hc8UKyyzaicZjhk8Uuia471LicSLPMUsGDFFia0ibiaZUV28SkCQBzdxjHGqDvv3L7P/0" />
+                                        <span class="nickname">橙子兄弟</span>
+                                    </div><div class="li">
+                                        <img src="http://wx.qlogo.cn/mmopen/JZmYJOtQToKVBsszm88Rg9Axu8EbaaPibUt0Hc8UKyyzaicZjhk8Uuia471LicSLPMUsGDFFia0ibiaZUV28SkCQBzdxjHGqDvv3L7P/0" />
+                                        <span class="nickname">橙子兄弟</span>
+                                    </div><div class="li">
+                                        <img src="http://wx.qlogo.cn/mmopen/JZmYJOtQToKVBsszm88Rg9Axu8EbaaPibUt0Hc8UKyyzaicZjhk8Uuia471LicSLPMUsGDFFia0ibiaZUV28SkCQBzdxjHGqDvv3L7P/0" />
+                                        <span class="nickname">橙子兄弟</span>
+                                    </div><div class="li">
+                                        <img src="http://wx.qlogo.cn/mmopen/JZmYJOtQToKVBsszm88Rg9Axu8EbaaPibUt0Hc8UKyyzaicZjhk8Uuia471LicSLPMUsGDFFia0ibiaZUV28SkCQBzdxjHGqDvv3L7P/0" />
+                                        <span class="nickname">橙子兄弟</span>
+                                    </div>
+                                </div>
+                                <div class="tool_area">
+                                    <div class="pagination_wrp pageNavigator">
+                                        <div class="pagination" id="wxPagebar_1479560844985">
+                                            <span class="page_nav_area">
+                                                <a href="javascript:void(0);" class="btn page_prev"><i class="icon-caret-left"></i></a>
+                                                <span class="page_num">
+                                                    <label>1</label>
+                                                    <span class="num_gap">/</span>
+                                                    <label>6</label>
+                                                </span>
+                                                <a href="javascript:void(0);" class="btn page_next"><i class="icon-caret-right"></i></a>
+                                            </span>
+                                            <span class="goto_area">
+                                                <input type="text">
+                                                <a href="javascript:void(0);" class="btn page_go">跳转 <i class="icon-double-angle-right"></i></a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner_side">
+                            <div class="bd">
+                                <div class="group_list">
+                                    <div class="inner_menu_box" id="groupsList">
+                                        <dl class="inner_menu">
+                                            <dt class="inner_menu_item selected">
+                                                <a href="javascript:;" class="inner_menu_link js_group_link" data-id="-2" title="全部用户">
+                                                    <strong>好友</strong><em class="num">(4)</em>
+                                                </a>
+                                            </dt>
+                                            <dd class="inner_menu_item" id="group2">
+                                                <a href="javascript:;" class="inner_menu_link js_group_link" data-id="2" title="加入该分组中的用户仅作为更重要的用户归类标识">
+                                                    <strong>群组</strong><em class="num">(0)</em>
+                                                </a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="inner_menu no_extra dn">
+                                            <dt class="inner_menu_item">
+                                                <a href="javascript:;" class="inner_menu_link js_group_link" data-id="-1" title="加入该分组中的用户将无法接收到该公众号发送的消息以及自动回复。公众号也无法向该用户发送消息。">
+                                                    <strong>公众号</strong><em class="num">(0)</em>
+                                                </a>
+                                            </dt>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    #parse("_foot.html")
+</body>
+</html>

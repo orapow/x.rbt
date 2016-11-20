@@ -54,45 +54,14 @@
     <None Include="dat\urls.x" />
     <Content Include="App.ashx" />
     <None Include="dat\codes.x" />
-    <Content Include="res\img\files\avi.png" />
-    <Content Include="res\img\files\bmp.png" />
-    <Content Include="res\img\files\css.png" />
-    <Content Include="res\img\files\doc.png" />
-    <Content Include="res\img\files\docx.png" />
-    <Content Include="res\img\files\flv.png" />
-    <Content Include="res\img\files\html.png" />
-    <Content Include="res\img\files\jpg.png" />
-    <Content Include="res\img\files\js.png" />
-    <Content Include="res\img\files\mov.png" />
-    <Content Include="res\img\files\mp3.png" />
-    <Content Include="res\img\files\mp4.png" />
-    <Content Include="res\img\files\pdf.png" />
-    <Content Include="res\img\files\png.png" />
-    <Content Include="res\img\files\ppt.png" />
-    <Content Include="res\img\files\pptx.png" />
-    <Content Include="res\img\files\rar.png" />
-    <Content Include="res\img\files\swf.png" />
-    <Content Include="res\img\files\ttf.png" />
-    <Content Include="res\img\files\wav.png" />
-    <Content Include="res\img\files\wmv.png" />
-    <Content Include="res\img\files\xls.png" />
-    <Content Include="res\img\files\xlsx.png" />
-    <Content Include="res\img\files\xml.png" />
-    <Content Include="res\img\files\zip.png" />
-    <Content Include="res\img\logo.png" />
-    <Content Include="res\img\tip.jpg" />
+    <Content Include="res\css\base.css" />
+    <Content Include="res\css\head.css" />
+    <Content Include="res\img\logo.jpg" />
+    <Content Include="res\img\wx.png" />
     <Content Include="res\js\jq_2.1.4.js" />
     <Content Include="res\plug\hchart\hcharts.js" />
-    <Content Include="res\js\web\huodong.js" />
-    <Content Include="res\js\web\jifen.js" />
-    <Content Include="res\js\web\js.js" />
-    <Content Include="res\js\web\js1.js" />
-    <Content Include="res\js\web\youhuijuan.js" />
     <Content Include="res\js\x.form.js" />
     <Content Include="res\js\x.grid.js" />
-    <Content Include="res\css\base.css" />
-    <Content Include="res\img\dialog.bg.png" />
-    <Content Include="res\img\loading.gif" />
     <Content Include="res\js\x.js" />
     <Content Include="res\plug\bs\v2.3.2.css" />
     <Content Include="res\plug\bs\v2.3.2.js" />
@@ -128,27 +97,17 @@
     <Content Include="res\plug\um\umeditor.config.js" />
     <Content Include="res\plug\um\umeditor.min - 复制.js" />
     <Content Include="res\plug\um\umeditor.min.js" />
-    <Content Include="res\css\web\huodong.css" />
-    <Content Include="res\css\web\jifen.css" />
-    <Content Include="res\css\web\shangjia.css" />
-    <Content Include="res\css\web\style.css" />
-    <Content Include="res\css\web\style1.css" />
-    <Content Include="res\css\web\youhuijuan.css" />
-    <Content Include="res\img\web\1.jpg" />
-    <Content Include="res\img\web\2.jpg" />
-    <Content Include="res\img\web\2.png" />
-    <Content Include="res\img\web\3.jpg" />
-    <Content Include="res\img\web\4.png" />
-    <Content Include="res\img\web\5.jpg" />
-    <Content Include="res\img\web\6.jpg" />
-    <Content Include="res\img\web\8.jpg" />
-    <Content Include="res\img\web\a1.png" />
-    <Content Include="res\img\web\ui_starbar.png" />
     <Content Include="tpl\com\err.html" />
     <Content Include="tpl\com\dict.html" />
     <Content Include="tpl\com\getpos.html" />
     <Content Include="tpl\com\_head.html" />
+    <Content Include="tpl\func\contact.html" />
+    <Content Include="tpl\func\reply.html" />
+    <Content Include="tpl\_foot.html" />
+    <Content Include="tpl\_top.html" />
+    <Content Include="tpl\_left.html" />
     <Content Include="tpl\login.html" />
+    <Content Include="tpl\index1.html" />
     <Content Include="tpl\index.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -161,8 +120,6 @@
     <Content Include="res\plug\icon\font\icon.eot" />
     <Content Include="res\plug\icon\font\icon.ttf" />
     <Content Include="res\plug\icon\font\icon.woff" />
-    <Content Include="res\img\web\iconfont.ttf" />
-    <Content Include="res\img\web\iconfont2.ttf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -178,8 +135,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="html\" />
-    <Folder Include="res\css\web\fonts\" />
-    <Folder Include="res\wx\" />
     <Folder Include="upload\" />
   </ItemGroup>
   <PropertyGroup>

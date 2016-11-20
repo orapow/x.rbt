@@ -69,6 +69,7 @@ namespace WeChat.NET.HTTP
         public Image GetIcon(string username)
         {
             byte[] bytes = BaseService.SendGetRequest(_geticon_url + username);
+            if (bytes.Length == 0) return null;
             return Image.FromStream(new MemoryStream(bytes));
         }
         /// <summary>
@@ -79,6 +80,7 @@ namespace WeChat.NET.HTTP
         public Image GetHeadImg(string usename)
         {
             byte[] bytes = BaseService.SendGetRequest(_getheadimg_url + usename);
+            if (bytes.Length == 0) return null;
             return Image.FromStream(new MemoryStream(bytes));
         }
         /// <summary>

@@ -32,3 +32,16 @@ D:\Pro\wxbot\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\bin\Debug\WeChat
 D:\Pro\x.rbt\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\bin\Debug\WeChat.NET.exe.config
 D:\Pro\x.rbt\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\obj\x86\Debug\WeChat.NET.exe
 D:\Pro\x.rbt\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\obj\x86\Debug\WeChat.NET.pdb
+D:\Pro\x.rbt\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\bin\Debug\WeChat.NET.exe
+D:\Pro\x.rbt\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\bin\Debug\WeChat.NET.pdb
+D:\Pro\x.rbt\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\bin\Debug\Newtonsoft.Json.dll
+D:\Pro\x.rbt\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\bin\Debug\WebKitBrowser.dll
+D:\Pro\x.rbt\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\obj\x86\Debug\WeChat.NET.csprojResolveAssemblyReference.cache
+D:\Pro\x.rbt\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\obj\x86\Debug\WeChat.NET.Controls.WChatBox.resources
+D:\Pro\x.rbt\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\obj\x86\Debug\WeChat.NET.Controls.WChatList.resources
+D:\Pro\x.rbt\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\obj\x86\Debug\WeChat.NET.Controls.WFriendsList.resources
+D:\Pro\x.rbt\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\obj\x86\Debug\WeChat.NET.Controls.WPersonalInfo.resources
+D:\Pro\x.rbt\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\obj\x86\Debug\WeChat.NET.frmLogin.resources
+D:\Pro\x.rbt\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\obj\x86\Debug\WeChat.NET.frmMainForm.resources
+D:\Pro\x.rbt\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\obj\x86\Debug\WeChat.NET.Properties.Resources.resources
+D:\Pro\x.rbt\doc\WeChat.NET-master\WeChat.NET-master\WeChat.NET\obj\x86\Debug\WeChat.NET.csproj.GenerateResource.Cache

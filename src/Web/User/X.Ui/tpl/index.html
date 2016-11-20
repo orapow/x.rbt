@@ -1,40 +1,192 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
     #parse("com/_head.html")
-    <title>帐号管理 - $cfg.name</title>
+    <title>橙铺运营助手</title>
 </head>
 <body>
-    <img src="" id="img" width="120" />
-    {act:"loadqr",lgid:1,ukey:"494a16fc4261955fb704049d48ff18e3"}
-    <x:form>
-        <x:text title="内容" name="cot" tp="3" size="6"  />
-        <button type="submit">发送</button>
-    </x:form>
-    <script type="text/javascript">
-        var ws = new WebSocket("ws://127.0.0.1:9999");
-        ws.onopen = function () {
-            console.log("服务器已经连接");
-        }
-        ws.onmessage = function (evt) {
-            var msg = JSON.parse(evt.data);
-            console.log("收到消息->" + evt.data);
-            if (msg.act == "qrcode") img.src = msg.qrcode;
-            else if (msg.act == "scaned") img.src = msg.headimg;
-        }
-        ws.onerror = function (evt) {
-            console.log("出现错误：" + JSON.stringify(evt))
-        }
-        ws.onclose = function () {
-            console.log("服务器已经断开");
-        }
+    #parse("_top.html")
+    <div id="body" class="body page_user">
+        <div id="js_container_box" class="container_box cell_layout side_l">
+            #parse("_left.html")
+            <div class="col_main">
+                <div class="main_hd">
+                    <h2>用户管理</h2><div class="title_tab">
+                        <ul class="tab_navs title_tab">
+                            <li class="tab_nav first js_top selected"><a href="javascript:;" id="reloadTop">已关注</a></li>
+                            <li class="tab_nav js_top"><a href="javascript:;" id="blackTop">黑名单</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main_bd">
+                    <div class="global_mod user_global_opr float_layout">
+                        <div class="global_info">
+                            <div class="search_bar" id="searchBar">
+                                <span class="frm_input_box search with_del append ">
+                                    <a class="del_btn jsSearchInputClose" href="javascript:" style="display:none">
+                                        <i class="icon_search_del"></i>&nbsp;
+                                    </a>
+                                    <a href="javascript:" class="frm_input_append jsSearchInputBt">
+                                        <i class="icon16_common search_gray">搜索</i>&nbsp;
+                                    </a>
+                                    <input type="text" value="" class="frm_input jsSearchInput" placeholder="用户昵称">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="global_extra"><a href="javascript:;" data-y="3" class="btn btn_primary btn_add" id="js_tag_add_btn"><i class="icon14_common add_white"></i>新建标签</a></div>
+                    </div>
+                    <div class="inner_container_box side_r cell_layout">
+                        <div class="inner_main">
+                            <div class="bd">
+                                <div class="global_mod user_group_opr"><span class="group_name" id="js_groupName">全部用户</span><span class="js_groupCommand" style="display: none;"><a href="javascript:;" class="mod_link js_tag_edit_btn">重命名</a><a class="mod_link js_tag_del_btn" href="javascript:;">删除</a></span></div><div class="table_wrp user_list">
+                                    <table class="table" cellspacing="0">
+                                        <thead class="thead"><tr><th class="table_cell user no_extra" colspan="2"><div class="group_select"><label for="selectAll" class="group_select_label frm_checkbox_label"><i class="icon_checkbox"></i><input type="checkbox" class="frm_checkbox" id="selectAll">全选</label>&nbsp;<a class="btn btn_default btn_disabled js_tag_putOn_btn" href="javascript:;">打标签</a><a class="btn btn_default btn_disabled js_tag_toBanList_btn" href="javascript:;">加入黑名单</a></div></th></tr></thead>
+                                        <tbody class="tbody" id="userGroups">
+                                            <tr>
+                                                <td class="table_cell user">
+                                                    <div class="user_info">
+                                                        <a target="_blank" href="https://mp.weixin.qq.com/cgi-bin/singlesendpage?t=message/send&action=index&tofakeid=o-14VuLyPlYMyTKjfNjLFQDx1uxU&token=280065721&lang=zh_CN" class="remark_name" data-fakeid="o-14VuLyPlYMyTKjfNjLFQDx1uxU">银橙传媒广告投放策略顾问-王元兵</a>
+                                                        <span class="nick_name" data-fakeid="o-14VuLyPlYMyTKjfNjLFQDx1uxU"></span>
+                                                        <a target="_blank" href="https://mp.weixin.qq.com/cgi-bin/singlesendpage?t=message/send&action=index&tofakeid=o-14VuLyPlYMyTKjfNjLFQDx1uxU&token=280065721&lang=zh_CN" class="avatar">
+                                                            <img src="./微信公众平台_files/getheadimg(1)" data-id="o-14VuLyPlYMyTKjfNjLFQDx1uxU" class="js_msgSenderAvatar">
+                                                        </a>
+                                                        <label for="checko-14VuLyPlYMyTKjfNjLFQDx1uxU" class="frm_checkbox_label"><i class="icon_checkbox"></i><input class="frm_checkbox js_select" type="checkbox" value="o-14VuLyPlYMyTKjfNjLFQDx1uxU" id="checko-14VuLyPlYMyTKjfNjLFQDx1uxU"></label>
+                                                        <div class="js_tags user_tag_area">
+                                                            <span class="js_tags_list user_tag_list">无标签 </span>
+                                                            <span class="js_tags_btn dropdown_switch_area dropdown_closed" data-id="o-14VuLyPlYMyTKjfNjLFQDx1uxU">
+                                                                <span class="icon_dropdown_switch">
+                                                                    <i class="arrow arrow_up"></i>
+                                                                    <i class="arrow arrow_down"></i>
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="table_cell user_opr tr">
 
-        $("form:eq(0)").xform({
-            callback: function (d) {
-                ws.send(d.cot);
-            }
-        })
+                                                    <div id="selectAreao-14VuLyPlYMyTKjfNjLFQDx1uxU" class="js_selectArea" data-gid="" data-fid="o-14VuLyPlYMyTKjfNjLFQDx1uxU"></div>
+                                                    <a class="btn remark js_msgSenderRemark" data-fakeid="o-14VuLyPlYMyTKjfNjLFQDx1uxU">修改备注</a>
 
-    </script>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table_cell user">
+                                                    <div class="user_info">
+                                                        <a target="_blank" href="https://mp.weixin.qq.com/cgi-bin/singlesendpage?t=message/send&action=index&tofakeid=o-14VuAJZb6Imtq5ENlr0UqhrFP8&token=280065721&lang=zh_CN" class="remark_name" data-fakeid="o-14VuAJZb6Imtq5ENlr0UqhrFP8">吉良辰</a>
+                                                        <span class="nick_name" data-fakeid="o-14VuAJZb6Imtq5ENlr0UqhrFP8"></span>
+                                                        <a target="_blank" href="https://mp.weixin.qq.com/cgi-bin/singlesendpage?t=message/send&action=index&tofakeid=o-14VuAJZb6Imtq5ENlr0UqhrFP8&token=280065721&lang=zh_CN" class="avatar">
+                                                            <img src="./微信公众平台_files/getheadimg(2)" data-id="o-14VuAJZb6Imtq5ENlr0UqhrFP8" class="js_msgSenderAvatar">
+                                                        </a>
+                                                        <label for="checko-14VuAJZb6Imtq5ENlr0UqhrFP8" class="frm_checkbox_label"><i class="icon_checkbox"></i><input class="frm_checkbox js_select" type="checkbox" value="o-14VuAJZb6Imtq5ENlr0UqhrFP8" id="checko-14VuAJZb6Imtq5ENlr0UqhrFP8"></label>
+                                                        <div class="js_tags user_tag_area">
+                                                            <span class="js_tags_list user_tag_list">无标签 </span>
+                                                            <span class="js_tags_btn dropdown_switch_area dropdown_closed" data-id="o-14VuAJZb6Imtq5ENlr0UqhrFP8">
+                                                                <span class="icon_dropdown_switch">
+                                                                    <i class="arrow arrow_up"></i>
+                                                                    <i class="arrow arrow_down"></i>
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="table_cell user_opr tr">
+                                                    <div id="selectAreao-14VuAJZb6Imtq5ENlr0UqhrFP8" class="js_selectArea" data-gid="" data-fid="o-14VuAJZb6Imtq5ENlr0UqhrFP8"></div>
+                                                    <a class="btn remark js_msgSenderRemark" data-fakeid="o-14VuAJZb6Imtq5ENlr0UqhrFP8">修改备注</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table_cell user">
+                                                    <div class="user_info">
+                                                        <!--个人信息区-->
+                                                        <a target="_blank" href="https://mp.weixin.qq.com/cgi-bin/singlesendpage?t=message/send&action=index&tofakeid=o-14VuMZiwQI4G2Itc-hcwoYq04k&token=280065721&lang=zh_CN" class="remark_name" data-fakeid="o-14VuMZiwQI4G2Itc-hcwoYq04k">梦锦</a>
+                                                        <span class="nick_name" data-fakeid="o-14VuMZiwQI4G2Itc-hcwoYq04k"></span>
+                                                        <a target="_blank" href="https://mp.weixin.qq.com/cgi-bin/singlesendpage?t=message/send&action=index&tofakeid=o-14VuMZiwQI4G2Itc-hcwoYq04k&token=280065721&lang=zh_CN" class="avatar">
+                                                            <img src="./微信公众平台_files/getheadimg(3)" data-id="o-14VuMZiwQI4G2Itc-hcwoYq04k" class="js_msgSenderAvatar">
+                                                        </a>
+                                                        <label for="checko-14VuMZiwQI4G2Itc-hcwoYq04k" class="frm_checkbox_label"><i class="icon_checkbox"></i><input class="frm_checkbox js_select" type="checkbox" value="o-14VuMZiwQI4G2Itc-hcwoYq04k" id="checko-14VuMZiwQI4G2Itc-hcwoYq04k"></label>
+                                                        <div class="js_tags user_tag_area">
+                                                            <span class="js_tags_list user_tag_list">无标签 </span>
+                                                            <span class="js_tags_btn dropdown_switch_area dropdown_closed" data-id="o-14VuMZiwQI4G2Itc-hcwoYq04k">
+                                                                <span class="icon_dropdown_switch">
+                                                                    <i class="arrow arrow_up"></i>
+                                                                    <i class="arrow arrow_down"></i>
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="table_cell user_opr tr">
+                                                    <div id="selectAreao-14VuMZiwQI4G2Itc-hcwoYq04k" class="js_selectArea" data-gid="" data-fid="o-14VuMZiwQI4G2Itc-hcwoYq04k"></div>
+                                                    <a class="btn remark js_msgSenderRemark" data-fakeid="o-14VuMZiwQI4G2Itc-hcwoYq04k">修改备注</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table_cell user">
+                                                    <div class="user_info">
+                                                        <!--个人信息区-->
+                                                        <a target="_blank" href="https://mp.weixin.qq.com/cgi-bin/singlesendpage?t=message/send&action=index&tofakeid=o-14VuICI06TWvGM09CFN9lor2A8&token=280065721&lang=zh_CN" class="remark_name" data-fakeid="o-14VuICI06TWvGM09CFN9lor2A8">橙子兄弟</a>
+                                                        <span class="nick_name" data-fakeid="o-14VuICI06TWvGM09CFN9lor2A8"></span>
+                                                        <a target="_blank" href="https://mp.weixin.qq.com/cgi-bin/singlesendpage?t=message/send&action=index&tofakeid=o-14VuICI06TWvGM09CFN9lor2A8&token=280065721&lang=zh_CN" class="avatar">
+                                                            <img src="./微信公众平台_files/getheadimg(4)" data-id="o-14VuICI06TWvGM09CFN9lor2A8" class="js_msgSenderAvatar">
+                                                        </a>
+                                                        <label for="checko-14VuICI06TWvGM09CFN9lor2A8" class="frm_checkbox_label"><i class="icon_checkbox"></i><input class="frm_checkbox js_select" type="checkbox" value="o-14VuICI06TWvGM09CFN9lor2A8" id="checko-14VuICI06TWvGM09CFN9lor2A8"></label>
+                                                        <div class="js_tags user_tag_area">
+                                                            <span class="js_tags_list user_tag_list">无标签 </span>
+                                                            <span class="js_tags_btn dropdown_switch_area dropdown_closed" data-id="o-14VuICI06TWvGM09CFN9lor2A8">
+                                                                <span class="icon_dropdown_switch">
+                                                                    <i class="arrow arrow_up"></i>
+                                                                    <i class="arrow arrow_down"></i>
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="table_cell user_opr tr">
+                                                    <div id="selectAreao-14VuICI06TWvGM09CFN9lor2A8" class="js_selectArea" data-gid="" data-fid="o-14VuICI06TWvGM09CFN9lor2A8"></div>
+                                                    <a class="btn remark js_msgSenderRemark" data-fakeid="o-14VuICI06TWvGM09CFN9lor2A8">修改备注</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="no_result" style="display: none;"></p>
+                                </div><div class="tool_area"><div class="pagination_wrp js_pageNavigator"></div></div>
+                            </div>
+                        </div><div class="inner_side">
+                            <div class="bd">
+                                <div class="group_list">
+                                    <div class="inner_menu_box" id="groupsList">
+                                        <dl class="inner_menu">
+                                            <dt class="inner_menu_item selected">
+                                                <a href="javascript:;" class="inner_menu_link js_group_link" data-id="-2" title="全部用户">
+                                                    <strong>全部用户</strong><em class="num">(4)</em>
+                                                </a>
+                                            </dt>
+
+                                            <dd class="inner_menu_item" id="group2">
+
+                                                <a href="javascript:;" class="inner_menu_link js_group_link" data-id="2" title="加入该分组中的用户仅作为更重要的用户归类标识">
+
+                                                    <strong>星标用户</strong><em class="num">(0)</em>
+                                                </a>
+                                            </dd>
+
+                                        </dl>
+                                        <dl class="inner_menu no_extra dn">
+                                            <dt class="inner_menu_item">
+                                                <a href="javascript:;" class="inner_menu_link js_group_link" data-id="-1" title="加入该分组中的用户将无法接收到该公众号发送的消息以及自动回复。公众号也无法向该用户发送消息。">
+                                                    <strong>黑名单</strong><em class="num">(0)</em>
+                                                </a>
+                                            </dt>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    #parse("_foot.html")
 </body>
 </html>

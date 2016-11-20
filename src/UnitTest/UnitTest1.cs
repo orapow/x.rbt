@@ -28,7 +28,7 @@ namespace UnitTest
                 {
                     try
                     {
-                        var wc = new Wc(null);
+                        var wc = new Wc();
                         var uuid = "";
                         var rsp = wc.GetStr("https://login.weixin.qq.com/jslogin?appid=wx782c26e4c19acffb&fun=new&lang=zh_CN&_=" + Tools.GetGreenTime(""));
                         var reg = new Regex("\"(\\S+?)\"");

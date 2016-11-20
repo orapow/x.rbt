@@ -25,6 +25,7 @@ namespace Rbt.Svr
             db = new RbtDBDataContext();
             lg = db.x_logon.FirstOrDefault(o => o.logon_id == id);
             ukey = lg.x_user.ukey;
+            wc = new Wc();
             cookies = new CookieContainer();
             baseRequest = new BaseRequest();
         }
@@ -108,7 +109,7 @@ namespace Rbt.Svr
         RbtDBDataContext db = null;
         CookieContainer cookies = null;
         x_logon lg = null;
-        Wc wc { get { return new Wc(cookies); } }
+        Wc wc = null;
         BaseRequest baseRequest = null;
         Contact user = null;//当前用户信息
         SyncKey _syncKey;
