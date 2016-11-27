@@ -109,6 +109,20 @@ namespace X.Core.Utility
         }
         #endregion
 
+        public static string GetMimeType(string ext)
+        {
+            string mimeType;
+            switch (ext.ToUpper())
+            {
+                case "JPG": mimeType = "image/jpeg"; break;
+                case "GIF": mimeType = "image/gif"; break;
+                case "PNG": mimeType = "image/png"; break;
+                case "BMP": mimeType = "image/bmp"; break;
+                default: mimeType = "application/octet-stream"; break;
+            }
+            return mimeType;
+        }
+
         #region 随机数
         /// <summary>
         /// 获取随机数

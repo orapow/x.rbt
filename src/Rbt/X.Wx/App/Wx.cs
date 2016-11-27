@@ -20,7 +20,7 @@ namespace X.Wx.App
         /// <param name="id"></param>
         public Wx(long id)
         {
-            db = new RbtDBDataContext();
+            db = new RbtDBDataContext() { DeferredLoadingEnabled = true };
             lg = db.x_logon.FirstOrDefault(o => o.logon_id == id);
             ukey = lg.x_user.ukey;
             baseRequest = new BaseRequest();
@@ -38,15 +38,13 @@ namespace X.Wx.App
             try
             {
                 loadQrcode();
-
                 waitFor(1, 0);
 
                 wxLogin();
-
                 wxInit();
-
                 wxStatusNotify();
-                //loadContact();
+
+                loadContact();
 
                 lg.status = 6;//初始化完成
                 db.SubmitChanges();
@@ -56,8 +54,8 @@ namespace X.Wx.App
             }
             catch (Exception ex)
             {
-                outLog("出错了->" + ex.Message);
-                Exit(1);
+                outLog("wx.Run->" + ex.Message);
+                exit(1);
             }
 
         }
@@ -67,7 +65,262 @@ namespace X.Wx.App
         /// </summary>
         public void Quit()
         {
-            Exit(0);
+            exit(0);
+        }
+
+        /// <summary>
+        /// 发送消息
+        /// </summary>
+        /// <param name="ToUserName"></param>
+        /// <param name="Content"></param>
+        public void SendMsg(string ToUserName, string Content)
+        {
+            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxsendmsg?pass_ticket={1}", gateway, passticket);
+            Content = Content.Replace("<br/>", "\n");
+            var o = new
+            {
+                BaseRequest = baseRequest,
+                Msg = new
+                {
+                    Type = 1,
+                    Content = Content,
+                    FromUserName = user.UserName,
+                    ToUserName = ToUserName,
+                    LocalID = getcurrentseconds(),
+                    ClientMsgId = getcurrentseconds()
+                }
+            };
+
+            var rsp = wc.PostStr(url, Serialize.ToJson(o));
+            outLog("SendMsg->" + Serialize.ToJson(rsp));
+
+        }
+
+        /// <summary>
+        /// 发送图片
+        /// </summary>
+        /// <param name="ToUserName"></param>
+        /// <param name="mmid"></param>
+        public void SendImg(string ToUserName, string mmid)
+        {
+            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxsendmsgimg?fun=async&f=json&pass_ticket={1}", gateway, passticket);
+            var o = new
+            {
+                BaseRequest = baseRequest,
+                Msg = new
+                {
+                    Type = 3,
+                    MediaId = mmid,
+                    FromUserName = user.UserName,
+                    ToUserName = ToUserName,
+                    LocalID = getcurrentseconds(),
+                    ClientMsgId = getcurrentseconds()
+                },
+                Scene = 0
+            };
+
+            var rsp = wc.PostStr(url, Serialize.ToJson(o));
+            outLog("SendImg->" + Serialize.ToJson(rsp));
+
+        }
+
+        /// <summary>
+        /// 上传图片
+        /// </summary>
+        /// <param name="img"></param>
+        /// <returns></returns>
+        public string UploadImg(string tousername, string img)
+        {
+            var fi = new FileInfo(img);
+            if (!fi.Exists) return "";
+
+            string url = gateway.Replace("https://", "https://file.") + "/cgi-bin/mmwebwx-bin/webwxuploadmedia?f=json";
+            var o = new
+            {
+                UploadType = 2,
+                BaseRequest = baseRequest,
+                ClientMediaId = getcurrentseconds(),
+                TotalLen = fi.Length,
+                StartPos = 0,
+                DataLen = fi.Length,
+                MediaType = 4,
+                FormUserName = user.UserName,
+                ToUserName = tousername
+            };
+
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            dict.Add("id", "WU_FILE_0");
+            dict.Add("name", fi.Name);
+            dict.Add("type", Tools.GetMimeType(fi.Extension.Substring(1)));
+            dict.Add("lastModifiedDate", fi.LastWriteTime.ToString());
+            dict.Add("size", fi.Length + "");
+            dict.Add("mediatype", "pic");
+            dict.Add("uploadmediarequest", Serialize.ToJson(o));
+            dict.Add("webwx_data_ticket", wc.GetCookie("webwx_data_ticket"));
+            dict.Add("pass_ticket", "undefined");
+
+            var rsp = wc.PostFile(url, dict, fi);
+            outLog("UploadImg->" + Serialize.ToJson(rsp));
+
+            if (rsp.err) return "";
+
+            return Serialize.FromJson<string>(rsp.data + "", "MediaId");
+
+        }
+
+        /// <summary>
+        /// 设置用户备注
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="mk"></param>
+        public void SetRemark(string username, string mk)
+        {
+            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxoplog", gateway);
+            var o = new
+            {
+                BaseRequest = baseRequest,
+                CmdId = 2,
+                RemarkName = mk,
+                UserName = username
+            };
+
+            var rsp = wc.PostStr(url, Serialize.ToJson(o));
+
+            outLog("SetRemark->" + Serialize.ToJson(rsp));
+        }
+
+        /// <summary>
+        /// 群内加好友
+        /// </summary>
+        /// <param name="username"></param>
+        public void ToFriend(string username, string hello)
+        {
+            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxverifyuser?r={1}", gateway, getcurrentseconds());
+
+            var list = new List<object>();
+            list.Add(new { Value = username, VerifyUserTicket = "" });
+
+            var o = new
+            {
+                BaseRequest = baseRequest,
+                Opcode = 2,
+                SceneList = new int[] { 33 },
+                SceneListCount = 1,
+                VerifyContent = hello,
+                VerifyUserList = Serialize.ToJson(list),
+                VerifyUserListSize = list.Count,
+                skey = baseRequest.Skey
+            };
+
+            var rsp = wc.PostStr(url, Serialize.ToJson(o));
+            outLog("ToFriend->" + Serialize.ToJson(rsp));
+
+        }
+
+        /// <summary>
+        /// 删除群成员
+        /// </summary>
+        /// <param name="username"></param>
+        public void OutMember(string groupname, string username)
+        {
+            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxupdatechatroom?fun=delmember", gateway);
+
+            var o = new
+            {
+                BaseRequest = baseRequest,
+                ChatRoomName = groupname,
+                DelMemberList = username
+            };
+
+            var rsp = wc.PostStr(url, Serialize.ToJson(o));
+
+            outLog("OutMember->" + Serialize.ToJson(rsp));
+        }
+
+        /// <summary>
+        /// 添加群成员
+        /// </summary>
+        /// <param name="username"></param>
+        public void InMember(string groupname, List<string> userlist)
+        {
+            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxupdatechatroom?fun=addmember", gateway);
+
+            var o = new
+            {
+                AddMemberList = string.Join(",", userlist),
+                BaseRequest = baseRequest,
+                ChatRoomName = groupname
+            };
+
+            var rsp = wc.PostStr(url, Serialize.ToJson(o));
+            outLog("InMember->" + Serialize.ToJson(rsp));
+
+        }
+
+        /// <summary>
+        /// 创建群聊
+        /// </summary>
+        /// <param name="username"></param>
+        public void NewGroup(string groupname, List<string> userlist)
+        {
+            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxcreatechatroom?r={1}", gateway, getcurrentseconds());
+
+            var list = new List<object>();
+            foreach (var u in userlist) list.Add(new { UserName = u });
+
+            var o = new
+            {
+                BaseRequest = baseRequest,
+                MemberCount = list.Count,
+                MemberList = Serialize.ToJson(list),
+                Topic = groupname
+            };
+
+            var rsp = wc.PostStr(url, Serialize.ToJson(o));
+            outLog("NewGroup->" + Serialize.ToJson(rsp));
+
+        }
+
+        /// <summary>
+        /// 取消聊天置顶
+        /// </summary>
+        /// <param name="username"></param>
+        public void ToTop(string username)
+        {
+            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxoplog", gateway);
+
+            var o = new
+            {
+                BaseRequest = baseRequest,
+                CmdId = 3,
+                OP = 0,
+                UserName = username
+            };
+
+            var rsp = wc.PostStr(url, Serialize.ToJson(o));
+            outLog("ToTop->" + Serialize.ToJson(rsp));
+
+        }
+
+        /// <summary>
+        /// 取消聊天置顶
+        /// </summary>
+        /// <param name="username"></param>
+        public void UnTop(string username)
+        {
+            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxoplog", gateway);
+
+            var o = new
+            {
+                BaseRequest = baseRequest,
+                CmdId = 3,
+                OP = 1,
+                UserName = username
+            };
+
+            var rsp = wc.PostStr(url, Serialize.ToJson(o));
+            outLog("UnTop->" + Serialize.ToJson(rsp));
+
         }
 
         #endregion
@@ -86,17 +339,15 @@ namespace X.Wx.App
         public delegate void ScanedHandler(string hdimg);
         public event ScanedHandler Scaned;
 
-        public delegate void LogedHandler(Wx w);
+        public delegate void LogedHandler();
         public event LogedHandler Loged;
 
-        public delegate void LogoutHandler(string ukey);
+        public delegate void LogoutHandler();
         public event LogoutHandler Logout;
 
-        public delegate void NewMsgHandler(Msg m, string uk);
+        public delegate void NewMsgHandler(Msg m);
         public event NewMsgHandler NewMsg;
 
-        public delegate void OutLogHandler(string log);
-        public event OutLogHandler OutLog;
         #endregion
 
         #region 私有变量
@@ -139,8 +390,8 @@ namespace X.Wx.App
         /// <param name="msg"></param>
         void outLog(string msg)
         {
-            OutLog?.Invoke((lg.uin > 0 ? lg.uin.Value : lg.logon_id) + "->" + msg);
-            Debug.WriteLine((lg.uin > 0 ? lg.uin.Value : lg.logon_id) + "->" + msg);
+            Debug.WriteLine("log->" + msg);
+            //OutLog?.Invoke((lg.uin > 0 ? lg.uin.Value : lg.logon_id) + "->" + msg);
         }
 
         /// <summary>
@@ -161,7 +412,7 @@ namespace X.Wx.App
 
             outLog("uuid->" + uuid);
 
-            rsp = wc.GetFile(String.Format("https://login.weixin.qq.com/qrcode/{0}?t=webwx&_={1}", uuid, getcurrentseconds()));
+            rsp = wc.GetFile(String.Format("https://login.weixin.qq.com/qrcode/{0}?_={1}", uuid, getcurrentseconds()));
 
             if (rsp.err) throw new Exception("qrcode获取失败->" + Serialize.ToJson(rsp));
 
@@ -170,7 +421,6 @@ namespace X.Wx.App
             db.SubmitChanges();
 
             outLog("qrcode->" + qrcode);
-
             LoadQr?.Invoke(qrcode);
         }
 
@@ -221,6 +471,7 @@ namespace X.Wx.App
             }
 
             waitFor(t, c + 1);
+
         }
 
         /// <summary>
@@ -249,7 +500,7 @@ namespace X.Wx.App
 
             outLog("loged->" + lg.uin);
 
-            Loged?.Invoke(this);
+            Loged?.Invoke();
 
         }
 
@@ -268,6 +519,9 @@ namespace X.Wx.App
 
             user = Serialize.FromJson<Contact>(rsp.data + "", "User");
             _syncKey = Serialize.FromJson<SyncKey>(rsp.data + "", "SyncKey");
+
+            lg.nickname = user.NickName;
+            db.SubmitChanges();
 
         }
 
@@ -319,7 +573,7 @@ namespace X.Wx.App
             var rt = int.Parse(m.Groups[1].Value);
             var sel = int.Parse(m.Groups[2].Value);
 
-            if (isquit || rt != 0) Exit(1);
+            if (isquit || rt != 0) exit(1);
             else if (sel == 2 || sel == 4 || sel == 6) wxSync();
 
         }
@@ -347,270 +601,17 @@ namespace X.Wx.App
 
             var msglist = Serialize.FromJson<List<Msg>>(rsp.data + "", "AddMsgList");
 
-            foreach (var m in msglist) if (m.FromUserName != user.UserName) { outLog("msg->" + user.Uin + "->" + m.Content); NewMsg?.Invoke(m, ukey); }// Debug.WriteLine(user.Uin + "收到消息->" + m.MsgId + "--->>>" + m.Content);
+            foreach (var m in msglist) if (m.FromUserName != user.UserName) { outLog("msg->" + user.Uin + "->" + m.Content); NewMsg?.Invoke(m); }// Debug.WriteLine(user.Uin + "收到消息->" + m.MsgId + "--->>>" + m.Content);
 
-        }
-
-        /// <summary>
-        /// 发送消息
-        /// </summary>
-        /// <param name="ToUserName"></param>
-        /// <param name="Content"></param>
-        void wxSendMsg(string ToUserName, string Content)
-        {
-            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxsendmsg?pass_ticket={1}", gateway, passticket);
-            Content = Content.Replace("<br/>", "\n");
-            var o = new
-            {
-                BaseRequest = baseRequest,
-                Msg = new
-                {
-                    Type = 1,
-                    Content = Content,
-                    FromUserName = user.UserName,
-                    ToUserName = ToUserName,
-                    LocalID = getcurrentseconds(),
-                    ClientMsgId = getcurrentseconds()
-                }
-            };
-
-            var rsp = wc.PostStr(url, Serialize.ToJson(o));
-
-            outLog(Serialize.ToJson(rsp));
-
-        }
-
-        /// <summary>
-        /// 发送图片
-        /// </summary>
-        /// <param name="ToUserName"></param>
-        /// <param name="mmid"></param>
-        void wxSendImg(string ToUserName, string mmid)
-        {
-            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxsendmsgimg?fun=async&f=json&pass_ticket={1}", gateway, passticket);
-            var o = new
-            {
-                BaseRequest = baseRequest,
-                Msg = new
-                {
-                    Type = 3,
-                    MediaId = mmid,
-                    FromUserName = user.UserName,
-                    ToUserName = ToUserName,
-                    LocalID = getcurrentseconds(),
-                    ClientMsgId = getcurrentseconds()
-                },
-                Scene = 0
-            };
-
-            var rsp = wc.PostStr(url, Serialize.ToJson(o));
-            outLog("sendimg->" + Serialize.ToJson(rsp));
-
-        }
-
-        /// <summary>
-        /// 上传图片
-        /// </summary>
-        /// <param name="img"></param>
-        /// <returns></returns>
-        string wxUpload(string img)
-        {
-            var fi = new FileInfo(img);
-            if (!fi.Exists) return "";
-
-            const string url = "https://file.wx2.qq.com/cgi-bin/mmwebwx-bin/webwxuploadmedia?f=json";
-            var o = new
-            {
-                BaseRequest = baseRequest,
-                ClientMediaId = getcurrentseconds(),
-                TotalLen = fi.Length,
-                StartPos = 0,
-                DataLen = fi.Length,
-                MediaType = 4
-            };
-
-            Dictionary<string, string> dict = new Dictionary<string, string>();
-            dict.Add("id", "WU_FILE_0");
-            dict.Add("name", fi.Name);
-            dict.Add("type", "image/jpeg");
-            dict.Add("lastModifiedDate", fi.LastWriteTime.ToString());
-            dict.Add("size", fi.Length + "");
-            dict.Add("mediatype", "pic");
-            dict.Add("uploadmediarequest", Serialize.ToJson(o));
-            dict.Add("webwx_data_ticket", wc.GetCookie("webwx_data_ticket"));
-
-            var rsp = wc.PostData(url, dict, fi);
-            outLog("upimg->" + Serialize.ToJson(rsp));
-
-            if (rsp.err) return "";
-
-            return Serialize.FromJson<string>(rsp.data + "", "MediaId");
-
-        }
-
-        /// <summary>
-        /// 设置用户备注
-        /// </summary>
-        /// <param name="username"></param>
-        /// <param name="mk"></param>
-        void wxRemark(string username, string mk)
-        {
-            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxoplog", gateway);
-            var o = new
-            {
-                BaseRequest = baseRequest,
-                CmdId = 2,
-                RemarkName = mk,
-                UserName = username
-            };
-
-            var rsp = wc.PostStr(url, Serialize.ToJson(o));
-
-            outLog(Serialize.ToJson(rsp));
-        }
-
-        /// <summary>
-        /// 群内加好友
-        /// </summary>
-        /// <param name="username"></param>
-        void toFriend(string username, string hello)
-        {
-            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxverifyuser?r={1}", gateway, getcurrentseconds());
-
-            var list = new List<object>();
-            list.Add(new { Value = username, VerifyUserTicket = "" });
-
-            var o = new
-            {
-                BaseRequest = baseRequest,
-                Opcode = 2,
-                SceneList = new int[] { 33 },
-                SceneListCount = 1,
-                VerifyContent = hello,
-                VerifyUserList = Serialize.ToJson(list),
-                VerifyUserListSize = list.Count,
-                skey = baseRequest.Skey
-            };
-
-            var rsp = wc.PostStr(url, Serialize.ToJson(o));
-
-            outLog(Serialize.ToJson(rsp));
-        }
-
-        /// <summary>
-        /// 删除群成员
-        /// </summary>
-        /// <param name="username"></param>
-        void outMember(string groupname, string username)
-        {
-            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxupdatechatroom?fun=delmember", gateway);
-
-            var o = new
-            {
-                BaseRequest = baseRequest,
-                ChatRoomName = groupname,
-                DelMemberList = username
-            };
-
-            var rsp = wc.PostStr(url, Serialize.ToJson(o));
-
-            outLog(Serialize.ToJson(rsp));
-        }
-
-        /// <summary>
-        /// 添加群成员
-        /// </summary>
-        /// <param name="username"></param>
-        void inMember(string groupname, List<string> userlist)
-        {
-            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxupdatechatroom?fun=addmember", gateway);
-
-            var o = new
-            {
-                AddMemberList = string.Join(",", userlist),
-                BaseRequest = baseRequest,
-                ChatRoomName = groupname
-            };
-
-            var rsp = wc.PostStr(url, Serialize.ToJson(o));
-
-            outLog(Serialize.ToJson(rsp));
-        }
-
-        /// <summary>
-        /// 创建群聊
-        /// </summary>
-        /// <param name="username"></param>
-        void newGroup(string groupname, List<string> userlist)
-        {
-            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxcreatechatroom?r={1}", gateway, getcurrentseconds());
-
-            var list = new List<object>();
-            foreach (var u in userlist) list.Add(new { UserName = u });
-
-            var o = new
-            {
-                BaseRequest = baseRequest,
-                MemberCount = list.Count,
-                MemberList = Serialize.ToJson(list),
-                Topic = groupname
-            };
-
-            var rsp = wc.PostStr(url, Serialize.ToJson(o));
-
-            outLog(Serialize.ToJson(rsp));
-        }
-
-        /// <summary>
-        /// 取消聊天置顶
-        /// </summary>
-        /// <param name="username"></param>
-        void toTop(string username)
-        {
-            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxoplog", gateway);
-
-            var o = new
-            {
-                BaseRequest = baseRequest,
-                CmdId = 3,
-                OP = 0,
-                UserName = username
-            };
-
-            var rsp = wc.PostStr(url, Serialize.ToJson(o));
-
-            outLog(Serialize.ToJson(rsp));
-        }
-
-        /// <summary>
-        /// 取消聊天置顶
-        /// </summary>
-        /// <param name="username"></param>
-        void unTop(string username)
-        {
-            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxoplog", gateway);
-
-            var o = new
-            {
-                BaseRequest = baseRequest,
-                CmdId = 3,
-                OP = 1,
-                UserName = username
-            };
-
-            var rsp = wc.PostStr(url, Serialize.ToJson(o));
-
-            outLog(Serialize.ToJson(rsp));
         }
 
         /// <summary>
         /// 退出
         /// </summary>
         /// <param name="c"></param>
-        void Exit(int c)
+        void exit(int c)
         {
             outLog("exit");
-
             isquit = true;
 
             if (lg != null)
@@ -618,7 +619,6 @@ namespace X.Wx.App
                 lg.uuid = null;
                 lg.uin = null;
                 lg.qrcode = null;
-                lg.headimg = null;
                 lg.status = 1;
             }
 
@@ -629,13 +629,13 @@ namespace X.Wx.App
             }
             catch { }
 
-            if (c == 1) Logout?.Invoke(ukey);
+            if (c == 1) Logout?.Invoke();
         }
 
         #endregion
 
         /// <summary>
-        /// 消息关体
+        /// 消息
         /// </summary>
         public class Msg
         {

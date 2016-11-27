@@ -1,0 +1,16 @@
+D:\Pro\x.rbt\src\Rbt\X.Wx\obj\Debug\X.Wx.csprojResolveAssemblyReference.cache
+D:\Pro\x.rbt\src\Rbt\X.Wx\obj\Debug\X.Wx.Form1.resources
+D:\Pro\x.rbt\src\Rbt\X.Wx\obj\Debug\X.Wx.Properties.Resources.resources
+D:\Pro\x.rbt\src\Rbt\X.Wx\obj\Debug\X.Wx.csproj.GenerateResource.Cache
+D:\Pro\x.rbt\src\Rbt\X.Wx\bin\Debug\X.Wx.exe
+D:\Pro\x.rbt\src\Rbt\X.Wx\bin\Debug\X.Wx.pdb
+D:\Pro\x.rbt\src\Rbt\X.Wx\bin\Debug\X.Core.dll
+D:\Pro\x.rbt\src\Rbt\X.Wx\bin\Debug\X.Data.dll
+D:\Pro\x.rbt\src\Rbt\X.Wx\bin\Debug\log4net.dll
+D:\Pro\x.rbt\src\Rbt\X.Wx\bin\Debug\X.Json.dll
+D:\Pro\x.rbt\src\Rbt\X.Wx\bin\Debug\NVelocity.dll
+D:\Pro\x.rbt\src\Rbt\X.Wx\bin\Debug\Enyim.Caching.dll
+D:\Pro\x.rbt\src\Rbt\X.Wx\bin\Debug\X.Core.pdb
+D:\Pro\x.rbt\src\Rbt\X.Wx\bin\Debug\X.Data.pdb
+D:\Pro\x.rbt\src\Rbt\X.Wx\obj\Debug\X.Wx.exe
+D:\Pro\x.rbt\src\Rbt\X.Wx\obj\Debug\X.Wx.pdb

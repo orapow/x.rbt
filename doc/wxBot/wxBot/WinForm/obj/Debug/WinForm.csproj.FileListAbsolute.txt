@@ -11,3 +11,6 @@ D:\Pro\wxbot\doc\wxBot\wxBot\WinForm\obj\Debug\WinForm.Properties.Resources.reso
 D:\Pro\wxbot\doc\wxBot\wxBot\WinForm\obj\Debug\WinForm.csproj.GenerateResource.Cache
 D:\Pro\wxbot\doc\wxBot\wxBot\WinForm\obj\Debug\WinForm.exe
 D:\Pro\wxbot\doc\wxBot\wxBot\WinForm\obj\Debug\WinForm.pdb
+D:\Pro\x.rbt\doc\wxBot\wxBot\WinForm\bin\Debug\WinForm.exe.config
+D:\Pro\x.rbt\doc\wxBot\wxBot\WinForm\obj\Debug\WinForm.exe
+D:\Pro\x.rbt\doc\wxBot\wxBot\WinForm\obj\Debug\WinForm.pdb

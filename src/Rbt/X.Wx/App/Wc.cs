@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using X.Core.Utility;
 
@@ -14,7 +16,7 @@ namespace X.Wx.App
     {
         // Cookie 容器
         private CookieContainer cookie;
-        int timeout = 60; //超时 秒钟
+        int timeout = 30; //超时 秒钟
         string guid = "";
 
         public CookieContainer Cookies { get { return cookie; } }
@@ -76,26 +78,37 @@ namespace X.Wx.App
 
         }
 
-        byte[] post(string url, string body)
+        byte[] post(string url, byte[] data) { return post(url, data, ""); }
+        byte[] post(string url, byte[] data, string boundary)
         {
             GC.Collect();
 
-            byte[] data = Encoding.UTF8.GetBytes(body);
+            if (url.Contains("https://")) ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback((object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors errors) => { return true; });
 
             var req = (HttpWebRequest)WebRequest.Create(url);
+            req.ServicePoint.Expect100Continue = false;
+            req.Method = "POST";
+            req.KeepAlive = true;
             req.ServicePoint.ConnectionLimit = 512;
-
-            #region header
-            req.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";
             req.UserAgent = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Maxthon/4.9.3.1000 Chrome/39.0.2146.0 Safari/537.36";
+            req.ContentLength = data.Length;
+            req.CookieContainer = cookie;
             req.Referer = "https://wx2.qq.com/?&lang=zh_CN";
             req.Headers.Set("Pragma", "no-cache");
-            req.Method = "POST";
-            req.ReadWriteTimeout = timeout * 1000;
-            req.KeepAlive = true;
-            req.Timeout = timeout * 1000;
-            req.ContentLength = data.Length;
-            req.CookieContainer = cookie;  //启用cookie
+
+            if (!string.IsNullOrEmpty(boundary)) req.ContentType = "multipart/form-data;charset=utf-8;boundary=" + boundary;
+
+            #region header
+            //req.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";
+            //req.UserAgent = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Maxthon/4.9.3.1000 Chrome/39.0.2146.0 Safari/537.36";
+            //req.Referer = "https://wx2.qq.com/?&lang=zh_CN";
+            //req.Headers.Set("Pragma", "no-cache");
+            //req.Method = "POST";
+            //req.ReadWriteTimeout = timeout * 1000;
+            //req.KeepAlive = true;
+            //req.Timeout = timeout * 1000;
+            //req.ContentLength = data.Length;
+            //req.CookieContainer = cookie;  //启用cookie
             #endregion
 
             try
@@ -151,7 +164,7 @@ namespace X.Wx.App
             {
                 return new Resp()
                 {
-                    data = Encoding.UTF8.GetString(post(url, body))
+                    data = Encoding.UTF8.GetString(post(url, Encoding.UTF8.GetBytes(body)))
                 };
             }
             catch (Exception ex)
@@ -166,23 +179,36 @@ namespace X.Wx.App
         /// <param name="dict"></param>
         /// <param name="fi"></param>
         /// <returns></returns>
-        public Resp PostData(string url, Dictionary<string, string> dict, FileInfo fi)
+        public Resp PostFile(string url, Dictionary<string, string> dict, FileInfo fi)
         {
             var tk = "------WebKitFormBoundary" + Tools.GetRandRom(16, 3);
             var body = new StringBuilder();
             foreach (var k in dict.Keys)
             {
                 body.Append(tk + "\r\n");
-                body.Append("Content - Disposition: form - data; name = \"id\"\r\n\r\n");
+                body.Append("Content-Disposition: form-data; name=\"" + k + "\"\r\n\r\n");
                 body.Append(dict[k] + "\r\n");
             }
             body.Append(tk + "\r\n");
-            body.Append("Content - Disposition: form - data; name = \"filename\"; filename = \"" + fi.Name + "\"\r\n");
-            body.Append("Content - Type: image / png\r\n");
-            body.Append("\r\n\r\n");
-            body.Append(tk + "\r\n");
+            body.Append("Content-Disposition: form-data; name=\"filename\"; filename = \"" + fi.Name + "\"\r\n");
+            body.Append("Content-Type: " + Tools.GetMimeType(fi.Extension.Substring(1)) + "\r\n\r\n");
 
-            return PostStr(url, body.ToString());
+            var data = new List<byte>();
+            data.AddRange(Encoding.UTF8.GetBytes(body.ToString()));
+            data.AddRange(File.ReadAllBytes(fi.FullName));
+            data.AddRange(Encoding.UTF8.GetBytes(Environment.NewLine + tk + "--" + Environment.NewLine));
+
+            try
+            {
+                return new Resp()
+                {
+                    data = Encoding.UTF8.GetString(post(url, data.ToArray(), tk))
+                };
+            }
+            catch (Exception ex)
+            {
+                return new Resp() { err = true, msg = ex.Message };
+            }
 
         }
         /// <summary>

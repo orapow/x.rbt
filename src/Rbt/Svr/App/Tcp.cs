@@ -17,8 +17,9 @@ namespace Rbt.Svr.App
     /// </summary>
     public class Tcp
     {
+
         #region 公开属性
-        public string ukey { get; set; }
+        public string code { get; set; }
         #endregion
 
         #region 公开事件
@@ -27,7 +28,7 @@ namespace Rbt.Svr.App
         /// </summary>
         /// <param name="content">内容</param>
         /// <param name="tc">连接对象</param>
-        public delegate void NewMsgHandler(string content, Tcp tc);
+        public delegate void NewMsgHandler(msg m, Tcp tc);
         public event NewMsgHandler NewMsg;
 
         /// <summary>
@@ -67,31 +68,50 @@ namespace Rbt.Svr.App
         /// <summary>
         /// 发送消息
         /// </summary>
-        /// <param name="msg"></param>
-        public void Send(msg msg)
+        /// <param name="m"></param>
+        public void Send(msg m, string to)
         {
-            if (tc.Client == null) { Exit(1); return; }
+            if (tc.Client == null || tc.Client.Connected == false) { exit(1); return; }
 
-            var frame = new List<byte>();
-            frame.Add(128 | 1);
-
-            var b2 = 0 << 7;
-            var cot = Encoding.UTF8.GetBytes(msg.ToString());
-            if (cot.Length <= 125) frame.Add((byte)(b2 + cot.Length));
-            else if (cot.Length < 65535)
+            var data = new List<byte>();
+            if (code[0] == '@')
             {
-                frame.Add((byte)(b2 + 126));
-                frame.AddRange(BitConverter.GetBytes((ushort)cot.Length).Reverse());
+                m.to = to;
+                m.from = code;
+
+                var body = Encoding.UTF8.GetBytes(m.ToString());
+                data.AddRange(Encoding.UTF8.GetBytes("x.rbt"));
+                data.AddRange(BitConverter.GetBytes((ushort)body.Length));
+                data.AddRange(body);
+
             }
             else
             {
-                frame.Add((byte)(b2 + 127));
-                frame.AddRange(BitConverter.GetBytes((ulong)cot.Length).Reverse());
+                data.Add(128 | 1);
+                var b2 = 0 << 7;
+                var cot = Encoding.UTF8.GetBytes(m.ToString());
+                if (cot.Length <= 125) data.Add((byte)(b2 + cot.Length));
+                else if (cot.Length < 65535)
+                {
+                    data.Add((byte)(b2 + 126));
+                    data.AddRange(BitConverter.GetBytes((ushort)cot.Length).Reverse());
+                }
+                else
+                {
+                    data.Add((byte)(b2 + 127));
+                    data.AddRange(BitConverter.GetBytes((ulong)cot.Length).Reverse());
+                }
+                data.AddRange(cot);
             }
 
-            frame.AddRange(cot);
-
-            tc.Client.Send(frame.ToArray());
+            try
+            {
+                tc.Client.Send(data.ToArray());
+            }
+            catch
+            {
+                exit(1);
+            }
 
         }
         /// <summary>
@@ -99,7 +119,7 @@ namespace Rbt.Svr.App
         /// </summary>
         public void Quit()
         {
-            Exit(0);
+            exit(0);
         }
         #endregion
 
@@ -111,7 +131,13 @@ namespace Rbt.Svr.App
         {
             while (!stop)
             {
-                if (tc.Available == 0) { Thread.Sleep(500); continue; }
+                if (tc.Client == null) exit(1);
+
+                if (tc.Available == 0)
+                {
+                    Thread.Sleep(500);
+                    continue;
+                }
 
                 var d = new byte[tc.Available];
                 tc.Client.Receive(d);
@@ -126,58 +152,67 @@ namespace Rbt.Svr.App
         void Prase()
         {
             var list = new List<byte>();
+
+            string str = "";
+
             while (!stop)
             {
                 if (data.Count == 0) { Thread.Sleep(500); continue; }
-
-                var dh = data.Take(2).ToArray();
-                lock (data) { data.RemoveRange(0, 2); }
-
-                var fd = new Frame();
-                fd.opcode = dh[0] & 15;
-
-                if (fd.opcode == 8) { Quit(); return; }//断开
-
-                fd.mask = (dh[1] >> 7) == 1;
-
-                var idx = 2;
-                ulong len = (uint)dh[1] & 127;
-                if (len > 125)
+                if (!string.IsNullOrEmpty(code) && code[0] == '@')
                 {
-                    var max = len == 126 ? 2 : 8;
-                    idx += max;
-                    var dl = data.Take(max).Reverse().ToArray();
-                    lock (data) { data.RemoveRange(0, max); }
-                    len = (max == 2 ? BitConverter.ToUInt16(dl, 0) : BitConverter.ToUInt64(dl, 0));
-                }
-                fd.len = len;
+                    if (data.Count < 7) { Thread.Sleep(500); continue; }
 
-                if (fd.mask)
+                    var head = data.Take(5).ToArray();
+                    if (Encoding.UTF8.GetString(head) != "x.rbt") continue;
+
+                    var len = BitConverter.ToUInt16(data.Skip(5).Take(2).ToArray(), 0);
+                    str = Encoding.UTF8.GetString(data.Skip(7).Take(len).ToArray());
+                    lock (data) data.RemoveRange(0, len + 7);
+
+                }
+                else
                 {
-                    fd.mkey = data.Take(4).ToArray(); idx += 4;
-                    lock (data) { data.RemoveRange(0, 4); }
+
+                    var dh = data.Take(2).ToArray();
+                    lock (data) { data.RemoveRange(0, 2); }
+
+                    var opcode = dh[0] & 15;
+
+                    if (opcode == 8) { exit(1); return; }//断开
+
+                    var mask = (dh[1] >> 7) == 1;
+
+                    ulong len = (uint)dh[1] & 127;
+                    if (len > 125)
+                    {
+                        var max = len == 126 ? 2 : 8;
+                        var dl = data.Take(max).Reverse().ToArray();
+                        lock (data) { data.RemoveRange(0, max); }
+                        len = (max == 2 ? BitConverter.ToUInt16(dl, 0) : BitConverter.ToUInt64(dl, 0));
+                    }
+
+                    var mkey = new byte[4];
+                    if (mask)
+                    {
+                        mkey = data.Take(4).ToArray();
+                        lock (data) { data.RemoveRange(0, 4); }
+                    }
+                    var dt = data.Take((int)len).ToArray();
+                    lock (data) { data.RemoveRange(0, (int)len); }
+
+                    if (mask) for (var i = 0; i < dt.Length; i++) dt[i] = (byte)(dt[i] ^ mkey[i % 4]);
+
+                    str = Encoding.UTF8.GetString(dt);
+
                 }
-
-                var dt = data.Take((int)len).ToArray();
-                lock (data) { data.RemoveRange(0, (int)len); }
-
-                if (fd.mask) for (var i = 0; i < dt.Length; i++) dt[i] = (byte)(dt[i] ^ fd.mkey[i % 4]);
-
-                fd.data = Encoding.UTF8.GetString(dt);
-
-                Debug.WriteLine("newmsg->" + Serialize.ToJson(fd));
 
                 try
                 {
-                    NewMsg?.Invoke(fd.data, this);
+                    NewMsg?.Invoke(Serialize.FromJson<msg>(str), this);
                 }
-                catch (Exception ex)
+                catch
                 {
-                    dynamic m = new msg();
-                    m.act = "err";
-                    m.err = ex.Message;
-                    Send(m);
-                    Quit();
+                    exit(1);
                 }
             }
         }
@@ -188,35 +223,41 @@ namespace Rbt.Svr.App
         void Hands(byte[] data)
         {
 
-            var head = Encoding.UTF8.GetString(data);
+            var body = Encoding.UTF8.GetString(data);
+            if (body.IndexOf("WebSocket") > 0)
+            {
+                var key = "";
+                var r = new Regex(@"Sec\-WebSocket\-Key:(.*?)\r\n");
+                var m = r.Match(body);
+                if (m.Groups.Count != 0) key = Regex.Replace(m.Value, @"Sec\-WebSocket\-Key:(.*?)\r\n", "$1").Trim();
 
-            var key = "";
-            var r = new Regex(@"Sec\-WebSocket\-Key:(.*?)\r\n"); //查找"Abc"
-            var m = r.Match(head); //设定要查找的字符串
-            if (m.Groups.Count != 0) key = Regex.Replace(m.Value, @"Sec\-WebSocket\-Key:(.*?)\r\n", "$1").Trim();
+                if (string.IsNullOrEmpty(key)) { exit(1); return; }
 
-            if (string.IsNullOrEmpty(key)) { Exit(1); return; }
+                string rspkey = Convert.ToBase64String(SHA1.Create().ComputeHash(Encoding.ASCII.GetBytes(key + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11")));
 
-            string rspkey = Convert.ToBase64String(SHA1.Create().ComputeHash(Encoding.ASCII.GetBytes(key + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11")));
+                var rsp = new StringBuilder();
+                rsp.Append("HTTP/1.1 101 Switching Protocols" + Environment.NewLine);
+                rsp.Append("Connection: Upgrade" + Environment.NewLine);
+                rsp.Append("Upgrade: websocket" + Environment.NewLine);
+                rsp.Append("Sec-WebSocket-Accept: " + rspkey + Environment.NewLine + Environment.NewLine);
 
-            var rsp = new StringBuilder();
-            rsp.Append("HTTP/1.1 101 Switching Protocols" + Environment.NewLine);
-            rsp.Append("Connection: Upgrade" + Environment.NewLine);
-            rsp.Append("Upgrade: websocket" + Environment.NewLine);
-            rsp.Append("Sec-WebSocket-Accept: " + rspkey + Environment.NewLine + Environment.NewLine);
-
-            tc.Client.Send(Encoding.UTF8.GetBytes(rsp.ToString()));
+                tc.Client.Send(Encoding.UTF8.GetBytes(rsp.ToString()));
+            }
+            else
+            {
+                var ps = body.Split(':');
+                code = "@" + ps[1];
+                if (Secret.MD5(ps[0] + ps[1] + "x.rbt") != ps[2]) { exit(1); return; }
+            }
 
             ready = true;
-
-            Debug.WriteLine("hands->OK");
 
         }
         /// <summary>
         /// 退出
         /// </summary>
         /// <param name="t"></param>
-        void Exit(int t)
+        void exit(int t)
         {
             try
             {
@@ -235,57 +276,18 @@ namespace Rbt.Svr.App
     /// <summary>
     /// 消息类
     /// </summary>
-    public class msg : DynamicObject
+    public class msg //: DynamicObject
     {
-        Dictionary<string, object> parms = new Dictionary<string, object>();
-        public override bool TryGetMember(GetMemberBinder binder, out object result)
-        {
-            if (parms.ContainsKey(binder.Name)) result = parms[binder.Name];
-            else result = null;
-            return true;
-        }
-        public override bool TrySetMember(SetMemberBinder binder, object value)
-        {
-            if (parms.ContainsKey(binder.Name)) parms[binder.Name] = value;
-            else parms.Add(binder.Name, value);
-            return true;
-        }
+        public string to { get; set; }
+        public string from { get; set; }
+        public string act { get; set; }
+        public string err { get; set; }
+        public string body { get; set; }
+
         public override string ToString()
         {
-            return Serialize.ToJson(parms);
+            return Serialize.ToJson(this);
         }
-    }
-
-    /// <summary>
-    /// 帧类
-    /// </summary>
-    class Frame
-    {
-        /// <summary>
-        /// 0、后续帧
-        /// 1、文本帧
-        /// 2、二进制帧
-        /// 8、连接关闭
-        /// 9、ping
-        /// 10、pong
-        /// </summary>
-        public int opcode { get; set; }
-        /// <summary>
-        /// 是否有掩码
-        /// </summary>
-        public bool mask { get; set; }
-        /// <summary>
-        /// 数据长度
-        /// </summary>
-        public ulong len { get; set; }
-        /// <summary>
-        /// 掩码
-        /// </summary>
-        public byte[] mkey { get; set; }
-        /// <summary>
-        /// 数据
-        /// </summary>
-        public string data { get; set; }
     }
 
 }

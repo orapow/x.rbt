@@ -54,10 +54,14 @@
     <None Include="dat\urls.x" />
     <Content Include="App.ashx" />
     <None Include="dat\codes.x" />
+    <Content Include="res\css\base1.css" />
     <Content Include="res\css\base.css" />
     <Content Include="res\css\head.css" />
+    <Content Include="res\img\dialog.bg.png" />
+    <Content Include="res\img\loading.gif" />
     <Content Include="res\img\logo.jpg" />
     <Content Include="res\img\wx.png" />
+    <Content Include="res\img\no.png" />
     <Content Include="res\js\jq_2.1.4.js" />
     <Content Include="res\plug\hchart\hcharts.js" />
     <Content Include="res\js\x.form.js" />
@@ -103,6 +107,8 @@
     <Content Include="tpl\com\_head.html" />
     <Content Include="tpl\func\contact.html" />
     <Content Include="tpl\func\reply.html" />
+    <Content Include="tpl\user\logon\list.html" />
+    <Content Include="tpl\user\logon\scan.html" />
     <Content Include="tpl\_foot.html" />
     <Content Include="tpl\_top.html" />
     <Content Include="tpl\_left.html" />

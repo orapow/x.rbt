@@ -1,0 +1,7 @@
+
+时间：2016-11-24 20:10:04,370 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 user.logon.add","code":"0x0002"} 
+时间：278835 

@@ -38,6 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Apis\login.cs" />
+    <Compile Include="Apis\user\logon\add.cs" />
     <Compile Include="Apis\xapi.cs" />
     <Compile Include="Com\Config.cs" />
     <Compile Include="Global.cs" />
@@ -48,6 +49,8 @@
     <Compile Include="Views\func\reply.cs" />
     <Compile Include="Views\login.cs" />
     <Compile Include="Views\index.cs" />
+    <Compile Include="Views\user\logon\list.cs" />
+    <Compile Include="Views\user\logon\scan.cs" />
     <Compile Include="Views\xview.cs" />
     <Compile Include="Views\com\view.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

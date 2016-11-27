@@ -78,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Rbt.Svr.exe" size="65536">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Rbt.Svr.exe" size="22016">
       <assemblyIdentity name="Rbt.Svr" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>r1KuvVd8XOi5a1mejy7BdjigwLU=</dsig:DigestValue>
+        <dsig:DigestValue>qxop0gXxn6YWQioaLvhV4I5s2hQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -97,19 +97,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>IwBjAXNBNfajv/DPT+9+dzOssmo=</dsig:DigestValue>
+        <dsig:DigestValue>6D5LX7TmW72gnN1pjy2uvNPad40=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="X.Data.dll" size="50176">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="X.Data.dll" size="28672">
       <assemblyIdentity name="X.Data" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>/oV9nSqIxga1h+kBgPOf776V/WM=</dsig:DigestValue>
+        <dsig:DigestValue>QPSAVIdIsr3sAjhl1Vgb4c81oYo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

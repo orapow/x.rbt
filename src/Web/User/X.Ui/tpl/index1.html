@@ -6,7 +6,7 @@
 </head>
 <body>
     <img src="" id="img" width="120" />
-    {act:"loadqr",lgid:1,ukey:"494a16fc4261955fb704049d48ff18e3"}
+    {act:"loadqr",lgid:1,ukey:"494a16fc4261955fb704049d48ff18e3",to:"@svr"}
     <x:form>
         <x:text title="内容" name="cot" tp="3" size="6"  />
         <button type="submit">发送</button>
@@ -19,8 +19,8 @@
         ws.onmessage = function (evt) {
             var msg = JSON.parse(evt.data);
             console.log("收到消息->" + evt.data);
-            if (msg.act == "qrcode") img.src = msg.qrcode;
-            else if (msg.act == "scaned") img.src = msg.headimg;
+            if (msg.act == "qrback") img.src = msg.body;
+            else if (msg.act == "scaned") img.src = msg.body;
         }
         ws.onerror = function (evt) {
             console.log("出现错误：" + JSON.stringify(evt))
