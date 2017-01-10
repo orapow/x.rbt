@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using X.Core.Cache;
 using X.Core.Utility;
 using X.Web;
@@ -11,31 +12,44 @@ namespace X.App.Apis
 {
     public class login : xapi
     {
-        [ParmsAttr(name = "用户帐号", req = true)]
-        public string uin { get; set; }
-        [ParmsAttr(name = "登陆密码", req = true)]
-        public string pwd { get; set; }
-        [ParmsAttr(name = "验证码", req = true)]
+        [ParmsAttr(name = "code", req = true)]
         public string code { get; set; }
+
+        protected override bool needus
+        {
+            get
+            {
+                return false;
+            }
+        }
 
         protected override XResp Execute()
         {
+            string cu_key = "";
+            var dt = DateTime.Now;
 
-            var c = CacheHelper.Get<string>("code." + uin);
-            CacheHelper.Remove("code." + uin);
-            if (c == null || c != code) throw new XExcep("T验证码不正确");
-            var cu = DB.x_user.FirstOrDefault(o => o.uin == uin);
+            do
+            {
+                cu_key = CacheHelper.Get<string>("login." + code);
+                Thread.Sleep(100);
+                if ((DateTime.Now - dt).TotalSeconds >= 20) break;
+            } while (string.IsNullOrEmpty(cu_key));
 
-            if (cu == null || cu.pwd != pwd) throw new XExcep("用户名或密码不正确");
-            var ukey = Secret.MD5(Guid.NewGuid().ToString());
+            if (string.IsNullOrEmpty(cu_key) || cu_key == "###") throw new XExcep("0x0006");
 
-            cu.ukey = ukey;
-            SubmitDBChanges();
+            cu = DB.x_user.FirstOrDefault(o => o.ukey == cu_key);
 
-            CacheHelper.Save("cu." + cu.ukey, cu, 60 * 20);
+            CacheHelper.Save("cu." + cu_key, cu, 60 * 20);
+            CacheHelper.Remove("login." + code);
 
-            return new XResp() { msg = cu.ukey };
+            return new lback() { ukey = cu.ukey, headimg = cu.headimg, nickname = cu.nickname };
+        }
 
+        class lback : XResp
+        {
+            public string ukey { get; set; }
+            public string headimg { get; set; }
+            public string nickname { get; set; }
         }
     }
 }

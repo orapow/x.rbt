@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>tab</title>
+		<link rel="stylesheet" href="css/tab.css" />
+		<!--<link rel="stylesheet" href="css/tq.css" />-->
+	</head>
+
+	<body>
+		<div style="width: 980px;margin: 0 auto;background: #fff;">
+			<!--tab-->
+			<div class="title_tab" id="topTab">
+				<ul class="tab_navs title_tab" data-index="0">
+
+					<li data-index="0" class="tab_nav first js_top selected" data-id="media10">
+						<a href="/cgi-bin/appmsg?begin=0&amp;count=10&amp;t=media/appmsg_list2&amp;type=10&amp;action=list_card&amp;token=1061976452&amp;lang=zh_CN">图文消息</a>
+					</li>
+
+					<li data-index="1" class="tab_nav  js_top" data-id="media2">
+						<a href="/cgi-bin/filepage?type=2&amp;begin=0&amp;count=12&amp;t=media/img_list&amp;token=1061976452&amp;lang=zh_CN">图片</a>
+					</li>
+
+					<li data-index="2" class="tab_nav  js_top" data-id="media3">
+						<a href="/cgi-bin/filepage?type=3&amp;begin=0&amp;count=21&amp;t=media/list&amp;token=1061976452&amp;lang=zh_CN">语音</a>
+					</li>
+
+					<li data-index="3" class="tab_nav  js_top" data-id="media15">
+						<a href="/cgi-bin/appmsg?begin=0&amp;count=9&amp;t=media/video_list&amp;action=list_video&amp;type=15&amp;token=1061976452&amp;lang=zh_CN">视频</a>
+					</li>
+				</ul>
+			</div>
+			<!--tab-->
+			<!--表单-->
+			<div class="col_main">
+				<div class="main_hd main_hd_bd">
+					<h2 class="title_border">投票管理<p class="extra_info mini_tips icon_after align_title"><a href="http://kf.qq.com/faq/120813euEJVf1501206Jj6fy.html" target="_blank">公众平台投票规则说明 <i class="icon_mini_tips document_link"></i></a></p></h2>
+					<div class="page_nav">
+						<a href="/cgi-bin/newoperatevote?action=list&amp;token=1061976452&amp;lang=zh_CN" class="icon_goback">返回上一层</a>
+						<a href="/cgi-bin/newoperatevote?action=list&amp;token=1061976452&amp;lang=zh_CN">投票管理</a> / 新建投票</div>
+				</div>
+				<div class="main_bd">
+					<div class="page_msg mini_tips icon_before"> <i class="icon_msg_mini info"></i> 投票设置后，必须插入图文消息中才可生效。投票将统计该投票在各个渠道的综合结果总和，包括群发消息，自动回复，自定义菜单等。</div>
+					<div class="js_new_vote vote_edit">
+						<div class="tc_dialog_content vote_container">
+							<form id="voteForm" novalidate="novalidate">
+								<div class="vote_meta">
+									<div class="vote_meta_detail">
+										<div class="frm_control_group">
+											<label for="" class="frm_label">投票名称</label>
+											<div class="frm_controls">
+												<span class="frm_input_box with_counter counter_in append vote_title count"><input autofocus="" type="text" placeholder="" class="frm_input frm_msg_content" name="vote_title" id=""><em class="frm_input_append frm_counter">0/35</em></span>
+												<p class="frm_msg fail" style="display: block;"><span for="vote_title" class="frm_msg_content" style="display: inline;">请填写投票名称</span></p>
+												<p class="frm_tips">投票名称只用于管理，不显示在下发的投票内容中</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<p class="frm_tips frm_tips_btm">上传图片的最佳尺寸：300像素*300像素，其他尺寸会影响页面效果，格式png，jpeg，jpg，gif。大小不超过1M </p>
+							</form>
+
+							<div class="">
+								<div class="vote_meta_container js_question_container">
+									<div class="vote_meta option_setting js_question">
+										<form id="question_0" class="vote_form" novalidate="novalidate">
+											<div class="vote_meta_title group">
+												<div class="vote_meta_title_opr">
+													<a href="javascript:;" class="js_question_edit" data-tag="0">收起</a>
+
+												</div>
+												<span class="vote_warn" style="display:none">问题填写完整才能添加下一个问题</span>
+												<span class="vote_num">问题一</span>
+												<span class="vote_question js_vote_question"></span>
+											</div>
+											<div class="vote_meta js_item_container vote_meta_content" style="display:">
+												<div class="vote_meta_detail">
+													<div class="frm_control_group">
+														<label for="" class="frm_label">标题</label>
+														<div class="frm_controls">
+															<span class="frm_input_box with_counter counter_in append vote_title js_question_title count">
+						<input autofocus="" type="text" placeholder="" class="frm_input js_option_input" name="question_title" value=""><em class="frm_input_append frm_counter">0/35</em>
+					</span>
+															<span class="frm_tips"></span>
+														</div>
+													</div>
+												</div>
+												<div class="vote_meta_detail js_vote_type vote_meta_radio">
+													<div class="frm_control_group">
+														<div class="frm_controls vote_meta_radio">
+															<label class="vote_radio_label selected frm_radio_label" for="checkbox1">
+						<i class="icon_radio"></i>
+						<span type="label_content">单选</span>
+						<input name="isMlt" type="radio" value="1" class="vote_radio frm_radio" checked="" id="checkbox1">
+					</label>
+															<label class="vote_radio_label frm_radio_label" for="checkbox2">
+						<i class="icon_radio"></i>
+						<span type="label_content">多选</span>
+						<input name="isMlt" type="radio" value="2" class="vote_radio frm_radio" id="checkbox2">
+					</label>
+														</div>
+													</div>
+												</div>
+
+												<div class="vote_meta_detail js_vote_option">
+													<div class="frm_control_group">
+														<div class="frm_label">选项一</div>
+														<div class="frm_controls">
+															<span class="frm_input_box with_counter counter_in append count">
+						<input type="text" placeholder="" class="frm_input js_option_input" name="option0" value=""><em class="frm_input_append frm_counter">0/35</em>
+					</span>
+															<!-- <span class="frm_num warning">0/35</span> -->
+															<!-- <span class="btn btn_input btn_default">
+						<a href="javascript:;" id="123">上传图片</a>
+					</span> -->
+															<div class="upload_area webuploader-container">
+
+																<a class="btn btn_upload js_vote_upload_btn webuploader-pick" id="js_upload_0_0">上传图片</a>
+
+																<ul class="upload_file_box" style="display:none"></ul>
+																<div id="rt_rt_1b22fk8sl1g7blug1gq110kc2nc1" style="position: absolute; top: 0px; left: 0px; width: 106px; height: 32px; overflow: hidden; bottom: auto; right: auto;"><input type="file" accept="image/*" style="display: none;"><label style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255);"></label></div>
+															</div>
+
+															<span class="frm_tips"></span>
+														</div>
+
+														<div class="js_img_container img_container" id="js_upload_0_0" style="display:none">
+															<span class="img_panel">
+					<!-- <img class="preview" src=""/> -->
+						<span class="js_img_preview preview bg_img poi" data-src="" style="background-image:url();"></span>
+															</span>
+															<a href="javascript:;" class="link_dele" id="js_delete_0_0">删除</a>
+														</div>
+													</div>
+												</div>
+
+												<div class="vote_meta_detail js_vote_option">
+													<div class="frm_control_group">
+														<div class="frm_label">选项二</div>
+														<div class="frm_controls">
+															<span class="frm_input_box with_counter counter_in append count">
+						<input type="text" placeholder="" class="frm_input js_option_input" name="option1" value=""><em class="frm_input_append frm_counter">0/35</em>
+					</span>
+															<!-- <span class="frm_num warning">0/35</span> -->
+															<!-- <span class="btn btn_input btn_default">
+						<a href="javascript:;" id="123">上传图片</a>
+					</span> -->
+															<div class="upload_area webuploader-container">
+
+																<a class="btn btn_upload js_vote_upload_btn webuploader-pick" id="js_upload_0_1">上传图片</a>
+
+																<ul class="upload_file_box" style="display:none"></ul>
+																<div id="rt_rt_1b22fk8sn6ro169r3vl31r7e4" style="position: absolute; top: 0px; left: 0px; width: 106px; height: 32px; overflow: hidden; bottom: auto; right: auto;"><input type="file" accept="image/*" style="display: none;"><label style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255);"></label></div>
+															</div>
+
+															<span class="frm_tips"></span>
+														</div>
+
+														<div class="js_img_container img_container" id="js_upload_0_1" style="display:none">
+															<span class="img_panel">
+					<!-- <img class="preview" src=""/> -->
+						<span class="js_img_preview preview bg_img poi" data-src="" style="background-image:url();"></span>
+															</span>
+															<a href="javascript:;" class="link_dele" id="js_delete_0_1">删除</a>
+														</div>
+													</div>
+												</div>
+
+												<div class="vote_meta_detail js_vote_option">
+													<div class="frm_control_group">
+														<div class="frm_label">选项三</div>
+														<div class="frm_controls">
+															<span class="frm_input_box with_counter counter_in append count">
+						<input type="text" placeholder="" class="frm_input js_option_input" name="option2" value=""><em class="frm_input_append frm_counter">0/35</em>
+					</span>
+															<!-- <span class="frm_num warning">0/35</span> -->
+															<!-- <span class="btn btn_input btn_default">
+						<a href="javascript:;" id="123">上传图片</a>
+					</span> -->
+															<div class="upload_area webuploader-container">
+
+																<a class="btn btn_upload js_vote_upload_btn webuploader-pick" id="js_upload_0_2">上传图片</a>
+
+																<ul class="upload_file_box" style="display:none"></ul>
+																<div id="rt_rt_1b22fk8so6g72gcf9c4k9hoi7" style="position: absolute; top: 0px; left: 0px; width: 106px; height: 32px; overflow: hidden; bottom: auto; right: auto;"><input type="file" accept="image/*" style="display: none;"><label style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255);"></label></div>
+															</div>
+
+															<a href="javascript:;" class="link_delete js_delete_item" data-tag="0" data-item="2">删除选项</a>
+
+															<span class="frm_tips"></span>
+														</div>
+
+														<div class="js_img_container img_container" id="js_upload_0_2" style="display:none">
+															<span class="img_panel">
+					<!-- <img class="preview" src=""/> -->
+						<span class="js_img_preview preview bg_img poi" data-src="" style="background-image:url();"></span>
+															</span>
+															<a href="javascript:;" class="link_dele" id="js_delete_0_2">删除</a>
+														</div>
+													</div>
+												</div>
+
+												<div class="vote_meta_detail tips_wrp">
+													<p id="voteAdd" class="tips_global option_tips">
+														<a href="javascript:;" class="js_add_item" data-tag="0">添加选项</a>
+													</p>
+													<!--<p id="voteFull" class="tips_global option_tips">选项已满，不可继续添加</p>-->
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="vote_container_dec">
+									<a class="btn btn_default btn_add btn_vote_add" href="javascript:;" id="js_add_question"><i class="icon14_common add_gray"></i>添加问题</a>
+									<!--#0001#-->
+									<p id="js_error" style="display:none;" class="frm_tips">问题填写完整才能添加下一个问题</p>
+									<!--%0001%-->
+									<!--<div id="js_error" style="display:none;" class="bubble_tips bubble_left warn">
+				<div class="bubble_tips_inner">
+					<p>问题填写完整才能添加下一个问题</p>
+				</div>
+				<i class="bubble_tips_arrow out"></i>
+				<i class="bubble_tips_arrow in"></i>
+			</div>-->
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="tool_bar tc">
+						<a href="javascript:;" class="btn btn_primary js_complete_bnt">完成</a>
+					</div>
+				</div>
+			</div>
+			<!--表单-->
+			<div class="wrp_overview">
+				<div class="js_tab_content tab_content all">
+					<div class="sub_menu new_sub">
+						<div class="">
+							<div id="js_single">
+								<div class="ta_date" id="div_js_dateRangeTitle1">
+									<span class="date_title" id="js_dateRangeTitle1">2016-11-14 至 2016-11-20</span>
+									<a class="opt_sel" id="js_dateRangeTrigger1" href="#">
+										<i class="i_orderd"></i>
+									</a>
+								</div><label class="contrast" for="needCompare_1479709167935" style="display: none;"><input type="checkbox" class="pc" name="needCompare_1479709167935" id="needCompare_1479709167935" value="1" disabled="disabled">对比</label>
+								<div class="ta_date" id="div_compare_js_dateRangeTitle1" style="display: none;"> <span name="dateCompare" id="js_dateRangeTitle1Compare" class="date_title" style="display: none;"></span>
+									<a class="opt_sel" id="compare_trigger" href="#"> <i class="i_orderd"></i> </a>
+								</div>
+							</div>
+							<ul class="dropdown_data_list" style="display:none;">
+								<li class="dropdown_data_item">
+									<a href="javascript:void(0);">选项1</a>
+								</li>
+								<li class="dropdown_data_item">
+									<a href="javascript:void(0);">选项2</a>
+								</li>
+								<li class="dropdown_data_item">
+									<a href="javascript:void(0);">选项3</a>
+								</li>
+							</ul>
+						</div>
+						<div class="date_picker">
+							<div class="btn_group_item td_data_container" id="js_date_container"> </div>
+						</div>
+					</div>
+					<table class="table table_sort" cellspacing="0" id="js_articles_table" style="border-bottom: none;">
+						<thead class="thead">
+							<tr>
+								<th class="table_cell">文章标题</th>
+								<th class="table_cell tr">时间</th>
+								<th class="table_cell rank_area js_sort js_sort_target_user rank_up" data-sortkey="target_user"> 送达人数 <span class="icon_rank">                                    <i class="arrow arrow_up"></i><i class="arrow arrow_down"></i>                                </span> </th>
+								<th class="table_cell rank_area js_sort js_sort_int_page_read_user" data-sortkey="int_page_read_user"> 图文阅读人数 <span class="icon_rank rank_area">                                    <i class="arrow arrow_up"></i><i class="arrow arrow_down"></i>                                </span> </th>
+								<th class="table_cell rank_area js_sort js_sort_share_user" data-sortkey="share_user"> 分享人数 <span class="icon_rank rank_area">                                    <i class="arrow arrow_up"></i><i class="arrow arrow_down"></i>                                </span> </th>
+								<th class="table_cell tr">操作</th>
+							</tr>
+						</thead>
+						<tbody class="tbody" id="js_articles_items">
+							<tr class="empty_item">
+								<td class="empty_tips" colspan="6">暂无数据</td>
+							</tr>
+						</tbody>
+					</table>
+					<div id="js_all_pager" style="margin-right: 15px;"></div>
+					<div id="js_articles_items"> </div>
+					<div class="single_no_data" style="display:none;">暂无数据</div>
+				</div>
+			</div>
+		
+		<!--btn-->
+		<a href="javascript:;" class="btn btn_warn" id="btn_stop">停用</a>
+		
+		<span id="js_del" class="btn btn_default btn_input btn_disabled"><button disabled="disabled">删除回复</button></span>
+		
+		<a href="javascript:;" class="btn btn_primary js_complete_bnt">完成</a>
+		</div>
+	</body>
+
+</html>

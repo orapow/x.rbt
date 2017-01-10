@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Dynamic;
 using System.Linq;
 using System.Net.Sockets;
 using System.Security.Cryptography;
@@ -69,21 +67,18 @@ namespace Rbt.Svr.App
         /// 发送消息
         /// </summary>
         /// <param name="m"></param>
-        public void Send(msg m, string to)
+        public void Send(msg m)
         {
             if (tc.Client == null || tc.Client.Connected == false) { exit(1); return; }
 
             var data = new List<byte>();
             if (code[0] == '@')
             {
-                m.to = to;
-                m.from = code;
-
+                if (string.IsNullOrEmpty(m.from)) m.from = code;
                 var body = Encoding.UTF8.GetBytes(m.ToString());
                 data.AddRange(Encoding.UTF8.GetBytes("x.rbt"));
                 data.AddRange(BitConverter.GetBytes((ushort)body.Length));
                 data.AddRange(body);
-
             }
             else
             {

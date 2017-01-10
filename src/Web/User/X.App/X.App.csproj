@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Gma.QrCodeNet.Encoding.Net35">
+      <HintPath>..\..\..\..\libs\Gma.QrCodeNet.Encoding.Net35.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
@@ -37,22 +40,40 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Apis\com\upload.cs" />
+    <Compile Include="Apis\contact\list.cs" />
+    <Compile Include="Apis\check.cs" />
+    <Compile Include="Apis\cancel.cs" />
     <Compile Include="Apis\login.cs" />
-    <Compile Include="Apis\user\logon\add.cs" />
+    <Compile Include="Apis\logon\login.cs" />
+    <Compile Include="Apis\logon\logout.cs" />
+    <Compile Include="Apis\logout.cs" />
+    <Compile Include="Apis\msg\del.cs" />
+    <Compile Include="Apis\msg\load.cs" />
+    <Compile Include="Apis\reply\del.cs" />
+    <Compile Include="Apis\reply\list.cs" />
+    <Compile Include="Apis\reply\load.cs" />
+    <Compile Include="Apis\reply\save.cs" />
+    <Compile Include="Apis\msg\list.cs" />
+    <Compile Include="Apis\msg\save.cs" />
+    <Compile Include="Apis\contact\sync.cs" />
     <Compile Include="Apis\xapi.cs" />
     <Compile Include="Com\Config.cs" />
+    <Compile Include="Com\Wx.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="Views\com\err.cs" />
     <Compile Include="Views\com\code.cs" />
     <Compile Include="Views\com\dict.cs" />
-    <Compile Include="Views\func\contact.cs" />
-    <Compile Include="Views\func\reply.cs" />
+    <Compile Include="Views\func\contact\list.cs" />
+    <Compile Include="Views\func\msg\edit.cs" />
+    <Compile Include="Views\func\msg\list.cs" />
+    <Compile Include="Views\func\reply\edit.cs" />
+    <Compile Include="Views\func\reply\list.cs" />
     <Compile Include="Views\login.cs" />
     <Compile Include="Views\index.cs" />
-    <Compile Include="Views\user\logon\list.cs" />
-    <Compile Include="Views\user\logon\scan.cs" />
+    <Compile Include="Views\wx\login.cs" />
+    <Compile Include="Views\wx\_wx.cs" />
     <Compile Include="Views\xview.cs" />
-    <Compile Include="Views\com\view.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

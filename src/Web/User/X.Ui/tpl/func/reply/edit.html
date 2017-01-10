@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    #parse("com/_head.html")
+    <title>橙铺运营助手</title>
+    <link href="/plug/dp/v2.1.css" rel="stylesheet" />
+    <script src="/plug/dp/v2.1.js"></script>
+    <style type="text/css">
+        body { background: white; }
+        #li_img { display: none; }
+        #li_tspan { display: none; }
+        #li_tdate { display: none; }
+        #id_text { height: 80px; }
+        .tb { display: none; }
+        .bag { background-color: red; color: white; transform: rotate(-45deg); position: absolute; top: -25px; left: -36px; padding: 30px 30px 0px 30px; font-size: 12px; display: none; }
+        .bag.b2 { display: block; }
+        .grid.body { border: 1px solid #ccc; height: 290px; width: 650px; overflow-y: auto; margin-top: 5px; }
+        .grid-item { cursor: pointer; width: 60px; display: inline-block; margin: 5px; position: relative; vertical-align: top; overflow: hidden; border: 1px solid #ccc; }
+        .pager .pages { text-align: left; }
+        .nickname { font-size: 12px; display: block; height: 20px; overflow: hidden; line-height: 20px; text-align: center; }
+        .mark { position: absolute; left: 0; top: 0; background: url(/img/p15.png) no-repeat center center rgba(0, 0, 0, 0.42); width: 100%; height: 100%; display: none; }
+        .grid-item.on .mark { display: block; }
+        #li_match, #li_keys { display: none; }
+    </style>
+</head>
+<body>
+    <ul class="tab_navs">
+        <li class="tab_nav selected" data-tp="1"><a href="javascript:;">回复内容</a></li>
+        <li class="tab_nav" data-tp="2" style="display:none;"><a href="javascript:;">适用对象（不选适用所有）</a></li>
+    </ul>
+    <x:form api="reply.save">
+        <input type="hidden" name="id" x-check="" value="$!id" />
+        <div class="tb">
+            <x:pick title="回复类型" src="loc:被添加|新人入群|默认回复|关键字" mode="2" def="$!item.tp" name="tp" callback="replyselect" />
+            <x:text title="关键字" tip="多个用空格隔开，不超过5个" size="4" name="keys" def="$!item.keys" />
+            <x:pick title="匹配方式" src="loc:全字|开头|结尾|包含" mode="2" def="$!item.match" name="match" />
+            <x:pick title="消息类型" src="loc:文本内容|图片内容" mode="2" def="$!item.type" name="type" callback="typeselect" />
+            <x:text title="文本内容" tp="3" size="5" name="text" def="$!item.text" />
+            <x:upload title="上传图片" name="img" tp="img" count="1" def="$!item.img" />
+        </div>
+        <div class="tb">
+            <div class="hd">#foreach($c in $lgs)<span class="btn" data-uin="$c.uin"><img src="$c.headimg" width="20" /> ${c.nickname}</span> #end</div>
+            <div class="list" style="width:650px;"></div>
+            <div class="tpl" style="display:none;">
+                <p class="bag b{flag}" data-id="{id}">群</p>
+                <img src="{headimg}" width="60" height="60" onerror="this.src='/img/no_u.png'" data-id="{id}" />
+                <span class="nickname">{nickname}</span>
+                <div class="mark"></div>
+            </div>
+        </div>
+        <div class="btns">
+            <button type="submit" class="btn btn-warning">提交</button><span class="btn" onclick="top.x.closewin();">取消</span>
+        </div>
+    </x:form>
+    <script type="text/javascript">
+
+        var ids = JSON.parse('$!item.uids' || '[]');
+
+        $(function () {
+            $("form:eq(0)").xform({
+                prepost: function (d) {
+                    d.uids = JSON.stringify(ids);
+                    d.ucount = ids.length;
+                    return true;
+                },
+                callback: function (d) {
+                    if (!d.issucc) return;
+                    x.closewin();
+                }
+            });
+
+            $(".tab_navs li").click(function () {
+                $("li.selected").removeClass("selected");
+                $(this).addClass("selected");
+                $(".tb").hide();
+                $(".tb:eq(" + $(this).index() + ")").show();
+            });
+
+            $(".hd .btn").click(function () {
+                if (g == null) { cfg.searchcon.uin = $(this).attr("data-uin"); g = x.grid.init(cfg); }
+                else g.getlist({ uin: $(this).attr("data-uin"), page: 1 });
+            })
+
+            $(".tb .list").delegate(".grid-item", "click", function () {
+                var c = $(this);
+                c.toggleClass("on");
+                var id = c.find("img").attr("data-id");
+                if (c.hasClass("on")) ids.push(id);
+                else ids.splice(ids.indexOf(id), 1);
+                console.log(ids);
+            })
+
+            $("#id_tdate").datetimepicker();
+
+            $(".tab_navs li:eq(0)").click();
+            $(".hd .btn:eq(0)").click();
+
+            if ("$!item.type") typeselect("$item.type");
+            if ("$!item.tp") replyselect("$item.tp");
+
+        });
+
+        var g = null;
+
+        var cfg = {
+            el: ".tb .list",
+            searchcon: { page: 1, limit: 36 },
+            rended: function () {
+                for (var i in ids) $("[data-id='" + ids[i] + "']").parent().addClass("on");
+            },
+            api: "contact.list",
+            tpl: $(".tpl").html()
+        };
+
+        function replyselect(t, v) {
+            if (t == 1) {
+                $("[data-tp='2']").hide();
+            } else {
+                $("[data-tp='2']").show();
+            }
+            if (t > 3) {
+                $("#li_match").show();
+                $("#li_keys").show();
+            } else {
+                $("#li_match").hide();
+                $("#li_keys").hide();
+            }
+        }
+
+        function typeselect(t, v) {
+            if (t == 1) {
+                $("#li_text").show();
+                $("#li_img").hide();
+            } else {
+                $("#li_text").hide();
+                $("#li_img").show();
+            }
+        }
+
+    </script>
+</body>
+</html>

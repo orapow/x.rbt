@@ -1,0 +1,7 @@
+
+时间：2016-12-03 23:06:44,036 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"参数不满足要求 匹配方式的值要大于1","code":"0x0004"} 
+时间：93672 

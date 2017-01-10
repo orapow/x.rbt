@@ -1,43 +1,66 @@
 ﻿<div class="head" id="header">
     <div class="head_box">
         <div class="inner wrp">
-            <h1 class="logo"><a href="https://mp.weixin.qq.com/" title="微信公众平台"></a></h1>
+            <h1 class="logo"><a href="/" title="橙铺助手"></a></h1>
             <div class="account">
-                <div class="account_meta account_info account_meta_primary"><a href="https://mp.weixin.qq.com/cgi-bin/settingpage?t=setting/index&action=index&token=280065721&lang=zh_CN" class="nickname">智橙</a><span class="type_wrp" style="width:150px;"><a href="" class="type icon_subscribe_label" style="color:white;">普通用户</a><a href="" class="type icon_verify_label fail">未连接</a></span><a href=""><img src="http://wx.qlogo.cn/mmopen/JZmYJOtQToKVBsszm88Rg9Axu8EbaaPibUt0Hc8UKyyzaicZjhk8Uuia471LicSLPMUsGDFFia0ibiaZUV28SkCQBzdxjHGqDvv3L7P/0" class="avatar"></a></div><div class="account_meta account_inbox account_meta_primary"><a href="/user/msg.html" class="account_inbox_switch"><i class="icon-envelope-alt"></i>&nbsp;通知</a></div><div class="account_meta account_logout account_meta_primary"><a id="logout" href=""><i class="icon-off"></i> 退出</a></div>
+                <div class="account_meta account_info account_meta_primary">
+                    <a href="javascript:;" class="nickname">$cu.name</a>
+                    <span class="type_wrp" style="white-space: nowrap;">
+                        <a href="" class="type icon_subscribe_label" style="color:white;">Vip用户</a>
+                        <a href="javascript:;" class="type icon_verify_label fail">服务到期：2016-09-09</a>
+                    </span>
+                    <a href="javascript:;"><img src="$cu.headimg" onerror="this.src='/img/no.jpg'" class="avatar"></a>
+                </div>
+                <div class="account_meta account_inbox account_meta_primary">
+                    <a href="/user/msg.html" class="account_inbox_switch"><i class="icon-envelope-alt"></i>&nbsp;通知</a>
+                </div>
+                <div class="account_meta account_logout account_meta_primary">
+                    <a id="logout" href="javascript:;" onclick="dologout()"><i class="icon-off"></i> 退出</a>
+                </div>
             </div>
         </div>
     </div>
 </div>
 <script type="text/javascript">
-    var ws = new WebSocket("ws://127.0.0.1:9999");
-    ws.onopen = function () {
-        $(".icon_verify_label").text("已连接");
-        ws.send('{act:"hands",to:"@svr",from: "$cu.ukey"}')
+    //var ws = new WebSocket("ws://127.0.0.1:9999");
+    //ws.onopen = function () {
+    //    $(".icon_verify_label").text("已连接");
+    //    ws.send('{act:"hands",to:"@svr",from: "$cu.ukey"}')
+    //}
+    //ws.onmessage = function (evt) {
+    //    var msg = JSON.parse(evt.data);
+    //    switch (msg.act) {
+    //        case "qrback": qrback(msg.body);
+    //            break;
+    //        case "scaned": scaned(msg.body);
+    //            break;
+    //        case "loged": loged();
+    //            break;
+    //        case "logout": x.closewin();
+    //            break;
+    //        case "contactsynced": if (contactsynced != undefined) contactsynced();
+    //            break;
+    //        case "err":
+    //            console.log("出错了->" + msg.err);
+    //            break;
+    //        case "newmsg":
+    //            var msg = JSON.parse(msg.body);
+    //            console.log("新消息(" + msg.ToUserName + ")->" + msg.FromUserName + "：");
+    //            console.log("---->>" + msg.Content);
+    //            break;
+    //    }
+    //}
+    //ws.onerror = function (evt) {
+    //    $(".icon_verify_label").text("连接出错");
+    //    console.log("出现错误：" + JSON.stringify(evt));
+    //    //x.alert("出现错误：" + JSON.stringify(evt))
+    //}
+    //ws.onclose = function () {
+    //    $(".icon_verify_label").text("未连接")//console.log("服务器已经断开");
+    //}
+    function dologout() {
+        x.doapi("logout", null, function () {
+            document.location.href = "/login.html";
+        })
     }
-    ws.onmessage = function (evt) {
-        var msg = JSON.parse(evt.data);
-        switch (msg.act) {
-            case "qrback": qrback(msg.body);
-                break;
-            case "scaned": scaned(msg.body);
-                break;
-            case "loged": loged();
-                break;
-            case "logout": x.closewin();
-                break;
-            case "err":
-                console.log("出错了->" + msg.err);
-                break;
-            case "newmsg":
-                console.log("新消息->" + msg.body);
-                break;
-        }
-    }
-    ws.onerror = function (evt) {
-        x.alert("出现错误：" + JSON.stringify(evt))
-    }
-    ws.onclose = function () {
-        $(".icon_verify_label").text("未连接")//console.log("服务器已经断开");
-    }
-
 </script>

@@ -57,11 +57,15 @@
     <Content Include="res\css\base1.css" />
     <Content Include="res\css\base.css" />
     <Content Include="res\css\head.css" />
+    <Content Include="res\css\weui.css" />
+    <Content Include="res\css\_st.css" />
     <Content Include="res\img\dialog.bg.png" />
     <Content Include="res\img\loading.gif" />
     <Content Include="res\img\logo.jpg" />
+    <Content Include="res\img\p15.png" />
+    <Content Include="res\img\no.jpg" />
     <Content Include="res\img\wx.png" />
-    <Content Include="res\img\no.png" />
+    <Content Include="res\img\no_u.png" />
     <Content Include="res\js\jq_2.1.4.js" />
     <Content Include="res\plug\hchart\hcharts.js" />
     <Content Include="res\js\x.form.js" />
@@ -70,10 +74,6 @@
     <Content Include="res\plug\bs\v2.3.2.css" />
     <Content Include="res\plug\bs\v2.3.2.js" />
     <Content Include="res\plug\bs\v3.3.5.css" />
-    <Content Include="res\plug\code\code.js" />
-    <Content Include="res\plug\code\prism.css" />
-    <Content Include="res\plug\code\prism.js" />
-    <Content Include="res\plug\code\vs.css" />
     <Content Include="res\plug\dp\v2.1.css" />
     <Content Include="res\plug\dp\v2.1.js" />
     <Content Include="res\plug\icon\font\icon.svg" />
@@ -105,10 +105,14 @@
     <Content Include="tpl\com\dict.html" />
     <Content Include="tpl\com\getpos.html" />
     <Content Include="tpl\com\_head.html" />
-    <Content Include="tpl\func\contact.html" />
-    <Content Include="tpl\func\reply.html" />
-    <Content Include="tpl\user\logon\list.html" />
-    <Content Include="tpl\user\logon\scan.html" />
+    <Content Include="tpl\func\contact\list.html" />
+    <Content Include="tpl\func\msg\edit.html" />
+    <Content Include="tpl\func\msg\list.html" />
+    <Content Include="tpl\func\reply\edit.html" />
+    <Content Include="tpl\func\reply\list.html" />
+    <Content Include="tpl\wx\login.html" />
+    <Content Include="tpl\wx\_foot.html" />
+    <Content Include="tpl\wx\_head.html" />
     <Content Include="tpl\_foot.html" />
     <Content Include="tpl\_top.html" />
     <Content Include="tpl\_left.html" />
@@ -141,6 +145,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="html\" />
+    <Folder Include="tpl\func\media\" />
     <Folder Include="upload\" />
   </ItemGroup>
   <PropertyGroup>

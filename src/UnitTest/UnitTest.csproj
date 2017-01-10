@@ -64,9 +64,9 @@
       <Project>{9364F44B-C253-4A46-A86B-F9248325543D}</Project>
       <Name>X.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Rbt\Svr\X.Svr.csproj">
-      <Project>{32aaf65e-cc2e-4b9f-91dd-b2ec33ec06a9}</Project>
-      <Name>X.Svr</Name>
+    <ProjectReference Include="..\Rbt\X.Net\X.Net.csproj">
+      <Project>{f7a04fb8-f06d-487a-91ad-8c875ff4e59e}</Project>
+      <Name>X.Net</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

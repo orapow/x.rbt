@@ -14,33 +14,20 @@
         var f = this;
         f.el = el;
         f.init(op);
-        f.validator = {
-            mail: { reg: /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/, msg: "Email格式不正确，zk@80xc.com！" },
-            num: { reg: /^\d+$/, msg: "这里只能输入>=0的数字！" },
-            ch: { reg: /^[\u0391-\uFFE5]+$/, msg: "这里只能输入汉字！" },
-            mp: { reg: /^1\d{10}$/, msg: "这里只能输入手机号！" },
-            tel: { reg: /((\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$)/, msg: "这里格式不正确，应为电话号码（包括手机号）！" },
+        f.vt = {
+            mail: { reg: /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/, msg: "应为电子邮箱，例：zk@80xc.com！" },
+            num: { reg: /^\d+$/, msg: "只能输入>=0的数字！" },
+            ch: { reg: /^[\u0391-\uFFE5]+$/, msg: "只能输入汉字！" },
+            mp: { reg: /^1\d{10}$/, msg: "只能输入手机号！" },
+            tel: { reg: /((\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$)/, msg: "应为电话号码（包括手机号）！" },
             nd: { reg: /^\d+([.]\d+)?$/, msg: "这里只能输入小数或整数！" },
             d: { reg: /^\d{4}-\d{2}-\d{2}$/, msg: "不是有效的日期格式（格式：1990-01-01）！" },
             dt: { reg: /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}(:\d{2})?$/, msg: "不是有效的日期时间格式，可以不包含秒（格式：1990-01-01 00:00:00）！" },
             url: { reg: /^([\w\dz\/\-:]+)[.][a-z]{3,4}$/, msg: "不是有效的Url格式，例：http://www.80xc.com！" },
-            char: { reg: /^[a-zA-z0-9\u4E00-\u9FA5\s]+$/, msg: "这里只能输入字母、数字、汉字，不能输入标点符号！" },
-            c: { reg: /^#[a-fA-F]{6}$/, msg: "不是有效的颜色值格式！" },
-            cust: {},
+            char: { reg: /^[a-zA-z0-9\u4E00-\u9FA5\s]+$/, msg: "只能输入字母、数字、汉字，不能输入标点符号！" },
+            c: { reg: /^#[a-fA-F]{6}$/, msg: "不是有效的颜色值格式！" }
         };
     };
-
-    function callback(d, f) {
-        if (f.opts.callback) {
-            try {
-                if (typeof (f.opts.callback) === "string") eval(f.opts.callback + "(d)");
-                else f.opts.callback(d);
-            } catch (e) {
-                x.alert("callback 出错，提示：" + e);
-            }
-        }
-    }
-
     form.prototype.init = function (op) {
 
         var f = this;
@@ -58,7 +45,7 @@
 
         dom.submit(function () {
             try {
-                f.submit();
+                submit(f);
             } catch (e) { console.log("dom.submit->" + e); }
             return false;
         });
@@ -78,21 +65,93 @@
         });
 
     }
-    form.prototype.submit = function () {
-
+    form.prototype.getdata = function () {
         var f = this;
-        var d = {};
+        getdata(f);
+        if (!checkdata(f)) return false;
+        return f.data;
+    }
+
+    function submit(f) {
         var op = f.opts;
-        var ispass = 0;
+        f.ipts = f.el.find("[x-check]");
+        getdata(f);
+        if (!checkdata(f)) return false;
 
-        if (op.prepost && !op.prepost()) return false;
+        if (op.prepost && !op.prepost(f.data)) return false;
 
-        f.ipts.blur().keyup();
+        if (op.api) {
+            var btn = f.el.find(":submit");
+            btn.attr("disabled", "disabled");
+            x.doapi(op.api, f.data, function (data) {
+                btn.removeAttr("disabled");
+                if (data.issucc) callback(data, f);
+            }, "json");
+        } else {
+            callback(f.data, f);
+        }
+    }
+    function callback(d, f) {
+        if (f.opts.callback) {
+            try {
+                if (typeof (f.opts.callback) === "string") eval(f.opts.callback + "(d,f.data)");
+                else f.opts.callback(d, f.data);
+            } catch (e) {
+                x.alert("callback 出错，提示：" + e);
+            }
+        }
+    }
+    function checkdata(f) {
 
-        if (ispass != 0) {
-            x.alert("有必填的项未填写，请填写好必填项（请注意标有红色框的项目）");
-            return;
-        };
+        var pass = true;
+
+        f.ipts.each(function () {
+
+            var i = $(this);
+            var val = f.data[i.attr("name")];
+
+            var chk = JSON.parse(i.attr("x-check") || "{}");
+            if (chk.no && !val) { showmsg(i.attr("title") + "不能为空！", i); pass = false; return false; };
+
+            if (chk.tp && val) {
+                var p = f.vt[chk.tp] || chk.tp.reg;
+                if (p && !p.reg.test(val)) { showmsg(i.attr("title") + " 格式不正确！" + p.msg, i); pass = false; return false; }
+            }
+
+            if (chk.len && val) {
+                var l = chk.len.split(",");
+                if (l.length == 1 && val.length != parseInt(l[0])) { showmsg(i.attr("title") + " 长度不正确，只能为 " + l[0] + " 个字符！", i); pass = false; return false; }
+                if (l[0] && val.length < parseInt(l[0])) { showmsg(i.attr("title") + " 长度不正确，至少要 " + l[0] + " 个字符！", i); pass = false; return false; }
+                if ((l[1] || "") && val.length > parseInt(l[1])) { showmsg(i.attr("title") + " 长度不正确，最多只能 " + l[1] + " 个字符！", i); pass = false; return false; }
+            }
+
+            if (chk.cp && val) {
+                var c = chk.cp.split(",");
+                if (c[0] && val < c[0]) { showmsg(i.attr("title") + " 值不正确，值必需>= " + c[0] + " ！", i); pass = false; return false; }
+                if ((c[1] || "") && val > c[1]) { showmsg(i.attr("title") + " 值不正确，值必需<= " + c[1] + " ！", i); pass = false; return false; }
+            }
+
+            if (chk.re && val && chk.re.indexOf(",") > 0) {
+                var r = chk.re.split(",");
+                var vr = f.data[r[0]];
+                if (r[1] == "-1" && !(val < vr)) { showmsg(i.attr("title") + " 值不正确，值必需<= " + vr + " ！", i); pass = false; return false; }
+                else if (r[1] == "0" && !(val == vr)) { showmsg(i.attr("title") + " 值不正确，两次输入不一致！", i); pass = false; return false; }
+                else if (r[1] == "-1" && !(val > vr)) { showmsg(i.attr("title") + " 值不正确，值必需>= " + vr + " ！", i); pass = false; return false; }
+            }
+
+        });
+
+        function showmsg(msg, i) {
+            if (x.form.showmsg) x.form.showmsg(msg, i);
+            else x.alert(msg);
+        }
+
+        return pass;
+
+    }
+    function getdata(f) {
+
+        f.data = {};
 
         f.ipts.each(function () {
 
@@ -113,26 +172,22 @@
             else {
                 val = i.val();
             }
+
             if (!val && i.attr("x-val")) val = i.attr("x-val") || "";//单选
-            if (!d[n]) d[n] = ""; else d[n] += ",";
-            d[n] += val;
+            if (!f.data[n]) f.data[n] = ""; else f.data[n] += ",";
+            f.data[n] += val;
 
         });
 
-        if (op.api) {
-            var btn = f.el.find(":submit");
-            btn.attr("disabled", "disabled");
-            x.doapi(op.api, d, function (data) {
-                btn.removeAttr("disabled");
-                if (data.issucc) callback(data, f);
-            }, "json");
-        } else {
-            callback(d, f);
-        }
+    }
 
+    x.form = {
+        init: function (el, op) { return new form(el, op); },
+        showmsg: function (msg) { x.alert(msg); }
     }
 
 })(jQuery);
+
 (function ($) {
     var dom = $("#x-pick");
     var pick = {
@@ -140,6 +195,18 @@
         ct: null,
         callback: null,
         init: function () {
+
+            $("[x-to]").each(function () {
+                var v = $(this).attr("x-val");
+                if (!v) {
+                    var h = $("[name='" + $(this).attr("x-to") + "']");
+                    h.attr("x-val", "").find(".text").text("请选择");
+                    h.parent().hide();
+                } else {
+
+                }
+            })
+
             if (dom.size() > 0) return;
 
             dom = $("<div id='x-pick' class='x-pick'><div class='h'></div><div class='c'></div><div class='b'><span class='txt'></span><span class='btn btn-primary ok' onclick='x.pick.ok()'>确定</span> <span class='btn cancel' onclick='x.pick.hide()'>取消</span></div></div>");
@@ -168,12 +235,17 @@
                 }
 
                 var vals = "";
+                var texts = "";
                 li.parent().find(".btn-primary").each(function () {
                     if (ct == 1) { vals += $(this).attr("x-val"); }
                     else { vals += "[" + $(this).attr("x-val") + "]"; }
+                    texts += $(this).text() + " ";
                 });
 
                 li.parent().attr("x-val", vals);
+
+                var cb = li.parent().parent().attr("x-callback");
+                if (cb) eval(cb + "('" + vals + "','" + texts + "')");
 
             });
 
@@ -198,8 +270,7 @@
         },
         show: function (ct) {
             var i = pick.ct = $(ct);
-            var c = i.parent().attr("x-count");
-            if (c) c = parseInt(c);
+            var c = parseInt(i.parent().attr("x-count") || "1");
 
             this.count = c;
 
@@ -237,16 +308,36 @@
             else {
                 i.val(texts);
             }
+
             this.hide();
+
+            var to = pick.ct.attr("x-to");
+            if (to) {
+                setto(to, vals, 0);
+            }
+
+            var cb = pick.ct.parent().attr("x-callback");
+            if (cb) eval(cb + "('" + vals + "','" + texts + "')");
+
         },
         hide: function () { dom.hide(); }
     };
 
+    function setto(n, v, d) {
+        var to = $("[name='" + n + "']");
+        to.attr("x-parms", v).attr("x-val", "");
+        to.find(".text").text("请选择");
+        if (d >= 1) to.parent().hide();
+        else to.parent().show();
+        var next = to.attr("x-to");
+        if (next) setto(next, "", d + 1);
+    }
     function loadcontent(d) {
         switch (d[0]) {
             case "dict":
                 sethtml("<span class='loading'>字典正在加载中...</span>");
-                var url = "/com/dict-" + d[1] + (x.pick.ct.attr("x-parms") || "-");
+                var url = "/com/dict-" + d[1] + "-" + (x.pick.ct.attr("x-parms") || "");
+                if (d.length == 3) url += "-" + d[2];
                 x.getview(url + ".html", function (data) {
                     sethtml(data);
                     loadback(d);
@@ -276,12 +367,13 @@
 
     }
     function sethtml(html) {
-        dom.find("div.c").html(html);
+        dom.find("div.c").html(html).css("max-height", $(document).height() * 0.6);
     }
 
-    window.x.pick = pick;    //生成公有静态元素
+    x.pick = pick;    //生成公有静态元素
 
 })(jQuery);
+
 (function ($) {
     var dom = $("#x-upload");
     var file = null;
@@ -300,7 +392,7 @@
 
             $(".upload .xbtn").click(function () {
                 var up = $(this).parent();
-                upload.doup(up.attr("x-tp"), up.attr("x-name"));
+                upload.doup(up.attr("x-tp"), up.attr("x-name"), up.attr("x-callback"));
             });
 
             $(".upload").each(function () {
@@ -383,9 +475,10 @@
                 xhr.send(form);
             }
         },
-        doup: function (tp, ct) {
+        doup: function (tp, ct, cb) {
             upload.ct = ct;
             upload.tp = tp;
+            upload.cb = cb;
             if (ct == 1) file.removeAttr("multiple");
             else file.attr("multiple", "multiple");
             file.click();
@@ -401,6 +494,7 @@
             vals += v;
         });
         ipt.val(vals);
+        if (upload.cb) eval(upload.cb + "('" + vals + "','" + upload.ct + "')");
     }
 
     function getname(n) {

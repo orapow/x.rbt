@@ -28,3 +28,4 @@ D:\Pro\x.rbt\src\Web\User\X.App\bin\Debug\X.Web.pdb
 D:\Pro\x.rbt\src\Web\User\X.App\obj\Debug\X.App.csprojResolveAssemblyReference.cache
 D:\Pro\x.rbt\src\Web\User\X.App\obj\Debug\X.App.dll
 D:\Pro\x.rbt\src\Web\User\X.App\obj\Debug\X.App.pdb
+D:\Pro\x.rbt\src\Web\User\X.App\bin\Debug\Gma.QrCodeNet.Encoding.Net35.dll

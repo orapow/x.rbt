@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Web;
 using X.Core.Plugin;
 
@@ -388,6 +389,11 @@ namespace X.Core.Utility
 
         public static string GetHttpData(string url) { return GetHttpData(url, Encoding.UTF8); }
         #endregion
+
+        public static string RemoveHtml(string html)
+        {
+            return Regex.Replace(html, "<[^>]+>([^<]*)</[^>]+>", "$1");
+        }
 
         #region 读写文件
         /// <summary>

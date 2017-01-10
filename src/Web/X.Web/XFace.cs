@@ -68,14 +68,18 @@ namespace X.Web
                         v = Context.Server.HtmlEncode(postes[k]);
                         if (attr.Length > 0) Checker.check(attr[0] as ParmsAttr, v.ToString());
                         break;
-                    case "int64":
-                    case "int32":
-                    case "int16":
                     case "int":
+                    case "int32":
                         var iv = 0;
                         int.TryParse(postes[k], out iv);
                         if (attr.Length > 0) Checker.check(attr[0] as ParmsAttr, iv);
                         v = iv;
+                        break;
+                    case "int64":
+                        long lv = 0;
+                        long.TryParse(postes[k], out lv);
+                        if (attr.Length > 0) Checker.check(attr[0] as ParmsAttr, lv);
+                        v = lv;
                         break;
                     case "decimal":
                         var dev = (decimal)0.0;
@@ -124,31 +128,41 @@ namespace X.Web
                 if (pa.req && v == 0) throw new XExcep("0x0003", pa.name);
 
                 int? min = null, max = null;
-                if (pa.min != null) min = (int)pa.min;
-                if (pa.max != null) max = (int)pa.max;
+                min = Convert.ToInt32(pa.min);
+                max = Convert.ToInt32(pa.max);
 
-                if (min != null && v < min) throw new XExcep("0x0004", String.Format("{0}的值要大于{1}", pa.name, min));
-                if (max != null && v > max) throw new XExcep("0x0004", String.Format("{0}的值要小于{1}", pa.name, min));
+                if (pa.min != null && v < min) throw new XExcep("0x0004", String.Format("{0}的值要大于{1}", pa.name, min));
+                if (pa.max != null && v > max) throw new XExcep("0x0004", String.Format("{0}的值要小于{1}", pa.name, max));
             }
             public static void check(ParmsAttr pa, decimal v)
             {
                 if (pa.req && v == 0) throw new XExcep("0x0003", pa.name);
 
                 if (pa.min == null && pa.max == null) return;
-                decimal min = (decimal)pa.min;
-                decimal max = (decimal)pa.max;
-                if (v < min) throw new XExcep("0x0004", String.Format("{0}的值要大于{1}", pa.name, min));
-                if (v > max) throw new XExcep("0x0004", String.Format("{0}的值要小于{1}", pa.name, min));
+                decimal min = Convert.ToDecimal(pa.min);
+                decimal max = Convert.ToDecimal(pa.max);
+                if (v < min && pa.min != null) throw new XExcep("0x0004", String.Format("{0}的值要大于{1}", pa.name, min));
+                if (v > max && pa.max != null) throw new XExcep("0x0004", String.Format("{0}的值要小于{1}", pa.name, max));
+            }
+            public static void check(ParmsAttr pa, long v)
+            {
+                if (pa.req && v == 0) throw new XExcep("0x0003", pa.name);
+
+                if (pa.min == null && pa.max == null) return;
+                long min = Convert.ToInt64(pa.min);
+                long max = Convert.ToInt64(pa.max);
+                if (v < min && pa.min != null) throw new XExcep("0x0004", String.Format("{0}的值要大于{1}", pa.name, min));
+                if (v > max && pa.max != null) throw new XExcep("0x0004", String.Format("{0}的值要小于{1}", pa.name, max));
             }
             public static void check(ParmsAttr pa, DateTime v)
             {
                 if (pa.req && v == null) throw new XExcep("0x0003", pa.name);
 
                 if (pa.min == null && pa.max == null) return;
-                DateTime min = (DateTime)pa.min;
-                DateTime max = (DateTime)pa.max;
-                if (v < min) throw new XExcep("0x0004", String.Format("{0}的值要大于{1}", pa.name, min));
-                if (v > max) throw new XExcep("0x0004", String.Format("{0}的值要小于{1}", pa.name, min));
+                DateTime min = Convert.ToDateTime(pa.min);
+                DateTime max = Convert.ToDateTime(pa.max);
+                if (v < min && pa.min != null) throw new XExcep("0x0004", String.Format("{0}的值要大于{1}", pa.name, min));
+                if (v > max && pa.max != null) throw new XExcep("0x0004", String.Format("{0}的值要小于{1}", pa.name, max));
             }
         }
 

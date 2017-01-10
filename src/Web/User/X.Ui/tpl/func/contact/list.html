@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    #parse("com/_head.html")
+    <title>橙铺运营助手</title>
+    <style type="text/css">
+        .div_grid { padding: 15px 0; }
+        .div_grid .grid-item:nth-child(10n+1) { margin-left: 0px; }
+        .div_grid .grid-item { cursor: pointer; position: relative; overflow: hidden; display: inline-block; width: 83px; text-align: center; margin-left: 10px; padding: 5px; margin-bottom: 10px; }
+        .div_grid .grid-item .nickname { width: 100%; overflow: hidden; text-overflow: ellipsis; height: 24px; display: block; }
+        .div_grid .grid-item img { width: 72px; height: 72px; }
+        .grid-item { border: 1px solid #ccc; }
+        .bag { background-color: red; color: white; transform: rotate(-45deg); position: absolute; top: -24px; left: -34px; padding: 30px 30px 0px 30px; display: none; }
+        .bag.b2 { display: block; }
+        .group { display: none; }
+        .group .info { height: 34px; border: 1px solid #ccc; padding-right: 5px; margin-left: -1px; }
+        .group div { display: inline-block; }
+        .group .bag { display: none; }
+        .group img { height: 100%; }
+        .t2 { display: inline; }
+        .t1 { display: none; }
+    </style>
+</head>
+<body>
+    #parse("_top.html")
+    <div id="body" class="body">
+        <div id="js_container_box" class="container_box cell_layout side_l">
+            #parse("_left.html")
+            <div class="col_main">
+                <div class="main_hd">
+                    <h2>通讯录</h2>
+                </div>
+                <div class="main_bd">
+                    <ul class="tab_navs">
+                        #foreach($l in $lgs)
+                        <li class="tab_nav" data-uin="$l.uin">
+                            <a href="javascript:;" title="$l.nickname">${l.nickname}($l.count人)</a>
+                        </li>
+                        #end
+                    </ul>
+                    <div class="group">
+                        <div class="btn" onclick="g.getlist({ gid: 0,page:1 }); $(this).parent().hide();"><i class="icon-arrow-left"></i></div><div class="info"></div>
+                    </div>
+                    <div class="div_grid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tpl" style="display:none;">
+        <p class="bag b{flag}" data-id="{id}">群</p>
+        <img src="{headimg}" onerror="this.src='/img/no_u.png'" /><span class="nickname">{nickname}<span class="t{flag}">({count})</span></span>
+    </div>
+    #parse("_foot.html")
+    <script type="text/javascript">
+        var cfg = {
+            el: ".div_grid",
+            searchcon: { page: 1, limit: 40 },
+            api: "contact.list",
+            tpl: $(".tpl").html()
+        };
+
+        var g = null;
+
+        function contactsynced() {
+            g.getlist();
+        }
+
+        $(function () {
+            $(".tab_navs li").click(function () {
+                $("li.selected").removeClass("selected");
+                $(this).addClass("selected");
+                if (g == null) { cfg.searchcon.uin = $(this).attr("data-uin"); g = x.grid.init(cfg); }
+                else g.getlist({ uin: $(this).attr("data-uin"), page: 1, gid: 0 });
+                $(".group").hide();
+            });
+            $(".div_grid").delegate(".grid-item", "click", function () {
+                var item = $(this).find(".bag");
+                if (item.hasClass("b2")) {
+                    g.getlist({ page: 1, gid: item.attr("data-id") }); $(".group").show().find(".info").html($(this).html());
+                }
+            });
+            $(".tab_navs li:eq(0)").click();
+        });
+
+    </script>
+</body>
+</html>

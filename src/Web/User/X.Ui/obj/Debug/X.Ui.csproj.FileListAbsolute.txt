@@ -34,3 +34,4 @@ D:\Pro\x.rbt\src\Web\User\X.Ui\bin\X.Core.pdb
 D:\Pro\x.rbt\src\Web\User\X.Ui\obj\Debug\X.Ui.csprojResolveAssemblyReference.cache
 D:\Pro\x.rbt\src\Web\User\X.Ui\obj\Debug\X.Ui.dll
 D:\Pro\x.rbt\src\Web\User\X.Ui\obj\Debug\X.Ui.pdb
+D:\Pro\x.rbt\src\Web\User\X.Ui\bin\Gma.QrCodeNet.Encoding.Net35.dll

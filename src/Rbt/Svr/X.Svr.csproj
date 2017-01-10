@@ -75,7 +75,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App\Tcp.cs" />
     <Compile Include="App\Wc.cs" />
     <Compile Include="ProjectInstaller.cs">
       <SubType>Component</SubType>
@@ -108,6 +107,10 @@
     <ProjectReference Include="..\Data\X.Data.csproj">
       <Project>{AAB73D4E-97AC-45C8-8E33-FD4C975F330A}</Project>
       <Name>X.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\X.Net\X.Net.csproj">
+      <Project>{f7a04fb8-f06d-487a-91ad-8c875ff4e59e}</Project>
+      <Name>X.Net</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

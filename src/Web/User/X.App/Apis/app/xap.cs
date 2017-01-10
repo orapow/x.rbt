@@ -14,6 +14,7 @@ namespace X.App.Apis.app
         /// 密钥
         /// </summary>
         private string scr = "wa5VVToZZ%C#A47Wzm3$ZgjiIpV^xnWwV#T6BFbPU#zH7EIx*8Pv0B1AmD00RD0g^ieoDJa7Cffn#dDpxUODhBzNG!hAaebrqCN";
+
         public string sign { get; set; }
 
         public decimal lng { get; set; }

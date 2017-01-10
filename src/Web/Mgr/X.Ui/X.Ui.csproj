@@ -129,11 +129,6 @@
     <Content Include="res\plug\um\umeditor.min - 复制.js" />
     <Content Include="res\plug\um\umeditor.min.js" />
     <Content Include="res\css\web\huodong.css" />
-    <Content Include="res\css\web\jifen.css" />
-    <Content Include="res\css\web\shangjia.css" />
-    <Content Include="res\css\web\style.css" />
-    <Content Include="res\css\web\style1.css" />
-    <Content Include="res\css\web\youhuijuan.css" />
     <Content Include="res\img\web\1.jpg" />
     <Content Include="res\img\web\2.jpg" />
     <Content Include="res\img\web\2.png" />

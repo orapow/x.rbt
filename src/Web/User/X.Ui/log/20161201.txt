@@ -1,0 +1,42 @@
+
+时间：2016-12-01 10:43:08,522 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 logon.list","code":"0x0002"} 
+时间：1976759 
+
+时间：2016-12-01 10:57:44,402 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T登陆器不存在)","code":"T登陆器不存在"} 
+时间：848308 
+
+时间：2016-12-01 15:27:39,872 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 msg.save","code":"0x0002"} 
+时间：6090062 
+
+时间：2016-12-01 15:29:51,521 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 msg.save","code":"0x0002"} 
+时间：6221711 
+
+时间：2016-12-01 15:29:55,507 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 msg.save","code":"0x0002"} 
+时间：6225697 
+
+时间：2016-12-01 15:30:09,541 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 msg.save","code":"0x0002"} 
+时间：6239731 

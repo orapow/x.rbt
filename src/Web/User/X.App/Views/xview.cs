@@ -16,24 +16,25 @@ namespace X.App.Views
         /// 系统配置文件
         /// </summary>
         protected Config cfg = null;
-        /// <summary>
-        /// 
-        /// </summary>
         protected x_user cu = null;
+
+        protected virtual bool needus { get { return true; } }
 
         protected virtual string menu_id { get { return ""; } }
 
         protected override void InitView()
         {
-
             base.InitView();
             cfg = Config.LoadConfig();
             dict.Add("cfg", cfg);
 
-            cu = DB.x_user.FirstOrDefault(o => o.user_id == 1);
-            dict.Add("cu", cu);
+            var uk = GetReqParms("ukey");
+            cu = DB.x_user.FirstOrDefault(o => o.ukey == uk);
 
-            dict.Add("m" + menu_id, "selected");
+            if (cu == null && needus) throw new XExcep("0x0006");
+            else dict.Add("cu", cu);
+
+            if (!string.IsNullOrEmpty(menu_id)) dict.Add("m" + menu_id, "selected");
         }
     }
 }

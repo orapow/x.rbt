@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using X.App.Com;
 using X.Data;
+using X.Web;
 using X.Web.Apis;
 
 namespace X.App.Apis
@@ -13,10 +14,16 @@ namespace X.App.Apis
         /// </summary>
         protected x_user cu = null;
 
+        protected virtual bool needus { get { return true; } }
+
         protected override void InitApi()
         {
             base.InitApi();
-            cu = DB.x_user.FirstOrDefault(o => o.user_id == 1);
+
+            var uk = GetReqParms("ukey");
+            cu = DB.x_user.FirstOrDefault(o => o.ukey == uk);
+
+            if (cu == null && needus) throw new XExcep("0x0006");
         }
     }
 }

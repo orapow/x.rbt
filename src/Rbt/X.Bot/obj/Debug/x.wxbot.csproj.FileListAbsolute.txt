@@ -1,0 +1,8 @@
+D:\Pro\x.rbt\src\Rbt\x.wxbot\bin\Debug\x.wxbot.exe
+D:\Pro\x.rbt\src\Rbt\x.wxbot\bin\Debug\x.wxbot.pdb
+D:\Pro\x.rbt\src\Rbt\x.wxbot\obj\Debug\x.wxbot.csprojResolveAssemblyReference.cache
+D:\Pro\x.rbt\src\Rbt\x.wxbot\obj\Debug\x.wxbot.fr_main.resources
+D:\Pro\x.rbt\src\Rbt\x.wxbot\obj\Debug\x.wxbot.Properties.Resources.resources
+D:\Pro\x.rbt\src\Rbt\x.wxbot\obj\Debug\x.wxbot.csproj.GenerateResource.Cache
+D:\Pro\x.rbt\src\Rbt\x.wxbot\obj\Debug\x.wxbot.exe
+D:\Pro\x.rbt\src\Rbt\x.wxbot\obj\Debug\x.wxbot.pdb

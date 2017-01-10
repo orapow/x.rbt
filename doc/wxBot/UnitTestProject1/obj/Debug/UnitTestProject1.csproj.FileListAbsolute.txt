@@ -1,0 +1,11 @@
+D:\Pro\x.rbt\doc\wxBot\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+D:\Pro\x.rbt\doc\wxBot\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+D:\Pro\x.rbt\doc\wxBot\UnitTestProject1\bin\Debug\log4net.dll
+D:\Pro\x.rbt\doc\wxBot\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Pro\x.rbt\doc\wxBot\UnitTestProject1\bin\Debug\wxBot.dll
+D:\Pro\x.rbt\doc\wxBot\UnitTestProject1\bin\Debug\Newtonsoft.Json.Net20.dll
+D:\Pro\x.rbt\doc\wxBot\UnitTestProject1\bin\Debug\wxBot.pdb
+D:\Pro\x.rbt\doc\wxBot\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
+D:\Pro\x.rbt\doc\wxBot\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+D:\Pro\x.rbt\doc\wxBot\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+D:\Pro\x.rbt\doc\wxBot\UnitTestProject1\bin\Debug\UnitTestProject1.dll.config

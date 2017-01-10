@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("wx/_head.html")
+    <title>#if($issucc)登陆成功#else登陆失败#end</title>
+</head>
+<body>
+    <div class="weui-msg">
+        #if($issucc)
+        <div class="weui-msg__icon-area"><img src="$cu.headimg" width="90" /></div>
+        <div class="weui-msg__text-area">
+            <h2 class="weui-msg__title">$cu.nickname</h2>
+            <p class="weui-msg__desc">您已经成功登陆，欢迎使用</p>
+        </div>
+        #else
+        <div class="weui-msg__icon-area"><i class="weui-icon-warn weui-icon_msg"></i></div>
+        <div class="weui-msg__text-area">
+            <h2 class="weui-msg__title">登陆失败</h2>
+            <p class="weui-msg__desc">当前登陆不成功，参数丢失</p>
+        </div>
+        #end
+        <!--<div class="weui-msg__opr-area">
+            <p class="weui-btn-area">
+                <a href="javascript:WeixinJSBridge.call('closeWindow');" class="weui-btn weui-btn_primary">关闭页面</a>
+                #if($issucc)<a href="javascript:history.back();" class="weui-btn weui-btn_default">退出登陆</a>#end
+            </p>
+        </div>-->
+        <div class="weui-msg__extra-area">
+            <div class="weui-footer">
+                <p class="weui-footer__links">
+                    <a href="javascript:void(0);" class="weui-footer__link">微信机器人</a>
+                </p>
+                <p class="weui-footer__text">Copyright © 80xc.com</p>
+            </div>
+        </div>
+    </div>
+    #parse("wx/_foot.html")
+    #if($issucc)
+    <script type="text/javascript">
+        setTimeout(function () {
+            WeixinJSBridge.call('closeWindow');
+        }, 1500);
+    </script>
+    #end
+</body>
+</html>

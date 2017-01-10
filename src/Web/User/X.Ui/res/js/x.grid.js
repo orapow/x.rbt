@@ -3,7 +3,7 @@
     var gDom = $(cfg.el);
     this.getlist = function (d, callback) {
         var g = this;
-        $(g.config.el + " .btn.btn-primary.pi").html("<span class='loading'>数据加载中...</span>");
+        //$(g.config.el + " .btn.btn-primary.pi").html("<span class='loading'>数据加载中...</span>");
         g.config.scroll = $(g.config.el + " .grid.body").scrollTop();
         var pd = $.extend(true, g.config.searchcon, d);
         x.doapi(g.config.api, pd, function (data) {
@@ -11,7 +11,7 @@
             render(data);
             $(g.config.el + " .grid.body").scrollTop(g.config.scroll);
             if (callback) callback();
-        });
+        }, false);
     }
     this.settpl = function (tp) {
         var g = this;
@@ -21,9 +21,9 @@
     var g = this;
     bindevt();
     this.getlist({ page: 1 });
-    $(window).resize(function () {
-        $(cfg.el + " .grid.body").css("max-height", $(window).height() - $(".title").outerHeight() - $(".search").outerHeight() - $(cfg.el + " .grid.head").outerHeight() - $(cfg.el + " .grid.pager").outerHeight() - 50 - cfg.exheight)
-    });
+    //$(window).resize(function () {
+    //    $(cfg.el + " .grid.body").css("max-height", $(window).height() - $(".title").outerHeight() - $(".search").outerHeight() - $(cfg.el + " .grid.head").outerHeight() - $(cfg.el + " .grid.pager").outerHeight() - 50 - cfg.exheight)
+    //});
     function bindevt() {
         gDom.delegate(".grid-item", "dblclick", function (evt) {
             clearTimeout(cfg.clicktimer);
@@ -37,8 +37,6 @@
             cfg.clicktimer = setTimeout(function () {
                 if (cfg.rowclick) cfg.rowclick(tr.data("data"));
             }, 300);
-        }).delegate(".pager [i]", "click", function () {
-            g.getlist({ page: $(this).attr("i") });
         }).delegate(":checkbox[d]", "click", function (e) {
             if ($(this).attr("checked")) gDom.find(".grid-item[d='" + $(this).attr("d") + "']").attr("sel", "true");
             else gDom.find(".grid-item[d='" + $(this).attr("d") + "']").removeAttr("sel");
@@ -105,35 +103,44 @@
         g.html("");
         var h = gDom.find("th[f]");
         var p = gDom.find(".pager");
+
         if (!d[cfg.listvar] || d[cfg.listvar].length === 0) {
             var t = $("<tr><td cols=" + h.length + ">没有找到相关数据</td></tr>");
-            $(cfg.el + " .pull-right.pagination").hide();
-            $(cfg.el + " .btn.btn-primary.pi").html("没有找到相关数据");
+            p.hide();
             g.append(t);
             return;
         }
+
         var pz = cfg.searchcon.limit;
         var pc = Math.ceil(d.count / pz);
-        p.find(".pi").html(pz + "条/页，" + "共" + d.count + "条，当前" + d.page + "页/共" + pc + "页");
+        //p.find(".pi").html(pz + "条/页，" + "共" + d.count + "条");//，当前" + d.page + "页/共" + pc + "页"
 
-        if (d.count <= pz) gDom.find(".pull-right.pagination").hide();
-        else { gDom.find(".pull-right.pagination").show(); }
+        //if (d.count <= pz) gDom.find(".pull-right.pagination").hide();
+        //else { gDom.find(".pull-right.pagination").show(); }
 
-        var pb = p.find(".grid.pages");
+        var pb = p.find(".pages");
+        if (pc <= 1) p.hide();
+
         pb.html("");
+        p.show();
 
-        if (d.page > 1) pb.append('<li><a title="上一页" class="btn" i="' + (d.page - 1) + '"><i class="icon-angle-left"></i>上一页</a></li>');
-        var cp = cfg.cpage;
-        var s = d.page - Math.floor(cp / 2);
-        if (s <= 1) s = 1;
-        if (s > pc - cp) s = pc - cp + 1;
-        if (pc < cp) { s = 1; cp = pc; }
-        for (var i = s; i < s + cp; i++) {
-            if (d.page == i) pb.append('<li><a title="第' + i + '页" class="btn btn-primary"  i="' + i + '">' + i + '</a></li>');
-            else pb.append('<li><a title="第' + i + '页" class="btn"  i="' + i + '">' + i + '</a></li>');
-        }
+        if (d.page > 1) pb.append("<span class='btn' onclick='g.getlist({page:" + (d.page - 1) + "})'><i class='icon-caret-left'></i></span>");
+        pb.append("<span class='page_num'> " + d.page + " / " + pc + " </span>");
+        if (d.page < pc) pb.append("<span class='btn' onclick='g.getlist({page:" + (d.page + 1) + "})'><i class='icon-caret-right'></i></span>");
+        pb.append("<input type='text' id='page_goto'/><span class='btn' onclick='g.getlist({page:$(this).prev().val()})'>跳转</span>");
 
-        if (d.page < pc) pb.append('<li><a title="下一页" class="btn"  i="' + (d.page + 1) + '">下一页<i class="icon-angle-right"></i></a></li>');
+        //if (d.page > 1) pb.append('<li><a title="上一页" class="btn" i="' + (d.page - 1) + '"><i class="icon-angle-left"></i>上一页</a></li>');
+        //var cp = cfg.cpage;
+        //var s = d.page - Math.floor(cp / 2);
+        //if (s <= 1) s = 1;
+        //if (s > pc - cp) s = pc - cp + 1;
+        //if (pc < cp) { s = 1; cp = pc; }
+        //for (var i = s; i < s + cp; i++) {
+        //    if (d.page == i) pb.append('<li><a title="第' + i + '页" class="btn btn-primary"  i="' + i + '">' + i + '</a></li>');
+        //    else pb.append('<li><a title="第' + i + '页" class="btn"  i="' + i + '">' + i + '</a></li>');
+        //}
+
+        //if (d.page < pc) pb.append('<li><a title="下一页" class="btn"  i="' + (d.page + 1) + '">下一页<i class="icon-angle-right"></i></a></li>');
     }
     function rendertable(body, d) {
         body.append("<table class='table' grid='body'></table>");
@@ -249,9 +256,6 @@
         if (cfg.showpager) {
             renderpager(g, d);
         }
-        else {
-            gDom.find(".pager").hide();
-        }
         if (cfg.tpl) {
             rendertpl(g, d);
         } else {
@@ -280,14 +284,8 @@ x.grid.init = function (cfg) {
         btns: [],
         shownumber: true,
         html: '<div class="grid head">{head}</div>' +
-                '<div class="grid body" exh="180">' +
-                '</div>' +
-                '<div class="grid pager">' +
-                '<hr/>' +
-                '<a class="btn pi">共0条，1页/1页</a>' +
-                '<div class="pull-right pagination" style="display:none;">' +
-                '<ul class="grid pages"></ul>' +
-                '</div>'
+              '<div class="grid body" exh="180"></div>' +
+              '<div class="grid pager"><div class="pages"></div></div>'
     };
     cfg = $.extend(true, option, cfg);
     return new x.grid(cfg);

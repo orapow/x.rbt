@@ -30,6 +30,15 @@ namespace X.App.Com
         /// </summary>
         public int cache { get; set; }
 
+        public string wx_appid { get; set; }
+        public string wx_scr { get; set; }
+        public string wx_mch_id { get; set; }
+        /// <summary>
+        /// 微信证书路径
+        /// </summary>
+        public string wx_certpath { get; set; }
+        public string wx_paykey { get; set; }
+
         private static string file = HttpContext.Current.Server.MapPath("/dat/cfg.x");
         private static Config cfg = null;
         /// <summary>

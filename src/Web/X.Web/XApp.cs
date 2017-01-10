@@ -35,8 +35,7 @@ namespace X.Web
                 var rsp = new XResp(fe.ErrCode, fe.ErrMsg);
                 if (t == 1)
                 {
-                    var view = assb.CreateInstance(String.Format("X.App.Views.{0}.err", v.Split('.')[0])) as Views.View;
-                    if (view == null) view = assb.CreateInstance("X.App.Views.com.err") as Views.View;
+                    var view = assb.CreateInstance("X.App.Views.com.err") as Views.View;
                     view.Init(c);
                     view.dict.Add("rsp", rsp);
                     view.dict.Add("backurl", Secret.ToBase64(c.Request.RawUrl));
