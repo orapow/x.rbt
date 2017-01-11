@@ -100,6 +100,7 @@ namespace X.Wx.App
             if (url.Contains("https://")) ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback((object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors errors) => { return true; });
 
             var req = (HttpWebRequest)WebRequest.Create(url);
+            req.Proxy = null;
             req.Accept = "application/json, text/plain, */*";
             req.ServicePoint.ConnectionLimit = 512;
             req.ServicePoint.Expect100Continue = false;

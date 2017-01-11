@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("com/_head.html")
+    <title>用户登陆 - $cfg.name</title>
+    <style type="text/css">
+        body { padding: 0; margin: 0; position: relative; height: 100%; }
+        .login.form { background: white; box-shadow: 0 0 10px 3px #ccc; border: 1px solid #ccc; border-radius: 5px; left: 50%; margin-left: -110px; margin-top: -172px; padding: 10px; position: fixed; top: 50%; width: 220px; }
+        h1.logo { margin: 0; display: block; width: 100%; margin-bottom: 30px; padding: 10px; font-family: 'Microsoft YaHei'; font-size: 12pt; font-weight: normal; }
+        .btns { text-align: right; margin-top: 15px; }
+        .x-form { margin-left: 30px; }
+        .x-form .btns { position: relative; }
+        .foot { position: absolute; bottom: 0; width: 100%; }
+        .cot { text-align: center; }
+    </style>
+</head>
+<body>
+
+    <div class="form login">
+        <h1 class="logo">微信机器人</h1>
+        <div class="cot">
+            #if($isin==1)
+            <img src="$cu.headimg" width="130" />
+            <p style="margin-top:40px;">$cu.nickname 已登陆<br />正在跳转，请稍后...</p>
+            <p style="font-size:12px;color:#ccc;margin-top:20px; margin-bottom:20px;">© 80xc.com</p>
+            <script type="text/javascript">
+                setTimeout(function () {
+                    document.location.href = "/index.html";
+                }, 1500);
+            </script>
+            #else
+            <img src="data:image/jpeg;base64,$!qrcode" width="130" />
+            <p style="font-size:10.5pt;margin-top:40px;" class="txt">扫码登陆你的帐号</p>
+            <p style="font-size:12px;color:#ccc;margin-top:20px; margin-bottom:20px;">© 80xc.com</p>
+            <script type="text/javascript">
+                dologin();
+                function dologin() {
+                    x.doapi("login", { code: "$!code" }, function (d) {
+                        if (!d.issucc) {
+                            document.location.reload();//dologin();
+                        }
+                        else {
+                            x.cookie.set("ukey", d.ukey);
+                            $(".cot img").attr("src", d.headimg);
+                            $(".cot .txt").html(d.nickname + " 已登陆<br/>正在跳转，请稍后...");
+                        }
+                        setTimeout(function () {
+                            document.location.href = "/index.html";
+                        }, 1500);
+                    }, false);
+                }
+            </script>
+            #end
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        $("form:eq(0)").xform({
+            callback: function (d) {
+                if (d.issucc) {
+                    x.cookie.set("ukey", d.msg);
+                    document.location.href = "$!backurl" || "/index.html"
+                }
+            }
+        });
+        //$(function () {
+        //    $(window).resize(function () {
+        //        $("body").height($(document).height());
+        //    });
+        //    $(window).resize();
+        //});
+        function showcode() {
+            var uid = $("#id_uin").val();
+            if (!uid) x.alert("用户名不能为空");
+            else $("#img_code").attr("src", "/com/code-" + uid + ".html?" + new Date().getTime());
+        }
+    </script>
+</body>
+</html>

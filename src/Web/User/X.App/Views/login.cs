@@ -48,7 +48,7 @@ namespace X.App.Views
             {
                 var code = Tools.GetRandRom(16, 3);
                 var qr = new QrEncoder();
-                var cd = qr.Encode("http://rbt.tunnel.qydev.com/wx/login-" + code + ".html");
+                var cd = qr.Encode("http://" + cfg.domain + "/wx/login-" + code + ".html");
                 var rd = new GraphicsRenderer(new FixedModuleSize(15, QuietZoneModules.Two));
 
                 using (var ms = new MemoryStream())

@@ -74,11 +74,11 @@
     <Compile Include="Base.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Log.cs">
+    <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Log.Designer.cs">
-      <DependentUpon>Log.cs</DependentUpon>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -114,8 +114,8 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Log.resx">
-      <DependentUpon>Log.cs</DependentUpon>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -135,6 +135,7 @@
     <None Include="Resources\no_u.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\r.png" />
     <None Include="Resources\loading.gif" />
     <None Include="Resources\dot.png" />
     <None Include="Resources\bag.png" />

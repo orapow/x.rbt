@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using X.Core.Utility;
 using X.Data;
 using X.Web.Com;
@@ -13,15 +14,20 @@ namespace X.App.Apis.contact
         [ParmsAttr(name = "uin", min = 1)]
         public long uin { get; set; }
 
+        public string gpname { get; set; }
         [ParmsAttr(name = "data", req = true)]
         public string data { get; set; }
+
+        long? gid = 0;
 
         protected override XResp Execute()
         {
             var list = Serialize.FromJson<List<Contact>>(Context.Server.HtmlDecode(data));
             if (list == null) return new XResp();
 
-            var cts = cu.x_contact.Where(o => o.uin == uin);
+            if (!string.IsNullOrEmpty(gpname)) gid = cu.x_contact.FirstOrDefault(o => o.uin == uin && o.username == gpname)?.contact_id;
+
+            var cts = cu.x_contact.Where(o => o.uin == uin && o.group_id == gid);
 
             tocontact(list.ToList(), cts.ToList());
 
@@ -35,42 +41,38 @@ namespace X.App.Apis.contact
                 Contact u = null;
 
                 if (!string.IsNullOrEmpty(c.wxno)) u = list.FirstOrDefault(o => c.wxno == o.Alias);
-                else if (!string.IsNullOrEmpty(u.RemarkName)) u = list.FirstOrDefault(o => c.remarkname == o.RemarkName && c.nickname == o.NickName);
+                else if (!string.IsNullOrEmpty(c.remarkname)) u = list.FirstOrDefault(o => c.remarkname == o.RemarkName);
                 else u = list.FirstOrDefault(o => o.NickName == c.nickname);
 
                 if (u == null) DB.x_contact.DeleteOnSubmit(c);
                 else
                 {
-                    c.imgurl = u.HeadImgUrl;
-                    c.membercount = u.MemberCount;
-                    c.nickname = u.NickName;
-                    c.remarkname = u.RemarkName;
-                    c.roomid = u.EncryChatRoomId;
-                    c.signature = u.Signature;
-                    c.username = u.UserName;
-                    c.wxno = u.Alias;
-
-                    if (u.MemberList != null)
-                    {
-                        tocontact(u.MemberList, cts.Where(o => o.group_id == c.contact_id).ToList());
-                    }
-
+                    getcot(u, c);
                     list.Remove(u);
                 }
             }
 
-            foreach (var u in list)
-            {
-                var c = new x_contact() { user_id = cu.user_id, uin = uin };
-                c.imgurl = u.HeadImgUrl;
-                c.membercount = u.MemberCount;
-                c.nickname = u.NickName;
-                c.remarkname = u.RemarkName;
-                c.roomid = u.EncryChatRoomId;
-                c.signature = u.Signature;
-                c.username = u.UserName;
-                c.wxno = u.Alias;
-            }
+            foreach (var u in list) DB.x_contact.InsertOnSubmit(getcot(u, null));
+
+            SubmitDBChanges();
+
+        }
+
+        x_contact getcot(Contact u, x_contact c)
+        {
+            if (c == null) c = new x_contact() { user_id = cu.user_id, uin = uin };
+            var tel = new Regex("(1[\\d]{10})").Match(u.NickName);
+            if (tel.Success) c.tel = tel.Groups[1].Value;
+            c.imgurl = u.HeadImgUrl;
+            c.membercount = u.MemberCount;
+            c.nickname = u.NickName;
+            c.remarkname = u.RemarkName;
+            c.group_id = gid;
+            c.roomid = u.EncryChatRoomId;
+            c.signature = u.Signature;
+            c.username = u.UserName;
+            c.wxno = u.Alias;
+            return c;
         }
 
         /// <summary>

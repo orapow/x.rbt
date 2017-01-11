@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    #parse("com/_head.html")
+    <title>橙铺运营助手</title>
+    <style type="text/css">
+        p.t1 { display: block; }
+        p.t2 { display: none; }
+        img.t1 { display: none; }
+        img.t2 { display: block; }
+        .grid-item { display: inline-block; margin-left: 20px; margin-bottom: 20px; width: 180px; position: relative; vertical-align: top; }
+        .grid-item .cot { height: 150px; width: 100%; padding: 5px; border: 1px solid #ccc; display: block; cursor: pointer; }
+        .grid-item .text { border: 1px solid #ccc; margin-top: -1px; display: block; padding: 5px; }
+        .grid-item:nth-child(5n+1) { margin-left: 0px; }
+        .cot img { max-width: 100%; max-height: 150px; }
+        .close { position: absolute; top: -10px; right: -10px; display: block; width: 20px; color: white; height: 20px; border-radius: 50%; background-color: red; text-align: center; line-height: 20px; font-size: 10px; cursor: pointer; }
+        .k1.s2 { display: none; }
+        .k2.s2 { display: none; }
+        .k2.s1, .k3.s1 { display: block; }
+        .tip { padding: 9px 30px; background-color: #f4f5f9; line-height: 1.6; width: 1019px; }
+    </style>
+</head>
+<body>
+    #parse("_top.html")
+    <div id="body" class="body">
+        <div id="js_container_box" class="container_box cell_layout side_l">
+            #parse("_left.html")
+            <div class="col_main">
+                <div class="main_hd">
+                    <h2>自动回复</h2>
+                </div>
+                <div class="tip">
+                    通过编辑内容或关键词规则，快速进行自动回复设置。<br />
+                    默认回复只对好友有效，如果同条件下设置了多个回复则随机发送回复内容。
+                </div>
+                <div class="main_bd">
+                    <ul class="tab_navs">
+                        <li class="tab_nav" data-tp="1"><a href="javascript:;">被添加</a></li>
+                        <li class="tab_nav" data-tp="2"><a href="javascript:;">新人入群</a></li>
+                        <li class="tab_nav" data-tp="3"><a href="javascript:;">默认回复</a></li>
+                        <li class="tab_nav" data-tp="4"><a href="javascript:;">关键字回复</a></li>
+                    </ul>
+                    <div class="btns" style="text-align:right; margin-bottom:30px;"><span class="btn btn-warning" onclick="show_eidt()"><i class="icon-plus"></i> 新建回复</span></div>
+                    <div class="div_grid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tpl" style="display:none;">
+        <i class="icon-remove close" onclick="delreply(this,{id})"></i>
+        <span class="cot" data-id="{id}">
+            <p class="t{type}">{content}</p>
+            <img src="{content}" onerror="this.src='/img/no.jpg'" class="t{type}" />
+        </span>
+        <span class="text k{tp} s1">
+            适用：所有人
+        </span>
+        <span class="text k{tp} s2">
+            关键字：{keys}<br />
+            匹　配：{match}
+        </span>
+    </div>
+    #parse("_foot.html")
+    <script type="text/javascript">
+
+        var g = null;
+
+        var cfg = {
+            el: ".div_grid",
+            searchcon: { page: 1, limit: 40 },
+            api: "reply.list",
+            tpl: $(".tpl").html()
+        };
+
+        function delreply(obj, id) {
+            x.doapi("reply.del", { id: id }, function (d) {
+                if (!d.issucc) return;
+                $(obj).parents(".grid-item").fadeOut();
+                g.getlist();
+            }, false);
+            event.stopPropagation();
+        }
+
+        function show_eidt(id) {
+            x.openwin("edit-" + (id || "") + ".html", "回复编辑", function () { g.getlist({ page: 1 }); }, { w: 650, h: 450 });
+        }
+
+        $(function () {
+            $(".tab_navs li").click(function () {
+                $("li.selected").removeClass("selected");
+                $(this).addClass("selected");
+                if (g == null) { cfg.searchcon.tp = $(this).attr("data-tp"); g = x.grid.init(cfg); }
+                else g.getlist({ tp: $(this).attr("data-tp"), page: 1 });
+            });
+            $(".tab_navs li:eq(0)").click();
+
+            $(".div_grid").delegate(".cot", "click", function () {
+                show_eidt($(this).attr("data-id"));
+            });
+
+        });
+
+    </script>
+</body>
+</html>

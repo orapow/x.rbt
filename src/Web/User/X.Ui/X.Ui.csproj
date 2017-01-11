@@ -122,6 +122,7 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="Properties\PublishProfiles\rbt.usr.pubxml" />
     <None Include="Properties\PublishProfiles\x.erp.pubxml" />
     <None Include="Properties\PublishProfiles\xc.site.pubxml" />
     <None Include="Properties\PublishProfiles\zfw.web.flash.pubxml" />

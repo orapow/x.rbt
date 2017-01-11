@@ -1,0 +1,16 @@
+D:\Pro\x.rbt\src\Web\User\X.App\obj\Release\X.App.csprojResolveAssemblyReference.cache
+D:\Pro\x.rbt\src\Web\User\X.App\bin\Release\X.App.dll
+D:\Pro\x.rbt\src\Web\User\X.App\bin\Release\X.App.pdb
+D:\Pro\x.rbt\src\Web\User\X.App\bin\Release\Gma.QrCodeNet.Encoding.Net35.dll
+D:\Pro\x.rbt\src\Web\User\X.App\bin\Release\X.Core.dll
+D:\Pro\x.rbt\src\Web\User\X.App\bin\Release\X.Data.dll
+D:\Pro\x.rbt\src\Web\User\X.App\bin\Release\X.Web.dll
+D:\Pro\x.rbt\src\Web\User\X.App\bin\Release\log4net.dll
+D:\Pro\x.rbt\src\Web\User\X.App\bin\Release\X.Json.dll
+D:\Pro\x.rbt\src\Web\User\X.App\bin\Release\NVelocity.dll
+D:\Pro\x.rbt\src\Web\User\X.App\bin\Release\Enyim.Caching.dll
+D:\Pro\x.rbt\src\Web\User\X.App\bin\Release\X.Core.pdb
+D:\Pro\x.rbt\src\Web\User\X.App\bin\Release\X.Data.pdb
+D:\Pro\x.rbt\src\Web\User\X.App\bin\Release\X.Web.pdb
+D:\Pro\x.rbt\src\Web\User\X.App\obj\Release\X.App.dll
+D:\Pro\x.rbt\src\Web\User\X.App\obj\Release\X.App.pdb

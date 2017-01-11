@@ -18,7 +18,7 @@ namespace X.App.Apis.reply
             foreach (var m in cu.x_reply)
             {
                 List<x_contact> us = null;
-                if (string.IsNullOrEmpty(m.uids)) us = cu.x_contact.Where(o => o.user_id == m.user_id).ToList();
+                if (string.IsNullOrEmpty(m.uids) || m.uids == "[]") us = cu.x_contact.Where(o => o.user_id == m.user_id).ToList();
                 else us = cu.x_contact.Where(o => Serialize.FromJson<List<long>>(System.Web.HttpUtility.HtmlDecode(m.uids)).Contains(o.contact_id)).ToList();
 
                 if (us == null) continue;
@@ -27,7 +27,7 @@ namespace X.App.Apis.reply
                 {
                     m.type,
                     m.content,
-                    keys = m.keys.Split(' '),
+                    keys = m.keys?.Split(' '),
                     m.match,
                     m.tp,
                     users = us.Select(o => o.username).ToArray()

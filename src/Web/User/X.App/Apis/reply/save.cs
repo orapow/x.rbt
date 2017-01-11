@@ -35,7 +35,7 @@ namespace X.App.Apis.reply
             if (type == 1) m.content = text;
             else if (type == 2) m.content = img;
 
-            if (tp == 3)
+            if (tp == 4)
             {
                 m.match = match;
                 m.keys = keys;

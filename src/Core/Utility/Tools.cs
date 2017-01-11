@@ -392,7 +392,9 @@ namespace X.Core.Utility
 
         public static string RemoveHtml(string html)
         {
-            return Regex.Replace(html, "<[^>]+>([^<]*)</[^>]+>", "$1");
+            html = Regex.Replace(html, "<[^>]+>([^<]*)</[^>]+>", "$1");
+            html = Regex.Replace(html, "<[^>]+/>", "");
+            return html;
         }
 
         #region 读写文件

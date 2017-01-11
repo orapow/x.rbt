@@ -6,7 +6,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using X.Core.Utility;
-using System.IO;
 using System.Web;
 
 namespace X.Wx.App
@@ -58,7 +57,11 @@ namespace X.Wx.App
 
             new Thread(o =>
             {
-                while (!isquit) SyncCheck();
+                while (!isquit)
+                {
+                    SyncCheck();
+                    Thread.Sleep(2 * 1000);
+                }
 
             }).Start();
 
@@ -139,6 +142,7 @@ namespace X.Wx.App
                 var rt = false;
                 if (type == 1) rt = sendText(u, content);
                 else if (type == 2) rt = sendImg(u, mmid);
+                else if (type == 3) rt = sendText(u, content, 42);
                 i++;
                 if (!rt) Thread.Sleep(Tools.GetRandNext(5000, 30000));
                 else if (i == 5) { Thread.Sleep(Tools.GetRandNext(3000, 8000)); i = 1; }
@@ -150,17 +154,17 @@ namespace X.Wx.App
         /// <summary>
         /// 通过好友验证
         /// </summary>
-        public void VerifyUser()
+        public void VerifyUser(int p, int[] sl, string vul)
         {
             var url = string.Format("https://wx.qq.com/cgi-bin/mmwebwx-bin/webwxverifyuser?r={0}&pass_ticket={1}", getcurrentseconds(), passticket);
             var o = new
             {
                 BaseRequest = baseRequest,
-                Opcode = 0,
-                SceneList = new int[] { 33 },
-                SceneListCount = 1,
+                Opcode = p,
+                SceneList = sl,
+                SceneListCount = sl.Length,
                 VerifyContent = "",
-                VerifyUserList = new string[] { "" },
+                VerifyUserList = vul,
                 skey = baseRequest.Skey
             };
 
@@ -390,8 +394,8 @@ namespace X.Wx.App
         void outLog(string msg)
         {
             //Console.WriteLine("log@" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + ":->" + msg);
-            Debug.WriteLine("log@" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + ":->" + msg);
-            OutLog?.Invoke("log@" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "->" + msg);
+            //Debug.WriteLine("log@" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + ":->" + msg);
+            OutLog?.Invoke(msg);
         }
 
         /// <summary>
@@ -538,6 +542,8 @@ namespace X.Wx.App
             var rsp = wc.GetStr(url);
             if (rsp.err) return;
 
+            rsp.data = Tools.RemoveHtml(rsp.data + "");
+
             contacts = Serialize.FromJson<List<Contact>>(rsp.data + "", "MemberList").Where(o => o.KeyWord != "gh_" && o.UserName[0] == '@').ToList();
 
             var nks = new Dictionary<string, int>();
@@ -548,36 +554,39 @@ namespace X.Wx.App
                 else nks.Add(c.NickName, 0);
             }
 
-            var qgps = contacts.Where(o => o.UserName[1] == '@');
-
-            for (var i = 1; i <= Math.Ceiling(qgps.Count() / 50.0); i++)
+            new Thread(() =>
             {
-                var gs = qgps.Skip((i - 1) * 50)
-                    .Take(50)
-                    .Select(o => new
-                    {
-                        EncryChatRoomId = o.EncryChatRoomId,
-                        UserName = o.UserName
-                    });
-
-                if (gs.Count() == 0) break;
-
-                rsp = wc.PostStr(gateway + "/cgi-bin/mmwebwx-bin/webwxbatchgetcontact?type=ex&r=" + getcurrentseconds(),//群组
-                    Serialize.ToJson(new
-                    {
-                        BaseRequest = baseRequest,
-                        Count = gs.Count(),
-                        List = gs.ToList()
-                    }));
-
-                if (rsp.err) { outLog("群组获取失败"); break; }
-
-                foreach (var c in Serialize.FromJson<List<Contact>>(rsp.data + "", "ContactList"))
+                var qgps = contacts.Where(o => o.UserName[1] == '@');
+                for (var i = 1; i <= Math.Ceiling(qgps.Count() / 50.0); i++)
                 {
-                    var g = contacts.FirstOrDefault(o => o.UserName == c.UserName);
-                    g.MemberList.AddRange(c.MemberList);
+                    var gs = qgps.Skip((i - 1) * 50)
+                        .Take(50)
+                        .Select(o => new
+                        {
+                            EncryChatRoomId = o.EncryChatRoomId,
+                            UserName = o.UserName
+                        });
+
+                    if (gs.Count() == 0) break;
+
+                    rsp = wc.PostStr(gateway + "/cgi-bin/mmwebwx-bin/webwxbatchgetcontact?type=ex&r=" + getcurrentseconds(),//群组
+                        Serialize.ToJson(new
+                        {
+                            BaseRequest = baseRequest,
+                            Count = gs.Count(),
+                            List = gs.ToList()
+                        }));
+
+                    if (rsp.err) { outLog("群组获取失败"); break; }
+
+                    foreach (var c in Serialize.FromJson<List<Contact>>(rsp.data + "", "ContactList"))
+                    {
+                        var g = contacts.FirstOrDefault(o => o.UserName == c.UserName);
+                        g.MemberList.AddRange(c.MemberList);
+                    }
                 }
-            }
+                ContactLoaded?.Invoke(contacts);
+            }).Start();
 
             outLog("通讯录获取完成！");
             ContactLoaded?.Invoke(contacts);
@@ -637,12 +646,13 @@ namespace X.Wx.App
 
         }
 
+        bool sendText(string ToUserName, string Content) { return sendText(ToUserName, Content, 1); }
         /// <summary>
         /// 发送消息
         /// </summary>
         /// <param name="ToUserName"></param>
         /// <param name="Content"></param>
-        bool sendText(string ToUserName, string Content)
+        bool sendText(string ToUserName, string Content, int type)
         {
             string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxsendmsg?pass_ticket={1}", gateway, passticket);
             Content = Content.Replace("<br/>", "\n");
@@ -651,7 +661,7 @@ namespace X.Wx.App
                 BaseRequest = baseRequest,
                 Msg = new
                 {
-                    Type = 1,
+                    Type = type,
                     Content = Content,
                     FromUserName = user.UserName,
                     ToUserName = ToUserName,

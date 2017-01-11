@@ -1,0 +1,13 @@
+D:\Pro\x.rbt\src\Web\X.Web\bin\Release\X.Web.dll
+D:\Pro\x.rbt\src\Web\X.Web\bin\Release\X.Web.pdb
+D:\Pro\x.rbt\src\Web\X.Web\bin\Release\X.Core.dll
+D:\Pro\x.rbt\src\Web\X.Web\bin\Release\X.Data.dll
+D:\Pro\x.rbt\src\Web\X.Web\bin\Release\log4net.dll
+D:\Pro\x.rbt\src\Web\X.Web\bin\Release\X.Json.dll
+D:\Pro\x.rbt\src\Web\X.Web\bin\Release\NVelocity.dll
+D:\Pro\x.rbt\src\Web\X.Web\bin\Release\Enyim.Caching.dll
+D:\Pro\x.rbt\src\Web\X.Web\bin\Release\X.Core.pdb
+D:\Pro\x.rbt\src\Web\X.Web\bin\Release\X.Data.pdb
+D:\Pro\x.rbt\src\Web\X.Web\obj\Release\X.Web.csprojResolveAssemblyReference.cache
+D:\Pro\x.rbt\src\Web\X.Web\obj\Release\X.Web.dll
+D:\Pro\x.rbt\src\Web\X.Web\obj\Release\X.Web.pdb

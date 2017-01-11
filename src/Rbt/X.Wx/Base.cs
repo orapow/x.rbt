@@ -127,6 +127,7 @@ namespace X.Wx
 
         protected void showLoading()
         {
+            closeLoading();
             lb_title.Image = Properties.Resources.loading;
             lb_title.Text = "　　" + lb_title.Text;
         }

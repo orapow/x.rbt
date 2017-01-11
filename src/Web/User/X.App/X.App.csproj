@@ -57,6 +57,7 @@
     <Compile Include="Apis\msg\list.cs" />
     <Compile Include="Apis\msg\save.cs" />
     <Compile Include="Apis\contact\sync.cs" />
+    <Compile Include="Apis\wx\login.cs" />
     <Compile Include="Apis\xapi.cs" />
     <Compile Include="Com\Config.cs" />
     <Compile Include="Com\Wx.cs" />
