@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Dynamic;
-using System.Net.Sockets;
 using System.Threading;
 using System.Windows.Forms;
 using System.Linq;
 using X.Core.Utility;
 using X.Wx.App;
-using System.Text.RegularExpressions;
 using System.Configuration;
-using X.Data;
-using System.Web;
+using X.Core.Plugin;
 
 namespace X.Wx
 {
@@ -24,29 +20,37 @@ namespace X.Wx
         static Login lg = null;
         static Main main = null;
         static List<Wc.Contact> contacts = null;
-        static Wc.Contact user = null;
         static bool stop = false;
         static List<ReplyResp.Reply> repes = null;
 
-        /// <summary>
-        /// lgid ip:port ukey
-        /// 1 127.0.0.1:9999
-        /// </summary>
-        /// <param name="args"></param>
         [STAThreadAttribute]
         static void Main(string[] args)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            try
+            Loger.Init();
+
+            System.Net.ServicePointManager.DefaultConnectionLimit = 512;
+
+            var key = ConfigurationManager.AppSettings["app-key"];
+            //key = "GCEOrLSsBxmsKQTFV63UNRSG8wwhFkXbTujBbfuqPO4AFjljiYEOTZ8w7JtiDz8q";
+            if (string.IsNullOrEmpty(key))
             {
-                Sdk.Init(ConfigurationManager.AppSettings["app-key"]);
+                var ak = new Akey();
+                Application.Run(ak);
+                if (string.IsNullOrEmpty(ak.key)) return;
+
+                var cfg = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                if (key == null) cfg.AppSettings.Settings.Add("app-key", ak.key);
+                else cfg.AppSettings.Settings["app-key"].Value = ak.key;
+                cfg.Save(ConfigurationSaveMode.Modified);
+                ConfigurationManager.RefreshSection("appSettings");
+
+                key = ak.key;
             }
-            catch
-            {
-                return;
-            }
+
+            if (!Sdk.Init(key)) return;
 
             lg = new Login();
 
@@ -55,12 +59,12 @@ namespace X.Wx
 
             Application.Run(lg);
 
-            if (lg.headimg == null)
-                Application.Exit(); //Application.Run(new Main(lg.nickname, lg.headimg, lg.ukey));
+            if (string.IsNullOrEmpty(headimg)) return;
 
             Sdk.WxLogin(uin, nickname, headimg);
 
-            main = new Main(wx, user, lg.headimg);
+            main = new Main(wx, lg.headimg);
+            main.LoadReply += Main_LoadReply;
 
             //获取自动回复
             loadReply();
@@ -72,7 +76,15 @@ namespace X.Wx
             loadHeadimg();
 
             Application.Run(main);
+            stop = true;
 
+            if (wx != null) wx.Quit();
+
+        }
+
+        private static void Main_LoadReply()
+        {
+            loadReply();
         }
 
         /// <summary>
@@ -80,14 +92,15 @@ namespace X.Wx
         /// </summary>
         private static void loadHeadimg()
         {
-            new Thread(o =>
-            {
-                while (!stop)
-                {
+            //new Thread(o =>
+            //{
+            //    while (!stop)
+            //    {
 
-                }
-                stop = true;
-            }).Start();
+
+            //    }
+            //    stop = true;
+            //}).Start();
         }
 
         /// <summary>
@@ -100,11 +113,13 @@ namespace X.Wx
                 Thread.Sleep(10 * 1000);
                 while (!stop)
                 {
+                    Thread.Sleep(60 * 1000);
                     var st = DateTime.Now.ToString("HH:mm");
                     outLog("群发@" + st + "->开始获取");
                     var rsp = Sdk.LoadMsg(uin);
                     if (stop) break;
-                    outLog("群发@" + st + "->开始发送，共 " + rsp.items.Count() + " 个群发");
+                    if (rsp.items.Count() == 0) { outLog("群发@" + st + "->无内容"); continue; }
+                    outLog("群发@" + st + "->开始发送，" + rsp.items.Count() + "个");
                     foreach (var m in rsp.items)
                     {
                         if (m.touser == null) continue;
@@ -112,8 +127,7 @@ namespace X.Wx
                         if (stop) break;
                         Thread.Sleep(5 * 1000);
                     }
-                    outLog("群发@" + st + "结束");
-                    Thread.Sleep(10 * 1000);
+                    outLog("群发@" + st + "->结束");
                 }
             }).Start();
         }
@@ -145,9 +159,8 @@ namespace X.Wx
         {
             new Thread(o =>
             {
-                Thread.Sleep(3 * 1000);
                 outLog("正在获取回复");
-                var rsp = Sdk.LoadReply();
+                var rsp = Sdk.LoadReply(uin);
                 if (rsp.issucc) repes = rsp.items;
                 outLog("自动回复获取" + (rsp.issucc ? "成功" : "失败"));
             }).Start();
@@ -159,6 +172,7 @@ namespace X.Wx
         /// <param name="msg"></param>
         static void outLog(string msg)
         {
+            System.IO.File.AppendAllText("log.txt", msg);
             ((Action)(() =>
             {
                 if (main != null) main.OutLog(msg);
@@ -167,16 +181,19 @@ namespace X.Wx
 
         private static void Wx_ContactLoaded(List<Wc.Contact> cts)
         {
+            main.SetContact(cts);
             contacts = cts;
+            outLog("正在同步通讯录");
             var rsp = Sdk.ContactSync(Serialize.ToJson(cts), uin);
             if (!rsp.issucc) outLog("通讯录同步失败");
+            outLog("通讯录同步完成");
         }
 
         static void Wx_Loged(Wc.Contact u)
         {
+            outLog(u.NickName + "已经登陆");
             nickname = u.NickName;
             uin = u.Uin + "";
-            user = u;
             lg.SetLoged();
 
             Thread.Sleep(2 * 1000);
@@ -190,6 +207,7 @@ namespace X.Wx
 
         static void Wx_LogonOut()
         {
+            outLog("正在退出...");
             stop = true;
             Thread.Sleep(5 * 1000);
             Environment.Exit(0);

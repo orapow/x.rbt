@@ -5,6 +5,7 @@ using X.App.Com;
 using X.Core;
 using X.Core.Cache;
 using X.Core.Plugin;
+using X.Web.Com;
 
 namespace X.App
 {

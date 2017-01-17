@@ -110,6 +110,7 @@
     <Content Include="tpl\func\msg\list.html" />
     <Content Include="tpl\func\reply\edit.html" />
     <Content Include="tpl\func\reply\list.html" />
+    <Content Include="tpl\user\akey.html" />
     <Content Include="tpl\wx\login.html" />
     <Content Include="tpl\wx\_foot.html" />
     <Content Include="tpl\wx\_head.html" />

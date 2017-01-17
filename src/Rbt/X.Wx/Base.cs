@@ -154,9 +154,7 @@ namespace X.Wx
             {
                 showLoading();
                 if (wx != null) wx.Quit();
-                e.Cancel = true;
             }
-            //else wx.LogonOut -= Wx_Logout;
             base.OnClosing(e);
         }
 
@@ -212,6 +210,9 @@ namespace X.Wx
             this.Controls.Add(this.lb_title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Base";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.bt_close)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -230,6 +231,7 @@ namespace X.Wx
         /// <returns></returns>
         public Image base64ToImage(string basecode)
         {
+            if (string.IsNullOrEmpty(basecode)) return null;
             var data = Convert.FromBase64String(basecode);
             var ms = new MemoryStream(data);
             var img = Image.FromStream(ms);

@@ -16,7 +16,6 @@ D:\Pro\x.rbt\src\Rbt\Data\bin\Debug\X.Data.pdb
 D:\Pro\x.rbt\src\Rbt\Data\bin\Debug\X.Core.dll
 D:\Pro\x.rbt\src\Rbt\Data\bin\Debug\log4net.dll
 D:\Pro\x.rbt\src\Rbt\Data\bin\Debug\X.Json.dll
-D:\Pro\x.rbt\src\Rbt\Data\bin\Debug\NVelocity.dll
 D:\Pro\x.rbt\src\Rbt\Data\bin\Debug\Enyim.Caching.dll
 D:\Pro\x.rbt\src\Rbt\Data\bin\Debug\X.Core.pdb
 D:\Pro\x.rbt\src\Rbt\Data\obj\Debug\X.Data.csprojResolveAssemblyReference.cache

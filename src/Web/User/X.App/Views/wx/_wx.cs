@@ -38,7 +38,7 @@ namespace X.App.Views.wx
                 if (string.IsNullOrEmpty(opid)) ToWxUrl("snsapi_base");
 
                 cu = DB.x_user.FirstOrDefault(o => o.openid == opid);
-                if (cu == null) { cu = new Data.x_user() { ctime = DateTime.Now, openid = opid, wxcount = 2 }; }
+                if (cu == null) { cu = new Data.x_user() { ctime = DateTime.Now, openid = opid, wxcount = 2, akey = Secret.SHA256(Guid.NewGuid().ToString()) }; }
 
                 cu.ukey = Secret.MD5(Guid.NewGuid().ToString());
                 cu.last_time = DateTime.Now;

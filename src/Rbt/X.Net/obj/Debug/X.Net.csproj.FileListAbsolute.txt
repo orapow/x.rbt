@@ -1,0 +1,10 @@
+D:\Pro\x.rbt\src\Rbt\X.Net\bin\Debug\X.Net.dll
+D:\Pro\x.rbt\src\Rbt\X.Net\bin\Debug\X.Net.pdb
+D:\Pro\x.rbt\src\Rbt\X.Net\bin\Debug\X.Core.dll
+D:\Pro\x.rbt\src\Rbt\X.Net\bin\Debug\log4net.dll
+D:\Pro\x.rbt\src\Rbt\X.Net\bin\Debug\X.Json.dll
+D:\Pro\x.rbt\src\Rbt\X.Net\bin\Debug\Enyim.Caching.dll
+D:\Pro\x.rbt\src\Rbt\X.Net\bin\Debug\X.Core.pdb
+D:\Pro\x.rbt\src\Rbt\X.Net\obj\Debug\X.Net.csprojResolveAssemblyReference.cache
+D:\Pro\x.rbt\src\Rbt\X.Net\obj\Debug\X.Net.dll
+D:\Pro\x.rbt\src\Rbt\X.Net\obj\Debug\X.Net.pdb

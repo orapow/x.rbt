@@ -7,7 +7,7 @@ using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 using X.Core.Utility;
 
 namespace X.Wx.App
@@ -22,35 +22,44 @@ namespace X.Wx.App
 
         public CookieContainer Cookies { get { return cookie; } }
 
-        public Http() : this(null, 30) { }
-        public Http(CookieContainer cks, int tout)
+        public Http() : this("", 30) { }
+        public Http(CookieContainer ck, int tout)
         {
-            //hcl = new HttpClientHandler() { AutomaticDecompression = DecompressionMethods.GZip };
-            if (cks == null) cookie = new CookieContainer();
-            else cookie = cks;
-            //if (cks != null) hcl.CookieContainer = cks;
-            //hcl.UseCookies = true;
-            //hcl.UseDefaultCredentials = true;
-            //hcl.UseProxy = true;
-            //hc = new HttpClient(hcl);
-            //hc.Timeout = new TimeSpan(tout * 10000000);
+            if (ck == null) cookie = new CookieContainer();
+            cookie = ck;
+            timeout = tout;
+        }
+        public Http(string ck, int tout)
+        {
+            cookie = new CookieContainer();
+
+            foreach (var c in ck.Trim(';').Trim().Split(';'))
+            {
+                if (string.IsNullOrEmpty(c)) continue;
+                var idx = c.IndexOf('=');
+                cookie.Add(new Cookie(c.Substring(0, idx).Trim(), c.Substring(idx).Trim(), "/", "wx.qq.com"));
+            }
+
             timeout = tout;
         }
 
         byte[] get(string url)
         {
             GC.Collect();
-
+            //File.AppendAllText(Application.StartupPath + "\\log.txt", "get->" + url);
             var req = (HttpWebRequest)WebRequest.Create(url);
-            req.ServicePoint.ConnectionLimit = 512;
+
+            if (url.Contains("https://")) ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback((object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors errors) => { return true; });
 
             #region head
             req.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";
             req.UserAgent = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Maxthon/4.9.3.1000 Chrome/39.0.2146.0 Safari/537.36";
             req.Headers.Set("Pragma", "no-cache");
             req.Method = "GET";
-            req.ReadWriteTimeout = 30 * 1000;
+            req.ServicePoint.ConnectionLimit = 512;
+            req.ServicePoint.Expect100Continue = false;
             req.KeepAlive = true;
+            req.ReadWriteTimeout = 30 * 1000;
             req.Timeout = timeout * 1000;
             req.CookieContainer = Cookies;  //启用cookie
             #endregion
@@ -59,7 +68,6 @@ namespace X.Wx.App
             try
             {
                 rsp = (HttpWebResponse)req.GetResponse();
-
                 int count = (int)rsp.ContentLength;
                 byte[] buf = new byte[count];
                 using (var rsp_st = rsp.GetResponseStream())
@@ -73,12 +81,13 @@ namespace X.Wx.App
                         offset += n;
                     }
                 }
-
+                //File.AppendAllText(Application.StartupPath + "\\log.txt", "get->" + Encoding.UTF8.GetString(buf));
                 return buf;
             }
-            catch
+            catch (Exception ex)
             {
-                throw;
+                //File.AppendAllText(Application.StartupPath + "\\log.txt", "get->err:" + ex.Message);
+                throw ex;
             }
             finally
             {
@@ -92,11 +101,8 @@ namespace X.Wx.App
         byte[] post(string url, byte[] data) { return post(url, data, ""); }
         byte[] post(string url, byte[] data, string boundary)
         {
-            //hc.CancelPendingRequests();
-            //return await hc.PostAsync(url, new ByteArrayContent(data)).Result.Content.ReadAsByteArrayAsync();
-
             GC.Collect();
-
+            //File.AppendAllText(Application.StartupPath + "\\log.txt", "post->" + url);
             if (url.Contains("https://")) ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback((object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors errors) => { return true; });
 
             var req = (HttpWebRequest)WebRequest.Create(url);
@@ -109,6 +115,8 @@ namespace X.Wx.App
             req.ContentType = "application/json;charset=UTF-8";
             req.UserAgent = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Maxthon/4.9.3.1000 Chrome/39.0.2146.0 Safari/537.36";
             req.ContentLength = data.Length;
+            req.ReadWriteTimeout = 30 * 1000;
+            req.Timeout = timeout * 1000;
             req.CookieContainer = Cookies;
             req.Headers.Set("Pragma", "no-cache");
 
@@ -134,9 +142,15 @@ namespace X.Wx.App
                         offset += n;
                     }
                 }
+
+                //File.AppendAllText(Application.StartupPath + "\\log.txt", "post->" + Encoding.UTF8.GetString(buf));
                 return buf;
             }
-            catch { throw; }
+            catch (Exception ex)
+            {
+                //File.AppendAllText(Application.StartupPath + "\\log.txt", "post->err:" + ex.Message);
+                throw ex;
+            }
             finally
             {
                 if (rsp != null) rsp.Close();

@@ -10,6 +10,8 @@ namespace X.App.Apis.reply
 {
     public class load : xapi
     {
+        public long uin { get; set; }
+
         protected override XResp Execute()
         {
             var r = new Resp_List();
@@ -18,10 +20,10 @@ namespace X.App.Apis.reply
             foreach (var m in cu.x_reply)
             {
                 List<x_contact> us = null;
-                if (string.IsNullOrEmpty(m.uids) || m.uids == "[]") us = cu.x_contact.Where(o => o.user_id == m.user_id).ToList();
-                else us = cu.x_contact.Where(o => Serialize.FromJson<List<long>>(System.Web.HttpUtility.HtmlDecode(m.uids)).Contains(o.contact_id)).ToList();
+                if (string.IsNullOrEmpty(m.uids) || m.uids == "[]") us = cu.x_contact.Where(o => o.uin == uin).ToList();
+                else us = cu.x_contact.Where(o => o.uin == uin && Serialize.FromJson<List<long>>(System.Web.HttpUtility.HtmlDecode(m.uids)).Contains(o.contact_id)).ToList();
 
-                if (us == null) continue;
+                if (us == null || us.Count() == 0) continue;
 
                 list.Add(new
                 {

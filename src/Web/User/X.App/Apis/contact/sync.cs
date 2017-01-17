@@ -68,6 +68,7 @@ namespace X.App.Apis.contact
             c.nickname = u.NickName;
             c.remarkname = u.RemarkName;
             c.group_id = gid;
+            c.flag = u.UserName[1] == '@' ? 2 : 1;
             c.roomid = u.EncryChatRoomId;
             c.signature = u.Signature;
             c.username = u.UserName;

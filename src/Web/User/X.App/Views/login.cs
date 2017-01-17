@@ -13,12 +13,13 @@ namespace X.App.Views
     public class login : xview
     {
         public string uk { get; set; }
+        public string url { get; set; }
 
         protected override string GetParmNames
         {
             get
             {
-                return "uk";
+                return "uk-url";
             }
         }
 
@@ -58,6 +59,7 @@ namespace X.App.Views
                 }
                 dict.Add("code", code);
             }
+            dict["url"] = Secret.FormBase64(url);
             dict.Add("isin", isin);
         }
     }

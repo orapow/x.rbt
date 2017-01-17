@@ -39,12 +39,12 @@
             // 
             // pb_headimg
             // 
-            this.pb_headimg.BackColor = System.Drawing.SystemColors.Control;
-            this.pb_headimg.Image = global::X.Wx.Properties.Resources.wx;
+            this.pb_headimg.BackColor = System.Drawing.Color.Transparent;
+            this.pb_headimg.Image = global::X.Wx.Properties.Resources.loading;
             this.pb_headimg.Location = new System.Drawing.Point(38, 64);
             this.pb_headimg.Name = "pb_headimg";
             this.pb_headimg.Size = new System.Drawing.Size(130, 130);
-            this.pb_headimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_headimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pb_headimg.TabIndex = 1;
             this.pb_headimg.TabStop = false;
             // 

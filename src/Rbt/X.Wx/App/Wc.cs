@@ -7,11 +7,15 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using X.Core.Utility;
 using System.Web;
+using System.IO;
 
 namespace X.Wx.App
 {
     public class Wc
     {
+        //当前用户信息
+        public Contact user { get; private set; }
+
         /// <summary>
         /// 构造函数
         /// </summary>
@@ -40,6 +44,7 @@ namespace X.Wx.App
                 wxStatusNotify();
 
                 op = new Http(wc.Cookies, 5);
+
             }
             catch (Exception ex)
             {
@@ -133,7 +138,25 @@ namespace X.Wx.App
         public void Send(List<string> touser, int type, string content)
         {
             var mmid = "0";
-            if (type == 2) mmid = uploadImg(content);
+            if (type == 2)
+            {
+                byte[] dt = null;
+                var fn = "";
+                if (content.StartsWith("http://"))
+                {
+                    var rsp = wc.GetFile(content);
+                    if (rsp.err || rsp.data == null) return;
+                    dt = rsp.data as byte[];
+                    fn = content.Substring(content.LastIndexOf('/'));
+                }
+                else
+                {
+                    dt = File.ReadAllBytes(content);
+                    fn = content.Substring(content.LastIndexOf('\\'));
+                }
+                if (dt == null) return;
+                mmid = uploadImg(dt, fn);
+            }
             if (string.IsNullOrEmpty(mmid)) { outLog("send->图片上传失败"); return; }
 
             var i = 1;
@@ -356,7 +379,6 @@ namespace X.Wx.App
         Http wc = null;
         Http op = null;
         BaseRequest baseRequest = null;
-        Contact user = null;//当前用户信息
         SyncKey _syncKey;
         List<Contact> contacts = null;
         //static readonly DateTime BaseTime = new DateTime(1970, 1, 1);
@@ -438,7 +460,7 @@ namespace X.Wx.App
 
             if (c >= 2 || isquit) throw new Exception("wait 已退出");
 
-            string url = String.Format("https://login.weixin.qq.com/cgi-bin/mmwebwx-bin/login?loginicon=true&uuid={0}&tip=0&r={1}&_={2}", uuid, ~getcurrentseconds(), getcurrentseconds());
+            string url = string.Format("https://login.weixin.qq.com/cgi-bin/mmwebwx-bin/login?loginicon=true&uuid={0}&tip=0&r={1}&_={2}", uuid, ~getcurrentseconds(), getcurrentseconds());
             var rsp = wc.GetStr(url);
 
             outLog("wait->" + t + "->" + c + "->" + Serialize.ToJson(rsp));
@@ -586,10 +608,9 @@ namespace X.Wx.App
                     }
                 }
                 ContactLoaded?.Invoke(contacts);
+                outLog("通讯录获取完成！");
             }).Start();
-
-            outLog("通讯录获取完成！");
-            ContactLoaded?.Invoke(contacts);
+            //ContactLoaded?.Invoke(contacts);
         }
 
         /// <summary>
@@ -599,7 +620,7 @@ namespace X.Wx.App
         {
 
             var url = String.Format("{0}/cgi-bin/mmwebwx-bin/synccheck?r={1}&sid={2}&uin={3}&skey={4}&deviceid={5}&synckey={6}&_{7}", gateway, getcurrentseconds(), baseRequest.Sid, baseRequest.Uin, baseRequest.Skey, baseRequest.DeviceID, synckey, getcurrentseconds());
-            var rsp = wc.GetStr(url);
+            var rsp = op.GetStr(url);
 
             outLog("synccheck->" + Serialize.ToJson(rsp));
             if (rsp.err) return;
@@ -628,7 +649,7 @@ namespace X.Wx.App
                 SyncKey = _syncKey,
                 rr = getcurrentseconds()
             };
-            var rsp = wc.PostStr(url, Serialize.ToJson(o));
+            var rsp = op.PostStr(url, Serialize.ToJson(o));
 
             //outLog("sync->" + Serialize.ToJson(rsp));
 
@@ -711,11 +732,11 @@ namespace X.Wx.App
         /// </summary>
         /// <param name="imgaddr"></param>
         /// <returns></returns>
-        string uploadImg(string url)
+        string uploadImg(byte[] data, string fn)
         {
-            var fs = op.GetFile(url);
-            if (fs.err) return "";
-            var data = fs.data as byte[];//File.ReadAllBytes(imgaddr);
+            //var fs = wc.GetFile(url);
+            //if (fs.err) return "";
+            //var data = fs.data as byte[];//File.ReadAllBytes(imgaddr);
             string api = gateway.Replace("https://", "https://file.") + "/cgi-bin/mmwebwx-bin/webwxuploadmedia?f=json";
             var o = new
             {
@@ -730,8 +751,8 @@ namespace X.Wx.App
 
             Dictionary<string, string> dict = new Dictionary<string, string>();
             dict.Add("id", "WU_FILE_" + filecount++);
-            dict.Add("name", url.Substring(url.LastIndexOf('/') + 1));
-            dict.Add("type", Tools.GetMimeType(url.Substring(url.LastIndexOf('.') + 1)));
+            dict.Add("name", fn);
+            dict.Add("type", Tools.GetMimeType(fn.Substring(fn.LastIndexOf('.') + 1)));
             dict.Add("lastModifiedDate", DateTime.Now.ToString("r"));//DateTime.Now.ToString("r")
             dict.Add("size", data.Length + "");
             dict.Add("mediatype", "pic");
@@ -739,7 +760,7 @@ namespace X.Wx.App
             dict.Add("webwx_data_ticket", wc.GetCookie("webwx_data_ticket"));
             dict.Add("pass_ticket", passticket);
 
-            var rsp = op.PostFile(api, dict, data);
+            var rsp = wc.PostFile(api, dict, data);
             outLog("UploadImg->" + Serialize.ToJson(rsp));
 
             if (rsp.err) return "";
@@ -753,14 +774,16 @@ namespace X.Wx.App
         /// </summary>
         void logonOut()
         {
-            if (op == null) return;
             string api = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxlogout?redirect=0&type=1&skey={1}", gateway, baseRequest.Skey);
-            var o = new
+            if (user != null)
             {
-                sid = baseRequest.Sid,
-                uin = user.Uin
-            };
-            op.PostStr(api, Serialize.ToJson(o));
+                var o = new
+                {
+                    sid = baseRequest.Sid,
+                    uin = user.Uin
+                };
+                op.PostStr(api, Serialize.ToJson(o));
+            }
             outLog("logout");
         }
 

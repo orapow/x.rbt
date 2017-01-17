@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NVelocity">
+      <HintPath>..\..\..\libs\NVelocity.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -42,6 +45,7 @@
     <Compile Include="Cache\ContextCache.cs" />
     <Compile Include="Cache\SessionCache.cs" />
     <Compile Include="Com\XForm.cs" />
+    <Compile Include="Com\Tpl.cs" />
     <Compile Include="Views\Code.cs" />
     <Compile Include="Views\View.cs" />
     <Compile Include="XApp.cs" />

@@ -17,7 +17,7 @@ namespace X.App.Apis.contact
         {
             var r = new Resp_List();
 
-            var q = from l in DB.x_contact.Where(o => o.uin == uin && o.group_id == gid)
+            var q = from l in cu.x_contact.Where(o => o.uin == uin && o.group_id == gid)
                     select l;
 
             r.items = q.OrderByDescending(o => o.flag).ThenBy(o => o.nickname).Select(o => new

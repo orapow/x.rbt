@@ -72,6 +72,7 @@
     <Compile Include="Views\func\reply\list.cs" />
     <Compile Include="Views\login.cs" />
     <Compile Include="Views\index.cs" />
+    <Compile Include="Views\user\akey.cs" />
     <Compile Include="Views\wx\login.cs" />
     <Compile Include="Views\wx\_wx.cs" />
     <Compile Include="Views\xview.cs" />

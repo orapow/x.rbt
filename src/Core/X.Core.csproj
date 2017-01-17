@@ -40,9 +40,6 @@
     <Reference Include="log4net">
       <HintPath>..\..\libs\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="NVelocity">
-      <HintPath>..\..\libs\NVelocity.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -57,7 +54,6 @@
     <Compile Include="Cache\WebCache.cs" />
     <Compile Include="Cache\MemCache.cs" />
     <Compile Include="Plugin\Loger.cs" />
-    <Compile Include="Plugin\Tpl.cs" />
     <Compile Include="Plugin\UrlWrite.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>

@@ -26,6 +26,7 @@ namespace X.Wx
         {
             Invoke((Action)(() =>
             {
+                pb_headimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
                 pb_headimg.Image = base64ToImage(hdimg);
                 lb_tip.Text = "已扫描\r\n请在手机上确认";
             }));
@@ -35,6 +36,7 @@ namespace X.Wx
         {
             Invoke((Action)(() =>
             {
+                pb_headimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
                 pb_headimg.Image = base64ToImage(qrcode);
                 lb_tip.Text = "请使用微信扫描二维码";
             }));
@@ -44,7 +46,7 @@ namespace X.Wx
         {
             Invoke((Action)(() =>
             {
-                lb_tip.Text = "已登陆\r\n正在同步通讯录...";
+                lb_tip.Text = "已登陆\r\n正在初始化...";
             }));
         }
 
