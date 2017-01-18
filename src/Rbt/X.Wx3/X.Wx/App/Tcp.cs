@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Dynamic;
 using System.Linq;
 using System.Net.Sockets;
@@ -70,6 +71,7 @@ namespace X.Wx.App
         /// <param name="m"></param>
         public void Send(msg m)
         {
+            m.from = "svr";
             if (tc.Client == null || tc.Client.Connected == false) { exit(1); return; }
 
             var data = new List<byte>();
@@ -88,7 +90,6 @@ namespace X.Wx.App
                 data.AddRange(BitConverter.GetBytes((ulong)cot.Length).Reverse());
             }
             data.AddRange(cot);
-
             try
             {
                 tc.Client.Send(data.ToArray());
@@ -185,6 +186,7 @@ namespace X.Wx.App
                 }
                 catch (Exception ex)
                 {
+                    Debug.WriteLine("tcp.prase->" + ex.Message);
                     exit(1);
                 }
             }
@@ -242,7 +244,7 @@ namespace X.Wx.App
     /// </summary>
     public class msg //: DynamicObject
     {
-        public string to { get; set; }
+        public string from { get; set; }
         public string act { get; set; }
         public string err { get; set; }
         public string body { get; set; }

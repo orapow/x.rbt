@@ -9,3 +9,14 @@ d:\doc\documents\visual studio 2015\Projects\X.Wx\X.Wx\obj\Debug\X.Wx.Properties
 d:\doc\documents\visual studio 2015\Projects\X.Wx\X.Wx\obj\Debug\X.Wx.csproj.GenerateResource.Cache
 d:\doc\documents\visual studio 2015\Projects\X.Wx\X.Wx\obj\Debug\X.Wx.exe
 d:\doc\documents\visual studio 2015\Projects\X.Wx\X.Wx\obj\Debug\X.Wx.pdb
+D:\Pro\x.rbt\src\Rbt\X.Wx3\X.Wx\bin\Debug\X.Wx.exe.config
+D:\Pro\x.rbt\src\Rbt\X.Wx3\X.Wx\obj\Debug\X.Wx.exe
+D:\Pro\x.rbt\src\Rbt\X.Wx3\X.Wx\obj\Debug\X.Wx.pdb
+D:\Pro\x.rbt\src\Rbt\X.Wx3\X.Wx\bin\Debug\jq.js
+D:\Pro\x.rbt\src\Rbt\X.Wx3\X.Wx\bin\Debug\ws.js
+D:\Pro\x.rbt\src\Rbt\X.Wx3\X.Wx\bin\Debug\script.js
+D:\Pro\x.rbt\src\Rbt\X.Wx3\X.Wx\bin\Debug\X.Wx.exe
+D:\Pro\x.rbt\src\Rbt\X.Wx3\X.Wx\bin\Debug\X.Wx.pdb
+D:\Pro\x.rbt\src\Rbt\X.Wx3\X.Wx\obj\Debug\X.Wx.Form1.resources
+D:\Pro\x.rbt\src\Rbt\X.Wx3\X.Wx\obj\Debug\X.Wx.Properties.Resources.resources
+D:\Pro\x.rbt\src\Rbt\X.Wx3\X.Wx\obj\Debug\X.Wx.csproj.GenerateResource.Cache

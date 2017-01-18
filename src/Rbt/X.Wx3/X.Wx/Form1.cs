@@ -20,6 +20,8 @@ namespace X.Wx
     {
         List<Tcp> tcps = null;
         bool stop = false;
+        TcpListener svr = null;
+
         public Form1()
         {
             InitializeComponent();
@@ -50,7 +52,8 @@ namespace X.Wx
             Invoke((Action)(() =>
             {
                 if (m.act == "qrcode") pictureBox1.ImageLocation = m.body;
-                if (m.act == "headimg") pictureBox1.Image = base64ToImage(m.body);
+                else if (m.act == "headimg") pictureBox1.Image = base64ToImage(m.body);
+                else if (m.act == "setuser") label1.Text = m.body;
             }));
 
             Debug.WriteLine(m.act + "->" + m.body);
@@ -78,7 +81,7 @@ namespace X.Wx
         {
             ((Action)(delegate ()
             {
-                var svr = new TcpListener(IPAddress.Parse("127.0.0.1"), 10900);
+                svr = new TcpListener(IPAddress.Parse("127.0.0.1"), 10900);
                 svr.Start();
 
                 while (!stop)
@@ -91,6 +94,12 @@ namespace X.Wx
                 }
 
             })).BeginInvoke(null, null);
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            stop = true;
+            if (svr != null) svr.Stop();
         }
     }
 

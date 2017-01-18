@@ -1,39 +1,24 @@
 var wp = require('webpage').create(),
     ws = null,
-    stop = false,
-    uin = "",
-    headimg = "",
-    nickname = "";
 
-var baseReq = {},
-    _syncKey = {
-        Count: 0,
-        List: [{
-            Key: 0,
-            Val: 0
-        }],
-        toString: function () {
-            var val = "";
-            for (var i in this.List) {
-                var k = this.List[i];
-                if (val) val += "|"
-                val += k.Key + "_" + k.Val;
-            }
-            return val;
-        }
-    },
-    passticket = "",
-    gateway = "";
+    stop = false,
+    conn = false,
+
+    baseReq = null,
+    pass_ticket = "",
+    uin = "",
+    nickname = ""
 
 ///websocket
 function openws(url) {
     ws = new WebSocket("ws://localhost:10900/");
     ws.onopen = function () {
         console.log("conn:open");
+        conn = true;
     }
     ws.onclose = function () {
         console.log("conn:close");
-        if (!headimg || stop);;//phantom.exit(0);
+        if (!uin || stop) phantom.exit(0);
         setTimeout(openws(), 2 * 1000);
     }
     ws.onerror = function (ex) {
@@ -45,7 +30,7 @@ function openws(url) {
             case "quit":
                 stop = true;
                 wx.quit();
-                //phantom.exit(0);
+                phantom.exit(0);
                 ws.close();
                 break;
         }
@@ -53,7 +38,8 @@ function openws(url) {
     }
 }
 function ws_send(act, bd) {
-    ws.send(JSON.stringify({
+    if (ws) ws.send(JSON.stringify({
+        from: uin,
         act: act,
         body: bd
     }));
@@ -64,16 +50,32 @@ openws();
 wp.viewportSize = { width: 400, height: 300 };
 
 wp.onResourceRequested = function (req) {
-    outlog(JSON.stringify(req));
-};
+    outlog("req->" + req.url);
+    if (!pass_ticket) { var pt = /pass_ticket=([\w\d%]+)/.exec(req.url); if (pt.length == 2) pass_ticket = pt[1]; }//获取pass_ticket
+    if (req.url.indexOf("/webwxinit?") > 0) baseReq = JSON.parse(req.postData).BaseRequest; //更新basereq
+    if (!uin && baseReq) { uin = baseReq.Uin; }//获取uin
 
+}
+
+wp.onResourceReceived = function (rsp) {
+    if (rsp.url.indexOf("/webwxstatusnotify?") > 0 && rsp.stage == "end") {
+        nickname = wp.evaluate(function () {
+            return $(".display_name").text();
+        });
+    }
+    //if (rsp.stage != "start") outlog("rsp.start->" + rsp.url)
+    //if (rsp.stage != "end") outlog("rsp.end->" + JSON.stringify(rsp.body));
+};
+wp.onResourceError = function (err) {
+    outlog("err->" + JSON.stringify(err));
+};
 var wx = {
     quit: function () { },
     send: function () { }
 }
 
 function outlog(str) {
-    consolo.log("log->" + str);
+    console.log("log->" + str);
     ws_send("log", str);
 }
 function loadheadimg() {
@@ -81,24 +83,35 @@ function loadheadimg() {
         return window.userAvatar;
     });
     console.log("headimg->" + ua);
-    if (ua) ws_send("headimg", ua);
+    if (ua) { ws_send("headimg", ua); loaduser(); }
     else if (!stop) setTimeout(loadheadimg, 2 * 1000);
 }
-
 function loadqrcode() {
     var qr = wp.evaluate(function () {
         return window.QRLogin;
     });
     console.log("qrcode->" + qr.uuid);
-    if (qr) {
+    if (qr && qr.uuid) {
         ws_send("qrcode", "https://login.weixin.qq.com/qrcode/" + qr.uuid);
         setTimeout(loadheadimg, 2 * 1000);
     }
     else if (!stop) setTimeout(loadqrcode, 2 * 1000);
 }
+function loadwx() {
+    if (!conn) { setTimeout(loadwx, 1 * 1000); return; }
+    //开始加载页面
+    wp.open("https://wx.qq.com/", function (st) {
+        console.log("open wx.qq.com status:" + st);
+        if (st != "success") return;
+        loadqrcode();
+    });
+}
+function loaduser() {
+    if (!uin || !nickname) setTimeout(loaduser, 2 * 1000);
+    else ws_send("setuser", JSON.stringify({ uin: uin, nickname: nickname }));
+}
 
-//开始加载页面
-wp.open("https://wx.qq.com", function (st) {
-    if (st != "success") return;
-    loadqrcode();
-});
+
+loadwx();
+
+
