@@ -1,0 +1,11 @@
+d:\doc\documents\visual studio 2015\Projects\X.Wx\X.Wx\bin\Debug\jq.js
+d:\doc\documents\visual studio 2015\Projects\X.Wx\X.Wx\bin\Debug\ws.js
+d:\doc\documents\visual studio 2015\Projects\X.Wx\X.Wx\bin\Debug\script.js
+d:\doc\documents\visual studio 2015\Projects\X.Wx\X.Wx\bin\Debug\X.Wx.exe.config
+d:\doc\documents\visual studio 2015\Projects\X.Wx\X.Wx\bin\Debug\X.Wx.exe
+d:\doc\documents\visual studio 2015\Projects\X.Wx\X.Wx\bin\Debug\X.Wx.pdb
+d:\doc\documents\visual studio 2015\Projects\X.Wx\X.Wx\obj\Debug\X.Wx.Form1.resources
+d:\doc\documents\visual studio 2015\Projects\X.Wx\X.Wx\obj\Debug\X.Wx.Properties.Resources.resources
+d:\doc\documents\visual studio 2015\Projects\X.Wx\X.Wx\obj\Debug\X.Wx.csproj.GenerateResource.Cache
+d:\doc\documents\visual studio 2015\Projects\X.Wx\X.Wx\obj\Debug\X.Wx.exe
+d:\doc\documents\visual studio 2015\Projects\X.Wx\X.Wx\obj\Debug\X.Wx.pdb
