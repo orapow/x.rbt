@@ -4,18 +4,15 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Diagnostics;
-using System.Drawing;
 using System.Dynamic;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
-using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using X.Bot.App;
 using X.Bot.Ctrls;
 using X.Core.Utility;
-using X.Net;
 
 namespace X.Bot
 {
@@ -23,45 +20,32 @@ namespace X.Bot
     {
         #region 私有变量
         TcpListener svr = null;
-        List<Tcp> tcps = null;
-        Wx wl = null;
+        List<Wc> wxs = null;
 
         bool stop = false;
-        string wxbin = "";
-        string uk = "";//用户身份Key
-        string nk = "";//通信加密Key
         int port = 0; //服务端口
-        string nickname = "";
-        string headimg = "";
         #endregion
 
-        public Main(string n, string hd, string uk)
+        public Main()
         {
             InitializeComponent();
             ni_tip.Visible = true;
-            tcps = new List<Tcp>();
+            wxs = new List<Wc>();
 
-            wxbin = ConfigurationManager.AppSettings["wxbin"];
-            nk = ConfigurationManager.AppSettings["net-key"];
             int.TryParse(ConfigurationManager.AppSettings["port"], out port);
 
-            if (port == 0 || string.IsNullOrEmpty(nk)) Application.Exit();
+            if (port == 0) Application.Exit();
 
-            nickname = n;
-            headimg = hd;
-            this.uk = uk;
+            Text = Sdk.user.nk;
+            pb_head.ImageLocation = Sdk.user.img;
+            lb_vip.Text = "Vip用户(" + Sdk.user.dt + ")";
 
-            Init();
         }
 
-        private void Init()
+        protected override void OnLoad(EventArgs e)
         {
-            Text = nickname;
-            pb_head.ImageLocation = headimg;
-        }
+            base.OnLoad(e);
 
-        private void Main_Load(object sender, EventArgs e)
-        {
             ((Action)(delegate ()
             {
                 svr = new TcpListener(IPAddress.Parse("127.0.0.1"), port);
@@ -69,39 +53,21 @@ namespace X.Bot
 
                 while (!stop)
                 {
-                    try
-                    {
-                        var tcp = new Tcp(svr.AcceptTcpClient(), NetKey);
-                        if (stop) break;
-                        tcp.NewMsg += Tcp_NewMsg; ; ;
-                        tcp.Closed += Tcp_Closed; ;
-                        tcp.Start();
-                        lock (tcps) tcps.Add(tcp);
-                    }
-                    catch { }
+                    var tc = new Tcp(svr.AcceptTcpClient());
+                    if (stop) break;
+                    var wx = wxs.FirstOrDefault();
+                    wx.SetTc(tc);
                 }
 
-            })).BeginInvoke(null, null);
-
-            ((Action)(() =>
-            {
-                while (!stop)
-                {
-                    Thread.Sleep(10 * 1000);
-                    if (tcps.Count() == 0) continue;
-                    var uins = "";
-                    foreach (var c in tcps.Where(o => o.code != null)) uins += c.code + ",";
-                    var ms = BotSdk.LoadMsg(uins.TrimEnd(','));
-                    if (ms == null || ms.items == null) continue;
-                }
             })).BeginInvoke(null, null);
 
         }
+
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                tr_check.Enabled = false;
+                svr.Stop();
                 e.Cancel = true;
                 Hide();
             }
@@ -109,54 +75,59 @@ namespace X.Bot
 
         private void pb_newwx_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(wxbin)) MessageBox.Show("请设置微信客户端路径！");
+            var wx = new Wc();
+            lock (wxs) wxs.Add(wx);
+            wx.Run();
 
-            new Thread(o =>
-            {
-                var psi = new ProcessStartInfo(wxbin, "127.0.0.1:" + port + " " + nk);
-                psi.CreateNoWindow = true;
-                psi.UseShellExecute = false;
-                var p = new Process();
-                p.StartInfo = psi;
-                p.Start();
-                p.WaitForExit();
-            }).Start();
+            //    if (string.IsNullOrEmpty(wxbin)) MessageBox.Show("请设置微信客户端路径！");
 
-            wl = new Wx();
-            wl.FormClosed += wl_FormClosed;
-            wl.ShowDialog();
+            //    new Thread(o =>
+            //    {
+            //        var psi = new ProcessStartInfo(wxbin, "127.0.0.1:" + port + " " + nk);
+            //        psi.CreateNoWindow = true;
+            //        psi.UseShellExecute = false;
+            //        var p = new Process();
+            //        p.StartInfo = psi;
+            //        p.Start();
+            //        p.WaitForExit();
+            //    }).Start();
+
+            //    wl = new Wx();
+            //    wl.FormClosed += wl_FormClosed;
+            //    wl.ShowDialog();
 
         }
-        private void wl_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            wl = null;
-        }
+
         private void cms_user_Opening(object sender, CancelEventArgs e)
         {
             var cms = sender as ContextMenuStrip;
             var us = cms.SourceControl as Wu;
             if (us != null) cms_user_name.Text = us.nickname + " " + us.Name;
         }
+
         private void cm_us_exit_Click(object sender, EventArgs e)
         {
-            var us = cms_user.SourceControl as Wu;
-            var tc = tcps.FirstOrDefault(o => o.code == us.uin);
-            if (tc != null) tc.Send(new { act = "quit" });
+            //var us = cms_user.SourceControl as Wu;
+            //var tc = wxs.FirstOrDefault(o => o.code == us.uin);
+            //if (tc != null) tc.Send(new { act = "quit" });
         }
+
         private void bt_usercenter_Click(object sender, EventArgs e)
         {
-            Process.Start("http://rbt.tunnel.qydev.com/login-" + uk + ".html");
+            Process.Start("http://rbt.80xc.com/login-" + Sdk.user.uk + ".html");
         }
+
         private void cms_mi_showmain_Click(object sender, EventArgs e)
         {
             Show();
         }
+
         private void cms_mi_exit_Click(object sender, EventArgs e)
         {
-            stop = true;
-            if (svr != null) { svr.Stop(); }
-            lock (tcps) foreach (var t in tcps) t.Send(new { act = "quit" });
-            Application.Exit();
+            //stop = true;
+            //if (svr != null) { svr.Stop(); }
+            //lock (tcps) foreach (var t in tcps) t.Send(new { act = "quit" });
+            //Application.Exit();
         }
 
         //private void connectSvr()
@@ -200,62 +171,74 @@ namespace X.Bot
         //    throw new NotImplementedException();
         //}
 
-        private void Tcp_NewMsg(string from, string body, Tcp tc)
+        private void Tcp_NewMsg(msg m, Tcp tc)
         {
-            dynamic bd = Serialize.FromJson<msg>(body);
-            string act = bd.act;
-            switch (act)
-            {
-                case "loged":
-                    Invoke((Action)(() =>
-                    {
-                        if (wl != null) wl.Close();
-                        tc.code = bd.uin;
-                        var us = new Wu(cms_user, bd.uin);
-                        us.Image = base64ToImage(bd.headimg);
-                        us.nickname = bd.nickname;
-                        fp_wxs.Controls.Add(us);
-                    }));
-                    break;
-                case "outlog":
-                    break;
-                case "exit":
-                    Invoke((Action)(() =>
-                    {
-                        fp_wxs.Controls.RemoveByKey("id:" + bd.uin);
-                    }));
-                    break;
-                case "newmsg":
-                    break;
-                case "scaned":
-                    if (wl != null) Invoke((Action)(() => { wl.SetHeadimg(bd.headimg); }));
-                    break;
-                case "qrback":
-                    if (wl != null) Invoke((Action)(() => { wl.SetQrcode(bd.qrcode); }));
-                    break;
-                case "contactsynced":
-                    break;
-            }
+            //dynamic bd = Serialize.FromJson<msg>(body);
+            //string act = bd.act;
+            //switch (act)
+            //{
+            //    case "loged":
+            //        Invoke((Action)(() =>
+            //        {
+            //            if (wl != null) wl.Close();
+            //            tc.code = bd.uin;
+            //            var us = new Wu(cms_user, bd.uin);
+            //            us.Image = base64ToImage(bd.headimg);
+            //            us.nickname = bd.nickname;
+            //            fp_wxs.Controls.Add(us);
+            //        }));
+            //        break;
+            //    case "outlog":
+            //        break;
+            //    case "exit":
+            //        Invoke((Action)(() =>
+            //        {
+            //            fp_wxs.Controls.RemoveByKey("id:" + bd.uin);
+            //        }));
+            //        break;
+            //    case "newmsg":
+            //        break;
+            //    case "scaned":
+            //        if (wl != null) Invoke((Action)(() => { wl.SetHeadimg(bd.headimg); }));
+            //        break;
+            //    case "qrback":
+            //        if (wl != null) Invoke((Action)(() => { wl.SetQrcode(bd.qrcode); }));
+            //        break;
+            //    case "contactsynced":
+            //        break;
+            //}
         }
-        private void Tcp_Closed(Tcp tc)
+
+        private void pb_head_Click(object sender, EventArgs e)
         {
-            tcps.Remove(tc);
+            var pt = PointToScreen(pb_head.Location);
+            cms_notify.Show();
+            cms_notify.Left = pt.X;
+            cms_notify.Top = pt.Y + pb_head.Height;
+            cms_mi_showmain.Visible = false;
         }
-        class msg : DynamicObject
+
+        private void fp_wxs_MouseDown(object sender, MouseEventArgs e)
         {
-            Dictionary<string, object> parms = new Dictionary<string, object>();
-            public override bool TryGetMember(GetMemberBinder binder, out object result)
-            {
-                if (parms.ContainsKey(binder.Name)) result = parms[binder.Name];
-                else result = null;
-                return true;
-            }
-            public override bool TrySetMember(SetMemberBinder binder, object value)
-            {
-                if (parms.ContainsKey(binder.Name)) parms[binder.Name] = value;
-                else parms.Add(binder.Name, value);
-                return true;
-            }
+            base.OnMouseDown(e);
+            ReleaseCapture();
+            SendMessage(this.Handle, WM_SYSCOMMAND, SC_MOVE + HTCAPTION, 0);
         }
+        //class msg : DynamicObject
+        //{
+        //    Dictionary<string, object> parms = new Dictionary<string, object>();
+        //    public override bool TryGetMember(GetMemberBinder binder, out object result)
+        //    {
+        //        if (parms.ContainsKey(binder.Name)) result = parms[binder.Name];
+        //        else result = null;
+        //        return true;
+        //    }
+        //    public override bool TrySetMember(SetMemberBinder binder, object value)
+        //    {
+        //        if (parms.ContainsKey(binder.Name)) parms[binder.Name] = value;
+        //        else parms.Add(binder.Name, value);
+        //        return true;
+        //    }
+        //}
     }
 }

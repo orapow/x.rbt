@@ -35,8 +35,21 @@ namespace X.App.Apis
                 SubmitDBChanges();
             }
 
-            return new XResp() { msg = cu.ukey };
+            return new back()
+            {
+                uk = cu.ukey,
+                img = cu.headimg,
+                nk = cu.nickname,
+                dt = cu.last_time.Value.ToString("yyyy-MM-dd")
+            };
         }
 
+        class back : XResp
+        {
+            public string uk { get; set; }
+            public string img { get; set; }
+            public string nk { get; set; }
+            public string dt { get; set; }
+        }
     }
 }

@@ -86,7 +86,8 @@ namespace X.Wx
 
                 while (!stop)
                 {
-                    var tcp = new Tcp(svr.AcceptTcpClient());
+                    var tc = svr.AcceptTcpClient();
+                    var tcp = new Tcp(tc);
                     tcp.NewMsg += Tcp_NewMsg; ;
                     tcp.Closed += Tcp_Closed; ;
                     tcp.Start();

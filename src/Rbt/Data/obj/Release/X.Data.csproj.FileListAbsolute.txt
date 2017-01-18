@@ -5,7 +5,6 @@ D:\Pro\x.rbt\src\Rbt\Data\bin\Release\X.Data.pdb
 D:\Pro\x.rbt\src\Rbt\Data\bin\Release\X.Core.dll
 D:\Pro\x.rbt\src\Rbt\Data\bin\Release\log4net.dll
 D:\Pro\x.rbt\src\Rbt\Data\bin\Release\X.Json.dll
-D:\Pro\x.rbt\src\Rbt\Data\bin\Release\NVelocity.dll
 D:\Pro\x.rbt\src\Rbt\Data\bin\Release\Enyim.Caching.dll
 D:\Pro\x.rbt\src\Rbt\Data\bin\Release\X.Core.pdb
 D:\Pro\x.rbt\src\Rbt\Data\obj\Release\X.Data.dll

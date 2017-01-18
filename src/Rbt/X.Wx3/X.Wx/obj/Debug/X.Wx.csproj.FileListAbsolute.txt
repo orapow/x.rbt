@@ -20,3 +20,4 @@ D:\Pro\x.rbt\src\Rbt\X.Wx3\X.Wx\bin\Debug\X.Wx.pdb
 D:\Pro\x.rbt\src\Rbt\X.Wx3\X.Wx\obj\Debug\X.Wx.Form1.resources
 D:\Pro\x.rbt\src\Rbt\X.Wx3\X.Wx\obj\Debug\X.Wx.Properties.Resources.resources
 D:\Pro\x.rbt\src\Rbt\X.Wx3\X.Wx\obj\Debug\X.Wx.csproj.GenerateResource.Cache
+D:\Pro\x.rbt\src\Rbt\X.Wx3\X.Wx\obj\Debug\X.Wx.csprojResolveAssemblyReference.cache

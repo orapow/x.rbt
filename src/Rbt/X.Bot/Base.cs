@@ -112,7 +112,6 @@ namespace X.Bot
         public Base()
         {
             InitializeComponent();
-            NetKey = System.Configuration.ConfigurationManager.AppSettings["net-key"];
         }
 
         public void HideClose()
@@ -161,7 +160,7 @@ namespace X.Bot
             // bt_close
             // 
             this.bt_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_close.Image = ((System.Drawing.Image)(resources.GetObject("bt_close.Image")));
+            this.bt_close.Image = global::X.Bot.Properties.Resources.x;
             this.bt_close.Location = new System.Drawing.Point(152, 8);
             this.bt_close.Name = "bt_close";
             this.bt_close.Size = new System.Drawing.Size(25, 25);
@@ -179,6 +178,7 @@ namespace X.Bot
             this.Controls.Add(this.lb_title);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Base";

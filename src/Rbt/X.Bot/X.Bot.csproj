@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -30,6 +30,10 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Gma.QrCodeNet.Encoding.Net35">
@@ -48,6 +52,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Akey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akey.Designer.cs">
+      <DependentUpon>Akey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App\Sdk.cs" />
+    <Compile Include="App\Tcp.cs" />
+    <Compile Include="App\Wc1.cs" />
+    <Compile Include="App\Wc.cs" />
     <Compile Include="Base.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,12 +70,6 @@
     </Compile>
     <Compile Include="Ctrls\Wu.Designer.cs">
       <DependentUpon>Wu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Wx.cs">
       <SubType>Form</SubType>
@@ -77,13 +85,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="App\BotSdk.cs" />
-    <Compile Include="App\Win32.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Akey.resx">
+      <DependentUpon>Akey.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Base.resx">
       <DependentUpon>Base.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wx.resx">
       <DependentUpon>Wx.cs</DependentUpon>
@@ -101,6 +113,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -113,23 +128,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\no.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\no_u.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\wx.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\r.png" />
+    <Content Include="Resources\icon.ico" />
+    <None Include="Resources\loading.gif" />
+    <Content Include="script.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\x.png" />
     <None Include="Resources\+.png" />
-    <Content Include="Resources\bg.png" />
-    <None Include="Resources\dot_g.png" />
-    <None Include="Resources\dot_r.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\X.Core.csproj">

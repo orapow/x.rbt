@@ -1,76 +1,46 @@
-﻿using Gma.QrCodeNet.Encoding;
-using Gma.QrCodeNet.Encoding.Windows.Render;
-using System;
+﻿using System;
 using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
 using System.Threading;
-using System.Windows.Forms;
-using X.Bot.App;
-using X.Core.Utility;
 
 namespace X.Bot
 {
     public partial class Login : Base
     {
-        public string nickname { get; set; }
-        public string headimg { get; set; }
-        public string ukey { get; set; }
-
-        string code = "";
+        public Image headimg { get { return pb_headimg.Image; } }
 
         public Login()
         {
             InitializeComponent();
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        public void SetHeadimg(string hdimg)
         {
-            loadQrCode();
-        }
-
-        private void doLogin(string code)
-        {
-            ((Action)(() =>
+            Invoke((Action)(() =>
             {
-
-                var rsp = BotSdk.Login(code);
-                if (!rsp.issucc) { loadQrCode(); return; }
-
-                headimg = rsp.headimg;
-                nickname = rsp.nickname;
-                ukey = rsp.ukey;
-
-                Invoke((Action)(() =>
-                {
-                    pb_headimg.ImageLocation = headimg;
-                    lb_tip.Text = nickname + " 已登陆\r\n正在进入，请稍后...";
-                    Thread.Sleep(2 * 1000);
-                    Close();
-                }));
-
-            })).BeginInvoke(null, null);
+                pb_headimg.Image = base64ToImage(hdimg);
+                pb_headimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+                lb_tip.Text = "已扫描\r\n请在手机上确认";
+            }));
         }
 
-        private void loadQrCode()
+        public void SetQrcode(string qrurl)
         {
-            code = Tools.GetRandRom(16, 3);
-            var qr = new QrEncoder();
-            var cd = qr.Encode("http://rbt.tunnel.qydev.com/wx/login-" + code + ".html");
-            var rd = new GraphicsRenderer(new FixedModuleSize(15, QuietZoneModules.Two));
-
-            using (var ms = new MemoryStream())
+            Invoke((Action)(() =>
             {
-                rd.WriteToStream(cd.Matrix, ImageFormat.Jpeg, ms);
-                pb_headimg.Image = Image.FromStream(ms);
-            }
-
-            doLogin(code);
+                pb_headimg.ImageLocation = qrurl;
+                pb_headimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+                lb_tip.Text = "请使用微信扫描二维码";
+            }));
         }
 
-        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        public void SetSucc()
         {
-            if (string.IsNullOrEmpty(headimg)) BotSdk.Cancel(code);
+            Invoke((Action)(() =>
+            {
+                lb_tip.Text = "已登陆\r\n正在初始化...";
+                Thread.Sleep(2 * 1000);
+            }));
+            Close();
         }
     }
 }
