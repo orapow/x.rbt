@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
-using System.Data;
 using System.Diagnostics;
-using System.Dynamic;
-using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 using System.Windows.Forms;
+using System.Linq;
 using X.Bot.App;
 using X.Bot.Ctrls;
-using X.Core.Utility;
 
 namespace X.Bot
 {
@@ -20,7 +16,7 @@ namespace X.Bot
     {
         #region 私有变量
         TcpListener svr = null;
-        List<Wc> wxs = null;
+        //List<Wc> wxs = null;
 
         bool stop = false;
         int port = 0; //服务端口
@@ -30,7 +26,6 @@ namespace X.Bot
         {
             InitializeComponent();
             ni_tip.Visible = true;
-            wxs = new List<Wc>();
 
             int.TryParse(ConfigurationManager.AppSettings["port"], out port);
 
@@ -53,31 +48,89 @@ namespace X.Bot
 
                 while (!stop)
                 {
-                    var tc = new Tcp(svr.AcceptTcpClient());
+                    if (!svr.Pending()) { Thread.Sleep(2 * 1000); continue; }
+                    var tc = svr.AcceptTcpClient();
                     if (stop) break;
-                    var wx = wxs.FirstOrDefault();
-                    wx.SetTc(tc);
+                    RunWx(tc);
                 }
 
             })).BeginInvoke(null, null);
 
         }
 
+        private void RunWx(TcpClient tc)
+        {
+            new Thread(o =>
+            {
+                var wx = new Wc(o as TcpClient);
+
+                wx.NewWx += Wx_NewWx;
+                wx.Exit += Wx_Exit;
+                wx.Run();
+
+                Invoke((Action)(() => { var us = new Wu(cms_user, "") { wx = wx }; fp_wxs.Controls.Add(us); tip_info.SetToolTip(us, "已登陆，正在获取信息"); }));
+
+            }).Start(tc);
+        }
+
+        private void Wx_Exit(string uin)
+        {
+            Invoke((Action)(() =>
+            {
+                var ct = fp_wxs.Controls.Find("id:" + uin, false);
+                if (ct.Length == 0) return;
+                fp_wxs.Controls.Remove(ct[0]);
+            }));
+        }
+
+        private void Wx_NewWx(Wc wx)
+        {
+            Invoke((Action)(() =>
+            {
+                Wu us = null;
+                foreach (var c in fp_wxs.Controls)
+                {
+                    var w = c as Wu;
+                    if (w == null) continue;
+                    if (w.wx.cu.uin == wx.cu.uin) { us = w; break; }
+                }
+                if (us != null)
+                {
+                    us.Name = "id:" + wx.cu.uin;
+                    us.Image = base64ToImage(wx.cu.headimg);
+                    us.nickname = wx.cu.nickname;
+                    us.SizeMode = PictureBoxSizeMode.StretchImage;
+                    tip_info.SetToolTip(us, us.nickname);
+                }
+            }));
+        }
+
+        //private void Tc_Closed(Tcp tc)
+        //{
+        //    Debug.WriteLine(tc.code + "close");
+        //    //throw new NotImplementedException();
+        //}
+
+        //private void Tc_NewMsg(msg m, Tcp tc)
+        //{
+        //    var wx = wxs.FirstOrDefault(o => o.tc.code == tc.code);
+        //    if (wx == null)
+        //    {
+        //        wx = new Wc() { tc = tc };
+        //        lock (wxs) wxs.Add(wx);
+        //        wx.Run();
+        //    }
+        //}
+
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                svr.Stop();
-                e.Cancel = true;
-                Hide();
-            }
+            Hide();
         }
 
         private void pb_newwx_Click(object sender, EventArgs e)
         {
-            var wx = new Wc();
-            lock (wxs) wxs.Add(wx);
-            wx.Run();
+            //fp_wxs.Controls.Add(new Wu(cms_user, ""));
+            Wc.Start();
 
             //    if (string.IsNullOrEmpty(wxbin)) MessageBox.Show("请设置微信客户端路径！");
 
@@ -240,5 +293,7 @@ namespace X.Bot
         //        return true;
         //    }
         //}
+
+
     }
 }

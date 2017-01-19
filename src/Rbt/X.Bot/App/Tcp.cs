@@ -125,8 +125,14 @@ namespace X.Bot.App
                 }
 
                 var d = new byte[tc.Available];
-                tc.Client.Receive(d);
-
+                try
+                {
+                    tc.Client.Receive(d);
+                }
+                catch
+                {
+                    exit(1);
+                }
                 if (!ready) Hands(d);
                 else lock (data) data.AddRange(d);
             }
@@ -180,6 +186,8 @@ namespace X.Bot.App
                 {
                     var m = Serialize.FromJson<msg>(str);
                     if (m == null) return;
+
+                    if (m.act == "setcode") { code = m.body; }
 
                     NewMsg?.Invoke(m, this);
                 }
