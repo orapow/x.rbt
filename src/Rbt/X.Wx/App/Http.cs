@@ -22,7 +22,7 @@ namespace X.Wx.App
 
         public CookieContainer Cookies { get { return cookie; } }
 
-        public Http() : this("", 30) { }
+        public Http() : this("", 60) { }
         public Http(CookieContainer ck, int tout)
         {
             if (ck == null) cookie = new CookieContainer();
@@ -57,8 +57,9 @@ namespace X.Wx.App
             req.Headers.Set("Pragma", "no-cache");
             req.Method = "GET";
             req.ServicePoint.ConnectionLimit = 512;
+            req.Referer = "https://wx2.qq.com/";
             req.ServicePoint.Expect100Continue = false;
-            req.KeepAlive = true;
+            //req.KeepAlive = true;
             req.ReadWriteTimeout = 30 * 1000;
             req.Timeout = timeout * 1000;
             req.CookieContainer = Cookies;  //启用cookie
@@ -81,12 +82,10 @@ namespace X.Wx.App
                         offset += n;
                     }
                 }
-                //File.AppendAllText(Application.StartupPath + "\\log.txt", "get->" + Encoding.UTF8.GetString(buf));
                 return buf;
             }
             catch (Exception ex)
             {
-                //File.AppendAllText(Application.StartupPath + "\\log.txt", "get->err:" + ex.Message);
                 throw ex;
             }
             finally
@@ -112,6 +111,7 @@ namespace X.Wx.App
             req.ServicePoint.Expect100Continue = false;
             req.Method = "POST";
             req.KeepAlive = true;
+            req.Referer = "https://wx2.qq.com/";
             req.ContentType = "application/json;charset=UTF-8";
             req.UserAgent = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Maxthon/4.9.3.1000 Chrome/39.0.2146.0 Safari/537.36";
             req.ContentLength = data.Length;

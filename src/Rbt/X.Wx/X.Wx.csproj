@@ -78,6 +78,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>

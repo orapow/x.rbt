@@ -1,6 +1,6 @@
 ﻿namespace X.Wx
 {
-    partial class Akey
+    partial class Akey : Base
     {
         /// <summary>
         /// Required designer variable.

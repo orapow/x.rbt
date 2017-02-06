@@ -426,6 +426,8 @@ namespace X.Wx.App
         /// <returns></returns>
         void loadQrcode()
         {
+            wc.GetStr("https://wx.qq.com");
+
             var rsp = wc.GetStr("https://login.weixin.qq.com/jslogin?appid=wx782c26e4c19acffb&fun=new&lang=zh_CN&_=" + getcurrentseconds());//&redirect_uri=https%3A%2F%2Fwx2.qq.com%2Fcgi-bin%2Fmmwebwx-bin%2Fwebwxnewloginpage
             if (rsp.err) throw new Exception("uuid获取失败" + Serialize.ToJson(rsp));
 
@@ -620,7 +622,7 @@ namespace X.Wx.App
         {
 
             var url = String.Format("{0}/cgi-bin/mmwebwx-bin/synccheck?r={1}&sid={2}&uin={3}&skey={4}&deviceid={5}&synckey={6}&_{7}", gateway, getcurrentseconds(), baseRequest.Sid, baseRequest.Uin, baseRequest.Skey, baseRequest.DeviceID, synckey, getcurrentseconds());
-            var rsp = op.GetStr(url);
+            var rsp = wc.GetStr(url);
 
             outLog("synccheck->" + Serialize.ToJson(rsp));
             if (rsp.err) return;

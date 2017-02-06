@@ -111,9 +111,13 @@ namespace X.Wx
             new Thread(o =>
             {
                 Thread.Sleep(10 * 1000);
+                var t = 0;
                 while (!stop)
                 {
-                    Thread.Sleep(60 * 1000);
+                    Thread.Sleep(5 * 1000);
+                    t++;
+                    if (t < 60) continue;
+                    t = 0;
                     var st = DateTime.Now.ToString("HH:mm");
                     outLog("群发@" + st + "->开始获取");
                     var rsp = Sdk.LoadMsg(uin);
