@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Linq;
 using X.Bot.App;
 using X.Bot.Ctrls;
+using System.Drawing;
 
 namespace X.Bot
 {
@@ -35,13 +36,19 @@ namespace X.Bot
             pb_head.ImageLocation = Sdk.user.img;
             lb_vip.Text = "Vip用户(" + Sdk.user.dt + ")";
 
+            //var bmp = new Bitmap(pb_head.Image);
+
+            //ni_tip.Icon = Icon.FromHandle(bmp.GetHicon());
+            ni_tip.Text = Text + " " + lb_vip.Text;
+
+            //bmp.Dispose();
         }
 
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
 
-            ((Action)(delegate ()
+            new Thread(o =>
             {
                 svr = new TcpListener(IPAddress.Parse("127.0.0.1"), port);
                 svr.Start();
@@ -53,8 +60,7 @@ namespace X.Bot
                     if (stop) break;
                     RunWx(tc);
                 }
-
-            })).BeginInvoke(null, null);
+            }).Start();
 
         }
 
@@ -68,7 +74,7 @@ namespace X.Bot
                 wx.Exit += Wx_Exit;
                 wx.Run();
 
-                Invoke((Action)(() => { var us = new Wu(cms_user, "") { wx = wx }; fp_wxs.Controls.Add(us); tip_info.SetToolTip(us, "已登陆，正在获取信息"); }));
+                Invoke((Action)(() => { var us = new Wu(cms_user, wx); fp_wxs.Controls.Add(us); tip_info.SetToolTip(us, "正在获取信息"); }));
 
             }).Start(tc);
         }
@@ -102,53 +108,40 @@ namespace X.Bot
                     us.SizeMode = PictureBoxSizeMode.StretchImage;
                     tip_info.SetToolTip(us, us.nickname);
                 }
+                Activate();
             }));
         }
 
-        //private void Tc_Closed(Tcp tc)
-        //{
-        //    Debug.WriteLine(tc.code + "close");
-        //    //throw new NotImplementedException();
-        //}
-
-        //private void Tc_NewMsg(msg m, Tcp tc)
-        //{
-        //    var wx = wxs.FirstOrDefault(o => o.tc.code == tc.code);
-        //    if (wx == null)
-        //    {
-        //        wx = new Wc() { tc = tc };
-        //        lock (wxs) wxs.Add(wx);
-        //        wx.Run();
-        //    }
-        //}
-
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Hide();
+            if (e.CloseReason == CloseReason.ApplicationExitCall) return;
+
+            var dr = MessageBox.Show("是否退出程序？\r\n是：退出程序，微信号不会退出。\r\n否：窗口最小化。", "消息提示", MessageBoxButtons.YesNoCancel);
+            if (dr == DialogResult.Yes)
+            {
+                stop = true;
+                foreach (var c in fp_wxs.Controls)
+                {
+                    var w = c as Wu;
+                    if (w == null) continue;
+                    w.wx.Quit(0);
+                }
+            }
+            else if (dr == DialogResult.No)
+            {
+                e.Cancel = true;
+                ni_tip.ShowBalloonTip(2 * 1000, "消息提示", "窗体已经最小化，可从这里双击打开。", ToolTipIcon.Info);
+                Hide();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
 
         private void pb_newwx_Click(object sender, EventArgs e)
         {
-            //fp_wxs.Controls.Add(new Wu(cms_user, ""));
             Wc.Start();
-
-            //    if (string.IsNullOrEmpty(wxbin)) MessageBox.Show("请设置微信客户端路径！");
-
-            //    new Thread(o =>
-            //    {
-            //        var psi = new ProcessStartInfo(wxbin, "127.0.0.1:" + port + " " + nk);
-            //        psi.CreateNoWindow = true;
-            //        psi.UseShellExecute = false;
-            //        var p = new Process();
-            //        p.StartInfo = psi;
-            //        p.Start();
-            //        p.WaitForExit();
-            //    }).Start();
-
-            //    wl = new Wx();
-            //    wl.FormClosed += wl_FormClosed;
-            //    wl.ShowDialog();
-
         }
 
         private void cms_user_Opening(object sender, CancelEventArgs e)
@@ -160,9 +153,9 @@ namespace X.Bot
 
         private void cm_us_exit_Click(object sender, EventArgs e)
         {
-            //var us = cms_user.SourceControl as Wu;
-            //var tc = wxs.FirstOrDefault(o => o.code == us.uin);
-            //if (tc != null) tc.Send(new { act = "quit" });
+            var us = cms_user.SourceControl as Wu;
+            us.wx.Quit(1);
+            fp_wxs.Controls.Remove(us);
         }
 
         private void bt_usercenter_Click(object sender, EventArgs e)
@@ -177,89 +170,16 @@ namespace X.Bot
 
         private void cms_mi_exit_Click(object sender, EventArgs e)
         {
-            //stop = true;
-            //if (svr != null) { svr.Stop(); }
-            //lock (tcps) foreach (var t in tcps) t.Send(new { act = "quit" });
-            //Application.Exit();
-        }
-
-        //private void connectSvr()
-        //{
-        //    var svr = ConfigurationManager.AppSettings["svr"] ?? "";
-        //    var ps = svr.Split(':');
-        //    if (ps.Length == 2)
-        //    {
-        //        var spt = 0;
-        //        int.TryParse(ps[1], out spt);
-        //        if (string.IsNullOrEmpty(ps[0]) || spt == 0) MessageBox.Show("服务器参数配置错误");
-        //        else
-        //        {
-        //            tc = new Tcp(ps[0], spt, nk);
-        //            tc.NewMsg += Tc_NewMsg;
-        //            tc.Closed += Tc_Closed;
-        //            tc.Start();
-
-        //            Invoke((Action)(() =>
-        //            {
-        //                lsb_tip.Image = Properties.Resources.dot_g;
-        //                lsb_tip.Text = "已连接";
-        //                lsb_tip.ToolTipText = "服务器已连接。";
-        //            }));
-        //        }
-        //    }
-        //}
-
-        //private void Tc_Closed(Tcp tc)
-        //{
-        //    Invoke((Action)(() =>
-        //    {
-        //        lsb_tip.Image = Properties.Resources.dot_r;
-        //        lsb_tip.Text = "未连接";
-        //        lsb_tip.ToolTipText = "服务器已断开，任务将无法执行，正在等待重连...";
-        //    }));
-        //}
-
-        //private void Tc_NewMsg(string from, string body, Tcp tc)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        private void Tcp_NewMsg(msg m, Tcp tc)
-        {
-            //dynamic bd = Serialize.FromJson<msg>(body);
-            //string act = bd.act;
-            //switch (act)
-            //{
-            //    case "loged":
-            //        Invoke((Action)(() =>
-            //        {
-            //            if (wl != null) wl.Close();
-            //            tc.code = bd.uin;
-            //            var us = new Wu(cms_user, bd.uin);
-            //            us.Image = base64ToImage(bd.headimg);
-            //            us.nickname = bd.nickname;
-            //            fp_wxs.Controls.Add(us);
-            //        }));
-            //        break;
-            //    case "outlog":
-            //        break;
-            //    case "exit":
-            //        Invoke((Action)(() =>
-            //        {
-            //            fp_wxs.Controls.RemoveByKey("id:" + bd.uin);
-            //        }));
-            //        break;
-            //    case "newmsg":
-            //        break;
-            //    case "scaned":
-            //        if (wl != null) Invoke((Action)(() => { wl.SetHeadimg(bd.headimg); }));
-            //        break;
-            //    case "qrback":
-            //        if (wl != null) Invoke((Action)(() => { wl.SetQrcode(bd.qrcode); }));
-            //        break;
-            //    case "contactsynced":
-            //        break;
-            //}
+            var dr = MessageBox.Show("是否退出程序和微信号？\r\n是：退出程序并退出微信。\r\n否：仅退出程序。", "消息提示", MessageBoxButtons.YesNoCancel);
+            if (dr == DialogResult.Cancel) return;
+            stop = true;
+            foreach (var c in fp_wxs.Controls)
+            {
+                var w = c as Wu;
+                if (w == null) continue;
+                w.wx.Quit(dr == DialogResult.Yes ? 1 : 0);
+            }
+            Application.Exit();
         }
 
         private void pb_head_Click(object sender, EventArgs e)
@@ -277,23 +197,23 @@ namespace X.Bot
             ReleaseCapture();
             SendMessage(this.Handle, WM_SYSCOMMAND, SC_MOVE + HTCAPTION, 0);
         }
-        //class msg : DynamicObject
-        //{
-        //    Dictionary<string, object> parms = new Dictionary<string, object>();
-        //    public override bool TryGetMember(GetMemberBinder binder, out object result)
-        //    {
-        //        if (parms.ContainsKey(binder.Name)) result = parms[binder.Name];
-        //        else result = null;
-        //        return true;
-        //    }
-        //    public override bool TrySetMember(SetMemberBinder binder, object value)
-        //    {
-        //        if (parms.ContainsKey(binder.Name)) parms[binder.Name] = value;
-        //        else parms.Add(binder.Name, value);
-        //        return true;
-        //    }
-        //}
 
+        private void tsm_open_Click(object sender, EventArgs e)
+        {
+            var us = cms_user.SourceControl as Wu;
+            if (us == null) return;
+            us.Show();
+        }
 
+        private void ni_tip_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Show();
+            Activate();
+        }
+
+        private void cms_notify_Opening(object sender, CancelEventArgs e)
+        {
+            cms_mi_showmain.Visible = !Visible;
+        }
     }
 }

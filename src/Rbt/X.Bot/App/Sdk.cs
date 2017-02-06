@@ -83,6 +83,10 @@ namespace X.Bot.App
         {
             return doapi<Resp>("contact.sync", new Dictionary<string, string>() { { "data", data }, { "uin", uin } });
         }
+        public static Resp LoadQr(string url)
+        {
+            return doapi<Resp>("qrcode", new Dictionary<string, string> { { "url", url } });
+        }
 
     }
     public class Resp

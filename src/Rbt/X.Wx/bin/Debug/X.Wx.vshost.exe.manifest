@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>YewNTWAUoYMUAZXuAkxHZp7BgBs=</dsig:DigestValue>
+        <dsig:DigestValue>nRsTMiUkNRVduQdYAsvGvNyN8h0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,7 +98,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>l/vG3N1OAlGRhb5hQ/HfLRzEbzc=</dsig:DigestValue>
+        <dsig:DigestValue>YDfydoRzEJysJQlXZqIZvufh0P0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -129,13 +129,13 @@
       <dsig:DigestValue>YQY8BVEVV2S026gGZZI7PDZbLvc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="X.Wx.exe.config" size="486">
+  <file name="X.Wx.exe.config" size="488">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>qH68gsVg362XOe49z2Wg06CX1JU=</dsig:DigestValue>
+      <dsig:DigestValue>YOg7fm6CsLDvXMW0cYxknof704Y=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

@@ -25,22 +25,22 @@
       <publishTime>10/13/2016 13:31:44</publishTime>
     </File>
     <File Include="bin/X.App.dll">
-      <publishTime>01/18/2017 20:38:33</publishTime>
+      <publishTime>01/20/2017 11:28:48</publishTime>
     </File>
     <File Include="bin/X.Core.dll">
-      <publishTime>01/18/2017 20:38:31</publishTime>
+      <publishTime>01/20/2017 11:28:25</publishTime>
     </File>
     <File Include="bin/X.Data.dll">
-      <publishTime>01/18/2017 20:38:33</publishTime>
+      <publishTime>01/20/2017 11:28:27</publishTime>
     </File>
     <File Include="bin/X.Json.dll">
       <publishTime>10/13/2016 13:31:44</publishTime>
     </File>
     <File Include="bin/X.Ui.dll">
-      <publishTime>01/18/2017 20:38:34</publishTime>
+      <publishTime>01/20/2017 11:28:48</publishTime>
     </File>
     <File Include="bin/X.Web.dll">
-      <publishTime>01/18/2017 20:38:33</publishTime>
+      <publishTime>01/20/2017 11:28:27</publishTime>
     </File>
     <File Include="dat/cfg.x">
       <publishTime>12/29/2016 12:03:01</publishTime>

@@ -185,8 +185,9 @@ namespace X.Bot.App
                 try
                 {
                     var m = Serialize.FromJson<msg>(str);
-                    if (m == null) return;
+                    //Debug.WriteLine("tcp.prase->" + str);
 
+                    if (m == null) return;
                     if (m.act == "setcode") { code = m.body; }
 
                     NewMsg?.Invoke(m, this);

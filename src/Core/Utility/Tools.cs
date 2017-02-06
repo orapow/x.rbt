@@ -387,6 +387,30 @@ namespace X.Core.Utility
             }
         }
 
+        /// <summary>
+        /// 获取网络文件
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public static byte[] GetHttpFile(string url)
+        {
+            var wc = new WebClient();
+            try
+            {
+                var data = wc.DownloadData(url);
+                return data;
+            }
+            catch (Exception ex)
+            {
+                Loger.Error(ex);
+                return null;
+            }
+            finally
+            {
+                if (wc != null) wc.Dispose();
+            }
+        }
+
         public static string GetHttpData(string url) { return GetHttpData(url, Encoding.UTF8); }
         #endregion
 

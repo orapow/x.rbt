@@ -40,6 +40,7 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Apis\qrcode.cs" />
     <Compile Include="Apis\com\upload.cs" />
     <Compile Include="Apis\contact\list.cs" />
     <Compile Include="Apis\check.cs" />
