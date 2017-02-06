@@ -45,7 +45,7 @@
     <Reference Include="System.Web" />
     <Reference Include="System.XML" />
     <Reference Include="X.Json">
-      <HintPath>..\..\..\ytgis\lib\X.Json.dll</HintPath>
+      <HintPath>..\..\libs\X.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

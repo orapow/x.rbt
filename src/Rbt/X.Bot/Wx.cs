@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
+using static X.Wx.App.Wc;
 
 namespace X.Bot
 {
@@ -13,45 +16,35 @@ namespace X.Bot
         public Wx(string nk, string hm)
         {
             InitializeComponent();
-
             pb_head.Image = base64ToImage(hm);
             Text = nk;
-
-            //if (w.user == null) Environment.Exit(0);
-
-            //User = w.user;
-            //pb_head.Image = hd;
-            //ni_tip.Text = Text = User.NickName;
-            //var bmp = (Bitmap)hd;
-            //Icon = Icon.FromHandle(bmp.GetHicon());
-            //ni_tip.Icon = Icon;
         }
 
-        //public void SetContact(List<Contact> contacts)
-        //{
-        //    Invoke((Action)(() =>
-        //    {
-        //        contacts = contacts.OrderBy(o => o.UserName[1] == '@' ? 0 : 1).ToList();
-        //        var nds = new List<TreeNode>();
-        //        var imgs = new ImageList();
-        //        foreach (var c in contacts)
-        //        {
-        //            var tn = new TreeNode(string.IsNullOrEmpty(c.RemarkName) ? c.NickName : c.RemarkName);
-        //            tn.Tag = c;
-        //            if (c.MemberList != null)
-        //            {
-        //                foreach (var m in c.MemberList)
-        //                {
-        //                    var stn = new TreeNode(string.IsNullOrEmpty(m.RemarkName) ? m.NickName : m.RemarkName);
-        //                    stn.Tag = m;
-        //                    tn.Nodes.Add(stn);
-        //                }
-        //            }
-        //            nds.Add(tn);
-        //        }
-        //        tv_contact.Nodes.AddRange(nds.ToArray());
-        //    }));
-        //}
+        public void SetContact(List<Contact> contacts)
+        {
+            Invoke((Action)(() =>
+            {
+                contacts = contacts.OrderBy(o => o.UserName[1] == '@' ? 0 : 1).ToList();
+                var nds = new List<TreeNode>();
+                var imgs = new ImageList();
+                foreach (var c in contacts)
+                {
+                    var tn = new TreeNode(string.IsNullOrEmpty(c.RemarkName) ? c.NickName : c.RemarkName);
+                    tn.Tag = c;
+                    if (c.MemberList != null)
+                    {
+                        foreach (var m in c.MemberList)
+                        {
+                            var stn = new TreeNode(string.IsNullOrEmpty(m.RemarkName) ? m.NickName : m.RemarkName);
+                            stn.Tag = m;
+                            tn.Nodes.Add(stn);
+                        }
+                    }
+                    nds.Add(tn);
+                }
+                tv_contact.Nodes.AddRange(nds.ToArray());
+            }));
+        }
 
         public void OutLog(string log)
         {

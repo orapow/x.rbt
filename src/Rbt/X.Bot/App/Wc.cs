@@ -6,6 +6,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using X.Core.Utility;
+using static X.Wx.App.Wc;
 
 namespace X.Bot.App
 {
@@ -59,8 +60,6 @@ namespace X.Bot.App
             new Thread(o =>
             {
                 var pi = new ProcessStartInfo("cl.exe", "--script-encoding=gbk --debug=false script.js " + Guid.NewGuid().ToString());
-                //pi.CreateNoWindow = true;
-                //pi.WindowStyle = ProcessWindowStyle.Hidden;
                 var p = new Process();
                 p.StartInfo = pi;
                 p.Start();
@@ -70,7 +69,6 @@ namespace X.Bot.App
 
         public void Show()
         {
-            if (wx == null) wx = new Wx(cu.nickname, cu.headimg);
             wx.Show();
             wx.Activate();
         }
@@ -112,6 +110,10 @@ namespace X.Bot.App
                     cu = Serialize.FromJson<User>(m.body);
                     if (lg.Visible) lg.SetSucc();
                     NewWx?.Invoke(this);
+                    wx = new Wx(cu.nickname, cu.headimg);
+                    break;
+                case "newmsg":
+                    if (wx != null && wx.Visible) wx.OutLog("收到消息->" + m.body);
                     break;
                 case "qrcode":
                     lg.SetQrcode(m.body);
@@ -121,14 +123,13 @@ namespace X.Bot.App
                     cu.headimg = m.body;
                     break;
                 case "log":
-                    //if (wx != null && wx.Visible) wx.OutLog(m.body);
                     Debug.WriteLine("log->" + m.body);
                     break;
                 case "quit":
                     Quit(1);
                     break;
-                case "loadcontact":
-                    Debug.WriteLine("contact->" + m.body.Length);
+                case "contact":
+                    wx.SetContact(Serialize.FromJson<List<Contact>>(m.body, "MemberList"));
                     break;
             }
         }

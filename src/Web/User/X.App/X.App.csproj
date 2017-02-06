@@ -84,8 +84,8 @@
       <Project>{9364f44b-c253-4a46-a86b-f9248325543d}</Project>
       <Name>X.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Xc\Data\X.Data.csproj">
-      <Project>{af748a76-bd19-4240-9974-10a8c61d3347}</Project>
+    <ProjectReference Include="..\..\Data\X.Data.csproj">
+      <Project>{aab73d4e-97ac-45c8-8e33-fd4c975f330a}</Project>
       <Name>X.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Data\X.Data.csproj">
@@ -97,7 +97,6 @@
       <Name>X.Web</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

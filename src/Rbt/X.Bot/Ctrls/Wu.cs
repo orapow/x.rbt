@@ -29,5 +29,10 @@ namespace X.Bot.Ctrls
             this.uin = uin;
             Name = "id:" + uin;
         }
+
+        private void Wu_DoubleClick(object sender, System.EventArgs e)
+        {
+            if (wx != null) wx.Show();
+        }
     }
 }

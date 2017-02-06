@@ -95,7 +95,7 @@ namespace X.Wx
 
         private void 管理中心GToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start("http://rbt.80xc.com/login-" + Sdk.uk + ".html");
+            Process.Start("http://rbt.80xc.com/login-" + Sdk.user.uk + ".html");
         }
 
         private void pb_setting_Click(object sender, EventArgs e)
