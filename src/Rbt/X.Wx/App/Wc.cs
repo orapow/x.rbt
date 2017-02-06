@@ -426,25 +426,25 @@ namespace X.Wx.App
         /// <returns></returns>
         void loadQrcode()
         {
-            wc.GetStr("https://wx.qq.com");
+            //wc.GetStr("https://wx.qq.com");
 
-            var rsp = wc.GetStr("https://login.weixin.qq.com/jslogin?appid=wx782c26e4c19acffb&fun=new&lang=zh_CN&_=" + getcurrentseconds());//&redirect_uri=https%3A%2F%2Fwx2.qq.com%2Fcgi-bin%2Fmmwebwx-bin%2Fwebwxnewloginpage
-            if (rsp.err) throw new Exception("uuid获取失败" + Serialize.ToJson(rsp));
+            //var rsp = wc.GetStr("https://login.weixin.qq.com/jslogin?appid=wx782c26e4c19acffb&fun=new&lang=zh_CN&_=" + getcurrentseconds());//&redirect_uri=https%3A%2F%2Fwx2.qq.com%2Fcgi-bin%2Fmmwebwx-bin%2Fwebwxnewloginpage
+            //if (rsp.err) throw new Exception("uuid获取失败" + Serialize.ToJson(rsp));
 
-            var reg = new Regex("\"(\\S+?)\"");
-            var m = reg.Match(rsp.data + "");
-            if (rsp.err) throw new Exception("uuid获取失败->" + Serialize.ToJson(rsp));
+            //var reg = new Regex("\"(\\S+?)\"");
+            //var m = reg.Match(rsp.data + "");
+            //if (rsp.err) throw new Exception("uuid获取失败->" + Serialize.ToJson(rsp));
 
-            uuid = m.Groups[1].Value;
-            outLog("uuid->" + uuid);
+            //uuid = m.Groups[1].Value;
+            //outLog("uuid->" + uuid);
 
-            rsp = wc.GetFile(string.Format("https://login.weixin.qq.com/qrcode/{0}?_={1}", uuid, getcurrentseconds()));
+            //rsp = wc.GetFile(string.Format("https://login.weixin.qq.com/qrcode/{0}?_={1}", uuid, getcurrentseconds()));
 
-            if (rsp.err) throw new Exception("qrcode获取失败->" + Serialize.ToJson(rsp));
-            var qrcode = Convert.ToBase64String(rsp.data as byte[]);
+            //if (rsp.err) throw new Exception("qrcode获取失败->" + Serialize.ToJson(rsp));
+            //var qrcode = Convert.ToBase64String(rsp.data as byte[]);
 
-            outLog("qrcode->" + qrcode);
-            LoadQr?.Invoke(qrcode);
+            //outLog("qrcode->" + qrcode);
+            //LoadQr?.Invoke(qrcode);
         }
 
         /// <summary>

@@ -59,7 +59,7 @@ function openws(url) {
 }
 function ws_send(act, bd) {
     if (!ws) return;
-    console.log("ws:send->" + act + "@" + bd);
+    console.log("ws:send->" + act + "@" + bd.substring(0, 400));
     ws.send(JSON.stringify({
         from: uin,
         act: act,
@@ -71,73 +71,47 @@ openws();
 
 wp.settings.userAgent = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Maxthon/4.9.3.1000 Chrome/39.0.2146.0 Safari/537.36";
 wp.onCallback = function (msg) {
-    console.log("callback->" + JSON.stringify(msg));
+    console.log("callback->" + JSON.stringify(msg).substring(0, 400));
     switch (msg.act) {
         case "contact":
-            ws_send("loadcontact", msg.data.replace(/[\s]/g, ""))
+            ws_send("contact", msg.data.replace(/[\s]/g, ""))
             break;
         case "sync":
             wp.checking = 0;
             break;
         case "newmsg":
-            //console.log(msg.data);
-            //syncKey = msg.sk;
-            //ws_send("newmsg", JSON.stringify(msg.list))
+            ws_send("newmsg", JSON.stringify(msg.data))
             break;
     }
 };
 wp.viewportSize = { width: 400, height: 300 };
-//wp.onConsoleMessage = function (msg, lineNum, sourceId) {
-//    console.log('CONSOLE: ' + msg + ' (from line #' + lineNum + ' in "' + sourceId + '")');
-//};
 wp.onResourceRequested = function (req) {
     var ns = req.url.split('.');
     var n = ns[ns.length - 1];
     var flag = "";
-    if (n == "css" || n == "gif" || n == "png" || n == "jpg") flag = "->abort";
+    if (n == "css" || n == "gif" || n == "png" || n == "jpg" || req.url.indexOf("/webwxgeticon?") > 0 || req.url.indexOf("/webwxgetheadimg?") > 0) flag = "->abort";
 
     if (req.url.indexOf("/webwxlogout?") > 0) {
         quit("微信退出"); //退出
     }
-    if (req.url.indexOf("/webwxinit?") && baseReq == null) {
-        baseReq = JSON.parse(req.postData).BaseRequest;//更新basereq
-        console.log("init->" + req.postData);
+    if (req.url.indexOf("/webwxinit?") > 0) {
+        var breq = JSON.parse(req.postData).BaseRequest;//更新basereq
+        if (!baseReq || !baseReq.Uin) console.log("init->" + req.postData);
+        baseReq = breq;
     }
-    if (req.url.indexOf("/synccheck?") > 0) {
-        //flag = "->abort";
-        //if (syncKey == null) {
-        //    var sk = /synckey=([^&|"]+)/.exec(req.url)[1];
-        //    var keys = sk.split("%7C");
-        //    syncKey = [];
-        //    for (var i in keys) {
-        //        var k = keys[i].split("_");
-        //        syncKey.push({ Key: k[0], Val: k[1] });
-        //    }
-        //}
-        if (!wp.checking) synccheck(req.url);
-    }
-    if (req.url.indexOf("/webwxgetcontact?") > 0 && !wp.iscontact) {//通讯录
+    if (req.url.indexOf("/webwxgetcontact?") > 0) {//通讯录
         flag = "->abort";
         wp.iscontact = 1;
-        loadcontact();
+        loadcontact(req.url);
     }
-    //if (req.url.indexOf("/webwxsync?") > 0) {
-    //    //flag = "->abort";
-    //    loadmsg();
-    //}
-
-    outlog("res.req->" + req.url + flag);
     if (flag) req.abort();
+    outlog("res.req->" + req.url + flag);
 
     if (!pass_ticket) { var pt = /pass_ticket=([\w\d%]+)/.exec(req.url); if (pt.length == 2) pass_ticket = pt[1]; }//获取pass_ticket
 
 }
 wp.onResourceReceived = function (rsp) {
-    //if (rsp.stage == "start") return;
-    //if (rsp.url.indexOf("/synccheck?") > 0) {
-    //    var exit = wp.evaluate(function () { return (window.synccheck && window.synccheck.retcode) == "1102" });
-    //    if (exit) quit("微信退出");
-    //}
+    if (rsp.url.indexOf("/webwxsync?") > 0 && rsp.stage == "end") setTimeout(loadmsg, 200);
 };
 wp.onResourceError = function (err) {
     if (err.url.indexOf("/webwxnewloginpage?") > 0) {
@@ -163,62 +137,60 @@ function outlog(str) {
     ws_send("log", str);
 }
 function loadheadimg() {
-    var ua = wp.evaluate(function () {
-        return window.userAvatar;
-    });
+    var ua = wp.evaluate(function () { return window.userAvatar; });
     console.log("headimg->" + ua);
     if (ua) { ws_send("headimg", ua); headimg = ua; loaduser(); }
     else if (!stop) setTimeout(loadheadimg, 2 * 1000);
 }
-function synccheck(url) {
-    wp.checking = 1;
+function loadmsg() {
+    outlog("loadmsg");
+    wp.render("d:\\wx.jpg");
+    wp.evaluate(function () {
+        if (!window.ids) window.ids = {};
+        var item = $(".icon.web_wechat_reddot_middle,.icon.web_wechat_reddot").first();
+        if (item.size() > 0) item.parents(".chat_item").click();
+
+        var ti = $(".title_name");
+        if (ti.size() == 0) return;
+        var list = $("[ng-switch] .you"); // 未回复的列表
+        if (list.size() == 0) return;
+
+        var room = {
+            name: ti.attr("data-username"),
+            text: ti.text()
+        }
+
+        list.each(function () {
+            var it = $(this);
+
+            var id = JSON.parse(it.find(".js_message_bubble").attr("data-cm")).msgId;
+
+            if (ids[id] != undefined) return;
+
+            var fr = it.find(".avatar");
+            var from = JSON.parse(fr.attr("data-cm"));
+            from.nk = fr.attr("title");
+
+            var msg = {
+                from: from,
+                room: room,
+                text: it.find(".js_message_plain").text()
+            };
+
+            ids[id] = "";
+            window.callPhantom({ act: 'newmsg', data: msg });
+
+        });
+
+    });
+}
+function loadcontact(url) {
+    outlog("loadcontact->" + url);
     wp.evaluate(function (u) {
         $.get(u, function (d) {
-            window.callPhantom({ act: 'sync', data: d });
-        });
-    }, url);
-}
-function loadmsg() {
-    var msg = wp.evaluate(function () {
-        var reply = {};
-        var $lst = $("[ng-switch] .you"); // 未回复的列表
-        var $info = $lst.not('[reply]').first(); // 未回复的记录
-        if ($info != null && $info.length > 0 && !$info.attr("data-isreplay")) {
-            reply["text"] = $info.find(".js_message_plain").text(); // 未回复的内容
-            reply["nick"] = $info.find(".avatar").attr("title"); // 未回复的备注名称
-            reply["title"] = $info.parents('.chat_bd.scroll-wrapper:first').prev().find('.title_name').text(); // 聊天框title
-            reply["touser"] = $info.parents('[jquery-scrollbar]').attr('data-cm');
-            reply["touser"] = JSON.parse(reply["touser"]).username;
-            reply["fromuser"] = $info.find(".avatar").attr("data-cm");
-            reply["fromuser"] = JSON.parse(reply["fromuser"]).username;
-            reply["index"] = $lst.index($info);
-            reply["item"] = $info;
-            reply["msgid"] = JSON.parse($info.find(".js_message_bubble").attr("data-cm")).msgId;
-            reply["chat"] = reply["touser"].indexOf("@@") == 0 ? 1 : 0;
-            $info.attr("reply", 1);
-        }
-        if (typeof window.callPhantom === 'function') window.callPhantom({ act: 'newmsg', data: reply });
-        //$.post("https://wx.qq.com/cgi-bin/mmwebwx-bin/webwxsync?sid=" + brq.Sid + "&skey=" + brq.Skey + "&lang=zh_CN&pass_ticket=" + pk, JSON.stringify({
-        //    BaseRequest: brq,
-        //    SyncKey: {
-        //        Count: sk.length,
-        //        List: sk
-        //    },
-        //    rr: ~new Date().getTime()
-        //}), function (d) {
-        //    //var msg = JSON.parse(d);
-        //    if (typeof window.callPhantom === 'function') window.callPhantom({ act: 'newmsg', data: d });
-        //});
-    });
-    setTimeout(loadmsg, 500);
-    //console.log("msg->" + JSON.stringify(msg));
-}
-function loadcontact() {
-    wp.evaluate(function (pk, sk) {
-        $.get("https://wx.qq.com/cgi-bin/mmwebwx-bin/webwxgetcontact?lang=zh_CN&pass_ticket=" + pk + "&r=" + new Date().getTime() + "&seq=0&skey=" + sk, function (d) {
             if (typeof window.callPhantom === 'function') window.callPhantom({ act: 'contact', data: d });
         });
-    }, pass_ticket, baseReq.Skey);
+    }, url);
     loadmsg();
 }
 function loadqrcode() {

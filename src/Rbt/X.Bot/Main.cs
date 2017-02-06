@@ -35,13 +35,9 @@ namespace X.Bot
             Text = Sdk.user.nk;
             pb_head.ImageLocation = Sdk.user.img;
             lb_vip.Text = "Vip用户(" + Sdk.user.dt + ")";
-
-            //var bmp = new Bitmap(pb_head.Image);
-
-            //ni_tip.Icon = Icon.FromHandle(bmp.GetHicon());
             ni_tip.Text = Text + " " + lb_vip.Text;
 
-            //bmp.Dispose();
+
         }
 
         protected override void OnLoad(EventArgs e)
@@ -78,7 +74,7 @@ namespace X.Bot
 
             }).Start(tc);
         }
-
+        
         private void Wx_Exit(string uin)
         {
             Invoke((Action)(() =>
@@ -202,7 +198,7 @@ namespace X.Bot
         {
             var us = cms_user.SourceControl as Wu;
             if (us == null) return;
-            us.Show();
+            us.wx.Show();
         }
 
         private void ni_tip_MouseDoubleClick(object sender, MouseEventArgs e)

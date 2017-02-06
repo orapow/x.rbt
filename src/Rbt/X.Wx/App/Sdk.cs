@@ -10,7 +10,7 @@ namespace X.Wx.App
 {
     public class Sdk
     {
-        public static string uk = "";//用户key
+        public static CheckResp user { get; private set; }
 
         static string key = "";//应用key
         static string gateway = "http://rbt.80xc.com/api/";//网关
@@ -26,7 +26,7 @@ namespace X.Wx.App
             var wc = new WebClient();
             wc.Proxy = null;
             last = new Sdk.api() { name = api, ps = values };
-            if (!string.IsNullOrEmpty(uk)) wc.Headers.Add("Cookie", "ukey=" + uk);
+            if (!string.IsNullOrEmpty(user.uk)) wc.Headers.Add("Cookie", "ukey=" + user.uk);
             var fs = new NameValueCollection();
             if (values != null) foreach (var k in values.Keys) fs.Add(k, values[k]);
             string json = "";
@@ -57,13 +57,14 @@ namespace X.Wx.App
 
         public static bool Init(string k)
         {
+            user = new CheckResp();
             key = k;
             return Check();
         }
         public static bool Check()
         {
-            var rsp = doapi<LoginResp>("check", new Dictionary<string, string>() { { "akey", key } });
-            if (rsp.issucc) uk = rsp.uk;
+            var rsp = doapi<CheckResp>("check", new Dictionary<string, string>() { { "akey", key } });
+            if (rsp.issucc) user = rsp;
             return rsp.issucc;
         }
         public static void WxLogin(string uin, string nk, string hd)
@@ -82,6 +83,10 @@ namespace X.Wx.App
         {
             return doapi<Resp>("contact.sync", new Dictionary<string, string>() { { "data", data }, { "uin", uin } });
         }
+        public static Resp LoadQr(string url)
+        {
+            return doapi<Resp>("qrcode", new Dictionary<string, string> { { "url", url } });
+        }
 
     }
     public class Resp
@@ -89,7 +94,7 @@ namespace X.Wx.App
         public bool issucc { get; set; }
         public string msg { get; set; }
     }
-    public class LoginResp : Resp
+    public class CheckResp : Resp
     {
         public string uk { get; set; }
         public string img { get; set; }

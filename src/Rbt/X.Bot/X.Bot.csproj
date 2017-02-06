@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -97,6 +97,9 @@
     <EmbeddedResource Include="Base.resx">
       <DependentUpon>Base.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ctrls\Wu.resx">
+      <DependentUpon>Wu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Wx.resx">
       <DependentUpon>Wx.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,7 +119,9 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -144,9 +149,9 @@
       <Project>{9364F44B-C253-4A46-A86B-F9248325543D}</Project>
       <Name>X.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\X.Net\X.Net.csproj">
-      <Project>{f7a04fb8-f06d-487a-91ad-8c875ff4e59e}</Project>
-      <Name>X.Net</Name>
+    <ProjectReference Include="..\X.Wx\X.Wx.csproj">
+      <Project>{F25456CF-7B98-44EB-B139-D464E01E6C02}</Project>
+      <Name>X.Wx</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
