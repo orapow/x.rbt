@@ -62,8 +62,8 @@ namespace X.Wx.App
         }
         public static bool Check()
         {
-            var rsp = doapi<Resp>("check", new Dictionary<string, string>() { { "akey", key } });
-            if (rsp.issucc) uk = rsp.msg;
+            var rsp = doapi<LoginResp>("check", new Dictionary<string, string>() { { "akey", key } });
+            if (rsp.issucc) uk = rsp.uk;
             return rsp.issucc;
         }
         public static void WxLogin(string uin, string nk, string hd)
@@ -88,6 +88,13 @@ namespace X.Wx.App
     {
         public bool issucc { get; set; }
         public string msg { get; set; }
+    }
+    public class LoginResp : Resp
+    {
+        public string uk { get; set; }
+        public string img { get; set; }
+        public string nk { get; set; }
+        public string dt { get; set; }
     }
     public class MsgResp : Resp
     {

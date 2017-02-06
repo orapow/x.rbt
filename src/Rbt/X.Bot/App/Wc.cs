@@ -17,6 +17,9 @@ namespace X.Bot.App
         public delegate void ExitHandler(string uin);
         public event ExitHandler Exit;
 
+        public delegate void SetCodeHandler(string uin);
+        public event SetCodeHandler SetCode;
+
         public User cu { get; private set; }
 
         private Login lg = null;
@@ -28,11 +31,22 @@ namespace X.Bot.App
 
             cu = new User();
             lg = new Login();
+            lg.FormClosed += Lg_FormClosed;
 
             tc = new Tcp(sc);
             tc.NewMsg += Tc_NewMsg;
             tc.Closed += Tc_Closed;
 
+        }
+
+        private void Lg_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
+        {
+            if (e.CloseReason == System.Windows.Forms.CloseReason.UserClosing && !lg.isLoged)
+            {
+                tc.Send(new msg() { act = "quit" });
+                tc.Quit();
+                Exit?.Invoke(tc.code);
+            }
         }
 
         public void Run()
@@ -44,7 +58,9 @@ namespace X.Bot.App
         {
             new Thread(o =>
             {
-                var pi = new ProcessStartInfo("cl.exe", "--script-encoding=gbk script.js " + Guid.NewGuid().ToString());
+                var pi = new ProcessStartInfo("cl.exe", "--script-encoding=gbk --debug=false script.js " + Guid.NewGuid().ToString());
+                //pi.CreateNoWindow = true;
+                //pi.WindowStyle = ProcessWindowStyle.Hidden;
                 var p = new Process();
                 p.StartInfo = pi;
                 p.Start();
@@ -66,10 +82,14 @@ namespace X.Bot.App
         /// 0 关闭连接
         /// 1 退出微信
         /// </param>
-        public void Quit()
+        public void Quit(int t)
         {
-            tc.Send(new msg() { act = "quit" });
-            Thread.Sleep(2 * 1000);
+            if (lg.Visible) lg.Quit();
+            if (t == 1)
+            {
+                tc.Send(new msg() { act = "quit" });
+                Thread.Sleep(2 * 1000);
+            }
             tc.Quit();
         }
 
@@ -86,6 +106,7 @@ namespace X.Bot.App
                 case "setcode":
                     if (m.body.Length == 36) new Thread(o => { lg.ShowDialog(); }).Start();
                     tc.Send(new msg() { act = "ok" });
+                    SetCode?.Invoke(m.body);
                     break;
                 case "setuser":
                     cu = Serialize.FromJson<User>(m.body);
@@ -100,53 +121,17 @@ namespace X.Bot.App
                     cu.headimg = m.body;
                     break;
                 case "log":
+                    //if (wx != null && wx.Visible) wx.OutLog(m.body);
                     Debug.WriteLine("log->" + m.body);
                     break;
                 case "quit":
-                    tc.Quit();
-                    Exit?.Invoke(cu.uin);
+                    Quit(1);
+                    break;
+                case "loadcontact":
+                    Debug.WriteLine("contact->" + m.body.Length);
                     break;
             }
         }
-
-        //public void SetTc(Tcp tc)
-        //{
-        //    Tc = tc;
-        //    //tc.NewMsg += Tc_NewMsg;
-        //    //tc.Closed += Tc_Closed;
-        //    //tc.Start();
-        //}
-
-        //private void Tc_Closed(Tcp tc)
-        //{
-        //    //tc.Send(new msg() { act = "quit" });
-        //}
-
-        //private void Tc_NewMsg(msg m, Tcp tc)
-        //{
-        //    //if (m.act == "login") tc.code = m.body;
-
-        //    if (m.act == "qrcode") lg.SetQrcode(m.body);
-        //    else if (m.act == "headimg")
-        //    {
-        //        lg.SetHeadimg(m.body);
-        //        cu.headimg = m.body;
-        //    }
-        //    else if (m.act == "setuser")
-        //    {
-        //        var u = Serialize.FromJson<User>(m.body);
-        //        cu.uin = u.uin;
-        //        cu.nickname = u.nickname;
-        //        tc.code = cu.uin;
-
-        //        lg.SetSucc();
-
-        //        Wx = new Wx(cu.nickname, cu.headimg);
-        //        Wx.Show();
-        //    }
-
-        //    Debug.WriteLine(m.act + "->" + m.body);
-        //}
 
         public class User
         {

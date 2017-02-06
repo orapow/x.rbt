@@ -5,3 +5,4 @@ D:\Pro\x.rbt\src\Core\bin\Release\log4net.dll
 D:\Pro\x.rbt\src\Core\bin\Release\X.Json.dll
 D:\Pro\x.rbt\src\Core\obj\Release\X.Core.dll
 D:\Pro\x.rbt\src\Core\obj\Release\X.Core.pdb
+D:\Pro\x.rbt\src\Core\obj\Release\X.Core.csprojResolveAssemblyReference.cache

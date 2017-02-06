@@ -46,7 +46,8 @@
             this.pb_newwx = new System.Windows.Forms.PictureBox();
             this.cms_user = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cms_user_name = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsm_open = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.cm_us_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.pb_head = new System.Windows.Forms.PictureBox();
@@ -74,6 +75,7 @@
             this.ni_tip.Icon = ((System.Drawing.Icon)(resources.GetObject("ni_tip.Icon")));
             this.ni_tip.Text = "微信机器人";
             this.ni_tip.Visible = true;
+            this.ni_tip.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ni_tip_MouseDoubleClick);
             // 
             // cms_notify
             // 
@@ -87,55 +89,56 @@
             this.toolStripSeparator5,
             this.cms_mi_exit});
             this.cms_notify.Name = "cms_user";
-            this.cms_notify.Size = new System.Drawing.Size(142, 132);
+            this.cms_notify.Size = new System.Drawing.Size(153, 154);
+            this.cms_notify.Opening += new System.ComponentModel.CancelEventHandler(this.cms_notify_Opening);
             // 
             // cms_mi_newwx
             // 
             this.cms_mi_newwx.Name = "cms_mi_newwx";
-            this.cms_mi_newwx.Size = new System.Drawing.Size(141, 22);
+            this.cms_mi_newwx.Size = new System.Drawing.Size(152, 22);
             this.cms_mi_newwx.Text = "登陆微信号";
             this.cms_mi_newwx.Click += new System.EventHandler(this.pb_newwx_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(138, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
             // 
             // cms_mi_showmain
             // 
             this.cms_mi_showmain.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cms_mi_showmain.Name = "cms_mi_showmain";
-            this.cms_mi_showmain.Size = new System.Drawing.Size(141, 22);
+            this.cms_mi_showmain.Size = new System.Drawing.Size(152, 22);
             this.cms_mi_showmain.Text = "主界面(&M)";
             this.cms_mi_showmain.Click += new System.EventHandler(this.cms_mi_showmain_Click);
             // 
             // cms_mi_manager
             // 
             this.cms_mi_manager.Name = "cms_mi_manager";
-            this.cms_mi_manager.Size = new System.Drawing.Size(141, 22);
+            this.cms_mi_manager.Size = new System.Drawing.Size(152, 22);
             this.cms_mi_manager.Text = "管理中心(&G)";
             this.cms_mi_manager.Click += new System.EventHandler(this.bt_usercenter_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(138, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
             // 
             // cms_mi_setting
             // 
             this.cms_mi_setting.Name = "cms_mi_setting";
-            this.cms_mi_setting.Size = new System.Drawing.Size(141, 22);
+            this.cms_mi_setting.Size = new System.Drawing.Size(152, 22);
             this.cms_mi_setting.Text = "设置(&S)";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(138, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(149, 6);
             // 
             // cms_mi_exit
             // 
             this.cms_mi_exit.Name = "cms_mi_exit";
-            this.cms_mi_exit.Size = new System.Drawing.Size(141, 22);
+            this.cms_mi_exit.Size = new System.Drawing.Size(152, 22);
             this.cms_mi_exit.Text = "退出(&Q)";
             this.cms_mi_exit.Click += new System.EventHandler(this.cms_mi_exit_Click);
             // 
@@ -143,9 +146,9 @@
             // 
             this.ss_bottom.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsb_cp});
-            this.ss_bottom.Location = new System.Drawing.Point(0, 335);
+            this.ss_bottom.Location = new System.Drawing.Point(0, 267);
             this.ss_bottom.Name = "ss_bottom";
-            this.ss_bottom.Size = new System.Drawing.Size(242, 22);
+            this.ss_bottom.Size = new System.Drawing.Size(211, 22);
             this.ss_bottom.SizingGrip = false;
             this.ss_bottom.TabIndex = 4;
             // 
@@ -156,7 +159,7 @@
             this.tsb_cp.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.tsb_cp.LinkColor = System.Drawing.Color.Silver;
             this.tsb_cp.Name = "tsb_cp";
-            this.tsb_cp.Size = new System.Drawing.Size(227, 17);
+            this.tsb_cp.Size = new System.Drawing.Size(196, 17);
             this.tsb_cp.Spring = true;
             this.tsb_cp.Text = "© 80xc.com";
             this.tsb_cp.ToolTipText = "欢迎访问官网";
@@ -167,10 +170,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.fp_wxs.Controls.Add(this.pb_newwx);
-            this.fp_wxs.Location = new System.Drawing.Point(8, 56);
+            this.fp_wxs.Location = new System.Drawing.Point(8, 62);
             this.fp_wxs.Margin = new System.Windows.Forms.Padding(0);
             this.fp_wxs.Name = "fp_wxs";
-            this.fp_wxs.Size = new System.Drawing.Size(234, 265);
+            this.fp_wxs.Size = new System.Drawing.Size(203, 195);
             this.fp_wxs.TabIndex = 1;
             this.fp_wxs.MouseDown += new System.Windows.Forms.MouseEventHandler(this.fp_wxs_MouseDown);
             // 
@@ -193,11 +196,12 @@
             // 
             this.cms_user.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cms_user_name,
-            this.toolStripMenuItem1,
+            this.toolStripSeparator1,
+            this.tsm_open,
             this.toolStripSeparator4,
             this.cm_us_exit});
             this.cms_user.Name = "cms_user";
-            this.cms_user.Size = new System.Drawing.Size(139, 76);
+            this.cms_user.Size = new System.Drawing.Size(119, 82);
             this.cms_user.Opening += new System.ComponentModel.CancelEventHandler(this.cms_user_Opening);
             // 
             // cms_user_name
@@ -205,24 +209,31 @@
             this.cms_user_name.Enabled = false;
             this.cms_user_name.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cms_user_name.Name = "cms_user_name";
-            this.cms_user_name.Size = new System.Drawing.Size(138, 22);
+            this.cms_user_name.Size = new System.Drawing.Size(118, 22);
             this.cms_user_name.Text = "昵称";
             // 
-            // toolStripMenuItem1
+            // toolStripSeparator1
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
-            this.toolStripMenuItem1.Text = "打开界面(&F)";
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(115, 6);
+            // 
+            // tsm_open
+            // 
+            this.tsm_open.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tsm_open.Name = "tsm_open";
+            this.tsm_open.Size = new System.Drawing.Size(118, 22);
+            this.tsm_open.Text = "打开(&F)";
+            this.tsm_open.Click += new System.EventHandler(this.tsm_open_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(135, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(115, 6);
             // 
             // cm_us_exit
             // 
             this.cm_us_exit.Name = "cm_us_exit";
-            this.cm_us_exit.Size = new System.Drawing.Size(138, 22);
+            this.cm_us_exit.Size = new System.Drawing.Size(118, 22);
             this.cm_us_exit.Text = "退出(&O)";
             this.cm_us_exit.Click += new System.EventHandler(this.cm_us_exit_Click);
             // 
@@ -251,7 +262,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(242, 357);
+            this.ClientSize = new System.Drawing.Size(211, 289);
             this.Controls.Add(this.lb_vip);
             this.Controls.Add(this.pb_head);
             this.Controls.Add(this.fp_wxs);
@@ -264,8 +275,8 @@
             this.Controls.SetChildIndex(this.ss_bottom, 0);
             this.Controls.SetChildIndex(this.fp_wxs, 0);
             this.Controls.SetChildIndex(this.pb_head, 0);
-            this.Controls.SetChildIndex(this.lb_title, 0);
             this.Controls.SetChildIndex(this.lb_vip, 0);
+            this.Controls.SetChildIndex(this.lb_title, 0);
             this.cms_notify.ResumeLayout(false);
             this.ss_bottom.ResumeLayout(false);
             this.ss_bottom.PerformLayout();
@@ -284,7 +295,6 @@
         private System.Windows.Forms.StatusStrip ss_bottom;
         private System.Windows.Forms.ToolStripStatusLabel tsb_cp;
         private System.Windows.Forms.FlowLayoutPanel fp_wxs;
-        private System.Windows.Forms.PictureBox pb_newwx;
         private System.Windows.Forms.ContextMenuStrip cms_user;
         private System.Windows.Forms.ToolStripMenuItem cm_us_exit;
         private System.Windows.Forms.ContextMenuStrip cms_notify;
@@ -301,7 +311,9 @@
         private System.Windows.Forms.ToolTip tip_info;
         private System.Windows.Forms.ToolStripMenuItem cms_mi_setting;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem tsm_open;
+        private System.Windows.Forms.PictureBox pb_newwx;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
 
