@@ -174,18 +174,22 @@ namespace X.Bot.App
                     mkey = data.Take(4).ToArray();
                     lock (data) { data.RemoveRange(0, 4); }
                 }
+
                 var dt = data.Take((int)len).ToArray();
+                while (true)
+                {
+                    if ((ulong)dt.Length == len) break;
+                    Thread.Sleep(500);
+                };
                 lock (data) { data.RemoveRange(0, (int)len); }
 
                 if (mask) for (var i = 0; i < dt.Length; i++) dt[i] = (byte)(dt[i] ^ mkey[i % 4]);
 
                 str = Encoding.UTF8.GetString(dt);
 
-
                 try
                 {
                     var m = Serialize.FromJson<msg>(str);
-                    //Debug.WriteLine("tcp.prase->" + str);
 
                     if (m == null) return;
                     if (m.act == "setcode") { code = m.body; }

@@ -220,6 +220,7 @@
             this.Controls.Add(this.pb_close);
             this.Controls.Add(this.pb_head);
             this.Name = "Wx";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "查看日志";
             this.Controls.SetChildIndex(this.pb_head, 0);
             this.Controls.SetChildIndex(this.lb_title, 0);

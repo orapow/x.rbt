@@ -87,6 +87,7 @@ namespace X.Bot.App
             {
                 tc.Send(new msg() { act = "quit" });
                 Thread.Sleep(2 * 1000);
+                wx.Close();
             }
             tc.Quit();
         }
@@ -113,7 +114,7 @@ namespace X.Bot.App
                     wx = new Wx(cu.nickname, cu.headimg);
                     break;
                 case "newmsg":
-                    if (wx != null && wx.Visible) wx.OutLog("收到消息->" + m.body);
+                    if (wx != null) wx.OutLog("收到消息->" + m.body);
                     break;
                 case "qrcode":
                     lg.SetQrcode(m.body);

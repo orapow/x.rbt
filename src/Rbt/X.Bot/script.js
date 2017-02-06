@@ -51,9 +51,6 @@ function openws(url) {
                 nickname = "";
                 wx.quit();
                 break;
-                //case "loadcontact":
-                //    loadcontact();
-                //    break;
         }
     }
 }
