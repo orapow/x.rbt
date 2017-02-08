@@ -730,7 +730,7 @@ Content-Length: {0}
 
             if (reader is Socket)
             {
-                result = (reader as Socket).Receive(data, SocketFlags.None);
+                result = (reader as Socket).Receive(data);
             }
             else if (reader is SslStream)
             {

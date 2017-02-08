@@ -463,7 +463,7 @@ namespace X.Wx.App
             if (c >= 2 || isquit) throw new Exception("wait 已退出");
 
             string url = string.Format("https://login.weixin.qq.com/cgi-bin/mmwebwx-bin/login?loginicon=true&uuid={0}&tip=0&r={1}&_={2}", uuid, ~getcurrentseconds(), getcurrentseconds());
-            var rsp = wc.GetStr("http://www.sina.com");
+            var rsp = wc.GetStr("http://rbt.tunnel.qydev.com/tpl/index.html");
 
             outLog("wait->" + t + "->" + c + "->" + Serialize.ToJson(rsp));
 
