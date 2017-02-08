@@ -15,9 +15,7 @@ using System.Net.Security;
 using System.Text;
 using System.IO;
 using System.IO.Compression;
-using System.Drawing;
 using System.Security.Cryptography.X509Certificates;
-using System.Diagnostics;
 using X.Core.Utility;
 
 namespace X.Wx
@@ -41,14 +39,14 @@ namespace X.Wx
         /// <summary>
         /// 获取请求返回的 HTTP 头部内容
         /// </summary>
-        private HttpHeader Headers = null;
+        private RspHeader Headers = null;
 
-        public Http() : this("", 60) { }
+        public Http() : this("", 30) { }
         public Http(string ck, int tout)
         {
             timeOut = tout;
             Cookies = new List<string>();
-            Headers = new HttpHeader();
+            Headers = new RspHeader();
 
             foreach (var c in ck.Trim().Split(';'))
             {
@@ -330,11 +328,13 @@ namespace X.Wx
 Accept: text/html, application/xhtml+xml, */*
 Referer: {2}
 Accept-Language: zh-CN
-User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Maxthon/4.9.3.1000 Chrome/39.0.2146.0 Safari/537.36
 Accept-Encoding: gzip, deflate
 Host: {3}
-Connection: Keep-Alive
+Connection: keep-alive
+Pragma: no-cache
 Cache-Control: no-cache
+DNT: 1
 ";
 
             sendString = string.Format(sendString, string.IsNullOrWhiteSpace(postData) ? "GET" : "POST", uri.PathAndQuery
@@ -342,12 +342,12 @@ Cache-Control: no-cache
 
             if (this.Cookies != null && this.Cookies.Count > 0)
             {
-                sendString += string.Format("Cookie: {0}rn", string.Join("; ", this.Cookies.ToArray()));
+                sendString += string.Format("Cookie: {0}\r\n", string.Join("; ", this.Cookies.ToArray()));
             }
 
             if (string.IsNullOrWhiteSpace(postData))
             {
-                sendString += "rn";
+                sendString += "\r\n";
             }
             else
             {
@@ -361,7 +361,7 @@ Content-Length: {0}
             }
 
             return Encoding.UTF8.GetBytes(sendString);
-            ;
+
         }
 
         /// <summary>
@@ -375,14 +375,14 @@ Content-Length: {0}
                 throw new ArgumentNullException("'WithHeadersText' cannot be empty.");
             }
 
-            string[] headers = headText.Split(new string[] { "rn" }, StringSplitOptions.RemoveEmptyEntries);
+            string[] headers = headText.Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
 
             if (headers == null || headers.Length == 0)
             {
                 throw new ArgumentException("'WithHeadersText' param format error.");
             }
 
-            this.Headers = new HttpHeader();
+            this.Headers = new RspHeader();
 
             foreach (string head in headers)
             {
@@ -813,7 +813,7 @@ Content-Length: {0}
         //}
         #endregion
 
-        class HttpHeader
+        class RspHeader
         {
             /// <summary>
             /// 获取请求回应状态码
