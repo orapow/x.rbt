@@ -8,15 +8,17 @@ var wp = require('webpage').create(),
     baseReq = null,
     syncKey = null,
     pass_ticket = "",
+    host = "",
     uin = "",
     nickname = "",
-    headimg = ""
+    headimg = "",
+    username = ""
 
 if (sys.args.length === 1) phantom.exit(0);
 uin = sys.args[1];
 
 phantom.onError = function (msg, trace) {
-    console.log("err->" + msg + "\r\n" + trace);
+    console.log("err->" + msg + "\r\n" + JSON.stringify(trace));
 }
 phantom.outputEncoding = "gb2312";
 
@@ -51,6 +53,11 @@ function openws(url) {
                 nickname = "";
                 wx.quit();
                 break;
+            case "send":
+                var wm = JSON.parse(m.body);
+                if (wm.type == 1) wx.sendText(wm.to, wm.content);
+                else if (wm.type == 2) wx.sendImg(wm.to, wm.content);
+                break;
         }
     }
 }
@@ -81,7 +88,7 @@ wp.onCallback = function (msg) {
             break;
     }
 };
-wp.viewportSize = { width: 400, height: 300 };
+wp.viewportSize = { width: 640, height: 480 };
 wp.onResourceRequested = function (req) {
     var ns = req.url.split('.');
     var n = ns[ns.length - 1];
@@ -119,7 +126,29 @@ wp.onResourceError = function (err) {
 
 var wx = {
     quit: function () { },
-    send: function () { }
+    sendText: function (to, txt) {
+        var url = "https://" + host + "/cgi-bin/mmwebwx-bin/webwxsendmsg?pass_ticket=" + pass_ticket;
+
+        var o = {
+            BaseRequest: baseReq,
+            Msg: {
+                Type: 1,
+                Content: txt,
+                FromUserName: username,
+                ToUserName: to,
+                LocalID: new Date().getTime(),
+                ClientMsgId: new Date().getTime()
+            }
+        }
+        wp.evaluate(function (u, bd) {
+            $.post(u, JSON.stringify(bd), function (d) {
+                window.callPhantom({ act: 'sendback', data: d });
+            })
+        }, url, o);
+
+    }, sendImg: function (to, url) {
+
+    }
 }
 
 function quit(res) {
@@ -128,7 +157,7 @@ function quit(res) {
     setTimeOut(function () { phantom.exit(0); }, 2 * 1000);
 }
 function senduser() {
-    ws_send("setuser", JSON.stringify({ uin: uin, nickname: nickname, headimg: headimg }));
+    ws_send("setuser", JSON.stringify({ uin: uin, username: username, nickname: nickname, headimg: headimg }));
 }
 function outlog(str) {
     ws_send("log", str);
@@ -141,7 +170,7 @@ function loadheadimg() {
 }
 function loadmsg() {
     outlog("loadmsg");
-    wp.render("d:\\wx.jpg");
+    //wp.render("d:\\wx.jpg");
     wp.evaluate(function () {
         if (!window.ids) window.ids = {};
         var item = $(".icon.web_wechat_reddot_middle,.icon.web_wechat_reddot").first();
@@ -157,28 +186,33 @@ function loadmsg() {
             text: ti.text()
         }
 
-        list.each(function () {
-            var it = $(this);
+        try {
+            list.each(function () {
+                var it = $(this);
 
-            var id = JSON.parse(it.find(".js_message_bubble").attr("data-cm")).msgId;
+                var id = JSON.parse(it.find(".js_message_bubble").attr("data-cm")).msgId;
 
-            if (ids[id] != undefined) return;
+                if (ids[id] != undefined) return;
 
-            var fr = it.find(".avatar");
-            var from = JSON.parse(fr.attr("data-cm"));
-            from.nk = fr.attr("title");
+                var fr = it.find(".avatar");
+                var from = JSON.parse(fr.attr("data-cm"));
 
-            var msg = {
-                from: from,
-                room: room,
-                text: it.find(".js_message_plain").text()
-            };
+                var msg = {
+                    fr: {
+                        name: from.username,
+                        text: fr.attr("title")
+                    },
+                    rm: room,
+                    text: it.find(".js_message_plain").text()
+                };
 
-            ids[id] = "";
-            window.callPhantom({ act: 'newmsg', data: msg });
+                ids[id] = "";
+                window.callPhantom({ act: 'newmsg', data: msg });
 
-        });
-
+            });
+        } catch (e) {
+            window.callPhantom({ act: 'msgerr', data: JSON.stringify(e) });
+        }
     });
 }
 function loadcontact(url) {
@@ -214,7 +248,11 @@ function loaduser() {
     nickname = wp.evaluate(function () { return $(".display_name").text(); });
     if (baseReq) uin = baseReq.Uin; //ªÒ»°uin
     if (uin.length == 36 || !nickname) setTimeout(loaduser, 2 * 1000);
-    else senduser();
+    else {
+        host = wp.evaluate(function () { return document.location.host; });
+        username = wp.evaluate(function () { return /@[^&]+/.exec($(".header .avatar .img").attr("src"))[0]; })
+        senduser();
+    }
 }
 
 

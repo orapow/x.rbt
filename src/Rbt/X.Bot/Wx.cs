@@ -2,22 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using X.Bot.App;
+using X.Core.Utility;
 using static X.Wx.App.Wc;
 
 namespace X.Bot
 {
     public partial class Wx : Base
     {
-        public string Uin { get; private set; }
+        private Wc.User user = null;
+        private Tcp tc = null;
 
-        //public delegate void LoadReplyHandler();
-        //public event LoadReplyHandler LoadReply;
-
-        public Wx(string nk, string hm)
+        public Wx(Wc.User cu, Tcp tc)
         {
             InitializeComponent();
-            pb_head.Image = base64ToImage(hm);
-            Text = nk;
+            user = cu;
+            pb_head.Image = base64ToImage(user.headimg);
+            Text = user.nickname;
+            this.tc = tc;
         }
 
         public void SetContact(List<Contact> contacts)
@@ -120,11 +122,11 @@ namespace X.Bot
 
         private void bt_send_Click(object sender, EventArgs e)
         {
-            //var ct = gp_msg.Tag as Contact;
-            //if (ct != null)
-            //    wx.Send(new List<string>() { ct.UserName }, 1, tb_msg.Text);
-            //tb_msg.Text = "";
-            //MessageBox.Show("已发送");
+            var ct = gp_msg.Tag as Contact;
+            if (ct != null)
+                tc.Send(new msg() { act = "send", body = Serialize.ToJson(new { type = 1, to = ct.UserName, content = tb_msg.Text }) });
+            tb_msg.Text = "";
+            MessageBox.Show("已发送");
         }
 
         private void bt_send_pic_Click(object sender, EventArgs e)

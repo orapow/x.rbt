@@ -26,6 +26,7 @@ namespace X.Bot.App
         private Login lg = null;
         private Wx wx = null;
         private Tcp tc = null;
+        private List<ReplyResp.Reply> repies = null;
 
         public Wc(TcpClient sc)
         {
@@ -87,7 +88,7 @@ namespace X.Bot.App
             {
                 tc.Send(new msg() { act = "quit" });
                 Thread.Sleep(2 * 1000);
-                wx.Close();
+                if (wx != null) wx.Close();
             }
             tc.Quit();
         }
@@ -111,10 +112,44 @@ namespace X.Bot.App
                     cu = Serialize.FromJson<User>(m.body);
                     if (lg.Visible) lg.SetSucc();
                     NewWx?.Invoke(this);
-                    wx = new Wx(cu.nickname, cu.headimg);
+                    wx = new Wx(cu, tc);
+                    repies = Sdk.LoadReply(cu.uin).items;
                     break;
                 case "newmsg":
-                    if (wx != null) wx.OutLog("收到消息->" + m.body);
+                    var wm = Serialize.FromJson<Wxm>(m.body);
+                    if (wm == null) break;
+
+                    wx.OutLog("收到消息->" + wm.fr.text + (wm.rm.name[1] == '@' ? "@" + wm.rm.text : "") + "：" + wm.text);
+                    if (repies == null) break;
+
+                    ReplyResp.Reply rep = null;
+                    foreach (var r in repies)
+                    {
+                        switch (r.tp)
+                        {
+                            case 1:
+                                if (wm.text.Contains("我通过了你的朋友验证请求，现在我们可以开始聊天了")) rep = r;
+                                wx.OutLog("匹配到 被添加 自动回复，发送了" + (rep.type == 1 ? "文本" : "图片") + "内容：" + rep.content);
+                                //被添加
+                                break;
+                            case 2://群内新成员
+                                wx.OutLog("匹配到 群内新成员 自动回复，发送了" + (rep.type == 1 ? "文本" : "图片") + "内容：" + rep.content);
+                                break;
+                            case 3://默认回复
+                                break;
+                            case 4://关键字回复
+                                if (r.match == 1 && r.keys.Contains(wm.text)) rep = r;
+                                else if (r.match == 2 && r.keys.Count(o => wm.text.StartsWith(o)) > 0) rep = r;
+                                else if (r.match == 3 && r.keys.Count(o => wm.text.EndsWith(o)) > 0) rep = r;
+                                else if (r.match == 4 && r.keys.Count(o => wm.text.Contains(o)) > 0) rep = r;
+                                if (rep != null) wx.OutLog("匹配到 关键字(" + string.Join(" ", r.keys) + ") 自动回复，发送了" + (rep.type == 1 ? "文本" : "图片") + "内容：" + rep.content);
+                                break;
+                        }
+                        if (rep != null) break;
+                    }
+
+                    if (rep != null) tc.Send(new msg() { act = "send", body = Serialize.ToJson(new { to = wm.fr.name, rep.type, rep.content }) });
+
                     break;
                 case "qrcode":
                     lg.SetQrcode(m.body);
@@ -135,9 +170,27 @@ namespace X.Bot.App
             }
         }
 
+        class Wxm
+        {
+            public from fr { get; set; }
+            public room rm { get; set; }
+            public string text { get; set; }
+            public class room
+            {
+                public string name { get; set; }
+                public string text { get; set; }
+            }
+            public class from
+            {
+                public string name { get; set; }
+                public string text { get; set; }
+            }
+        }
+
         public class User
         {
             public string uin { get; set; }
+            public string username { get; set; }
             public string nickname { get; set; }
             public string headimg { get; set; }
         }
