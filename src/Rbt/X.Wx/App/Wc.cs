@@ -43,7 +43,7 @@ namespace X.Wx.App
                 wxInit();
                 wxStatusNotify();
 
-                op = new Http(wc.Cookies, 5);
+                //op = new Http(wc.Cookies, 5);
 
             }
             catch (Exception ex)
@@ -123,8 +123,8 @@ namespace X.Wx.App
         /// <returns></returns>
         public string GetHeadImage(string username)
         {
-            var hw = new Http(wc.Cookies, 3);
-            var rp = hw.GetFile(gateway + "/cgi-bin/mmwebwx-bin/webwxget" + (username[1] == '@' ? "headimg" : "icon") + "?username=" + username);
+            //var hw = new Http(wc.Cookies, 3);
+            var rp = wc.GetFile(gateway + "/cgi-bin/mmwebwx-bin/webwxget" + (username[1] == '@' ? "headimg" : "icon") + "?username=" + username);
             if (!rp.err) return Convert.ToBase64String(rp.data as byte[]);
             else { outLog("GetHeadImage->" + rp.msg); return ""; }
         }
@@ -463,7 +463,7 @@ namespace X.Wx.App
             if (c >= 2 || isquit) throw new Exception("wait 已退出");
 
             string url = string.Format("https://login.weixin.qq.com/cgi-bin/mmwebwx-bin/login?loginicon=true&uuid={0}&tip=0&r={1}&_={2}", uuid, ~getcurrentseconds(), getcurrentseconds());
-            var rsp = wc.GetStr(url);
+            var rsp = wc.GetStr("http://www.sina.com");
 
             outLog("wait->" + t + "->" + c + "->" + Serialize.ToJson(rsp));
 

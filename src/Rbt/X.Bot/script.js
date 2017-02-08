@@ -12,7 +12,8 @@ var wp = require('webpage').create(),
     uin = "",
     nickname = "",
     headimg = "",
-    username = ""
+    username = "",
+    contacts = [];
 
 if (sys.args.length === 1) phantom.exit(0);
 uin = sys.args[1];
@@ -45,7 +46,7 @@ function openws(url) {
         var m = JSON.parse(msg.data);
         switch (m.act) {
             case "ok":
-                if (nickname) loaduser();
+                if (nickname) { loaduser(); ws_send("contact", JSON.stringify(contacts)); }
                 else loadwx();
                 break;
             case "quit":
@@ -55,8 +56,7 @@ function openws(url) {
                 break;
             case "send":
                 var wm = JSON.parse(m.body);
-                if (wm.type == 1) wx.sendText(wm.to, wm.content);
-                else if (wm.type == 2) wx.sendImg(wm.to, wm.content);
+                wx.send(wm.type, wm.to, wm.content);
                 break;
         }
     }
@@ -78,7 +78,8 @@ wp.onCallback = function (msg) {
     console.log("callback->" + JSON.stringify(msg).substring(0, 400));
     switch (msg.act) {
         case "contact":
-            ws_send("contact", msg.data.replace(/[\s]/g, ""))
+            contacts = JSON.parse(msg.data);
+            ws_send("contact", JSON.stringify(contacts));
             break;
         case "sync":
             wp.checking = 0;
@@ -93,7 +94,7 @@ wp.onResourceRequested = function (req) {
     var ns = req.url.split('.');
     var n = ns[ns.length - 1];
     var flag = "";
-    if (n == "css" || n == "gif" || n == "png" || n == "jpg" || req.url.indexOf("/webwxgeticon?") > 0 || req.url.indexOf("/webwxgetheadimg?") > 0) flag = "->abort";
+    if (n == "css" || n == "gif" || n == "png" || n == "jpg" || req.url.indexOf("/webwxgeticon?") > 0 || req.url.indexOf("/webwxgetheadimg?") > 0 || req.url.indexOf("/webwxbatchgetcontact?") > 0) flag = "->abort";
 
     if (req.url.indexOf("/webwxlogout?") > 0) {
         quit("Î¢ÐÅÍË³ö"); //ÍË³ö
@@ -126,27 +127,36 @@ wp.onResourceError = function (err) {
 
 var wx = {
     quit: function () { },
-    sendText: function (to, txt) {
-        var url = "https://" + host + "/cgi-bin/mmwebwx-bin/webwxsendmsg?pass_ticket=" + pass_ticket;
+    send: function (tp, to, txt) {
+        var url = "";
 
         var o = {
             BaseRequest: baseReq,
             Msg: {
-                Type: 1,
-                Content: txt,
                 FromUserName: username,
                 ToUserName: to,
                 LocalID: new Date().getTime(),
                 ClientMsgId: new Date().getTime()
             }
         }
+        if (tp == 1) {
+            url = "https://" + host + "/cgi-bin/mmwebwx-bin/webwxsendmsg?pass_ticket=" + pass_ticket;
+            o.Msg.Type = 1;
+            o.Msg.Content = txt;
+        } else if (tp == 2) {
+            url = "https://" + host + "/cgi-bin/mmwebwx-bin/webwxsendmsgimg?fun=async&f=json&pass_ticket=" + pass_ticket;
+            o.Msg.Type = 3;
+            o.Msg.MediaId = mmid;
+        }
+
         wp.evaluate(function (u, bd) {
             $.post(u, JSON.stringify(bd), function (d) {
                 window.callPhantom({ act: 'sendback', data: d });
             })
         }, url, o);
 
-    }, sendImg: function (to, url) {
+    },
+    sendImg: function (to, url) {
 
     }
 }
@@ -203,7 +213,7 @@ function loadmsg() {
                         text: fr.attr("title")
                     },
                     rm: room,
-                    text: it.find(".js_message_plain").text()
+                    text: it.find(".js_message_plain").html()
                 };
 
                 ids[id] = "";
@@ -217,11 +227,44 @@ function loadmsg() {
 }
 function loadcontact(url) {
     outlog("loadcontact->" + url);
-    wp.evaluate(function (u) {
+    wp.evaluate(function (u, h, req) {
         $.get(u, function (d) {
-            if (typeof window.callPhantom === 'function') window.callPhantom({ act: 'contact', data: d });
+            var cts = d.MemberList;
+            if (!cts || cts.length == 0) return;
+            var list = [];
+            for (var i in cts) {
+                var c = cts[i];
+                if (c.KeyWord === 'gh_') continue;
+
+                if (c.UserName[1] == '@') {
+                    var o = {
+                        BaseRequest: req,
+                        Count: 1,
+                        List: [{
+                            EncryChatRoomId: c.EncryChatRoomId,
+                            UserName: c.UserName
+                        }]
+                    };
+                    $.ajax("https://" + h + "/cgi-bin/mmwebwx-bin/webwxbatchgetcontact?type=ex&r=" + new Date().getTime(), {
+                        async: true,
+                        data: JSON.stringify(o),
+                        dataType: "json",
+                        type: "POST",
+                        success: function (data) {
+                            var gp = data.ContactList[0];
+                            c = gp;
+                        },
+                        complete: function (xhr, st) {
+                            window.callPhantom({ act: 'log', data: st });
+                        }
+                    });
+                }
+                list.push(c);
+            }
+
+            window.callPhantom({ act: 'contact', data: list });
         });
-    }, url);
+    }, url, host, baseReq);
     loadmsg();
 }
 function loadqrcode() {

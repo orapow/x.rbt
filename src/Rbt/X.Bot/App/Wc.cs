@@ -118,8 +118,10 @@ namespace X.Bot.App
                 case "newmsg":
                     var wm = Serialize.FromJson<Wxm>(m.body);
                     if (wm == null) break;
+                    if (string.IsNullOrEmpty(wm.text)) break;
 
-                    wx.OutLog("收到消息->" + wm.fr.text + (wm.rm.name[1] == '@' ? "@" + wm.rm.text : "") + "：" + wm.text);
+                    wx.OutLog("收到消息->" + wm.fr.text + (wm.rm.name[1] == '@' ? "@" + wm.rm.text : "") + "：\r\n\t" + wm.text.Replace("  ", "").Replace("&nbsp;", "").Replace("<br>", "\r\n\t").Trim());
+
                     if (repies == null) break;
 
                     ReplyResp.Reply rep = null;
@@ -165,7 +167,7 @@ namespace X.Bot.App
                     Quit(1);
                     break;
                 case "contact":
-                    wx.SetContact(Serialize.FromJson<List<Contact>>(m.body, "MemberList"));
+                    wx.SetContact(Serialize.FromJson<List<Contact>>(m.body));
                     break;
             }
         }
