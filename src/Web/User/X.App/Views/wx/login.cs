@@ -26,7 +26,9 @@ namespace X.App.Views.wx
             base.InitDict();
             dict.Add("issucc", !string.IsNullOrEmpty(key));
             dict["cu"] = cu;
+            cu.ukey = Secret.MD5(Guid.NewGuid().ToString());
             CacheHelper.Save("login." + key, cu.ukey);
+            SubmitDBChanges();
         }
     }
 }

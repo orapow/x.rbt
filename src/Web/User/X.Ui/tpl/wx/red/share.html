@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("wx/_head.html")
+    <title>分享 $u.nickname 的红包</title>
+    <style type="text/css">
+        body { font-family: "微软雅黑"; }
+        .toshare { position: absolute; left: 0; top: 0; width: 100%; display: none; }
+        .btn { border: 1px solid #ccc; border-radius: 8px; padding: 8px; text-align: center; width: 120px; display: inline-block; text-decoration: none; color: #aeaeae; }
+        .foot { display: none; }
+    </style>
+</head>
+<body>
+    <div class="" style="text-align:center;">
+        <br /><br />
+        <img src="data:image/jpg;base64,$img" style="width:70%;border-radius:5px;" />
+        <br />
+        <br />
+        <p style="font-size:15px;color:#aeaeae;margin:0 10px;">长按直接发送给好友，即可完成分享！</p>
+        <br />
+    </div>
+    <div style="text-align:center;">
+        <span class="btn" style="background-color:#bababa;color:white;" onclick="history.back()">返回</span>
+    </div>
+    <br />
+    <br />
+    <br />
+    #parse("wx/_foot.html")
+    <script type="text/javascript">
+
+        sharedata = {
+            link: "http://$cfg.domain/wx/red/show-${rid}-${cu.user_id}.html",
+            title: "[微信红包]$bao.remark",
+            desc: "#if($cu.user_id==$bao.user_id)$cu.nickname 发红包了#else$cu.nickname 转发了 $u.nickname的红包#end，赶快来抢，手慢无！！！",
+            img: "$cu.headimg"
+        };
+
+    </script>
+</body>
+</html>

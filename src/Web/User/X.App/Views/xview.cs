@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Web;
 using X.App.Com;
 using X.Data;
 using X.Web;
@@ -26,15 +27,20 @@ namespace X.App.Views
         {
             base.InitView();
             cfg = Config.LoadConfig();
-            dict.Add("cfg", cfg);
 
             var uk = GetReqParms("ukey");
-            cu = DB.x_user.FirstOrDefault(o => o.ukey == uk);
+            if (!string.IsNullOrEmpty(uk)) cu = DB.x_user.FirstOrDefault(o => o.ukey == uk);
 
             if (cu == null && needus) throw new XExcep("0x0006");
-            else dict.Add("cu", cu);
 
             if (!string.IsNullOrEmpty(menu_id)) dict.Add("m" + menu_id, "selected");
+
+        }
+        protected override void InitDict()
+        {
+            base.InitDict();
+            if (cu != null) dict.Add("cu", cu);
+            dict.Add("cfg", cfg);
         }
     }
 }

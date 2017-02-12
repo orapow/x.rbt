@@ -66,31 +66,31 @@ namespace X.Web
                 {
                     case "string":
                         v = Context.Server.HtmlEncode(postes[k]);
-                        if (attr.Length > 0) Checker.check(attr[0] as ParmsAttr, v.ToString());
+                        Checker.check(attr, v.ToString());
                         break;
                     case "int":
                     case "int32":
                         var iv = 0;
                         int.TryParse(postes[k], out iv);
-                        if (attr.Length > 0) Checker.check(attr[0] as ParmsAttr, iv);
+                        Checker.check(attr, iv);
                         v = iv;
                         break;
                     case "int64":
                         long lv = 0;
                         long.TryParse(postes[k], out lv);
-                        if (attr.Length > 0) Checker.check(attr[0] as ParmsAttr, lv);
+                        Checker.check(attr, lv);
                         v = lv;
                         break;
                     case "decimal":
                         var dev = (decimal)0.0;
                         decimal.TryParse(postes[k], out dev);
-                        if (attr.Length > 0) Checker.check(attr[0] as ParmsAttr, dev);
+                        Checker.check(attr, dev);
                         v = dev;
                         break;
                     case "datetime":
-                        var dtv = DateTime.MinValue;
+                        DateTime dtv = DateTime.MinValue;
                         DateTime.TryParse(postes[k], out dtv);
-                        if (attr.Length > 0) Checker.check(attr[0] as ParmsAttr, dtv);
+                        Checker.check(attr, dtv);
                         v = dtv;
                         break;
                     default:
@@ -105,8 +105,12 @@ namespace X.Web
         /// </summary>
         class Checker
         {
-            public static void check(ParmsAttr pa, string v)
+            public static void check(object[] attr, string v)
             {
+                if (attr.Length == 0) return;
+                var pa = attr[0] as ParmsAttr;
+
+                if (pa.def != null && string.IsNullOrEmpty(v)) v = pa.def.ToString();
                 if (pa.req && string.IsNullOrEmpty(v)) throw new XExcep("0x0003", pa.name);
 
                 string min = (string)pa.min;
@@ -123,8 +127,12 @@ namespace X.Web
                     if (!string.IsNullOrEmpty(ls[1]) && v.Length > int.Parse(ls[1])) throw new XExcep("0x0004", String.Format("{0}最多{1}个字符", pa.name, ls[1]));
                 }
             }
-            public static void check(ParmsAttr pa, int v)
+            public static void check(object[] attr, int v)
             {
+                if (attr.Length == 0) return;
+                var pa = attr[0] as ParmsAttr;
+
+                if (pa.def != null && v == 0) v = (int)pa.def;
                 if (pa.req && v == 0) throw new XExcep("0x0003", pa.name);
 
                 int? min = null, max = null;
@@ -134,8 +142,12 @@ namespace X.Web
                 if (pa.min != null && v < min) throw new XExcep("0x0004", String.Format("{0}的值要大于{1}", pa.name, min));
                 if (pa.max != null && v > max) throw new XExcep("0x0004", String.Format("{0}的值要小于{1}", pa.name, max));
             }
-            public static void check(ParmsAttr pa, decimal v)
+            public static void check(object[] attr, decimal v)
             {
+                if (attr.Length == 0) return;
+                var pa = attr[0] as ParmsAttr;
+
+                if (pa.def != null && v == 0) v = (decimal)pa.def;
                 if (pa.req && v == 0) throw new XExcep("0x0003", pa.name);
 
                 if (pa.min == null && pa.max == null) return;
@@ -144,8 +156,12 @@ namespace X.Web
                 if (v < min && pa.min != null) throw new XExcep("0x0004", String.Format("{0}的值要大于{1}", pa.name, min));
                 if (v > max && pa.max != null) throw new XExcep("0x0004", String.Format("{0}的值要小于{1}", pa.name, max));
             }
-            public static void check(ParmsAttr pa, long v)
+            public static void check(object[] attr, long v)
             {
+                if (attr.Length == 0) return;
+                var pa = attr[0] as ParmsAttr;
+
+                if (pa.def != null && v == 0) v = (long)pa.def;
                 if (pa.req && v == 0) throw new XExcep("0x0003", pa.name);
 
                 if (pa.min == null && pa.max == null) return;
@@ -154,8 +170,12 @@ namespace X.Web
                 if (v < min && pa.min != null) throw new XExcep("0x0004", String.Format("{0}的值要大于{1}", pa.name, min));
                 if (v > max && pa.max != null) throw new XExcep("0x0004", String.Format("{0}的值要小于{1}", pa.name, max));
             }
-            public static void check(ParmsAttr pa, DateTime v)
+            public static void check(object[] attr, DateTime v)
             {
+                if (attr.Length == 0) return;
+                var pa = attr[0] as ParmsAttr;
+
+                if (pa.def != null && v == DateTime.MinValue) v = (DateTime)pa.def;
                 if (pa.req && v == null) throw new XExcep("0x0003", pa.name);
 
                 if (pa.min == null && pa.max == null) return;
@@ -263,6 +283,10 @@ namespace X.Web
             /// 最大值
             /// </summary>
             public object max { get; set; }
+            /// <summary>
+            /// 默认值
+            /// </summary>
+            public object def { get; set; }
         }
     }
 }

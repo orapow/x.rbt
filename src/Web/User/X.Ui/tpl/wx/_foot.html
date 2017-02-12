@@ -46,9 +46,8 @@
         $("#loadingToast").show();
         jQuery.post("/api/" + api, ps, function (d) {
             $("#loadingToast").hide();
-            if (!d.issucc) {
-                alert(d.msg);
-            } else if (callback) {
+            if (d.msg) alert(d.msg);
+            if (callback) {
                 try {
                     callback(d);
                 }

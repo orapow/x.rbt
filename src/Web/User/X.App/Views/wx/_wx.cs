@@ -23,8 +23,8 @@ namespace X.App.Views.wx
 
         protected override void InitView()
         {
-
             base.InitView();
+
             if (cu == null)
             {
                 var code = GetReqParms("code");
@@ -34,35 +34,34 @@ namespace X.App.Views.wx
                     tk = Wx.GetWebToken(cfg.wx_appid, cfg.wx_scr, code);
                     if (string.IsNullOrEmpty(tk.errcode)) opid = tk.openid;
                 }
-
                 if (string.IsNullOrEmpty(opid)) ToWxUrl("snsapi_base");
-
                 cu = DB.x_user.FirstOrDefault(o => o.openid == opid);
-                if (cu == null) { cu = new Data.x_user() { ctime = DateTime.Now, openid = opid, wxcount = 2, akey = Secret.SHA256(Guid.NewGuid().ToString()) }; }
-
-                cu.ukey = Secret.MD5(Guid.NewGuid().ToString());
-                cu.last_time = DateTime.Now;
-
-                if (tk.scope == "snsapi_base" && (cu.user_id == 0 || cu.last_time < DateTime.Now.AddDays(-7) || cu.nickname == null)) ToWxUrl("snsapi_userinfo");//新用户或超过7天的用户重新拉取用户信息
-
-                Wx.User.uinfo u = null;
-                if (tk.scope == "snsapi_userinfo") u = Wx.User.GetUserInfo(opid, tk.access_token, true);
-
-                if (u != null)
-                {
-                    cu.city = u.city;
-                    cu.country = u.country;
-                    cu.headimg = u.headimgurl;
-                    cu.nickname = u.nickname;
-                    cu.name = u.nickname;
-                    cu.province = u.province;
-                    cu.subscribe = u.subscribe;
-                    cu.subscribe_time = u.subscribe_time;
-                    cu.sex = u.sex;
-                }
-                if (cu.user_id == 0) DB.x_user.InsertOnSubmit(cu);
-                SubmitDBChanges();
             }
+            if (cu == null) { cu = new Data.x_user() { ctime = DateTime.Now, openid = opid, wxcount = 2, akey = Secret.SHA256(Guid.NewGuid().ToString()) }; }
+
+            if (string.IsNullOrEmpty(cu.ukey)) cu.ukey = Secret.MD5(Guid.NewGuid().ToString());
+            cu.last_time = DateTime.Now;
+
+            if (tk != null && tk.scope == "snsapi_base" && (cu.user_id == 0 || cu.last_time < DateTime.Now.AddDays(-7) || cu.nickname == null)) ToWxUrl("snsapi_userinfo");//新用户或超过7天的用户重新拉取用户信息
+
+            Wx.User.uinfo u = null;
+            if (tk != null && tk.scope == "snsapi_userinfo") u = Wx.User.GetUserInfo(opid, tk.access_token, true);
+
+            if (u != null)
+            {
+                cu.city = u.city;
+                cu.country = u.country;
+                cu.headimg = u.headimgurl;
+                cu.nickname = u.nickname;
+                cu.name = u.nickname;
+                cu.province = u.province;
+                cu.subscribe = u.subscribe;
+                cu.subscribe_time = u.subscribe_time;
+                cu.sex = u.sex;
+            }
+            if (cu.user_id == 0) DB.x_user.InsertOnSubmit(cu);
+            SubmitDBChanges();
+            Context.Response.SetCookie(new HttpCookie("ukey", cu.ukey));
         }
 
         protected void ToWxUrl(string scope)

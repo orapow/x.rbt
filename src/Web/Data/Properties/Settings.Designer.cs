@@ -32,5 +32,15 @@ namespace X.Data.Properties {
                 return ((string)(this["x_rbtConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=x.rbt;Integrated Security=True")]
+        public string x_rbtConnectionString1 {
+            get {
+                return ((string)(this["x_rbtConnectionString1"]));
+            }
+        }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace X.App.Views.func.msg
+namespace X.App.Views.rbt.msg
 {
     public class list : xview
     {

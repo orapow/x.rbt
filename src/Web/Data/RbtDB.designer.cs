@@ -42,16 +42,22 @@ namespace X.Data
     partial void Insertx_logon(x_logon instance);
     partial void Updatex_logon(x_logon instance);
     partial void Deletex_logon(x_logon instance);
-    partial void Insertx_user(x_user instance);
-    partial void Updatex_user(x_user instance);
-    partial void Deletex_user(x_user instance);
     partial void Insertx_contact(x_contact instance);
     partial void Updatex_contact(x_contact instance);
     partial void Deletex_contact(x_contact instance);
+    partial void Insertx_user(x_user instance);
+    partial void Updatex_user(x_user instance);
+    partial void Deletex_user(x_user instance);
+    partial void Insertx_red_get(x_red_get instance);
+    partial void Updatex_red_get(x_red_get instance);
+    partial void Deletex_red_get(x_red_get instance);
+    partial void Insertx_red(x_red instance);
+    partial void Updatex_red(x_red instance);
+    partial void Deletex_red(x_red instance);
     #endregion
 		
 		public RbtDBDataContext() : 
-				base(global::X.Data.Properties.Settings.Default.x_rbtConnectionString, mappingSource)
+				base(global::X.Data.Properties.Settings.Default.x_rbtConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -112,6 +118,14 @@ namespace X.Data
 			}
 		}
 		
+		public System.Data.Linq.Table<x_contact> x_contact
+		{
+			get
+			{
+				return this.GetTable<x_contact>();
+			}
+		}
+		
 		public System.Data.Linq.Table<x_user> x_user
 		{
 			get
@@ -120,11 +134,19 @@ namespace X.Data
 			}
 		}
 		
-		public System.Data.Linq.Table<x_contact> x_contact
+		public System.Data.Linq.Table<x_red_get> x_red_get
 		{
 			get
 			{
-				return this.GetTable<x_contact>();
+				return this.GetTable<x_red_get>();
+			}
+		}
+		
+		public System.Data.Linq.Table<x_red> x_red
+		{
+			get
+			{
+				return this.GetTable<x_red>();
 			}
 		}
 	}
@@ -1244,636 +1266,6 @@ namespace X.Data
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.x_user")]
-	public partial class x_user : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private long _user_id;
-		
-		private System.Nullable<long> _upid;
-		
-		private string _nickname;
-		
-		private string _tel;
-		
-		private string _name;
-		
-		private string _email;
-		
-		private System.Nullable<int> _sex;
-		
-		private string _city;
-		
-		private string _province;
-		
-		private string _country;
-		
-		private string _headimg;
-		
-		private System.Nullable<int> _subscribe;
-		
-		private string _subscribe_time;
-		
-		private string _remark;
-		
-		private System.Nullable<System.DateTime> _ctime;
-		
-		private string _openid;
-		
-		private System.Nullable<int> _wxcount;
-		
-		private System.Nullable<System.DateTime> _last_time;
-		
-		private string _ukey;
-		
-		private string _akey;
-		
-		private EntitySet<x_reply> _x_reply;
-		
-		private EntitySet<x_msg> _x_msg;
-		
-		private EntitySet<x_logon> _x_logon;
-		
-		private EntitySet<x_contact> _x_contact;
-		
-    #region 可扩展性方法定义
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onuser_idChanging(long value);
-    partial void Onuser_idChanged();
-    partial void OnupidChanging(System.Nullable<long> value);
-    partial void OnupidChanged();
-    partial void OnnicknameChanging(string value);
-    partial void OnnicknameChanged();
-    partial void OntelChanging(string value);
-    partial void OntelChanged();
-    partial void OnnameChanging(string value);
-    partial void OnnameChanged();
-    partial void OnemailChanging(string value);
-    partial void OnemailChanged();
-    partial void OnsexChanging(System.Nullable<int> value);
-    partial void OnsexChanged();
-    partial void OncityChanging(string value);
-    partial void OncityChanged();
-    partial void OnprovinceChanging(string value);
-    partial void OnprovinceChanged();
-    partial void OncountryChanging(string value);
-    partial void OncountryChanged();
-    partial void OnheadimgChanging(string value);
-    partial void OnheadimgChanged();
-    partial void OnsubscribeChanging(System.Nullable<int> value);
-    partial void OnsubscribeChanged();
-    partial void Onsubscribe_timeChanging(string value);
-    partial void Onsubscribe_timeChanged();
-    partial void OnremarkChanging(string value);
-    partial void OnremarkChanged();
-    partial void OnctimeChanging(System.Nullable<System.DateTime> value);
-    partial void OnctimeChanged();
-    partial void OnopenidChanging(string value);
-    partial void OnopenidChanged();
-    partial void OnwxcountChanging(System.Nullable<int> value);
-    partial void OnwxcountChanged();
-    partial void Onlast_timeChanging(System.Nullable<System.DateTime> value);
-    partial void Onlast_timeChanged();
-    partial void OnukeyChanging(string value);
-    partial void OnukeyChanged();
-    partial void OnakeyChanging(string value);
-    partial void OnakeyChanged();
-    #endregion
-		
-		public x_user()
-		{
-			this._x_reply = new EntitySet<x_reply>(new Action<x_reply>(this.attach_x_reply), new Action<x_reply>(this.detach_x_reply));
-			this._x_msg = new EntitySet<x_msg>(new Action<x_msg>(this.attach_x_msg), new Action<x_msg>(this.detach_x_msg));
-			this._x_logon = new EntitySet<x_logon>(new Action<x_logon>(this.attach_x_logon), new Action<x_logon>(this.detach_x_logon));
-			this._x_contact = new EntitySet<x_contact>(new Action<x_contact>(this.attach_x_contact), new Action<x_contact>(this.detach_x_contact));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_user_id", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public long user_id
-		{
-			get
-			{
-				return this._user_id;
-			}
-			set
-			{
-				if ((this._user_id != value))
-				{
-					this.Onuser_idChanging(value);
-					this.SendPropertyChanging();
-					this._user_id = value;
-					this.SendPropertyChanged("user_id");
-					this.Onuser_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_upid", DbType="BigInt")]
-		public System.Nullable<long> upid
-		{
-			get
-			{
-				return this._upid;
-			}
-			set
-			{
-				if ((this._upid != value))
-				{
-					this.OnupidChanging(value);
-					this.SendPropertyChanging();
-					this._upid = value;
-					this.SendPropertyChanged("upid");
-					this.OnupidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nickname", DbType="NVarChar(80)")]
-		public string nickname
-		{
-			get
-			{
-				return this._nickname;
-			}
-			set
-			{
-				if ((this._nickname != value))
-				{
-					this.OnnicknameChanging(value);
-					this.SendPropertyChanging();
-					this._nickname = value;
-					this.SendPropertyChanged("nickname");
-					this.OnnicknameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tel", DbType="NVarChar(20)")]
-		public string tel
-		{
-			get
-			{
-				return this._tel;
-			}
-			set
-			{
-				if ((this._tel != value))
-				{
-					this.OntelChanging(value);
-					this.SendPropertyChanging();
-					this._tel = value;
-					this.SendPropertyChanged("tel");
-					this.OntelChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(50)")]
-		public string name
-		{
-			get
-			{
-				return this._name;
-			}
-			set
-			{
-				if ((this._name != value))
-				{
-					this.OnnameChanging(value);
-					this.SendPropertyChanging();
-					this._name = value;
-					this.SendPropertyChanged("name");
-					this.OnnameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="NVarChar(100)")]
-		public string email
-		{
-			get
-			{
-				return this._email;
-			}
-			set
-			{
-				if ((this._email != value))
-				{
-					this.OnemailChanging(value);
-					this.SendPropertyChanging();
-					this._email = value;
-					this.SendPropertyChanged("email");
-					this.OnemailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sex", DbType="Int")]
-		public System.Nullable<int> sex
-		{
-			get
-			{
-				return this._sex;
-			}
-			set
-			{
-				if ((this._sex != value))
-				{
-					this.OnsexChanging(value);
-					this.SendPropertyChanging();
-					this._sex = value;
-					this.SendPropertyChanged("sex");
-					this.OnsexChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_city", DbType="NVarChar(20)")]
-		public string city
-		{
-			get
-			{
-				return this._city;
-			}
-			set
-			{
-				if ((this._city != value))
-				{
-					this.OncityChanging(value);
-					this.SendPropertyChanging();
-					this._city = value;
-					this.SendPropertyChanged("city");
-					this.OncityChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_province", DbType="NVarChar(20)")]
-		public string province
-		{
-			get
-			{
-				return this._province;
-			}
-			set
-			{
-				if ((this._province != value))
-				{
-					this.OnprovinceChanging(value);
-					this.SendPropertyChanging();
-					this._province = value;
-					this.SendPropertyChanged("province");
-					this.OnprovinceChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_country", DbType="NVarChar(100)")]
-		public string country
-		{
-			get
-			{
-				return this._country;
-			}
-			set
-			{
-				if ((this._country != value))
-				{
-					this.OncountryChanging(value);
-					this.SendPropertyChanging();
-					this._country = value;
-					this.SendPropertyChanged("country");
-					this.OncountryChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_headimg", DbType="NVarChar(200)")]
-		public string headimg
-		{
-			get
-			{
-				return this._headimg;
-			}
-			set
-			{
-				if ((this._headimg != value))
-				{
-					this.OnheadimgChanging(value);
-					this.SendPropertyChanging();
-					this._headimg = value;
-					this.SendPropertyChanged("headimg");
-					this.OnheadimgChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_subscribe", DbType="Int")]
-		public System.Nullable<int> subscribe
-		{
-			get
-			{
-				return this._subscribe;
-			}
-			set
-			{
-				if ((this._subscribe != value))
-				{
-					this.OnsubscribeChanging(value);
-					this.SendPropertyChanging();
-					this._subscribe = value;
-					this.SendPropertyChanged("subscribe");
-					this.OnsubscribeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_subscribe_time", DbType="NVarChar(20)")]
-		public string subscribe_time
-		{
-			get
-			{
-				return this._subscribe_time;
-			}
-			set
-			{
-				if ((this._subscribe_time != value))
-				{
-					this.Onsubscribe_timeChanging(value);
-					this.SendPropertyChanging();
-					this._subscribe_time = value;
-					this.SendPropertyChanged("subscribe_time");
-					this.Onsubscribe_timeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_remark", DbType="NVarChar(400)")]
-		public string remark
-		{
-			get
-			{
-				return this._remark;
-			}
-			set
-			{
-				if ((this._remark != value))
-				{
-					this.OnremarkChanging(value);
-					this.SendPropertyChanging();
-					this._remark = value;
-					this.SendPropertyChanged("remark");
-					this.OnremarkChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ctime", DbType="DateTime")]
-		public System.Nullable<System.DateTime> ctime
-		{
-			get
-			{
-				return this._ctime;
-			}
-			set
-			{
-				if ((this._ctime != value))
-				{
-					this.OnctimeChanging(value);
-					this.SendPropertyChanging();
-					this._ctime = value;
-					this.SendPropertyChanged("ctime");
-					this.OnctimeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_openid", DbType="NVarChar(64)")]
-		public string openid
-		{
-			get
-			{
-				return this._openid;
-			}
-			set
-			{
-				if ((this._openid != value))
-				{
-					this.OnopenidChanging(value);
-					this.SendPropertyChanging();
-					this._openid = value;
-					this.SendPropertyChanged("openid");
-					this.OnopenidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_wxcount", DbType="Int")]
-		public System.Nullable<int> wxcount
-		{
-			get
-			{
-				return this._wxcount;
-			}
-			set
-			{
-				if ((this._wxcount != value))
-				{
-					this.OnwxcountChanging(value);
-					this.SendPropertyChanging();
-					this._wxcount = value;
-					this.SendPropertyChanged("wxcount");
-					this.OnwxcountChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_last_time", DbType="DateTime")]
-		public System.Nullable<System.DateTime> last_time
-		{
-			get
-			{
-				return this._last_time;
-			}
-			set
-			{
-				if ((this._last_time != value))
-				{
-					this.Onlast_timeChanging(value);
-					this.SendPropertyChanging();
-					this._last_time = value;
-					this.SendPropertyChanged("last_time");
-					this.Onlast_timeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ukey", DbType="NVarChar(64)")]
-		public string ukey
-		{
-			get
-			{
-				return this._ukey;
-			}
-			set
-			{
-				if ((this._ukey != value))
-				{
-					this.OnukeyChanging(value);
-					this.SendPropertyChanging();
-					this._ukey = value;
-					this.SendPropertyChanged("ukey");
-					this.OnukeyChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_akey", DbType="NVarChar(64)")]
-		public string akey
-		{
-			get
-			{
-				return this._akey;
-			}
-			set
-			{
-				if ((this._akey != value))
-				{
-					this.OnakeyChanging(value);
-					this.SendPropertyChanging();
-					this._akey = value;
-					this.SendPropertyChanged("akey");
-					this.OnakeyChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="x_user_x_reply", Storage="_x_reply", ThisKey="user_id", OtherKey="user_id")]
-		public EntitySet<x_reply> x_reply
-		{
-			get
-			{
-				return this._x_reply;
-			}
-			set
-			{
-				this._x_reply.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="x_user_x_msg", Storage="_x_msg", ThisKey="user_id", OtherKey="user_id")]
-		public EntitySet<x_msg> x_msg
-		{
-			get
-			{
-				return this._x_msg;
-			}
-			set
-			{
-				this._x_msg.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="x_user_x_logon", Storage="_x_logon", ThisKey="user_id", OtherKey="user_id")]
-		public EntitySet<x_logon> x_logon
-		{
-			get
-			{
-				return this._x_logon;
-			}
-			set
-			{
-				this._x_logon.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="x_user_x_contact", Storage="_x_contact", ThisKey="user_id", OtherKey="user_id")]
-		public EntitySet<x_contact> x_contact
-		{
-			get
-			{
-				return this._x_contact;
-			}
-			set
-			{
-				this._x_contact.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_x_reply(x_reply entity)
-		{
-			this.SendPropertyChanging();
-			entity.x_user = this;
-		}
-		
-		private void detach_x_reply(x_reply entity)
-		{
-			this.SendPropertyChanging();
-			entity.x_user = null;
-		}
-		
-		private void attach_x_msg(x_msg entity)
-		{
-			this.SendPropertyChanging();
-			entity.x_user = this;
-		}
-		
-		private void detach_x_msg(x_msg entity)
-		{
-			this.SendPropertyChanging();
-			entity.x_user = null;
-		}
-		
-		private void attach_x_logon(x_logon entity)
-		{
-			this.SendPropertyChanging();
-			entity.x_user = this;
-		}
-		
-		private void detach_x_logon(x_logon entity)
-		{
-			this.SendPropertyChanging();
-			entity.x_user = null;
-		}
-		
-		private void attach_x_contact(x_contact entity)
-		{
-			this.SendPropertyChanging();
-			entity.x_user = this;
-		}
-		
-		private void detach_x_contact(x_contact entity)
-		{
-			this.SendPropertyChanging();
-			entity.x_user = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.x_contact")]
 	public partial class x_contact : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -2310,6 +1702,1354 @@ namespace X.Data
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.x_user")]
+	public partial class x_user : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private long _user_id;
+		
+		private System.Nullable<long> _upid;
+		
+		private string _nickname;
+		
+		private decimal _balance;
+		
+		private string _tel;
+		
+		private string _name;
+		
+		private string _email;
+		
+		private System.Nullable<int> _sex;
+		
+		private string _city;
+		
+		private string _province;
+		
+		private string _country;
+		
+		private string _headimg;
+		
+		private System.Nullable<int> _subscribe;
+		
+		private string _subscribe_time;
+		
+		private string _remark;
+		
+		private System.Nullable<System.DateTime> _ctime;
+		
+		private string _openid;
+		
+		private System.Nullable<int> _wxcount;
+		
+		private System.Nullable<System.DateTime> _last_time;
+		
+		private string _ukey;
+		
+		private string _akey;
+		
+		private EntitySet<x_reply> _x_reply;
+		
+		private EntitySet<x_msg> _x_msg;
+		
+		private EntitySet<x_logon> _x_logon;
+		
+		private EntitySet<x_contact> _x_contact;
+		
+		private EntitySet<x_red> _x_red;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onuser_idChanging(long value);
+    partial void Onuser_idChanged();
+    partial void OnupidChanging(System.Nullable<long> value);
+    partial void OnupidChanged();
+    partial void OnnicknameChanging(string value);
+    partial void OnnicknameChanged();
+    partial void OnbalanceChanging(decimal value);
+    partial void OnbalanceChanged();
+    partial void OntelChanging(string value);
+    partial void OntelChanged();
+    partial void OnnameChanging(string value);
+    partial void OnnameChanged();
+    partial void OnemailChanging(string value);
+    partial void OnemailChanged();
+    partial void OnsexChanging(System.Nullable<int> value);
+    partial void OnsexChanged();
+    partial void OncityChanging(string value);
+    partial void OncityChanged();
+    partial void OnprovinceChanging(string value);
+    partial void OnprovinceChanged();
+    partial void OncountryChanging(string value);
+    partial void OncountryChanged();
+    partial void OnheadimgChanging(string value);
+    partial void OnheadimgChanged();
+    partial void OnsubscribeChanging(System.Nullable<int> value);
+    partial void OnsubscribeChanged();
+    partial void Onsubscribe_timeChanging(string value);
+    partial void Onsubscribe_timeChanged();
+    partial void OnremarkChanging(string value);
+    partial void OnremarkChanged();
+    partial void OnctimeChanging(System.Nullable<System.DateTime> value);
+    partial void OnctimeChanged();
+    partial void OnopenidChanging(string value);
+    partial void OnopenidChanged();
+    partial void OnwxcountChanging(System.Nullable<int> value);
+    partial void OnwxcountChanged();
+    partial void Onlast_timeChanging(System.Nullable<System.DateTime> value);
+    partial void Onlast_timeChanged();
+    partial void OnukeyChanging(string value);
+    partial void OnukeyChanged();
+    partial void OnakeyChanging(string value);
+    partial void OnakeyChanged();
+    #endregion
+		
+		public x_user()
+		{
+			this._x_reply = new EntitySet<x_reply>(new Action<x_reply>(this.attach_x_reply), new Action<x_reply>(this.detach_x_reply));
+			this._x_msg = new EntitySet<x_msg>(new Action<x_msg>(this.attach_x_msg), new Action<x_msg>(this.detach_x_msg));
+			this._x_logon = new EntitySet<x_logon>(new Action<x_logon>(this.attach_x_logon), new Action<x_logon>(this.detach_x_logon));
+			this._x_contact = new EntitySet<x_contact>(new Action<x_contact>(this.attach_x_contact), new Action<x_contact>(this.detach_x_contact));
+			this._x_red = new EntitySet<x_red>(new Action<x_red>(this.attach_x_red), new Action<x_red>(this.detach_x_red));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_user_id", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public long user_id
+		{
+			get
+			{
+				return this._user_id;
+			}
+			set
+			{
+				if ((this._user_id != value))
+				{
+					this.Onuser_idChanging(value);
+					this.SendPropertyChanging();
+					this._user_id = value;
+					this.SendPropertyChanged("user_id");
+					this.Onuser_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_upid", DbType="BigInt")]
+		public System.Nullable<long> upid
+		{
+			get
+			{
+				return this._upid;
+			}
+			set
+			{
+				if ((this._upid != value))
+				{
+					this.OnupidChanging(value);
+					this.SendPropertyChanging();
+					this._upid = value;
+					this.SendPropertyChanged("upid");
+					this.OnupidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nickname", DbType="NVarChar(80)")]
+		public string nickname
+		{
+			get
+			{
+				return this._nickname;
+			}
+			set
+			{
+				if ((this._nickname != value))
+				{
+					this.OnnicknameChanging(value);
+					this.SendPropertyChanging();
+					this._nickname = value;
+					this.SendPropertyChanged("nickname");
+					this.OnnicknameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_balance", DbType="Decimal(18,2) NOT NULL")]
+		public decimal balance
+		{
+			get
+			{
+				return this._balance;
+			}
+			set
+			{
+				if ((this._balance != value))
+				{
+					this.OnbalanceChanging(value);
+					this.SendPropertyChanging();
+					this._balance = value;
+					this.SendPropertyChanged("balance");
+					this.OnbalanceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tel", DbType="NVarChar(20)")]
+		public string tel
+		{
+			get
+			{
+				return this._tel;
+			}
+			set
+			{
+				if ((this._tel != value))
+				{
+					this.OntelChanging(value);
+					this.SendPropertyChanging();
+					this._tel = value;
+					this.SendPropertyChanged("tel");
+					this.OntelChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(50)")]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this.OnnameChanging(value);
+					this.SendPropertyChanging();
+					this._name = value;
+					this.SendPropertyChanged("name");
+					this.OnnameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="NVarChar(100)")]
+		public string email
+		{
+			get
+			{
+				return this._email;
+			}
+			set
+			{
+				if ((this._email != value))
+				{
+					this.OnemailChanging(value);
+					this.SendPropertyChanging();
+					this._email = value;
+					this.SendPropertyChanged("email");
+					this.OnemailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sex", DbType="Int")]
+		public System.Nullable<int> sex
+		{
+			get
+			{
+				return this._sex;
+			}
+			set
+			{
+				if ((this._sex != value))
+				{
+					this.OnsexChanging(value);
+					this.SendPropertyChanging();
+					this._sex = value;
+					this.SendPropertyChanged("sex");
+					this.OnsexChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_city", DbType="NVarChar(20)")]
+		public string city
+		{
+			get
+			{
+				return this._city;
+			}
+			set
+			{
+				if ((this._city != value))
+				{
+					this.OncityChanging(value);
+					this.SendPropertyChanging();
+					this._city = value;
+					this.SendPropertyChanged("city");
+					this.OncityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_province", DbType="NVarChar(20)")]
+		public string province
+		{
+			get
+			{
+				return this._province;
+			}
+			set
+			{
+				if ((this._province != value))
+				{
+					this.OnprovinceChanging(value);
+					this.SendPropertyChanging();
+					this._province = value;
+					this.SendPropertyChanged("province");
+					this.OnprovinceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_country", DbType="NVarChar(100)")]
+		public string country
+		{
+			get
+			{
+				return this._country;
+			}
+			set
+			{
+				if ((this._country != value))
+				{
+					this.OncountryChanging(value);
+					this.SendPropertyChanging();
+					this._country = value;
+					this.SendPropertyChanged("country");
+					this.OncountryChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_headimg", DbType="NVarChar(200)")]
+		public string headimg
+		{
+			get
+			{
+				return this._headimg;
+			}
+			set
+			{
+				if ((this._headimg != value))
+				{
+					this.OnheadimgChanging(value);
+					this.SendPropertyChanging();
+					this._headimg = value;
+					this.SendPropertyChanged("headimg");
+					this.OnheadimgChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_subscribe", DbType="Int")]
+		public System.Nullable<int> subscribe
+		{
+			get
+			{
+				return this._subscribe;
+			}
+			set
+			{
+				if ((this._subscribe != value))
+				{
+					this.OnsubscribeChanging(value);
+					this.SendPropertyChanging();
+					this._subscribe = value;
+					this.SendPropertyChanged("subscribe");
+					this.OnsubscribeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_subscribe_time", DbType="NVarChar(20)")]
+		public string subscribe_time
+		{
+			get
+			{
+				return this._subscribe_time;
+			}
+			set
+			{
+				if ((this._subscribe_time != value))
+				{
+					this.Onsubscribe_timeChanging(value);
+					this.SendPropertyChanging();
+					this._subscribe_time = value;
+					this.SendPropertyChanged("subscribe_time");
+					this.Onsubscribe_timeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_remark", DbType="NVarChar(400)")]
+		public string remark
+		{
+			get
+			{
+				return this._remark;
+			}
+			set
+			{
+				if ((this._remark != value))
+				{
+					this.OnremarkChanging(value);
+					this.SendPropertyChanging();
+					this._remark = value;
+					this.SendPropertyChanged("remark");
+					this.OnremarkChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ctime", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ctime
+		{
+			get
+			{
+				return this._ctime;
+			}
+			set
+			{
+				if ((this._ctime != value))
+				{
+					this.OnctimeChanging(value);
+					this.SendPropertyChanging();
+					this._ctime = value;
+					this.SendPropertyChanged("ctime");
+					this.OnctimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_openid", DbType="NVarChar(64)")]
+		public string openid
+		{
+			get
+			{
+				return this._openid;
+			}
+			set
+			{
+				if ((this._openid != value))
+				{
+					this.OnopenidChanging(value);
+					this.SendPropertyChanging();
+					this._openid = value;
+					this.SendPropertyChanged("openid");
+					this.OnopenidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_wxcount", DbType="Int")]
+		public System.Nullable<int> wxcount
+		{
+			get
+			{
+				return this._wxcount;
+			}
+			set
+			{
+				if ((this._wxcount != value))
+				{
+					this.OnwxcountChanging(value);
+					this.SendPropertyChanging();
+					this._wxcount = value;
+					this.SendPropertyChanged("wxcount");
+					this.OnwxcountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_last_time", DbType="DateTime")]
+		public System.Nullable<System.DateTime> last_time
+		{
+			get
+			{
+				return this._last_time;
+			}
+			set
+			{
+				if ((this._last_time != value))
+				{
+					this.Onlast_timeChanging(value);
+					this.SendPropertyChanging();
+					this._last_time = value;
+					this.SendPropertyChanged("last_time");
+					this.Onlast_timeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ukey", DbType="NVarChar(64)")]
+		public string ukey
+		{
+			get
+			{
+				return this._ukey;
+			}
+			set
+			{
+				if ((this._ukey != value))
+				{
+					this.OnukeyChanging(value);
+					this.SendPropertyChanging();
+					this._ukey = value;
+					this.SendPropertyChanged("ukey");
+					this.OnukeyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_akey", DbType="NVarChar(64)")]
+		public string akey
+		{
+			get
+			{
+				return this._akey;
+			}
+			set
+			{
+				if ((this._akey != value))
+				{
+					this.OnakeyChanging(value);
+					this.SendPropertyChanging();
+					this._akey = value;
+					this.SendPropertyChanged("akey");
+					this.OnakeyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="x_user_x_reply", Storage="_x_reply", ThisKey="user_id", OtherKey="user_id")]
+		public EntitySet<x_reply> x_reply
+		{
+			get
+			{
+				return this._x_reply;
+			}
+			set
+			{
+				this._x_reply.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="x_user_x_msg", Storage="_x_msg", ThisKey="user_id", OtherKey="user_id")]
+		public EntitySet<x_msg> x_msg
+		{
+			get
+			{
+				return this._x_msg;
+			}
+			set
+			{
+				this._x_msg.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="x_user_x_logon", Storage="_x_logon", ThisKey="user_id", OtherKey="user_id")]
+		public EntitySet<x_logon> x_logon
+		{
+			get
+			{
+				return this._x_logon;
+			}
+			set
+			{
+				this._x_logon.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="x_user_x_contact", Storage="_x_contact", ThisKey="user_id", OtherKey="user_id")]
+		public EntitySet<x_contact> x_contact
+		{
+			get
+			{
+				return this._x_contact;
+			}
+			set
+			{
+				this._x_contact.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="x_user_x_red", Storage="_x_red", ThisKey="user_id", OtherKey="user_id")]
+		public EntitySet<x_red> x_red
+		{
+			get
+			{
+				return this._x_red;
+			}
+			set
+			{
+				this._x_red.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_x_reply(x_reply entity)
+		{
+			this.SendPropertyChanging();
+			entity.x_user = this;
+		}
+		
+		private void detach_x_reply(x_reply entity)
+		{
+			this.SendPropertyChanging();
+			entity.x_user = null;
+		}
+		
+		private void attach_x_msg(x_msg entity)
+		{
+			this.SendPropertyChanging();
+			entity.x_user = this;
+		}
+		
+		private void detach_x_msg(x_msg entity)
+		{
+			this.SendPropertyChanging();
+			entity.x_user = null;
+		}
+		
+		private void attach_x_logon(x_logon entity)
+		{
+			this.SendPropertyChanging();
+			entity.x_user = this;
+		}
+		
+		private void detach_x_logon(x_logon entity)
+		{
+			this.SendPropertyChanging();
+			entity.x_user = null;
+		}
+		
+		private void attach_x_contact(x_contact entity)
+		{
+			this.SendPropertyChanging();
+			entity.x_user = this;
+		}
+		
+		private void detach_x_contact(x_contact entity)
+		{
+			this.SendPropertyChanging();
+			entity.x_user = null;
+		}
+		
+		private void attach_x_red(x_red entity)
+		{
+			this.SendPropertyChanging();
+			entity.x_user = this;
+		}
+		
+		private void detach_x_red(x_red entity)
+		{
+			this.SendPropertyChanging();
+			entity.x_user = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.x_red_get")]
+	public partial class x_red_get : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private long _red_get_id;
+		
+		private System.Nullable<long> _red_id;
+		
+		private System.Nullable<int> _amount;
+		
+		private System.Nullable<long> _owner;
+		
+		private System.Nullable<long> _upid;
+		
+		private System.Nullable<int> _ramount;
+		
+		private System.Nullable<System.DateTime> _ctime;
+		
+		private System.Nullable<int> _status;
+		
+		private EntityRef<x_red> _x_red;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onred_get_idChanging(long value);
+    partial void Onred_get_idChanged();
+    partial void Onred_idChanging(System.Nullable<long> value);
+    partial void Onred_idChanged();
+    partial void OnamountChanging(System.Nullable<int> value);
+    partial void OnamountChanged();
+    partial void OnownerChanging(System.Nullable<long> value);
+    partial void OnownerChanged();
+    partial void OnupidChanging(System.Nullable<long> value);
+    partial void OnupidChanged();
+    partial void OnramountChanging(System.Nullable<int> value);
+    partial void OnramountChanged();
+    partial void OnctimeChanging(System.Nullable<System.DateTime> value);
+    partial void OnctimeChanged();
+    partial void OnstatusChanging(System.Nullable<int> value);
+    partial void OnstatusChanged();
+    #endregion
+		
+		public x_red_get()
+		{
+			this._x_red = default(EntityRef<x_red>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_red_get_id", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public long red_get_id
+		{
+			get
+			{
+				return this._red_get_id;
+			}
+			set
+			{
+				if ((this._red_get_id != value))
+				{
+					this.Onred_get_idChanging(value);
+					this.SendPropertyChanging();
+					this._red_get_id = value;
+					this.SendPropertyChanged("red_get_id");
+					this.Onred_get_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_red_id", DbType="BigInt")]
+		public System.Nullable<long> red_id
+		{
+			get
+			{
+				return this._red_id;
+			}
+			set
+			{
+				if ((this._red_id != value))
+				{
+					if (this._x_red.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onred_idChanging(value);
+					this.SendPropertyChanging();
+					this._red_id = value;
+					this.SendPropertyChanged("red_id");
+					this.Onred_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_amount", DbType="Int")]
+		public System.Nullable<int> amount
+		{
+			get
+			{
+				return this._amount;
+			}
+			set
+			{
+				if ((this._amount != value))
+				{
+					this.OnamountChanging(value);
+					this.SendPropertyChanging();
+					this._amount = value;
+					this.SendPropertyChanged("amount");
+					this.OnamountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_owner", DbType="BigInt")]
+		public System.Nullable<long> owner
+		{
+			get
+			{
+				return this._owner;
+			}
+			set
+			{
+				if ((this._owner != value))
+				{
+					this.OnownerChanging(value);
+					this.SendPropertyChanging();
+					this._owner = value;
+					this.SendPropertyChanged("owner");
+					this.OnownerChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_upid", DbType="BigInt")]
+		public System.Nullable<long> upid
+		{
+			get
+			{
+				return this._upid;
+			}
+			set
+			{
+				if ((this._upid != value))
+				{
+					this.OnupidChanging(value);
+					this.SendPropertyChanging();
+					this._upid = value;
+					this.SendPropertyChanged("upid");
+					this.OnupidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ramount", DbType="Int")]
+		public System.Nullable<int> ramount
+		{
+			get
+			{
+				return this._ramount;
+			}
+			set
+			{
+				if ((this._ramount != value))
+				{
+					this.OnramountChanging(value);
+					this.SendPropertyChanging();
+					this._ramount = value;
+					this.SendPropertyChanged("ramount");
+					this.OnramountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ctime", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ctime
+		{
+			get
+			{
+				return this._ctime;
+			}
+			set
+			{
+				if ((this._ctime != value))
+				{
+					this.OnctimeChanging(value);
+					this.SendPropertyChanging();
+					this._ctime = value;
+					this.SendPropertyChanged("ctime");
+					this.OnctimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_status", DbType="Int")]
+		public System.Nullable<int> status
+		{
+			get
+			{
+				return this._status;
+			}
+			set
+			{
+				if ((this._status != value))
+				{
+					this.OnstatusChanging(value);
+					this.SendPropertyChanging();
+					this._status = value;
+					this.SendPropertyChanged("status");
+					this.OnstatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="x_red_x_red_get", Storage="_x_red", ThisKey="red_id", OtherKey="red_id", IsForeignKey=true)]
+		public x_red x_red
+		{
+			get
+			{
+				return this._x_red.Entity;
+			}
+			set
+			{
+				x_red previousValue = this._x_red.Entity;
+				if (((previousValue != value) 
+							|| (this._x_red.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._x_red.Entity = null;
+						previousValue.x_red_get.Remove(this);
+					}
+					this._x_red.Entity = value;
+					if ((value != null))
+					{
+						value.x_red_get.Add(this);
+						this._red_id = value.red_id;
+					}
+					else
+					{
+						this._red_id = default(Nullable<long>);
+					}
+					this.SendPropertyChanged("x_red");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.x_red")]
+	public partial class x_red : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private long _red_id;
+		
+		private System.Nullable<long> _user_id;
+		
+		private System.Nullable<int> _mode;
+		
+		private System.Nullable<decimal> _amount;
+		
+		private System.Nullable<int> _count;
+		
+		private System.Nullable<int> _geted;
+		
+		private System.Nullable<int> _status;
+		
+		private string _remark;
+		
+		private System.Nullable<int> _upcash;
+		
+		private System.Nullable<System.DateTime> _ctime;
+		
+		private System.Nullable<System.DateTime> _ftime;
+		
+		private string _freason;
+		
+		private EntitySet<x_red_get> _x_red_get;
+		
+		private EntityRef<x_user> _x_user;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onred_idChanging(long value);
+    partial void Onred_idChanged();
+    partial void Onuser_idChanging(System.Nullable<long> value);
+    partial void Onuser_idChanged();
+    partial void OnmodeChanging(System.Nullable<int> value);
+    partial void OnmodeChanged();
+    partial void OnamountChanging(System.Nullable<decimal> value);
+    partial void OnamountChanged();
+    partial void OncountChanging(System.Nullable<int> value);
+    partial void OncountChanged();
+    partial void OngetedChanging(System.Nullable<int> value);
+    partial void OngetedChanged();
+    partial void OnstatusChanging(System.Nullable<int> value);
+    partial void OnstatusChanged();
+    partial void OnremarkChanging(string value);
+    partial void OnremarkChanged();
+    partial void OnupcashChanging(System.Nullable<int> value);
+    partial void OnupcashChanged();
+    partial void OnctimeChanging(System.Nullable<System.DateTime> value);
+    partial void OnctimeChanged();
+    partial void OnftimeChanging(System.Nullable<System.DateTime> value);
+    partial void OnftimeChanged();
+    partial void OnfreasonChanging(string value);
+    partial void OnfreasonChanged();
+    #endregion
+		
+		public x_red()
+		{
+			this._x_red_get = new EntitySet<x_red_get>(new Action<x_red_get>(this.attach_x_red_get), new Action<x_red_get>(this.detach_x_red_get));
+			this._x_user = default(EntityRef<x_user>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_red_id", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public long red_id
+		{
+			get
+			{
+				return this._red_id;
+			}
+			set
+			{
+				if ((this._red_id != value))
+				{
+					this.Onred_idChanging(value);
+					this.SendPropertyChanging();
+					this._red_id = value;
+					this.SendPropertyChanged("red_id");
+					this.Onred_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_user_id", DbType="BigInt")]
+		public System.Nullable<long> user_id
+		{
+			get
+			{
+				return this._user_id;
+			}
+			set
+			{
+				if ((this._user_id != value))
+				{
+					if (this._x_user.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onuser_idChanging(value);
+					this.SendPropertyChanging();
+					this._user_id = value;
+					this.SendPropertyChanged("user_id");
+					this.Onuser_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mode", DbType="Int")]
+		public System.Nullable<int> mode
+		{
+			get
+			{
+				return this._mode;
+			}
+			set
+			{
+				if ((this._mode != value))
+				{
+					this.OnmodeChanging(value);
+					this.SendPropertyChanging();
+					this._mode = value;
+					this.SendPropertyChanged("mode");
+					this.OnmodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_amount", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> amount
+		{
+			get
+			{
+				return this._amount;
+			}
+			set
+			{
+				if ((this._amount != value))
+				{
+					this.OnamountChanging(value);
+					this.SendPropertyChanging();
+					this._amount = value;
+					this.SendPropertyChanged("amount");
+					this.OnamountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Int")]
+		public System.Nullable<int> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this.OncountChanging(value);
+					this.SendPropertyChanging();
+					this._count = value;
+					this.SendPropertyChanged("count");
+					this.OncountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_geted", DbType="Int")]
+		public System.Nullable<int> geted
+		{
+			get
+			{
+				return this._geted;
+			}
+			set
+			{
+				if ((this._geted != value))
+				{
+					this.OngetedChanging(value);
+					this.SendPropertyChanging();
+					this._geted = value;
+					this.SendPropertyChanged("geted");
+					this.OngetedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_status", DbType="Int")]
+		public System.Nullable<int> status
+		{
+			get
+			{
+				return this._status;
+			}
+			set
+			{
+				if ((this._status != value))
+				{
+					this.OnstatusChanging(value);
+					this.SendPropertyChanging();
+					this._status = value;
+					this.SendPropertyChanged("status");
+					this.OnstatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_remark", DbType="NVarChar(250)")]
+		public string remark
+		{
+			get
+			{
+				return this._remark;
+			}
+			set
+			{
+				if ((this._remark != value))
+				{
+					this.OnremarkChanging(value);
+					this.SendPropertyChanging();
+					this._remark = value;
+					this.SendPropertyChanged("remark");
+					this.OnremarkChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_upcash", DbType="Int")]
+		public System.Nullable<int> upcash
+		{
+			get
+			{
+				return this._upcash;
+			}
+			set
+			{
+				if ((this._upcash != value))
+				{
+					this.OnupcashChanging(value);
+					this.SendPropertyChanging();
+					this._upcash = value;
+					this.SendPropertyChanged("upcash");
+					this.OnupcashChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ctime", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ctime
+		{
+			get
+			{
+				return this._ctime;
+			}
+			set
+			{
+				if ((this._ctime != value))
+				{
+					this.OnctimeChanging(value);
+					this.SendPropertyChanging();
+					this._ctime = value;
+					this.SendPropertyChanged("ctime");
+					this.OnctimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ftime", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ftime
+		{
+			get
+			{
+				return this._ftime;
+			}
+			set
+			{
+				if ((this._ftime != value))
+				{
+					this.OnftimeChanging(value);
+					this.SendPropertyChanging();
+					this._ftime = value;
+					this.SendPropertyChanged("ftime");
+					this.OnftimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_freason", DbType="NVarChar(400)")]
+		public string freason
+		{
+			get
+			{
+				return this._freason;
+			}
+			set
+			{
+				if ((this._freason != value))
+				{
+					this.OnfreasonChanging(value);
+					this.SendPropertyChanging();
+					this._freason = value;
+					this.SendPropertyChanged("freason");
+					this.OnfreasonChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="x_red_x_red_get", Storage="_x_red_get", ThisKey="red_id", OtherKey="red_id")]
+		public EntitySet<x_red_get> x_red_get
+		{
+			get
+			{
+				return this._x_red_get;
+			}
+			set
+			{
+				this._x_red_get.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="x_user_x_red", Storage="_x_user", ThisKey="user_id", OtherKey="user_id", IsForeignKey=true)]
+		public x_user x_user
+		{
+			get
+			{
+				return this._x_user.Entity;
+			}
+			set
+			{
+				x_user previousValue = this._x_user.Entity;
+				if (((previousValue != value) 
+							|| (this._x_user.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._x_user.Entity = null;
+						previousValue.x_red.Remove(this);
+					}
+					this._x_user.Entity = value;
+					if ((value != null))
+					{
+						value.x_red.Add(this);
+						this._user_id = value.user_id;
+					}
+					else
+					{
+						this._user_id = default(Nullable<long>);
+					}
+					this.SendPropertyChanged("x_user");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_x_red_get(x_red_get entity)
+		{
+			this.SendPropertyChanging();
+			entity.x_red = this;
+		}
+		
+		private void detach_x_red_get(x_red_get entity)
+		{
+			this.SendPropertyChanging();
+			entity.x_red = null;
 		}
 	}
 }

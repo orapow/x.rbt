@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading;
 
-namespace X.App.Views.func.reply
+namespace X.App.Views.rbt.reply
 {
     public class list : xview
     {

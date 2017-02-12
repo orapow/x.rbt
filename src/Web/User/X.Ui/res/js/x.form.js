@@ -127,6 +127,13 @@
 
             if (chk.cp && val) {
                 var c = chk.cp.split(",");
+                if ( chk.tp == "num") {
+                    c[0] = parseInt(c[0]);
+                    c[1] = parseInt(c[1]);
+                } else if (chk.tp == "nd") {
+                    c[0] = parseFloat(c[0]);
+                    c[1] = parseFloat(c[1]);
+                }
                 if (c[0] && val < c[0]) { showmsg(i.attr("title") + " 值不正确，值必需>= " + c[0] + " ！", i); pass = false; return false; }
                 if ((c[1] || "") && val > c[1]) { showmsg(i.attr("title") + " 值不正确，值必需<= " + c[1] + " ！", i); pass = false; return false; }
             }

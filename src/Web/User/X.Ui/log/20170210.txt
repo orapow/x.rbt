@@ -1,0 +1,846 @@
+
+时间：2017-02-10 09:13:01,753 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：459 
+
+时间：2017-02-10 09:13:09,172 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：7878 
+
+时间：2017-02-10 09:13:54,643 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：53349 
+
+时间：2017-02-10 09:14:15,816 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：74522 
+
+时间：2017-02-10 09:14:35,099 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：93805 
+
+时间：2017-02-10 09:14:35,236 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：93942 
+
+时间：2017-02-10 09:14:35,254 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：93960 
+
+时间：2017-02-10 09:14:35,260 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：93966 
+
+时间：2017-02-10 09:14:36,069 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：94775 
+
+时间：2017-02-10 09:14:38,068 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：96774 
+
+时间：2017-02-10 09:14:41,495 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：100201 
+
+时间：2017-02-10 09:14:42,707 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：101413 
+
+时间：2017-02-10 09:14:47,632 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：106338 
+
+时间：2017-02-10 09:15:07,067 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: sLa5HA0307ns84 ]"} 
+时间：125773 
+
+时间：2017-02-10 09:15:08,060 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(红包不存在)","code":"红包不存在"} 
+时间：126766 
+
+时间：2017-02-10 09:23:44,929 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：75012 
+
+时间：2017-02-10 09:23:45,169 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：75252 
+
+时间：2017-02-10 09:23:45,334 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：75417 
+
+时间：2017-02-10 09:35:26,249 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：776331 
+
+时间：2017-02-10 09:41:00,113 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1110196 
+
+时间：2017-02-10 09:43:20,265 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1250347 
+
+时间：2017-02-10 09:52:25,246 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：335256 
+System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 X.App.Views.wx.red.show.<>c.<InitDict>b__10_6(<>f__AnonymousType11`2 <>h__TransparentIdentifier0) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\show.cs:行号 37
+   在 System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.red.show.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\show.cs:行号 45
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-10 09:53:14,061 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T当前红包已经有人领取，不能删除，只能关闭)","code":"T当前红包已经有人领取，不能删除，只能关闭"} 
+时间：384072 
+
+时间：2017-02-10 09:55:49,810 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：768 
+
+时间：2017-02-10 09:59:28,893 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：219851 
+System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 X.App.Views.wx.red.show.<>c.<InitDict>b__10_6(<>f__AnonymousType11`2 <>h__TransparentIdentifier0) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\show.cs:行号 37
+   在 System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.red.show.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\show.cs:行号 45
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-10 10:00:37,731 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：516 
+
+时间：2017-02-10 10:01:20,112 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：42896 
+System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 X.App.Views.wx.red.show.<>c.<InitDict>b__10_6(<>f__AnonymousType11`2 <>h__TransparentIdentifier0) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\show.cs:行号 37
+   在 System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.red.show.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\show.cs:行号 45
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-10 10:02:06,013 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：88797 
+System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 X.App.Views.wx.red.show.<>c.<InitDict>b__10_6(<>f__AnonymousType11`2 <>h__TransparentIdentifier0) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\show.cs:行号 37
+   在 System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.red.show.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\show.cs:行号 45
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-10 10:03:43,311 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：604 
+
+时间：2017-02-10 10:12:29,490 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: zoRo7a0749s111 ]"} 
+时间：149257 
+
+时间：2017-02-10 10:37:19,844 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 3x8Lga0240ns86 ]"} 
+时间：4434 
+
+时间：2017-02-10 11:42:03,756 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：116522 
+
+时间：2017-02-10 11:42:26,180 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：138945 
+
+时间：2017-02-10 11:42:46,619 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：159385 
+
+时间：2017-02-10 11:45:34,679 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 2tPehA0334ns82 ]"} 
+时间：347 
+
+时间：2017-02-10 13:32:49,068 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"参数不满足要求 红包id的值要大于1","code":"0x0004"} 
+时间：516746 
+
+时间：2017-02-10 13:54:28,592 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 9YyuTa0068s103 ]"} 
+时间：166729 
+
+时间：2017-02-10 14:12:50,138 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: K7OHda0170s105 ]"} 
+时间：68150 
+
+时间：2017-02-10 14:14:27,474 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: V84Maa0267ns80 ]"} 
+时间：165485 
+
+时间：2017-02-10 14:14:46,247 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: CwTgKA0286ns84 ]"} 
+时间：383 
+
+时间：2017-02-10 14:15:25,864 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: Zjlt2a0326s108 ]"} 
+时间：40000 
+
+时间：2017-02-10 14:15:36,467 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: Zx8JFA0336s108 ]"} 
+时间：50603 
+
+时间：2017-02-10 14:15:51,515 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：65651 
+
+时间：2017-02-10 14:15:57,455 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: bYeJza0357ns81 ]"} 
+时间：71591 
+
+时间：2017-02-10 14:17:14,208 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: NqJBRA0434ns90 ]"} 
+时间：398 
+
+时间：2017-02-10 14:17:15,122 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1312 
+System.ArgumentException: 已添加了具有相同键的项。
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 66
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 94
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-10 14:29:13,020 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: RP1stA0153ns89 ]"} 
+时间：610817 
+
+时间：2017-02-10 14:29:44,280 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: R0JbPa0184ns81 ]"} 
+时间：642077 
+
+时间：2017-02-10 14:30:08,482 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: FvuP3a0208s107 ]"} 
+时间：666278 
+
+时间：2017-02-10 14:30:09,013 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(红包不存在)","code":"红包不存在"} 
+时间：666810 
+
+时间：2017-02-10 14:30:16,234 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: wlGs8a0216ns83 ]"} 
+时间：674031 
+
+时间：2017-02-10 14:30:22,430 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: VneSDa0222ns83 ]"} 
+时间：680227 
+
+时间：2017-02-10 14:30:27,448 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: sR.CEa0227s113 ]"} 
+时间：685245 
+
+时间：2017-02-10 14:30:27,688 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: V9B8ka0228ns89 ]"} 
+时间：685485 
+
+时间：2017-02-10 14:35:38,759 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: D6sOGa0539s106 ]"} 
+时间：996555 
+
+时间：2017-02-10 14:39:41,136 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: QD5Dza0781s106 ]"} 
+时间：365 
+
+时间：2017-02-10 14:39:55,671 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：14900 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 46
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 94
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-10 14:40:14,293 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：33522 
+
+时间：2017-02-10 14:40:53,576 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：72805 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 46
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 94
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-10 14:42:01,140 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：59868 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 45
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 94
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-10 14:42:01,220 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：59948 
+
+时间：2017-02-10 14:42:27,343 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：20325 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 49
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 94
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-10 14:42:27,434 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：20416 
+
+时间：2017-02-10 14:42:51,651 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：483 
+
+时间：2017-02-10 14:43:06,422 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：15254 
+
+时间：2017-02-10 14:43:37,125 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：45957 
+
+时间：2017-02-10 14:43:57,849 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：66681 
+
+时间：2017-02-10 14:47:09,150 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: awdA_a0229ns90 ]"} 
+时间：257982 
+
+时间：2017-02-10 14:47:09,177 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: DnBHEA0229s105 ]"} 
+时间：258009 
+
+时间：2017-02-10 14:47:09,241 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 0229ns86 ]"} 
+时间：258073 
+
+时间：2017-02-10 14:47:16,526 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：265358 
+
+时间：2017-02-10 14:49:47,572 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：416404 
+
+时间：2017-02-10 14:50:08,067 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：436899 
+
+时间：2017-02-10 14:50:28,495 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：457327 
+
+时间：2017-02-10 14:54:22,472 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：46445 
+
+时间：2017-02-10 14:55:24,831 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: W0gB80725ns86 ]"} 
+时间：108804 
+
+时间：2017-02-10 16:14:53,512 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: CNS4Ma0493s113 ]"} 
+时间：1777912 
+
+时间：2017-02-10 16:14:57,100 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 5hpWiA0497ns86 ]"} 
+时间：1781500 
+
+时间：2017-02-10 16:15:26,895 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: GrT37a0527s102 ]"} 
+时间：1811295 
+
+时间：2017-02-10 16:15:27,618 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: G42S40527s107 ]"} 
+时间：1812018 
+
+时间：2017-02-10 16:15:27,817 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: _LBuja0528s108 ]"} 
+时间：1812217 
+
+时间：2017-02-10 16:15:29,555 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: q4zyta0529s110 ]"} 
+时间：1813955 
+
+时间：2017-02-10 16:15:31,897 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: t7qqOa0532s108 ]"} 
+时间：1816298 
+
+时间：2017-02-10 16:15:32,740 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 9XugiA0533s107 ]"} 
+时间：1817140 
+
+时间：2017-02-10 16:15:34,937 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: GN6Qba0535s106 ]"} 
+时间：1819337 
+
+时间：2017-02-10 16:15:35,958 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: NgojuA0536s107 ]"} 
+时间：1820359 
+
+时间：2017-02-10 16:16:04,873 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: sA.0MA0565s108 ]"} 
+时间：1849274 
+
+时间：2017-02-10 16:16:42,464 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"参数不满足要求 红包id的值要大于1","code":"0x0004"} 
+时间：1886864 
+
+时间：2017-02-10 16:54:50,240 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：3948 
+System.IO.FileNotFoundException: D:\Pro\x.rbt\src\Web\User\X.Ui\img\wx\b1.png
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 X.App.Views.wx.red.share.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\share.cs:行号 54
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-10 17:08:27,001 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: wIQEIA0707ns86 ]"} 
+时间：41207 
+
+时间：2017-02-10 17:09:46,090 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 1K0786s111 ]"} 
+时间：5536 
+
+时间：2017-02-10 17:09:59,712 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: GHP4IA0800ns90 ]"} 
+时间：19159 
+
+时间：2017-02-10 17:10:00,242 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: AtEwnA0800ns86 ]"} 
+时间：19689 
+
+时间：2017-02-10 17:10:01,074 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 18XG30801s112 ]"} 
+时间：20520 
+
+时间：2017-02-10 17:10:51,352 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: lsPeqA0851ns89 ]"} 
+时间：70798 
+
+时间：2017-02-10 17:10:52,981 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"参数不满足要求 红包id的值要大于1","code":"0x0004"} 
+时间：72427 
+
+时间：2017-02-10 17:11:01,372 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: GNLAYa0861s113 ]"} 
+时间：80818 
+
+时间：2017-02-10 17:26:28,485 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: CPxK60788s109 ]"} 
+时间：45529 
+
+时间：2017-02-10 21:13:16,067 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：129377 
+
+时间：2017-02-10 21:13:16,095 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：129405 
+
+时间：2017-02-10 21:18:58,403 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T当前红包已抢完)","code":"T当前红包已抢完"} 
+时间：471713 
+
+时间：2017-02-10 21:19:03,065 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T当前红包已抢完)","code":"T当前红包已抢完"} 
+时间：476376 
+
+时间：2017-02-10 21:24:06,231 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T你已经领过此红包)","code":"T你已经领过此红包"} 
+时间：779542 
+
+时间：2017-02-10 21:24:08,293 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T你已经领过此红包)","code":"T你已经领过此红包"} 
+时间：781604 
+
+时间：2017-02-10 21:24:14,665 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T你已经领过此红包)","code":"T你已经领过此红包"} 
+时间：787976 
+
+时间：2017-02-10 21:24:16,200 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T你已经领过此红包)","code":"T你已经领过此红包"} 
+时间：789510 
+
+时间：2017-02-10 21:25:25,705 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：859016 
+
+时间：2017-02-10 21:26:27,949 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T你已经领过此红包)","code":"T你已经领过此红包"} 
+时间：921259 
+
+时间：2017-02-10 21:27:33,959 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：987270 
+
+时间：2017-02-10 21:27:34,116 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 0254s104 ]"} 
+时间：987426 
+
+时间：2017-02-10 21:27:55,052 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1008362 

@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading;
 
-namespace X.App.Views.func.contact
+namespace X.App.Views.rbt.contact
 {
     public class list : xview
     {

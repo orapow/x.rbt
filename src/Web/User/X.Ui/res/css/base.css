@@ -11,6 +11,7 @@ textarea { *font-family: "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei"
 fieldset, legend, textarea, input { padding: 0; }
 ul, ol { padding-left: 0; list-style-type: none; }
 a img, fieldset { border: 0; }
+.input-append, .input-prepend { margin-bottom: 0; }
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
 .grid.body { width: auto; padding: 0; }
 
@@ -100,7 +101,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 .pager .page_num { }
 .pager .btn { background-color: white; border: 1px solid #e6e7ec; }
 .pager .pages .btn i { margin: 0; }
-.pager input[type='text'] { vertical-align: top; width: 45px; height: 34px; line-height: 34px; border: 1px solid #e7e7eb; box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; text-align: center; font-size: 14px; }
+.pager input[type='text'] { vertical-align: top; width: 45px; height: 18px; line-height: 18px; border: 1px solid #e7e7eb; box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; text-align: center; font-size: 14px; }
 
 /**/
 .container_box { min-height: 700px; border: 1px solid #d9dadc; background-color: #fff; }
@@ -108,7 +109,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 .col_side { width: 180px; border-right: 1px solid #e7e7eb; }
 .col_side { *float: left; *width: 208px; *padding-bottom: 9999em; *margin-bottom: -9999em; }
 .col_main { *zoom: 1; *width: auto; *height: auto; }
-.main_hd h2 { font-size: 16px; padding: 0 30px; line-height: 75px; border-bottom: 1px solid #e7e7eb; font-weight: 400; font-style: normal; width: 1020px; }
+.main_hd h2 { font-size: 16px; padding: 0 30px; line-height: 75px; border-bottom: 1px solid #e7e7eb; font-weight: 400; font-style: normal; width: 939px; }
 .main_bd { padding: 20px; min-height: 600px; }
 
 /*foot*/
@@ -157,7 +158,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 .x-form { margin: 15px 0 0 0; }
 .x-form .btn { }
 .x-form .btn i { margin-right: 5px; }
-.x-form input { margin: 0; display: inline-block; vertical-align: middle; height: 34px; border-width: 1px; border-color: rgba(237, 237, 237, 0.34); border-style: groove; }
+.x-form input { margin: 0; display: inline-block; vertical-align: middle; height: 18px; border-width: 1px; border-color: rgba(237, 237, 237, 0.34); border-style: groove; }
 .x-form .row { margin-bottom: 15px; margin-left: 0; }
 .x-form .lbe { display: inline-block; vertical-align: middle; width: 80px; text-align: right; }
 .x-form .row .rt { display: inline-block; vertical-align: middle; }

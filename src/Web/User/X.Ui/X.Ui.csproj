@@ -15,10 +15,10 @@
     <AssemblyName>X.Ui</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
-    <IISExpressUseClassicPipelineMode />
+    <IISExpressSSLPort>334</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <TargetFrameworkProfile />
     <UseGlobalApplicationHostFile />
   </PropertyGroup>
@@ -66,6 +66,10 @@
     <Content Include="res\img\no.jpg" />
     <Content Include="res\img\wx.png" />
     <Content Include="res\img\no_u.png" />
+    <Content Include="res\img\wx\b.png" />
+    <Content Include="res\img\wx\k.png" />
+    <Content Include="res\img\wx\h.jpg" />
+    <Content Include="res\img\wx\sp.png" />
     <Content Include="res\js\jq_2.1.4.js" />
     <Content Include="res\plug\hchart\hcharts.js" />
     <Content Include="res\js\x.form.js" />
@@ -101,24 +105,29 @@
     <Content Include="res\plug\um\umeditor.config.js" />
     <Content Include="res\plug\um\umeditor.min - 复制.js" />
     <Content Include="res\plug\um\umeditor.min.js" />
+    <Content Include="tpl\app\red\edit.html" />
+    <Content Include="tpl\app\red\list.html" />
     <Content Include="tpl\com\err.html" />
     <Content Include="tpl\com\dict.html" />
     <Content Include="tpl\com\getpos.html" />
     <Content Include="tpl\com\_head.html" />
-    <Content Include="tpl\func\contact\list.html" />
-    <Content Include="tpl\func\msg\edit.html" />
-    <Content Include="tpl\func\msg\list.html" />
-    <Content Include="tpl\func\reply\edit.html" />
-    <Content Include="tpl\func\reply\list.html" />
+    <Content Include="tpl\rbt\contact\list.html" />
+    <Content Include="tpl\rbt\msg\edit.html" />
+    <Content Include="tpl\rbt\msg\list.html" />
+    <Content Include="tpl\rbt\reply\edit.html" />
+    <Content Include="tpl\rbt\reply\list.html" />
     <Content Include="tpl\user\akey.html" />
     <Content Include="tpl\wx\login.html" />
+    <Content Include="tpl\wx\red\share.html" />
+    <Content Include="tpl\wx\red\show.html" />
+    <Content Include="tpl\wx\user\cash.html" />
+    <Content Include="tpl\wx\user\info.html" />
     <Content Include="tpl\wx\_foot.html" />
     <Content Include="tpl\wx\_head.html" />
     <Content Include="tpl\_foot.html" />
     <Content Include="tpl\_top.html" />
     <Content Include="tpl\_left.html" />
     <Content Include="tpl\login.html" />
-    <Content Include="tpl\index1.html" />
     <Content Include="tpl\index.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -147,7 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="html\" />
-    <Folder Include="tpl\func\media\" />
+    <Folder Include="tpl\rbt\media\" />
     <Folder Include="upload\" />
   </ItemGroup>
   <PropertyGroup>
