@@ -1,0 +1,1772 @@
+
+时间：2017-02-18 11:40:02,298 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1760 
+
+时间：2017-02-18 11:40:56,132 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：436 
+
+时间：2017-02-18 13:03:24,700 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T头像数据为空)","code":"T头像数据为空"} 
+时间：489889 
+
+时间：2017-02-18 14:15:04,924 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：4790113 
+
+时间：2017-02-18 14:16:04,398 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：4849587 
+
+时间：2017-02-18 14:16:37,306 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：4882496 
+
+时间：2017-02-18 14:17:16,877 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：4922066 
+
+时间：2017-02-18 14:18:06,618 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：4971807 
+
+时间：2017-02-18 14:18:17,246 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：4982435 
+
+时间：2017-02-18 14:26:48,593 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：5493782 
+
+时间：2017-02-18 14:57:09,306 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：753 
+
+时间：2017-02-18 15:05:01,930 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：481 
+
+时间：2017-02-18 15:12:26,513 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：498 
+
+时间：2017-02-18 15:14:44,361 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：5900 
+
+时间：2017-02-18 15:35:02,315 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1223854 
+X.Json.JsonReaderException: Unterminated string. Expected delimiter: ". Path '[0].HeadImgUrl', line 1, position 256.
+   在 X.Json.JsonTextReader.ReadStringIntoBuffer(Char quote)
+   在 X.Json.JsonTextReader.ParseString(Char quote)
+   在 X.Json.JsonTextReader.ParseValue()
+   在 X.Json.JsonTextReader.ReadInternal()
+   在 X.Json.JsonReader.ReadAsStringInternal()
+   在 X.Json.JsonTextReader.ReadAsString()
+   在 X.Json.Serialization.JsonSerializerInternalReader.ReadForType(JsonReader reader, JsonContract contract, Boolean hasConverter)
+   在 X.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.PopulateList(IWrappedCollection wrappedList, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 X.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 X.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   在 X.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 X.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   在 X.Core.Utility.Serialize.FromJson[T](String json) 位置 D:\Pro\x.rbt\src\Core\Utility\Serialize.cs:行号 36
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 25
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:35:05,003 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1226542 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:35:05,320 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1226859 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:35:05,642 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1227181 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:35:05,982 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1227521 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:35:06,365 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1227904 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:35:06,756 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1228295 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:35:07,148 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1228687 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:35:07,514 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1229053 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:35:07,890 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1229429 
+System.ArgumentNullException: 值不能为 null。
+参数名: name
+   在 System.Type.GetProperty(String name)
+   在 X.Web.XFace.SetParms(NameValueCollection parms) 位置 D:\Pro\x.rbt\src\Web\X.Web\XFace.cs:行号 61
+   在 X.Web.Apis.Api.InitApi() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 23
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\xapi.cs:行号 21
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 28
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:35:08,216 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1229755 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:35:08,661 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1230200 
+System.ArgumentNullException: 值不能为 null。
+参数名: name
+   在 System.Type.GetProperty(String name)
+   在 X.Web.XFace.SetParms(NameValueCollection parms) 位置 D:\Pro\x.rbt\src\Web\X.Web\XFace.cs:行号 61
+   在 X.Web.Apis.Api.InitApi() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 23
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\xapi.cs:行号 21
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 28
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:35:09,044 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1230583 
+System.ArgumentNullException: 值不能为 null。
+参数名: name
+   在 System.Type.GetProperty(String name)
+   在 X.Web.XFace.SetParms(NameValueCollection parms) 位置 D:\Pro\x.rbt\src\Web\X.Web\XFace.cs:行号 61
+   在 X.Web.Apis.Api.InitApi() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 23
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\xapi.cs:行号 21
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 28
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:35:09,625 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1231164 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:35:10,238 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1231777 
+System.ArgumentNullException: 值不能为 null。
+参数名: name
+   在 System.Type.GetProperty(String name)
+   在 X.Web.XFace.SetParms(NameValueCollection parms) 位置 D:\Pro\x.rbt\src\Web\X.Web\XFace.cs:行号 61
+   在 X.Web.Apis.Api.InitApi() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 23
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\xapi.cs:行号 21
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 28
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:35:10,860 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1232399 
+System.ArgumentNullException: 值不能为 null。
+参数名: name
+   在 System.Type.GetProperty(String name)
+   在 X.Web.XFace.SetParms(NameValueCollection parms) 位置 D:\Pro\x.rbt\src\Web\X.Web\XFace.cs:行号 61
+   在 X.Web.Apis.Api.InitApi() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 23
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\xapi.cs:行号 21
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 28
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:35:11,579 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1233118 
+System.ArgumentNullException: 值不能为 null。
+参数名: name
+   在 System.Type.GetProperty(String name)
+   在 X.Web.XFace.SetParms(NameValueCollection parms) 位置 D:\Pro\x.rbt\src\Web\X.Web\XFace.cs:行号 61
+   在 X.Web.Apis.Api.InitApi() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 23
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\xapi.cs:行号 21
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 28
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:35:12,352 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1233891 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:35:13,180 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1234720 
+System.ArgumentNullException: 值不能为 null。
+参数名: name
+   在 System.Type.GetProperty(String name)
+   在 X.Web.XFace.SetParms(NameValueCollection parms) 位置 D:\Pro\x.rbt\src\Web\X.Web\XFace.cs:行号 61
+   在 X.Web.Apis.Api.InitApi() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 23
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\xapi.cs:行号 21
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 28
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:35:13,738 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1235277 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:35:14,386 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1235925 
+System.ArgumentNullException: 值不能为 null。
+参数名: name
+   在 System.Type.GetProperty(String name)
+   在 X.Web.XFace.SetParms(NameValueCollection parms) 位置 D:\Pro\x.rbt\src\Web\X.Web\XFace.cs:行号 61
+   在 X.Web.Apis.Api.InitApi() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 23
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\xapi.cs:行号 21
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 28
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:35:15,029 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1236568 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:35:15,576 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1237115 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:41:41,049 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1622588 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:41:41,372 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1622911 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:41:41,713 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1623252 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:41:42,060 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1623599 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:41:42,476 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1624015 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:41:42,852 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1624391 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:41:43,192 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1624731 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:41:43,575 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1625114 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:41:43,996 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1625535 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:41:44,333 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1625872 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:41:44,827 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1626366 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:41:45,249 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1626788 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:41:45,861 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1627400 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:41:46,571 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1628110 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:41:47,216 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1628755 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:41:48,114 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1629653 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:41:48,989 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1630528 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:41:49,801 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1631340 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:41:50,402 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1631941 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:41:51,119 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1632658 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:41:51,735 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1633274 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:41:52,335 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1633874 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:43:08,668 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1710207 
+
+时间：2017-02-18 15:45:21,972 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1843511 
+
+时间：2017-02-18 15:45:53,381 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1874920 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:45:53,735 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1875274 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:45:54,089 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1875628 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:45:54,444 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1875983 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:45:54,874 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1876413 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:45:55,345 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1876884 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:45:55,693 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1877232 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:45:56,034 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1877573 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:45:56,459 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1877998 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:45:56,856 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1878395 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:45:57,347 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1878886 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:45:57,772 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1879311 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:45:58,345 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1879884 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:45:59,051 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1880590 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:45:59,694 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1881233 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:46:00,554 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1882093 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:46:01,392 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1882931 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:46:02,162 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1883701 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:46:02,771 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1884310 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:46:03,474 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1885013 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:46:04,068 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1885607 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:46:18,817 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：3424 
+
+时间：2017-02-18 15:47:05,011 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：49618 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:47:05,376 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：49983 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:47:05,766 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：50372 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:47:06,108 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：50714 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:47:06,516 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：51123 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:47:06,891 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：51497 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:47:07,259 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：51865 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:47:07,690 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：52297 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:47:08,196 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：52803 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:47:08,558 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：53164 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:47:09,064 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：53671 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:47:09,530 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：54137 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:47:10,167 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：54773 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:47:10,900 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：55507 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:47:11,577 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：56183 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:47:29,339 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：73946 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:48:12,096 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：116702 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.contact.sync.getcot(Contact u, x_contact c) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 67
+   在 X.App.Apis.contact.sync.tocontact(List`1 list, List`1 cts) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 55
+   在 X.App.Apis.contact.sync.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\sync.cs:行号 32
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:48:28,741 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：6557 
+
+时间：2017-02-18 15:49:01,578 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：39394 
+
+时间：2017-02-18 15:50:07,711 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T头像数据为空)","code":"T头像数据为空"} 
+时间：105527 
+
+时间：2017-02-18 15:50:26,240 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T头像数据为空)","code":"T头像数据为空"} 
+时间：124056 
+
+时间：2017-02-18 15:50:42,209 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T头像数据为空)","code":"T头像数据为空"} 
+时间：140026 
+
+时间：2017-02-18 15:50:57,916 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T头像数据为空)","code":"T头像数据为空"} 
+时间：155733 
+
+时间：2017-02-18 15:51:13,623 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T头像数据为空)","code":"T头像数据为空"} 
+时间：171440 
+
+时间：2017-02-18 15:51:29,416 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T头像数据为空)","code":"T头像数据为空"} 
+时间：187232 
+
+时间：2017-02-18 15:51:45,461 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T头像数据为空)","code":"T头像数据为空"} 
+时间：203278 
+
+时间：2017-02-18 15:52:01,125 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T头像数据为空)","code":"T头像数据为空"} 
+时间：218942 
+
+时间：2017-02-18 15:52:16,683 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T头像数据为空)","code":"T头像数据为空"} 
+时间：234500 
+
+时间：2017-02-18 15:52:32,216 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T头像数据为空)","code":"T头像数据为空"} 
+时间：250033 
+
+时间：2017-02-18 15:52:47,684 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T头像数据为空)","code":"T头像数据为空"} 
+时间：265501 
+
+时间：2017-02-18 15:53:03,107 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T头像数据为空)","code":"T头像数据为空"} 
+时间：280924 
+
+时间：2017-02-18 15:53:18,620 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T头像数据为空)","code":"T头像数据为空"} 
+时间：296437 
+
+时间：2017-02-18 15:53:34,097 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T头像数据为空)","code":"T头像数据为空"} 
+时间：311914 
+
+时间：2017-02-18 15:53:49,909 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T头像数据为空)","code":"T头像数据为空"} 
+时间：327726 
+
+时间：2017-02-18 15:54:02,773 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T头像数据为空)","code":"T头像数据为空"} 
+时间：340590 
+
+时间：2017-02-18 15:54:47,485 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T头像数据为空)","code":"T头像数据为空"} 
+时间：385302 
+
+时间：2017-02-18 15:55:03,029 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T头像数据为空)","code":"T头像数据为空"} 
+时间：400846 
+
+时间：2017-02-18 15:55:18,573 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T头像数据为空)","code":"T头像数据为空"} 
+时间：416390 
+
+时间：2017-02-18 15:58:24,618 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：66059 
+X.Json.JsonReaderException: Invalid property identifier character: &. Path '', line 1, position 1.
+   在 X.Json.JsonTextReader.ParseProperty()
+   在 X.Json.JsonTextReader.ParseObject()
+   在 X.Json.JsonTextReader.ReadInternal()
+   在 X.Json.JsonTextReader.Read()
+   在 X.Json.Serialization.JsonSerializerInternalReader.CheckedRead(JsonReader reader)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 X.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 X.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   在 X.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 X.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   在 X.Core.Utility.Serialize.FromJson[T](String json) 位置 D:\Pro\x.rbt\src\Core\Utility\Serialize.cs:行号 36
+   在 X.App.Apis.contact.setheadimg.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\setheadimg.cs:行号 20
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:58:40,572 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：82013 
+X.Json.JsonReaderException: Invalid property identifier character: &. Path '', line 1, position 1.
+   在 X.Json.JsonTextReader.ParseProperty()
+   在 X.Json.JsonTextReader.ParseObject()
+   在 X.Json.JsonTextReader.ReadInternal()
+   在 X.Json.JsonTextReader.Read()
+   在 X.Json.Serialization.JsonSerializerInternalReader.CheckedRead(JsonReader reader)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 X.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 X.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   在 X.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 X.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   在 X.Core.Utility.Serialize.FromJson[T](String json) 位置 D:\Pro\x.rbt\src\Core\Utility\Serialize.cs:行号 36
+   在 X.App.Apis.contact.setheadimg.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\setheadimg.cs:行号 20
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:58:56,322 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：97763 
+X.Json.JsonReaderException: Invalid property identifier character: &. Path '', line 1, position 1.
+   在 X.Json.JsonTextReader.ParseProperty()
+   在 X.Json.JsonTextReader.ParseObject()
+   在 X.Json.JsonTextReader.ReadInternal()
+   在 X.Json.JsonTextReader.Read()
+   在 X.Json.Serialization.JsonSerializerInternalReader.CheckedRead(JsonReader reader)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 X.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 X.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   在 X.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 X.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   在 X.Core.Utility.Serialize.FromJson[T](String json) 位置 D:\Pro\x.rbt\src\Core\Utility\Serialize.cs:行号 36
+   在 X.App.Apis.contact.setheadimg.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\setheadimg.cs:行号 20
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:59:11,967 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：113408 
+X.Json.JsonReaderException: Invalid property identifier character: &. Path '', line 1, position 1.
+   在 X.Json.JsonTextReader.ParseProperty()
+   在 X.Json.JsonTextReader.ParseObject()
+   在 X.Json.JsonTextReader.ReadInternal()
+   在 X.Json.JsonTextReader.Read()
+   在 X.Json.Serialization.JsonSerializerInternalReader.CheckedRead(JsonReader reader)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 X.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 X.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   在 X.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 X.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   在 X.Core.Utility.Serialize.FromJson[T](String json) 位置 D:\Pro\x.rbt\src\Core\Utility\Serialize.cs:行号 36
+   在 X.App.Apis.contact.setheadimg.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\setheadimg.cs:行号 20
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:59:27,696 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：129137 
+X.Json.JsonReaderException: Invalid property identifier character: &. Path '', line 1, position 1.
+   在 X.Json.JsonTextReader.ParseProperty()
+   在 X.Json.JsonTextReader.ParseObject()
+   在 X.Json.JsonTextReader.ReadInternal()
+   在 X.Json.JsonTextReader.Read()
+   在 X.Json.Serialization.JsonSerializerInternalReader.CheckedRead(JsonReader reader)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 X.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 X.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   在 X.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 X.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   在 X.Core.Utility.Serialize.FromJson[T](String json) 位置 D:\Pro\x.rbt\src\Core\Utility\Serialize.cs:行号 36
+   在 X.App.Apis.contact.setheadimg.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\setheadimg.cs:行号 20
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:59:43,294 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：144735 
+X.Json.JsonReaderException: Invalid property identifier character: &. Path '', line 1, position 1.
+   在 X.Json.JsonTextReader.ParseProperty()
+   在 X.Json.JsonTextReader.ParseObject()
+   在 X.Json.JsonTextReader.ReadInternal()
+   在 X.Json.JsonTextReader.Read()
+   在 X.Json.Serialization.JsonSerializerInternalReader.CheckedRead(JsonReader reader)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 X.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 X.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   在 X.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 X.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   在 X.Core.Utility.Serialize.FromJson[T](String json) 位置 D:\Pro\x.rbt\src\Core\Utility\Serialize.cs:行号 36
+   在 X.App.Apis.contact.setheadimg.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\setheadimg.cs:行号 20
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 15:59:57,542 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：158983 
+
+时间：2017-02-18 16:01:01,520 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：222962 
+X.Json.JsonReaderException: Invalid property identifier character: &. Path '', line 1, position 1.
+   在 X.Json.JsonTextReader.ParseProperty()
+   在 X.Json.JsonTextReader.ParseObject()
+   在 X.Json.JsonTextReader.ReadInternal()
+   在 X.Json.JsonTextReader.Read()
+   在 X.Json.Serialization.JsonSerializerInternalReader.CheckedRead(JsonReader reader)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 X.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 X.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   在 X.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 X.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   在 X.Core.Utility.Serialize.FromJson[T](String json) 位置 D:\Pro\x.rbt\src\Core\Utility\Serialize.cs:行号 36
+   在 X.App.Apis.contact.setheadimg.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\setheadimg.cs:行号 20
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 16:02:32,379 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：313820 
+X.Json.JsonReaderException: Invalid property identifier character: &. Path '', line 1, position 1.
+   在 X.Json.JsonTextReader.ParseProperty()
+   在 X.Json.JsonTextReader.ParseObject()
+   在 X.Json.JsonTextReader.ReadInternal()
+   在 X.Json.JsonTextReader.Read()
+   在 X.Json.Serialization.JsonSerializerInternalReader.CheckedRead(JsonReader reader)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 X.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 X.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   在 X.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 X.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   在 X.Core.Utility.Serialize.FromJson[T](String json) 位置 D:\Pro\x.rbt\src\Core\Utility\Serialize.cs:行号 36
+   在 X.App.Apis.contact.setheadimg.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\setheadimg.cs:行号 20
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 16:03:46,261 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：387702 
+X.Json.JsonReaderException: Invalid property identifier character: &. Path '', line 1, position 1.
+   在 X.Json.JsonTextReader.ParseProperty()
+   在 X.Json.JsonTextReader.ParseObject()
+   在 X.Json.JsonTextReader.ReadInternal()
+   在 X.Json.JsonTextReader.Read()
+   在 X.Json.Serialization.JsonSerializerInternalReader.CheckedRead(JsonReader reader)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 X.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 X.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   在 X.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 X.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   在 X.Core.Utility.Serialize.FromJson[T](String json) 位置 D:\Pro\x.rbt\src\Core\Utility\Serialize.cs:行号 36
+   在 X.App.Apis.contact.setheadimg.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\setheadimg.cs:行号 20
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 16:05:03,703 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：465144 
+X.Json.JsonReaderException: Invalid property identifier character: &. Path '', line 1, position 1.
+   在 X.Json.JsonTextReader.ParseProperty()
+   在 X.Json.JsonTextReader.ParseObject()
+   在 X.Json.JsonTextReader.ReadInternal()
+   在 X.Json.JsonTextReader.Read()
+   在 X.Json.Serialization.JsonSerializerInternalReader.CheckedRead(JsonReader reader)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 X.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 X.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 X.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   在 X.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 X.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   在 X.Core.Utility.Serialize.FromJson[T](String json) 位置 D:\Pro\x.rbt\src\Core\Utility\Serialize.cs:行号 36
+   在 X.App.Apis.contact.setheadimg.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\contact\setheadimg.cs:行号 20
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 16:05:38,433 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：19255 
+
+时间：2017-02-18 16:08:47,876 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：11168 
+
+时间：2017-02-18 16:27:25,963 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 contact.del","code":"0x0002"} 
+时间：6961 
+
+时间：2017-02-18 18:07:54,369 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：5789152 
+
+时间：2017-02-18 18:12:02,077 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：165452 
+
+时间：2017-02-18 18:12:22,328 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：185703 
+
+时间：2017-02-18 18:12:42,562 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：205937 
+
+时间：2017-02-18 18:13:02,857 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：226232 
+
+时间：2017-02-18 18:13:23,079 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：246454 
+
+时间：2017-02-18 18:13:43,220 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：266595 
+
+时间：2017-02-18 18:14:23,526 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：306901 
+
+时间：2017-02-18 18:14:24,468 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：307843 
+
+时间：2017-02-18 18:14:24,473 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：307848 
+
+时间：2017-02-18 18:14:24,480 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：307855 
+
+时间：2017-02-18 18:34:38,553 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：305054 
+
+时间：2017-02-18 20:14:06,468 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：4150598 
+
+时间：2017-02-18 20:15:47,196 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：4251325 
+
+时间：2017-02-18 20:17:21,688 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：4345818 
+
+时间：2017-02-18 20:17:36,935 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：4361065 
+System.InvalidOperationException: 无法刷新指定的对象。对象不再存在于数据库中。
+   在 System.Data.Linq.ObjectChangeConflict.Resolve(RefreshMode refreshMode, Boolean autoResolveDeletes)
+   在 System.Data.Linq.ObjectChangeConflict.Resolve(RefreshMode refreshMode)
+   在 X.Web.XFace.SubmitDBChanges() 位置 D:\Pro\x.rbt\src\Web\X.Web\XFace.cs:行号 203
+   在 X.App.Apis.msg.load.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\msg\load.cs:行号 42
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-18 21:48:28,445 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：4256152 

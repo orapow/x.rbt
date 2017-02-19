@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using X.Core.Cache;
+using X.Data;
 using X.Web;
 using X.Web.Com;
 
@@ -15,14 +16,14 @@ namespace X.App.Apis.wx.red
         protected override XResp Execute()
         {
             var r = DB.x_red.FirstOrDefault(o => o.red_id == id);
-            if (r == null) throw new XExcep("T红包不在存");
-            if (r.status == 2) throw new XExcep("T当前红包已抢完");
-            if (r.status == 3) throw new XExcep("T当前红包已经失效");
+            if (r == null) throw new XExcep("0x0015");
+            if (r.status == 2) throw new XExcep("0x0021");
+            if (r.status == 3) throw new XExcep("0x0022");
 
-            if (r.x_red_get.Count(o => o.owner == cu.user_id) > 0) throw new XExcep("T你已经领过此红包");
+            if (r.x_red_get.Count(o => o.owner == cu.user_id) > 0) throw new XExcep("0x0023");
 
             var gt = r.x_red_get.Where(o => o.owner == 0).OrderBy(o => Guid.NewGuid()).FirstOrDefault();
-            if (gt == null) throw new XExcep("T当前红包已经被抢完");
+            if (gt == null) throw new XExcep("0x0021");
 
             var lk = CacheHelper.Get<string>("red.get:" + cu.user_id);
             if (!string.IsNullOrEmpty(lk)) return new XResp();
@@ -64,6 +65,27 @@ namespace X.App.Apis.wx.red
             else
             {
                 cu.balance += (decimal)(gt.amount / 100.0);
+            }
+
+            var dt = new x_balan_detail()
+            {
+                amount = gt.amount / 100M,
+                user_id = cu.user_id,
+                ctime = DateTime.Now,
+                remark = "领到" + r.x_user.name + "的红包，金额：" + gt.amount / 100.0M
+            };
+            DB.x_balan_detail.InsertOnSubmit(dt);
+
+            if (gt.ramount > 0)
+            {
+                var pdt = new x_balan_detail()
+                {
+                    amount = gt.amount / 100.0M,
+                    user_id = gt.upid,
+                    ctime = DateTime.Now,
+                    remark = "来自" + cu.nickname + "的红包返现，金额：" + gt.ramount / 100.0M
+                };
+                DB.x_balan_detail.InsertOnSubmit(pdt);
             }
 
             SubmitDBChanges();

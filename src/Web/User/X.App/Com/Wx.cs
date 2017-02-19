@@ -645,7 +645,7 @@ namespace X.App.Com
             /// 付款金额（元）
             /// </param>
             /// <returns></returns>
-            public static payrsp PayToOpenid(string appid, string mchid, string openid, string no, int amount, string cert_path, string signkey)
+            public static payrsp PayToOpenid(string appid, string mchid, string openid, string no, decimal amount, string cert_path, string signkey)
             {
                 var dict = new Dictionary<string, string>();
                 dict.Add("mch_appid", appid);

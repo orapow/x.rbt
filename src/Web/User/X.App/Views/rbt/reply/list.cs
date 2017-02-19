@@ -6,11 +6,11 @@ namespace X.App.Views.rbt.reply
 {
     public class list : xview
     {
-        protected override string menu_id
+        protected override string mu_name
         {
             get
             {
-                return "2";
+                return "rbt_reply";
             }
         }
     }

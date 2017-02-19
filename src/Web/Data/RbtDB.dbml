@@ -101,7 +101,11 @@
       <Association Name="x_user_x_msg" Member="x_msg" ThisKey="user_id" OtherKey="user_id" Type="x_msg" />
       <Association Name="x_user_x_logon" Member="x_logon" ThisKey="user_id" OtherKey="user_id" Type="x_logon" />
       <Association Name="x_user_x_contact" Member="x_contact" ThisKey="user_id" OtherKey="user_id" Type="x_contact" />
+      <Association Name="x_user_x_balan_get" Member="x_balan_get" ThisKey="user_id" OtherKey="user_id" Type="x_balan_get" />
+      <Association Name="x_user_x_balan_detail" Member="x_balan_detail" ThisKey="user_id" OtherKey="user_id" Type="x_balan_detail" />
+      <Association Name="x_user_x_ad" Member="x_ad" ThisKey="user_id" OtherKey="user_id" Type="x_ad" />
       <Association Name="x_user_x_red" Member="x_red" ThisKey="user_id" OtherKey="user_id" Type="x_red" />
+      <Association Name="x_user_x_ad_hit" Member="x_ad_hit" ThisKey="user_id" OtherKey="user_id" Type="x_ad_hit" />
     </Type>
   </Table>
   <Table Name="dbo.x_red_get" Member="x_red_get">
@@ -117,22 +121,75 @@
       <Association Name="x_red_x_red_get" Member="x_red" ThisKey="red_id" OtherKey="red_id" Type="x_red" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.x_balan_get" Member="x_balan_get">
+    <Type Name="x_balan_get">
+      <Column Name="balan_get_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="balance" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="result" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="x_user_x_balan_get" Member="x_user" ThisKey="user_id" OtherKey="user_id" Type="x_user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.x_balan_detail" Member="x_balan_detail">
+    <Type Name="x_balan_detail">
+      <Column Name="balan_detail_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Association Name="x_user_x_balan_detail" Member="x_user" ThisKey="user_id" OtherKey="user_id" Type="x_user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.x_ad" Member="x_ad">
+    <Type Name="x_ad">
+      <Column Name="ad_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="img" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="qrcode" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="txt" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="style" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="link" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="x_user_x_ad" Member="x_user" ThisKey="user_id" OtherKey="user_id" Type="x_user" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.x_red" Member="x_red">
     <Type Name="x_red">
       <Column Name="red_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="user_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
       <Column Name="mode" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ad" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
       <Column Name="count" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="geted" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="remark" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="adcount" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="qrcount" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
       <Column Name="upcash" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="ftime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="freason" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
       <Association Name="x_red_x_red_get" Member="x_red_get" ThisKey="red_id" OtherKey="red_id" Type="x_red_get" />
+      <Association Name="x_red_x_ad_hit" Member="x_ad_hit" ThisKey="red_id" OtherKey="red_id" Type="x_ad_hit" />
       <Association Name="x_user_x_red" Member="x_user" ThisKey="user_id" OtherKey="user_id" Type="x_user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.x_ad_hit" Member="x_ad_hit">
+    <Type Name="x_ad_hit">
+      <Column Name="ad_hit_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="red_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="tp" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ad_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="x_red_x_ad_hit" Member="x_red" ThisKey="red_id" OtherKey="red_id" Type="x_red" IsForeignKey="true" />
+      <Association Name="x_user_x_ad_hit" Member="x_user" ThisKey="user_id" OtherKey="user_id" Type="x_user" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

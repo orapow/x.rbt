@@ -32,21 +32,18 @@ namespace X.Wx.App
         public Http(string ck, int tout)
         {
             cookie = new CookieContainer();
-
             foreach (var c in ck.Trim(';').Trim().Split(';'))
             {
                 if (string.IsNullOrEmpty(c)) continue;
                 var idx = c.IndexOf('=');
                 cookie.Add(new Cookie(c.Substring(0, idx).Trim(), c.Substring(idx).Trim(), "/", "wx.qq.com"));
             }
-
             timeout = tout;
         }
 
         byte[] get(string url)
         {
             GC.Collect();
-            //File.AppendAllText(Application.StartupPath + "\\log.txt", "get->" + url);
             var req = (HttpWebRequest)WebRequest.Create(url);
 
             if (url.Contains("https://")) ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback((object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors errors) => { return true; });
@@ -96,12 +93,10 @@ namespace X.Wx.App
             }
 
         }
-
         byte[] post(string url, byte[] data) { return post(url, data, ""); }
         byte[] post(string url, byte[] data, string boundary)
         {
             GC.Collect();
-            //File.AppendAllText(Application.StartupPath + "\\log.txt", "post->" + url);
             if (url.Contains("https://")) ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback((object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors errors) => { return true; });
 
             var req = (HttpWebRequest)WebRequest.Create(url);
@@ -121,14 +116,11 @@ namespace X.Wx.App
             req.Headers.Set("Pragma", "no-cache");
 
             if (!string.IsNullOrEmpty(boundary)) req.ContentType = "multipart/form-data;charset=utf-8;boundary=" + boundary;
-
             HttpWebResponse rsp = null;
             try
             {
                 using (var req_st = req.GetRequestStream()) req_st.Write(data, 0, data.Length);
-
                 rsp = (HttpWebResponse)req.GetResponse();
-
                 int count = (int)rsp.ContentLength;
                 byte[] buf = new byte[count];
                 using (var rsp_st = rsp.GetResponseStream())
@@ -142,13 +134,10 @@ namespace X.Wx.App
                         offset += n;
                     }
                 }
-
-                //File.AppendAllText(Application.StartupPath + "\\log.txt", "post->" + Encoding.UTF8.GetString(buf));
                 return buf;
             }
             catch (Exception ex)
             {
-                //File.AppendAllText(Application.StartupPath + "\\log.txt", "post->err:" + ex.Message);
                 throw ex;
             }
             finally

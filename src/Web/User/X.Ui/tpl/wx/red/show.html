@@ -3,7 +3,8 @@
 <head>
     #parse("wx/_head.html")
     <title>$u.nickname的红包</title>
-    #if($get==1)
+    <script src="/js/swp.min.js"></script>
+    #if($get==1&&$bao.status==1)
     <style type="text/css">
         body { background-color: rgba(235, 205, 154, 0.42); }
         .bao { width: 90%; display: block; margin: 0 auto; margin-top: 15px; position: relative; font-family: "微软雅黑"; }
@@ -11,7 +12,7 @@
         .user img { width: 60px; }
         .user span { display: block; color: #ffe2b1; }
         .remark { display: block; color: #ffe2b1; position: absolute; font-size: 1.2em; top: 158px; width: 100%; text-align: center; }
-        .btn { position: absolute; width: 100%; top: 202px; }
+        .btn { position: absolute; width: 100%; top: 202px; left: 0; }
         .on { animation: rotate 1s infinite; -webkit-animation: rotate 1s infinite; }
 
         @keyframes rotate {
@@ -31,13 +32,13 @@
         .user img { width: 174px; border-radius: 5px; }
         .user > span { display: block; line-height: 26px; }
         .user .txt { color: #999; font-size: 14px; width: 90%; margin: 0px auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-        .user .am { padding-top: 10px; font-size: 42px; font-weight: bold; }
+        .user .am { padding-top: 10px; font-size: 34px; font-weight: bold; }
         .list { padding: 0 15px; font-family: "微软雅黑"; background-color: white; }
         .list .h2 { font-size: 16px; color: #999; line-height: 32px; margin-bottom: 10px; }
         .item { border-bottom: 1px solid #dcdcdc; padding: 10px 0; }
         .item:last-child { border: none; }
         .item > * { display: inline-block; vertical-align: top; }
-        .item .md span { display: block; line-height: 24px; }
+        .item .md span { display: block; line-height: 24px; max-width: 130px; height: 24px; overflow: hidden; }
         .item .rt { float: right; text-align: right; }
         .item .rt span { display: block; color: #999; font-size: 14px; }
         .md .nk.me { color: red; }
@@ -52,15 +53,18 @@
         .ad .link { font-size: 12px; color: rgba(0, 0, 0, 0.55); border: 1px solid; padding: 2px 5px; position: absolute; right: 10px; margin: 0; top: 50%; margin-top: -12px; }
         .ad .txt { color: rgba(0, 0, 0, 0.55); font-size: 14px; max-height: 44px; overflow: hidden; vertical-align: middle; }
         .ad .small { display: none; font-family: Arial; font-size: 10px; color: white; position: absolute; right: 0; bottom: 0; background-color: #000; padding: 0 2px; margin: 0; }
+        .ad.ad3 img { width: 100%; margin: 0; max-height: 66px; }
+        .ad.ad3 { padding: 5px; }
     </style>
     #end
 </head>
 <body>
     #if($get==1)
+    #if($bao.status==1)
     <div class="bao">
         <img src="/img/wx/b.png" style="width:100%" />
         <div class="user">
-            #if($from&&$cu.user_id!=$bao.user_id&&$bao.user_id!=$cu.user_id)
+            #if($from&&$cu.user_id!=$bao.user_id&&$bao.user_id!=$uid)
             <img src="$from.headimg" />
             <span class="nk">$from.nickname<br />转发自 $u.nickname 的红包</span>
             #else
@@ -71,17 +75,63 @@
         <span class="remark">$bao.remark</span>
         <img src="/img/wx/k.png" class="btn" />
     </div>
+    #else
+    <div class="show">
+        <div class="user">
+            #if($from&&$cu.user_id!=$bao.user_id&&$bao.user_id!=$uid)
+            <img src="$from.headimg" />
+            <span class="nk">$from.nickname<br /><span style="font-size:14px;">转发自 $u.nickname 的红包</span></span>
+            #else
+            <img src="$u.headimg" />
+            <span class="nk">$u.nickname的红包</span>
+            #end
+            <span class="txt">$bao.remark</span>
+            #if($bao.status==3)
+            <span class="ftxt">红包已经暂停领取</span>
+            #else
+            <span class="ftxt">来慢了，红包已经抢完</span>
+            #end
+        </div>
+        #if($ad.ad_id>0)
+        <div class="ad ad$ad.style">
+            <img src="$ad.img" alt="$ad.txt" onclick="set_hit()" />
+            #if($ad.style!=3)
+            <span class="txt">$ad.txt</span>
+            <a href="$ad.link" class="link" onclick="set_hit()">#if($a.link.substring(0,3)=="tel")立即拔打#else查看详情#end</a>
+            <span class="small">广告</span>
+            #end
+        </div>
+        #end
+        <div class="sp">
+            <img src="/img/wx/sp.png" style="vertical-align:top;width:100%;" />
+        </div>
+        <div class="list">
+            <div class="h2">$bao.geted/$bao.count个红包</div>
+            <div class="items"></div>
+        </div>
+        <div style="text-align: center;font-size: 14px;background: white;padding: 18px 0;display: block;">
+            <a href="/wx/user/balance.html" style="text-align:center;font-size:14px;color:#088fd4;">查看我的红包记录</a>
+        </div>
+    </div>
+    #end
     <script type="text/javascript">
         var isload = false;
         $(function () {
 
             $(window).resize(function () {
-                var w = $(window).width() * 0.9;
-                var h = $(window).height();
-                var rt = w / 902;
 
-                $(".bao").css("margin-top", ((h - 1202 * rt) / 2) + "px");
-                $(".btn").css("top", 632 * rt);
+                var w = $(window).width();
+                var h = $(window).height();
+                var rt = w / 1080;
+
+                var w1 = w * 0.9;
+                var rt1 = w1 / 902;
+
+                $(".user img").width(174 * rt).height(174 * rt).css("margin-top", 102 * rt);
+                $(".bao").css("margin-top", ((h - 1202 * rt1) / 2) + "px");
+                $(".btn").css("top", 632 * rt1);
+                $(".remark").css("top", 500 * rt1);
+
             });
             $(window).resize();
 
@@ -90,9 +140,11 @@
                 var btn = $(this);
                 btn.addClass("on");
                 doapi("wx.red.get", { id: "$rid", uid: "$!uid" }, function (d) {
-                    btn.removeClass("on");
                     isload = false;
-                    document.location.href = "http://$cfg.domain/wx/red/show-${rid}.html#new";
+                    setTimeout(function () {
+                        btn.removeClass("on");
+                        document.location.href = "http://$cfg.domain/wx/red/show-${rid}.html#new";
+                    }, 1500);
                 }, false);
             });
         });
@@ -100,7 +152,7 @@
     #else
     <div class="show">
         <div class="user">
-            #if($from&&$cu.user_id!=$bao.user_id&&$bao.user_id!=$cu.user_id)
+            #if($from&&$cu.user_id!=$bao.user_id)
             <img src="$from.headimg" />
             <span class="nk">$from.nickname<br /><span style="font-size:14px;">转发自 $u.nickname 的红包</span></span>
             #else
@@ -108,39 +160,32 @@
             <span class="nk">$u.nickname的红包</span>
             #end
             <span class="txt">$bao.remark</span>
-            <span class="am">$am<span style="font-size: 18px;"> 元</span></span>
+            <div><span class="am" style="display:inline;">$am<span style="font-size: 18px;"> 元</span></span> #if($rt>0)<span style="display:inline;font-size:26px;">+$rt</span><span style="color:#999;font-size:12px;">(返)</span>#end</div>
+            #if($bao.status==2)<span class="ftxt">红包已经抢完</span>#end
         </div>
-        <div class="ad">
-            <img src="$u.headimg" />
-            <span class="txt">健康减肥增重，办法问我办法问我办法问我办法问我办法问我办法问我办法问我办法问我办法问我办法问我办法问我办法问我</span>
-            <a href="" class="link">查看详情</a>
+        #if($ad.ad_id>0)
+        <div class="ad ad$ad.style">
+            <img src="$ad.img" alt="$ad.txt" onclick="set_hit();" />
+            #if($ad.style!=3)
+            <span class="txt">$ad.txt</span>
+            <a href="$ad.link" class="link" onclick="set_hit()">#if($a.link.substring(0,3)=="tel")立即拔打#else查看详情#end</a>
             <span class="small">广告</span>
+            #end
         </div>
+        #end
         <div class="btns">
             <span style="display: block; color: #088fd4; line-height: 32px; font-size: 14px; ">转发可获取更多返利</span>
-            <a href="" style="background-color:#ccc;">提现</a><a href="share-${rid}.html">转发</a>
+            <a href="/wx/red/qrcode-$!{bao.red_id}.html" style="background-color:#1aad19;">提现</a>#if($bao.status==1)<a href="share-${rid}.html">转发</a>#end
         </div>
         <div class="sp">
             <img src="/img/wx/sp.png" style="vertical-align:top;width:100%;" />
         </div>
         <div class="list">
-            <div class="h2">$bao.geted/$bao.count个红包 #if($rt>0)<span style="float:right;">共返现：$rt元</span>#end</div>
-            #foreach($u in $us)
-            <div class="item">
-                <span class="img" style="margin-right:10px;"><img src="$u.hd" /></span>
-                <span class="md">
-                    <span class="nk #if($cu.user_id==$u.uid)me#end">$u.nk</span>
-                    <span class="dt">$u.dt</span>
-                </span>
-                <span class="rt">
-                    <span class="am">$u.am元</span>
-                    #if($u.ram.length>0)<span class="rb">$u.ram元</span>#end
-                </span>
-            </div>
-            #end
+            <div class="h2">$bao.geted/$bao.count个红包</div>
+            <div class="items"></div>
         </div>
         <div style="text-align: center;font-size: 14px;background: white;padding: 18px 0;display: block;">
-            <a href="" style="text-align:center;font-size:14px;color:#088fd4;">查看我的红包记录</a>
+            <a href="/wx/user/balance.html" style="text-align:center;font-size:14px;color:#088fd4;">查看我的红包记录</a>
         </div>
     </div>
     <script type="text/javascript">
@@ -149,7 +194,6 @@
                 var w = $(window).width();
                 var h = $(window).height();
                 var rt = w / 1080;
-
                 $(".user img").width(174 * rt).height(174 * rt).css("margin-top", 102 * rt);
             });
             $(window).resize();
@@ -161,14 +205,76 @@
     <script type="text/javascript">
         sharedata = {
             link: "http://$cfg.domain/wx/red/show-${rid}-${cu.user_id}.html",
-            title: "[微信红包]$bao.remark",
+            title: "[红包]$bao.remark",
             desc: "#if($cu.user_id==$bao.user_id)$cu.nickname 发红包了#else$cu.nickname 转发了 $u.nickname的红包#end，赶快来抢，手慢无！！！",
             img: "$cu.headimg"
         };
         $(function () {
             var w = $(window).width();
             $(".ad .txt").css("max-width", w - 160);
-        })
+            setTimeout(function () {
+                loaddata()
+            })
+        });
+
+        var isloading = false;
+        var drop_load = null;
+        var page = 1;
+
+        drop_load = $('.items').dropload({
+            scrollArea: window,
+            page: 1,
+            domUp: {
+                domClass: 'dropload-up',
+                domRefresh: '<div class="dropload-refresh">↓下拉刷新</div>',
+                domUpdate: '<div class="dropload-update">↑释放刷新</div>',
+                domLoad: '<div class="dropload-load"><span class="loading"></span>正在加载中...</div>'
+            },
+            domDown: {
+                domClass: 'dropload-down',
+                domRefresh: '<div class="dropload-load"><span class="loading"></span>正在加载中...</div>',
+                domLoad: '<div class="dropload-load"><span class="loading"></span>正在加载中...</div>',
+                domNoData: '<div class="dropload-noData">没有更多数据了</div>'
+            },
+            loadUpFn: function (me) {
+                if (isloading) return;
+                page = 1;
+                loaddata(null);
+            },
+            loadDownFn: function (me) {
+                if (isloading) return;
+                loaddata(function (end) {
+                    if (end) {
+                        me.lock();
+                        me.noData();
+                    } else {
+                        page++;
+                    }
+                });
+            },
+            threshold: 50
+        });
+
+        function loaddata(cb) {
+            if (isloading) return;
+            isloading = true;
+            var url = "/wx/red/gets-${rid}-" + page + ".html";
+            jQuery.get(url, function (d) {
+                if (d) {
+                    if (page >= 2) $(".items").append(d);
+                    else $(".items").html(d);
+                }
+                if (cb) cb(d.indexOf("暂无记录") >= 0 || !d);
+                isloading = false;
+                drop_load.resetload();
+            });
+        }
+
+        function set_hit() {
+            doapi("wx.red.sethit", { rid: "$rid", tp: 1 }, null, false);
+            document.location.href = '$ad.link';
+        }
+
     </script>
 </body>
 </html>

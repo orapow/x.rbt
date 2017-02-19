@@ -27,6 +27,7 @@ namespace X.App.Apis.red
                     o.amount,
                     o.count,
                     o.geted,
+                    ad = o.ad == null ? 0 : o.ad,
                     st = o.status == 1 ? "正常" : o.status == 2 ? "完成" : "停止"
                 }).ToList();
             r.count = cu.x_red.Count();

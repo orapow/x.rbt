@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    #parse("wx/_head.html")
+    <title>我的红包记录</title>
+    <script src="/js/swp.min.js"></script>
+    <style type="text/css">
+        .show { background-color: #f1f1f1; }
+        .user { font-family: "微软雅黑"; background: url(/img/wx/h.jpg) no-repeat; background-size: contain; width: 100%; text-align: center; }
+        .user img { width: 174px; border-radius: 5px; }
+        .user > span { display: block; line-height: 26px; }
+        .user .txt { color: #999; font-size: 14px; width: 90%; margin: 0px auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .user .am { padding-top: 10px; font-size: 34px; font-weight: bold; }
+        .list { padding: 0 15px; font-family: "微软雅黑"; background-color: white; }
+        .list .h2 { font-size: 16px; color: #999; line-height: 32px; margin-bottom: 10px; }
+        .item { border-bottom: 1px solid #dcdcdc; padding: 10px 0; }
+        .item:last-child { border: none; }
+        .item > * { display: inline-block; vertical-align: top; }
+        .item .md span { display: block; line-height: 24px; }
+        .item .rt { float: right; text-align: right; }
+        .item .rt span { display: block; color: #999; font-size: 14px; }
+        .md .nk.me { color: red; }
+        .md .dt { color: #999; font-size: 12px; margin-top: 2px; }
+        .item img { width: 50px; border-radius: 5px; vertical-align: top; }
+        .btns { text-align: center; margin: 15px 0; }
+        .btns a { display: inline-block; height: 32px; width: 120px; line-height: 32px; background-color: #ff9600; color: white; font-size: 14px; border-radius: 16px; margin: 0 5px; }
+    </style>
+</head>
+<body>
+    <div class="show">
+        <div class="user">
+            <img src="$cu.headimg" class="hd" />
+            <span class="nk">$cu.nickname</span>
+            <span class="txt">
+                您的余额为
+            </span>
+            <span class="am">
+                $cu.balance<span style="font-size:16px;">元</span>
+            </span>
+        </div>
+        <div class="btns">
+            <a href="/wx/user/qrcode.html">提现</a>
+        </div>
+        <div class="sp">
+            <img src="/img/wx/sp.png" style="vertical-align:top;width:100%;" />
+        </div>
+        <div class="list">
+            <div class="h2">共收到$count个红包</div>
+            <div class="items"></div>
+        </div>
+    </div>
+    <br />
+    #parse("wx/_foot.html")
+    <script type="text/javascript">
+
+        $(function () {
+            $(window).resize(function () {
+                var w = $(window).width();
+                var h = $(window).height();
+                var rt = w / 1080;
+                $(".user img").width(174 * rt).height(174 * rt).css("margin-top", 102 * rt);
+            });
+            $(window).resize();
+        });
+
+        var isloading = false;
+        var drop_load = null;
+        var page = 1;
+
+        drop_load = $('.items').dropload({
+            scrollArea: window,
+            page: 1,
+            domUp: {
+                domClass: 'dropload-up',
+                domRefresh: '<div class="dropload-refresh">↓下拉刷新</div>',
+                domUpdate: '<div class="dropload-update">↑释放刷新</div>',
+                domLoad: '<div class="dropload-load"><span class="loading"></span>正在加载中...</div>'
+            },
+            domDown: {
+                domClass: 'dropload-down',
+                domRefresh: '<div class="dropload-load"><span class="loading"></span>正在加载中...</div>',
+                domLoad: '<div class="dropload-load"><span class="loading"></span>正在加载中...</div>',
+                domNoData: '<div class="dropload-noData">没有更多数据了</div>'
+            },
+            loadUpFn: function (me) {
+                if (isloading) return;
+                page = 1;
+                loaddata(null);
+            },
+            loadDownFn: function (me) {
+                if (isloading) return;
+                loaddata(function (end) {
+                    if (end) {
+                        me.lock();
+                        me.noData();
+                    } else {
+                        page++;
+                    }
+                });
+            },
+            threshold: 50
+        });
+
+        function loaddata(cb) {
+            if (isloading) return;
+            isloading = true;
+            var url = "/wx/user/reds-" + page + ".html";
+            jQuery.get(url, function (d) {
+                if (d) {
+                    if (page >= 2) $(".items").append(d);
+                    else $(".items").html(d);
+                }
+                if (cb) cb(d.indexOf("暂无记录") >= 0 || !d);
+                isloading = false;
+                drop_load.resetload();
+            });
+        }
+
+    </script>
+</body>
+</html>

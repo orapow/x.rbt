@@ -7,11 +7,11 @@ namespace X.App.Views.app.red
 {
     public class list : xview
     {
-        protected override string menu_id
+        protected override string mu_name
         {
             get
             {
-                return "5";
+                return "app_red";
             }
         }
     }

@@ -6,11 +6,11 @@ namespace X.App.Views.rbt.contact
 {
     public class list : xview
     {
-        protected override string menu_id
+        protected override string mu_name
         {
             get
             {
-                return "1";
+                return "rbt_contact";
             }
         }
         protected override void InitDict()

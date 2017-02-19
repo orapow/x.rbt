@@ -1,0 +1,1319 @@
+
+时间：2017-02-14 08:43:01,331 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：40540394 
+
+时间：2017-02-14 08:43:12,698 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：40551761 
+
+时间：2017-02-14 09:00:48,377 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：947703 
+
+时间：2017-02-14 09:01:19,691 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：979017 
+
+时间：2017-02-14 09:04:47,454 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1186780 
+
+时间：2017-02-14 09:04:47,499 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1186825 
+
+时间：2017-02-14 09:27:41,621 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：67983 
+
+时间：2017-02-14 09:32:18,387 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：344748 
+
+时间：2017-02-14 09:40:01,143 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：807505 
+
+时间：2017-02-14 09:40:06,399 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：812760 
+
+时间：2017-02-14 09:59:52,696 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 red.close","code":"0x0002"} 
+时间：11488 
+
+时间：2017-02-14 10:15:15,396 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：84733 
+
+时间：2017-02-14 10:19:46,005 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(红包不存在)","code":"红包不存在"} 
+时间：355342 
+
+时间：2017-02-14 10:33:08,412 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：450809 
+
+时间：2017-02-14 10:33:15,353 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：457750 
+
+时间：2017-02-14 10:35:25,996 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：588394 
+NVelocity.Exception.ParseErrorException: Encountered "<EOF>" at line 231, column 9.
+Was expecting one of:
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    <SINGLE_LINE_COMMENT> ...
+    "*#" ...
+    "*#" ...
+    <STRING_LITERAL> ...
+    <END> ...
+    "if" ...
+    "stop" ...
+    <NUMBER_LITERAL> ...
+    <WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+     ---> NVelocity.Runtime.Parser.ParseException: Encountered "<EOF>" at line 231, column 9.
+Was expecting one of:
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    <SINGLE_LINE_COMMENT> ...
+    "*#" ...
+    "*#" ...
+    <STRING_LITERAL> ...
+    <END> ...
+    "if" ...
+    "stop" ...
+    <NUMBER_LITERAL> ...
+    <WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+    
+   在 NVelocity.Runtime.Parser.Parser.Parse(TextReader reader, String templateName)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName, Boolean dumpNamespace)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName)
+   在 NVelocity.Template.Process()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 108
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 10:37:53,341 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：735738 
+
+时间：2017-02-14 11:15:41,378 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：288578 
+NVelocity.Exception.ParseErrorException: Encountered "uid" at line 67, column 65.
+Was expecting one of:
+    "[" ...
+    "(" ...
+    <WHITESPACE> ...
+    <STRING_LITERAL> ...
+    "true" ...
+    "false" ...
+    <NUMBER_LITERAL> ...
+    <IDENTIFIER> ...
+    "{" ...
+    "!" ...
+     ---> NVelocity.Runtime.Parser.ParseException: Encountered "uid" at line 67, column 65.
+Was expecting one of:
+    "[" ...
+    "(" ...
+    <WHITESPACE> ...
+    <STRING_LITERAL> ...
+    "true" ...
+    "false" ...
+    <NUMBER_LITERAL> ...
+    <IDENTIFIER> ...
+    "{" ...
+    "!" ...
+    
+   在 NVelocity.Runtime.Parser.Parser.Parse(TextReader reader, String templateName)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName, Boolean dumpNamespace)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName)
+   在 NVelocity.Template.Process()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 108
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 11:40:22,670 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1129 
+NVelocity.Exception.ParseErrorException: Encountered "#end\r\n" at line 27, column 5.
+Was expecting one of:
+    <EOF> 
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    <SINGLE_LINE_COMMENT> ...
+    "*#" ...
+    "*#" ...
+    <STRING_LITERAL> ...
+    "if" ...
+    "stop" ...
+    <NUMBER_LITERAL> ...
+    <WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+     ---> NVelocity.Runtime.Parser.ParseException: Encountered "#end\r\n" at line 27, column 5.
+Was expecting one of:
+    <EOF> 
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    <SINGLE_LINE_COMMENT> ...
+    "*#" ...
+    "*#" ...
+    <STRING_LITERAL> ...
+    "if" ...
+    "stop" ...
+    <NUMBER_LITERAL> ...
+    <WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+    
+   在 NVelocity.Runtime.Parser.Parser.Parse(TextReader reader, String templateName)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName, Boolean dumpNamespace)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName)
+   在 NVelocity.Template.Process()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 108
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 11:40:47,876 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：26335 
+NVelocity.Exception.ParseErrorException: Encountered "#end\r\n" at line 35, column 5.
+Was expecting one of:
+    <EOF> 
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    <SINGLE_LINE_COMMENT> ...
+    "*#" ...
+    "*#" ...
+    <STRING_LITERAL> ...
+    "if" ...
+    "stop" ...
+    <NUMBER_LITERAL> ...
+    <WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+     ---> NVelocity.Runtime.Parser.ParseException: Encountered "#end\r\n" at line 35, column 5.
+Was expecting one of:
+    <EOF> 
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    <SINGLE_LINE_COMMENT> ...
+    "*#" ...
+    "*#" ...
+    <STRING_LITERAL> ...
+    "if" ...
+    "stop" ...
+    <NUMBER_LITERAL> ...
+    <WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+    
+   在 NVelocity.Runtime.Parser.Parser.Parse(TextReader reader, String templateName)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName, Boolean dumpNamespace)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName)
+   在 NVelocity.Template.Process()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 108
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 11:50:30,545 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：55115 
+NVelocity.Exception.ParseErrorException: Encountered "<EOF>" at line 220, column 9.
+Was expecting one of:
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    <SINGLE_LINE_COMMENT> ...
+    "*#" ...
+    "*#" ...
+    <STRING_LITERAL> ...
+    <END> ...
+    "if" ...
+    "elseif" ...
+    <ELSE_DIRECTIVE> ...
+    "stop" ...
+    <NUMBER_LITERAL> ...
+    <WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+     ---> NVelocity.Runtime.Parser.ParseException: Encountered "<EOF>" at line 220, column 9.
+Was expecting one of:
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    <SINGLE_LINE_COMMENT> ...
+    "*#" ...
+    "*#" ...
+    <STRING_LITERAL> ...
+    <END> ...
+    "if" ...
+    "elseif" ...
+    <ELSE_DIRECTIVE> ...
+    "stop" ...
+    <NUMBER_LITERAL> ...
+    <WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+    
+   在 NVelocity.Runtime.Parser.Parser.Parse(TextReader reader, String templateName)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName, Boolean dumpNamespace)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName)
+   在 NVelocity.Template.Process()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 108
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 11:51:47,239 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：131809 
+NVelocity.Exception.ParseErrorException: Encountered "<EOF>" at line 271, column 9.
+Was expecting one of:
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    <SINGLE_LINE_COMMENT> ...
+    "*#" ...
+    "*#" ...
+    <STRING_LITERAL> ...
+    <END> ...
+    "if" ...
+    "stop" ...
+    <NUMBER_LITERAL> ...
+    <WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+     ---> NVelocity.Runtime.Parser.ParseException: Encountered "<EOF>" at line 271, column 9.
+Was expecting one of:
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    <SINGLE_LINE_COMMENT> ...
+    "*#" ...
+    "*#" ...
+    <STRING_LITERAL> ...
+    <END> ...
+    "if" ...
+    "stop" ...
+    <NUMBER_LITERAL> ...
+    <WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+    
+   在 NVelocity.Runtime.Parser.Parser.Parse(TextReader reader, String templateName)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName, Boolean dumpNamespace)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName)
+   在 NVelocity.Template.Process()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 108
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 11:52:09,655 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：154225 
+NVelocity.Exception.ParseErrorException: Encountered "<EOF>" at line 271, column 9.
+Was expecting one of:
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    <SINGLE_LINE_COMMENT> ...
+    "*#" ...
+    "*#" ...
+    <STRING_LITERAL> ...
+    <END> ...
+    "if" ...
+    "stop" ...
+    <NUMBER_LITERAL> ...
+    <WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+     ---> NVelocity.Runtime.Parser.ParseException: Encountered "<EOF>" at line 271, column 9.
+Was expecting one of:
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    <SINGLE_LINE_COMMENT> ...
+    "*#" ...
+    "*#" ...
+    <STRING_LITERAL> ...
+    <END> ...
+    "if" ...
+    "stop" ...
+    <NUMBER_LITERAL> ...
+    <WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+    
+   在 NVelocity.Runtime.Parser.Parser.Parse(TextReader reader, String templateName)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName, Boolean dumpNamespace)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName)
+   在 NVelocity.Template.Process()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 108
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 11:54:02,475 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T当前红包已经有人领取，不能删除，只能关闭)","code":"T当前红包已经有人领取，不能删除，只能关闭"} 
+时间：267045 
+
+时间：2017-02-14 13:09:18,817 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T红包不存在)","code":"T红包不存在"} 
+时间：112139 
+
+时间：2017-02-14 13:26:41,034 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1394 
+System.NotSupportedException: 方法“System.String ToString(System.String)”不支持转换为 SQL。
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitMethodCall(SqlMethodCall mc)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.SqlSelectionSkipper.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitNew(SqlNew sox)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Convert(SqlNode node, SqlFactory sql, ProviderMode providerMode)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(ResultShape resultShape, Type resultType, SqlNode node, ReadOnlyCollection`1 parentParameters, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 35
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:26:41,618 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1978 
+System.NotSupportedException: 方法“System.String ToString(System.String)”不支持转换为 SQL。
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitMethodCall(SqlMethodCall mc)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.SqlSelectionSkipper.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitNew(SqlNew sox)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Convert(SqlNode node, SqlFactory sql, ProviderMode providerMode)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(ResultShape resultShape, Type resultType, SqlNode node, ReadOnlyCollection`1 parentParameters, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 35
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:26:43,500 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：3860 
+System.NotSupportedException: 方法“System.String ToString(System.String)”不支持转换为 SQL。
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitMethodCall(SqlMethodCall mc)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.SqlSelectionSkipper.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitNew(SqlNew sox)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Convert(SqlNode node, SqlFactory sql, ProviderMode providerMode)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(ResultShape resultShape, Type resultType, SqlNode node, ReadOnlyCollection`1 parentParameters, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 35
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:26:44,885 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：5245 
+System.NotSupportedException: 方法“System.String ToString(System.String)”不支持转换为 SQL。
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitMethodCall(SqlMethodCall mc)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.SqlSelectionSkipper.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitNew(SqlNew sox)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Convert(SqlNode node, SqlFactory sql, ProviderMode providerMode)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(ResultShape resultShape, Type resultType, SqlNode node, ReadOnlyCollection`1 parentParameters, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 35
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:26:45,752 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：6113 
+System.NotSupportedException: 方法“System.String ToString(System.String)”不支持转换为 SQL。
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitMethodCall(SqlMethodCall mc)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.SqlSelectionSkipper.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitNew(SqlNew sox)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Convert(SqlNode node, SqlFactory sql, ProviderMode providerMode)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(ResultShape resultShape, Type resultType, SqlNode node, ReadOnlyCollection`1 parentParameters, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 35
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:27:27,147 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：797 
+System.ArgumentException: 已添加了具有相同键的项。
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 35
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:27:30,606 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：4257 
+System.ArgumentException: 已添加了具有相同键的项。
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 35
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:27:30,746 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：4397 
+System.ArgumentException: 已添加了具有相同键的项。
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 35
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:27:31,742 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：5392 
+System.ArgumentException: 已添加了具有相同键的项。
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 35
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:28:24,244 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：57895 
+System.ArgumentException: 已添加了具有相同键的项。
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 35
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:28:24,358 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：58009 
+System.ArgumentException: 已添加了具有相同键的项。
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 35
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:28:24,456 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：58106 
+System.ArgumentException: 已添加了具有相同键的项。
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 35
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:30:18,609 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：操作超时 
+时间：100661 
+System.Net.WebException: 操作超时
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 373
+
+时间：2017-02-14 13:30:20,016 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：102068 
+System.Net.WebException: 操作超时
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 381
+   在 X.Core.Utility.Tools.GetHttpData(String url) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 414
+   在 X.App.Com.Wx.GetToken(String appid, String sec, Boolean isnew) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 58
+   在 X.App.Com.Wx.GetToken(String appid, String sec) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 68
+   在 X.App.Views.wx._wx.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 83
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 21
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:30:32,012 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1887 
+System.ArgumentOutOfRangeException: 指定的参数已超出有效值的范围。
+参数名: skipCount
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitTake(Expression sequence, Expression count)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitSequenceOperatorCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitMethodCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node)
+   在 System.Data.Linq.SqlClient.QueryConverter.ConvertOuter(Expression node)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 35
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:30:32,166 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：2041 
+System.ArgumentOutOfRangeException: 指定的参数已超出有效值的范围。
+参数名: skipCount
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitTake(Expression sequence, Expression count)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitSequenceOperatorCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitMethodCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node)
+   在 System.Data.Linq.SqlClient.QueryConverter.ConvertOuter(Expression node)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 35
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:31:07,246 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37121 
+System.ArgumentOutOfRangeException: 指定的参数已超出有效值的范围。
+参数名: skipCount
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitTake(Expression sequence, Expression count)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitSequenceOperatorCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitMethodCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node)
+   在 System.Data.Linq.SqlClient.QueryConverter.ConvertOuter(Expression node)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 35
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:31:07,448 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37323 
+System.ArgumentOutOfRangeException: 指定的参数已超出有效值的范围。
+参数名: skipCount
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitTake(Expression sequence, Expression count)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitSequenceOperatorCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitMethodCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node)
+   在 System.Data.Linq.SqlClient.QueryConverter.ConvertOuter(Expression node)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 35
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:31:08,081 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37956 
+System.ArgumentOutOfRangeException: 指定的参数已超出有效值的范围。
+参数名: skipCount
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitTake(Expression sequence, Expression count)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitSequenceOperatorCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitMethodCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node)
+   在 System.Data.Linq.SqlClient.QueryConverter.ConvertOuter(Expression node)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 35
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:32:06,221 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1817 
+System.ArgumentOutOfRangeException: 指定的参数已超出有效值的范围。
+参数名: skipCount
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitTake(Expression sequence, Expression count)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitSequenceOperatorCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitMethodCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node)
+   在 System.Data.Linq.SqlClient.QueryConverter.ConvertOuter(Expression node)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 36
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:32:06,391 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1987 
+System.ArgumentOutOfRangeException: 指定的参数已超出有效值的范围。
+参数名: skipCount
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitTake(Expression sequence, Expression count)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitSequenceOperatorCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitMethodCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node)
+   在 System.Data.Linq.SqlClient.QueryConverter.ConvertOuter(Expression node)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 36
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:32:08,195 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：3791 
+System.ArgumentOutOfRangeException: 指定的参数已超出有效值的范围。
+参数名: skipCount
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitTake(Expression sequence, Expression count)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitSequenceOperatorCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitMethodCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node)
+   在 System.Data.Linq.SqlClient.QueryConverter.ConvertOuter(Expression node)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 36
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:32:19,386 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：14982 
+
+时间：2017-02-14 13:32:46,760 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：42356 
+System.ArgumentOutOfRangeException: 指定的参数已超出有效值的范围。
+参数名: skipCount
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitTake(Expression sequence, Expression count)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitSequenceOperatorCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitMethodCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node)
+   在 System.Data.Linq.SqlClient.QueryConverter.ConvertOuter(Expression node)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 36
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:32:47,057 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：42653 
+System.ArgumentOutOfRangeException: 指定的参数已超出有效值的范围。
+参数名: skipCount
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitTake(Expression sequence, Expression count)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitSequenceOperatorCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitMethodCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node)
+   在 System.Data.Linq.SqlClient.QueryConverter.ConvertOuter(Expression node)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 36
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:36:10,665 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1342 
+System.NotSupportedException: 方法“System.String ToString(System.String)”不支持转换为 SQL。
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitMethodCall(SqlMethodCall mc)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.SqlSelectionSkipper.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitNew(SqlNew sox)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitAlias(SqlAlias a)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSource(SqlSource source)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitAlias(SqlAlias a)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSource(SqlSource source)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Convert(SqlNode node, SqlFactory sql, ProviderMode providerMode)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(ResultShape resultShape, Type resultType, SqlNode node, ReadOnlyCollection`1 parentParameters, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 35
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:36:10,790 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1468 
+System.NotSupportedException: 方法“System.String ToString(System.String)”不支持转换为 SQL。
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitMethodCall(SqlMethodCall mc)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.SqlSelectionSkipper.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitNew(SqlNew sox)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitAlias(SqlAlias a)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSource(SqlSource source)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitAlias(SqlAlias a)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSource(SqlSource source)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Convert(SqlNode node, SqlFactory sql, ProviderMode providerMode)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(ResultShape resultShape, Type resultType, SqlNode node, ReadOnlyCollection`1 parentParameters, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 35
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 13:36:10,888 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1566 
+System.NotSupportedException: 方法“System.String ToString(System.String)”不支持转换为 SQL。
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitMethodCall(SqlMethodCall mc)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.SqlSelectionSkipper.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitNew(SqlNew sox)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitAlias(SqlAlias a)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSource(SqlSource source)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitAlias(SqlAlias a)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSource(SqlSource source)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Convert(SqlNode node, SqlFactory sql, ProviderMode providerMode)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(ResultShape resultShape, Type resultType, SqlNode node, ReadOnlyCollection`1 parentParameters, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Views.wx.user.reds.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\user\reds.cs:行号 35
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 14:20:35,423 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 user.getcash","code":"0x0002"} 
+时间：43090 
+
+时间：2017-02-14 14:21:05,743 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 user.getcash","code":"0x0002"} 
+时间：73409 
+
+时间：2017-02-14 14:21:27,411 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 user.getcash","code":"0x0002"} 
+时间：95078 
+
+时间：2017-02-14 14:21:29,336 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 user.getcash","code":"0x0002"} 
+时间：97003 
+
+时间：2017-02-14 14:22:14,763 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 user.getcash","code":"0x0002"} 
+时间：142430 
+
+时间：2017-02-14 14:22:38,863 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：166529 
+
+时间：2017-02-14 14:22:44,945 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 user.getcash","code":"0x0002"} 
+时间：172611 
+
+时间：2017-02-14 14:23:03,852 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：191519 
+
+时间：2017-02-14 14:23:24,207 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：211873 
+
+时间：2017-02-14 14:23:37,696 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：系统找不到指定的文件。
+ 
+时间：225363 
+System.Security.Cryptography.CryptographicException: 系统找不到指定的文件。
+
+   在 System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   在 System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   在 System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   在 System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName, String password, X509KeyStorageFlags keyStorageFlags)
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 221
+
+时间：2017-02-14 14:23:41,830 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：229497 
+System.Security.Cryptography.CryptographicException: 系统找不到指定的文件。
+
+   在 System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   在 System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   在 System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   在 System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName, String password, X509KeyStorageFlags keyStorageFlags)
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 244
+   在 X.App.Com.Wx.Pay.PayToOpenid(String appid, String mchid, String openid, String no, Int32 amount, String cert_path, String signkey) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 669
+   在 X.App.Apis.wx.user.getcash.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\wx\user\getcash.cs:行号 25
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-14 14:23:44,453 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：232120 
+
+时间：2017-02-14 14:24:04,681 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：252347 
+
+时间：2017-02-14 14:24:24,908 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：272574 
+
+时间：2017-02-14 14:24:45,220 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：292887 
+
+时间：2017-02-14 14:25:05,595 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：313261 
+
+时间：2017-02-14 14:31:32,842 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：20549 
+
+时间：2017-02-14 14:38:19,702 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：265 
+
+时间：2017-02-14 14:38:28,186 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：8749 
+
+时间：2017-02-14 14:38:30,154 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：10717 
+
+时间：2017-02-14 14:38:44,635 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：25198 

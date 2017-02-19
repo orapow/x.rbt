@@ -1,0 +1,13 @@
+﻿#foreach($u in $list)
+<div class="item" onclick="document.location.href='/wx/red/show-${u.id}.html'">
+    <span class="img" style="margin-right:10px;"><img src="$u.hd" /></span>
+    <span class="md">
+        <span class="nk #if($cu.user_id==$u.uid)me#end">$u.name</span>
+        <span class="dt">$u.dt.ToString("MM月dd日 HH:mm")</span>
+    </span>
+    <span class="rt">
+        <span class="am">$u.am.tostring("F2")元</span>
+        #if($u.ram>0)<span class="rb">返现：$u.ram.tostring("F2")元</span>#end
+    </span>
+</div>
+#end

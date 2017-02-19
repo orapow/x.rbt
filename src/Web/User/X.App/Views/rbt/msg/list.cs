@@ -7,11 +7,11 @@ namespace X.App.Views.rbt.msg
 {
     public class list : xview
     {
-        protected override string menu_id
+        protected override string mu_name
         {
             get
             {
-                return "3";
+                return "rbt_msg";
             }
         }
     }

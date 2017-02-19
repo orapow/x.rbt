@@ -6,14 +6,14 @@
     <style type="text/css">
         .div_grid { padding: 15px 0; }
         .div_grid .grid-item:nth-child(10n+1) { margin-left: 0px; }
-        .div_grid .grid-item { cursor: pointer; position: relative; overflow: hidden; display: inline-block; width: 83px; text-align: center; margin-left: 10px; padding: 5px; margin-bottom: 10px; }
+        .div_grid .grid-item { cursor: pointer; position: relative; overflow: hidden; display: inline-block; width: 74px; text-align: center; margin-left: 11px; padding: 5px; margin-bottom: 10px; }
         .div_grid .grid-item .nickname { width: 100%; overflow: hidden; text-overflow: ellipsis; height: 24px; display: block; }
         .div_grid .grid-item img { width: 72px; height: 72px; }
         .grid-item { border: 1px solid #ccc; }
         .bag { background-color: red; color: white; transform: rotate(-45deg); position: absolute; top: -24px; left: -34px; padding: 30px 30px 0px 30px; display: none; }
         .bag.b2 { display: block; }
         .group { display: none; }
-        .group .info { height: 34px; border: 1px solid #ccc; padding-right: 5px; margin-left: -1px; }
+        .group .info { height: 28px; border: 1px solid #ccc; padding-right: 5px; margin-left: -1px; }
         .group div { display: inline-block; }
         .group .bag { display: none; }
         .group img { height: 100%; }
@@ -35,6 +35,7 @@
                         #foreach($l in $lgs)
                         <li class="tab_nav" data-uin="$l.uin">
                             <a href="javascript:;" title="$l.nickname">${l.nickname}</a>
+                            <i class="icon-remove close"></i>
                         </li>
                         #end
                     </ul>
@@ -80,6 +81,11 @@
                 }
             });
             $(".tab_navs li:eq(0)").click();
+            $(".tab_nav .icon-remove").click(function () {
+                x.confirm("确定要删除此号的所有通讯录吗？", function () {
+
+                });
+            });
         });
 
     </script>

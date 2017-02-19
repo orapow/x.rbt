@@ -20,6 +20,7 @@ namespace X.Wx
         static Login lg = null;
         static Main main = null;
         static List<Wc.Contact> contacts = null;
+        static bool contactdone = false;
         static bool stop = false;
         static List<ReplyResp.Reply> repes = null;
 
@@ -34,7 +35,6 @@ namespace X.Wx
             System.Net.ServicePointManager.DefaultConnectionLimit = 512;
 
             var key = ConfigurationManager.AppSettings["app-key"];
-            //key = "GCEOrLSsBxmsKQTFV63UNRSG8wwhFkXbTujBbfuqPO4AFjljiYEOTZ8w7JtiDz8q";
             if (string.IsNullOrEmpty(key))
             {
                 var ak = new Akey();
@@ -63,7 +63,7 @@ namespace X.Wx
 
             Sdk.WxLogin(uin, nickname, headimg);
 
-            main = new Main(wx, lg.headimg);
+            main = new Main(wx, headimg);
             main.LoadReply += Main_LoadReply;
 
             //获取自动回复
@@ -92,15 +92,35 @@ namespace X.Wx
         /// </summary>
         private static void loadHeadimg()
         {
-            //new Thread(o =>
-            //{
-            //    while (!stop)
-            //    {
+            new Thread(o =>
+            {
+                var t = 0;
+                while (!stop)
+                {
+                    if (!contactdone) continue;
+                    var rsp = Sdk.LoadNoimg(uin);
+                    if (rsp == null || !rsp.issucc || rsp.items == null || rsp.items.Count == 0) break;
 
+                    var us = wx.GetHeadImage(rsp.items);
+                    if (us.Count == 0) { Thread.Sleep(5 * 1000); continue; }
 
-            //    }
-            //    stop = true;
-            //}).Start();
+                    if (us.Count(c => c.Value != "1") > 0)
+                    {
+                        t = 0;
+                        Sdk.SetHeadimg(us, uin);
+                        outLog("同步头像");
+                    }
+                    else
+                    {
+                        t++;
+                        if (t >= 5)
+                        {
+                            outLog("头像同步完成");
+                            break;
+                        }
+                    }
+                }
+            }).Start();
         }
 
         /// <summary>
@@ -116,7 +136,7 @@ namespace X.Wx
                 {
                     Thread.Sleep(5 * 1000);
                     t++;
-                    if (t < 60) continue;
+                    if (t < 10) continue;
                     t = 0;
                     var st = DateTime.Now.ToString("HH:mm");
                     outLog("群发@" + st + "->开始获取");
@@ -126,7 +146,8 @@ namespace X.Wx
                     outLog("群发@" + st + "->开始发送，" + rsp.items.Count() + "个");
                     foreach (var m in rsp.items)
                     {
-                        if (m.touser == null) continue;
+                        if (m.touser == null || m.touser.Count() == 0) continue;
+                        outLog("群发@" + st + "->发送给：，" + m.touser.Count + "个用户（" + m.content + "）");
                         wx.Send(m.touser, m.type, m.content);
                         if (stop) break;
                         Thread.Sleep(5 * 1000);
@@ -165,8 +186,8 @@ namespace X.Wx
             {
                 outLog("正在获取回复");
                 var rsp = Sdk.LoadReply(uin);
-                if (rsp.issucc) repes = rsp.items;
-                outLog("自动回复获取" + (rsp.issucc ? "成功" : "失败"));
+                repes = rsp?.items;
+                outLog("自动回复获取" + (rsp != null && rsp.issucc ? "成功" : "失败"));
             }).Start();
         }
 
@@ -176,21 +197,32 @@ namespace X.Wx
         /// <param name="msg"></param>
         static void outLog(string msg)
         {
-            System.IO.File.AppendAllText("log.txt", msg);
             ((Action)(() =>
             {
                 if (main != null) main.OutLog(msg);
             })).BeginInvoke(null, null);
         }
 
-        private static void Wx_ContactLoaded(List<Wc.Contact> cts)
+        private static void Wx_ContactLoaded(List<Wc.Contact> cts, string gname, bool isdone)
         {
-            main.SetContact(cts);
-            contacts = cts;
-            outLog("正在同步通讯录");
-            var rsp = Sdk.ContactSync(Serialize.ToJson(cts), uin);
+            if (main == null) return;
+            main.SetContact(cts, gname);
+            if (string.IsNullOrEmpty(gname))
+            {
+                contacts = cts;
+                outLog("同步主通讯录");
+            }
+            else
+            {
+                var gp = contacts.FirstOrDefault(o => o.UserName == gname);
+                gp.MemberCount = cts.Count();
+                gp.MemberList = cts;
+                outLog("同步群成员：" + gp.NickName + " " + gp.MemberCount + "人");
+            }
+
+            var rsp = Sdk.ContactSync(Serialize.ToJson(cts), uin, gname);
             if (!rsp.issucc) outLog("通讯录同步失败");
-            outLog("通讯录同步完成");
+            contactdone = isdone;
         }
 
         static void Wx_Loged(Wc.Contact u)
@@ -221,48 +253,67 @@ namespace X.Wx
         {
             new Thread(p =>
             {
+                if (contacts == null || m == null) return;
                 var msg = p as Wc.Msg;
-
                 var name = m.FromUserName;
+
                 var u = contacts.FirstOrDefault(o => o.UserName == m.FromUserName);
-                if (u != null) name = u.NickName;
+                if (u == null) { outLog("收到无法识别的消息：" + m.Content); return; }
 
                 var cot = Tools.RemoveHtml(m.Content);
 
-                if (m.FromUserName[1] == '@' && u != null)
-                {
-                    var c = cot.Split(':');
-                    var su = u?.MemberList.FirstOrDefault(o => o.UserName == c[0]);
-                    if (su != null) name = su.NickName + "@" + u.NickName;
-                    cot = c[1];
-                }
+                object mg = null;
 
                 switch (msg.MsgType)
                 {
-                    case 1:
-                        outLog(name + "->" + cot);
-                        break;
                     case 42:
-                        outLog(name + "->名片");
+                        cot = "名片";
                         break;
                     case 43:
-                        outLog(name + "->视频");
+                        cot = "视频";
                         break;
                     case 3:
-                        outLog(name + "->图片");
+                        cot = "图片";
                         break;
                     case 34:
-                        outLog(name + "->语音");
+                        cot = "语音";
                         break;
                     case 37:
-                        //wx.VerifyUser();自动同意
-                        outLog(name + "->请求加好友");
+                        //wx.VerifyUser();//自动同意
+                        cot = "请求加好友";
                         break;
                     case 1000:
                         break;
                     case 10002:
                         break;
                 }
+
+                if (name[1] == '@')
+                {
+                    var c = cot.Split(':');
+                    var su = u?.MemberList.FirstOrDefault(o => o.UserName == c[0]);
+                    if (su != null)
+                    {
+                        var img = wx.GetHeadImage(new List<string>() { u.UserName, su.UserName });
+                        mg = new
+                        {
+                            body = c[1],
+                            u = new { name = su.NickName, img = img != null && img.ContainsKey(su.UserName) ? img[su.UserName] : "", id = su.UserName },
+                            r = new { name = u.NickName, img = img != null && img.ContainsKey(u.UserName) ? img[u.UserName] : "", id = u.UserName }
+                        };
+                    }
+                }
+                if (mg == null)
+                {
+                    var img = wx.GetHeadImage(new List<string>() { u.UserName });
+                    mg = new
+                    {
+                        body = cot,
+                        u = new { name = u.NickName, img = img != null && img.ContainsKey(u.UserName) ? img[u.UserName] : "", id = u.UserName }
+                    };
+                }
+                
+                main.SetMsg(mg);
 
                 if (repes == null || repes.Count == 0) return;
                 ReplyResp.Reply rep = null;

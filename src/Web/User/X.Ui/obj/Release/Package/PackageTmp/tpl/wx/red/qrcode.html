@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    #parse("wx/_head.html")
+    <title>提现</title>
+    <style type="text/css">
+        body { background-color: #f1f1f1; }
+        .user { font-family: "微软雅黑"; background: url(/img/wx/h.jpg) no-repeat; background-size: contain; width: 100%; text-align: center; }
+        .user img { width: 174px; border-radius: 5px; }
+        .user > span { display: block; line-height: 26px; }
+        .user .txt { color: #999; font-size: 14px; width: 90%; margin: 0px auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .user .am { padding-top: 10px; font-size: 42px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="show">
+        <div class="user">
+            <img src="$cu.headimg" class="hd" />
+            <span class="nk">$cu.nickname</span>
+            <span class="txt">
+                您的余额为
+            </span>
+            <span class="am">
+                $cu.balance<span style="font-size:16px;">元</span>
+            </span>
+            <span class="txt" style="margin:30px; text-align:left;width:auto;">
+                #if($img.length>0)
+                请长按二维码，关注下面公众号<br />
+                再以下面任一操作进行提现：<br />
+                1、点击“提现”菜单或回复“提现”关键词<br />
+                2、新用户点击 欢迎词中的“提现”链接
+                #else
+                请长按二维码，添加为好友（无须验证）<br />
+                回复“提现”进行提现操作。
+                #end
+            </span>
+            <img src="$img" style="width:160px;" onerror="this.src='/img/wx.png'" id="qrcode" on />
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $(window).resize(function () {
+                var w = $(window).width();
+                var h = $(window).height();
+                var rt = w / 1080;
+                $(".user img.hd").width(174 * rt).height(174 * rt).css("margin-top", 102 * rt);
+            });
+            $(window).resize();
+        });
+    </script>
+    <br />
+    #parse("wx/_foot.html")
+    <script type="text/javascript">
+        $(function () {
+            var w = $(window).width();
+            $(".ad .txt").css("max-width", w - 160);
+        });
+        var t = null;
+        document.getElementById("qrcode").addEventListener("touchstart", function () {
+            t = setTimeout(function () {
+                doapi("wx.red.sethit", { rid: "$rid", tp: 2 }, null, false);
+            }, 500);
+        }, false);
+        document.getElementById("qrcode").addEventListener("touchend", function () {
+            clearTimeout(t);
+        }, false);
+    </script>
+</body>
+</html>

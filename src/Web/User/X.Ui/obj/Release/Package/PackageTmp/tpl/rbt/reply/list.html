@@ -8,16 +8,17 @@
         p.t2 { display: none; }
         img.t1 { display: none; }
         img.t2 { display: block; }
-        .grid-item { display: inline-block; margin-left: 20px; margin-bottom: 20px; width: 180px; position: relative; vertical-align: top; }
-        .grid-item .cot { height: 150px; width: 100%; padding: 5px; border: 1px solid #ccc; display: block; cursor: pointer; }
+        .grid-item { display: inline-block; margin-left: 14px; margin-bottom: 20px; width: 180px; position: relative; vertical-align: top; }
+        .grid-item .cot { max-height: 150px; padding: 5px; border: 1px solid #ccc; display: block; cursor: pointer; }
         .grid-item .text { border: 1px solid #ccc; margin-top: -1px; display: block; padding: 5px; }
         .grid-item:nth-child(5n+1) { margin-left: 0px; }
         .cot img { max-width: 100%; max-height: 150px; }
-        .close { position: absolute; top: -10px; right: -10px; display: block; width: 20px; color: white; height: 20px; border-radius: 50%; background-color: red; text-align: center; line-height: 20px; font-size: 10px; cursor: pointer; }
         .k1.s2 { display: none; }
         .k2.s2 { display: none; }
         .k2.s1, .k3.s1 { display: block; }
-        .tip { padding: 9px 30px; background-color: #f4f5f9; line-height: 1.6; width: 1019px; }
+        .tip { padding: 9px 30px; background-color: #f4f5f9; line-height: 1.6; }
+        .grid-item .close { display: none; }
+        .grid-item:hover .close { display: block; }
     </style>
 </head>
 <body>
@@ -73,12 +74,14 @@
         };
 
         function delreply(obj, id) {
-            x.doapi("reply.del", { id: id }, function (d) {
-                if (!d.issucc) return;
-                $(obj).parents(".grid-item").fadeOut();
-                g.getlist();
-            }, false);
-            event.stopPropagation();
+            x.confirm("确定要删除这个回复吗？", function () {
+                x.doapi("reply.del", { id: id }, function (d) {
+                    if (!d.issucc) return;
+                    $(obj).parents(".grid-item").fadeOut();
+                    g.getlist();
+                }, false);
+                event.stopPropagation();
+            });
         }
 
         function show_eidt(id) {

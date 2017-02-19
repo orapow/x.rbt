@@ -15,12 +15,14 @@
         .bag { background-color: red; color: white; transform: rotate(-45deg); position: absolute; top: -25px; left: -36px; padding: 30px 30px 0px 30px; font-size: 12px; display: none; }
         .bag.b2 { display: block; }
         .grid.body { border: 1px solid #ccc; height: 290px; width: 650px; overflow-y: auto; margin-top: 5px; }
-        .grid-item { cursor: pointer; width: 60px; display: inline-block; margin: 5px; position: relative; vertical-align: top; overflow: hidden; border: 1px solid #ccc; }
+        .grid-item { cursor: pointer; width: 58px; display: inline-block; margin: 5px; position: relative; vertical-align: top; overflow: hidden; border: 1px solid #ccc; }
         .pager .pages { text-align: left; }
         .nickname { font-size: 12px; display: block; height: 20px; overflow: hidden; line-height: 20px; text-align: center; }
         .mark { position: absolute; left: 0; top: 0; background: url(/img/p15.png) no-repeat center center rgba(0, 0, 0, 0.42); width: 100%; height: 100%; display: none; }
         .grid-item.on .mark { display: block; }
         #li_match, #li_keys { display: none; }
+        .hd .btn { padding: 2px; margin-left: 0; margin-right: 5px; }
+        .hd .btn.on { border-color: #ff8a00; background-color: #ff8a00; }
     </style>
 </head>
 <body>
@@ -31,25 +33,25 @@
     <x:form api="reply.save">
         <input type="hidden" name="id" x-check="" value="$!id" />
         <div class="tb">
-            <x:pick title="回复类型" src="loc:被添加|新人入群|默认回复|关键字" mode="2" def="$!item.tp" name="tp" callback="replyselect" />
+            <x:pick title="回复类型" src="loc:被添加|新人入群|默认回复|关键字" mode="2" def="#if($id>0)$!item.tp#else 1#end" name="tp" callback="replyselect" />
             <x:text title="关键字" tip="多个用空格隔开，不超过5个" size="4" name="keys" def="$!item.keys" />
-            <x:pick title="匹配方式" src="loc:全字|开头|结尾|包含" mode="2" def="$!item.match" name="match" />
-            <x:pick title="消息类型" src="loc:文本内容|图片内容" mode="2" def="$!item.type" name="type" callback="typeselect" />
+            <x:pick title="匹配方式" src="loc:全字|开头|结尾|包含" mode="2" def="#if($id>0)$!item.match#else 1#end" name="match" />
+            <x:pick title="消息类型" src="loc:文本内容|图片内容" mode="2" def="#if($id>0)$!item.type#else 1#end" name="type" callback="typeselect" />
             <x:text title="文本内容" tp="3" size="5" name="text" def="$!item.text" />
             <x:upload title="上传图片" name="img" tp="img" count="1" def="$!item.img" />
         </div>
         <div class="tb">
-            <div class="hd">#foreach($c in $lgs)<span class="btn" data-uin="$c.uin"><img src="data:image/jpg;base64,$c.headimg" width="20" /> ${c.nickname}</span> #end</div>
+            <div class="hd">#foreach($c in $lgs)<span class="btn" data-uin="$c.uin"><img src="data:image/jpg;base64,$c.headimg" width="30" title="${c.nickname}" /></span> #end</div>
             <div class="list" style="width:650px;"></div>
             <div class="tpl" style="display:none;">
                 <p class="bag b{flag}" data-id="{id}">群</p>
-                <img src="{headimg}" width="60" height="60" onerror="this.src='/img/no_u.png'" data-id="{id}" />
+                <img src="data:image/png;base64,{headimg}" width="60" height="60" onerror="this.src='/img/no_u.png'" data-id="{id}" />
                 <span class="nickname">{nickname}</span>
                 <div class="mark"></div>
             </div>
         </div>
         <div class="btns">
-            <button type="submit" class="btn btn-warning">提交</button><span class="btn" onclick="top.x.closewin();">取消</span>
+            <button type="submit" class="btn btn-warning"><i class="icon-ok"></i>提交</button><span class="btn" onclick="top.x.closewin();">取消</span>
         </div>
     </x:form>
     <script type="text/javascript">
@@ -79,6 +81,8 @@
             $(".hd .btn").click(function () {
                 if (g == null) { cfg.searchcon.uin = $(this).attr("data-uin"); g = x.grid.init(cfg); }
                 else g.getlist({ uin: $(this).attr("data-uin"), page: 1 });
+                $(".hd .btn").removeClass("on");
+                $(this).addClass("on")
             })
 
             $(".tb .list").delegate(".grid-item", "click", function () {

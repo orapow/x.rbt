@@ -11,7 +11,7 @@ namespace X.App.Apis.msg
         protected override XResp Execute()
         {
             var et = cu.x_msg.FirstOrDefault(o => o.msg_id == id);
-            if (et == null) throw new XExcep("T群发记录不存在");
+            if (et == null) throw new XExcep("0x0014");
 
             DB.x_msg.DeleteOnSubmit(et);
             SubmitDBChanges();

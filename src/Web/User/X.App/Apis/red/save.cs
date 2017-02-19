@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using X.Core.Utility;
 using X.Data;
+using X.Web;
 using X.Web.Com;
 
 namespace X.App.Apis.red
@@ -19,6 +20,9 @@ namespace X.App.Apis.red
 
         protected override XResp Execute()
         {
+            if (amount > cu.balance) throw new XExcep("0x0017");
+            if (amount * 100 < count) throw new XExcep("0x0018");
+
             var m = new x_red() { ctime = DateTime.Now, user_id = cu.user_id };
 
             m.status = 1;
@@ -28,6 +32,8 @@ namespace X.App.Apis.red
             m.count = count;
             m.upcash = upc;
             m.remark = remark;
+            m.qrcount = 0;
+            m.adcount = 0;
 
             DB.x_red.InsertOnSubmit(m);
 
@@ -36,23 +42,31 @@ namespace X.App.Apis.red
             for (var i = 0; i < count; i++)
             {
                 var g = new x_red_get() { status = 1, owner = 0, upid = 0, ramount = 0 };
-                if (type == 1)
-                {
-                    if (i == count - 1) g.amount = (int)(amount);
-                    else g.amount = am;
-                }
+                if (type == 1) g.amount = am;
                 else
                 {
-                    if (i == count - 1) g.amount = (int)(amount);
-                    else
-                    {
-                        var md = Tools.GetRandNext(1, am * 2);
-                        g.amount = md;
-                    }
+                    g.amount = Tools.GetRandNext(1, (int)amount / (count - i) * 2);
+                    if (g.amount < 1) g.amount = 1;
+                    //var rt = m.count / count * 100;
+                    //if (rt < 5) g.amount = Tools.GetRandNext(1, (int)amount / (count - m.count.Value) * 2);
+                    //else if (rt < 80) g.amount = Tools.GetRandNext(1, (int)(am * 1.5));
+                    //else g.amount = Tools.GetRandNext(1, (int)(am * 1.2));
                 }
                 amount -= g.amount.Value;
                 m.x_red_get.Add(g);
+                //m.count++;
             }
+
+            var dt = new x_balan_detail()
+            {
+                amount = -m.amount,
+                user_id = cu.user_id,
+                ctime = DateTime.Now,
+                remark = "发红包，金额：" + m.amount + "，个数：" + m.count
+            };
+            DB.x_balan_detail.InsertOnSubmit(dt);
+
+            cu.balance -= m.amount.Value;
 
             SubmitDBChanges();
 

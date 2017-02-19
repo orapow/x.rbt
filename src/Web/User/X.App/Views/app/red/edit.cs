@@ -20,7 +20,7 @@ namespace X.App.Views.app.red
             if (id > 0)
             {
                 var item = cu.x_red.FirstOrDefault(o => o.red_id == id);
-                if (item == null) throw new XExcep("T红包不存在");
+                if (item == null) throw new XExcep("0x0015");
                 dict.Add("item", item);
             }
         }

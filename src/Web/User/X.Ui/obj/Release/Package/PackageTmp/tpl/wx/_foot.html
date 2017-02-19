@@ -5,6 +5,9 @@
         <p class="weui-toast__content">数据加载中</p>
     </div>
 </div>
+<div style="display:none;">
+    <script language="javascript" type="text/javascript" src="http://js.users.51.la/19106868.js"></script>
+</div>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script type="text/javascript">
 
@@ -42,13 +45,12 @@
         alert(JSON.stringify(res));
     });
 
-    function doapi(api, ps, callback) {
-        $("#loadingToast").show();
+    function doapi(api, ps, callback, tip) {
+        if (tip != false) $("#loadingToast").show();
         jQuery.post("/api/" + api, ps, function (d) {
-            $("#loadingToast").hide();
-            if (!d.issucc) {
-                alert(d.msg);
-            } else if (callback) {
+            if (tip != false) $("#loadingToast").hide();
+            if (d.msg) alert(d.msg);
+            if (callback) {
                 try {
                     callback(d);
                 }

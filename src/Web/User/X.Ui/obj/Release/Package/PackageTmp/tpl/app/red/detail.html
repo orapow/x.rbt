@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    #parse("com/_head.html")
+    <title>红包详情</title>
+    <style type="text/css">
+        body { min-width: inherit; text-align: center; moz-user-select: -moz-none; -moz-user-select: none; -o-user-select: none; -khtml-user-select: none; /* you could also put this in a class */ -webkit-user-select: none; /* and add the CSS class here instead */ -ms-user-select: none; user-select: none; /**禁止选中文字*/ }
+        img { max-width: inherit; }
+        .tree { }
+        .tree ul { padding-top: 20px; position: relative; /*transition: all 0.1s; -webkit-transition: all 0.1s; -moz-transition: all 0.1s;*/ }
+        .tree li { display: table-cell; text-align: center; list-style-type: none; position: relative; padding: 20px 5px 0 5px; vertical-align: top; /*transition: all 0.1s; -webkit-transition: all 0.1s; -moz-transition: all 0.1s;*/ }
+        /*We will use ::before and ::after to draw the connectors*/
+        .tree li::before, .tree li::after { content: ''; position: absolute; top: 0; right: 50%; border-top: 1px solid #ccc; width: 50%; height: 20px; }
+        .tree li::after { right: auto; left: 50%; border-left: 1px solid #ccc; }
+        /*We need to remove left-right connectors from elements without any siblings*/
+        .tree li:only-child::after, .tree li:only-child::before { display: none; }
+        /*Remove space from the top of single children*/
+        .tree li:only-child { padding-top: 0; }
+        /*Remove left connector from first child and right connector from last child*/
+        .tree li:first-child::before, .tree li:last-child::after { border: 0 none; }
+        /*Adding back the vertical connector to the last nodes*/
+        .tree li:last-child::before { border-right: 1px solid #ccc; border-radius: 0 5px 0 0; -webkit-border-radius: 0 5px 0 0; -moz-border-radius: 0 5px 0 0; }
+        .tree li:first-child::after { border-radius: 5px 0 0 0; -webkit-border-radius: 5px 0 0 0; -moz-border-radius: 5px 0 0 0; }
+        /*Time to add downward connectors from parents*/
+        .tree ul ul::before { content: ''; position: absolute; top: 0; left: 50%; border-left: 1px solid #ccc; width: 0; height: 20px; }
+        .tree li a { border: 1px solid #ccc; padding: 5px; text-decoration: none; color: #666; font-family: arial, verdana, tahoma; font-size: 12px; display: inline-block; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; }
+        /*Time for some hover effects*/
+        /*We will apply the hover effect the the lineage of the element also*/
+        .tree li a:hover, .tree li a:hover + ul li a { background: #c8e4f8; color: #000; border: 1px solid #94a0b4; }
+        /*Connector styles on hover*/
+        .tree li a:hover + ul li::after,
+        .tree li a:hover + ul li::before,
+        .tree li a:hover + ul::before,
+        .tree li a:hover + ul ul::before { border-color: #94a0b4; }
+        .item { text-align: center; }
+        img { width: 40px; display: block; }
+        .tree > ul { padding-top: 5px; width: auto; display: table; transform-origin: 0 0; }
+        .btns { position: absolute; top: 5px; left: 5px; z-index: 99; }
+        .btns i { display: block; margin-bottom: 5px; background: white; padding: 5px; font-size: 12px; cursor: pointer; }
+        .detail { position: absolute; top: 10px; right: 10px; background: rgba(255, 255, 255, 0.82); border-radius: 5px; width: 460px; padding: 10px; text-align: left; line-height: 26px; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="btns">
+        <i class="icon-plus" onclick="set_zoom(1)"></i><i class="icon-circle" onclick="set_zoom(0)"></i><i class="icon-minus" onclick="set_zoom(-1)"></i><i class="icon-refres" onclick="document.location.reload();"></i>
+    </div>
+    <div class="tree">
+        <ul class="ul_root">
+            <li>
+                <a href="javascript:;">金额：$r.amount 元<br />(共$r.geted/$r.count个)</a>
+                $T.getHtml(0)
+            </li>
+        </ul>
+    </div>
+    <div class="detail">
+        红包概况：个数 $count个，最小 $min，最大 $max，总金额：$amount<br />
+        开始时间：$st#if($et)，结束时间 $et，用时：$ut#end<br />
+        领取情况：$gc个，当前最大 $cmax，当前最小 $cmin，最多返现 ${rmax.uid}($rmax.sum.tostring("F2"))<br />
+        裂变分析：深度 $dp，最多 ${pmax.uid}($pmax.ct)，最深 $dmax<br />
+        广告分析：广告点击 $adc，二维码点击 $qdc
+    </div>
+    <script type="text/javascript">
+        var sc = 1;
+        var move = false;
+        var ul = null;
+        var w = 0, h = 0;
+
+        function set_zoom(t) {
+            if ((ul.width() * sc < 30 || ul.height() * sc < 30) && t < 0) return;
+            var pos = {};
+            if (t == 0) {
+                var uw = w / ul.width();
+                var uh = h / ul.height();
+                sc = Math.min(uw, uh);
+                pos = {
+                    x: uw == sc ? 0 : (w - ul.width() * sc) / 2,
+                    y: uh == sc ? 0 : (h - ul.height() * sc) / 2
+                }
+            }
+            else {
+                var p = ul.position();
+                var _w = ul.width() * sc;
+                var _h = ul.height() * sc;
+                sc += t * 0.05;
+                pos = {
+                    x: p.left - (event.clientX - p.left) / _w * (ul.width() * sc - _w),
+                    y: p.top - (event.clientY - p.top) / _h * (ul.height() * sc - _h)
+                };
+            }
+            ul.css({
+                left: pos.x,
+                top: pos.y,
+                "transform": "scale(" + sc + ")"
+            });
+        }
+        $(function () {
+
+            ul = $(".ul_root");
+            var x = 0, y = 0;
+
+            $(".tree").bind({
+                "mousedown": function (e) {
+                    var pos = ul.offset();
+                    x = e.clientX - pos.left;
+                    y = e.clientY - pos.top;
+                    move = true;
+                    $(this).css("cursor", "move");
+                    e.preventDefault()
+                },
+                "mousemove": function (e) {
+                    if (move) ul.css({ "top": e.clientY - y, "left": e.clientX - x });
+                },
+                "mouseup": function () {
+                    move = false;
+                    $(this).css("cursor", "");
+                }
+            });
+
+            ul.on("mousewheel", function () {
+                if (event.deltaY > 0) set_zoom(-1);
+                else set_zoom(1);
+            });
+
+            w = $(window).width();
+            h = $(window).height();
+
+            $("body").css({
+                width: w,
+                height: h
+            });
+
+            set_zoom(0);
+        });
+    </script>
+</body>
+</html>

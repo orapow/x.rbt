@@ -21,7 +21,7 @@ namespace X.App.Views
 
         protected virtual bool needus { get { return true; } }
 
-        protected virtual string menu_id { get { return ""; } }
+        protected virtual string mu_name { get { return ""; } }
 
         protected override void InitView()
         {
@@ -33,7 +33,7 @@ namespace X.App.Views
 
             if (cu == null && needus) throw new XExcep("0x0006");
 
-            if (!string.IsNullOrEmpty(menu_id)) dict.Add("m" + menu_id, "selected");
+            if (!string.IsNullOrEmpty(mu_name)) dict.Add("m_" + mu_name, "selected");
 
         }
         protected override void InitDict()

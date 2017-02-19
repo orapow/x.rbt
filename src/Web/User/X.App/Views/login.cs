@@ -15,6 +15,8 @@ namespace X.App.Views
         public string uk { get; set; }
         public string url { get; set; }
 
+        private int isin = 0;
+
         protected override string GetParmNames
         {
             get
@@ -34,7 +36,6 @@ namespace X.App.Views
         protected override void InitView()
         {
             base.InitView();
-            var isin = 0;
             if (!string.IsNullOrEmpty(uk))
             {
                 cu = DB.x_user.FirstOrDefault(o => o.ukey == uk);
@@ -42,9 +43,12 @@ namespace X.App.Views
                 {
                     Context.Response.SetCookie(new System.Web.HttpCookie("ukey", uk));
                     isin = 1;
-                    dict["cu"] = cu;
                 }
             }
+        }
+        protected override void InitDict()
+        {
+            base.InitDict();
             if (isin == 0)
             {
                 var code = Tools.GetRandRom(16, 3);

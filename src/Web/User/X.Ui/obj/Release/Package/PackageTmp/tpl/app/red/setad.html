@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    #parse("com/_head.html")
+    <title>红包设置广告</title>
+    <style type="text/css">
+        body { min-width: inherit; position: relative; height: 400px; }
+        .ads { max-height: 350px; overflow-y: auto; }
+        .ad { cursor: pointer; bottom: 0; left: 0; background-color: rgba(255, 255, 255, 1); color: #111; border-radius: 5px; margin: 8px 10px; position: relative; padding: 5px; }
+        .ad > * { display: inline-block; vertical-align: middle; }
+        .ad img { width: 50px; border-radius: 5px; }
+        .ad .link { font-size: 12px; color: rgba(0, 0, 0, 0.55); border: 1px solid; padding: 2px 5px; position: absolute; right: 10px; margin: 0; top: 50%; margin-top: -12px; }
+        .ad .txt { width: 135px; font-size: 14px; max-height: 44px; overflow: hidden; vertical-align: middle; }
+        .ad .small { display: none; font-family: Arial; font-size: 10px; color: white; position: absolute; right: 0; bottom: 0; background-color: #000; padding: 0 2px; margin: 0; }
+        .ad.ad3 img { width: 100%; max-height: 50px; }
+        .ad.on { background-color: #ff8a00; color: white; }
+        .ad.on .link { color: white; }
+        .btns { position: absolute; bottom: 10px; right: 10px; }
+    </style>
+</head>
+<body>
+    <div class="ads">
+        #foreach($a in $ads)
+        <div class="ad ad$a.style #if($ad==$a.id)on#end" data-id="$a.id">
+            <img src="$a.img" alt="$a.txt" />
+            #if($a.style!=3)
+            <span class="txt">$a.txt</span>
+            <a href="javascript:;" class="link">#if($a.link.substring(0,3)=="tel")立即拔打#else查看详情#end</a>
+            <span class="small">广告</span>
+            #end
+        </div>
+        #end
+    </div>
+    <div class="btns">
+        <span class="btn btn-primary" onclick="do_set()">确定</span>
+    </div>
+    <script type="text/javascript">
+        var on = "$!ad";
+        $(function () {
+            $(".ads .ad").click(function () {
+                $(".ad.on").removeClass("on");
+                $(this).addClass("on");
+                on = $(this).attr("data-id");
+            });
+        });
+        function do_set() {
+            if (!on) { x.alert("请选择广告"); return; }
+            x.doapi("red.setad", { id: "$id", ad: on }, function (d) {
+                if (!d.issucc) return;
+                x.closewin();
+            })
+        }
+    </script>
+</body>
+</html>

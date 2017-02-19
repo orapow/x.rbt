@@ -2,7 +2,7 @@
 <html>
 <head>
     #parse("com/_head.html")
-    <title>橙铺运营助手</title>
+    <title>消息编辑</title>
     <link href="/plug/dp/v2.1.css" rel="stylesheet" />
     <script src="/plug/dp/v2.1.js"></script>
     <style type="text/css">
@@ -15,11 +15,14 @@
         .bag { background-color: red; color: white; transform: rotate(-45deg); position: absolute; top: -25px; left: -36px; padding: 30px 30px 0px 30px; font-size: 12px; display: none; }
         .bag.b2 { display: block; }
         .grid.body { border: 1px solid #ccc; height: 290px; width: 650px; overflow-y: auto; margin-top: 5px; }
-        .grid-item { cursor: pointer; width: 60px; display: inline-block; margin: 5px; position: relative; vertical-align: top; overflow: hidden; border: 1px solid #ccc; }
+        .grid-item { cursor: pointer; width: 58px; display: inline-block; margin: 5px; position: relative; vertical-align: top; overflow: hidden; border: 1px solid #ccc; }
         .pager .pages { text-align: left; }
         .nickname { font-size: 12px; display: block; height: 20px; overflow: hidden; line-height: 20px; text-align: center; }
         .mark { position: absolute; left: 0; top: 0; background: url(/img/p15.png) no-repeat center center rgba(0, 0, 0, 0.42); width: 100%; height: 100%; display: none; }
         .grid-item.on .mark { display: block; }
+        .hd .btn { padding: 2px; }
+        .hd .btn.on { border-color: #ff8a00; background-color: #ff8a00; }
+        .tspan { margin-left: 0; }
     </style>
 </head>
 <body>
@@ -30,15 +33,15 @@
     <x:form api="msg.save">
         <input type="hidden" name="id" x-check="" value="$!id" />
         <div class="tb">
-            <x:pick title="消息类型" src="loc:文本内容|图片内容" mode="2" def="$!item.type" name="type" callback="typeselect" />
+            <x:pick title="消息类型" src="loc:文本内容|图片内容" mode="2" def="#if($id>0)$!item.type#else 1#end" name="type" callback="typeselect" />
             <x:text title="文本内容" tp="3" size="5" name="text" def="$!item.text" />
             <x:upload title="上传图片" name="img" tp="img" count="1" def="$!item.img" />
-            <x:pick title="发送方式" src="loc:立即发送|定时发送|循环发送" mode="2" def="$!item.way" name="way" callback="wayselect" />
-            <x:pick title="时间间隔" name="tspan" src="loc:30分钟-30|1小时-60|1.5小时-90|2小时-120|2.5小时-150|3小时-180" mode="2" def="$!item.tspan" />
+            <x:pick title="发送方式" src="loc:立即发送|定时发送|循环发送" mode="2" def="#if($id>0)$!item.way#else 1#end" name="way" callback="wayselect" />
+            <x:pick title="时间间隔" name="tspan" src="loc:30分钟-30|1小时-60|1.5小时-90|2小时-120|2.5小时-150|3小时-180" mode="2" def="#if($id>0)$!item.tspan#else 1#end" />
             <x:text title="发送日期" name="tdate" size="4" chk="t:dt" def="$!item.tdate" />
         </div>
         <div class="tb">
-            <div class="hd">#foreach($c in $lgs)<span class="btn" data-uin="$c.uin"><img src="data:image/jpg;base64,$c.headimg" width="20" /> ${c.nickname}</span> #end</div>
+            <div class="hd">#foreach($c in $lgs)<span class="btn" data-uin="$c.uin"><img src="data:image/jpg;base64,$c.headimg" width="30" title="${c.nickname}" /></span> #end</div>
             <div class="list" style="width:650px;"></div>
             <div class="tpl" style="display:none;">
                 <p class="bag b{flag}" data-id="{id}">群</p>
@@ -48,7 +51,7 @@
             </div>
         </div>
         <div class="btns">
-            <button type="submit" class="btn btn-warning">提交</button><span class="btn" onclick="top.x.closewin();">取消</span>
+            <button type="submit" class="btn btn-warning"><i class="icon-ok"></i>提交</button><span class="btn" onclick="top.x.closewin();">取消</span>
         </div>
     </x:form>
     <script type="text/javascript">
@@ -77,6 +80,8 @@
             $(".hd .btn").click(function () {
                 if (g == null) { cfg.searchcon.uin = $(this).attr("data-uin"); g = x.grid.init(cfg); }
                 else g.getlist({ uin: $(this).attr("data-uin"), page: 1 });
+                $(".hd .btn").removeClass("on");
+                $(this).addClass("on")
             })
 
             $(".tb .list").delegate(".grid-item", "click", function () {

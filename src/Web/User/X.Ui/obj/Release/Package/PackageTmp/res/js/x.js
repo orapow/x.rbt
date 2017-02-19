@@ -2,7 +2,7 @@ var x = (function ($) {
 
     var _x = {
         confirm: function (msg, okfun, cancelfun) {
-            new x.dialog({ title: "操作确认提示", content: "<i class='win icon qus' style='font-size: 36px; vertical-align: middle;'></i>  " + msg, ok: okfun, okValue: "是", cancelValue: "否", cancel: cancelfun || function () { } }).showModal();
+            new x.dialog({ title: "操作确认提示", content: "<i class='win icon qus' style='font-size: 36px; vertical-align: text-top; display:inline-block;background-repeat: no-repeat;'></i>  <p>" + msg + "</p>", ok: okfun, okValue: "是", cancelValue: "否", cancel: cancelfun || function () { } }).showModal();
         },
         input: function (title, okfun, type, notnull, value) {
             var inp = "";

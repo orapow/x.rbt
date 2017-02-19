@@ -218,7 +218,7 @@ namespace X.Core.Utility
                         if (errors == SslPolicyErrors.None) return true;
                         return false;
                     });
-                    rq.ClientCertificates.Add(new X509Certificate2(cert, pwd, X509KeyStorageFlags.PersistKeySet | X509KeyStorageFlags.MachineKeySet));
+                    rq.ClientCertificates.Add(new X509Certificate2(cert, pwd, X509KeyStorageFlags.MachineKeySet | X509KeyStorageFlags.PersistKeySet | X509KeyStorageFlags.Exportable));
                 }
 
                 rq.Method = mothod;

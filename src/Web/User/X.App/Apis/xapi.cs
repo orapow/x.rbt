@@ -21,7 +21,7 @@ namespace X.App.Apis
             base.InitApi();
 
             var uk = GetReqParms("ukey");
-            cu = DB.x_user.FirstOrDefault(o => o.ukey == uk);
+            if (!string.IsNullOrEmpty(uk)) cu = DB.x_user.FirstOrDefault(o => o.ukey == uk);
 
             if (cu == null && needus) throw new XExcep("0x0006");
         }

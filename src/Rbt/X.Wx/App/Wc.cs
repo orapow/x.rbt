@@ -43,7 +43,7 @@ namespace X.Wx.App
                 wxInit();
                 wxStatusNotify();
 
-                //op = new Http(wc.Cookies, 5);
+                op = new Http(wc.Cookies, 5);
 
             }
             catch (Exception ex)
@@ -70,37 +70,6 @@ namespace X.Wx.App
 
             }).Start();
 
-            ///加载用户图片
-            //new Thread(o =>
-            //{
-            //    var hw = new Wc(wc.Cookies, 5);
-            //    var haserr = false;
-            //    var page = 1;
-            //    while (!isquit)
-            //    {
-            //        haserr = false;
-            //        page = 1;
-            //        var cs = db.x_contact.Where(c => c.uin == user.Uin && c.headimg == null).Skip((page - 1) * 10).Take(10);
-            //        foreach (var c in cs)
-            //        {
-            //            var rp = hw.GetFile(gateway + "/cgi-bin/mmwebwx-bin/webwxget" + (c.username[1] == '@' ? "headimg" : "icon") + "?username=" + c.username);
-            //            outLog("getimg->" + c.nickname + "(" + c.contact_id + ") 获取" + (rp.err ? "失败" : "成功"));
-            //            if (!rp.err) c.headimg = "data:img/jpg;base64," + Convert.ToBase64String(rp.data as byte[]);
-            //            else { haserr = true; break; }
-            //            page++;
-            //        };
-            //        try
-            //        {
-            //            db.SubmitChanges();
-            //        }
-            //        catch { }
-            //        if (haserr) Thread.Sleep(5 * 60 * 1000);
-            //        else Thread.Sleep(5 * 1000);
-            //        if (db.x_contact.Count(c => c.uin == user.Uin && c.headimg == null) == 0) { outLog("图片同步完成"); break; }
-            //    };
-
-            //}).Start();
-
         }
 
         /// <summary>
@@ -121,12 +90,19 @@ namespace X.Wx.App
         /// </summary>
         /// <param name="username"></param>
         /// <returns></returns>
-        public string GetHeadImage(string username)
+        public Dictionary<string, string> GetHeadImage(List<string> usernames)
         {
-            //var hw = new Http(wc.Cookies, 3);
-            var rp = wc.GetFile(gateway + "/cgi-bin/mmwebwx-bin/webwxget" + (username[1] == '@' ? "headimg" : "icon") + "?username=" + username);
-            if (!rp.err) return Convert.ToBase64String(rp.data as byte[]);
-            else { outLog("GetHeadImage->" + rp.msg); return ""; }
+            var nt = new Http(wc.Cookies, 5);
+            var imgs = new Dictionary<string, string>();
+            foreach (var u in usernames)
+            {
+                if (imgs.ContainsKey(u)) continue;
+                imgs.Add(u, "1");
+                var rp = nt.GetFile(gateway + "/cgi-bin/mmwebwx-bin/webwxget" + (u[1] == '@' ? "headimg" : "icon") + "?username=" + u);
+                if (!rp.err && rp.data != null) imgs[u] = Convert.ToBase64String(rp.data as byte[]);
+                Thread.Sleep(100);
+            }
+            return imgs;
         }
 
         /// <summary>
@@ -144,9 +120,7 @@ namespace X.Wx.App
                 var fn = "";
                 if (content.StartsWith("http://"))
                 {
-                    var rsp = wc.GetFile(content);
-                    if (rsp.err || rsp.data == null) return;
-                    dt = rsp.data as byte[];
+                    dt = Tools.GetHttpFile(content);
                     fn = content.Substring(content.LastIndexOf('/'));
                 }
                 else
@@ -370,7 +344,7 @@ namespace X.Wx.App
         public delegate void LogerHandler(string log);
         public event LogerHandler OutLog;
 
-        public delegate void ContactLoadedHandler(List<Contact> contacts);
+        public delegate void ContactLoadedHandler(List<Contact> contacts, string gname, bool isdone);
         public event ContactLoadedHandler ContactLoaded;
 
         #endregion
@@ -415,8 +389,6 @@ namespace X.Wx.App
         /// <param name="msg"></param>
         void outLog(string msg)
         {
-            //Console.WriteLine("log@" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + ":->" + msg);
-            //Debug.WriteLine("log@" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + ":->" + msg);
             OutLog?.Invoke(msg);
         }
 
@@ -426,7 +398,7 @@ namespace X.Wx.App
         /// <returns></returns>
         void loadQrcode()
         {
-            var rsp = wc.GetStr("http://www.baidu.com");// wc.GetStr("https://login.weixin.qq.com/jslogin?appid=wx782c26e4c19acffb&fun=new&lang=zh_CN&_=" + getcurrentseconds());//&redirect_uri=https%3A%2F%2Fwx2.qq.com%2Fcgi-bin%2Fmmwebwx-bin%2Fwebwxnewloginpage
+            var rsp = wc.GetStr("https://login.wx.qq.com/jslogin?appid=wx782c26e4c19acffb&fun=new&lang=zh_CN&_=" + getcurrentseconds());//&redirect_uri=https%3A%2F%2Fwx2.qq.com%2Fcgi-bin%2Fmmwebwx-bin%2Fwebwxnewloginpage
             if (rsp.err) throw new Exception("uuid获取失败" + Serialize.ToJson(rsp));
 
             var reg = new Regex("\"(\\S+?)\"");
@@ -436,7 +408,7 @@ namespace X.Wx.App
             uuid = m.Groups[1].Value;
             outLog("uuid->" + uuid);
 
-            rsp = wc.GetFile(string.Format("https://login.weixin.qq.com/qrcode/{0}?_={1}", uuid, getcurrentseconds()));
+            rsp = wc.GetFile(string.Format("https://login.wx.qq.com/qrcode/{0}?_={1}", uuid, getcurrentseconds()));
 
             if (rsp.err) throw new Exception("qrcode获取失败->" + Serialize.ToJson(rsp));
             var qrcode = Convert.ToBase64String(rsp.data as byte[]);
@@ -460,7 +432,7 @@ namespace X.Wx.App
 
             if (c >= 2 || isquit) throw new Exception("wait 已退出");
 
-            string url = string.Format("https://login.weixin.qq.com/cgi-bin/mmwebwx-bin/login?loginicon=true&uuid={0}&tip=0&r={1}&_={2}", uuid, ~getcurrentseconds(), getcurrentseconds());
+            string url = string.Format("https://login.wx.qq.com/cgi-bin/mmwebwx-bin/login?loginicon=true&uuid={0}&tip=0&r={1}&_={2}", uuid, ~getcurrentseconds(), getcurrentseconds());
             var rsp = wc.GetStr(url);
 
             outLog("wait->" + t + "->" + c + "->" + Serialize.ToJson(rsp));
@@ -530,9 +502,6 @@ namespace X.Wx.App
             user = Serialize.FromJson<Contact>(rsp.data + "", "User");
             _syncKey = Serialize.FromJson<SyncKey>(rsp.data + "", "SyncKey");
 
-            //lg.nickname = user.NickName;
-            //db.SubmitChanges();
-
             Loged?.Invoke(user);
         }
 
@@ -559,13 +528,13 @@ namespace X.Wx.App
         /// </summary>
         void loadContact()
         {
+            var nt = new Http(wc.Cookies, 300);
             string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxgetcontact?pass_ticket={1}&skey={2}&r={3}", gateway, passticket, baseRequest.Skey, getcurrentseconds());
 
-            var rsp = wc.GetStr(url);
+            var rsp = nt.GetStr(url);
             if (rsp.err) return;
 
             rsp.data = Tools.RemoveHtml(rsp.data + "");
-
             contacts = Serialize.FromJson<List<Contact>>(rsp.data + "", "MemberList").Where(o => o.KeyWord != "gh_" && o.UserName[0] == '@').ToList();
 
             var nks = new Dictionary<string, int>();
@@ -576,41 +545,42 @@ namespace X.Wx.App
                 else nks.Add(c.NickName, 0);
             }
 
-            new Thread(() =>
+            ContactLoaded?.Invoke(contacts, "", false);
+            outLog("主通讯录获取完成！");
+
+            var qgps = contacts.Where(o => o.UserName[1] == '@');
+            var list = new List<Contact>();
+            var pc = Math.Ceiling(qgps.Count() / 50.0);
+
+            for (var i = 1; i <= pc; i++)
             {
-                var qgps = contacts.Where(o => o.UserName[1] == '@');
-                for (var i = 1; i <= Math.Ceiling(qgps.Count() / 50.0); i++)
-                {
-                    var gs = qgps.Skip((i - 1) * 50)
-                        .Take(50)
-                        .Select(o => new
-                        {
-                            EncryChatRoomId = o.EncryChatRoomId,
-                            UserName = o.UserName
-                        });
-
-                    if (gs.Count() == 0) break;
-
-                    rsp = wc.PostStr(gateway + "/cgi-bin/mmwebwx-bin/webwxbatchgetcontact?type=ex&r=" + getcurrentseconds(),//群组
-                        Serialize.ToJson(new
-                        {
-                            BaseRequest = baseRequest,
-                            Count = gs.Count(),
-                            List = gs.ToList()
-                        }));
-
-                    if (rsp.err) { outLog("群组获取失败"); break; }
-
-                    foreach (var c in Serialize.FromJson<List<Contact>>(rsp.data + "", "ContactList"))
+                var gs = qgps.Skip((i - 1) * 50)
+                    .Take(50)
+                    .Select(o => new
                     {
-                        var g = contacts.FirstOrDefault(o => o.UserName == c.UserName);
-                        g.MemberList.AddRange(c.MemberList);
-                    }
-                }
-                ContactLoaded?.Invoke(contacts);
-                outLog("通讯录获取完成！");
-            }).Start();
-            //ContactLoaded?.Invoke(contacts);
+                        EncryChatRoomId = o.EncryChatRoomId,
+                        UserName = o.UserName
+                    });
+
+                if (gs.Count() == 0) break;
+
+                rsp = nt.PostStr(gateway + "/cgi-bin/mmwebwx-bin/webwxbatchgetcontact?type=ex&r=" + getcurrentseconds(),//群组
+                    Serialize.ToJson(new
+                    {
+                        BaseRequest = baseRequest,
+                        Count = gs.Count(),
+                        List = gs.ToList()
+                    }));
+
+                if (rsp.err) { outLog("群组获取失败"); break; }
+
+                var gps = Serialize.FromJson<List<Contact>>(Tools.RemoveHtml(rsp.data?.ToString()), "ContactList");
+                foreach (var c in gps) { ContactLoaded?.Invoke(c.MemberList, c.UserName, i == pc && c == gps[gps.Count() - 1]); Thread.Sleep(200); }
+
+                if (i == pc) OutLog("群通讯录获取完成");
+                else outLog("群通讯录" + i + "/" + pc + "部份获取完成！");
+            }
+
         }
 
         /// <summary>
@@ -641,29 +611,21 @@ namespace X.Wx.App
         /// </summary>
         void wxSync()
         {
-
             string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxsync?sid={1}&skey={2}&pass_ticket={3}", gateway, baseRequest.Sid, baseRequest.Skey, passticket);
+
             var o = new
             {
                 BaseRequest = baseRequest,
                 SyncKey = _syncKey,
                 rr = getcurrentseconds()
             };
+
             var rsp = op.PostStr(url, Serialize.ToJson(o));
-
-            //outLog("sync->" + Serialize.ToJson(rsp));
-
-            if (rsp.err) { throw new Exception("消息获取失败->" + Serialize.ToJson(rsp)); }
+            if (rsp.err) { outLog("消息获取失败->" + Serialize.ToJson(rsp)); }
 
             _syncKey = Serialize.FromJson<SyncKey>(rsp.data + "", "SyncKey");
-
             var msglist = Serialize.FromJson<List<Msg>>(rsp.data + "", "AddMsgList");
-
-            foreach (var m in msglist)
-            {
-                if (m.FromUserName == user.UserName) continue;
-                NewMsg?.Invoke(m);
-            }
+            foreach (var m in msglist) NewMsg?.Invoke(m);
 
         }
 
@@ -734,9 +696,6 @@ namespace X.Wx.App
         /// <returns></returns>
         string uploadImg(byte[] data, string fn)
         {
-            //var fs = wc.GetFile(url);
-            //if (fs.err) return "";
-            //var data = fs.data as byte[];//File.ReadAllBytes(imgaddr);
             string api = gateway.Replace("https://", "https://file.") + "/cgi-bin/mmwebwx-bin/webwxuploadmedia?f=json";
             var o = new
             {

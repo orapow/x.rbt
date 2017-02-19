@@ -93,7 +93,7 @@
       <Project>{9364f44b-c253-4a46-a86b-f9248325543d}</Project>
       <Name>X.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Rbt\Data\X.Data.csproj">
+    <ProjectReference Include="..\Web\Data\X.Data.csproj">
       <Project>{AAB73D4E-97AC-45C8-8E33-FD4C975F330A}</Project>
       <Name>X.Data</Name>
     </ProjectReference>

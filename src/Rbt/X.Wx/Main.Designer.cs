@@ -44,12 +44,12 @@
             this.sp_c = new System.Windows.Forms.SplitContainer();
             this.tv_contact = new System.Windows.Forms.TreeView();
             this.sp_p = new System.Windows.Forms.SplitContainer();
+            this.wb = new System.Windows.Forms.WebBrowser();
             this.gp_msg = new System.Windows.Forms.GroupBox();
             this.pb_msg_close = new System.Windows.Forms.PictureBox();
             this.bt_send = new System.Windows.Forms.Button();
             this.bt_send_pic = new System.Windows.Forms.Button();
             this.tb_msg = new System.Windows.Forms.TextBox();
-            this.tb_log = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_head)).BeginInit();
             this.cms_menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_setting)).BeginInit();
@@ -154,7 +154,7 @@
             this.pb_setting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pb_setting.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_setting.Image = ((System.Drawing.Image)(resources.GetObject("pb_setting.Image")));
-            this.pb_setting.Location = new System.Drawing.Point(359, 8);
+            this.pb_setting.Location = new System.Drawing.Point(492, 8);
             this.pb_setting.Name = "pb_setting";
             this.pb_setting.Size = new System.Drawing.Size(30, 30);
             this.pb_setting.TabIndex = 7;
@@ -167,7 +167,7 @@
             this.pb_close.ContextMenuStrip = this.cms_menu;
             this.pb_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_close.Image = global::X.Wx.Properties.Resources.x;
-            this.pb_close.Location = new System.Drawing.Point(395, 8);
+            this.pb_close.Location = new System.Drawing.Point(528, 8);
             this.pb_close.Name = "pb_close";
             this.pb_close.Size = new System.Drawing.Size(30, 30);
             this.pb_close.TabIndex = 8;
@@ -191,7 +191,7 @@
             // sp_c.Panel2
             // 
             this.sp_c.Panel2.Controls.Add(this.sp_p);
-            this.sp_c.Size = new System.Drawing.Size(417, 269);
+            this.sp_c.Size = new System.Drawing.Size(550, 390);
             this.sp_c.SplitterDistance = 132;
             this.sp_c.TabIndex = 9;
             // 
@@ -207,21 +207,36 @@
             // sp_p
             // 
             this.sp_p.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sp_p.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.sp_p.Location = new System.Drawing.Point(0, 0);
             this.sp_p.Name = "sp_p";
             this.sp_p.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // sp_p.Panel1
             // 
-            this.sp_p.Panel1.Controls.Add(this.gp_msg);
-            this.sp_p.Panel1Collapsed = true;
+            this.sp_p.Panel1.Controls.Add(this.wb);
+            this.sp_p.Panel1MinSize = 286;
             // 
             // sp_p.Panel2
             // 
-            this.sp_p.Panel2.Controls.Add(this.tb_log);
-            this.sp_p.Size = new System.Drawing.Size(417, 269);
-            this.sp_p.SplitterDistance = 85;
+            this.sp_p.Panel2.Controls.Add(this.gp_msg);
+            this.sp_p.Panel2MinSize = 100;
+            this.sp_p.Size = new System.Drawing.Size(550, 390);
+            this.sp_p.SplitterDistance = 286;
             this.sp_p.TabIndex = 0;
+            // 
+            // wb
+            // 
+            this.wb.AllowNavigation = false;
+            this.wb.AllowWebBrowserDrop = false;
+            this.wb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wb.IsWebBrowserContextMenuEnabled = false;
+            this.wb.Location = new System.Drawing.Point(0, 0);
+            this.wb.MinimumSize = new System.Drawing.Size(20, 20);
+            this.wb.Name = "wb";
+            this.wb.ScrollBarsEnabled = false;
+            this.wb.Size = new System.Drawing.Size(550, 286);
+            this.wb.TabIndex = 2;
             // 
             // gp_msg
             // 
@@ -232,8 +247,8 @@
             this.gp_msg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gp_msg.Location = new System.Drawing.Point(0, 0);
             this.gp_msg.Name = "gp_msg";
-            this.gp_msg.Size = new System.Drawing.Size(150, 85);
-            this.gp_msg.TabIndex = 0;
+            this.gp_msg.Size = new System.Drawing.Size(550, 100);
+            this.gp_msg.TabIndex = 2;
             this.gp_msg.TabStop = false;
             this.gp_msg.Text = "橙子兄弟";
             // 
@@ -243,7 +258,7 @@
             this.pb_msg_close.ContextMenuStrip = this.cms_menu;
             this.pb_msg_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_msg_close.Image = global::X.Wx.Properties.Resources.x;
-            this.pb_msg_close.Location = new System.Drawing.Point(133, -3);
+            this.pb_msg_close.Location = new System.Drawing.Point(533, -3);
             this.pb_msg_close.Name = "pb_msg_close";
             this.pb_msg_close.Size = new System.Drawing.Size(20, 20);
             this.pb_msg_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -254,7 +269,7 @@
             // bt_send
             // 
             this.bt_send.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_send.Location = new System.Drawing.Point(84, 56);
+            this.bt_send.Location = new System.Drawing.Point(484, 71);
             this.bt_send.Name = "bt_send";
             this.bt_send.Size = new System.Drawing.Size(60, 23);
             this.bt_send.TabIndex = 2;
@@ -265,7 +280,7 @@
             // bt_send_pic
             // 
             this.bt_send_pic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.bt_send_pic.Location = new System.Drawing.Point(6, 56);
+            this.bt_send_pic.Location = new System.Drawing.Point(6, 71);
             this.bt_send_pic.Name = "bt_send_pic";
             this.bt_send_pic.Size = new System.Drawing.Size(24, 23);
             this.bt_send_pic.TabIndex = 2;
@@ -281,27 +296,14 @@
             this.tb_msg.Location = new System.Drawing.Point(6, 20);
             this.tb_msg.Multiline = true;
             this.tb_msg.Name = "tb_msg";
-            this.tb_msg.Size = new System.Drawing.Size(138, 30);
+            this.tb_msg.Size = new System.Drawing.Size(538, 45);
             this.tb_msg.TabIndex = 1;
-            // 
-            // tb_log
-            // 
-            this.tb_log.AutoWordSelection = true;
-            this.tb_log.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_log.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tb_log.Location = new System.Drawing.Point(0, 0);
-            this.tb_log.Name = "tb_log";
-            this.tb_log.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth;
-            this.tb_log.Size = new System.Drawing.Size(417, 269);
-            this.tb_log.TabIndex = 11;
-            this.tb_log.Text = "";
-            this.tb_log.WordWrap = false;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 327);
+            this.ClientSize = new System.Drawing.Size(566, 448);
             this.Controls.Add(this.sp_c);
             this.Controls.Add(this.pb_close);
             this.Controls.Add(this.pb_setting);
@@ -349,11 +351,11 @@
         private System.Windows.Forms.SplitContainer sp_c;
         private System.Windows.Forms.TreeView tv_contact;
         private System.Windows.Forms.SplitContainer sp_p;
-        private System.Windows.Forms.RichTextBox tb_log;
+        private System.Windows.Forms.WebBrowser wb;
         private System.Windows.Forms.GroupBox gp_msg;
-        private System.Windows.Forms.TextBox tb_msg;
+        private System.Windows.Forms.PictureBox pb_msg_close;
         private System.Windows.Forms.Button bt_send;
         private System.Windows.Forms.Button bt_send_pic;
-        private System.Windows.Forms.PictureBox pb_msg_close;
+        private System.Windows.Forms.TextBox tb_msg;
     }
 }

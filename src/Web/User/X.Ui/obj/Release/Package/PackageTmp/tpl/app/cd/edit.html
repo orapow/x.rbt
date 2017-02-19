@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    #parse("com/_head.html")
+    <title>广告编辑</title>
+    <style type="text/css">
+        body { background: white; }
+        .row .li { margin-bottom: 0; }
+        div.s { display: none; vertical-align: middle; margin-left: 5px; font-size: 12px; }
+        .upload .imgs { margin-left: 0; }
+        .upload .imgs img { max-height: 60px; }
+    </style>
+</head>
+<body>
+    <x:form api="cd.save">
+        <input type="hidden" name="id" x-check="" value="$!id" />
+        <div class="tb">
+            <x:text title="名称" size="5" name="name" def="$!item.name" chk="no" />
+            <x:pick title="样式" src="loc:名片|图文|通栏" mode="2" def="#if($id>0)$!item.style#else 1#end" name="style" callback="style_selected" />
+            <x:row title="图片"><x:upload name="img" tp="img" count="1" def="$!item.img" /><div class="s1 s">图片比例：1*1</div><div class="s2 s">图片比例：6：1</div></x:row>
+            <x:row title="二维码"><x:upload name="qrcode" tp="img" count="1" def="$!item.qrcode" /><div class="s1 s">图片比例：1*1</div></x:row>
+            <x:text title="文字" size="5" name="txt" def="$!item.txt" chk="len:0,24" />
+            <x:text title="链接" size="5" name="link" def="$!item.link" />
+        </div>
+        <div class="btns">
+            <button type="submit" class="btn btn-warning"><i class="icon-ok"></i>提交</button><span class="btn" onclick="top.x.closewin();">取消</span>
+        </div>
+    </x:form>
+    <script type="text/javascript">
+        $(function () {
+            $("form:eq(0)").xform({
+                callback: function (d) {
+                    if (!d.issucc) return;
+                    x.closewin();
+                }
+            });
+        });
+        function style_selected(v, t) {
+            console.log(v);
+            $("div.s").hide();
+            if (v <= 2) $("div.s1").show();
+            else $("div.s2").show();
+        }
+        if (!"$!id") style_selected(1);
+        else style_selected("$item.style", "")
+    </script>
+</body>
+</html>

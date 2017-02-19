@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace X.Wx
 {
+    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public class Base : Form
     {
         #region 拖动引用

@@ -10,7 +10,7 @@ namespace X.App.Apis.msg
 {
     public class load : xapi
     {
-        [ParmsAttr(name = "微信号uin", req = true)]
+        [ParmsAttr(name = "微信号uin", min = 1)]
         public long uin { get; set; }
 
         protected override XResp Execute()

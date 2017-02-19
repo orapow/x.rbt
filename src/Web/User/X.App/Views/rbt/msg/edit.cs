@@ -31,7 +31,7 @@ namespace X.App.Views.rbt.msg
                     uids = Context.Server.HtmlDecode(o.uids),
                     o.way
                 }).FirstOrDefault(o => o.id == id);
-                if (item == null) throw new XExcep("T群发记录不存在");
+                if (item == null) throw new XExcep("0x0014");
                 dict.Add("item", item);
             }
         }

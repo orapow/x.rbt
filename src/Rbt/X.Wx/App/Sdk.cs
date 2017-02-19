@@ -13,7 +13,7 @@ namespace X.Wx.App
         public static CheckResp user { get; private set; }
 
         static string key = "";//应用key
-        static string gateway = "http://rbt.80xc.com/api/";//网关
+        static string gateway = "http://rbt.tunnel.qydev.com/api/";//"http://rbt.80xc.com/api/";//网关
         class api
         {
             public string name;
@@ -23,36 +23,39 @@ namespace X.Wx.App
 
         static T doapi<T>(string api, Dictionary<string, string> values) where T : Resp
         {
-            var wc = new WebClient();
-            wc.Proxy = null;
-            last = new Sdk.api() { name = api, ps = values };
-            if (!string.IsNullOrEmpty(user.uk)) wc.Headers.Add("Cookie", "ukey=" + user.uk);
-            var fs = new NameValueCollection();
-            if (values != null) foreach (var k in values.Keys) fs.Add(k, values[k]);
+            var wc = new Http("ukey=" + user.uk, 30);
+            last = new api() { name = api, ps = values };
             string json = "";
+            var r = Activator.CreateInstance<T>();
             try
             {
-                Debug.WriteLine("doapi:" + api + "@post->" + Serialize.ToJson(values));
-                var data = wc.UploadValues(gateway + api, fs);
-                json = Encoding.UTF8.GetString(data);
-                Debug.WriteLine("doapi:" + api + "@back->->" + json);
+                var post = "";
+                foreach (var k in values) post += k.Key + "=" + System.Web.HttpUtility.UrlEncode(k.Value) + "&";
+                post = post.TrimEnd('&');
+                Debug.WriteLine("doapi:" + api + "@post->" + post);
+                var rsp = wc.PostStr(gateway + api, post);
+                json = rsp.data as string;
+                Debug.WriteLine("doapi:" + api + "@back->" + json);
+                if (string.IsNullOrEmpty(json)) throw new Exception("服务器返回空");
             }
             catch (Exception ex)
             {
                 Debug.WriteLine("doapi:" + api + "@err->" + ex.Message);
-                return new Resp() { issucc = false, msg = ex.Message } as T;
-            }
-            finally
-            {
-                last = null;
-                wc.Dispose();
+                r.issucc = false;
+                r.msg = ex.Message;
+                json = "";
             }
             if (json.Contains("0x0006") && api != "check")
             {
                 var ck = Check();
                 if (last != null && ck) return doapi<T>(last.name, last.ps as Dictionary<string, string>);
             }
-            return Serialize.FromJson<T>(json);
+            else
+            {
+                var rp = Serialize.FromJson<T>(json);
+                if (rp != null) return rp;
+            }
+            return r;
         }
 
         public static bool Init(string k)
@@ -79,15 +82,22 @@ namespace X.Wx.App
         {
             return doapi<ReplyResp>("reply.load", new Dictionary<string, string>() { { "uin", uin } });
         }
-        public static Resp ContactSync(string data, string uin)
+        public static Resp ContactSync(string data, string uin, string gname)
         {
-            return doapi<Resp>("contact.sync", new Dictionary<string, string>() { { "data", data }, { "uin", uin } });
+            return doapi<Resp>("contact.sync", new Dictionary<string, string>() { { "data", data }, { "uin", uin }, { "gpname", gname } });
         }
         public static Resp LoadQr(string url)
         {
             return doapi<Resp>("qrcode", new Dictionary<string, string> { { "url", url } });
         }
-
+        public static NoimgResp LoadNoimg(string uin)
+        {
+            return doapi<NoimgResp>("contact.noimguser", new Dictionary<string, string>() { { "uin", uin } });
+        }
+        public static Resp SetHeadimg(Dictionary<string, string> data, string uin)
+        {
+            return doapi<Resp>("contact.setheadimg", new Dictionary<string, string>() { { "imgs", Serialize.ToJson(data) }, { "uin", uin } });
+        }
     }
     public class Resp
     {
@@ -100,6 +110,10 @@ namespace X.Wx.App
         public string img { get; set; }
         public string nk { get; set; }
         public string dt { get; set; }
+    }
+    public class NoimgResp : Resp
+    {
+        public List<string> items { get; set; }
     }
     public class MsgResp : Resp
     {

@@ -25,11 +25,19 @@ namespace X.App.Apis.contact
             var list = Serialize.FromJson<List<Contact>>(Context.Server.HtmlDecode(data));
             if (list == null) return new XResp();
 
-            if (!string.IsNullOrEmpty(gpname)) gid = cu.x_contact.FirstOrDefault(o => o.uin == uin && o.username == gpname)?.contact_id;
+            x_contact gc = null;
+            if (!string.IsNullOrEmpty(gpname))
+            {
+                gc = cu.x_contact.FirstOrDefault(o => o.uin == uin && o.username == gpname);
+                gid = gc?.contact_id;
+                gc.membercount = list.Count;
+            }
 
             var cts = cu.x_contact.Where(o => o.uin == uin && o.group_id == gid);
 
             tocontact(list.ToList(), cts.ToList());
+
+            SubmitDBChanges();
 
             return new XResp();
         }
@@ -53,9 +61,6 @@ namespace X.App.Apis.contact
             }
 
             foreach (var u in list) DB.x_contact.InsertOnSubmit(getcot(u, null));
-
-            SubmitDBChanges();
-
         }
 
         x_contact getcot(Contact u, x_contact c)
@@ -64,7 +69,7 @@ namespace X.App.Apis.contact
             var tel = new Regex("(1[\\d]{10})").Match(u.NickName);
             if (tel.Success) c.tel = tel.Groups[1].Value;
             c.imgurl = u.HeadImgUrl;
-            c.membercount = u.MemberCount;
+            c.membercount = u.MemberList?.Count;
             c.nickname = u.NickName;
             c.remarkname = u.RemarkName;
             c.group_id = gid;

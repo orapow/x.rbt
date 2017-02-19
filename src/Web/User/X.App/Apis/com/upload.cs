@@ -57,12 +57,12 @@ namespace X.App.Apis.com
             var url = string.Empty;
 
             var tp = tps.FirstOrDefault(o => o.code == type);
-            if (tp == null) throw new XExcep("T类型不允许");
+            if (tp == null) throw new XExcep("0x0011");
 
             var ext = getFileExt();
-            if (!tp.exts.Contains("[" + ext + "]")) throw new XExcep("T不允许的文类型，允许类型：" + tp.exts);
+            if (!tp.exts.Contains("[" + ext + "]")) throw new XExcep("0x0012", tp.exts);
 
-            if (tp.size > 0 && uploadFile.ContentLength >= (tp.size * 1024 * 1024)) throw new XExcep("T文件大小超出限制，限制为：" + tp.size + "MB");
+            if (tp.size > 0 && uploadFile.ContentLength >= (tp.size * 1024 * 1024)) throw new XExcep("0x0013", tp.size + "MB");
 
             if (!Directory.Exists(uploadpath)) Directory.CreateDirectory(uploadpath);
 

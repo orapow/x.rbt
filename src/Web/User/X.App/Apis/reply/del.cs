@@ -11,7 +11,7 @@ namespace X.App.Apis.reply
         protected override XResp Execute()
         {
             var et = cu.x_reply.FirstOrDefault(o => o.reply_id == id);
-            if (et == null) throw new XExcep("T回复记录不存在");
+            if (et == null) throw new XExcep("0x0020");
 
             DB.x_reply.DeleteOnSubmit(et);
             SubmitDBChanges();

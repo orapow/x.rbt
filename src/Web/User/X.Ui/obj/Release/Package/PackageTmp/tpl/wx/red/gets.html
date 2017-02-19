@@ -1,0 +1,13 @@
+﻿#foreach($u in $us)
+<div class="item">
+    <span class="img" style="margin-right:10px;"><img src="$u.hd" /></span>
+    <span class="md">
+        <span class="nk #if($cu.user_id==$u.uid)me#end">$u.nk</span>
+        <span class="dt">$u.dt</span>
+    </span>
+    <span class="rt">
+        <span class="am">$u.am元</span>
+        #if($u.ram.length>0)<span class="rb">$u.ram元</span>#end
+    </span>
+</div>
+#end
