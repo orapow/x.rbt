@@ -13,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Security.Authentication;
 using System.IO.Compression;
+using X.Core.Plugin;
 
 namespace X.Wx
 {
@@ -33,12 +34,6 @@ namespace X.Wx
         {
             timeOut = tout;
             Cookies = ck;
-            //Cookies = new List<string>();
-            //foreach (var c in ck.Trim().Split(';'))
-            //{
-            //    if (string.IsNullOrEmpty(c)) continue;
-            //    Cookies.Add(c);
-            //}
         }
 
         byte[] get(string url)
@@ -275,6 +270,7 @@ namespace X.Wx
             ms.Flush();
 
             rsp = ReadResponse(ms);
+
             return rsp;
         }
 
@@ -300,18 +296,7 @@ Accept-Language: zh-CN
 
         HttpResponse ReadResponse(Stream sm)
         {
-            var cancelSource = new CancellationTokenSource();
-
-            Task<string> myTask = Task.Factory.StartNew<string>(
-                new Func<object, string>(ReadHeaderProcess),
-                new TaskArguments(cancelSource, sm),
-                cancelSource.Token);
-
-            if (!myTask.Wait(60 * 1000)) cancelSource.Cancel(); //超时的话，别忘记取消任务哦
-
-            string header = myTask.Result;
-
-            if (string.IsNullOrEmpty(header)) return null;
+            var header = ReadHeaderProcess(sm);
 
             if (header.StartsWith("HTTP/1.1 100")) return ReadResponse(sm);
 
@@ -360,16 +345,11 @@ Accept-Language: zh-CN
                 return obuff.ToArray();
             }
         }
-
-        string ReadHeaderProcess(object args)
+        string ReadHeaderProcess(Stream sm)
         {
-            var argument = args as TaskArguments;
-            if (argument == null) return "";
-
             var sb = new StringBuilder();
-            var sm = argument.Stream;
 
-            while (!argument.CancelSource.IsCancellationRequested)
+            while (true)
             {
                 int read = sm.ReadByte();
                 if (read == -1) break;
@@ -411,26 +391,23 @@ Accept-Language: zh-CN
             var bulider = new StringBuilder();
             while (true)
             {
-                int read = sm.ReadByte();
-                if (read == -1) break;
-
-                byte b = (byte)read;
-                bulider.Append((char)b);
-                string temp = bulider.ToString();
-                if (temp.EndsWith("\r\n"))
+                try
                 {
-                    chunked = Convert.ToInt32(temp.Trim(), 16);
-                    break;
+                    int read = sm.ReadByte();
+                    if (read == -1) break;
+
+                    byte b = (byte)read;
+                    bulider.Append((char)b);
+                    string temp = bulider.ToString();
+                    if (temp.EndsWith("\r\n"))
+                    {
+                        chunked = Convert.ToInt32(temp.Trim(), 16);
+                        break;
+                    }
                 }
+                catch { break; }
             }
             return chunked;
-        }
-        IPAddress GetAddress(string host)
-        {
-            var address = IPAddress.Any;
-            IPAddress[] alladdress = Dns.GetHostAddresses(host);
-            if (alladdress.Length > 0) address = alladdress[0];
-            return address;
         }
         byte[] SpecialReadResponse(Stream sm)
         {

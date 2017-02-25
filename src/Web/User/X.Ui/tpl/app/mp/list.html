@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    #parse("com/_head.html")
+    <title>公众号管理</title>
+    <style type="text/css">
+        p.t1 { display: block; }
+        p.t2 { display: none; }
+        img.t1 { display: none; }
+        img.t2 { display: block; }
+        .grid-item { display: inline-block; margin-left: 20px; margin-bottom: 20px; width: 175px; position: relative; }
+        .grid-item .cot { height: 150px; width: 100%; padding: 5px; border: 1px solid #ccc; display: block; cursor: pointer; }
+        .grid-item .text { border: 1px solid #ccc; margin-top: -1px; display: block; padding: 5px; }
+        .grid-item:nth-child(5n+1) { margin-left: 0px; }
+        .cot img { max-width: 100%; max-height: 150px; }
+        .tip { padding: 9px 30px; background-color: #f4f5f9; line-height: 1.6; }
+        .grid-item .close { display: none; }
+        .grid-item:hover .close { display: block; }
+    </style>
+</head>
+<body>
+    #parse("_top.html")
+    <div id="body" class="body">
+        <div id="js_container_box" class="container_box cell_layout side_l">
+            #parse("_left.html")
+            <div class="col_main">
+                <div class="main_hd">
+                    <h2>公众号管理</h2>
+                </div>
+                <div class="tip">
+                    公众号授权后，可自动回复提现链接和拉取用户信息。<br />
+                    如需取消授权请前往<a href="https://mp.weixin.qq.com/" target="_blank">公众号平台</a>删除授权
+                </div>
+                <div class="main_bd">
+                    <div class="btns" style="text-align:right; margin-bottom:30px;"><a class="btn btn-warning" href="/wx/auth.html"><i class="icon-plus"></i> 授权公众号</a></div>
+                    <div class="div_grid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tpl" style="display:none;">
+        <span class="text">{name}</span>
+        <span class="text" style="text-align:center;">
+            <img src="{img}" onerror="this.src='/img/no.jpg'" />
+        </span>
+    </div>
+    #parse("_foot.html")
+    <script type="text/javascript">
+
+        var cfg = {
+            el: ".div_grid",
+            searchcon: { page: 1, limit: 20 },
+            api: "mp.list",
+            tpl: $(".tpl").html()
+        };
+
+        var g = x.grid.init(cfg);
+
+    </script>
+</body>
+</html>

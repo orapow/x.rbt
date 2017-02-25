@@ -87,7 +87,7 @@ namespace X.Core.Utility
             if (!string.IsNullOrEmpty(time)) DateTime.TryParse(time, out dt);
             if (dt == DateTime.MinValue) dt = DateTime.Now;
             var startTime = TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970, 1, 1));
-            return (dt - startTime).TotalMilliseconds.ToString("F0").Substring(0, 10);
+            return (dt - startTime).TotalMilliseconds.ToString("F0").Substring(0, 13);
         }
         /// <summary>
         /// 格林尼治转本地时间

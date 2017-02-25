@@ -55,7 +55,7 @@
 
         var cfg = {
             el: ".div_grid",
-            searchcon: { page: 1, limit: 40 },
+            searchcon: { page: 1, limit: 20 },
             api: "red.list",
             tpl: $(".tpl").html()
         };
@@ -87,7 +87,9 @@
         }
 
         function show_setad(id) {
-            x.openwin("setad-" + (id || "") + ".html", "设置广告", null, { w: 300, h: 400 });
+            x.openwin("setad-" + (id || "") + ".html", "设置广告", function () {
+                g.getlist();
+            }, { w: 300, h: 400 });
         }
 
         function do_close(id) {

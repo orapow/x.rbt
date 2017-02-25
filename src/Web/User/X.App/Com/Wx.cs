@@ -36,7 +36,6 @@ namespace X.App.Com
         {
             return GetJsTicket(tk, false);
         }
-
         public static string GetJsTicket(string tk, bool isnew)
         {
             var tick = CacheHelper.Get<string>("wx.js_ticket");
@@ -122,8 +121,8 @@ namespace X.App.Com
                 }
             }
 
-            public static string appid = "wx98d80a62d8ca2719";
-            private static string appsecret = "c456018db89f1edcbe5f76d5bc4ff76b";
+            public static string appid = "wx55bfd5ad6998a826";
+            private static string appsecret = "4b98cc985a194ede629f1599fe847134";
 
             /// <summary>
             /// 第三方令牌
@@ -146,9 +145,7 @@ namespace X.App.Com
                 var token = Serialize.FromJson<component_token>(json);
 
                 if (token == null || string.IsNullOrEmpty(token.component_access_token)) throw new WxExcep(json);
-
                 CacheHelper.Save("wx.component_access_token", token.component_access_token, 7200);
-
                 return token.component_access_token;
             }
             /// <summary>
@@ -182,6 +179,32 @@ namespace X.App.Com
             {
                 File.WriteAllText(ticket_file, verify_ticket);
                 CacheHelper.Save("wx.verify_ticket", verify_ticket, 5 * 60 * 1000);//有效期 10 分钟 此处存5分钟
+            }
+
+            /// <summary>
+            /// 获取Mp用户授权地址
+            /// </summary>
+            /// <param name="url"></param>
+            /// <param name="mpid"></param>
+            /// <param name="scope"></param>
+            /// <returns></returns>
+            public static string GetWxLoginUrl(string url, string mpid, string scope)
+            {
+                return "https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + mpid + "&redirect_uri=" + url + "&response_type=code&scope=" + scope + "&state=" + Tools.GetRandRom(6, 3) + "&component_appid=" + appid + "#wechat_redirect";
+            }
+
+            /// <summary>
+            /// 获MpToken
+            /// </summary>
+            /// <param name="mpid"></param>
+            /// <param name="code"></param>
+            /// <returns></returns>
+            public static web_token GetMpToken(string mpid, string code)
+            {
+                var api = "https://api.weixin.qq.com/sns/oauth2/component/access_token?appid=" + mpid + "&code=" + code + "&grant_type=authorization_code&component_appid=" + appid + "&component_access_token=" + component_access_token();
+                var json = Tools.GetHttpData(api);
+                var wtk = Serialize.FromJson<web_token>(json);
+                return Serialize.FromJson<web_token>(json);
             }
 
             /// <summary>
@@ -229,7 +252,7 @@ namespace X.App.Com
                 dict.Add("component_appid", appid);
                 dict.Add("authorization_code", auth_code);
 
-                var json = Tools.PostHttpData("component/api_query_auth?component_access_token=" + component_access_token(), Serialize.ToJson(dict));
+                var json = Tools.PostHttpData("https://api.weixin.qq.com/cgi-bin/component/api_query_auth?component_access_token=" + component_access_token(), Serialize.ToJson(dict));
                 var info = Serialize.FromJson<MpAuth_Info>(json);
                 if (info == null || !string.IsNullOrEmpty(info.errmsg)) throw new WxExcep(json);
                 return info;
@@ -245,7 +268,7 @@ namespace X.App.Com
                 dict.Add("component_appid", appid);
                 dict.Add("authorizer_appid", auth_appid);
 
-                var json = Tools.PostHttpData("component/api_get_authorizer_info?component_access_token=" + component_access_token(), Serialize.ToJson(dict));
+                var json = Tools.PostHttpData("https://api.weixin.qq.com/cgi-bin/component/api_get_authorizer_info?component_access_token=" + component_access_token(), Serialize.ToJson(dict));
                 var info = Serialize.FromJson<MpInfo>(json);
                 if (info == null || !string.IsNullOrEmpty(info.errmsg)) throw new WxExcep(json);
                 return info;
@@ -264,7 +287,7 @@ namespace X.App.Com
                 dict.Add("authorizer_appid", auth_appid);
                 dict.Add("authorizer_refresh_token", re_token);
 
-                var json = Tools.PostHttpData("component/api_authorizer_token?component_access_token=" + component_access_token(), Serialize.ToJson(dict));
+                var json = Tools.PostHttpData("https://api.weixin.qq.com/cgi-bin/component/api_authorizer_token?component_access_token=" + component_access_token(), Serialize.ToJson(dict));
                 var tk = Serialize.FromJson<MpAuth_Token>(json);
 
                 if (tk == null || !string.IsNullOrEmpty(tk.errmsg)) throw new WxExcep(json);
@@ -606,14 +629,8 @@ namespace X.App.Com
             /// <returns></returns>
             public static bool ValidNotify(Ntxml nt, string mch_id, string appid, string mch_key)
             {
-                if (nt == null || string.IsNullOrEmpty(nt.sign))
-                {
-                    return false;
-                }
-                if (nt.mch_id != mch_id || nt.appid != appid)
-                {
-                    return false;
-                }
+                if (nt == null || string.IsNullOrEmpty(nt.sign)) return false;
+                if (nt.mch_id != mch_id || nt.appid != appid) return false;
                 var ps = new Dictionary<string, string>();
                 ps.Add("appid", nt.appid);
                 ps.Add("bank_type", nt.bank_type);
@@ -651,20 +668,20 @@ namespace X.App.Com
                 dict.Add("mch_appid", appid);
                 dict.Add("mchid", mchid);
                 dict.Add("nonce_str", Tools.GetRandRom(32, 3));
-                dict.Add("partner_trade_no", no + "");
+                dict.Add("partner_trade_no", no);
                 dict.Add("openid", openid);
                 dict.Add("check_name", "NO_CHECK");
                 dict.Add("amount", amount * 100 + "");
-                dict.Add("desc", "返现卡号：" + no + "，返现金额：" + amount + "元");
-                dict.Add("spbill_create_ip", Tools.GetClientIP());
+                dict.Add("desc", "提现红包：" + no + "，提现金额：" + amount + "元");
+                dict.Add("spbill_create_ip", "120.26.215.240");
                 var to_md5 = "";
                 var xml_data = "<xml>";
                 foreach (var d in dict.OrderBy(o => o.Key))
                 {
                     if (!string.IsNullOrEmpty(d.Value)) to_md5 += d.Key + "=" + d.Value + "&";
-                    xml_data += "<" + d.Key + ">" + d.Value + "</" + d.Key + ">";
+                    xml_data += "<" + d.Key + ">" + d.Value + "</" + d.Key + ">\n";
                 }
-                xml_data += "<sign>" + Secret.MD5(to_md5 + "key=" + signkey, 0).ToUpper() + "</sign>";
+                xml_data += "<sign>" + Secret.MD5(to_md5 + "key=" + signkey, 0).ToUpper() + "</sign>\n";
                 xml_data += "</xml>";
                 var xml = Tools.PostHttpData("https://api.mch.weixin.qq.com/mmpaymkttransfers/promotion/transfers", xml_data, "POST", cert_path + "apiclient_cert.p12", mchid);
                 return Serialize.FormXml<payrsp>(xml);
@@ -922,6 +939,17 @@ namespace X.App.Com
                 /// 微信支付成功时间
                 /// </summary>
                 public string payment_time { get; set; }
+            }
+        }
+
+        public class Account
+        {
+            public static string GetQrcode(string appid, string tk, string scene_id)
+            {
+                var api = "https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token=" + tk;
+                var rsp = Tools.PostHttpData(api, "{\"expire_seconds\": 60, \"action_name\": \"QR_SCENE\", \"action_info\": {\"scene\": {\"scene_id\": \"" + scene_id + "\"} } }");
+                var d = Serialize.JsonToDict(rsp);
+                return "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=" + d["ticket"];
             }
         }
 
@@ -1246,8 +1274,7 @@ namespace X.App.Com
             }
             #endregion
         }
-
-        public class Crypt
+        class Crypt
         {
             static string otoken = "lioDqc3SIgmEo3lo3D8nO8hLYVa0BcDMZd55KidrUG4NGEWDyDSpC9naTVZuIoWP";
             static string msgencrypt = "BdR8DXlQXulijO5crf68us3CjUUcalRKkDOo62DZ0HV";
@@ -1263,14 +1290,7 @@ namespace X.App.Com
             static void VerifySignature(string sTimeStamp, string sNonce, string sMsgBody, string sSigture)
             {
                 var hash = GenarateSinature(sTimeStamp, sNonce, sMsgBody);
-                Debug.WriteLine("VerifySignature->" + sTimeStamp);
-                Debug.WriteLine("VerifySignature->" + sNonce);
-                Debug.WriteLine("VerifySignature->" + sMsgBody);
-                Debug.WriteLine("VerifySignature:" + hash + "<->" + sSigture);
-                if (hash != sSigture)
-                {
-                    throw new WxExcep("签名验证错误。");
-                }
+                if (hash != sSigture) throw new WxExcep("签名验证错误。");
             }
             /// <summary>
             /// 生成签名
@@ -1391,7 +1411,6 @@ namespace X.App.Com
 
             }
         }
-
         /// <summary>
         /// 微信Xml
         /// </summary>
@@ -1409,6 +1428,11 @@ namespace X.App.Com
             /// </summary>
             public string return_msg { get; set; }
         }
+        public class mbase
+        {
+            public string errcode { get; set; }
+            public string errmsg { get; set; }
+        }
         public class web_token : mbase
         {
             public string access_token { get; set; }
@@ -1417,6 +1441,7 @@ namespace X.App.Com
             public string openid { get; set; }
             public string scope { get; set; }
         }
+
         class tick : mbase
         {
             public string ticket { get; set; }
@@ -1426,11 +1451,6 @@ namespace X.App.Com
         {
             public string access_token { get; set; }
             public int expires { get; set; }
-        }
-        public class mbase
-        {
-            public string errcode { get; set; }
-            public string errmsg { get; set; }
         }
 
     }

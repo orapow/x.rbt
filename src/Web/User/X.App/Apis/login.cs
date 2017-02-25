@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using X.Core.Cache;
 using X.Core.Utility;
+using X.Data;
 using X.Web;
 using X.Web.Com;
 
@@ -15,11 +16,11 @@ namespace X.App.Apis
         [ParmsAttr(name = "code", req = true)]
         public string code { get; set; }
 
-        protected override bool needus
+        protected override int needus
         {
             get
             {
-                return false;
+                return 0;
             }
         }
 
@@ -32,22 +33,22 @@ namespace X.App.Apis
             {
                 cu_key = CacheHelper.Get<string>("login." + code);
                 Thread.Sleep(100);
-                if ((DateTime.Now - dt).TotalSeconds >= 20) break;
+                if ((DateTime.Now - dt).TotalSeconds >= 60) break;
             } while (string.IsNullOrEmpty(cu_key));
 
+            CacheHelper.Remove("login." + code);
             if (string.IsNullOrEmpty(cu_key) || cu_key == "###") throw new XExcep("0x0006");
 
-            cu = DB.x_user.FirstOrDefault(o => o.ukey == cu_key);
+            cu = CacheHelper.Get<x_user>(cu_key);
+            if (cu == null) throw new XExcep("0x0006");
 
-            CacheHelper.Save("cu." + cu_key, cu, 60 * 20);
-            CacheHelper.Remove("login." + code);
+            Context.Response.SetCookie(new System.Web.HttpCookie("ukey-" + cfg.wx_appid, cu_key));
 
-            return new lback() { ukey = cu.ukey, headimg = cu.headimg, nickname = cu.nickname };
+            return new lback() { headimg = cu.headimg, nickname = cu.nickname };
         }
 
         class lback : XResp
         {
-            public string ukey { get; set; }
             public string headimg { get; set; }
             public string nickname { get; set; }
         }

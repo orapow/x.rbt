@@ -1,0 +1,2273 @@
+
+时间：2017-02-22 08:33:49,152 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37904583 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,169 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37904600 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,324 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37904755 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,330 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37904761 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,336 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37904767 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,353 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37904784 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,171 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37904602 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,172 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37904603 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,279 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37904710 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,291 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37904722 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,292 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37904723 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,287 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37904718 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,292 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37904723 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,175 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37904606 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,472 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37904903 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,294 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37904725 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,485 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37904916 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,490 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37904920 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,186 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37904617 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,186 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37904617 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,485 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37904916 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,185 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37904616 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,750 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37905181 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:49,865 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37905296 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:49,871 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37905302 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:49,974 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37905405 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:50,060 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37905491 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:50,065 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37905496 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:50,065 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37905496 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:50,065 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37905496 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:50,116 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37905547 
+
+时间：2017-02-22 08:33:50,186 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37905616 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:50,202 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37905632 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:50,210 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37905640 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:50,292 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37905723 
+
+时间：2017-02-22 08:33:50,300 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37905731 
+
+时间：2017-02-22 08:33:50,319 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37905749 
+
+时间：2017-02-22 08:33:50,352 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37905783 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:50,455 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37905886 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:50,455 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37905886 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:50,464 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37905895 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:50,477 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37905908 
+
+时间：2017-02-22 08:33:50,464 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37905895 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:50,657 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37906088 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:50,661 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37906092 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:50,662 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37906093 
+
+时间：2017-02-22 08:33:50,665 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37906096 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:50,669 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37906100 
+
+时间：2017-02-22 08:33:50,657 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37906088 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:50,673 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37906104 
+
+时间：2017-02-22 08:33:50,690 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37906121 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:50,761 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37906192 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:50,761 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37906192 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:50,775 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37906206 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:50,780 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37906211 
+
+时间：2017-02-22 08:33:50,885 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37906315 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:50,893 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37906324 
+
+时间：2017-02-22 08:33:50,897 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37906327 
+
+时间：2017-02-22 08:33:50,908 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37906339 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:50,908 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37906339 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:50,926 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37906356 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:50,935 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37906366 
+
+时间：2017-02-22 08:33:50,885 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37906316 
+
+时间：2017-02-22 08:33:50,991 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37906421 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:50,991 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37906421 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:50,990 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37906420 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:51,104 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37906535 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:51,141 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37906572 
+
+时间：2017-02-22 08:33:51,215 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37906646 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:51,325 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37906756 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:51,341 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37906772 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:51,347 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37906778 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:51,023 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37906453 
+
+时间：2017-02-22 08:33:51,023 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37906454 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:51,435 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37906866 
+
+时间：2017-02-22 08:33:51,438 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37906869 
+
+时间：2017-02-22 08:33:51,438 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37906869 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:51,440 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37906871 
+
+时间：2017-02-22 08:33:51,440 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37906871 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:51,442 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37906873 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:51,443 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37906874 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:51,443 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37906874 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:51,514 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37906945 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:51,520 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37906951 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:51,607 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37907038 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:51,673 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37907103 
+
+时间：2017-02-22 08:33:51,673 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37907103 
+
+时间：2017-02-22 08:33:51,675 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37907106 
+
+时间：2017-02-22 08:33:51,934 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37907365 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:51,934 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37907365 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:51,976 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37907407 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:52,133 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：37907564 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:33:52,137 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37907568 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:52,219 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37907650 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:52,222 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37907653 
+
+时间：2017-02-22 08:33:52,222 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37907653 
+
+时间：2017-02-22 08:33:52,284 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37907715 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:52,284 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37907715 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:52,288 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37907719 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:52,290 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37907720 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:52,284 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37907715 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:52,308 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37907739 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:52,315 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37907746 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:52,379 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37907810 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:52,633 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：37908064 
+
+时间：2017-02-22 08:33:52,635 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37908066 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:52,636 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37908067 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:52,643 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37908074 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:52,707 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37908138 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:52,716 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37908147 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:52,729 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37908160 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:52,815 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37908246 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:33:52,815 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37908246 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:38:38,204 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：38193635 
+
+时间：2017-02-22 08:39:57,068 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：38272499 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-22 08:39:57,078 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：38272509 
+
+时间：2017-02-22 08:40:07,149 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：38282579 
+
+时间：2017-02-22 08:43:56,229 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：355 
+
+时间：2017-02-22 08:44:16,941 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: _TELOa0260s112 ]"} 
+时间：21067 
+
+时间：2017-02-22 08:44:17,687 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: u3CA7a0261ns81 ]"} 
+时间：21813 
+
+时间：2017-02-22 08:44:18,251 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: ziVNFa0262ns84 ]"} 
+时间：22377 
+
+时间：2017-02-22 08:44:18,893 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: L5MZAA0262ns82 ]"} 
+时间：23019 
+
+时间：2017-02-22 08:44:19,540 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 0263ns86 ]"} 
+时间：23666 
+
+时间：2017-02-22 08:44:20,095 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: t03MWa0264ns81 ]"} 
+时间：24221 
+
+时间：2017-02-22 08:44:20,669 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: W1enGa0264s107 ]"} 
+时间：24795 
+
+时间：2017-02-22 08:44:21,261 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: L2jBbA0265ns88 ]"} 
+时间：25387 
+
+时间：2017-02-22 08:44:21,842 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 7TVLBa0265ns85 ]"} 
+时间：25968 
+
+时间：2017-02-22 08:44:22,389 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: nN8p9a0266ns81 ]"} 
+时间：26515 
+
+时间：2017-02-22 08:44:22,909 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: aEbAVa0266s105 ]"} 
+时间：27035 
+
+时间：2017-02-22 08:44:23,438 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: L_G_0267s108 ]"} 
+时间：27563 
+
+时间：2017-02-22 08:44:23,950 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: YhzOia0267s105 ]"} 
+时间：28076 
+
+时间：2017-02-22 08:44:24,552 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: Y6hXIA0268ns81 ]"} 
+时间：28678 
+
+时间：2017-02-22 08:44:25,213 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: C36SSa0269s109 ]"} 
+时间：29339 
+
+时间：2017-02-22 08:44:25,800 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: zcwcMA0269s102 ]"} 
+时间：29926 
+
+时间：2017-02-22 08:44:26,427 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 4Ecp70270ns85 ]"} 
+时间：30553 
+
+时间：2017-02-22 08:44:26,993 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: ESx0AA0270s112 ]"} 
+时间：31119 
+
+时间：2017-02-22 08:44:27,535 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: yXUv80271ns89 ]"} 
+时间：31661 
+
+时间：2017-02-22 08:44:28,061 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: M5oyPA0272s102 ]"} 
+时间：32187 
+
+时间：2017-02-22 08:44:28,720 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: gPXToa0272s111 ]"} 
+时间：32845 
+
+时间：2017-02-22 08:44:29,383 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: alQtva0273s111 ]"} 
+时间：33508 
+
+时间：2017-02-22 08:44:29,987 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 7r25va0274s105 ]"} 
+时间：34113 
+
+时间：2017-02-22 08:44:30,564 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: y0aVua0274s105 ]"} 
+时间：34690 
+
+时间：2017-02-22 08:44:31,281 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: H1uH90275ns86 ]"} 
+时间：35407 
+
+时间：2017-02-22 08:44:31,786 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 3VJ3oA0275ns83 ]"} 
+时间：35912 
+
+时间：2017-02-22 08:44:32,394 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: uPdvwa0276ns82 ]"} 
+时间：36520 
+
+时间：2017-02-22 08:44:32,959 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: lkkGqa0276s105 ]"} 
+时间：37085 
+
+时间：2017-02-22 08:44:33,524 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: bHwSqa0277ns85 ]"} 
+时间：37650 
+
+时间：2017-02-22 08:44:34,093 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: ibPzKA0278s104 ]"} 
+时间：38219 
+
+时间：2017-02-22 08:44:34,834 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: EAsjLa0278s110 ]"} 
+时间：38959 
+
+时间：2017-02-22 08:44:35,361 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: .YgpFA0279s103 ]"} 
+时间：39487 
+
+时间：2017-02-22 08:44:35,930 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: A23XnA0279ns84 ]"} 
+时间：40056 
+
+时间：2017-02-22 08:44:36,517 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: H2h5Xa0280s113 ]"} 
+时间：40643 
+
+时间：2017-02-22 08:44:37,016 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: rNmx0a0281s113 ]"} 
+时间：41142 
+
+时间：2017-02-22 08:44:37,600 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: wvL4RA0281ns88 ]"} 
+时间：41726 
+
+时间：2017-02-22 08:44:38,148 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 8osHaa0282s105 ]"} 
+时间：42274 
+
+时间：2017-02-22 08:44:38,824 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: sqIqPa0282s108 ]"} 
+时间：42950 
+
+时间：2017-02-22 08:44:39,415 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: TT3NRA0283ns85 ]"} 
+时间：43541 
+
+时间：2017-02-22 08:44:39,999 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: teyuJA0284ns88 ]"} 
+时间：44125 
+
+时间：2017-02-22 08:44:40,556 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: vcVWtA0284s104 ]"} 
+时间：44681 
+
+时间：2017-02-22 08:44:41,065 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: X4JtGa0285ns80 ]"} 
+时间：45191 
+
+时间：2017-02-22 08:44:41,689 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: QpTtIA0285s112 ]"} 
+时间：45815 
+
+时间：2017-02-22 08:44:42,220 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 1v70iA0286ns90 ]"} 
+时间：46346 
+
+时间：2017-02-22 08:44:42,796 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: F0286s108 ]"} 
+时间：46921 
+
+时间：2017-02-22 08:44:43,332 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 1I6OwA0287s105 ]"} 
+时间：47458 
+
+时间：2017-02-22 08:44:43,904 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: Kpskja0287s103 ]"} 
+时间：48030 
+
+时间：2017-02-22 08:44:44,558 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: WJw.90288s113 ]"} 
+时间：48684 
+
+时间：2017-02-22 08:44:45,072 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: GwMWba0289s109 ]"} 
+时间：49198 
+
+时间：2017-02-22 08:44:45,672 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: ALbnDa0289ns86 ]"} 
+时间：49797 
+
+时间：2017-02-22 08:44:46,220 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: KDNstA0290s102 ]"} 
+时间：50345 
+
+时间：2017-02-22 08:44:46,737 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: vGf1cA0290ns86 ]"} 
+时间：50862 
+
+时间：2017-02-22 08:44:47,741 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: HQn9QA0291ns86 ]"} 
+时间：51867 
+
+时间：2017-02-22 08:44:48,271 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: QB75wA0292s110 ]"} 
+时间：52397 
+
+时间：2017-02-22 08:44:48,796 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: nDKPLA0292ns84 ]"} 
+时间：52921 
+
+时间：2017-02-22 08:44:49,366 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 7qopCA0293ns90 ]"} 
+时间：53492 
+
+时间：2017-02-22 08:44:49,938 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: RbsLda0293s113 ]"} 
+时间：54064 
+
+时间：2017-02-22 08:44:50,829 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: Sra.Ja0294ns90 ]"} 
+时间：54955 
+
+时间：2017-02-22 08:44:51,529 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: s0295s113 ]"} 
+时间：55655 
+
+时间：2017-02-22 08:44:52,050 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: Rn5iPA0296s110 ]"} 
+时间：56176 
+
+时间：2017-02-22 08:57:11,915 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：796041 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 187
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-22 08:57:12,205 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: zmVtpa0036s113 ]"} 
+时间：796330 
+
+时间：2017-02-22 08:57:14,148 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: h.zZDa0038s110 ]"} 
+时间：798274 
+
+时间：2017-02-22 08:57:14,862 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: xPIMOA0038s109 ]"} 
+时间：798988 
+
+时间：2017-02-22 08:57:15,677 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: DtzHRA0039ns83 ]"} 
+时间：799803 
+
+时间：2017-02-22 08:57:16,339 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: bNfqJa0040ns86 ]"} 
+时间：800465 
+
+时间：2017-02-22 08:57:17,169 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: hAhkAa0041ns80 ]"} 
+时间：801295 
+
+时间：2017-02-22 08:57:24,732 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：2738 
+
+时间：2017-02-22 09:54:47,456 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：3445462 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1298
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1351
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 230
+
+时间：2017-02-22 09:54:47,522 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：3445529 
+
+时间：2017-02-22 11:54:44,331 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：10642338 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1298
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1351
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 230
+
+时间：2017-02-22 11:54:44,337 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：10642344 
+
+时间：2017-02-22 12:05:08,066 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：11266072 
+
+时间：2017-02-22 12:44:47,543 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：13645550 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1298
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1351
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 230
+
+时间：2017-02-22 12:44:47,545 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：13645552 
+
+时间：2017-02-22 12:54:42,706 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：14240713 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1298
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1351
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 230
+
+时间：2017-02-22 12:54:42,707 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：14240714 

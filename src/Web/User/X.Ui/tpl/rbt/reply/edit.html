@@ -6,23 +6,25 @@
     <link href="/plug/dp/v2.1.css" rel="stylesheet" />
     <script src="/plug/dp/v2.1.js"></script>
     <style type="text/css">
-        body { background: white; }
+        body { background: white; min-width: inherit; }
         #li_img { display: none; }
         #li_tspan { display: none; }
         #li_tdate { display: none; }
         #id_text { height: 80px; }
-        .tb { display: none; }
+        .tb { display: none; position: relative; }
         .bag { background-color: red; color: white; transform: rotate(-45deg); position: absolute; top: -25px; left: -36px; padding: 30px 30px 0px 30px; font-size: 12px; display: none; }
         .bag.b2 { display: block; }
-        .grid.body { border: 1px solid #ccc; height: 290px; width: 650px; overflow-y: auto; margin-top: 5px; }
+        .grid.body { border: 1px solid #ccc; height: 360px; overflow-y: auto; margin-top: 5px; }
         .grid-item { cursor: pointer; width: 58px; display: inline-block; margin: 5px; position: relative; vertical-align: top; overflow: hidden; border: 1px solid #ccc; }
         .pager .pages { text-align: left; }
         .nickname { font-size: 12px; display: block; height: 20px; overflow: hidden; line-height: 20px; text-align: center; }
         .mark { position: absolute; left: 0; top: 0; background: url(/img/p15.png) no-repeat center center rgba(0, 0, 0, 0.42); width: 100%; height: 100%; display: none; }
         .grid-item.on .mark { display: block; }
-        #li_match, #li_keys { display: none; }
-        .hd .btn { padding: 2px; margin-left: 0; margin-right: 5px; }
+        .hd > .btn { padding: 2px; margin-left: 0; margin-right: 5px; }
+        .select_btns { position: absolute; right: 1px; top: 5px; z-index: 99; }
+        .select_btns .btn { margin-left: 5px; padding: 5px; line-height: 12px; background-color: white; font-size: 12px; }
         .hd .btn.on { border-color: #ff8a00; background-color: #ff8a00; }
+        .tspan { margin-left: 0; }
     </style>
 </head>
 <body>
@@ -42,6 +44,7 @@
         </div>
         <div class="tb">
             <div class="hd">#foreach($c in $lgs)<span class="btn" data-uin="$c.uin"><img src="data:image/jpg;base64,$c.headimg" width="30" title="${c.nickname}" /></span> #end</div>
+            <div class="select_btns"><span class="btn" onclick="select_user(0)">本页</span><span class="btn" onclick="select_user(1)">群</span><span class="btn" onclick="select_user(2)">好友</span><span class="btn" onclick="select_user(-1)">清</span></div>
             <div class="list" style="width:650px;"></div>
             <div class="tpl" style="display:none;">
                 <p class="bag b{flag}" data-id="{id}">群</p>
@@ -55,9 +58,7 @@
         </div>
     </x:form>
     <script type="text/javascript">
-
         var ids = JSON.parse('$!item.uids' || '[]');
-
         $(function () {
             $("form:eq(0)").xform({
                 prepost: function (d) {
@@ -139,6 +140,24 @@
                 $("#li_text").hide();
                 $("#li_img").show();
             }
+        }
+
+        function select_user(t) {
+            $("p[data-id]").each(function () {
+                var it = $(this);
+                var id = parseInt(it.attr("data-id"));
+                if (!id) return;
+                if (t == -1) {
+                    it.parent().removeClass("on");
+                    ids.splice(ids.indexOf(id), 1)
+                } else {
+                    if ((it.is(":visible") && t == 1) || (!it.is(":visible") && t == 2) || t == 0) {
+                        it.parent().addClass("on");
+                        if (ids.indexOf(id) >= 0) return;
+                        ids.push(it.attr("data-id"));
+                    }
+                }
+            });
         }
 
     </script>

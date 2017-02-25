@@ -42,6 +42,7 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Web" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -67,6 +68,10 @@
     <ProjectReference Include="..\Rbt\X.Net\X.Net.csproj">
       <Project>{f7a04fb8-f06d-487a-91ad-8c875ff4e59e}</Project>
       <Name>X.Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web\User\X.App\X.App.csproj">
+      <Project>{0A949169-01F8-47F3-88C0-C52B317AA82B}</Project>
+      <Name>X.App</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

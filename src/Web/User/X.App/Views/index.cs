@@ -6,9 +6,5 @@ namespace X.App.Views
 {
     public class index : xview
     {
-        protected override void InitView()
-        {
-            base.InitView();
-        }
     }
 }

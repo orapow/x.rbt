@@ -13,7 +13,7 @@ namespace X.Wx.App
         public static CheckResp user { get; private set; }
 
         static string key = "";//应用key
-        static string gateway = "http://rbt.tunnel.qydev.com/api/";//"http://rbt.80xc.com/api/";//网关
+        static string gateway = "http://rbt.80xc.com/api/";//网关
         class api
         {
             public string name;
@@ -23,7 +23,7 @@ namespace X.Wx.App
 
         static T doapi<T>(string api, Dictionary<string, string> values) where T : Resp
         {
-            var wc = new Http("ukey=" + user.uk, 30);
+            var wc = new Http("ukey-wxc6982f28ed963521=" + user.uk, 30);
             last = new api() { name = api, ps = values };
             string json = "";
             var r = Activator.CreateInstance<T>();

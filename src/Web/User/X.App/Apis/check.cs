@@ -12,11 +12,11 @@ namespace X.App.Apis
 {
     public class check : xapi
     {
-        protected override bool needus
+        protected override int needus
         {
             get
             {
-                return false;
+                return 0;
             }
         }
 

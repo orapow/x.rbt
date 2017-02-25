@@ -13,7 +13,7 @@ namespace X.App.Apis
     {
         protected override XResp Execute()
         {
-            cu.ukey = "";
+            CacheHelper.Remove(cu.ukey);
             SubmitDBChanges();
 
             return new XResp();

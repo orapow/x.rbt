@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     #parse("wx/_head.html")
-    <title>分享 $u.nickname 的红包</title>
+    <title>分享 $mp.name 的红包</title>
     <style type="text/css">
         body { font-family: "微软雅黑"; }
         .toshare { position: absolute; left: 0; top: 0; width: 100%; display: none; }
@@ -28,9 +28,6 @@
         #end
         <br />
     </div>
-    <!--<div style="text-align:center;">
-        <span class="btn" style="background-color:#bababa;color:white;" onclick="history.back()">返回</span>
-    </div>-->
     <br />
     <br />
     <br />
@@ -40,7 +37,7 @@
         sharedata = {
             link: "http://$cfg.domain/wx/red/show-${rid}-${cu.user_id}.html",
             title: "[红包]$bao.remark",
-            desc: "#if($cu.user_id==$bao.user_id)$cu.nickname 发红包了#else$cu.nickname 转发了 $u.nickname的红包#end，赶快来抢，手慢无！！！",
+            desc: "#if($cu.user_id==$bao.user_id)$cu.nickname 发红包啦#else$cu.nickname 转发了 $mp.name 的红包#end，赶快来抢，手慢无！！！",
             img: "$cu.headimg"
         };
 

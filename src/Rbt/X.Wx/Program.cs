@@ -137,12 +137,13 @@ namespace X.Wx
                     Thread.Sleep(5 * 1000);
                     t++;
                     if (t < 10) continue;
+                    if (DateTime.Now.Hour < 8 || DateTime.Now.Hour > 21) continue;
                     t = 0;
                     var st = DateTime.Now.ToString("HH:mm");
                     outLog("群发@" + st + "->开始获取");
                     var rsp = Sdk.LoadMsg(uin);
                     if (stop) break;
-                    if (rsp.items.Count() == 0) { outLog("群发@" + st + "->无内容"); continue; }
+                    if (rsp.items == null || rsp.items.Count() == 0) { outLog("群发@" + st + "->无内容"); continue; }
                     outLog("群发@" + st + "->开始发送，" + rsp.items.Count() + "个");
                     foreach (var m in rsp.items)
                     {
@@ -238,6 +239,7 @@ namespace X.Wx
 
         static void Wx_OutLog(string log)
         {
+            //if(log.StartsWith("synccheck->")&&log.Contains())
             Debug.WriteLine("log@" + DateTime.Now.ToString("HH:mm:ss.fff") + "->" + log);
         }
 
@@ -261,8 +263,18 @@ namespace X.Wx
                 if (u == null) { outLog("收到无法识别的消息：" + m.Content); return; }
 
                 var cot = Tools.RemoveHtml(m.Content);
+                var ur = "";
+
+                if (m.FromUserName[1] == '@' && cot[0] == '@')
+                {
+                    var ct = cot.Split(':');
+                    ur = ct[0];
+                    cot = ct[1];
+                }
 
                 object mg = null;
+
+                if (msg.MsgType != 1) main.OutLog(cot);
 
                 switch (msg.MsgType)
                 {
@@ -282,22 +294,24 @@ namespace X.Wx
                         //wx.VerifyUser();//自动同意
                         cot = "请求加好友";
                         break;
+                    case 47:
+                        cot = "自定义表情";
+                        break;
                     case 1000:
                         break;
                     case 10002:
                         break;
                 }
 
-                if (name[1] == '@')
+                if (!string.IsNullOrEmpty(ur))
                 {
-                    var c = cot.Split(':');
-                    var su = u?.MemberList.FirstOrDefault(o => o.UserName == c[0]);
+                    var su = u?.MemberList.FirstOrDefault(o => o.UserName == ur);
                     if (su != null)
                     {
                         var img = wx.GetHeadImage(new List<string>() { u.UserName, su.UserName });
                         mg = new
                         {
-                            body = c[1],
+                            body = cot,
                             u = new { name = su.NickName, img = img != null && img.ContainsKey(su.UserName) ? img[su.UserName] : "", id = su.UserName },
                             r = new { name = u.NickName, img = img != null && img.ContainsKey(u.UserName) ? img[u.UserName] : "", id = u.UserName }
                         };
@@ -312,7 +326,7 @@ namespace X.Wx
                         u = new { name = u.NickName, img = img != null && img.ContainsKey(u.UserName) ? img[u.UserName] : "", id = u.UserName }
                     };
                 }
-                
+
                 main.SetMsg(mg);
 
                 if (repes == null || repes.Count == 0) return;
@@ -342,7 +356,7 @@ namespace X.Wx
                     if (rep != null) break;
                 }
 
-                if (rep != null) wx.Send(new List<string>() { m.FromUserName }, rep.type, rep.content);
+                if (rep != null && m.FromUserName != wx.user.UserName) wx.Send(new List<string>() { m.FromUserName }, rep.type, rep.content);
 
                 //if (name == "橙子兄弟") wx.Send(new List<string>() { m.FromUserName }, 3, HttpUtility.HtmlDecode(m.Content));
 

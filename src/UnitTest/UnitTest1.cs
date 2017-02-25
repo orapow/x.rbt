@@ -13,6 +13,9 @@ using System.Net.Sockets;
 using System.Security.Authentication;
 using System.Security.Cryptography.X509Certificates;
 using System.Collections;
+using X.App.Com;
+using System.Web;
+using System.IO;
 
 namespace UnitTest
 {
@@ -32,9 +35,10 @@ namespace UnitTest
             //Console.WriteLine("dt->" + Encoding.UTF8.GetString(dt));
             //Console.WriteLine(Tools.RemoveHtml("<title style=\"asdfqewrqweq: sadfa;\">C#正则删除HTML标签 - HOT SUMMER - 博客园</title>"));
 
-            string serverCertificateName = "login.wx.qq.com";
-            string machineName = "login.wx.qq.com";
-            SslTcpClient.RunClient(machineName, serverCertificateName);
+            //var msg = Wx.Msg.Get("wx55bfd5ad6998a826", "<xml><Encrypt><![CDATA[UzHfJ6kvqVjYZndF6i5Xqo3bLesQvYVTs8hWcEt6Slmbqj/ILjsu++ih9lP1Y9AodrxsW5NnyB6kM8TCcsdU6CDNRZe/Q7fZKftcM4oy6c0iFQtS8B+xXi+ntSl+i0Vp0/J3HTmz0MIsZf19VEuRNaemduh1oeldjaCYJ3zRSAHroL8obfzVPRpkr9binPfwo+YmuzUB7SlHMcHjWx+dwdBza63qnZvD62GfeDFfka9Mq0t53/9SKRnZTpXLHp/bNIgvbt/e9Ev1GnSjq6UW7lwzJsO2CbK+dZn6DUS2ZIN3ObvKZPfNw4q/sAuG6MP8cH+EPakmn+lLiZ+3L1SDgX2AT0eCefLAbP7OaSluXvEq5Js/8PW/9zkjVint0T774Vfs/KbqjjyeNLxtAFrgvGLSUN2Y1Yf27oHJKYLQWugX1cYFKqyCLO/YfvI9cdu373bvudoOToDJsPcDPceyxQ==]]></Encrypt><MsgSignature><![CDATA[9b4317209a8766c7aee6de6e6bfd04343153be4d]]></MsgSignature><TimeStamp><![CDATA[1487900361]]></TimeStamp><Nonce><![CDATA[ivo18KY55]]></Nonce></xml>", "9b4317209a8766c7aee6de6e6bfd04343153be4d", "ivo18KY55", "1487900361");
+            HttpContext.Current = new HttpContext(new HttpRequest("", "http://localhost", ""),
+                                                  new HttpResponse(new StringWriter(new StringBuilder()))); //
+            var st = Wx.Pay.PayToOpenid("wxc6982f28ed963521", "1344240501", "o84gaswfHg0XzHBeJzAjY4PdyXi4", "44", 1, "d:\\", "gzkdzMh0AsfpDKJTjTCZPYq2QKphK5Kmss");
 
         }
 

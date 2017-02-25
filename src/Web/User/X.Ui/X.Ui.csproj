@@ -70,7 +70,10 @@
     <Content Include="res\img\wx\k.png" />
     <Content Include="res\img\wx\h.jpg" />
     <Content Include="res\img\wx\sp.png" />
-    <Content Include="res\js\jq_2.1.4.js" />
+    <Content Include="res\js\jquery.mousewheel.min.js" />
+    <Content Include="res\js\jq_172.js" />
+    <Content Include="res\js\jq_214.js" />
+    <Content Include="res\plug\scroll\mCSB_buttons.png" />
     <Content Include="res\js\swp.min.js" />
     <Content Include="res\plug\hchart\hcharts.js" />
     <Content Include="res\js\x.form.js" />
@@ -83,6 +86,8 @@
     <Content Include="res\plug\dp\v2.1.js" />
     <Content Include="res\plug\icon\font\icon.svg" />
     <Content Include="res\plug\icon\v3.0.css" />
+    <Content Include="res\plug\scroll\js.min.js" />
+    <Content Include="res\plug\scroll\thems.css" />
     <Content Include="res\plug\um\dialogs\image\image.css" />
     <Content Include="res\plug\um\dialogs\image\image.js" />
     <Content Include="res\plug\um\dialogs\image\images\close.png" />
@@ -106,6 +111,7 @@
     <Content Include="res\plug\um\umeditor.config.js" />
     <Content Include="res\plug\um\umeditor.min - 复制.js" />
     <Content Include="res\plug\um\umeditor.min.js" />
+    <Content Include="tpl\app\mp\list.html" />
     <Content Include="tpl\app\cd\edit.html" />
     <Content Include="tpl\app\cd\list.html" />
     <Content Include="tpl\app\red\detail.html" />
@@ -124,7 +130,9 @@
     <Content Include="tpl\rbt\reply\edit.html" />
     <Content Include="tpl\rbt\reply\list.html" />
     <Content Include="tpl\user\akey.html" />
+    <Content Include="tpl\wx\auth.html" />
     <Content Include="tpl\wx\login.html" />
+    <Content Include="tpl\wx\red\detail.html" />
     <Content Include="tpl\wx\user\cash.html" />
     <Content Include="tpl\wx\user\reds.html" />
     <Content Include="tpl\wx\red\gets.html" />
@@ -132,7 +140,6 @@
     <Content Include="tpl\wx\red\show.html" />
     <Content Include="tpl\wx\user\info.html" />
     <Content Include="tpl\wx\red\qrcode.html" />
-    <Content Include="tpl\wx\user\balance.html" />
     <Content Include="tpl\wx\_foot.html" />
     <Content Include="tpl\wx\_head.html" />
     <Content Include="tpl\_foot.html" />

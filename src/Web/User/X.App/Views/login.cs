@@ -17,19 +17,19 @@ namespace X.App.Views
 
         private int isin = 0;
 
+        protected override int needus
+        {
+            get
+            {
+                return 0;
+            }
+        }
+
         protected override string GetParmNames
         {
             get
             {
                 return "uk-url";
-            }
-        }
-
-        protected override bool needus
-        {
-            get
-            {
-                return false;
             }
         }
 
@@ -41,7 +41,7 @@ namespace X.App.Views
                 cu = DB.x_user.FirstOrDefault(o => o.ukey == uk);
                 if (cu != null)
                 {
-                    Context.Response.SetCookie(new System.Web.HttpCookie("ukey", uk));
+                    Context.Response.SetCookie(new System.Web.HttpCookie("ukey-" + cfg.wx_appid, uk));
                     isin = 1;
                 }
             }

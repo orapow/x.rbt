@@ -7,11 +7,11 @@ namespace X.App.Views.rbt
 {
     public class chat : xview
     {
-        protected override bool needus
+        protected override int needus
         {
             get
             {
-                return false;
+                return 0;
             }
         }
     }

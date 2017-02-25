@@ -30,28 +30,28 @@
 <body>
     <div class="show">
         <div class="user">
-            <img src="$cu.headimg" class="hd" />
-            <span class="nk">$cu.nickname</span>
+            <img src="$get.get_img" class="hd" />
+            <span class="nk">$get.get_nk</span>
             <span class="txt">
                 您的余额为
             </span>
             <span class="am">
-                $cu.balance<span style="font-size:16px;">元</span>
+                $am<span style="font-size:16px;">元</span>
             </span>
         </div>
         <div class="sp">
             <img src="/img/wx/sp.png" style="vertical-align:top;width:100%;" />
         </div>
         <div class="weui-cells weui-cells_form" style="margin-top:0;border:none;">
-            <div class="weui-cell">
+            <!--<div class="weui-cell">
                 <div class="weui-cell__hd"><label class="weui-label">金额：</label></div>
                 <div class="weui-cell__bd">
                     <input class="weui-input" type="number" pattern="[0-9]*" id="am" placeholder="请输入提取金额">
                 </div>
-            </div>
-            <div class="weui-cells__tips">2元以上可提现，一天可提现一次，提现免费。</div>
+            </div>-->
+            <div class="weui-cells__tips">一天可提现一次，提现免费。</div>
             <div class="weui-btn-area">
-                <a class="weui-btn weui-btn_primary" href="javascript:" onclick="do_getcash()">确定</a>
+                <a class="weui-btn weui-btn_primary" href="javascript:" onclick="do_getcash()">确定提现 $am元</a>
             </div>
         </div>
         <div class="qrcode" style="background-color:white;text-align:center;">
@@ -75,10 +75,8 @@
         });
 
         function do_getcash() {
-            var a = parseFloat($("#am").val());
-            if (!a || a < 0) { alert("请输入大于0的金额"); return; }
             if (!confirm("确定要提现吗？一天只有一次机会哦")) return;
-            doapi("wx.user.getcash", { amount: a }, function (d) {
+            doapi("wx.user.getcash", { gt: "$gt" }, function (d) {
                 if (d.issucc) alert("提交成功，请等待处理...");
             });
         }

@@ -12,3 +12,11 @@ D:\Pro\x.rbt\src\UnitTest\bin\Debug\zh-Hans\Microsoft.VisualStudio.QualityTools.
 D:\Pro\x.rbt\src\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
 D:\Pro\x.rbt\src\UnitTest\obj\Debug\UnitTest.dll
 D:\Pro\x.rbt\src\UnitTest\obj\Debug\UnitTest.pdb
+D:\Pro\x.rbt\src\UnitTest\bin\Debug\X.App.dll
+D:\Pro\x.rbt\src\UnitTest\bin\Debug\Gma.QrCodeNet.Encoding.Net35.dll
+D:\Pro\x.rbt\src\UnitTest\bin\Debug\X.Web.dll
+D:\Pro\x.rbt\src\UnitTest\bin\Debug\X.Data.dll
+D:\Pro\x.rbt\src\UnitTest\bin\Debug\NVelocity.dll
+D:\Pro\x.rbt\src\UnitTest\bin\Debug\X.App.pdb
+D:\Pro\x.rbt\src\UnitTest\bin\Debug\X.Web.pdb
+D:\Pro\x.rbt\src\UnitTest\bin\Debug\X.Data.pdb

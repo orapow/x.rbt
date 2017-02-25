@@ -6,6 +6,14 @@ namespace X.App.Views.com
 {
     public class dict : xview
     {
+        protected override int needus
+        {
+            get
+            {
+                return 0;
+            }
+        }
+
         private string code = string.Empty;
         protected override void Validate()
         {

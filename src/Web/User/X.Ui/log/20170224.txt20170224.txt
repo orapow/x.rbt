@@ -1,0 +1,42 @@
+
+时间：2017-02-24 08:55:31,193 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：61472 
+
+时间：2017-02-24 08:56:32,137 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：122416 
+
+时间：2017-02-24 08:57:33,041 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：183321 
+
+时间：2017-02-24 08:58:34,044 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：244324 
+
+时间：2017-02-24 08:59:34,787 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：305067 
+
+时间：2017-02-24 09:00:35,674 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：365953 

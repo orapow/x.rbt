@@ -1,0 +1,1601 @@
+
+时间：2017-02-20 09:52:22,310 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：773 
+
+时间：2017-02-20 09:52:27,963 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：6426 
+
+时间：2017-02-20 09:52:52,747 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：31210 
+
+时间：2017-02-20 09:53:21,398 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：59861 
+
+时间：2017-02-20 10:09:48,933 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1047395 
+
+时间：2017-02-20 10:09:56,025 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1054488 
+
+时间：2017-02-20 10:14:07,124 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1305587 
+
+时间：2017-02-20 10:30:32,404 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：2290866 
+
+时间：2017-02-20 11:15:52,762 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：5011225 
+
+时间：2017-02-20 11:16:39,363 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：5057825 
+
+时间：2017-02-20 11:17:50,813 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：5129276 
+
+时间：2017-02-20 17:41:24,970 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：28143433 
+
+时间：2017-02-20 17:41:34,122 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：28152585 
+
+时间：2017-02-20 17:49:45,419 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：307 
+
+时间：2017-02-20 17:49:53,258 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：8147 
+
+时间：2017-02-20 18:05:20,037 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：253 
+
+时间：2017-02-20 18:15:03,626 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：583843 
+
+时间：2017-02-20 18:24:49,270 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1169486 
+
+时间：2017-02-20 18:34:51,285 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1771501 
+
+时间：2017-02-20 18:39:54,378 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：3000 
+
+时间：2017-02-20 18:40:10,406 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：19027 
+
+时间：2017-02-20 18:40:59,727 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：22258 
+
+时间：2017-02-20 18:41:22,475 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：45006 
+
+时间：2017-02-20 18:44:17,371 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：2659 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'wx/auth.html'
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 108
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 18:44:41,454 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：26742 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1272
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1326
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-20 18:44:41,547 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：26835 
+
+时间：2017-02-20 18:45:29,138 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：无效的 URI: 未能确定 URI 的格式。 
+时间：32466 
+System.UriFormatException: 无效的 URI: 未能确定 URI 的格式。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 System.Uri..ctor(String uriString)
+   在 System.Net.WebRequest.Create(String requestUriString)
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 213
+
+时间：2017-02-20 18:45:29,191 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：32520 
+System.UriFormatException: 无效的 URI: 未能确定 URI 的格式。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 System.Uri..ctor(String uriString)
+   在 System.Net.WebRequest.Create(String requestUriString)
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 244
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 256
+   在 X.App.Com.Wx.Open.Get_AuthInfo(String auth_code) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 232
+   在 X.App.Views.wx.auth.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\auth.cs:行号 28
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 18:45:40,570 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：无效的 URI: 未能确定 URI 的格式。 
+时间：43898 
+System.UriFormatException: 无效的 URI: 未能确定 URI 的格式。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 System.Uri..ctor(String uriString)
+   在 System.Net.WebRequest.Create(String requestUriString)
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 213
+
+时间：2017-02-20 18:45:40,572 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：43900 
+System.UriFormatException: 无效的 URI: 未能确定 URI 的格式。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 System.Uri..ctor(String uriString)
+   在 System.Net.WebRequest.Create(String requestUriString)
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 244
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 256
+   在 X.App.Com.Wx.Open.Get_AuthInfo(String auth_code) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 232
+   在 X.App.Views.wx.auth.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\auth.cs:行号 28
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 18:46:31,121 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：489 
+
+时间：2017-02-20 18:47:02,440 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：无效的 URI: 未能确定 URI 的格式。 
+时间：31808 
+System.UriFormatException: 无效的 URI: 未能确定 URI 的格式。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 System.Uri..ctor(String uriString)
+   在 System.Net.WebRequest.Create(String requestUriString)
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 213
+
+时间：2017-02-20 18:47:05,386 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：34754 
+System.UriFormatException: 无效的 URI: 未能确定 URI 的格式。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 System.Uri..ctor(String uriString)
+   在 System.Net.WebRequest.Create(String requestUriString)
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 244
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 256
+   在 X.App.Com.Wx.Open.Get_AuthInfo(String auth_code) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 232
+   在 X.App.Views.wx.auth.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\auth.cs:行号 25
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 18:50:34,083 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：无效的 URI: 未能确定 URI 的格式。 
+时间：243451 
+System.UriFormatException: 无效的 URI: 未能确定 URI 的格式。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 System.Uri..ctor(String uriString)
+   在 System.Net.WebRequest.Create(String requestUriString)
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 213
+
+时间：2017-02-20 18:50:34,084 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：243452 
+System.UriFormatException: 无效的 URI: 未能确定 URI 的格式。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 System.Uri..ctor(String uriString)
+   在 System.Net.WebRequest.Create(String requestUriString)
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 244
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 256
+   在 X.App.Com.Wx.Open.Get_AuthInfo(String auth_code) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 232
+   在 X.App.Views.wx.auth.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\auth.cs:行号 25
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 18:50:42,702 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：546 
+
+时间：2017-02-20 19:15:08,996 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：1466840 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1272
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1326
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-20 19:15:09,009 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：1466853 
+
+时间：2017-02-20 19:23:15,838 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：371 
+
+时间：2017-02-20 19:24:50,968 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：95501 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1272
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1326
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-20 19:24:50,983 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：95516 
+
+时间：2017-02-20 19:24:54,425 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：98959 
+
+时间：2017-02-20 19:25:21,465 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：420 
+
+时间：2017-02-20 19:29:21,479 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：APPID 校验错误 
+时间：240434 
+X.App.Com.Wx+WxExcep: APPID 校验错误
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1343
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 19:29:21,479 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：APPID 校验错误 
+时间：240434 
+X.App.Com.Wx+WxExcep: APPID 校验错误
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1343
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 19:29:21,479 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：APPID 校验错误 
+时间：240434 
+X.App.Com.Wx+WxExcep: APPID 校验错误
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1343
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 19:31:04,209 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：APPID 校验错误 
+时间：343164 
+X.App.Com.Wx+WxExcep: APPID 校验错误
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1343
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 19:31:05,488 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：APPID 校验错误 
+时间：344443 
+X.App.Com.Wx+WxExcep: APPID 校验错误
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1343
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 19:31:06,072 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：APPID 校验错误 
+时间：345027 
+X.App.Com.Wx+WxExcep: APPID 校验错误
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1343
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 19:31:15,806 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：APPID 校验错误 
+时间：354761 
+X.App.Com.Wx+WxExcep: APPID 校验错误
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1343
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 19:32:48,186 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：APPID 校验错误 
+时间：447141 
+X.App.Com.Wx+WxExcep: APPID 校验错误
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1343
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 19:33:34,261 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：APPID 校验错误 
+时间：493216 
+X.App.Com.Wx+WxExcep: APPID 校验错误
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1343
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 19:35:45,581 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：APPID 校验错误 
+时间：624536 
+X.App.Com.Wx+WxExcep: APPID 校验错误
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1343
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 19:36:12,548 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：651503 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 183
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 113
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 60
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 19:36:51,206 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：690161 
+
+时间：2017-02-20 19:37:01,123 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：700078 
+
+时间：2017-02-20 19:37:18,040 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：716995 
+
+时间：2017-02-20 19:37:18,114 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：717069 
+
+时间：2017-02-20 19:37:18,152 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：717107 
+
+时间：2017-02-20 19:37:18,152 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：717107 
+
+时间：2017-02-20 19:37:18,263 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：717218 
+
+时间：2017-02-20 19:37:18,366 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：717321 
+
+时间：2017-02-20 19:37:46,147 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：745102 
+
+时间：2017-02-20 19:49:37,297 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：APPID 校验错误 
+时间：162 
+X.App.Com.Wx+WxExcep: APPID 校验错误
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1343
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 19:49:37,377 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：242 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 96
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 19:50:01,540 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：513 
+
+时间：2017-02-20 19:50:03,561 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：APPID 校验错误 
+时间：2534 
+X.App.Com.Wx+WxExcep: APPID 校验错误
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1343
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 19:50:21,988 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：20960 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 19:50:34,141 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：APPID 校验错误 
+时间：33114 
+X.App.Com.Wx+WxExcep: APPID 校验错误
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1343
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 19:50:34,149 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：33122 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 19:51:49,921 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：APPID 校验错误 
+时间：108894 
+X.App.Com.Wx+WxExcep: APPID 校验错误
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1343
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 19:51:49,929 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：108902 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 19:51:59,108 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：APPID 校验错误 
+时间：118081 
+X.App.Com.Wx+WxExcep: APPID 校验错误
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1343
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 19:51:59,117 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：118090 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 19:52:38,071 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：APPID 校验错误 
+时间：157044 
+X.App.Com.Wx+WxExcep: APPID 校验错误
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1343
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 19:52:38,079 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：157052 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 19:55:32,436 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：331409 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1272
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1326
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-20 19:55:32,448 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：331421 
+
+时间：2017-02-20 19:55:59,397 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：358370 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1272
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1326
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-20 19:56:03,889 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：362862 
+
+时间：2017-02-20 19:56:25,260 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：384233 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1272
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1326
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-20 19:56:25,268 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：384240 
+
+时间：2017-02-20 19:56:31,610 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：390583 
+X.App.Com.Wx+WxExcep: {"errcode":61003,"errmsg":"component is not authorized by this account hint: [KKPGha0794e575]"}
+   在 X.App.Com.Wx.Open.Get_AuthInfo(String auth_code) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 234
+   在 X.App.Views.wx.auth.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\auth.cs:行号 17
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 19:59:50,974 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：589947 
+X.App.Com.Wx+WxExcep: {"errcode":61003,"errmsg":"component is not authorized by this account hint: [YNq9pa0993e575]"}
+   在 X.App.Com.Wx.Open.Get_AuthInfo(String auth_code) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 234
+   在 X.App.Views.wx.auth.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\auth.cs:行号 17
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 19:59:52,756 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：591729 
+X.App.Com.Wx+WxExcep: {"errcode":61003,"errmsg":"component is not authorized by this account hint: [358_mA0995e578]"}
+   在 X.App.Com.Wx.Open.Get_AuthInfo(String auth_code) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 234
+   在 X.App.Views.wx.auth.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\auth.cs:行号 17
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 20:00:22,167 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：621139 
+
+时间：2017-02-20 20:03:12,923 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：791896 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1272
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1326
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-20 20:03:20,146 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：799119 
+
+时间：2017-02-20 20:03:20,172 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：799145 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1272
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1326
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-20 20:03:20,188 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：799161 
+
+时间：2017-02-20 20:03:21,152 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：800125 
+
+时间：2017-02-20 20:03:45,447 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：824420 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1272
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1326
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 20:03:45,454 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：824427 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 20:04:04,409 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：APPID 校验错误 
+时间：843382 
+X.App.Com.Wx+WxExcep: APPID 校验错误
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1343
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 20:04:04,418 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：843390 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 20:04:33,596 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：872569 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1272
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1326
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 20:04:33,604 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：872577 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 20:12:19,491 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1338464 
+
+时间：2017-02-20 20:15:04,284 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：1503256 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1272
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1326
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 20:15:04,284 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：1503256 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1272
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1326
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 20:15:05,123 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1504096 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 20:15:05,129 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1504102 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 20:15:33,294 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：1532267 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1272
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1326
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 20:15:33,302 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1532275 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 20:16:06,897 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：APPID 校验错误 
+时间：1565870 
+X.App.Com.Wx+WxExcep: APPID 校验错误
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1343
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 20:16:06,922 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：APPID 校验错误 
+时间：1565895 
+X.App.Com.Wx+WxExcep: APPID 校验错误
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1343
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 20:16:06,897 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：APPID 校验错误 
+时间：1565870 
+X.App.Com.Wx+WxExcep: APPID 校验错误
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1343
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 20:16:06,930 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1565903 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 20:16:06,958 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1565931 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 20:16:06,987 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1565960 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 20:16:46,195 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：APPID 校验错误 
+时间：1605167 
+X.App.Com.Wx+WxExcep: APPID 校验错误
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1343
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 20:16:46,203 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1605175 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 20:20:20,391 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：10202 
+
+时间：2017-02-20 20:20:28,014 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：17824 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1272
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1326
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 20:20:34,728 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：24538 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 20:20:35,765 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：25575 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1272
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1326
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 20:20:36,997 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：26808 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 20:20:37,060 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：26871 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1272
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1326
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 20:20:37,074 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：26884 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 20:20:42,668 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：32478 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1272
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1326
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 20:20:57,561 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：47372 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 20:21:11,166 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：60977 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1272
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1326
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 20:21:11,176 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：60987 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 20:22:10,197 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：120008 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1272
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1326
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 20:22:10,206 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：120017 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 20:22:24,782 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：134593 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1272
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1326
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 20:22:24,789 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：134600 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 20:25:06,007 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：337 
+
+时间：2017-02-20 20:25:07,762 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：2092 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1273
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1327
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 20:25:07,780 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：2110 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 76
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 20:29:05,543 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：208 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1273
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1327
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 20:29:05,620 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：285 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 77
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 20:33:12,729 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：331 
+
+时间：2017-02-20 20:46:33,131 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：247346 
+
+时间：2017-02-20 20:46:34,170 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：248384 
+
+时间：2017-02-20 20:46:58,072 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：272286 
+
+时间：2017-02-20 20:50:08,225 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：462440 
+
+时间：2017-02-20 20:50:08,256 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：462471 
+
+时间：2017-02-20 20:50:08,279 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：462494 
+
+时间：2017-02-20 20:50:08,280 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：462495 
+
+时间：2017-02-20 21:09:31,351 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：131 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 21:09:31,414 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：194 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 77
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 21:10:33,084 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：61863 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 21:10:33,085 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：61864 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 77
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 21:10:57,762 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：86542 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 21:10:57,762 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：86542 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 77
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 21:12:04,805 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：153584 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 21:12:04,806 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：153585 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 77
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 63
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 21:15:15,097 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：115187 
+
+时间：2017-02-20 21:18:40,109 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：85225 
+
+时间：2017-02-20 21:20:02,831 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：26442 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-20 21:20:03,045 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：26656 
+
+时间：2017-02-20 21:20:13,090 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：36702 
+
+时间：2017-02-20 21:21:17,233 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：21293 
+
+时间：2017-02-20 21:24:05,522 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：510 
+
+时间：2017-02-20 21:35:06,754 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：661741 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 183
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 91
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 60
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 21:35:06,759 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：661746 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 183
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 91
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 60
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-20 21:44:49,048 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：560521 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-20 21:44:49,110 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：560583 
+
+时间：2017-02-20 21:45:35,426 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：606899 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 938
+
+时间：2017-02-20 22:05:04,968 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：1776441 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-20 22:05:04,969 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：1776442 
+
+时间：2017-02-20 23:15:01,870 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：5973342 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-20 23:15:01,870 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：5973342 
+
+时间：2017-02-20 23:34:28,985 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：7140457 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-20 23:34:28,986 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：7140458 
+
+时间：2017-02-20 23:54:47,671 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：8359143 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-20 23:54:47,672 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：8359144 

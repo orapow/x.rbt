@@ -10,7 +10,7 @@ namespace X.App.Views.wx.user
         protected override void InitDict()
         {
             base.InitDict();
-            dict.Add("count", DB.x_red_get.Count(o => o.owner == cu.user_id));
+            dict.Add("count", DB.x_red_get.Count(o => o.get_op == opid));
         }
     }
 }

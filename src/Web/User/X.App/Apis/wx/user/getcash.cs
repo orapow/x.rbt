@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using X.App.Com;
+using X.Core.Cache;
 using X.Core.Utility;
 using X.Data;
 using X.Web;
@@ -12,23 +13,32 @@ namespace X.App.Apis.wx.user
 {
     public class getcash : xapi
     {
-        [ParmsAttr(name = "金额", min = 2)]
-        public decimal amount { get; set; }
+        [ParmsAttr(name = "getid", req = true)]
+        public string gt { get; set; }
+
+        protected override int needus
+        {
+            get
+            {
+                return 1;
+            }
+        }
+
         protected override XResp Execute()
         {
-            if (amount > cu.balance || cu.balance < 2) throw new XExcep("0x0024");
+            var id = CacheHelper.Get<string>("cash-" + gt).Split('-');
+            if (id.Length != 2) throw new XExcep("0x0028");
 
-            if (cu.x_balan_get.Count(o => o.ctime.Value.Date == DateTime.Now.Date) > 0) throw new XExcep("0x0025");
+            var getid = int.Parse(id[1]);
+            var get = DB.x_red_get.FirstOrDefault(o => o.red_get_id == getid);
+            if (get == null) throw new XExcep("0x0015");
 
-            var g = new x_balan_get() { user_id = cu.user_id, ctime = DateTime.Now, amount = amount, remark = "提现" + amount + "元", balance = cu.balance };
-            DB.x_balan_get.InsertOnSubmit(g);
-            SubmitDBChanges();
+            if (get.cashed == true) throw new XExcep("0x0029");
 
-            g = DB.x_balan_get.FirstOrDefault(o => o.balan_get_id == g.balan_get_id);
-
-            var od = Wx.Pay.PayToOpenid(cfg.wx_appid, cfg.wx_mch_id, cu.openid, g.balan_get_id + "", amount, cfg.wx_certpath, cfg.wx_paykey);
-            g.result = Serialize.ToJson(od);
-            if (od.result_code == "SUCCESS") { cu.balance -= amount; g.balance = cu.balance; }
+            var od = Wx.Pay.PayToOpenid(cfg.wx_appid, cfg.wx_mch_id, cu.openid, getid.ToString(), (get.amount.Value + get.myramount.Value) / 100M, cfg.wx_certpath, cfg.wx_paykey);
+            get.remark = Serialize.ToJson(od);
+            get.cashtime = DateTime.Now;
+            if (od.result_code == "SUCCESS") { get.cashed = true; }
             SubmitDBChanges();
 
             if (od.result_code == "SUCCESS") return new XResp();

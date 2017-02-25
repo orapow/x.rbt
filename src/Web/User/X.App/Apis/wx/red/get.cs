@@ -11,7 +11,15 @@ namespace X.App.Apis.wx.red
     {
         [ParmsAttr(name = "红包ID", min = 1)]
         public int id { get; set; }
-        public int uid { get; set; }
+        public int upid { get; set; }
+
+        protected override int needus
+        {
+            get
+            {
+                return 2;
+            }
+        }
 
         protected override XResp Execute()
         {
@@ -20,9 +28,9 @@ namespace X.App.Apis.wx.red
             if (r.status == 2) throw new XExcep("0x0021");
             if (r.status == 3) throw new XExcep("0x0022");
 
-            if (r.x_red_get.Count(o => o.owner == cu.user_id) > 0) throw new XExcep("0x0023");
+            if (r.x_red_get.Count(o => o.get_op == cu.openid) > 0) throw new XExcep("0x0023");
 
-            var gt = r.x_red_get.Where(o => o.owner == 0).OrderBy(o => Guid.NewGuid()).FirstOrDefault();
+            var gt = r.x_red_get.Where(o => o.status == 1).OrderBy(o => Guid.NewGuid()).FirstOrDefault();
             if (gt == null) throw new XExcep("0x0021");
 
             var lk = CacheHelper.Get<string>("red.get:" + cu.user_id);
@@ -31,11 +39,13 @@ namespace X.App.Apis.wx.red
             CacheHelper.Save("red.get:" + cu.user_id, "1");
 
             gt.status = 2;
-            gt.owner = cu.user_id;
+            gt.get_op = cu.openid;
+            gt.get_nk = cu.nickname;
+            gt.get_img = cu.headimg;
             gt.ctime = DateTime.Now;
 
             r.geted++;
-            if (r.geted == r.count || r.x_red_get.Count(o => o.owner == 0) == 0)
+            if (r.geted == r.count || r.x_red_get.Count(o => o.status == 1) == 0)
             {
                 r.status = 2;
                 r.geted = r.count;
@@ -44,48 +54,12 @@ namespace X.App.Apis.wx.red
             }
 
             var am = gt.amount.Value;// / 100.0);
-            var uam = (int)(am * r.upcash / 100.0);// / (decimal)100.0;//上级提拥10%
 
-            if (uid > 0 && uid != cu.user_id)
+            if (upid > 0)
             {
-                gt.upid = uid;
-                var pu = DB.x_user.FirstOrDefault(o => o.user_id == uid);
-                if (pu != null)
-                {
-                    gt.amount = am - uam;
-                    gt.ramount = uam;
-                    pu.balance += (decimal)(gt.ramount / 100.0);
-                    cu.balance += (decimal)(gt.amount / 100.0);
-                }
-                else
-                {
-                    cu.balance += (decimal)(gt.amount / 100.0);
-                }
-            }
-            else
-            {
-                cu.balance += (decimal)(gt.amount / 100.0);
-            }
-
-            var dt = new x_balan_detail()
-            {
-                amount = gt.amount / 100M,
-                user_id = cu.user_id,
-                ctime = DateTime.Now,
-                remark = "领到" + r.x_user.name + "的红包，金额：" + gt.amount / 100.0M
-            };
-            DB.x_balan_detail.InsertOnSubmit(dt);
-
-            if (gt.ramount > 0)
-            {
-                var pdt = new x_balan_detail()
-                {
-                    amount = gt.amount / 100.0M,
-                    user_id = gt.upid,
-                    ctime = DateTime.Now,
-                    remark = "来自" + cu.nickname + "的红包返现，金额：" + gt.ramount / 100.0M
-                };
-                DB.x_balan_detail.InsertOnSubmit(pdt);
+                gt.ramount = (int)(am * r.upcash / 100.0);// / (decimal)100.0;//上级提拥10%
+                var get = r.x_red_get.FirstOrDefault(o => o.red_get_id == upid);
+                if (get != null) get.myramount += gt.ramount;
             }
 
             SubmitDBChanges();

@@ -23,6 +23,10 @@ namespace X.App.Views.app.cd
                 if (item == null) throw new XExcep("0x0009");
                 dict.Add("item", item);
             }
+
+            var mps = "";
+            foreach (var m in cu.x_wxmp.Where(o => o.verify_type_info == 0 && o.service_type_info == 2)) mps += m.nick_name + "-" + m.wxmp_id + "|";
+            dict.Add("mps", mps.TrimEnd('|'));
         }
     }
 }

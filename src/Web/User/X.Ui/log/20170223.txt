@@ -1,0 +1,4158 @@
+
+时间：2017-02-23 12:04:39,847 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T广告出错，红包不能领取)","code":"T广告出错，红包不能领取"} 
+时间：20988 
+
+时间：2017-02-23 12:04:58,193 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：39334 
+
+时间：2017-02-23 12:05:01,935 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：43077 
+
+时间：2017-02-23 12:05:09,892 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：51033 
+
+时间：2017-02-23 12:05:12,501 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：53643 
+
+时间：2017-02-23 12:05:17,850 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：58991 
+
+时间：2017-02-23 12:05:19,112 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：60253 
+
+时间：2017-02-23 12:05:22,053 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：63194 
+
+时间：2017-02-23 12:05:28,146 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：69288 
+
+时间：2017-02-23 12:05:34,135 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：75276 
+
+时间：2017-02-23 12:05:37,994 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：79135 
+
+时间：2017-02-23 12:06:20,736 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：21055 
+
+时间：2017-02-23 12:06:27,654 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：27973 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 47
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 12:06:41,540 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：41859 
+
+时间：2017-02-23 12:07:02,346 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：62665 
+
+时间：2017-02-23 12:07:23,237 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：83556 
+
+时间：2017-02-23 12:09:38,502 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：35092 
+
+时间：2017-02-23 12:09:38,502 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：35092 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 47
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 12:10:46,232 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：102822 
+
+时间：2017-02-23 12:10:57,001 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：113591 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 47
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 12:10:58,098 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：114689 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 47
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 12:15:20,141 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：376732 
+
+时间：2017-02-23 12:15:20,262 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：376852 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 180
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 12:15:42,364 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：398954 
+
+时间：2017-02-23 12:16:03,302 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：419892 
+
+时间：2017-02-23 12:16:07,938 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：424528 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.rbt.contact.list.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\rbt\contact\list.cs:行号 19
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 105
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 12:16:24,089 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：440679 
+
+时间：2017-02-23 12:16:44,967 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：461558 
+
+时间：2017-02-23 12:17:05,799 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：482389 
+
+时间：2017-02-23 12:17:26,556 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：503146 
+
+时间：2017-02-23 12:17:47,283 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：523873 
+
+时间：2017-02-23 12:18:07,969 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：544559 
+
+时间：2017-02-23 12:18:28,797 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：565388 
+
+时间：2017-02-23 12:18:49,642 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：586233 
+
+时间：2017-02-23 12:19:10,344 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：606935 
+
+时间：2017-02-23 12:19:53,096 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：41252 
+
+时间：2017-02-23 12:20:34,081 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：82237 
+
+时间：2017-02-23 12:21:14,904 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：123060 
+
+时间：2017-02-23 12:21:55,609 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：163765 
+
+时间：2017-02-23 12:22:36,378 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：204534 
+
+时间：2017-02-23 12:23:17,173 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：245329 
+
+时间：2017-02-23 12:23:57,920 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：286076 
+
+时间：2017-02-23 12:24:38,722 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：326879 
+
+时间：2017-02-23 12:25:19,471 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：367627 
+
+时间：2017-02-23 12:26:00,155 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：408311 
+
+时间：2017-02-23 12:26:40,868 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：449024 
+
+时间：2017-02-23 12:27:21,700 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：489856 
+
+时间：2017-02-23 12:28:02,523 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：530679 
+
+时间：2017-02-23 12:28:43,273 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：571430 
+
+时间：2017-02-23 12:29:24,038 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：612194 
+
+时间：2017-02-23 12:30:04,820 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：652976 
+
+时间：2017-02-23 12:30:45,590 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：693747 
+
+时间：2017-02-23 12:31:26,385 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：734541 
+
+时间：2017-02-23 12:32:07,216 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：775372 
+
+时间：2017-02-23 12:32:47,966 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：816123 
+
+时间：2017-02-23 12:33:28,701 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：856857 
+
+时间：2017-02-23 12:34:09,558 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：897715 
+
+时间：2017-02-23 12:34:50,313 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：938469 
+
+时间：2017-02-23 12:35:31,153 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：979309 
+
+时间：2017-02-23 12:36:11,899 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1020056 
+
+时间：2017-02-23 12:36:52,630 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1060786 
+
+时间：2017-02-23 12:37:33,367 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1101523 
+
+时间：2017-02-23 12:38:14,249 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1142406 
+
+时间：2017-02-23 12:38:55,081 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1183237 
+
+时间：2017-02-23 12:39:35,791 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1223948 
+
+时间：2017-02-23 12:40:16,600 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1264756 
+
+时间：2017-02-23 12:40:57,371 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1305527 
+
+时间：2017-02-23 12:41:38,145 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1346302 
+
+时间：2017-02-23 12:42:18,872 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1387028 
+
+时间：2017-02-23 12:42:59,620 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1427776 
+
+时间：2017-02-23 12:43:40,425 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1468581 
+
+时间：2017-02-23 12:44:21,226 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1509382 
+
+时间：2017-02-23 12:44:30,681 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：1518838 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 231
+
+时间：2017-02-23 12:44:30,692 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：1518848 
+
+时间：2017-02-23 12:45:02,052 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1550208 
+
+时间：2017-02-23 12:45:42,802 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1590959 
+
+时间：2017-02-23 12:46:23,709 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1631865 
+
+时间：2017-02-23 12:47:04,525 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1672681 
+
+时间：2017-02-23 12:47:45,334 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1713490 
+
+时间：2017-02-23 12:48:26,102 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1754258 
+
+时间：2017-02-23 12:49:06,910 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1795066 
+
+时间：2017-02-23 12:49:47,856 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1836012 
+
+时间：2017-02-23 12:50:28,819 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1876975 
+
+时间：2017-02-23 12:51:09,764 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1917920 
+
+时间：2017-02-23 12:51:50,681 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1958838 
+
+时间：2017-02-23 12:52:32,036 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：2000192 
+
+时间：2017-02-23 12:53:14,850 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：2043007 
+
+时间：2017-02-23 12:54:11,109 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：2099266 
+
+时间：2017-02-23 12:54:53,587 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：2141743 
+
+时间：2017-02-23 12:55:37,023 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：2185179 
+
+时间：2017-02-23 12:56:20,311 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：2228467 
+
+时间：2017-02-23 12:57:02,637 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：2270793 
+
+时间：2017-02-23 12:57:45,670 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：2313826 
+
+时间：2017-02-23 12:58:29,404 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：2357561 
+
+时间：2017-02-23 13:04:57,405 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：2745562 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 231
+
+时间：2017-02-23 13:04:57,406 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：2745562 
+
+时间：2017-02-23 13:10:26,901 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：3075058 
+X.App.Com.Wx+WxExcep: {"errcode":61004,"errmsg":"access clientip is not registered hint: [9m_3pA0639e578] requestIP: 220.168.39.122"}
+   在 X.App.Com.Wx.Open.component_access_token() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 147
+   在 X.App.Com.Wx.Open.api_create_preauthcode() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 157
+   在 X.App.Com.Wx.Open.Get_AuthUrl(String tourl) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 217
+   在 X.App.Views.wx.auth.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\auth.cs:行号 15
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 105
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 13:10:35,425 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：3083581 
+X.App.Com.Wx+WxExcep: {"errcode":61004,"errmsg":"access clientip is not registered hint: [Uhg1FA0648e514] requestIP: 220.168.39.122"}
+   在 X.App.Com.Wx.Open.component_access_token() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 147
+   在 X.App.Com.Wx.Open.api_create_preauthcode() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 157
+   在 X.App.Com.Wx.Open.Get_AuthUrl(String tourl) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 217
+   在 X.App.Views.wx.auth.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\auth.cs:行号 15
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 105
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 13:10:36,002 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：3084159 
+X.App.Com.Wx+WxExcep: {"errcode":61004,"errmsg":"access clientip is not registered hint: [3VSKva0649e514] requestIP: 220.168.39.122"}
+   在 X.App.Com.Wx.Open.component_access_token() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 147
+   在 X.App.Com.Wx.Open.api_create_preauthcode() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 157
+   在 X.App.Com.Wx.Open.Get_AuthUrl(String tourl) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 217
+   在 X.App.Views.wx.auth.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\auth.cs:行号 15
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 105
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 13:14:05,640 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：3293796 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.auth.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\auth.cs:行号 23
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 105
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 13:14:13,874 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：3302031 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.auth.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\auth.cs:行号 23
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 105
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 13:14:32,808 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：3320965 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 231
+
+时间：2017-02-23 13:14:32,809 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：3320966 
+
+时间：2017-02-23 13:16:00,295 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：41964 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx._wx.ToWxUrl(String scope) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 133
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 44
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 13:16:29,023 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：70693 
+
+时间：2017-02-23 13:17:19,312 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：37280 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx._wx.ToWxUrl(String scope) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 133
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 44
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 13:17:50,585 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：68552 
+
+时间：2017-02-23 13:17:53,243 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：71210 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx._wx.ToWxUrl(String scope) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 133
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 44
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 13:18:30,999 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：108966 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx._wx.ToWxUrl(String scope) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 133
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 44
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 13:18:36,574 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：114541 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx._wx.ToWxUrl(String scope) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 133
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 44
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 13:18:49,517 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：127484 
+
+时间：2017-02-23 13:19:23,821 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：161788 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx._wx.ToWxUrl(String scope) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 133
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 44
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 13:19:24,764 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：162731 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx._wx.ToWxUrl(String scope) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 133
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 44
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 13:20:07,061 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：205028 
+
+时间：2017-02-23 13:23:41,524 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：22800 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.login.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\login.cs:行号 45
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 13:23:51,483 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：32758 
+
+时间：2017-02-23 13:24:42,347 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：83622 
+
+时间：2017-02-23 13:24:47,239 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：88514 
+
+时间：2017-02-23 13:24:58,967 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：100242 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.login.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\login.cs:行号 45
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 13:34:32,914 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：554666 
+
+时间：2017-02-23 14:00:45,047 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T广告出错，红包不能领取)","code":"T广告出错，红包不能领取"} 
+时间：2126798 
+
+时间：2017-02-23 14:01:07,302 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：2149053 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.rbt.contact.list.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\rbt\contact\list.cs:行号 19
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 105
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:08:29,190 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：15666 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.login.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\login.cs:行号 45
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:08:32,319 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：18794 
+
+时间：2017-02-23 14:09:13,599 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：60074 
+
+时间：2017-02-23 14:10:39,002 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：145478 
+
+时间：2017-02-23 14:10:44,491 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：150967 
+
+时间：2017-02-23 14:11:22,695 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：189171 
+
+时间：2017-02-23 14:13:32,736 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：3236 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.rbt.contact.list.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\rbt\contact\list.cs:行号 19
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 105
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:14:11,746 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：3529 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.rbt.contact.list.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\rbt\contact\list.cs:行号 19
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 105
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:14:15,660 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：7443 
+
+时间：2017-02-23 14:14:56,672 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：48455 
+
+时间：2017-02-23 14:15:02,322 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：4191 
+
+时间：2017-02-23 14:15:17,365 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：19234 
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Web.Caching.CacheKey..ctor(String key, Boolean isPublic)
+   在 System.Web.Caching.CacheEntry..ctor(String key, Object value, CacheDependency dependency, CacheItemRemovedCallback onRemovedHandler, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, Boolean isPublic)
+   在 System.Web.Caching.CacheInternal.DoInsert(Boolean isPublic, String key, Object value, CacheDependency dependencies, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, CacheItemRemovedCallback onRemoveCallback, Boolean replace)
+   在 System.Web.Caching.Cache.Insert(String key, Object value)
+   在 X.Core.Cache.WebCache.Save(String key, Object value, Int32 seconds) 位置 D:\Pro\x.rbt\src\Core\Cache\WebCache.cs:行号 26
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value, Int32 sec) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 42
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 37
+   在 X.App.Views.xview.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\xview.cs:行号 38
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 82
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:15:43,217 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：45085 
+
+时间：2017-02-23 14:15:45,427 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：47296 
+
+时间：2017-02-23 14:16:26,896 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：88764 
+
+时间：2017-02-23 14:17:06,823 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：2691 
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Web.Caching.CacheKey..ctor(String key, Boolean isPublic)
+   在 System.Web.Caching.CacheEntry..ctor(String key, Object value, CacheDependency dependency, CacheItemRemovedCallback onRemovedHandler, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, Boolean isPublic)
+   在 System.Web.Caching.CacheInternal.DoInsert(Boolean isPublic, String key, Object value, CacheDependency dependencies, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, CacheItemRemovedCallback onRemoveCallback, Boolean replace)
+   在 System.Web.Caching.Cache.Insert(String key, Object value)
+   在 X.Core.Cache.WebCache.Save(String key, Object value, Int32 seconds) 位置 D:\Pro\x.rbt\src\Core\Cache\WebCache.cs:行号 26
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value, Int32 sec) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 42
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 37
+   在 X.App.Views.xview.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\xview.cs:行号 38
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 82
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:17:29,136 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：25005 
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Web.Caching.CacheKey..ctor(String key, Boolean isPublic)
+   在 System.Web.Caching.CacheEntry..ctor(String key, Object value, CacheDependency dependency, CacheItemRemovedCallback onRemovedHandler, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, Boolean isPublic)
+   在 System.Web.Caching.CacheInternal.DoInsert(Boolean isPublic, String key, Object value, CacheDependency dependencies, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, CacheItemRemovedCallback onRemoveCallback, Boolean replace)
+   在 System.Web.Caching.Cache.Insert(String key, Object value)
+   在 X.Core.Cache.WebCache.Save(String key, Object value, Int32 seconds) 位置 D:\Pro\x.rbt\src\Core\Cache\WebCache.cs:行号 26
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value, Int32 sec) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 42
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 37
+   在 X.App.Views.xview.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\xview.cs:行号 38
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 82
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:17:57,816 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：53684 
+
+时间：2017-02-23 14:18:40,813 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：96682 
+
+时间：2017-02-23 14:19:37,393 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：153261 
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Web.Caching.CacheKey..ctor(String key, Boolean isPublic)
+   在 System.Web.Caching.CacheEntry..ctor(String key, Object value, CacheDependency dependency, CacheItemRemovedCallback onRemovedHandler, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, Boolean isPublic)
+   在 System.Web.Caching.CacheInternal.DoInsert(Boolean isPublic, String key, Object value, CacheDependency dependencies, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, CacheItemRemovedCallback onRemoveCallback, Boolean replace)
+   在 System.Web.Caching.Cache.Insert(String key, Object value)
+   在 X.Core.Cache.WebCache.Save(String key, Object value, Int32 seconds) 位置 D:\Pro\x.rbt\src\Core\Cache\WebCache.cs:行号 26
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value, Int32 sec) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 42
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 37
+   在 X.App.Views.xview.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\xview.cs:行号 38
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 82
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:19:37,409 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：153278 
+
+时间：2017-02-23 14:19:50,132 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：166000 
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Web.Caching.CacheKey..ctor(String key, Boolean isPublic)
+   在 System.Web.Caching.CacheEntry..ctor(String key, Object value, CacheDependency dependency, CacheItemRemovedCallback onRemovedHandler, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, Boolean isPublic)
+   在 System.Web.Caching.CacheInternal.DoInsert(Boolean isPublic, String key, Object value, CacheDependency dependencies, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, CacheItemRemovedCallback onRemoveCallback, Boolean replace)
+   在 System.Web.Caching.Cache.Insert(String key, Object value)
+   在 X.Core.Cache.WebCache.Save(String key, Object value, Int32 seconds) 位置 D:\Pro\x.rbt\src\Core\Cache\WebCache.cs:行号 26
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value, Int32 sec) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 42
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 37
+   在 X.App.Views.xview.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\xview.cs:行号 38
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 82
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:20:39,262 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：215131 
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Web.Caching.CacheKey..ctor(String key, Boolean isPublic)
+   在 System.Web.Caching.CacheEntry..ctor(String key, Object value, CacheDependency dependency, CacheItemRemovedCallback onRemovedHandler, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, Boolean isPublic)
+   在 System.Web.Caching.CacheInternal.DoInsert(Boolean isPublic, String key, Object value, CacheDependency dependencies, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, CacheItemRemovedCallback onRemoveCallback, Boolean replace)
+   在 System.Web.Caching.Cache.Insert(String key, Object value)
+   在 X.Core.Cache.WebCache.Save(String key, Object value, Int32 seconds) 位置 D:\Pro\x.rbt\src\Core\Cache\WebCache.cs:行号 26
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value, Int32 sec) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 42
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 37
+   在 X.App.Views.xview.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\xview.cs:行号 38
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 82
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:20:39,264 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：215132 
+
+时间：2017-02-23 14:21:46,778 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：282646 
+
+时间：2017-02-23 14:21:46,793 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：282661 
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Web.Caching.CacheKey..ctor(String key, Boolean isPublic)
+   在 System.Web.Caching.CacheEntry..ctor(String key, Object value, CacheDependency dependency, CacheItemRemovedCallback onRemovedHandler, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, Boolean isPublic)
+   在 System.Web.Caching.CacheInternal.DoInsert(Boolean isPublic, String key, Object value, CacheDependency dependencies, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, CacheItemRemovedCallback onRemoveCallback, Boolean replace)
+   在 System.Web.Caching.Cache.Insert(String key, Object value)
+   在 X.Core.Cache.WebCache.Save(String key, Object value, Int32 seconds) 位置 D:\Pro\x.rbt\src\Core\Cache\WebCache.cs:行号 26
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value, Int32 sec) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 42
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 37
+   在 X.App.Views.xview.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\xview.cs:行号 38
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 82
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:21:59,325 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：295194 
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Web.Caching.CacheKey..ctor(String key, Boolean isPublic)
+   在 System.Web.Caching.CacheEntry..ctor(String key, Object value, CacheDependency dependency, CacheItemRemovedCallback onRemovedHandler, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, Boolean isPublic)
+   在 System.Web.Caching.CacheInternal.DoInsert(Boolean isPublic, String key, Object value, CacheDependency dependencies, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, CacheItemRemovedCallback onRemoveCallback, Boolean replace)
+   在 System.Web.Caching.Cache.Insert(String key, Object value)
+   在 X.Core.Cache.WebCache.Save(String key, Object value, Int32 seconds) 位置 D:\Pro\x.rbt\src\Core\Cache\WebCache.cs:行号 26
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value, Int32 sec) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 42
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 37
+   在 X.App.Views.xview.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\xview.cs:行号 38
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 82
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:22:39,130 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：334999 
+
+时间：2017-02-23 14:22:39,130 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：334999 
+
+时间：2017-02-23 14:22:39,130 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：334999 
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Web.Caching.CacheKey..ctor(String key, Boolean isPublic)
+   在 System.Web.Caching.CacheEntry..ctor(String key, Object value, CacheDependency dependency, CacheItemRemovedCallback onRemovedHandler, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, Boolean isPublic)
+   在 System.Web.Caching.CacheInternal.DoInsert(Boolean isPublic, String key, Object value, CacheDependency dependencies, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, CacheItemRemovedCallback onRemoveCallback, Boolean replace)
+   在 System.Web.Caching.Cache.Insert(String key, Object value)
+   在 X.Core.Cache.WebCache.Save(String key, Object value, Int32 seconds) 位置 D:\Pro\x.rbt\src\Core\Cache\WebCache.cs:行号 26
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value, Int32 sec) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 42
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 37
+   在 X.App.Views.xview.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\xview.cs:行号 38
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 82
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:23:44,058 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：399926 
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Web.Caching.CacheKey..ctor(String key, Boolean isPublic)
+   在 System.Web.Caching.CacheEntry..ctor(String key, Object value, CacheDependency dependency, CacheItemRemovedCallback onRemovedHandler, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, Boolean isPublic)
+   在 System.Web.Caching.CacheInternal.DoInsert(Boolean isPublic, String key, Object value, CacheDependency dependencies, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, CacheItemRemovedCallback onRemoveCallback, Boolean replace)
+   在 System.Web.Caching.Cache.Insert(String key, Object value)
+   在 X.Core.Cache.WebCache.Save(String key, Object value, Int32 seconds) 位置 D:\Pro\x.rbt\src\Core\Cache\WebCache.cs:行号 26
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value, Int32 sec) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 42
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 37
+   在 X.App.Views.xview.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\xview.cs:行号 38
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 82
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:23:44,066 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：399934 
+
+时间：2017-02-23 14:24:25,559 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：441427 
+
+时间：2017-02-23 14:31:50,447 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：10017 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.rbt.contact.list.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\rbt\contact\list.cs:行号 19
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 105
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:32:00,064 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：19635 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.rbt.contact.list.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\rbt\contact\list.cs:行号 19
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 105
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:33:09,301 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：3832 
+
+时间：2017-02-23 14:33:09,301 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：3833 
+
+时间：2017-02-23 14:33:21,058 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：15590 
+
+时间：2017-02-23 14:34:21,212 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：75743 
+
+时间：2017-02-23 14:35:33,203 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：147734 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.login.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\login.cs:行号 45
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:39:55,380 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：409912 
+
+时间：2017-02-23 14:44:19,789 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：2138 
+
+时间：2017-02-23 14:44:25,465 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：7814 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.rbt.contact.list.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\rbt\contact\list.cs:行号 19
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 105
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:44:28,661 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：11011 
+
+时间：2017-02-23 14:45:03,030 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：45379 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.app.cd.edit.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\app\cd\edit.cs:行号 28
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 105
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:45:03,373 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：45723 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.app.cd.edit.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\app\cd\edit.cs:行号 28
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 105
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:45:03,433 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：45783 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.app.cd.edit.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\app\cd\edit.cs:行号 28
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 105
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:45:03,456 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：45805 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.app.cd.edit.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\app\cd\edit.cs:行号 28
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 105
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:49:51,610 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1147 
+
+时间：2017-02-23 14:52:28,406 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"T帐号余额不足，请充值 ","code":"0x0017"} 
+时间：15381 
+
+时间：2017-02-23 14:52:41,029 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"T帐号余额不足，请充值 ","code":"0x0017"} 
+时间：28005 
+
+时间：2017-02-23 14:55:00,915 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：199 
+
+时间：2017-02-23 14:56:52,696 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：67590 
+System.ArgumentException: 已添加了具有相同键的项。
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   在 X.Web.Views.View.GetPageParms() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 46
+   在 X.Web.Views.View.InitView() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 76
+   在 X.App.Views.xview.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\xview.cs:行号 30
+   在 X.App.Views.wx.red.show.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\show.cs:行号 44
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:58:23,676 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：38222 
+System.ArgumentException: 已添加了具有相同键的项。
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   在 X.Web.Views.View.GetPageParms() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 46
+   在 X.Web.Views.View.InitView() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 76
+   在 X.App.Views.xview.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\xview.cs:行号 30
+   在 X.App.Views.wx.red.show.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\show.cs:行号 44
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:58:45,344 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：59890 
+System.ArgumentException: 已添加了具有相同键的项。
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   在 X.Web.Views.View.GetPageParms() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 46
+   在 X.Web.Views.View.InitView() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 76
+   在 X.App.Views.xview.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\xview.cs:行号 30
+   在 X.App.Views.wx.red.show.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\show.cs:行号 44
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:59:09,689 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：84235 
+System.ArgumentException: 已添加了具有相同键的项。
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   在 X.Web.Views.View.GetPageParms() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 46
+   在 X.Web.Views.View.InitView() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 76
+   在 X.App.Views.xview.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\xview.cs:行号 30
+   在 X.App.Views.wx.red.show.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\show.cs:行号 44
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 14:59:49,187 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：123733 
+System.ArgumentException: 已添加了具有相同键的项。
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   在 X.Web.Views.View.GetPageParms() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 46
+   在 X.Web.Views.View.InitView() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 76
+   在 X.App.Views.xview.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\xview.cs:行号 30
+   在 X.App.Views.wx.red.show.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\show.cs:行号 44
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 15:01:26,399 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：220945 
+System.ArgumentException: 已添加了具有相同键的项。
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   在 X.Web.Views.View.GetPageParms() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 46
+   在 X.Web.Views.View.InitView() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 76
+   在 X.App.Views.xview.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\xview.cs:行号 30
+   在 X.App.Views.wx.red.show.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\show.cs:行号 44
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 15:01:33,463 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：228009 
+System.ArgumentException: 已添加了具有相同键的项。
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   在 X.Web.Views.View.GetPageParms() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 46
+   在 X.Web.Views.View.InitView() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 76
+   在 X.App.Views.xview.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\xview.cs:行号 30
+   在 X.App.Views.wx.red.show.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\show.cs:行号 44
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 104
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 15:02:07,539 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：21172 
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Web.Caching.CacheKey..ctor(String key, Boolean isPublic)
+   在 System.Web.Caching.CacheEntry..ctor(String key, Object value, CacheDependency dependency, CacheItemRemovedCallback onRemovedHandler, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, Boolean isPublic)
+   在 System.Web.Caching.CacheInternal.DoInsert(Boolean isPublic, String key, Object value, CacheDependency dependencies, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, CacheItemRemovedCallback onRemoveCallback, Boolean replace)
+   在 System.Web.Caching.Cache.Insert(String key, Object value)
+   在 X.Core.Cache.WebCache.Save(String key, Object value, Int32 seconds) 位置 D:\Pro\x.rbt\src\Core\Cache\WebCache.cs:行号 26
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value, Int32 sec) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 42
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 37
+   在 X.App.Views.xview.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\xview.cs:行号 38
+   在 X.App.Views.wx.red.show.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\show.cs:行号 44
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 105
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 15:04:30,323 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：106444 
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Web.Caching.CacheKey..ctor(String key, Boolean isPublic)
+   在 System.Web.Caching.CacheEntry..ctor(String key, Object value, CacheDependency dependency, CacheItemRemovedCallback onRemovedHandler, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, Boolean isPublic)
+   在 System.Web.Caching.CacheInternal.DoInsert(Boolean isPublic, String key, Object value, CacheDependency dependencies, DateTime utcAbsoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, CacheItemRemovedCallback onRemoveCallback, Boolean replace)
+   在 System.Web.Caching.Cache.Insert(String key, Object value)
+   在 X.Core.Cache.WebCache.Save(String key, Object value, Int32 seconds) 位置 D:\Pro\x.rbt\src\Core\Cache\WebCache.cs:行号 26
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value, Int32 sec) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 42
+   在 X.Core.Cache.CacheHelper.Save(String key, Object value) 位置 D:\Pro\x.rbt\src\Core\Cache\CacheHelper.cs:行号 37
+   在 X.App.Views.xview.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\xview.cs:行号 38
+   在 X.App.Views.wx.red.show.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\show.cs:行号 41
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 105
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 15:04:42,307 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：3654 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 231
+
+时间：2017-02-23 15:04:42,307 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：3654 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 231
+
+时间：2017-02-23 15:04:46,399 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：7746 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 231
+
+时间：2017-02-23 15:04:54,105 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：15452 
+NVelocity.Exception.ParseErrorException: Encountered "<EOF>" at line 95, column 9.
+Was expecting one of:
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    <SINGLE_LINE_COMMENT> ...
+    "*#" ...
+    "*#" ...
+    <STRING_LITERAL> ...
+    <END> ...
+    "if" ...
+    "elseif" ...
+    <ELSE_DIRECTIVE> ...
+    "stop" ...
+    <NUMBER_LITERAL> ...
+    <WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+     ---> NVelocity.Runtime.Parser.ParseException: Encountered "<EOF>" at line 95, column 9.
+Was expecting one of:
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    <SINGLE_LINE_COMMENT> ...
+    "*#" ...
+    "*#" ...
+    <STRING_LITERAL> ...
+    <END> ...
+    "if" ...
+    "elseif" ...
+    <ELSE_DIRECTIVE> ...
+    "stop" ...
+    <NUMBER_LITERAL> ...
+    <WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+    
+   在 NVelocity.Runtime.Parser.Parser.Parse(TextReader reader, String templateName)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName, Boolean dumpNamespace)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName)
+   在 NVelocity.Template.Process()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 119
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 15:18:16,755 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：21044 
+System.ArgumentException: 已添加了具有相同键的项。
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   在 X.App.Views.wx._wx.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 165
+   在 X.App.Views.wx.red.show.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\show.cs:行号 52
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 106
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 15:20:38,859 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：101086 
+
+时间：2017-02-23 15:32:31,982 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：272 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.red.show.<InitView>b__16_0(x_red_get o) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\show.cs:行号 49
+   在 System.Linq.Enumerable.Count[TSource](IEnumerable`1 source, Func`2 predicate)
+   在 X.App.Views.wx.red.show.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\show.cs:行号 49
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 105
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 15:41:03,539 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：55311 
+
+时间：2017-02-23 15:41:07,729 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：59501 
+
+时间：2017-02-23 15:41:12,424 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：64196 
+
+时间：2017-02-23 15:42:13,023 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：2801 
+
+时间：2017-02-23 15:44:35,012 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：94393 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 231
+
+时间：2017-02-23 15:47:54,738 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：294120 
+NVelocity.Exception.ParseErrorException: Encountered "#else\r\n" at line 111, column 5.
+Was expecting one of:
+    <EOF> 
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    <SINGLE_LINE_COMMENT> ...
+    "*#" ...
+    "*#" ...
+    <STRING_LITERAL> ...
+    "if" ...
+    "stop" ...
+    <NUMBER_LITERAL> ...
+    <WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+     ---> NVelocity.Runtime.Parser.ParseException: Encountered "#else\r\n" at line 111, column 5.
+Was expecting one of:
+    <EOF> 
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    <SINGLE_LINE_COMMENT> ...
+    "*#" ...
+    "*#" ...
+    <STRING_LITERAL> ...
+    "if" ...
+    "stop" ...
+    <NUMBER_LITERAL> ...
+    <WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+    
+   在 NVelocity.Runtime.Parser.Parser.Parse(TextReader reader, String templateName)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName, Boolean dumpNamespace)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName)
+   在 NVelocity.Template.Process()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 119
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 15:48:07,199 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：306580 
+NVelocity.Exception.ParseErrorException: Encountered "#else\r\n" at line 111, column 5.
+Was expecting one of:
+    <EOF> 
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    <SINGLE_LINE_COMMENT> ...
+    "*#" ...
+    "*#" ...
+    <STRING_LITERAL> ...
+    "if" ...
+    "stop" ...
+    <NUMBER_LITERAL> ...
+    <WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+     ---> NVelocity.Runtime.Parser.ParseException: Encountered "#else\r\n" at line 111, column 5.
+Was expecting one of:
+    <EOF> 
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    <SINGLE_LINE_COMMENT> ...
+    "*#" ...
+    "*#" ...
+    <STRING_LITERAL> ...
+    "if" ...
+    "stop" ...
+    <NUMBER_LITERAL> ...
+    <WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+    
+   在 NVelocity.Runtime.Parser.Parser.Parse(TextReader reader, String templateName)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName, Boolean dumpNamespace)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName)
+   在 NVelocity.Template.Process()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 119
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 15:49:29,432 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：388813 
+NVelocity.Exception.ParseErrorException: Encountered "#end\r\n" at line 88, column 5.
+Was expecting one of:
+    <EOF> 
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    <SINGLE_LINE_COMMENT> ...
+    "*#" ...
+    "*#" ...
+    <STRING_LITERAL> ...
+    "if" ...
+    "stop" ...
+    <NUMBER_LITERAL> ...
+    <WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+     ---> NVelocity.Runtime.Parser.ParseException: Encountered "#end\r\n" at line 88, column 5.
+Was expecting one of:
+    <EOF> 
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    <SINGLE_LINE_COMMENT> ...
+    "*#" ...
+    "*#" ...
+    <STRING_LITERAL> ...
+    "if" ...
+    "stop" ...
+    <NUMBER_LITERAL> ...
+    <WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+    
+   在 NVelocity.Runtime.Parser.Parser.Parse(TextReader reader, String templateName)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName, Boolean dumpNamespace)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName)
+   在 NVelocity.Template.Process()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 119
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 15:57:53,342 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：173768 
+System.Data.SqlClient.SqlException (0x80131904): 列名 'upop' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.ChangeDirector.StandardChangeDirector.DynamicUpdate(TrackedObject item)
+   在 System.Data.Linq.ChangeDirector.StandardChangeDirector.Update(TrackedObject item)
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 X.Web.XFace.SubmitDBChanges() 位置 D:\Pro\x.rbt\src\Web\X.Web\XFace.cs:行号 196
+   在 X.App.Apis.wx.red.get.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\wx\red\get.cs:行号 65
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+ClientConnectionId:bd6dd342-f032-44ed-968d-4c3d203a6b30
+Error Number:207,State:1,Class:16
+
+时间：2017-02-23 15:57:53,351 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：173777 
+System.Data.SqlClient.SqlException (0x80131904): 列名 'upop' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader()
+   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.CompiledQuery.Execute(IProvider provider, Object[] arguments)
+   在 System.Data.Linq.CommonDataServices.DeferredSourceFactory`1.ExecuteKeyQuery(Object[] keyValues)
+   在 System.Data.Linq.CommonDataServices.DeferredSourceFactory`1.Execute(Object instance)
+   在 System.Data.Linq.CommonDataServices.DeferredSourceFactory`1.DeferredSource.GetEnumerator()
+   在 System.Data.Linq.EntitySet`1.Load()
+   在 System.Data.Linq.EntitySet`1.GetEnumerator()
+   在 System.Linq.Enumerable.Count[TSource](IEnumerable`1 source, Func`2 predicate)
+   在 X.App.Apis.wx.red.get.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\wx\red\get.cs:行号 31
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+ClientConnectionId:bd6dd342-f032-44ed-968d-4c3d203a6b30
+Error Number:207,State:1,Class:16
+
+时间：2017-02-23 16:03:49,445 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"T当前红包已抢完 ","code":"0x0021"} 
+时间：117287 
+
+时间：2017-02-23 16:03:53,371 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：121213 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.red.detail.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\detail.cs:行号 76
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 106
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 16:04:36,207 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"T当前红包已抢完 ","code":"0x0021"} 
+时间：17556 
+
+时间：2017-02-23 16:04:40,048 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：21397 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.red.detail.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\detail.cs:行号 76
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 106
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 16:19:13,079 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：184620 
+
+时间：2017-02-23 16:19:17,962 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：189503 
+
+时间：2017-02-23 16:19:22,785 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：194326 
+
+时间：2017-02-23 16:19:47,921 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：219462 
+
+时间：2017-02-23 16:24:29,617 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：154 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 231
+
+时间：2017-02-23 16:28:06,369 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：216906 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 966
+
+时间：2017-02-23 16:31:20,008 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：56682 
+
+时间：2017-02-23 16:31:24,557 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：61230 
+System.Data.SqlClient.SqlException (0x80131904): INSERT 语句与 FOREIGN KEY 约束"FK_X_AD_HIT_REFERENCE_X_USER"冲突。该冲突发生于数据库"x.rbt"，表"dbo.x_user", column 'user_id'。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader()
+   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.ChangeDirector.StandardChangeDirector.DynamicInsert(TrackedObject item)
+   在 System.Data.Linq.ChangeDirector.StandardChangeDirector.Insert(TrackedObject item)
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 X.Web.XFace.SubmitDBChanges() 位置 D:\Pro\x.rbt\src\Web\X.Web\XFace.cs:行号 196
+   在 X.App.Apis.wx.red.sethit.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\wx\red\sethit.cs:行号 41
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+ClientConnectionId:d8f92629-71b1-4895-9929-68c3e43b882b
+Error Number:547,State:0,Class:16
+
+时间：2017-02-23 16:31:35,999 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：72673 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.red.share.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\share.cs:行号 95
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 106
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 16:34:42,707 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：259380 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 231
+
+时间：2017-02-23 16:34:42,709 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：259382 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 231
+
+时间：2017-02-23 16:35:01,652 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：278325 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.red.share.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\share.cs:行号 95
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 106
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 16:37:00,931 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：397604 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.red.share.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\share.cs:行号 95
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 106
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 16:37:41,402 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：438076 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.red.share.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\share.cs:行号 95
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 106
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 16:37:46,886 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：443559 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.red.share.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\share.cs:行号 95
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 106
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 16:37:57,305 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：453979 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.red.share.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\share.cs:行号 95
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 106
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 16:38:41,257 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：497930 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.red.share.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\share.cs:行号 95
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 106
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 16:39:20,604 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：537278 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.wx.red.share.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\share.cs:行号 95
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 106
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 16:44:52,355 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：188746 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 231
+
+时间：2017-02-23 17:04:33,975 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：104422 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 231
+
+时间：2017-02-23 17:15:23,821 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：17284 
+System.ArgumentException: 已添加了具有相同键的项。
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   在 X.App.Views.wx.red.detail.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\detail.cs:行号 19
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 106
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 17:16:31,043 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：15801 
+System.Data.SqlClient.SqlException (0x80131904): INSERT 语句与 FOREIGN KEY 约束"FK_X_AD_HIT_REFERENCE_X_USER"冲突。该冲突发生于数据库"x.rbt"，表"dbo.x_user", column 'user_id'。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader()
+   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.ChangeDirector.StandardChangeDirector.DynamicInsert(TrackedObject item)
+   在 System.Data.Linq.ChangeDirector.StandardChangeDirector.Insert(TrackedObject item)
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 X.Web.XFace.SubmitDBChanges() 位置 D:\Pro\x.rbt\src\Web\X.Web\XFace.cs:行号 196
+   在 X.App.Apis.wx.red.sethit.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\wx\red\sethit.cs:行号 41
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+ClientConnectionId:bdc85ece-87bf-4fc8-a57e-fea749c6551d
+Error Number:547,State:0,Class:16
+
+时间：2017-02-23 17:19:36,735 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：159 
+
+时间：2017-02-23 17:20:18,339 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：41763 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 966
+
+时间：2017-02-23 17:27:15,223 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (404) 未找到。 
+时间：7718 
+System.Net.WebException: 远程服务器返回错误: (404) 未找到。
+   在 System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   在 System.Net.WebClient.DownloadData(Uri address)
+   在 System.Net.WebClient.DownloadData(String address)
+   在 X.Core.Utility.Tools.GetHttpFile(String url) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 400
+
+时间：2017-02-23 17:28:44,148 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (404) 未找到。 
+时间：96643 
+System.Net.WebException: 远程服务器返回错误: (404) 未找到。
+   在 System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   在 System.Net.WebClient.DownloadData(Uri address)
+   在 System.Net.WebClient.DownloadData(String address)
+   在 X.Core.Utility.Tools.GetHttpFile(String url) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 400
+
+时间：2017-02-23 17:29:53,587 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (404) 未找到。 
+时间：166082 
+System.Net.WebException: 远程服务器返回错误: (404) 未找到。
+   在 System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   在 System.Net.WebClient.DownloadData(Uri address)
+   在 System.Net.WebClient.DownloadData(String address)
+   在 X.Core.Utility.Tools.GetHttpFile(String url) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 400
+
+时间：2017-02-23 17:29:58,850 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (404) 未找到。 
+时间：171346 
+System.Net.WebException: 远程服务器返回错误: (404) 未找到。
+   在 System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   在 System.Net.WebClient.DownloadData(Uri address)
+   在 System.Net.WebClient.DownloadData(String address)
+   在 X.Core.Utility.Tools.GetHttpFile(String url) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 400
+
+时间：2017-02-23 17:33:14,452 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (404) 未找到。 
+时间：366948 
+System.Net.WebException: 远程服务器返回错误: (404) 未找到。
+   在 System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   在 System.Net.WebClient.DownloadData(Uri address)
+   在 System.Net.WebClient.DownloadData(String address)
+   在 X.Core.Utility.Tools.GetHttpFile(String url) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 400
+
+时间：2017-02-23 17:36:09,409 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：基础连接已经关闭: 连接被意外关闭。 
+时间：541904 
+System.Net.WebException: 基础连接已经关闭: 连接被意外关闭。
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 232
+
+时间：2017-02-23 17:36:09,422 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：541917 
+System.Net.WebException: 基础连接已经关闭: 连接被意外关闭。
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 244
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 256
+   在 X.App.Com.Wx.Open.Get_MpAuth_Token(String auth_appid, String re_token) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 290
+   在 X.App.Views.wx._wx.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\_wx.cs:行号 153
+   在 X.App.Views.wx.red._red.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\_red.cs:行号 56
+   在 X.App.Views.wx.red.qrcode.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\qrcode.cs:行号 16
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 106
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 17:36:09,422 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：541917 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 180
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 124
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 17:36:09,422 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：541917 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 180
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 124
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 17:51:59,455 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：19920 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 966
+
+时间：2017-02-23 17:52:09,278 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：29743 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 966
+
+时间：2017-02-23 17:56:28,529 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：145691 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 966
+
+时间：2017-02-23 17:59:27,647 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：324808 
+
+时间：2017-02-23 17:59:42,465 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：339626 
+
+时间：2017-02-23 18:01:47,232 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：48435 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 966
+
+时间：2017-02-23 18:05:50,604 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：291807 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 966
+
+时间：2017-02-23 18:06:12,639 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T登陆超时)","code":"T登陆超时"} 
+时间：313842 
+
+时间：2017-02-23 18:06:14,478 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：315681 
+
+时间：2017-02-23 18:06:19,893 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T登陆超时)","code":"T登陆超时"} 
+时间：321095 
+
+时间：2017-02-23 18:06:21,635 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：322837 
+
+时间：2017-02-23 18:07:00,893 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：362096 
+
+时间：2017-02-23 18:07:05,756 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T登陆超时)","code":"T登陆超时"} 
+时间：366959 
+
+时间：2017-02-23 18:07:07,456 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：368659 
+
+时间：2017-02-23 18:07:46,855 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：408058 
+
+时间：2017-02-23 18:08:28,246 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：449449 
+
+时间：2017-02-23 18:09:09,242 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：490444 
+
+时间：2017-02-23 18:41:29,199 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T登陆超时)","code":"T登陆超时"} 
+时间：12826 
+
+时间：2017-02-23 18:41:58,344 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T登陆超时)","code":"T登陆超时"} 
+时间：41971 
+
+时间：2017-02-23 18:42:39,157 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：82784 
+
+时间：2017-02-23 18:43:19,973 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：123600 
+
+时间：2017-02-23 18:44:00,806 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：164433 
+
+时间：2017-02-23 18:44:32,753 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：196380 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 231
+
+时间：2017-02-23 18:44:41,587 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：205214 
+
+时间：2017-02-23 18:45:22,444 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：246071 
+
+时间：2017-02-23 18:46:03,261 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：286888 
+
+时间：2017-02-23 18:46:44,177 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：327804 
+
+时间：2017-02-23 18:47:25,010 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：368637 
+
+时间：2017-02-23 18:48:05,819 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：409446 
+
+时间：2017-02-23 18:48:46,603 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：450230 
+
+时间：2017-02-23 18:49:27,380 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：491007 
+
+时间：2017-02-23 18:50:08,162 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：531789 
+
+时间：2017-02-23 18:50:48,902 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：572529 
+
+时间：2017-02-23 18:51:29,764 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：613391 
+
+时间：2017-02-23 18:52:10,700 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：654327 
+
+时间：2017-02-23 18:52:51,516 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：695143 
+
+时间：2017-02-23 18:53:32,320 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：735947 
+
+时间：2017-02-23 18:54:13,114 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：776741 
+
+时间：2017-02-23 18:54:53,965 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：817592 
+
+时间：2017-02-23 18:55:36,066 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：859693 
+
+时间：2017-02-23 18:56:16,988 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：900615 
+
+时间：2017-02-23 18:56:57,813 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：941440 
+
+时间：2017-02-23 18:57:38,658 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：982285 
+
+时间：2017-02-23 18:58:19,757 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1023384 
+
+时间：2017-02-23 18:59:00,525 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1064152 
+
+时间：2017-02-23 18:59:41,411 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1105038 
+
+时间：2017-02-23 19:00:26,918 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1150545 
+
+时间：2017-02-23 19:00:49,609 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T登陆超时)","code":"T登陆超时"} 
+时间：1173236 
+
+时间：2017-02-23 19:05:12,776 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：85985 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 231
+
+时间：2017-02-23 19:05:12,827 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：86037 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 231
+
+时间：2017-02-23 19:05:12,827 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：86037 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 231
+
+时间：2017-02-23 19:05:38,043 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：4217 
+
+时间：2017-02-23 19:05:38,043 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：4217 
+
+时间：2017-02-23 19:06:11,652 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T登陆超时)","code":"T登陆超时"} 
+时间：37826 
+
+时间：2017-02-23 19:10:35,240 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：3300 
+
+时间：2017-02-23 19:12:00,026 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T登陆超时)","code":"T登陆超时"} 
+时间：88086 
+
+时间：2017-02-23 19:12:08,319 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T登陆超时)","code":"T登陆超时"} 
+时间：96379 
+
+时间：2017-02-23 19:12:46,196 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T登陆超时)","code":"T登陆超时"} 
+时间：134256 
+
+时间：2017-02-23 19:13:23,693 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：171752 
+
+时间：2017-02-23 19:14:05,189 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：213249 
+
+时间：2017-02-23 19:14:14,468 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：463 
+
+时间：2017-02-23 19:14:15,010 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1004 
+
+时间：2017-02-23 19:14:23,143 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：9137 
+
+时间：2017-02-23 19:14:48,871 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：34866 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 180
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 125
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 19:14:48,872 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：34866 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 180
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 125
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 19:15:48,276 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：94271 
+
+时间：2017-02-23 19:16:04,771 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：6445 
+
+时间：2017-02-23 19:16:04,772 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：6446 
+
+时间：2017-02-23 19:16:16,852 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：18526 
+
+时间：2017-02-23 19:16:29,967 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：31641 
+
+时间：2017-02-23 19:16:59,257 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：60931 
+
+时间：2017-02-23 19:17:04,202 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：65876 
+
+时间：2017-02-23 19:17:09,566 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：71240 
+
+时间：2017-02-23 19:18:53,867 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：175541 
+
+时间：2017-02-23 19:19:05,850 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：187523 
+
+时间：2017-02-23 19:19:18,910 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：200584 
+
+时间：2017-02-23 19:19:23,814 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：205488 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 118
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 19:19:52,773 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：234447 
+
+时间：2017-02-23 19:19:59,046 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：240720 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 118
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 19:23:16,462 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：288 
+
+时间：2017-02-23 19:25:03,711 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：107537 
+
+时间：2017-02-23 19:25:09,062 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：112888 
+
+时间：2017-02-23 19:25:36,203 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：140029 
+
+时间：2017-02-23 19:25:45,330 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T参数错误，解密失败)","code":"T参数错误，解密失败"} 
+时间：149156 
+
+时间：2017-02-23 19:27:00,480 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：224306 
+
+时间：2017-02-23 19:27:28,401 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：14716 
+
+时间：2017-02-23 19:27:34,610 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T参数错误，解密失败)","code":"T参数错误，解密失败"} 
+时间：20925 
+
+时间：2017-02-23 19:28:59,006 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：105322 
+
+时间：2017-02-23 19:29:32,115 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：649 
+
+时间：2017-02-23 19:30:20,108 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：350 
+
+时间：2017-02-23 19:30:36,803 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：308 
+
+时间：2017-02-23 19:32:08,394 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：91899 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 966
+
+时间：2017-02-23 19:33:51,022 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：348 
+
+时间：2017-02-23 19:34:04,437 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T参数错误，解密失败)","code":"T参数错误，解密失败"} 
+时间：13763 
+
+时间：2017-02-23 19:35:32,983 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：14471 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 966
+
+时间：2017-02-23 19:35:32,987 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：14475 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 966
+
+时间：2017-02-23 19:35:35,777 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：17265 
+
+时间：2017-02-23 19:35:39,946 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：21434 
+
+时间：2017-02-23 19:35:43,265 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：24753 
+
+时间：2017-02-23 19:36:37,590 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：79078 
+
+时间：2017-02-23 19:38:29,505 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：80207 
+
+时间：2017-02-23 19:39:15,882 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：289 
+
+时间：2017-02-23 19:39:24,239 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"T红包不存在 ","code":"0x0015"} 
+时间：8647 
+
+时间：2017-02-23 19:39:50,423 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：34831 
+
+时间：2017-02-23 19:40:09,873 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"T红包不存在 ","code":"0x0015"} 
+时间：54281 
+
+时间：2017-02-23 19:40:28,941 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：系统找不到指定的文件。
+ 
+时间：73349 
+System.Security.Cryptography.CryptographicException: 系统找不到指定的文件。
+
+   在 System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   在 System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   在 System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   在 System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName, String password, X509KeyStorageFlags keyStorageFlags)
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 221
+
+时间：2017-02-23 19:40:38,645 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：83053 
+System.Security.Cryptography.CryptographicException: 系统找不到指定的文件。
+
+   在 System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   在 System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   在 System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   在 System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName, String password, X509KeyStorageFlags keyStorageFlags)
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 244
+   在 X.App.Com.Wx.Pay.PayToOpenid(String appid, String mchid, String openid, String no, Decimal amount, String cert_path, String signkey) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 686
+   在 X.App.Apis.wx.user.getcash.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\wx\user\getcash.cs:行号 31
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 19:47:51,118 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T红包不存在)","code":"T红包不存在"} 
+时间：10459 
+
+时间：2017-02-23 19:48:21,862 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：41203 
+
+时间：2017-02-23 19:50:14,910 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：541 
+
+时间：2017-02-23 19:50:19,758 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：5390 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 966
+
+时间：2017-02-23 19:50:43,619 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：29251 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 966
+
+时间：2017-02-23 19:51:18,322 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：63954 
+System.IndexOutOfRangeException: 索引超出了数组界限。
+   在 X.App.Views.wx.receive.getMsgForEvent(String e, String key) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 108
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 83
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 64
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 19:51:29,266 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：74898 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 966
+
+时间：2017-02-23 19:51:43,559 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：89190 
+System.IndexOutOfRangeException: 索引超出了数组界限。
+   在 X.App.Views.wx.receive.getMsgForEvent(String e, String key) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 108
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 83
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 64
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 19:53:49,581 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：310 
+
+时间：2017-02-23 19:54:06,889 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：17618 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 966
+
+时间：2017-02-23 19:54:20,366 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：31095 
+System.IndexOutOfRangeException: 索引超出了数组界限。
+   在 X.App.Views.wx.receive.getMsgForEvent(String e, String key) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 108
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 83
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 64
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 19:54:34,820 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：45549 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 231
+
+时间：2017-02-23 19:54:34,830 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：45559 
+
+时间：2017-02-23 19:56:39,770 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：170499 
+System.IndexOutOfRangeException: 索引超出了数组界限。
+   在 X.App.Views.wx.receive.getMsgForEvent(String e, String key) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 108
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 83
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 64
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 19:56:39,770 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：170499 
+System.IndexOutOfRangeException: 索引超出了数组界限。
+   在 X.App.Views.wx.receive.getMsgForEvent(String e, String key) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 108
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 83
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 64
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 19:56:39,772 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：170501 
+System.IndexOutOfRangeException: 索引超出了数组界限。
+   在 X.App.Views.wx.receive.getMsgForEvent(String e, String key) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 108
+   在 X.App.Views.wx.receive.ProcMsg(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 83
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 64
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 19:56:48,687 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：355 
+
+时间：2017-02-23 19:56:50,263 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：1931 
+
+时间：2017-02-23 19:57:03,681 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：15348 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 966
+
+时间：2017-02-23 19:57:28,012 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T参数不正确)","code":"T参数不正确"} 
+时间：39679 
+
+时间：2017-02-23 19:57:41,575 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T参数不正确)","code":"T参数不正确"} 
+时间：53242 
+
+时间：2017-02-23 19:58:20,346 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T参数不正确)","code":"T参数不正确"} 
+时间：92013 
+
+时间：2017-02-23 19:58:33,114 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：379 
+
+时间：2017-02-23 19:59:17,444 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：44709 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 118
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 19:59:32,269 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：59534 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 118
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 19:59:34,849 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：62115 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 118
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 20:00:00,181 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：87446 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 966
+
+时间：2017-02-23 20:01:42,271 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：189536 
+
+时间：2017-02-23 20:03:10,205 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：277470 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.wx.user.getcash.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\wx\user\getcash.cs:行号 29
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 20:03:24,136 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：291401 
+
+时间：2017-02-23 20:03:34,279 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：301545 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.wx.user.getcash.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\wx\user\getcash.cs:行号 29
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 20:04:03,673 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：330938 
+
+时间：2017-02-23 20:05:55,289 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：442555 
+
+时间：2017-02-23 20:05:56,218 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：443483 
+
+时间：2017-02-23 20:09:32,555 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：377 
+
+时间：2017-02-23 20:09:35,461 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：3283 
+
+时间：2017-02-23 20:09:55,576 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：23398 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1293
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1346
+   在 X.App.Com.Wx.Msg.Get(String appid, String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 966
+
+时间：2017-02-23 20:12:31,621 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：306 
+
+时间：2017-02-23 20:13:12,488 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：系统找不到指定的文件。
+ 
+时间：41173 
+System.Security.Cryptography.CryptographicException: 系统找不到指定的文件。
+
+   在 System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   在 System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   在 System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   在 System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName, String password, X509KeyStorageFlags keyStorageFlags)
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 221
+
+时间：2017-02-23 20:13:12,505 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：41190 
+System.Security.Cryptography.CryptographicException: 系统找不到指定的文件。
+
+   在 System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   在 System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   在 System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   在 System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName, String password, X509KeyStorageFlags keyStorageFlags)
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.rbt\src\Core\Utility\Tools.cs:行号 244
+   在 X.App.Com.Wx.Pay.PayToOpenid(String appid, String mchid, String openid, String no, Decimal amount, String cert_path, String signkey) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 686
+   在 X.App.Apis.wx.user.getcash.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\wx\user\getcash.cs:行号 36
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-23 20:28:16,297 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：822794 
+
+时间：2017-02-23 20:28:20,040 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：826537 
+
+时间：2017-02-23 20:29:02,239 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：41613 
+
+时间：2017-02-23 20:29:05,222 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：44597 
+
+时间：2017-02-23 20:29:46,096 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：85471 
+
+时间：2017-02-23 20:30:26,959 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：126334 
+
+时间：2017-02-23 20:31:07,953 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：167328 
+
+时间：2017-02-23 20:31:49,000 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：208375 
+
+时间：2017-02-23 20:32:29,978 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：249353 
+
+时间：2017-02-23 20:33:02,915 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：282290 
+
+时间：2017-02-23 20:33:03,986 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：283361 
+
+时间：2017-02-23 20:33:05,211 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：284586 
+
+时间：2017-02-23 20:33:06,251 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：285626 
+
+时间：2017-02-23 20:33:07,503 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：286878 
+
+时间：2017-02-23 20:33:08,648 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：288023 
+
+时间：2017-02-23 20:33:09,966 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：289341 
+
+时间：2017-02-23 20:33:10,956 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：290331 
+
+时间：2017-02-23 20:33:11,057 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：290432 
+
+时间：2017-02-23 20:33:12,261 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：291636 
+
+时间：2017-02-23 20:33:13,505 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：292880 
+
+时间：2017-02-23 20:33:14,579 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：293954 
+
+时间：2017-02-23 20:33:15,934 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：295309 
+
+时间：2017-02-23 20:33:17,065 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：296440 
+
+时间：2017-02-23 20:33:18,464 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：297839 
+
+时间：2017-02-23 20:33:19,476 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：298851 
+
+时间：2017-02-23 20:33:20,791 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：300165 
+
+时间：2017-02-23 20:33:21,781 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：301156 
+
+时间：2017-02-23 20:33:22,955 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：302330 
+
+时间：2017-02-23 20:33:24,368 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：303743 
+
+时间：2017-02-23 20:33:26,550 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：305925 
+
+时间：2017-02-23 20:33:27,798 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：307173 
+
+时间：2017-02-23 20:33:29,526 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：308901 
+
+时间：2017-02-23 20:33:30,602 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：309977 
+
+时间：2017-02-23 20:33:31,736 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：311111 
+
+时间：2017-02-23 20:33:32,813 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：312188 
+
+时间：2017-02-23 20:33:34,003 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：313378 
+
+时间：2017-02-23 20:33:35,570 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：314945 
+
+时间：2017-02-23 20:33:36,778 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：316153 
+
+时间：2017-02-23 20:33:38,218 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：317593 
+
+时间：2017-02-23 20:33:39,655 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：319030 
+
+时间：2017-02-23 20:33:41,074 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：320449 
+
+时间：2017-02-23 20:33:42,471 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：321846 
+
+时间：2017-02-23 20:33:43,862 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：323237 
+
+时间：2017-02-23 20:34:31,874 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：41318 
+
+时间：2017-02-23 20:35:12,905 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：82349 
+
+时间：2017-02-23 20:35:53,942 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：123385 
+
+时间：2017-02-23 20:35:54,544 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：123988 
+
+时间：2017-02-23 20:35:59,069 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：128513 
+
+时间：2017-02-23 20:36:01,804 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:49) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：626 
+
+时间：2017-02-23 20:59:17,854 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：374 
+
+时间：2017-02-23 20:59:57,952 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：40472 
+
+时间：2017-02-23 20:59:57,952 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：40472 
+
+时间：2017-02-23 21:00:30,027 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：72547 
+
+时间：2017-02-23 21:01:10,977 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：113497 
+
+时间：2017-02-23 21:01:52,069 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：154589 
+
+时间：2017-02-23 21:02:32,893 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：195413 
+
+时间：2017-02-23 21:02:56,392 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：218912 

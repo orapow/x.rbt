@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>X.Wx</RootNamespace>
-    <AssemblyName>X.Wx</AssemblyName>
+    <AssemblyName>x.wx</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile>
@@ -89,7 +89,6 @@
     <Compile Include="Akey.Designer.cs">
       <DependentUpon>Akey.cs</DependentUpon>
     </Compile>
-    <Compile Include="App\Curl.cs" />
     <Compile Include="App\Http.cs" />
     <Compile Include="App\Sdk.cs" />
     <Compile Include="App\Wc.cs" />

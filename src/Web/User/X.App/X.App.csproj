@@ -40,10 +40,10 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Apis\mp\list.cs" />
     <Compile Include="Apis\contact\del.cs" />
     <Compile Include="Apis\contact\setheadimg.cs" />
     <Compile Include="Apis\contact\noimguser.cs" />
-    <Compile Include="Apis\qrcode.cs" />
     <Compile Include="Apis\com\upload.cs" />
     <Compile Include="Apis\contact\list.cs" />
     <Compile Include="Apis\check.cs" />
@@ -70,6 +70,7 @@
     <Compile Include="Apis\msg\save.cs" />
     <Compile Include="Apis\contact\sync.cs" />
     <Compile Include="Apis\wx\login.cs" />
+    <Compile Include="Apis\wx\newtk.cs" />
     <Compile Include="Apis\wx\red\get.cs" />
     <Compile Include="Apis\wx\red\sethit.cs" />
     <Compile Include="Apis\wx\user\getcash.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Com\Config.cs" />
     <Compile Include="Com\Wx.cs" />
     <Compile Include="Global.cs" />
+    <Compile Include="Views\app\mp\list.cs" />
     <Compile Include="Views\app\cd\edit.cs" />
     <Compile Include="Views\app\cd\list.cs" />
     <Compile Include="Views\app\red\qrcode.cs" />
@@ -96,15 +98,18 @@
     <Compile Include="Views\login.cs" />
     <Compile Include="Views\index.cs" />
     <Compile Include="Views\user\akey.cs" />
+    <Compile Include="Views\wx\auth.cs" />
     <Compile Include="Views\wx\login.cs" />
+    <Compile Include="Views\wx\receive.cs" />
     <Compile Include="Views\wx\red\qrcode.cs" />
     <Compile Include="Views\wx\red\gets.cs" />
     <Compile Include="Views\wx\red\share.cs" />
     <Compile Include="Views\wx\red\show.cs" />
+    <Compile Include="Views\wx\red\detail.cs" />
+    <Compile Include="Views\wx\red\_red.cs" />
     <Compile Include="Views\wx\user\cash.cs" />
     <Compile Include="Views\wx\user\reds.cs" />
     <Compile Include="Views\wx\user\info.cs" />
-    <Compile Include="Views\wx\user\balance.cs" />
     <Compile Include="Views\wx\_wx.cs" />
     <Compile Include="Views\xview.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

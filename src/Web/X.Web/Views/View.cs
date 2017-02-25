@@ -20,6 +20,15 @@ namespace X.Web.Views
         {
             get { return 0; }
         }
+
+        ///// <summary>
+        ///// 错误信息显示视图名称
+        ///// </summary>
+        //protected virtual string err_viewname
+        //{
+        //    get { return "com.err"; }
+        //}
+
         /// <summary>
         /// 获取页面参数
         /// </summary>
@@ -34,12 +43,14 @@ namespace X.Web.Views
             for (var i = 0; i < ns.Length; i++)
             {
                 if (i >= vs.Length) { ps.Add(ns[i], ""); continue; }
-                dict.Add(ns[i], Context.Server.UrlDecode(vs[i]));
+                if (dict.ContainsKey(ns[i])) dict[ns[i]] = Context.Server.UrlDecode(vs[i]);
+                else dict.Add(ns[i], Context.Server.UrlDecode(vs[i]));
                 ps.Add(ns[i], vs[i]);
             }
 
             SetParms(ps);
         }
+
         /// <summary>
         /// 模板引擎数据字典
         /// </summary>
@@ -91,12 +102,11 @@ namespace X.Web.Views
                 if (fi.Exists && (DateTime.Now - fi.LastWriteTime).TotalMinutes < html_time) return File.ReadAllBytes(file);
             }
 
-            InitView();
-            InitDict();
-
             var html = "";
             try
             {
+                InitView();
+                InitDict();
                 html = Tpl.Instance.Merge(GetTplFile() + ".html", dict);
             }
             catch (Exception ex)

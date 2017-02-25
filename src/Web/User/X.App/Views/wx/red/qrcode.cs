@@ -1,30 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using X.Data;
-using X.Web;
+using X.App.Com;
+using X.Core.Cache;
+using X.Core.Utility;
 
 namespace X.App.Views.wx.red
 {
-    public class qrcode : _wx
+    public class qrcode : _red
     {
-        public int rid { get; set; }
-        protected override string GetParmNames
-        {
-            get
-            {
-                return "rid";
-            }
-        }
         protected override void InitDict()
         {
             base.InitDict();
-            var red = DB.x_red.FirstOrDefault(o => o.red_id == rid);
-            if (red != null)
+
+            var get = r.x_red_get.FirstOrDefault(o => o.get_op == cu.openid);
+            if (get != null) dict.Add("am", (get.amount.Value + get.myramount.Value) / 100M);
+
+            dict.Add("get", get);
+
+            var code = Tools.GetRandNext(1, int.MaxValue);
+            CacheHelper.Save("cash-" + code, "gt-" + get.red_get_id);
+
+            var ad = DB.x_ad.FirstOrDefault(o => o.ad_id == r.ad);
+            if (ad != null)
             {
-                var ad = DB.x_ad.FirstOrDefault(o => o.ad_id == red.ad);
-                if (ad != null) dict.Add("img", ad.qrcode);
+                var url = Wx.Account.GetQrcode(Mp.appid, Mp.access_token, code + "");
+                var data = Tools.GetHttpFile(url);
+                if (data != null && data.Length > 0) dict.Add("img", Convert.ToBase64String(data));
             }
         }
     }

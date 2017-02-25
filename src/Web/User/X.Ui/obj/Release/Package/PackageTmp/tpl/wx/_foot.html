@@ -43,6 +43,9 @@
 
     wx.error(function (res) {
         alert(JSON.stringify(res));
+        //doapi("wx.newtk", null, function () {
+        //    document.location.reload();
+        //});
     });
 
     function doapi(api, ps, callback, tip) {

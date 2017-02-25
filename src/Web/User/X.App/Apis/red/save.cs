@@ -41,20 +41,17 @@ namespace X.App.Apis.red
             int am = (int)amount / count;
             for (var i = 0; i < count; i++)
             {
-                var g = new x_red_get() { status = 1, owner = 0, upid = 0, ramount = 0 };
+                var g = new x_red_get() { status = 1, ramount = 0 };
                 if (type == 1) g.amount = am;
                 else
                 {
                     g.amount = Tools.GetRandNext(1, (int)amount / (count - i) * 2);
                     if (g.amount < 1) g.amount = 1;
-                    //var rt = m.count / count * 100;
-                    //if (rt < 5) g.amount = Tools.GetRandNext(1, (int)amount / (count - m.count.Value) * 2);
-                    //else if (rt < 80) g.amount = Tools.GetRandNext(1, (int)(am * 1.5));
-                    //else g.amount = Tools.GetRandNext(1, (int)(am * 1.2));
                 }
                 amount -= g.amount.Value;
+                g.ramount = 0;
+                g.myramount = 0;
                 m.x_red_get.Add(g);
-                //m.count++;
             }
 
             var dt = new x_balan_detail()

@@ -593,7 +593,7 @@ namespace X.Wx.App
             var rsp = wc.GetStr(url);
 
             outLog("synccheck->" + Serialize.ToJson(rsp));
-            if (rsp.err) return;
+            if (rsp == null || rsp.data == null || rsp.err) return;
 
             var reg = new Regex("{retcode:\"(\\d+)\",selector:\"(\\d+)\"}");
             var m = reg.Match(rsp.data + "");
@@ -621,12 +621,12 @@ namespace X.Wx.App
             };
 
             var rsp = op.PostStr(url, Serialize.ToJson(o));
-            if (rsp.err) { outLog("消息获取失败->" + Serialize.ToJson(rsp)); }
+            if (rsp == null || string.IsNullOrEmpty(rsp.data + "") || rsp.err) { outLog("消息获取失败->" + Serialize.ToJson(rsp)); }
 
             _syncKey = Serialize.FromJson<SyncKey>(rsp.data + "", "SyncKey");
             var msglist = Serialize.FromJson<List<Msg>>(rsp.data + "", "AddMsgList");
-            foreach (var m in msglist) NewMsg?.Invoke(m);
 
+            if (msglist != null) foreach (var m in msglist) NewMsg?.Invoke(m);
         }
 
         bool sendText(string ToUserName, string Content) { return sendText(ToUserName, Content, 1); }

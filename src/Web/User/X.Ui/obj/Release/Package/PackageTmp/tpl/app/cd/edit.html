@@ -18,7 +18,7 @@
             <x:text title="名称" size="5" name="name" def="$!item.name" chk="no" />
             <x:pick title="样式" src="loc:名片|图文|通栏" mode="2" def="#if($id>0)$!item.style#else 1#end" name="style" callback="style_selected" />
             <x:row title="图片"><x:upload name="img" tp="img" count="1" def="$!item.img" /><div class="s1 s">图片比例：1*1</div><div class="s2 s">图片比例：6：1</div></x:row>
-            <x:row title="二维码"><x:upload name="qrcode" tp="img" count="1" def="$!item.qrcode" /><div class="s1 s">图片比例：1*1</div></x:row>
+            <x:pick title="公众号" src="loc:$mps" mode="2" def="$!item.wxmp_id" name="mp" />
             <x:text title="文字" size="5" name="txt" def="$!item.txt" chk="len:0,24" />
             <x:text title="链接" size="5" name="link" def="$!item.link" />
         </div>

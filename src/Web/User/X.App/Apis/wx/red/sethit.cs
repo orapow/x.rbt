@@ -15,6 +15,15 @@ namespace X.App.Apis.wx.red
 
         [ParmsAttr(name = "点击类型", min = 1)]
         public int tp { get; set; }
+
+        protected override int needus
+        {
+            get
+            {
+                return 2;
+            }
+        }
+
         protected override XResp Execute()
         {
             var r = DB.x_red.FirstOrDefault(o => o.red_id == rid);
@@ -22,7 +31,7 @@ namespace X.App.Apis.wx.red
 
             var ht = new x_ad_hit()
             {
-                user_id = cu.user_id,
+                opid = cu.openid,
                 ad_id = r.ad,
                 ctime = DateTime.Now,
                 red_id = rid,

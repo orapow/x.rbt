@@ -18,7 +18,7 @@ namespace X.App.Apis.contact
         protected override XResp Execute()
         {
             var us = Serialize.FromJson<Dictionary<string, string>>(Context.Server.HtmlDecode(imgs));
-            if (us == null) throw new XExcep("T头像数据为空");
+            if (us == null) throw new XExcep("0x0027");
 
             var cs = cu.x_contact.Where(o => us.Keys.Contains(o.username));
             foreach (var c in cs)

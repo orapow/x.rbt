@@ -2,11 +2,11 @@
 {
     public class err : xview
     {
-        protected override bool needus
+        protected override int needus
         {
             get
             {
-                return false;
+                return 0;
             }
         }
     }

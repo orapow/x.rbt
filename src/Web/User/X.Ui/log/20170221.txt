@@ -1,0 +1,1233 @@
+
+时间：2017-02-21 00:04:58,494 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：8969967 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 00:04:58,499 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：8969972 
+
+时间：2017-02-21 01:44:53,982 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：14965455 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 01:44:53,983 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：14965456 
+
+时间：2017-02-21 02:05:51,120 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：16222592 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 02:05:51,121 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：16222593 
+
+时间：2017-02-21 02:17:19,515 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：16910987 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 02:17:19,517 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：16910989 
+
+时间：2017-02-21 03:05:09,862 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：19781334 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 03:05:09,863 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：19781335 
+
+时间：2017-02-21 03:25:16,937 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：20988410 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 03:25:16,938 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：20988411 
+
+时间：2017-02-21 03:55:10,454 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：22781926 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 03:55:10,455 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：22781927 
+
+时间：2017-02-21 04:04:59,155 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：23370627 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 04:04:59,157 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：23370629 
+
+时间：2017-02-21 04:25:13,001 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：24584473 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 04:25:13,002 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：24584474 
+
+时间：2017-02-21 05:24:30,215 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：28141687 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 05:24:30,216 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：28141688 
+
+时间：2017-02-21 06:25:12,348 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：31783821 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 06:25:12,349 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：31783822 
+
+时间：2017-02-21 06:34:49,040 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：32360512 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 06:34:49,041 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：32360513 
+
+时间：2017-02-21 08:33:14,689 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：39466161 
+
+时间：2017-02-21 08:34:45,511 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：39556983 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 08:34:45,512 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：39556984 
+
+时间：2017-02-21 08:54:47,192 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：40758664 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 08:54:47,198 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：40758670 
+
+时间：2017-02-21 09:54:48,730 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：44360203 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 09:54:48,735 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：44360208 
+
+时间：2017-02-21 10:05:20,607 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：44992079 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 10:05:20,608 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：44992081 
+
+时间：2017-02-21 10:15:06,590 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：45578063 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 10:15:06,592 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：45578064 
+
+时间：2017-02-21 10:44:51,250 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：47362722 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 10:44:51,257 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：47362729 
+
+时间：2017-02-21 10:54:45,864 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：47957337 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 10:54:45,866 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：47957339 
+
+时间：2017-02-21 11:24:53,223 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：49764695 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 11:24:53,228 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：49764701 
+
+时间：2017-02-21 11:54:54,436 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：51565908 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 11:54:54,442 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：51565915 
+
+时间：2017-02-21 12:14:57,345 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：52768817 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 12:14:57,346 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：52768818 
+
+时间：2017-02-21 12:44:44,545 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：54556017 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 12:44:44,550 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：54556022 
+
+时间：2017-02-21 12:54:49,826 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：55161298 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 12:54:49,827 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：55161299 
+
+时间：2017-02-21 14:15:11,359 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：59982832 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 14:15:11,365 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：59982837 
+
+时间：2017-02-21 14:35:07,010 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：61178483 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 14:35:07,012 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：61178484 
+
+时间：2017-02-21 15:14:59,483 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：63570955 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 15:14:59,490 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：63570962 
+
+时间：2017-02-21 15:24:49,423 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：64160895 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 15:24:49,424 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：64160896 
+
+时间：2017-02-21 15:34:46,762 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：64758234 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 15:34:46,765 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：64758237 
+
+时间：2017-02-21 15:44:22,861 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：65334333 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1266
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1319
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 208
+
+时间：2017-02-21 15:44:22,862 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：65334334 
+
+时间：2017-02-21 15:50:11,676 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：372 
+
+时间：2017-02-21 15:50:50,498 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：39194 
+
+时间：2017-02-21 15:50:53,586 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：42282 
+
+时间：2017-02-21 15:53:21,519 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：190215 
+System.Data.SqlClient.SqlException (0x80131904): INSERT 语句与 FOREIGN KEY 约束"FK_X_AD_REFERENCE_X_WXMP"冲突。该冲突发生于数据库"x.rbt"，表"dbo.x_wxmp", column 'wxmp_id'。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader()
+   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.ChangeDirector.StandardChangeDirector.DynamicInsert(TrackedObject item)
+   在 System.Data.Linq.ChangeDirector.StandardChangeDirector.Insert(TrackedObject item)
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 X.Web.XFace.SubmitDBChanges() 位置 D:\Pro\x.rbt\src\Web\X.Web\XFace.cs:行号 196
+   在 X.App.Apis.cd.save.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\cd\save.cs:行号 39
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+ClientConnectionId:1900281e-d395-4984-a1fb-de91c0cd12ad
+Error Number:547,State:0,Class:16
+
+时间：2017-02-21 15:53:58,768 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：227464 
+System.Data.SqlClient.SqlException (0x80131904): INSERT 语句与 FOREIGN KEY 约束"FK_X_AD_REFERENCE_X_WXMP"冲突。该冲突发生于数据库"x.rbt"，表"dbo.x_wxmp", column 'wxmp_id'。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader()
+   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.ChangeDirector.StandardChangeDirector.DynamicInsert(TrackedObject item)
+   在 System.Data.Linq.ChangeDirector.StandardChangeDirector.Insert(TrackedObject item)
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 X.Web.XFace.SubmitDBChanges() 位置 D:\Pro\x.rbt\src\Web\X.Web\XFace.cs:行号 196
+   在 X.App.Apis.cd.save.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\cd\save.cs:行号 39
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+ClientConnectionId:1900281e-d395-4984-a1fb-de91c0cd12ad
+Error Number:547,State:0,Class:16
+
+时间：2017-02-21 15:55:16,904 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：403 
+System.Data.SqlClient.SqlException (0x80131904): INSERT 语句与 FOREIGN KEY 约束"FK_X_AD_REFERENCE_X_WXMP"冲突。该冲突发生于数据库"x.rbt"，表"dbo.x_wxmp", column 'wxmp_id'。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader()
+   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.ChangeDirector.StandardChangeDirector.DynamicInsert(TrackedObject item)
+   在 System.Data.Linq.ChangeDirector.StandardChangeDirector.Insert(TrackedObject item)
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 X.Web.XFace.SubmitDBChanges() 位置 D:\Pro\x.rbt\src\Web\X.Web\XFace.cs:行号 196
+   在 X.App.Apis.cd.save.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\cd\save.cs:行号 35
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+ClientConnectionId:34ceebae-fdc9-4a88-bfcc-c8d28f1140bf
+Error Number:547,State:0,Class:16
+
+时间：2017-02-21 15:56:05,447 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：48946 
+System.Data.SqlClient.SqlException (0x80131904): INSERT 语句与 FOREIGN KEY 约束"FK_X_AD_REFERENCE_X_WXMP"冲突。该冲突发生于数据库"x.rbt"，表"dbo.x_wxmp", column 'wxmp_id'。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader()
+   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.ChangeDirector.StandardChangeDirector.DynamicInsert(TrackedObject item)
+   在 System.Data.Linq.ChangeDirector.StandardChangeDirector.Insert(TrackedObject item)
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 X.Web.XFace.SubmitDBChanges() 位置 D:\Pro\x.rbt\src\Web\X.Web\XFace.cs:行号 196
+   在 X.App.Apis.cd.save.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\cd\save.cs:行号 35
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+ClientConnectionId:34ceebae-fdc9-4a88-bfcc-c8d28f1140bf
+Error Number:547,State:0,Class:16
+
+时间：2017-02-21 15:56:19,441 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：62940 
+
+时间：2017-02-21 15:56:35,165 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：78664 
+System.Data.SqlClient.SqlException (0x80131904): INSERT 语句与 FOREIGN KEY 约束"FK_X_AD_REFERENCE_X_WXMP"冲突。该冲突发生于数据库"x.rbt"，表"dbo.x_wxmp", column 'wxmp_id'。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader()
+   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.ChangeDirector.StandardChangeDirector.DynamicInsert(TrackedObject item)
+   在 System.Data.Linq.ChangeDirector.StandardChangeDirector.Insert(TrackedObject item)
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 X.Web.XFace.SubmitDBChanges() 位置 D:\Pro\x.rbt\src\Web\X.Web\XFace.cs:行号 196
+   在 X.App.Apis.cd.save.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\cd\save.cs:行号 35
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+ClientConnectionId:34ceebae-fdc9-4a88-bfcc-c8d28f1140bf
+Error Number:547,State:0,Class:16
+
+时间：2017-02-21 15:59:30,520 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：22380 
+System.Data.SqlClient.SqlException (0x80131904): INSERT 语句与 FOREIGN KEY 约束"FK_X_AD_REFERENCE_X_WXMP"冲突。该冲突发生于数据库"x.rbt"，表"dbo.x_wxmp", column 'wxmp_id'。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader()
+   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.ChangeDirector.StandardChangeDirector.DynamicInsert(TrackedObject item)
+   在 System.Data.Linq.ChangeDirector.StandardChangeDirector.Insert(TrackedObject item)
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 X.Web.XFace.SubmitDBChanges() 位置 D:\Pro\x.rbt\src\Web\X.Web\XFace.cs:行号 196
+   在 X.App.Apis.cd.save.Execute() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Apis\cd\save.cs:行号 35
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+ClientConnectionId:59fd3c27-22ab-48b0-ac28-6caec8a874f8
+Error Number:547,State:0,Class:16
+
+时间：2017-02-21 16:00:03,857 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：55717 
+
+时间：2017-02-21 16:07:43,621 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：259964 
+
+时间：2017-02-21 16:08:10,731 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：287074 
+
+时间：2017-02-21 16:08:16,883 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: Rv4V40500s103 ]"} 
+时间：293226 
+
+时间：2017-02-21 16:10:14,042 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(红包不存在)","code":"红包不存在"} 
+时间：410385 
+
+时间：2017-02-21 16:12:50,257 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：25228 
+
+时间：2017-02-21 16:24:51,599 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(:0) - 
+错误：签名验证错误。 
+时间：167 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture)
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData)
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp)
+
+时间：2017-02-21 16:24:51,830 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(:0) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：397 
+
+时间：2017-02-21 16:31:35,277 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：752 
+
+时间：2017-02-21 16:35:22,155 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：227630 
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 X.App.Com.Wx.Account.GetQrcode(String appid, String tk) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 934
+   在 X.App.Views.wx.red.qrcode.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\qrcode.cs:行号 31
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-21 16:35:22,214 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：227689 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1275
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1328
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 207
+
+时间：2017-02-21 16:35:22,214 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：227689 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1275
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1328
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 207
+
+时间：2017-02-21 16:35:22,214 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：227689 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1275
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1328
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 207
+
+时间：2017-02-21 16:35:22,248 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：227723 
+
+时间：2017-02-21 16:35:22,296 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：227770 
+
+时间：2017-02-21 16:35:22,313 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：227788 
+
+时间：2017-02-21 16:36:27,649 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：293124 
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 X.App.Com.Wx.Account.GetQrcode(String appid, String tk) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 934
+   在 X.App.Views.wx.red.qrcode.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\qrcode.cs:行号 31
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-21 17:15:18,734 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：2624208 
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 X.App.Com.Wx.Account.GetQrcode(String appid, String tk) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 934
+   在 X.App.Views.wx.red.qrcode.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\qrcode.cs:行号 31
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-21 17:15:18,858 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：2624333 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 182
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-21 17:18:52,482 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：2837957 
+
+时间：2017-02-21 18:02:40,779 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：5466254 
+
+时间：2017-02-21 18:03:59,332 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：5544807 
+
+时间：2017-02-21 18:04:01,099 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：5546573 
+
+时间：2017-02-21 18:04:04,004 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：5549479 
+
+时间：2017-02-21 19:24:46,201 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：10391675 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1275
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1328
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 207
+
+时间：2017-02-21 19:24:46,203 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：10391677 
+
+时间：2017-02-21 19:44:45,591 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：11591066 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1275
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1328
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 207
+
+时间：2017-02-21 19:44:45,592 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：11591067 
+
+时间：2017-02-21 19:54:49,292 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：12194767 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1275
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1328
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 207
+
+时间：2017-02-21 19:54:49,293 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：12194768 
+
+时间：2017-02-21 21:31:31,461 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：17996936 
+
+时间：2017-02-21 21:32:29,509 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：415 
+
+时间：2017-02-21 21:35:00,772 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：151678 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 182
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-21 21:35:00,772 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：151678 
+System.IO.IOException: 文件“D:\Pro\x.rbt\src\Web\User\X.Ui\dat\wxmp.x”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 X.App.Com.Wx.Open.SetVerify_Ticket(String verify_ticket) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 182
+   在 X.App.Views.wx.receive.ProcOpen(String xml) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 126
+   在 X.App.Views.wx.receive.GetResponse() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\receive.cs:行号 61
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-21 21:40:05,827 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：661 
+
+时间：2017-02-21 21:40:34,505 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：700 
+
+时间：2017-02-21 21:40:49,904 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：16099 
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 X.App.Com.Wx.Account.GetQrcode(String appid, String tk) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 934
+   在 X.App.Views.wx.red.qrcode.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\qrcode.cs:行号 31
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-21 21:41:11,815 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：38011 
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 X.App.Com.Wx.Account.GetQrcode(String appid, String tk) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 934
+   在 X.App.Views.wx.red.qrcode.InitDict() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\wx\red\qrcode.cs:行号 31
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.rbt\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-02-21 21:43:16,283 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：332 
+
+时间：2017-02-21 21:43:18,592 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: liaf_0602ns90 ]"} 
+时间：2640 
+
+时间：2017-02-21 21:44:24,944 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：341 
+
+时间：2017-02-21 21:44:25,018 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: IsDv90668s113 ]"} 
+时间：415 
+
+时间：2017-02-21 21:45:17,422 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: k31C0721ns82 ]"} 
+时间：52819 
+
+时间：2017-02-21 21:53:07,795 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：447 
+
+时间：2017-02-21 21:53:30,798 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: iMcGSa0214s110 ]"} 
+时间：23450 
+
+时间：2017-02-21 21:54:12,260 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：410 
+
+时间：2017-02-21 21:54:20,614 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: 9UyK.A0264ns87 ]"} 
+时间：8764 
+
+时间：2017-02-21 21:55:00,788 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:35) - 
+错误：签名验证错误。 
+时间：48938 
+X.App.Com.Wx+WxExcep: 签名验证错误。
+   在 X.App.Com.Wx.Crypt.VerifySignature(String sTimeStamp, String sNonce, String sMsgBody, String sSigture) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1280
+   在 X.App.Com.Wx.Crypt.DecryptMsg(String appid, String sMsgSignature, String sTimeStamp, String sNonce, String sPostData) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 1333
+   在 X.App.Com.Wx.Open.Revice(String tk_xml, String sign, String nonce, String timestamp) 位置 D:\Pro\x.rbt\src\Web\User\X.App\Com\Wx.cs:行号 212
+
+时间：2017-02-21 21:55:00,801 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T微信推送消息出错)","code":"T微信推送消息出错"} 
+时间：48951 
+
+时间：2017-02-21 22:02:05,235 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：666 

@@ -1,40 +1,23 @@
 ﻿using Gma.QrCodeNet.Encoding;
 using Gma.QrCodeNet.Encoding.Windows.Render;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Drawing.Text;
 using System.IO;
 using System.Linq;
-using System.Text;
 using X.Core.Utility;
-using X.Web;
 
 namespace X.App.Views.wx.red
 {
-    public class share : _wx
+    public class share : _red
     {
-        public int rid { get; set; }
-        protected override string GetParmNames
-        {
-            get
-            {
-                return "rid";
-            }
-        }
         protected override void InitDict()
         {
             base.InitDict();
 
-            var r = DB.x_red.FirstOrDefault(o => o.red_id == rid);
-            if (r == null) throw new XExcep("红包不存在");
-
-            dict.Add("bao", r);
-
-            var u = DB.x_user.FirstOrDefault(o => o.user_id == r.user_id);
-            dict.Add("u", u);
+            var get = r.x_red_get.FirstOrDefault(o => o.get_op == cu.openid);
 
             if (r.status == 1)
             {
@@ -59,7 +42,7 @@ namespace X.App.Views.wx.red
                 using (var ms = new MemoryStream())
                 {
                     var qr = new QrEncoder();
-                    var cd = qr.Encode("http://" + cfg.domain + "/wx/red/show-" + rid + "-" + cu.user_id + ".html");
+                    var cd = qr.Encode("http://" + cfg.domain + "/wx/red/show-" + rid + "-" + get?.red_get_id + ".html");
                     var rd = new GraphicsRenderer(new FixedModuleSize(15, QuietZoneModules.Two));
                     rd.WriteToStream(cd.Matrix, ImageFormat.Jpeg, ms);
                     var img = Image.FromStream(ms);
@@ -69,7 +52,7 @@ namespace X.App.Views.wx.red
 
                 using (var ms = new MemoryStream())
                 {
-                    var data = Tools.GetHttpFile(cu.headimg);
+                    var data = Tools.GetHttpFile(Mp.head_img);
                     ms.Write(data, 0, data.Length);
                     var img = Image.FromStream(ms);
                     g.DrawImage(img, new Rectangle(326, 90, 240, 240), new Rectangle(0, 0, img.Width, img.Height), GraphicsUnit.Pixel);

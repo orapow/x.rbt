@@ -15,11 +15,11 @@ namespace X.App.Apis
         [ParmsAttr(name = "code", req = true)]
         public string code { get; set; }
 
-        protected override bool needus
+        protected override int needus
         {
             get
             {
-                return false;
+                return 0;
             }
         }
 

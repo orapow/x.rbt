@@ -32,7 +32,7 @@ namespace X.Wx
             Icon = Icon.FromHandle(bmp.GetHicon());
             ni_tip.Icon = Icon;
 
-            wb.Navigate("http://rbt.tunnel.qydev.com/rbt/chat.html");
+            wb.Navigate("http://rbt.80xc.com/rbt/chat.html");
             wb.ObjectForScripting = this;
 
             headimg = hd;
