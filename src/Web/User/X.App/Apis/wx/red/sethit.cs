@@ -8,11 +8,8 @@ using X.Web.Com;
 
 namespace X.App.Apis.wx.red
 {
-    public class sethit : xapi
+    public class sethit : _red
     {
-        [ParmsAttr(name = "红包id", min = 1)]
-        public int rid { get; set; }
-
         [ParmsAttr(name = "点击类型", min = 1)]
         public int tp { get; set; }
 
@@ -26,9 +23,6 @@ namespace X.App.Apis.wx.red
 
         protected override XResp Execute()
         {
-            var r = DB.x_red.FirstOrDefault(o => o.red_id == rid);
-            if (r == null) throw new XExcep("0x0015");
-
             var ht = new x_ad_hit()
             {
                 opid = cu.openid,

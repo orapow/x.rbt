@@ -20,14 +20,17 @@ namespace X.App.Apis
 
         protected virtual int needus { get { return 3; } }
 
+        protected virtual string get_appid()
+        {
+            return cfg.wx_appid;
+        }
+
         protected override void InitApi()
         {
             base.InitApi();
-
-            var uk = GetReqParms("ukey-" + cfg.wx_appid);
+            var uk = GetReqParms("ukey-" + get_appid());
             if (!string.IsNullOrEmpty(uk)) cu = needus == 3 ? DB.x_user.FirstOrDefault(o => o.ukey == uk) : CacheHelper.Get<x_user>(uk); //;
             if (cu == null && needus > 0) throw new XExcep("0x0006");
-
         }
     }
 }

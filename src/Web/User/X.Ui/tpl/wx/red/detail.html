@@ -46,8 +46,9 @@
             <span class="nk">$mp.name 的红包</span>
             #end
             <span class="txt">$bao.remark</span>
-            <div><span class="am" style="display:inline;">$am<span style="font-size: 18px;"> 元</span></span> #if($rt!="0.00")<span style="display:inline;font-size:26px;">+$rt</span><span style="color:#999;font-size:12px;">(返)</span>#end</div>
-            #if($bao.status==2)<span class="ftxt">红包已经抢完</span>#end
+            #if($get)<div><span class="am" style="display:inline;">$am<span style="font-size: 18px;"> 元</span></span> #if($rt!="0.00")<span style="display:inline;font-size:26px;">+$rt</span><span style="color:#999;font-size:12px;">(返)</span>#end</div>#end
+            #if($bao.status==2)<span class="ftxt">#if(!$get)来慢了，#end红包已经抢完</span>#end
+            #if($bao.status==3)<span class="ftxt">#if(!$get)来慢了，#end红包已经暂停领取</span>#end
         </div>
         #if($ad.ad_id>0)
         <div class="ad ad$ad.style">

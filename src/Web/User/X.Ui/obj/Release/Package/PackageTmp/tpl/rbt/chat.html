@@ -10,7 +10,7 @@
     <script src="/js/jquery.mousewheel.min.js"></script>
     <title>机器人页面</title>
     <style type="text/css">
-        body { min-width: inherit; min-width: auto; overflow: hidden; }
+        body { min-width: inherit; min-width: auto; overflow: hidden; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
         .item { position: relative; padding: 5px; margin: 5px 0; }
         .item.left { }
         .item.right { }
@@ -209,27 +209,42 @@
         <div class="clr"></div>
     </div>-->
     <script type="text/javascript">
+        var drag = false;
+        var pt = 0;
+        var ht = 0;
         $(function () {
-            var h = $(window).height();
-            $("body").height(h);
+            ht = $(window).height();
+            $("body").height(ht);
+
             $(window).bind({
                 mousewheel: function (e) {
-                    scroll(-e.deltaY * 100);
+                    var st = $(window).scrollTop() - e.deltaY * 100;
+                    scroll(st - e.deltaY * 63);
                 },
                 mouseover: function () {
                     $(".scbar").stop().fadeIn();
                 },
+                mousemove: function (e) {
+                    if (drag) {
+                        var py = (e.clientY + pt) / ht;
+                        scroll(py * $("body")[0].scrollHeight);
+                    }
+                },
                 mouseout: function () {
                     $(".scbar").stop().fadeOut();
                 },
+                mouseup: function () {
+                    drag = false;
+                },
                 scroll: function () {
-                    var st = $(window).scrollTop();
-                    var py = h * st / ($("body")[0].scrollHeight - h);
-                    if (py <= 0) py = 3;
-                    else if (py >= h - 63) py = h - 63;
-                    $(".scbar").css({ "top": py });
+
                 }
-            })
+            });
+            $(".scbar").mousedown(function (e) {
+                drag = true;
+                pos = $(this).offset();
+                pt = e.clientY - pos.top;
+            });
         });
         function showlog(log) {
             $("body").append('<div class="msg"><div class="cot">' + log + '</div></div>');
@@ -246,11 +261,19 @@
             scroll("end");
         }
         function scroll(t) {
-            var st = t == "end" ? st = $("body")[0].scrollHeight : t;
 
-            document.documentElement.scrollTop += st;
-            window.pageYOffset += st;
-            document.body.scrollTop += st;
+            var sh = $("body")[0].scrollHeight;
+            var st = t == "end" ? sh : t;
+
+            //var st = $(window).scrollTop();
+            var py = ht * st / (sh - ht);
+            if (py <= 0) py = 3;
+            else if (py >= ht - 63) py = ht - 63;
+            $(".scbar").css({ "top": py });
+
+            document.documentElement.scrollTop = st;
+            window.pageYOffset = st;
+            document.body.scrollTop = st;
 
         }
         function showbox(o) {

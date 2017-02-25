@@ -74,6 +74,7 @@
     <Compile Include="Apis\wx\red\get.cs" />
     <Compile Include="Apis\wx\red\sethit.cs" />
     <Compile Include="Apis\wx\user\getcash.cs" />
+    <Compile Include="Apis\wx\red\_red.cs" />
     <Compile Include="Apis\xapi.cs" />
     <Compile Include="Com\Config.cs" />
     <Compile Include="Com\Wx.cs" />

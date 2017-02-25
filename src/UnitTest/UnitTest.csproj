@@ -65,14 +65,13 @@
       <Project>{9364F44B-C253-4A46-A86B-F9248325543D}</Project>
       <Name>X.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Rbt\X.Net\X.Net.csproj">
-      <Project>{f7a04fb8-f06d-487a-91ad-8c875ff4e59e}</Project>
-      <Name>X.Net</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Web\User\X.App\X.App.csproj">
       <Project>{0A949169-01F8-47F3-88C0-C52B317AA82B}</Project>
       <Name>X.App</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pay\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

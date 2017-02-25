@@ -42,7 +42,7 @@ namespace X.App.Views.wx.red
                         nk = g.get_nk,
                         hd = g.get_img,
                         dt = g.ctime.Value.ToString("MM月dd日 HH:mm"),
-                        ram = g.upid == get.red_get_id && g.ramount > 0 ? "返现：" + (g.ramount.Value / (decimal)100).ToString("F2") : ""
+                        ram = (get != null && g.upid == get.red_get_id && g.ramount > 0) ? "返现：" + (g.ramount.Value / (decimal)100).ToString("F2") : ""
                     };
 
             dict.Add("us", q.Skip((p - 1) * 10).Take(10).ToList());

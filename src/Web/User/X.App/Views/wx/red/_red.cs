@@ -60,6 +60,7 @@ namespace X.App.Views.wx.red
         {
             base.InitDict();
             dict.Add("bao", r);
+            dict.Add("ad", ad);
             dict.Add("mp", new
             {
                 name = ad.x_wxmp.nick_name,

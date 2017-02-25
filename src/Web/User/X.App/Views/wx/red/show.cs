@@ -1,6 +1,4 @@
 ﻿using System.Linq;
-using X.Data;
-using X.Web;
 
 namespace X.App.Views.wx.red
 {
@@ -19,6 +17,9 @@ namespace X.App.Views.wx.red
         protected override void InitView()
         {
             base.InitView();
+
+            if (r.status != 1) Context.Response.Redirect("/wx/red/detail-" + rid + ".html");
+
             if (r.x_red_get.Count(o => o.get_op == cu.openid) > 0) Context.Response.Redirect("/wx/red/detail-" + rid + ".html");
         }
 

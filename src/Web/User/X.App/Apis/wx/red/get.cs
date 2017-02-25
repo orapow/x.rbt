@@ -7,10 +7,9 @@ using X.Web.Com;
 
 namespace X.App.Apis.wx.red
 {
-    public class get : xapi
+    public class get : _red
     {
         [ParmsAttr(name = "红包ID", min = 1)]
-        public int id { get; set; }
         public int upid { get; set; }
 
         protected override int needus
@@ -23,8 +22,6 @@ namespace X.App.Apis.wx.red
 
         protected override XResp Execute()
         {
-            var r = DB.x_red.FirstOrDefault(o => o.red_id == id);
-            if (r == null) throw new XExcep("0x0015");
             if (r.status == 2) throw new XExcep("0x0021");
             if (r.status == 3) throw new XExcep("0x0022");
 

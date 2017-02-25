@@ -37,7 +37,7 @@
             <span class="nk">$mp.name 的红包</span>
             #end
         </div>
-        <span class="remark">$bao.remark</span>
+        <span class="remark">$bao.remark $cu.ukey</span>
         <img src="/img/wx/k.png" class="btn" />
     </div>
     <br />
@@ -78,7 +78,7 @@
                 isload = true;
                 var btn = $(this);
                 btn.addClass("on");
-                doapi("wx.red.get", { id: "$rid", upid: "$getid" }, function (d) {
+                doapi("wx.red.get", { rid: "$rid", upid: "$getid" }, function (d) {
                     isload = false;
                     setTimeout(function () {
                         btn.removeClass("on");
