@@ -6,16 +6,13 @@ using System.Text;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
 using X.Core.Utility;
-using System.Net;
 using System.Collections;
 using System.Text.RegularExpressions;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Security.Authentication;
 using System.IO.Compression;
-using X.Core.Plugin;
 
-namespace X.Wx
+namespace X.Lpw
 {
     public class Http
     {

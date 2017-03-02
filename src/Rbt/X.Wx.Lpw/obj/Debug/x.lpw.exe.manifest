@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="x.wx.lpw.exe" version="1.0.0.5" publicKeyToken="0000000000000000" language="zh-Hans" processorArchitecture="x86" type="win32" />
+  <asmv1:assemblyIdentity name="x.lpw.exe" version="1.0.0.5" publicKeyToken="0000000000000000" language="zh-Hans" processorArchitecture="x86" type="win32" />
   <description asmv2:iconFile="Resources\icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="x.wx.lpw" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
-    <commandLine file="x.wx.lpw.exe" parameters="" />
+    <assemblyIdentity name="x.lpw" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="x.lpw.exe" parameters="" />
   </entryPoint>
   <trustInfo>
     <security>
@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>t9QK4BaBvqOfHSeQttLH0rMRKZ8=</dsig:DigestValue>
+        <dsig:DigestValue>vDPMOh6H9j+NPdFit92dHwxuAKI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -91,14 +91,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="x.wx.lpw.exe" size="322560">
-      <assemblyIdentity name="x.wx.lpw" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="x.lpw.exe" size="325120">
+      <assemblyIdentity name="x.lpw" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>5Z+nawqgZ0OONnJyc6nfHUHI9RA=</dsig:DigestValue>
+        <dsig:DigestValue>Qnx8Jnm3oRtqEv3veEAHJmUxGOg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -129,7 +129,7 @@
       <dsig:DigestValue>YQY8BVEVV2S026gGZZI7PDZbLvc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="x.wx.lpw.exe.config" size="479">
+  <file name="x.lpw.exe.config" size="479">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />

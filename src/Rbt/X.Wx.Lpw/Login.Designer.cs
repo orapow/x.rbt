@@ -1,4 +1,4 @@
-﻿namespace X.Wx
+﻿namespace X.Lpw
 {
     partial class Login
     {
@@ -40,7 +40,7 @@
             // pb_headimg
             // 
             this.pb_headimg.BackColor = System.Drawing.Color.Transparent;
-            this.pb_headimg.Image = global::X.Wx.Properties.Resources.loading;
+            this.pb_headimg.Image = global::X.Lpw.Properties.Resources.loading;
             this.pb_headimg.Location = new System.Drawing.Point(38, 64);
             this.pb_headimg.Name = "pb_headimg";
             this.pb_headimg.Size = new System.Drawing.Size(130, 130);

@@ -1,21 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Linq;
-using X.Wx.App;
-using static X.Wx.App.Wc;
+using X.Lpw.App;
 using X.Core.Utility;
-using System.Drawing.Imaging;
 
-namespace X.Wx
+namespace X.Lpw
 {
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class Main : Base
     {
-        //public delegate void LoadRuleHandler();
-        //public event LoadRuleHandler LoadRule;
         string headimg = "";
 
         public Main(Wc w, string hd) : base(w)
@@ -53,33 +47,32 @@ namespace X.Wx
             catch { }
         }
 
-        public void SetContact(List<Contact> contacts, string gpname)
+        public void SetContact(Wc.Contact ct)
         {
             Invoke((Action)(() =>
             {
                 TreeNodeCollection ptn = null;
-                if (string.IsNullOrEmpty(gpname))
+                if (string.IsNullOrEmpty(ct.UserName))
                 {
-                    tv_contact.Nodes.Clear();
-                    contacts = contacts.OrderBy(o => o.UserName[1] == '@' ? 0 : 1).ToList();
+                    ct.MemberList = ct.MemberList.OrderBy(o => o.UserName[1] == '@' ? 0 : 1).ToList();
                     ptn = tv_contact.Nodes;
                 }
-                else ptn = tv_contact.Nodes.Find(gpname, false)[0].Nodes;
+                else
+                {
+                    var tn = tv_contact.Nodes.Find(ct.UserName, false)[0];
+                    if (!string.IsNullOrEmpty(ct.NickName)) tn.Text = ct.NickName;
+                    tn.Tag = ct;
+                    ptn = tn.Nodes;
+                }
 
-                foreach (var c in contacts)
+                ptn.Clear();
+
+                foreach (var c in ct.MemberList)
                 {
                     var tn = new TreeNode(string.IsNullOrEmpty(c.RemarkName) ? c.NickName : c.RemarkName);
                     tn.Name = c.UserName;
+                    tn.Text = c.NickName;
                     tn.Tag = c;
-                    if (c.MemberList != null)
-                    {
-                        foreach (var m in c.MemberList)
-                        {
-                            var stn = new TreeNode(string.IsNullOrEmpty(m.RemarkName) ? m.NickName : m.RemarkName);
-                            stn.Tag = m;
-                            tn.Nodes.Add(stn);
-                        }
-                    }
                     ptn.Add(tn);
                 }
 
@@ -189,7 +182,7 @@ namespace X.Wx
 
         void Send(string cot, int type)
         {
-            var ct = gp_msg.Tag as Contact;
+            var ct = gp_msg.Tag as Wc.Contact;
             if (ct != null) wx.Send(ct.UserName, type, cot);
 
             object m = null;
@@ -235,7 +228,7 @@ namespace X.Wx
 
         private void rsmi_ref_Click(object sender, EventArgs e)
         {
-            wx.LoadContact();
+            wx.LoadContact(null, false);
         }
     }
 }

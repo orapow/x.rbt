@@ -5,12 +5,12 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Linq;
 using X.Core.Utility;
-using X.Wx.App;
+using X.Lpw.App;
 using X.Core.Plugin;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace X.Wx
+namespace X.Lpw
 {
     class Program
     {
@@ -21,6 +21,7 @@ namespace X.Wx
         static Login lg = null;
         static Main main = null;
         static bool stop = false;
+        static bool ctdone = false;
 
         static Queue<Msg> msg_qu = null;
 
@@ -94,10 +95,17 @@ namespace X.Wx
                 while (!stop)
                 {
                     Thread.Sleep(10 * 1000);
+                    if (Rbt.user == null) continue;
+
+                    if (Rbt.user.Send.Count() == 0)
+                    {
+                        outLog("未配置转发规则，请先进行设置");
+                        continue;
+                    }
+
                     var st = DateTime.Now.ToString("HH:mm");
                     outLog("回复@" + st + "->开始获取");
-
-                    var names = Rbt.cfg.Send.Select(s => s.BuildName).ToList();
+                    var names = Rbt.user.Send.Select(s => s.BuildName).ToList();
                     var rsp = Sdk.LoadMsg(names, wx.user.Uin + "", 2);
 
                     if (stop) break;
@@ -109,13 +117,13 @@ namespace X.Wx
                     {
                         var ps = m.regist_user_id.Split('_');
 
-                        var u = Rbt.cfg.Contacts.FirstOrDefault(c => c.NickName == ps[1]);
+                        var u = Rbt.user.Contacts.FirstOrDefault(c => c.NickName == ps[1]);
                         if (u == null) { outLog("回复@" + st + "->找不到发送人：" + ps[1]); }
 
                         //Wc.Contact ur = null;
                         //if (ps.Length == 3) ur = Rbt.cfg.Contacts.FirstOrDefault(c => c.NickName == ps[2]);
 
-                        var txt = Rbt.cfg.Reply.Send_Succ
+                        var txt = Rbt.user.Reply.Send_Succ
                             .Replace("[城市]", Rbt.cfg.CityName)
                             .Replace("[楼盘]", m.build_name)
                             .Replace("[发送人]", ps.Length == 3 ? ps[2] : ps[1])
@@ -148,14 +156,24 @@ namespace X.Wx
         {
             new Thread(o =>
             {
-                Thread.Sleep(15 * 1000);
+                Thread.Sleep(20 * 1000);
+
                 while (!stop)
                 {
-                    Thread.Sleep(5 * 1000);
+                    Thread.Sleep(10 * 1000);
+
+                    if (Rbt.user == null) continue;
+
+                    if (Rbt.user.Send.Count() == 0)
+                    {
+                        outLog("未配置转发规则，请先进行设置");
+                        continue;
+                    }
+
                     var st = DateTime.Now.ToString("HH:mm");
                     outLog("转发@" + st + "->开始获取");
 
-                    var names = Rbt.cfg.Send.Select(s => s.BuildName).ToList();
+                    var names = Rbt.user.Send.Select(s => s.BuildName).ToList();
                     var rsp = Sdk.LoadMsg(names, "", 1);
 
                     if (stop) break;
@@ -165,7 +183,7 @@ namespace X.Wx
 
                     foreach (var m in rsp.Data)
                     {
-                        var r = Rbt.cfg.Send.FirstOrDefault(rc => rc.BuildName == m.build_name);
+                        var r = Rbt.user.Send.FirstOrDefault(rc => rc.BuildName == m.build_name);
                         if (r == null)
                         {
                             outLog("缺少楼盘：" + m.build_name + "的转发规则，请添加");
@@ -174,7 +192,7 @@ namespace X.Wx
 
                         var ps = m.regist_user_id.Split('_');
 
-                        var ct = Rbt.cfg.Contacts.FirstOrDefault(c => c.NickName == r.NickName);
+                        var ct = Rbt.user.Contacts.FirstOrDefault(c => c.NickName == r.NickName);
                         if (ct == null)
                         {
                             outLog("楼盘：" + m.build_name + "的转发规则失效，找不到转发目标群，请更改");
@@ -235,65 +253,71 @@ namespace X.Wx
         /// <param name="cts"></param>
         /// <param name="gname"></param>
         /// <param name="isdone"></param>
-        private static void Wx_ContactLoaded(List<Wc.Contact> cts, string gname, bool isdone)
+        private static void Wx_ContactLoaded(Wc.Contact ct, bool isdone)
         {
             if (main == null) return;
-            main.SetContact(cts, gname);
+            main.SetContact(ct);
 
-            if (string.IsNullOrEmpty(gname))
+            if (string.IsNullOrEmpty(ct.UserName))
             {
-                Rbt.cfg.Contacts = cts;
+                Rbt.user.Contacts = ct.MemberList;
                 outLog("同步主通讯录");
             }
             else
             {
-                var gp = Rbt.cfg.Contacts.FirstOrDefault(o => o.UserName == gname);
-                gp.MemberCount = cts.Count();
-                gp.MemberList = cts;
+                var gp = Rbt.user.Contacts.FirstOrDefault(o => o.UserName == ct.UserName);
+                gp = ct;
                 outLog("同步群：" + gp.NickName + " " + gp.MemberCount + "人");
             }
 
             if (isdone)
             {
-                Rbt.SaveConfig(); outLog("通讯录同步完成");
-                if (Rbt.cfg.Collect.Ids != null)
+                Rbt.SaveConfig();
+                Rbt.SaveUser();
+
+                if (!ctdone && !string.IsNullOrEmpty(Rbt.user.Reply.Rbt_Online))
                 {
-                    foreach (var n in Rbt.cfg.Collect.Ids)
+                    foreach (var n in Rbt.user.Collect.Ids)
                     {
-                        var c = Rbt.cfg.Contacts.FirstOrDefault(o => o.NickName == n);
+                        var c = Rbt.user.Contacts.FirstOrDefault(o => o.NickName == n);
                         if (c == null) continue;
-                        if (!string.IsNullOrEmpty(Rbt.cfg.Reply.Rbt_Online))
+                        lock (msg_qu)
                         {
-                            lock (msg_qu)
+                            msg_qu.Enqueue(new Msg()
                             {
-                                msg_qu.Enqueue(new Msg()
-                                {
-                                    content = Rbt.cfg.Reply.Rbt_Online.Replace("[城市]", Rbt.cfg.CityName),
-                                    username = c.UserName
-                                });
-                            }
+                                content = Rbt.user.Reply.Rbt_Online.Replace("[城市]", Rbt.cfg.CityName),
+                                username = c.UserName
+                            });
                         }
                     }
                 }
+
+                if (!ctdone) outLog("通讯录同步完成");
+                else outLog("通讯录已经更新");
+
+                ctdone = true;
             }
         }
         static void Wx_Loged(Wc.Contact u)
         {
             outLog(u.NickName + "已经登陆");
+            Rbt.LoadUser(u.Uin + "");
             nickname = u.NickName;
             uin = u.Uin + "";
             lg.SetLoged();
-
             Thread.Sleep(2 * 1000);
             lg.Quit();
         }
         static void Wx_OutLog(string log)
         {
-            //try
-            //{
-            //    File.AppendAllText(Application.StartupPath + "\\log_" + DateTime.Now.ToString("yyyy-MM-dd") + ".txt", "log@" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:ffff") + "\r\n" + log + "\r\n\r\n");
-            //}
-            //catch { }
+            if (Rbt.user != null && Rbt.user.IsDebug)
+            {
+                try
+                {
+                    File.AppendAllText(Application.StartupPath + "\\log_" + DateTime.Now.ToString("yyyy-MM-dd") + ".txt", "log@" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:ffff") + "\r\n" + log + "\r\n\r\n");
+                }
+                catch { }
+            }
             Debug.WriteLine("log@" + DateTime.Now.ToString("HH:mm:ss.fff") + "->" + log);
         }
         static void Wx_LogonOut()
@@ -307,15 +331,14 @@ namespace X.Wx
         {
             new Thread(p =>
             {
-                if (Rbt.cfg.Contacts == null || m == null) return;
+                if (Rbt.user.Contacts == null || m == null) return;
                 var msg = p as Wc.Msg;
                 var name = m.FromUserName;
 
-                var u = Rbt.cfg.Contacts.FirstOrDefault(o => o.UserName == m.FromUserName);
-                if (u == null) { outLog("收到无法识别的消息：" + m.Content); return; }
+                var u = Rbt.user.Contacts.FirstOrDefault(o => o.UserName == m.FromUserName);
+                if (u == null && (msg.MsgType == 1 || msg.MsgType == 10000)) { outLog("收到无法识别的消息：" + m.Content); wx.LoadContact(null, false); return; }
 
                 var cot = Tools.RemoveHtml(m.Content);
-                //cot = cot.Replace(":", "：");
                 Wc.Contact ur = null;
 
                 if (m.FromUserName[1] == '@' && cot[0] == '@')
@@ -325,15 +348,23 @@ namespace X.Wx
                     cot = cot.Replace(ct + ":", "");
                 }
 
+                if ((msg.MsgType == 10000 || ur == null) && (cot.Contains("加入群聊") || cot.Contains("移出群聊") || cot.Contains("修改群名为")))
+                    wx.LoadContact(new List<object>(){
+                        new {
+                            EncryChatRoomId = u.EncryChatRoomId,
+                            UserName = u.UserName
+                        }
+                    }, true);
+
                 object mg = null;
 
                 if (msg.MsgType != 1) return;//  main.OutLog(cot);
 
                 //消息采集
-                if (Rbt.cfg.Collect.Ids.Contains(u.NickName) && new Regex("(\r\n)").Matches(cot).Count >= 4)
+                if (Rbt.user.Collect.Ids.Contains(u.NickName) && new Regex("(\r\n)").Matches(cot).Count >= 4)
                 {
                     var c = false;
-                    foreach (var k in Rbt.cfg.Collect.Keys.Split(' ')) if (cot.Contains(k)) { c = true; break; }
+                    foreach (var k in Rbt.user.Collect.Keys.Split(' ')) if (cot.Contains(k)) { c = true; break; }
                     if (c)
                     {
                         var rsp = Sdk.Submit(cot, wx.user.Uin + "_" + u.NickName.Replace("_", "-") + (ur == null ? "" : "_" + ur.NickName.Replace("_", "-")));
@@ -342,15 +373,15 @@ namespace X.Wx
                             {
                                 msg_qu.Enqueue(new Msg()
                                 {
-                                    content = Rbt.cfg.Reply.Identify_Fail
+                                    content = Rbt.user.Reply.Identify_Fail
                                         .Replace("[发送人]", ur == null ? u.NickName : ur.NickName) + "错误信息：" + rsp.RMessage,
                                     username = u.UserName
                                 });
-                                if (Rbt.cfg.Reply.SendTpl_OnFail && !string.IsNullOrEmpty(Rbt.cfg.Reply.Msg_Tpl))
+                                if (Rbt.user.Reply.SendTpl_OnFail && !string.IsNullOrEmpty(Rbt.user.Reply.Msg_Tpl))
                                 {
                                     msg_qu.Enqueue(new Msg()
                                     {
-                                        content = Rbt.cfg.Reply.Msg_Tpl,
+                                        content = Rbt.user.Reply.Msg_Tpl,
                                         username = u.UserName
                                     });
                                 }
@@ -359,7 +390,7 @@ namespace X.Wx
                             lock (msg_qu)
                                 msg_qu.Enqueue(new Msg()
                                 {
-                                    content = Rbt.cfg.Reply.Identify_Succ
+                                    content = Rbt.user.Reply.Identify_Succ
                                         .Replace("[城市]", Rbt.cfg.CityName)
                                         .Replace("[楼盘]", rsp.Data.build_name)
                                         .Replace("[发送人]", ur == null ? u.NickName : ur.NickName)

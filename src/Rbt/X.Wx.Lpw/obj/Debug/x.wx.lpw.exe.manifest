@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>y+Ax3ZMjEuS78JX5q1JgITSCXi4=</dsig:DigestValue>
+        <dsig:DigestValue>t9QK4BaBvqOfHSeQttLH0rMRKZ8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -91,14 +91,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="x.wx.lpw.exe" size="321024">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="x.wx.lpw.exe" size="322560">
       <assemblyIdentity name="x.wx.lpw" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>I4d9wfF28THGrmq4StKHSK0sbBg=</dsig:DigestValue>
+        <dsig:DigestValue>5Z+nawqgZ0OONnJyc6nfHUHI9RA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

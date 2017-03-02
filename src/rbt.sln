@@ -27,7 +27,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X.Wx", "Rbt\X.Wx\X.Wx.cspro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X.Data", "Web\Data\X.Data.csproj", "{AAB73D4E-97AC-45C8-8E33-FD4C975F330A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X.Wx.Lpw", "Rbt\X.Wx.Lpw\X.Wx.Lpw.csproj", "{1877FB23-15DB-424A-80FF-75910C7F6404}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X.Lpw", "Rbt\X.Wx.Lpw\X.Lpw.csproj", "{1877FB23-15DB-424A-80FF-75910C7F6404}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

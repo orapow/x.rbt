@@ -9,7 +9,7 @@ using X.Core.Utility;
 using System.Web;
 using System.IO;
 
-namespace X.Wx.App
+namespace X.Lpw.App
 {
     public class Wc
     {
@@ -56,7 +56,7 @@ namespace X.Wx.App
 
             new Thread(o =>
             {
-                LoadContact();
+                LoadContact(null, false);
 
             }).Start();
 
@@ -361,7 +361,7 @@ namespace X.Wx.App
         public delegate void LogerHandler(string log);
         public event LogerHandler OutLog;
 
-        public delegate void ContactLoadedHandler(List<Contact> contacts, string gname, bool isdone);
+        public delegate void ContactLoadedHandler(Contact c, bool isdone);
         public event ContactLoadedHandler ContactLoaded;
 
         #endregion
@@ -544,59 +544,65 @@ namespace X.Wx.App
         /// <summary>
         /// 获取通讯录
         /// </summary>
-        public void LoadContact()
+        public void LoadContact(List<object> gs, bool isdone)
         {
             var nt = new Http(wc.Cookies, 300);
-            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxgetcontact?pass_ticket={1}&skey={2}&r={3}", gateway, passticket, baseRequest.Skey, getcurrentseconds());
 
-            var rsp = nt.GetStr(url);
-            if (rsp.err) return;
-
-            rsp.data = Tools.RemoveHtml(rsp.data + "");
-            contacts = Serialize.FromJson<List<Contact>>(rsp.data + "", "MemberList").Where(o => o.KeyWord != "gh_" && o.UserName[0] == '@').ToList();
-
-            var nks = new Dictionary<string, int>();
-
-            foreach (var c in contacts.Where(o => string.IsNullOrEmpty(o.RemarkName) && o.UserName[1] != '@'))
+            if (gs == null || gs.Count() == 0)
             {
-                if (nks.ContainsKey(c.NickName)) { nks[c.NickName]++; c.RemarkName = c.NickName + nks[c.NickName].ToString("000"); SetRemark(c.UserName, c.RemarkName); }
-                else nks.Add(c.NickName, 0);
+                string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxgetcontact?pass_ticket={1}&skey={2}&r={3}", gateway, passticket, baseRequest.Skey, getcurrentseconds());
+                var rsp = nt.GetStr(url);
+                if (rsp.err) return;
+                rsp.data = Tools.RemoveHtml(rsp.data + "");
+                contacts = Serialize.FromJson<List<Contact>>(rsp.data + "", "MemberList").Where(o => o.KeyWord != "gh_" && o.UserName[0] == '@').ToList();
+
+                var nks = new Dictionary<string, int>();
+
+                foreach (var c in contacts.Where(o => string.IsNullOrEmpty(o.RemarkName) && o.UserName[1] != '@'))
+                {
+                    if (nks.ContainsKey(c.NickName)) { nks[c.NickName]++; c.RemarkName = c.NickName + nks[c.NickName].ToString("000"); SetRemark(c.UserName, c.RemarkName); }
+                    else nks.Add(c.NickName, 0);
+                }
+
+                ContactLoaded?.Invoke(new Contact() { MemberList = contacts }, false);
+                outLog("主通讯录获取完成！");
+
+                var qgps = contacts.Where(o => o.UserName[1] == '@');
+                var list = new List<Contact>();
+                var pc = Math.Ceiling(qgps.Count() / 50.0);
+
+                for (var i = 1; i <= pc; i++)
+                {
+                    var q = qgps.Skip((i - 1) * 50)
+                        .Take(50)
+                        .Select(o => new
+                        {
+                            EncryChatRoomId = o.EncryChatRoomId,
+                            UserName = o.UserName
+                        });
+
+                    if (q.Count() == 0) break;
+
+                    LoadContact(q.ToList<object>(), i == pc);
+
+                    if (i == pc) OutLog("群通讯录获取完成");
+                    else outLog("群通讯录" + i + "/" + pc + "部份获取完成！");
+                }
+
             }
-
-            ContactLoaded?.Invoke(contacts, "", false);
-            outLog("主通讯录获取完成！");
-
-            var qgps = contacts.Where(o => o.UserName[1] == '@');
-            var list = new List<Contact>();
-            var pc = Math.Ceiling(qgps.Count() / 50.0);
-
-            for (var i = 1; i <= pc; i++)
+            else
             {
-                var gs = qgps.Skip((i - 1) * 50)
-                    .Take(50)
-                    .Select(o => new
-                    {
-                        EncryChatRoomId = o.EncryChatRoomId,
-                        UserName = o.UserName
-                    });
-
-                if (gs.Count() == 0) break;
-
-                rsp = nt.PostStr(gateway + "/cgi-bin/mmwebwx-bin/webwxbatchgetcontact?type=ex&r=" + getcurrentseconds(),//群组
+                var rsp = nt.PostStr(gateway + "/cgi-bin/mmwebwx-bin/webwxbatchgetcontact?type=ex&r=" + getcurrentseconds(),//群组
                     Serialize.ToJson(new
                     {
                         BaseRequest = baseRequest,
                         Count = gs.Count(),
-                        List = gs.ToList()
+                        List = gs
                     }));
 
-                if (rsp.err) { outLog("群组获取失败"); break; }
-
+                if (rsp.err) { outLog("群组获取失败"); return; }
                 var gps = Serialize.FromJson<List<Contact>>(Tools.RemoveHtml(rsp.data?.ToString()), "ContactList");
-                foreach (var c in gps) { ContactLoaded?.Invoke(c.MemberList, c.UserName, i == pc && c == gps[gps.Count() - 1]); Thread.Sleep(200); }
-
-                if (i == pc) OutLog("群通讯录获取完成");
-                else outLog("群通讯录" + i + "/" + pc + "部份获取完成！");
+                foreach (var c in gps) { ContactLoaded?.Invoke(c, isdone && c == gps[gps.Count() - 1]); Thread.Sleep(200); }
             }
 
         }
@@ -759,7 +765,7 @@ namespace X.Wx.App
                     sid = baseRequest.Sid,
                     uin = user.Uin
                 };
-                op.PostStr(api, Serialize.ToJson(o));
+                wc.PostStr(api, Serialize.ToJson(o));
             }
             outLog("logout");
         }
@@ -819,7 +825,7 @@ namespace X.Wx.App
             public string EncryChatRoomId { get; set; }
             public override string ToString()
             {
-                return NickName;
+                return (UserName[1] == '@' ? "(群)" : "") + NickName;
             }
         }
         #region 私有类

@@ -1,4 +1,4 @@
-﻿namespace X.Wx
+﻿namespace X.Lpw
 {
     partial class Main
     {
@@ -35,6 +35,7 @@
             this.cms_menu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.rsmi_ref = new System.Windows.Forms.ToolStripMenuItem();
             this.tsm_config = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.退出QToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,7 +50,6 @@
             this.bt_send = new System.Windows.Forms.Button();
             this.bt_send_pic = new System.Windows.Forms.Button();
             this.tb_msg = new System.Windows.Forms.TextBox();
-            this.rsmi_ref = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pb_head)).BeginInit();
             this.cms_menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_setting)).BeginInit();
@@ -71,7 +71,7 @@
             this.lb_title.AutoEllipsis = true;
             this.lb_title.AutoSize = false;
             this.lb_title.Location = new System.Drawing.Point(49, 13);
-            this.lb_title.Size = new System.Drawing.Size(95, 25);
+            this.lb_title.Size = new System.Drawing.Size(149, 25);
             this.lb_title.Text = "查看日志";
             this.lb_title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lb_title.DoubleClick += new System.EventHandler(this.lb_title_DoubleClick);
@@ -107,38 +107,45 @@
             this.toolStripSeparator1,
             this.退出QToolStripMenuItem});
             this.cms_menu.Name = "contextMenuStrip1";
-            this.cms_menu.Size = new System.Drawing.Size(153, 126);
+            this.cms_menu.Size = new System.Drawing.Size(142, 104);
             this.cms_menu.Opening += new System.ComponentModel.CancelEventHandler(this.cms_menu_Opening);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(141, 22);
             this.toolStripMenuItem2.Text = "显示界面(&S)";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(138, 6);
+            // 
+            // rsmi_ref
+            // 
+            this.rsmi_ref.Name = "rsmi_ref";
+            this.rsmi_ref.Size = new System.Drawing.Size(141, 22);
+            this.rsmi_ref.Text = "刷新(&R)";
+            this.rsmi_ref.Click += new System.EventHandler(this.rsmi_ref_Click);
             // 
             // tsm_config
             // 
             this.tsm_config.Name = "tsm_config";
-            this.tsm_config.Size = new System.Drawing.Size(152, 22);
+            this.tsm_config.Size = new System.Drawing.Size(141, 22);
             this.tsm_config.Text = "选项...(&S)";
             this.tsm_config.Click += new System.EventHandler(this.tsm_config_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(138, 6);
             // 
             // 退出QToolStripMenuItem
             // 
             this.退出QToolStripMenuItem.Name = "退出QToolStripMenuItem";
-            this.退出QToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.退出QToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.退出QToolStripMenuItem.Text = "退出(&Q)";
             this.退出QToolStripMenuItem.Click += new System.EventHandler(this.退出QToolStripMenuItem_Click);
             // 
@@ -159,7 +166,7 @@
             this.pb_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pb_close.ContextMenuStrip = this.cms_menu;
             this.pb_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pb_close.Image = global::X.Wx.Properties.Resources.x;
+            this.pb_close.Image = global::X.Lpw.Properties.Resources.x;
             this.pb_close.Location = new System.Drawing.Point(528, 8);
             this.pb_close.Name = "pb_close";
             this.pb_close.Size = new System.Drawing.Size(30, 30);
@@ -250,7 +257,7 @@
             this.pb_msg_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pb_msg_close.ContextMenuStrip = this.cms_menu;
             this.pb_msg_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pb_msg_close.Image = global::X.Wx.Properties.Resources.x;
+            this.pb_msg_close.Image = global::X.Lpw.Properties.Resources.x;
             this.pb_msg_close.Location = new System.Drawing.Point(533, -3);
             this.pb_msg_close.Name = "pb_msg_close";
             this.pb_msg_close.Size = new System.Drawing.Size(20, 20);
@@ -291,13 +298,6 @@
             this.tb_msg.Name = "tb_msg";
             this.tb_msg.Size = new System.Drawing.Size(538, 45);
             this.tb_msg.TabIndex = 1;
-            // 
-            // rsmi_ref
-            // 
-            this.rsmi_ref.Name = "rsmi_ref";
-            this.rsmi_ref.Size = new System.Drawing.Size(152, 22);
-            this.rsmi_ref.Text = "刷新(&R)";
-            this.rsmi_ref.Click += new System.EventHandler(this.rsmi_ref_Click);
             // 
             // Main
             // 

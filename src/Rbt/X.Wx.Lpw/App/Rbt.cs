@@ -6,19 +6,42 @@ using System.Text;
 using System.Windows.Forms;
 using X.Core.Utility;
 
-namespace X.Wx.App
+namespace X.Lpw.App
 {
     public class Rbt
     {
         public static Config cfg = null;
+        public static User user = null;
 
         public static void LoadConfig()
         {
-            var text = File.ReadAllText(Application.StartupPath + "\\cfg.x");
-            if (!string.IsNullOrEmpty(text)) text = Secret.Rc4.Decrypt(text);
-            var config = Serialize.FromJson<Config>(text);
-            cfg = config;
-            //return cfg == null ? new Config() : cfg;
+            try
+            {
+                var text = File.ReadAllText(Application.StartupPath + "\\cfg.x");
+                if (!string.IsNullOrEmpty(text)) text = Secret.Rc4.Decrypt(text);
+                cfg = Serialize.FromJson<Config>(text);
+            }
+            catch { }
+            if (cfg == null) cfg = new Config();
+        }
+
+        public static void LoadUser(string uin)
+        {
+            try
+            {
+                var text = File.ReadAllText(Application.StartupPath + "\\" + uin + "_cfg.x");
+                if (!string.IsNullOrEmpty(text)) text = Secret.Rc4.Decrypt(text);
+                user = Serialize.FromJson<User>(text);
+            }
+            catch { }
+            if (user == null) user = new User() { Uin = uin };
+        }
+
+        public static void SaveUser()
+        {
+            if (user == null || string.IsNullOrEmpty(user.Uin)) return;
+            var text = Secret.Rc4.Encrypt(Serialize.ToJson(user));
+            File.WriteAllText(Application.StartupPath + "\\" + user.Uin + "_cfg.x", text);
         }
 
         public static void SaveConfig()
@@ -33,12 +56,19 @@ namespace X.Wx.App
             public string GateWay { get; set; }
             public int City_Id { get; set; }
             public string CityName { get; set; }
+            public User User { get; set; }
+            public Config() { User = new User(); }
+        }
+
+        public class User
+        {
+            public string Uin { get; set; }
             public ReplyCfg Reply { get; set; }
             public List<SendRule> Send { get; set; }
             public CollectRule Collect { get; set; }
             public List<Wc.Contact> Contacts { get; set; }
-
-            public Config()
+            public bool IsDebug { get; set; }
+            public User()
             {
                 Reply = new ReplyCfg();
                 Send = new List<SendRule>();
@@ -51,11 +81,7 @@ namespace X.Wx.App
         {
             public string Keys { get; set; }
             public List<string> Ids { get; set; }
-            public CollectRule()
-            {
-                Ids = new List<string>();
-            }
-
+            public CollectRule() { Ids = new List<string>(); }
         }
 
         public class ReplyCfg
@@ -108,7 +134,6 @@ namespace X.Wx.App
             /// 楼盘名
             /// </summary>
             public string BuildName { get; set; }
-
 
             public override string ToString()
             {
