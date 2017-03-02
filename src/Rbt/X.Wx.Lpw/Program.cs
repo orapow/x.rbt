@@ -339,12 +339,22 @@ namespace X.Wx
                         var rsp = Sdk.Submit(cot, wx.user.Uin + "_" + u.NickName.Replace("_", "-") + (ur == null ? "" : "_" + ur.NickName.Replace("_", "-")));
                         if (rsp.RCode != "200")
                             lock (msg_qu)
+                            {
                                 msg_qu.Enqueue(new Msg()
                                 {
                                     content = Rbt.cfg.Reply.Identify_Fail
                                         .Replace("[发送人]", ur == null ? u.NickName : ur.NickName) + "错误信息：" + rsp.RMessage,
                                     username = u.UserName
                                 });
+                                if (Rbt.cfg.Reply.SendTpl_OnFail && !string.IsNullOrEmpty(Rbt.cfg.Reply.Msg_Tpl))
+                                {
+                                    msg_qu.Enqueue(new Msg()
+                                    {
+                                        content = Rbt.cfg.Reply.Msg_Tpl,
+                                        username = u.UserName
+                                    });
+                                }
+                            }
                         else
                             lock (msg_qu)
                                 msg_qu.Enqueue(new Msg()
