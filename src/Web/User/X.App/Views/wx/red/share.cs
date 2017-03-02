@@ -42,7 +42,7 @@ namespace X.App.Views.wx.red
                 using (var ms = new MemoryStream())
                 {
                     var qr = new QrEncoder();
-                    var cd = qr.Encode("http://" + cfg.domain + "/wx/red/show-" + rid + "-" + get.red_get_id + ".html");
+                    var cd = qr.Encode("http://" + cfg.domain + "/wx/red/show-" + rid + "-" + get?.red_get_id + ".html");
                     var rd = new GraphicsRenderer(new FixedModuleSize(15, QuietZoneModules.Two));
                     rd.WriteToStream(cd.Matrix, ImageFormat.Jpeg, ms);
                     var img = Image.FromStream(ms);

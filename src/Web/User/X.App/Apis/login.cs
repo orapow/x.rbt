@@ -33,7 +33,7 @@ namespace X.App.Apis
             {
                 cu_key = CacheHelper.Get<string>("login." + code);
                 Thread.Sleep(100);
-                if ((DateTime.Now - dt).TotalSeconds >= 60) break;
+                if ((DateTime.Now - dt).TotalSeconds >= 60 * 5) break;
             } while (string.IsNullOrEmpty(cu_key));
 
             CacheHelper.Remove("login." + code);

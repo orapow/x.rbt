@@ -91,16 +91,16 @@ namespace X.Web.Views
             var qs = Context.Request.QueryString;
             var v = qs["v"];
 
-            var ht = "/html/" + v;
-            ht += ((!string.IsNullOrEmpty(qs["p"]) ? "-" + qs["p"] : "") + ".html").ToLower();
+            //var ht = "/html/" + v;
+            //ht += ((!string.IsNullOrEmpty(qs["p"]) ? "-" + qs["p"] : "") + ".html").ToLower();
 
-            var file = Context.Server.MapPath(ht); //Context.Request.RawUrl;
+            //var file = Context.Server.MapPath(ht); //Context.Request.RawUrl;
 
-            if (html_time > 0 || html_time == -1)
-            {
-                var fi = new FileInfo(file);
-                if (fi.Exists && (DateTime.Now - fi.LastWriteTime).TotalMinutes < html_time) return File.ReadAllBytes(file);
-            }
+            //if (html_time > 0 || html_time == -1)
+            //{
+            //    var fi = new FileInfo(file);
+            //    if (fi.Exists && (DateTime.Now - fi.LastWriteTime).TotalMinutes < html_time) return File.ReadAllBytes(file);
+            //}
 
             var html = "";
             try
@@ -111,6 +111,7 @@ namespace X.Web.Views
             }
             catch (Exception ex)
             {
+                Loger.Error(ex.Message + "\r\n" + ex.StackTrace);
                 if (ex.InnerException != null && ex.InnerException is XExcep)
                 {
                     throw (XExcep)ex.InnerException;
@@ -118,7 +119,7 @@ namespace X.Web.Views
                 throw ex;
             }
 
-            dict.Clear();
+            dict?.Clear();
 
             var xf = new XForm(this);
             html = xf.Parse(html);
@@ -130,15 +131,15 @@ namespace X.Web.Views
 
             var data = Encoding.UTF8.GetBytes(html);
 
-            if (html_time > 0 || html_time == -1)
-            {
-                try
-                {
-                    Directory.CreateDirectory(file.Substring(0, file.LastIndexOf('\\')));
-                    File.WriteAllBytes(file, data);
-                }
-                catch { }
-            }
+            //if (html_time > 0 || html_time == -1)
+            //{
+            //    try
+            //    {
+            //        Directory.CreateDirectory(file.Substring(0, file.LastIndexOf('\\')));
+            //        File.WriteAllBytes(file, data);
+            //    }
+            //    catch { }
+            //}
 
             return data;
 

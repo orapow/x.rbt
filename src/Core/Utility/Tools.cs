@@ -417,7 +417,7 @@ namespace X.Core.Utility
         public static string RemoveHtml(string html)
         {
             html = Regex.Replace(html, "<[^>]+>([^<]*)</[^>]+>", "$1");
-            html = Regex.Replace(html, "<[^>]+/>", "");
+            html = Regex.Replace(html, "<[^>]+/>", "\r\n");
             return html;
         }
 

@@ -1,21 +1,13 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Net;
 using X.Core.Utility;
-using System.Threading;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Collections.Generic;
-using System.Linq;
-using X.Net;
 using System.Net.Security;
 using System.Net.Sockets;
 using System.Security.Authentication;
 using System.Security.Cryptography.X509Certificates;
 using System.Collections;
 using X.App.Com;
-using System.Web;
-using System.IO;
 
 namespace UnitTest
 {
@@ -36,10 +28,12 @@ namespace UnitTest
             //Console.WriteLine(Tools.RemoveHtml("<title style=\"asdfqewrqweq: sadfa;\">C#正则删除HTML标签 - HOT SUMMER - 博客园</title>"));
 
             //var msg = Wx.Msg.Get("wx55bfd5ad6998a826", "<xml><Encrypt><![CDATA[UzHfJ6kvqVjYZndF6i5Xqo3bLesQvYVTs8hWcEt6Slmbqj/ILjsu++ih9lP1Y9AodrxsW5NnyB6kM8TCcsdU6CDNRZe/Q7fZKftcM4oy6c0iFQtS8B+xXi+ntSl+i0Vp0/J3HTmz0MIsZf19VEuRNaemduh1oeldjaCYJ3zRSAHroL8obfzVPRpkr9binPfwo+YmuzUB7SlHMcHjWx+dwdBza63qnZvD62GfeDFfka9Mq0t53/9SKRnZTpXLHp/bNIgvbt/e9Ev1GnSjq6UW7lwzJsO2CbK+dZn6DUS2ZIN3ObvKZPfNw4q/sAuG6MP8cH+EPakmn+lLiZ+3L1SDgX2AT0eCefLAbP7OaSluXvEq5Js/8PW/9zkjVint0T774Vfs/KbqjjyeNLxtAFrgvGLSUN2Y1Yf27oHJKYLQWugX1cYFKqyCLO/YfvI9cdu373bvudoOToDJsPcDPceyxQ==]]></Encrypt><MsgSignature><![CDATA[9b4317209a8766c7aee6de6e6bfd04343153be4d]]></MsgSignature><TimeStamp><![CDATA[1487900361]]></TimeStamp><Nonce><![CDATA[ivo18KY55]]></Nonce></xml>", "9b4317209a8766c7aee6de6e6bfd04343153be4d", "ivo18KY55", "1487900361");
-            HttpContext.Current = new HttpContext(new HttpRequest("", "http://localhost", ""),
-                                                  new HttpResponse(new StringWriter(new StringBuilder()))); //
+            //HttpContext.Current = new HttpContext(new HttpRequest("", "http://localhost", ""),
+            //                                      new HttpResponse(new StringWriter(new StringBuilder()))); //
             var st = Wx.Pay.PayToOpenid("wxc6982f28ed963521", "1344240501", "oMM-cwaCZZ-KU5zUcqgekVF6XFMg", "44", 1, "d:\\", "gzkdzMh0AsfpDKJTjTCZPYq2QKphK5Km");
             //var st = Wx.Pay.MdOrder("afweqrwerqewq", "2342", "100", "http://rbt.80xc.com/recive.html", "o84gaswfHg0XzHBeJzAjY4PdyXi4", "wxc6982f28ed963521", "1344240501", "gzkdzMh0AsfpDKJTjTCZPYq2QKphK5Km", false);
+
+            //Console.WriteLine(Secret.Rc4.Decrypt("51c133"));
 
         }
 
@@ -125,38 +119,38 @@ namespace UnitTest
         }
 
 
-        class Secret
-        {
-            static byte[] getKey()
-            {
-                var dt = DateTime.Now;
-                if (dt.Second >= 50) dt = dt.AddSeconds(-30);
-                var key = X.Core.Utility.Secret.MD5(dt.ToString("yyyymmddHHMMmm") + "+80xc.com+");
-                Console.WriteLine("key->" + key);
-                return Encoding.UTF8.GetBytes(key);
-            }
+        //class Secret
+        //{
+        //    static byte[] getKey()
+        //    {
+        //        var dt = DateTime.Now;
+        //        if (dt.Second >= 50) dt = dt.AddSeconds(-30);
+        //        var key = X.Core.Utility.Secret.MD5(dt.ToString("yyyymmddHHMMmm") + "+80xc.com+");
+        //        Console.WriteLine("key->" + key);
+        //        return Encoding.UTF8.GetBytes(key);
+        //    }
 
-            public static byte[] Decode(byte[] data)
-            {
-                var k1 = getKey();
-                var k2 = data.Take(32);
-                if (!Enumerable.SequenceEqual(k1, k2)) throw new Exception("Decode Error");
+        //    public static byte[] Decode(byte[] data)
+        //    {
+        //        var k1 = getKey();
+        //        var k2 = data.Take(32);
+        //        if (!Enumerable.SequenceEqual(k1, k2)) throw new Exception("Decode Error");
 
-                var i = 0;
-                for (var j = 0; j < data.Length; j++) data[j] = (byte)(data[j] ^ k1[i++ % k1.Length]);
+        //        var i = 0;
+        //        for (var j = 0; j < data.Length; j++) data[j] = (byte)(data[j] ^ k1[i++ % k1.Length]);
 
-                return data.Skip(32).ToArray();
-            }
+        //        return data.Skip(32).ToArray();
+        //    }
 
-            public static byte[] Encode(byte[] data)
-            {
-                var key = getKey();
-                var i = 0;
-                var dts = data.ToList();
-                for (var j = 0; j < dts.Count; j++) dts[j] = (byte)(dts[j] ^ key[i++ % key.Length]);
-                dts.InsertRange(0, key.ToList());
-                return dts.ToArray();
-            }
-        }
+        //    public static byte[] Encode(byte[] data)
+        //    {
+        //        var key = getKey();
+        //        var i = 0;
+        //        var dts = data.ToList();
+        //        for (var j = 0; j < dts.Count; j++) dts[j] = (byte)(dts[j] ^ key[i++ % key.Length]);
+        //        dts.InsertRange(0, key.ToList());
+        //        return dts.ToArray();
+        //    }
+        //}
     }
 }

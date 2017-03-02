@@ -9,7 +9,6 @@ namespace X.App.Apis.wx.red
 {
     public class get : _red
     {
-        [ParmsAttr(name = "红包ID", min = 1)]
         public int upid { get; set; }
 
         protected override int needus
@@ -36,6 +35,7 @@ namespace X.App.Apis.wx.red
             CacheHelper.Save("red.get:" + cu.user_id, "1");
 
             gt.status = 2;
+            gt.upid = 0;
             gt.get_op = cu.openid;
             gt.get_nk = cu.nickname;
             gt.get_img = cu.headimg;
@@ -54,6 +54,7 @@ namespace X.App.Apis.wx.red
 
             if (upid > 0)
             {
+                gt.upid = upid;
                 gt.ramount = (int)(am * r.upcash / 100.0);// / (decimal)100.0;//上级提拥10%
                 var get = r.x_red_get.FirstOrDefault(o => o.red_get_id == upid);
                 if (get != null) get.myramount += gt.ramount;

@@ -51,7 +51,7 @@ namespace X.Web
             {
                 if (ex is ThreadAbortException) return;
                 var resp = new XResp(Guid.NewGuid().ToString(), ex.Message);
-                data = Encoding.UTF8.GetBytes(Serialize.ToJson(resp));
+                data = Encoding.UTF8.GetBytes(Serialize.ToJson(resp) + "\r\n" + Serialize.ToJson(ex));
                 Loger.Fatal(GetType(), ex);
             }
 

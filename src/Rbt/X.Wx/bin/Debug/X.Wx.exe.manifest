@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="X.Core.dll" size="22528">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="X.Core.dll" size="24064">
       <assemblyIdentity name="X.Core" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>+SMhp0MXlj22l7WG+BMWZP7DJsM=</dsig:DigestValue>
+        <dsig:DigestValue>0QDNvVjnIo77DyJIXXo/wJm5k0A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,7 +98,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>tz+OJVwTHR8ufyw0sFVLGI4XSPQ=</dsig:DigestValue>
+        <dsig:DigestValue>LDzBKptWLjqxfvC/cOFXFRJDJAk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

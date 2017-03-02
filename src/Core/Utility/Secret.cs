@@ -206,5 +206,91 @@ namespace X.Core.Utility
             return Encoding.UTF8.GetString(bytes);
         }
         #endregion
+
+        public class Rc4
+        {
+            static string key = "MmPSJmom2RSvDfBUAZZsMP4IFeIaHyUb9uZiu5alFfRjrwTxJ06XIeWTKlG49Cxz";
+
+            public static string Encrypt(string data)
+            {
+                if (string.IsNullOrEmpty(data)) return "";
+                return ByteToHex(EncryptEx(Encoding.UTF8.GetBytes(data)));
+            }
+            public static string Decrypt(string data)
+            {
+                if (string.IsNullOrEmpty(data)) return "";
+                return Encoding.UTF8.GetString(EncryptEx(HexToByte(data.ToUpper())));
+            }
+            static byte[] EncryptEx(byte[] data)
+            {
+                if (data == null) return null;
+                byte[] output = new byte[data.Length];
+                long i = 0;
+                long j = 0;
+                byte[] mBox = GetKey(Encoding.UTF8.GetBytes(key), 256);
+                for (long offset = 0; offset < data.Length; offset++)
+                {
+                    i = (i + 1) % mBox.Length;
+                    j = (j + mBox[i]) % mBox.Length;
+                    byte temp = mBox[i];
+                    mBox[i] = mBox[j];
+                    mBox[j] = temp;
+                    byte a = data[offset];
+                    byte b = mBox[(mBox[i] + mBox[j]) % mBox.Length];
+                    output[offset] = (byte)((int)a ^ (int)b);
+                }
+
+                return output;
+            }
+            static string ByteToHex(byte[] vByte)
+            {
+                if (vByte == null || vByte.Length < 1) return null;
+                var sb = new StringBuilder(vByte.Length * 2);
+                for (int i = 0; i < vByte.Length; i++)
+                {
+                    if ((uint)vByte[i] < 0) return null;
+                    var k = (uint)vByte[i] / 16;
+                    sb.Append((char)(k + ((k > 9) ? 'A' - 10 : '0')));
+                    k = (uint)vByte[i] % 16;
+                    sb.Append((char)(k + ((k > 9) ? 'A' - 10 : '0')));
+                }
+                return sb.ToString().ToLower();
+            }
+            static byte[] HexToByte(string szHex)
+            {
+                int iLen = szHex.Length;
+                if (iLen <= 0 || 0 != iLen % 2)
+                {
+                    return null;
+                }
+                int dwCount = iLen / 2;
+                uint tmp1, tmp2;
+                byte[] pbBuffer = new byte[dwCount];
+                for (int i = 0; i < dwCount; i++)
+                {
+                    tmp1 = szHex[i * 2] - (((uint)szHex[i * 2] >= 'A') ? (uint)'A' - 10 : '0');
+                    if (tmp1 >= 16) return null;
+                    tmp2 = szHex[i * 2 + 1] - (szHex[i * 2 + 1] >= (uint)'A' ? (uint)'A' - 10 : '0');
+                    if (tmp2 >= 16) return null;
+                    pbBuffer[i] = (byte)(tmp1 * 16 + tmp2);
+                }
+                return pbBuffer;
+            }
+            static byte[] GetKey(byte[] pass, int kLen)
+            {
+                byte[] mBox = new byte[kLen];
+
+                for (long i = 0; i < kLen; i++) mBox[i] = (byte)i;
+                long j = 0;
+                for (long i = 0; i < kLen; i++)
+                {
+                    j = (j + mBox[i] + pass[i % pass.Length]) % kLen;
+                    byte temp = mBox[i];
+                    mBox[i] = mBox[j];
+                    mBox[j] = temp;
+                }
+                return mBox;
+            }
+        }
     }
 }

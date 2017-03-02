@@ -1,11 +1,13 @@
 ﻿<div class="col_side">
     <div class="menu_box" id="menuBar">
+        #if($cu.remark!=1)
         <dl class="menu no_extra">
             <dt class="menu_title"><i class="icon-cogs"></i> 机器人</dt>
             <dd class="menu_item $!m_rbt_contact"><a href="/rbt/contact/list.html">通讯录</a></dd>
             <dd class="menu_item $!m_rbt_msg"><a href="/rbt/msg/list.html">群发功能</a></dd>
             <dd class="menu_item $!m_rbt_reply"><a href="/rbt/reply/list.html">消息回复</a></dd>
         </dl>
+        #end
         <dl class="menu ">
             <dt class="menu_title"><i class="icon-th-large"></i> 功能应用</dt>
             <dd class="menu_item $!m_app_mp"><a href="/app/mp/list.html">公众号授权</a></dd>

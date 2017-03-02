@@ -46,12 +46,16 @@ namespace X.App.Views.app.red
             dict.Add("adc", r.adcount ?? 0);
             dict.Add("qdc", r.qrcount ?? 0);
 
+            var q = r.x_red_get.Where(o => o.cashed == true);
+            dict.Add("cashsum", q.Sum(o => (o.amount + o.myramount) / 100M).Value.ToString("F2"));
+            dict.Add("cashed", q.Count());
+
         }
 
         public string GetHtml(long upid)
         {
             var q = from g in r.x_red_get
-                    where g.red_get_id == upid && g.status == 2
+                    where g.upid == upid && g.status == 2
                     select new
                     {
                         id = g.red_get_id,
@@ -62,7 +66,8 @@ namespace X.App.Views.app.red
                         dt = g.ctime.Value.ToString("MM月dd日 HH:mm"),
                         ow = g.get_op,
                         ht1 = g.x_red.x_ad_hit.Count(o => o.red_id == g.red_id && o.tp == 1),
-                        ht2 = g.x_red.x_ad_hit.Count(o => o.red_id == g.red_id && o.tp == 2)
+                        ht2 = g.x_red.x_ad_hit.Count(o => o.red_id == g.red_id && o.tp == 2),
+                        ch = g.cashed
                     };
 
             var list = q.ToList();
@@ -72,7 +77,7 @@ namespace X.App.Views.app.red
             sb.Append("<ul>");
             foreach (var r in list.OrderByDescending(o => o.dt))
             {
-                sb.Append("<li data-id='" + r.ow + "' data-ht1='" + r.ht1 + "' data-ht2='" + r.ht2 + "'>");
+                sb.Append("<li data-id='" + r.ow + "' data-ht1='" + r.ht1 + "' data-ht2='" + r.ht2 + "' class='" + (r.ch == true ? "cashed" : "") + "'>");
                 sb.Append("<a href=\"javascript:; \" class=\"item\"><img src=\"" + r.hd + "\" title=\"" + r.nk + " " + r.dt + " 返：" + r.ram + " 广告：" + (r.ht1 + r.ht2) + "(" + r.ht1 + "," + r.ht2 + ")\" width='40' />" + r.am + "元</a>");
                 sb.Append(GetHtml(r.id));
                 sb.Append("</li>");
