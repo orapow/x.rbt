@@ -199,7 +199,7 @@ namespace X.Js
                             continue;
                         }
 
-                        var txt = @"" + m.build_name + "<br/>公司：楼盘网 + " + m.company_name?.Replace("楼盘网", "").Replace("+", "") + "<br/>客户姓名：" + m.customer_name + "<br/>客户电话：" + m.customer_mobile + "<br/>经纪姓名：" + m.agent_name + "<br/>经纪电话：" + m.agent_mobile + "<br/>看房时间：" + m.look_date_str;
+                        var txt = @"" + m.build_name + "<br/>公司：" + m.company_name?.Replace("楼盘网", "").Replace("+", "") + "<br/>客户姓名：" + m.customer_name + "<br/>客户电话：" + m.customer_mobile + "<br/>经纪姓名：" + m.agent_name + "<br/>经纪电话：" + m.agent_mobile + "<br/>看房时间：" + m.look_date_str;
 
                         lock (msg_qu) msg_qu.Enqueue(new Msg()
                         {
