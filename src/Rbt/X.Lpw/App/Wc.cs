@@ -9,7 +9,7 @@ using X.Core.Utility;
 using System.Web;
 using System.IO;
 
-namespace X.Js.App
+namespace X.Lpw.App
 {
     public class Wc
     {
@@ -96,22 +96,26 @@ namespace X.Js.App
         {
             var nt = new Http(wc.Cookies, 5);
             var imgs = new Dictionary<string, string>();
-            foreach (var u in usernames)
+            try
             {
-                if (imgs.ContainsKey(u)) continue;
-                if (headimgs.ContainsKey(u)) imgs.Add(u, headimgs[u]);
-                else
+                foreach (var u in usernames)
                 {
-                    imgs.Add(u, "1");
-                    var rp = nt.GetFile(gateway + "/cgi-bin/mmwebwx-bin/webwxget" + (u[1] == '@' ? "headimg" : "icon") + "?username=" + u);
-                    if (!rp.err && rp.data != null)
+                    if (imgs.ContainsKey(u) || string.IsNullOrEmpty(u)) continue;
+                    if (headimgs.ContainsKey(u) && !string.IsNullOrEmpty(headimgs[u])) imgs.Add(u, headimgs[u]);
+                    else
                     {
-                        imgs[u] = Convert.ToBase64String(rp.data as byte[]);
-                        headimgs.Add(u, imgs[u]);
+                        imgs.Add(u, "1");
+                        var rp = nt.GetFile(gateway + "/cgi-bin/mmwebwx-bin/webwxget" + (u[1] == '@' ? "headimg" : "icon") + "?username=" + u);
+                        if (!rp.err && rp.data != null)
+                        {
+                            imgs[u] = Convert.ToBase64String(rp.data as byte[]);
+                            if (!string.IsNullOrEmpty(imgs[u])) headimgs.Add(u, imgs[u]);
+                        }
                     }
+                    Thread.Sleep(100);
                 }
-                Thread.Sleep(100);
             }
+            catch { outLog("获取头像出错"); }
             return imgs;
         }
 
@@ -127,25 +131,6 @@ namespace X.Js.App
         /// <param name="content"></param>
         public bool Send(string to, int type, string content)
         {
-            //var mmid = "";
-            //if (type == 2)
-            //{
-            //    byte[] dt = null;
-            //    var fn = "";
-            //    if (content.StartsWith("http://"))
-            //    {
-            //        dt = Tools.GetHttpFile(content);
-            //        fn = content.Substring(content.LastIndexOf('/'));
-            //    }
-            //    else
-            //    {
-            //        dt = File.ReadAllBytes(content);
-            //        fn = content.Substring(content.LastIndexOf('\\'));
-            //    }
-            //    if (dt == null) return false;
-            //    mmid = uploadImg(dt, fn);
-            //}
-            //if (string.IsNullOrEmpty(mmid)) { outLog("send->图片上传失败"); return false; }
 
             //var i = 1;
             //foreach (var u in touser)
@@ -153,6 +138,29 @@ namespace X.Js.App
 
             var rt = false;
             if (type == 1) rt = sendText(to, content);
+            else if (type == 2)
+            {
+                var mmid = "";
+                if (type == 2)
+                {
+                    byte[] dt = null;
+                    var fn = "";
+                    if (content.StartsWith("http://"))
+                    {
+                        dt = Tools.GetHttpFile(content);
+                        fn = content.Substring(content.LastIndexOf('/'));
+                    }
+                    else
+                    {
+                        dt = File.ReadAllBytes(content);
+                        fn = content.Substring(content.LastIndexOf('\\'));
+                    }
+                    if (dt == null) return false;
+                    mmid = uploadImg(dt, fn);
+                }
+                if (string.IsNullOrEmpty(mmid)) { outLog("send->图片上传失败"); return false; }
+                else sendImg(to, mmid);
+            }
             return rt;
 
             //else if (type == 2) rt = sendImg(to, mmid);
@@ -555,7 +563,7 @@ namespace X.Js.App
                 if (rsp.err) return;
                 rsp.data = Tools.RemoveHtml(rsp.data + "");
                 contacts = Serialize.FromJson<List<Contact>>(rsp.data + "", "MemberList").Where(o => o.KeyWord != "gh_" && o.UserName[0] == '@').ToList();
-
+                if (contacts == null) return;
                 var nks = new Dictionary<string, int>();
 
                 foreach (var c in contacts.Where(o => string.IsNullOrEmpty(o.RemarkName) && o.UserName[1] != '@'))
@@ -622,11 +630,14 @@ namespace X.Js.App
             var reg = new Regex("{retcode:\"(\\d+)\",selector:\"(\\d+)\"}");
             var m = reg.Match(rsp.data + "");
 
-            var rt = int.Parse(m.Groups[1].Value);
-            var sel = int.Parse(m.Groups[2].Value);
+            var rt = 0;
+            var sel = 0;
+            int.TryParse(m.Groups[1].Value, out rt);
+            int.TryParse(m.Groups[2].Value, out sel);
 
             if (isquit || rt != 0) exit(1);
-            else if (sel == 2 || sel == 4 || sel == 6 || sel == 7) wxSync();
+            //else if (sel == 2 || sel == 4 || sel == 6 || sel == 7) wxSync();
+            else if (sel != 0) wxSync();
 
         }
 

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace X.Js.Properties {
+namespace X.Lpw.Properties {
     using System;
     
     

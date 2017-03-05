@@ -341,6 +341,7 @@ namespace X.Wx
                             //被添加
                             break;
                         case 2://群内新成员
+                            rep = r;
                             outLog("匹配到 群内新成员 自动回复，发送了" + (rep.type == 1 ? "文本" : "图片") + "内容：" + rep.content);
                             break;
                         case 3://默认回复

@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Threading;
 
-namespace X.Js
+namespace X.Lpw
 {
     public partial class Login : Base
     {

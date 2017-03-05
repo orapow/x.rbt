@@ -1,4 +1,4 @@
-﻿namespace X.Js
+﻿namespace X.Lpw
 {
     partial class Contacts
     {

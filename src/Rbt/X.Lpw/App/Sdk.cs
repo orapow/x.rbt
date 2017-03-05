@@ -6,7 +6,7 @@ using System.Net;
 using System.Text;
 using X.Core.Utility;
 
-namespace X.Js.App
+namespace X.Lpw.App
 {
     public class Sdk
     {

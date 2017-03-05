@@ -6,7 +6,7 @@ using System.Text;
 using System.Windows.Forms;
 using X.Core.Utility;
 
-namespace X.Js.App
+namespace X.Lpw.App
 {
     public class Rbt
     {

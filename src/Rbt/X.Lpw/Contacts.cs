@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using X.Js.App;
+using X.Lpw.App;
 
-namespace X.Js
+namespace X.Lpw
 {
     public partial class Contacts : Base
     {

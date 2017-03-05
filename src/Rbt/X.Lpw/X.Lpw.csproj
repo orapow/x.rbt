@@ -126,9 +126,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\Core\X.Core.csproj">
       <Project>{9364f44b-c253-4a46-a86b-f9248325543d}</Project>
       <Name>X.Core</Name>

@@ -1,4 +1,4 @@
-﻿namespace X.Js
+﻿namespace X.Lpw
 {
     partial class Setting
     {
@@ -386,7 +386,7 @@
             this.tb_id_fail.Name = "tb_id_fail";
             this.tb_id_fail.Size = new System.Drawing.Size(171, 42);
             this.tb_id_fail.TabIndex = 7;
-            this.tb_id_fail.Text = "@[发送人] 您的报备信息未能识别，请重新报备。[难过]";
+            this.tb_id_fail.Text = "@[发送人] 您的报备信息未能识别，请重新报备，错误信息：[错误信息]。[难过]";
             this.toolTip1.SetToolTip(this.tb_id_fail, "内容识别失败时回复给经纪人，为空时不回复");
             // 
             // bt_ok
