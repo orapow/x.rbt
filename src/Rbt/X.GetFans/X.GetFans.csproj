@@ -88,16 +88,9 @@
   <ItemGroup>
     <Compile Include="App\Http.cs" />
     <Compile Include="App\Rbt.cs" />
-    <Compile Include="App\Sdk.cs" />
     <Compile Include="App\Wc.cs" />
     <Compile Include="Base.cs">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Contacts.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Contacts.Designer.cs">
-      <DependentUpon>Contacts.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -134,9 +127,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Base.resx">
       <DependentUpon>Base.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Contacts.resx">
-      <DependentUpon>Contacts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

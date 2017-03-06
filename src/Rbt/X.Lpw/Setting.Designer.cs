@@ -176,7 +176,6 @@
             // 
             // tb_api
             // 
-            this.tb_api.Enabled = false;
             this.tb_api.Location = new System.Drawing.Point(6, 20);
             this.tb_api.Name = "tb_api";
             this.tb_api.Size = new System.Drawing.Size(239, 21);
@@ -443,7 +442,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Setting";
             this.Text = "Rules";
-            this.Load += new System.EventHandler(this.Rules_Load);
+            this.Load += new System.EventHandler(this.Setting_Load);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.bt_ok, 0);
             this.Controls.SetChildIndex(this.groupBox2, 0);

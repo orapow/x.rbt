@@ -13,7 +13,7 @@ namespace X.Lpw
             InitializeComponent();
         }
 
-        private void Rules_Load(object sender, EventArgs e)
+        private void Setting_Load(object sender, EventArgs e)
         {
             Text = "软件配置";
             Rbt.LoadConfig();
@@ -31,6 +31,7 @@ namespace X.Lpw
             cb_send_on_fail.Checked = Rbt.user.Reply.SendTpl_OnFail;
             tb_tpl.Text = Rbt.user.Reply.Msg_Tpl;
             cb_debug.Checked = Rbt.user.IsDebug;
+            tb_api.Text = Rbt.cfg.GateWay;
         }
 
         private void lb_rules_DrawItem(object sender, DrawItemEventArgs e)

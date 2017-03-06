@@ -74,19 +74,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>EYbmL+Wh+XEGK+uUaxUPyOFx5iE=</dsig:DigestValue>
+        <dsig:DigestValue>Zl1gBeS8z+nuQgfnm0KZ/Sct+mk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="x.getfans.exe" size="325632">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="x.getfans.exe" size="304128">
       <assemblyIdentity name="x.getfans" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>IKDDRnspJ8XHyO4iDvOhGB+AgiE=</dsig:DigestValue>
+        <dsig:DigestValue>1eBYzjB/Jc4TaDDXAzyg2SvOJ9A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
