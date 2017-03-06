@@ -1,0 +1,16 @@
+
+时间：2017-03-05 07:44:19,991 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：引发类型为“X.Web.XExcep”的异常。
+   在 X.App.Views.xview.InitView() 位置 D:\Pro\x.rbt\src\Web\User\X.App\Views\xview.cs:行号 38
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.rbt\src\Web\X.Web\Views\View.cs:行号 108 
+时间：3187 
+
+时间：2017-03-05 07:44:20,144 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.rbt\src\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0006"} 
+时间：3340 

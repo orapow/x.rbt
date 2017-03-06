@@ -12,7 +12,7 @@ using System.Threading;
 using System.Security.Authentication;
 using System.IO.Compression;
 
-namespace X.Js
+namespace X.Lpw
 {
     public class Http
     {

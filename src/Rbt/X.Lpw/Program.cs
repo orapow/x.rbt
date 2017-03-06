@@ -5,12 +5,12 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Linq;
 using X.Core.Utility;
-using X.Js.App;
+using X.Lpw.App;
 using X.Core.Plugin;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace X.Js
+namespace X.Lpw
 {
     class Program
     {
@@ -199,7 +199,7 @@ namespace X.Js
                             continue;
                         }
 
-                        var txt = @"" + m.build_name + "<br/>公司：" + m.company_name?.Replace("楼盘网", "").Replace("+", "") + "<br/>客户姓名：" + m.customer_name + "<br/>客户电话：" + m.customer_mobile + "<br/>经纪姓名：" + m.agent_name + "<br/>经纪电话：" + m.agent_mobile + "<br/>看房时间：" + m.look_date_str;
+                        var txt = @"" + m.build_name + "<br/>公司：" + m.company_name + "<br/>客户姓名：" + m.customer_name + "<br/>客户电话：" + m.customer_mobile + "<br/>经纪姓名：" + m.agent_name + "<br/>经纪电话：" + m.agent_mobile + "<br/>看房时间：" + m.look_date_str;
 
                         lock (msg_qu) msg_qu.Enqueue(new Msg()
                         {
@@ -338,7 +338,7 @@ namespace X.Js
                 var u = Rbt.user.Contacts.FirstOrDefault(o => o.UserName == m.FromUserName);
                 if (u == null && (msg.MsgType == 1 || msg.MsgType == 10000)) { outLog("收到无法识别的消息：" + m.Content); wx.LoadContact(null, false); return; }
 
-                var cot = Tools.RemoveHtml(m.Content);
+                var cot = m.Content;// Tools.RemoveHtml(m.Content);
                 Wc.Contact ur = null;
 
                 if (m.FromUserName[1] == '@' && cot[0] == '@')
@@ -371,12 +371,15 @@ namespace X.Js
                         if (rsp.RCode != "200")
                             lock (msg_qu)
                             {
-                                msg_qu.Enqueue(new Msg()
+                                if (!string.IsNullOrEmpty(Rbt.user.Reply.Identify_Fail))
                                 {
-                                    content = Rbt.user.Reply.Identify_Fail
-                                        .Replace("[发送人]", ur == null ? u.NickName : ur.NickName) + "错误信息：" + rsp.RMessage,
-                                    username = u.UserName
-                                });
+                                    msg_qu.Enqueue(new Msg()
+                                    {
+                                        content = Rbt.user.Reply.Identify_Fail
+                                            .Replace("[发送人]", ur == null ? u.NickName : ur.NickName).Replace("[错误信息]", rsp.RMessage),
+                                        username = u.UserName
+                                    });
+                                }
                                 if (Rbt.user.Reply.SendTpl_OnFail && !string.IsNullOrEmpty(Rbt.user.Reply.Msg_Tpl))
                                 {
                                     msg_qu.Enqueue(new Msg()
@@ -387,19 +390,24 @@ namespace X.Js
                                 }
                             }
                         else
-                            lock (msg_qu)
-                                msg_qu.Enqueue(new Msg()
-                                {
-                                    content = Rbt.user.Reply.Identify_Succ
-                                        .Replace("[城市]", Rbt.cfg.CityName)
-                                        .Replace("[楼盘]", rsp.Data.build_name)
-                                        .Replace("[发送人]", ur == null ? u.NickName : ur.NickName)
-                                        .Replace("[经纪人]", rsp.Data.agent_name)
-                                        .Replace("[经纪人电话]", rsp.Data.agent_mobile)
-                                        .Replace("[客户姓名]", rsp.Data.customer_name)
-                                        .Replace("[客户电话]", rsp.Data.customer_mobile),
-                                    username = u.UserName
-                                });
+                        {
+                            if (!string.IsNullOrEmpty(Rbt.user.Reply.Identify_Succ))
+                            {
+                                lock (msg_qu)
+                                    msg_qu.Enqueue(new Msg()
+                                    {
+                                        content = Rbt.user.Reply.Identify_Succ
+                                            .Replace("[城市]", Rbt.cfg.CityName)
+                                            .Replace("[楼盘]", rsp.Data.build_name)
+                                            .Replace("[发送人]", ur == null ? u.NickName : ur.NickName)
+                                            .Replace("[经纪人]", rsp.Data.agent_name)
+                                            .Replace("[经纪人电话]", rsp.Data.agent_mobile)
+                                            .Replace("[客户姓名]", rsp.Data.customer_name)
+                                            .Replace("[客户电话]", rsp.Data.customer_mobile),
+                                        username = u.UserName
+                                    });
+                            }
+                        }
                     }
                 }
 

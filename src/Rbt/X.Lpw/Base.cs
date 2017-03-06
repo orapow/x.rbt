@@ -6,7 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace X.Js
+namespace X.Lpw
 {
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public class Base : Form

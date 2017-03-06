@@ -2,10 +2,10 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Linq;
-using X.Js.App;
+using X.Lpw.App;
 using X.Core.Utility;
 
-namespace X.Js
+namespace X.Lpw
 {
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class Main : Base
@@ -26,6 +26,7 @@ namespace X.Js
             ni_tip.Icon = Icon;
 
             wb.Navigate("http://rbt.80xc.com/rbt/chat.html");
+            //wb.Navigate("http://localhost:17800/rbt/chat.html");
             wb.ObjectForScripting = this;
 
             headimg = hd;
@@ -59,10 +60,11 @@ namespace X.Js
                 }
                 else
                 {
-                    var tn = tv_contact.Nodes.Find(ct.UserName, false)[0];
-                    if (!string.IsNullOrEmpty(ct.NickName)) tn.Text = ct.NickName;
-                    tn.Tag = ct;
-                    ptn = tn.Nodes;
+                    var tn = tv_contact.Nodes.Find(ct.UserName, false);
+                    if (tn == null || tn.Length == 0) return;
+                    if (!string.IsNullOrEmpty(ct.NickName)) tn[0].Text = ct.NickName;
+                    tn[0].Tag = ct;
+                    ptn = tn[0].Nodes;
                 }
 
                 ptn.Clear();
@@ -185,38 +187,22 @@ namespace X.Js
             var ct = gp_msg.Tag as Wc.Contact;
             if (ct != null) wx.Send(ct.UserName, type, cot);
 
-            object m = null;
-            if (ct.UserName[1] == '@')
+            object m = new
             {
-                m = new
+                body = type == 1 ? cot : "<img src='file:///" + cot + "'/>",
+                u = new
                 {
-                    body = type == 1 ? cot : "<img src='file:///" + cot + "'/>",
-                    u = new
-                    {
-                        name = User.NickName,
-                        img = headimg,
-                        id = User.UserName
-                    },
-                    r = new
-                    {
-                        name = ct.NickName,
-                        id = ct.UserName
-                    }
-                };
-            }
-            else
-            {
-                m = new
+                    name = User.NickName,
+                    img = headimg,
+                    id = User.UserName
+                },
+                r = new
                 {
-                    body = type == 1 ? cot : "<img src='file:///" + cot + "'/>",
-                    u = new
-                    {
-                        name = User.NickName,
-                        img = headimg,
-                        id = User.UserName
-                    }
-                };
-            }
+                    name = ct.NickName,
+                    id = ct.UserName
+                }
+            };
+
             wb.Document.InvokeScript("sendmsg", new object[] { Serialize.ToJson(m) });
         }
 

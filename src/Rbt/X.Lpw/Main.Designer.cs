@@ -1,4 +1,4 @@
-﻿namespace X.Js
+﻿namespace X.Lpw
 {
     partial class Main
     {
@@ -166,7 +166,7 @@
             this.pb_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pb_close.ContextMenuStrip = this.cms_menu;
             this.pb_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pb_close.Image = global::X.Js.Properties.Resources.x;
+            this.pb_close.Image = global::X.Lpw.Properties.Resources.x;
             this.pb_close.Location = new System.Drawing.Point(528, 8);
             this.pb_close.Name = "pb_close";
             this.pb_close.Size = new System.Drawing.Size(30, 30);
@@ -257,7 +257,7 @@
             this.pb_msg_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pb_msg_close.ContextMenuStrip = this.cms_menu;
             this.pb_msg_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pb_msg_close.Image = global::X.Js.Properties.Resources.x;
+            this.pb_msg_close.Image = global::X.Lpw.Properties.Resources.x;
             this.pb_msg_close.Location = new System.Drawing.Point(533, -3);
             this.pb_msg_close.Name = "pb_msg_close";
             this.pb_msg_close.Size = new System.Drawing.Size(20, 20);
