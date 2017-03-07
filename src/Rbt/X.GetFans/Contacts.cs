@@ -22,7 +22,7 @@ namespace X.GetFans
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            foreach (var c in Rbt.user.Contacts) lb_list.Items.Add(c);
+            foreach (var c in Contacts) lb_list.Items.Add(c);
         }
 
         private void lb_list_DrawItem(object sender, DrawItemEventArgs e)

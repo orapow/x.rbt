@@ -33,7 +33,6 @@ namespace X.GetFans
             sp_p.SplitterDistance = 283;
             sp_p.Panel2Collapsed = true;
 
-            if (string.IsNullOrEmpty(Rbt.cfg.CityName)) tsm_config_Click(null, null);
         }
 
         public void SetMsg(object m)
@@ -46,6 +45,11 @@ namespace X.GetFans
                 }));
             }
             catch { }
+        }
+
+        public void ShowSetting()
+        {
+            tsm_config_Click(null, null);
         }
 
         public void SetContact(Wc.Contact ct)

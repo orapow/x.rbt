@@ -131,11 +131,6 @@ namespace X.GetFans.App
         /// <param name="content"></param>
         public bool Send(string to, int type, string content)
         {
-
-            //var i = 1;
-            //foreach (var u in touser)
-            //{
-
             var rt = false;
             if (type == 1) rt = sendText(to, content);
             else if (type == 2)
@@ -150,6 +145,11 @@ namespace X.GetFans.App
                         dt = Tools.GetHttpFile(content);
                         fn = content.Substring(content.LastIndexOf('/'));
                     }
+                    else if (content.Length > 1000)
+                    {
+                        dt = Convert.FromBase64String(content);
+                        fn = "t_" + Tools.GetRandRom(12, 3) + ".jpg";
+                    }
                     else
                     {
                         dt = File.ReadAllBytes(content);
@@ -162,15 +162,6 @@ namespace X.GetFans.App
                 else sendImg(to, mmid);
             }
             return rt;
-
-            //else if (type == 2) rt = sendImg(to, mmid);
-            //else if (type == 3) rt = sendText(to, content, 42);
-            //i++;
-            //if (!rt) Thread.Sleep(Tools.GetRandNext(5000, 30000));
-            //else if (i == 5) { Thread.Sleep(Tools.GetRandNext(3000, 8000)); i = 1; }
-            //else Thread.Sleep(Tools.GetRandNext(1500, 3000));
-            //}
-            //outLog("send->发送完成，共发给" + touser.Count() + "人");
         }
 
         /// <summary>

@@ -338,7 +338,7 @@ namespace X.Lpw
                 var u = Rbt.user.Contacts.FirstOrDefault(o => o.UserName == m.FromUserName);
                 if (u == null && (msg.MsgType == 1 || msg.MsgType == 10000)) { outLog("收到无法识别的消息：" + m.Content); wx.LoadContact(null, false); return; }
 
-                var cot = m.Content;// Tools.RemoveHtml(m.Content);
+                var cot = Tools.RemoveHtml(m.Content);
                 Wc.Contact ur = null;
 
                 if (m.FromUserName[1] == '@' && cot[0] == '@')

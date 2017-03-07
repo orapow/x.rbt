@@ -211,23 +211,31 @@ namespace X.Core.Utility
         {
             static string key = "MmPSJmom2RSvDfBUAZZsMP4IFeIaHyUb9uZiu5alFfRjrwTxJ06XIeWTKlG49Cxz";
 
-            public static string Encrypt(string data)
+            public static string Encrypt(string data, string k)
             {
                 if (string.IsNullOrEmpty(data)) return "";
-                return ByteToHex(EncryptEx(Encoding.UTF8.GetBytes(data)));
+                return ByteToHex(EncryptEx(Encoding.UTF8.GetBytes(data), k));
+            }
+            public static string Encrypt(string data)
+            {
+                return Encrypt(data, key);
+            }
+            public static string Decrypt(string data, string k)
+            {
+                if (string.IsNullOrEmpty(data)) return "";
+                return Encoding.UTF8.GetString(EncryptEx(HexToByte(data.ToUpper()), k));
             }
             public static string Decrypt(string data)
             {
-                if (string.IsNullOrEmpty(data)) return "";
-                return Encoding.UTF8.GetString(EncryptEx(HexToByte(data.ToUpper())));
+                return Decrypt(data, key);
             }
-            static byte[] EncryptEx(byte[] data)
+            static byte[] EncryptEx(byte[] data, string k)
             {
                 if (data == null) return null;
                 byte[] output = new byte[data.Length];
                 long i = 0;
                 long j = 0;
-                byte[] mBox = GetKey(Encoding.UTF8.GetBytes(key), 256);
+                byte[] mBox = GetKey(Encoding.UTF8.GetBytes(k), 256);
                 for (long offset = 0; offset < data.Length; offset++)
                 {
                     i = (i + 1) % mBox.Length;
