@@ -246,7 +246,7 @@ namespace X.GetFans
                     cot = cot.Replace(ct + ":", "");
                 }
 
-                if (u.MemberCount < Rbt.cfg.full_ct && (msg.MsgType == 10000 || ur == null) && (cot.Contains("加入了群聊") || cot.Contains("移出了群聊") || cot.Contains("修改群名为")))
+                if ((msg.MsgType == 10000 || ur == null) && (cot.Contains("加入了群聊") || cot.Contains("移出了群聊") || cot.Contains("修改群名为")))
                     wx.LoadContact(new List<object>(){
                         new {
                             EncryChatRoomId = u.EncryChatRoomId,
@@ -267,7 +267,7 @@ namespace X.GetFans
                     }
                 }
 
-                if (m.FromUserName[1] == '@' && u.NickName.StartsWith(Rbt.cfg.gpname) && msg.MsgType == 10000 && (cot.Contains("加入了群聊") || cot.Contains("加入群聊")))
+                if (u.MemberCount < Rbt.cfg.full_ct && m.FromUserName[1] == '@' && u.NickName.StartsWith(Rbt.cfg.gpname) && msg.MsgType == 10000 && (cot.Contains("加入了群聊") || cot.Contains("加入群聊")))
                 {
                     lock (cts)
                     {
