@@ -255,7 +255,7 @@ namespace X.Lpw
         /// <param name="isdone"></param>
         private static void Wx_ContactLoaded(Wc.Contact ct, bool isdone)
         {
-            if (main == null) return;
+            if (main == null || ct == null) return;
             main.SetContact(ct);
 
             if (string.IsNullOrEmpty(ct.UserName))

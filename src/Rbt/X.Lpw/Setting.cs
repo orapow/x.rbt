@@ -31,6 +31,7 @@ namespace X.Lpw
             cb_send_on_fail.Checked = Rbt.user.Reply.SendTpl_OnFail;
             tb_tpl.Text = Rbt.user.Reply.Msg_Tpl;
             cb_debug.Checked = Rbt.user.IsDebug;
+            tb_sms.Text = Rbt.user.Tels;
         }
 
         private void lb_rules_DrawItem(object sender, DrawItemEventArgs e)
@@ -79,6 +80,7 @@ namespace X.Lpw
             Rbt.user.Reply.Rbt_Online = tb_online.Text;
             Rbt.user.Reply.SendTpl_OnFail = cb_send_on_fail.Checked;
             Rbt.user.IsDebug = cb_debug.Checked;
+            Rbt.user.Tels = tb_sms.Text;
 
             Rbt.cfg.GateWay = tb_api.Text;
 

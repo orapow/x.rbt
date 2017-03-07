@@ -63,6 +63,7 @@ namespace X.Lpw.App
         public class User
         {
             public string Uin { get; set; }
+            public string Tels { get; set; }
             public ReplyCfg Reply { get; set; }
             public List<SendRule> Send { get; set; }
             public CollectRule Collect { get; set; }

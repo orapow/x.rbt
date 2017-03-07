@@ -64,11 +64,14 @@
             this.cb_debug = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.cb_c = new System.Windows.Forms.ComboBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.tb_sms = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // lb_title
@@ -110,7 +113,7 @@
             this.groupBox1.Controls.Add(this.bt_remove);
             this.groupBox1.Location = new System.Drawing.Point(639, 44);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(252, 362);
+            this.groupBox1.Size = new System.Drawing.Size(252, 304);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "转发规则";
@@ -124,7 +127,7 @@
             this.lb_rules.ItemHeight = 24;
             this.lb_rules.Location = new System.Drawing.Point(8, 74);
             this.lb_rules.Name = "lb_rules";
-            this.lb_rules.Size = new System.Drawing.Size(237, 280);
+            this.lb_rules.Size = new System.Drawing.Size(237, 220);
             this.lb_rules.TabIndex = 7;
             this.toolTip1.SetToolTip(this.lb_rules, "规则列表，双击可快速删除");
             this.lb_rules.Click += new System.EventHandler(this.lb_rules_Click);
@@ -429,6 +432,26 @@
             this.cb_c.Size = new System.Drawing.Size(120, 20);
             this.cb_c.TabIndex = 0;
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.tb_sms);
+            this.groupBox6.Location = new System.Drawing.Point(639, 354);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(253, 52);
+            this.groupBox6.TabIndex = 6;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "警报通知";
+            // 
+            // tb_sms
+            // 
+            this.tb_sms.Enabled = false;
+            this.tb_sms.Location = new System.Drawing.Point(6, 20);
+            this.tb_sms.Name = "tb_sms";
+            this.tb_sms.Size = new System.Drawing.Size(239, 21);
+            this.tb_sms.TabIndex = 7;
+            this.tb_sms.Text = "18073113871";
+            this.toolTip1.SetToolTip(this.tb_sms, "通知电话号码，多个用“;”隔开");
+            // 
             // Setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -438,6 +461,7 @@
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.bt_ok);
             this.Controls.Add(this.groupBox1);
@@ -447,6 +471,7 @@
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.bt_ok, 0);
             this.Controls.SetChildIndex(this.groupBox2, 0);
+            this.Controls.SetChildIndex(this.groupBox6, 0);
             this.Controls.SetChildIndex(this.groupBox5, 0);
             this.Controls.SetChildIndex(this.groupBox3, 0);
             this.Controls.SetChildIndex(this.groupBox4, 0);
@@ -461,6 +486,8 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -501,5 +528,7 @@
         private System.Windows.Forms.Button bt_select_contact;
         private System.Windows.Forms.TextBox tb_gname;
         private System.Windows.Forms.ListBox lb_looks;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TextBox tb_sms;
     }
 }
