@@ -1,0 +1,14 @@
+D:\Pro\x.rbt\src\Bot\X.Wx\obj\Debug\X.Wx.csprojResolveAssemblyReference.cache
+D:\Pro\x.rbt\src\Bot\X.Wx\bin\Debug\X.Wx.exe
+D:\Pro\x.rbt\src\Bot\X.Wx\bin\Debug\X.Wx.pdb
+D:\Pro\x.rbt\src\Bot\X.Wx\bin\Debug\X.Core.dll
+D:\Pro\x.rbt\src\Bot\X.Wx\bin\Debug\log4net.dll
+D:\Pro\x.rbt\src\Bot\X.Wx\bin\Debug\X.Json.dll
+D:\Pro\x.rbt\src\Bot\X.Wx\bin\Debug\Enyim.Caching.dll
+D:\Pro\x.rbt\src\Bot\X.Wx\bin\Debug\X.Core.pdb
+D:\Pro\x.rbt\src\Bot\X.Wx\obj\Debug\X.Wx.exe
+D:\Pro\x.rbt\src\Bot\X.Wx\obj\Debug\X.Wx.pdb
+D:\Pro\x.rbt\src\X.Svr\bin\Debug\x.wx.exe
+D:\Pro\x.rbt\src\X.Svr\bin\Debug\x.wx.pdb
+D:\Pro\x.rbt\src\Bot\X.Svr\bin\Debug\x.wx.exe
+D:\Pro\x.rbt\src\Bot\X.Svr\bin\Debug\x.wx.pdb

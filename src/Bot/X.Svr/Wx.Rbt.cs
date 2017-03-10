@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.Linq;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -48,48 +49,34 @@ namespace Rbt.Svr
             })).BeginInvoke(null, null);
 
             #region 登陆器
-            //((Action)(delegate ()
-            //{
-            //    var db = new RbtDBDataContext() { DeferredLoadingEnabled = true };
-            //    while (!stop)
-            //    {
-            //        if (newwx.Count == 0) { Thread.Sleep(500); continue; }
+            ((Action)(delegate ()
+            {
+                while (!stop)
+                {
+                    if (newwx.Count == 0) { Thread.Sleep(500); continue; }
 
-            //        wxlog wxl = null;// newwx.Dequeue();
-            //        lock (newwx) wxl = newwx.Dequeue();
-            //        if (wxl == null) continue;
+                    wxlog wxl = null;// newwx.Dequeue();
+                    lock (newwx) wxl = newwx.Dequeue();
+                    if (wxl == null) continue;
 
-            //        var user = db.x_user.FirstOrDefault(o => o.ukey == wxl.ukey);
-            //        if (user == null) throw new Exception("用户未登陆");
+                    var w = tcps.FirstOrDefault(o => o.code == "@" + wxl.lgid);
+                    if (w != null) w.Send(new msg() { act = "exit", from = "@svr" });
 
-            //        var w = tcps.FirstOrDefault(o => o.code == "@" + wxl.lgid);
-            //        if (w != null) w.Send(new msg() { act = "exit", from = "@svr" });
+                    new Thread(gid =>
+                    {
+                        var psi = new ProcessStartInfo(AppDomain.CurrentDomain.BaseDirectory + "x.wx.exe", wxl.lgid + " " + "127.0.0.1:" + tcp_port + " " + wxl.ukey);
+                        psi.CreateNoWindow = true;
+                        psi.UseShellExecute = false;
+                        var p = new Process();
+                        p.StartInfo = psi;
+                        p.Start();
+                        p.WaitForExit();
+                    }).Start(wxl.lgid);
+                }
 
-            //        new Thread(gid =>
-            //        {
-            //            var lg = db.x_logon.FirstOrDefault(g => g.logon_id == (long)gid);
-            //            if (lg == null) return;// throw new Exception("登陆器不存在");
-            //            if (lg.user_id != user.user_id) return; //throw new Exception("用户越权，登陆器不属于你");
+                db.Dispose();
 
-            //            var psi = new ProcessStartInfo(AppDomain.CurrentDomain.BaseDirectory + "x.wx.exe", wxl.lgid + " " + "127.0.0.1:" + tcp_port + " " + wxl.ukey);
-            //            psi.CreateNoWindow = true;
-            //            psi.UseShellExecute = false;
-            //            var p = new Process();
-            //            p.StartInfo = psi;
-            //            p.Start();
-            //            p.WaitForExit();
-
-            //            lg.status = 1;
-            //            lg.uuid = null;
-            //            lg.qrcode = null;
-            //            db.SubmitChanges();
-
-            //        }).Start(wxl.lgid);
-            //    }
-
-            //    db.Dispose();
-
-            //})).BeginInvoke(null, null);
+            })).BeginInvoke(null, null);
             #endregion
 
         }

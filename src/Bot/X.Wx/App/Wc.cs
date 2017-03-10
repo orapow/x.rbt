@@ -1,37 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using X.Core.Utility;
-using System.Web;
 using System.IO;
 
-namespace X.Lpw.App
+namespace X.Wx.App
 {
     public class Wc
     {
         //当前用户信息
         public Contact user { get; private set; }
 
-        private Dictionary<string, string> headimgs = new Dictionary<string, string>();
-
         /// <summary>
         /// 构造函数
         /// </summary>
         /// <param name="id"></param>
-        public Wc()
+        public Wc(string ck)
         {
             baseRequest = new BaseRequest();
-            wc = new Http();
+            op = new Http(ck, 30);
             wc.OutLog += Wc_OutLog;
-        }
-
-        private void Wc_OutLog(string log)
-        {
-            OutLog?.Invoke(log);
         }
 
         #region 公开方法
@@ -41,30 +31,9 @@ namespace X.Lpw.App
         public void Run()
         {
             isquit = false;
-
-            try
-            {
-                loadQrcode();
-                waitFor(1, 0);
-
-                wxLogin();
-                wxInit();
-                wxStatusNotify();
-
-                op = new Http(wc.Cookies, 5);
-                op.OutLog += Wc_OutLog;
-
-            }
-            catch (Exception ex)
-            {
-                outLog("wx.Run->" + ex.Message);
-                exit(1);
-            }
-
             new Thread(o =>
             {
                 LoadContact(null, false);
-
             }).Start();
 
             Thread.Sleep(3 * 1000);
@@ -76,11 +45,8 @@ namespace X.Lpw.App
                     SyncCheck();
                     Thread.Sleep(2 * 1000);
                 }
-
             }).Start();
-
         }
-
         /// <summary>
         /// 退出方法
         /// </summary>
@@ -93,39 +59,6 @@ namespace X.Lpw.App
                 exit(0);
             }
         }
-
-        /// <summary>
-        /// 获取用户头像
-        /// </summary>
-        /// <param name="username"></param>
-        /// <returns></returns>
-        public Dictionary<string, string> GetHeadImage(List<string> usernames)
-        {
-            var nt = new Http(wc.Cookies, 5);
-            var imgs = new Dictionary<string, string>();
-            try
-            {
-                foreach (var u in usernames)
-                {
-                    if (imgs.ContainsKey(u) || string.IsNullOrEmpty(u)) continue;
-                    if (headimgs.ContainsKey(u) && !string.IsNullOrEmpty(headimgs[u])) imgs.Add(u, headimgs[u]);
-                    else
-                    {
-                        imgs.Add(u, "1");
-                        var rp = nt.GetFile(gateway + "/cgi-bin/mmwebwx-bin/webwxget" + (u[1] == '@' ? "headimg" : "icon") + "?username=" + u);
-                        if (!rp.err && rp.data != null)
-                        {
-                            imgs[u] = Convert.ToBase64String(rp.data as byte[]);
-                            if (!string.IsNullOrEmpty(imgs[u])) headimgs.Add(u, imgs[u]);
-                        }
-                    }
-                    Thread.Sleep(100);
-                }
-            }
-            catch { outLog("获取头像出错"); }
-            return imgs;
-        }
-
         /// <summary>
         /// 发送消息
         /// </summary>
@@ -138,11 +71,6 @@ namespace X.Lpw.App
         /// <param name="content"></param>
         public bool Send(string to, int type, string content)
         {
-
-            //var i = 1;
-            //foreach (var u in touser)
-            //{
-
             var rt = false;
             if (type == 1) rt = sendText(to, content);
             else if (type == 2)
@@ -169,17 +97,7 @@ namespace X.Lpw.App
                 else sendImg(to, mmid);
             }
             return rt;
-
-            //else if (type == 2) rt = sendImg(to, mmid);
-            //else if (type == 3) rt = sendText(to, content, 42);
-            //i++;
-            //if (!rt) Thread.Sleep(Tools.GetRandNext(5000, 30000));
-            //else if (i == 5) { Thread.Sleep(Tools.GetRandNext(3000, 8000)); i = 1; }
-            //else Thread.Sleep(Tools.GetRandNext(1500, 3000));
-            //}
-            //outLog("send->发送完成，共发给" + touser.Count() + "人");
         }
-
         /// <summary>
         /// 通过好友验证
         /// </summary>
@@ -200,7 +118,6 @@ namespace X.Lpw.App
             var rsp = op.PostStr(url, Serialize.ToJson(o));
             outLog("VerifyUser->" + Serialize.ToJson(rsp));
         }
-
         /// <summary>
         /// 设置用户备注
         /// </summary>
@@ -220,7 +137,6 @@ namespace X.Lpw.App
             var rsp = op.PostStr(url, Serialize.ToJson(o));
             outLog("SetRemark->" + Serialize.ToJson(rsp));
         }
-
         /// <summary>
         /// 群内加好友
         /// </summary>
@@ -248,7 +164,6 @@ namespace X.Lpw.App
             outLog("ToFriend->" + Serialize.ToJson(rsp));
 
         }
-
         /// <summary>
         /// 删除群成员
         /// </summary>
@@ -268,7 +183,6 @@ namespace X.Lpw.App
             outLog("OutMember->" + Serialize.ToJson(rsp));
 
         }
-
         /// <summary>
         /// 添加群成员
         /// </summary>
@@ -288,7 +202,6 @@ namespace X.Lpw.App
             outLog("InMember->" + Serialize.ToJson(rsp));
 
         }
-
         /// <summary>
         /// 创建群聊
         /// </summary>
@@ -312,7 +225,6 @@ namespace X.Lpw.App
             outLog("NewGroup->" + Serialize.ToJson(rsp));
 
         }
-
         /// <summary>
         /// 取消聊天置顶
         /// </summary>
@@ -333,7 +245,6 @@ namespace X.Lpw.App
             outLog("ToTop->" + Serialize.ToJson(rsp));
 
         }
-
         /// <summary>
         /// 取消聊天置顶
         /// </summary>
@@ -354,27 +265,17 @@ namespace X.Lpw.App
             outLog("UnTop->" + Serialize.ToJson(rsp));
 
         }
-
         #endregion
 
         #region 公开事件
-        public delegate void LoadQrHandler(string qrcode);
-        public event LoadQrHandler LoadQr;
-
-        public delegate void ScanedHandler(string hdimg);
-        public event ScanedHandler Scaned;
-
-        public delegate void LogedHandler(Contact user);
-        public event LogedHandler Loged;
-
-        public delegate void LogonOutHandler();
-        public event LogonOutHandler LogonOut;
+        public delegate void LogoutHandler();
+        public event LogoutHandler Logout;
 
         public delegate void NewMsgHandler(Msg m);
         public event NewMsgHandler NewMsg;
 
-        public delegate void LogerHandler(string log);
-        public event LogerHandler OutLog;
+        public delegate void OutLogHandler(string log);
+        public event OutLogHandler OutLog;
 
         public delegate void ContactLoadedHandler(Contact c, bool isdone);
         public event ContactLoadedHandler ContactLoaded;
@@ -416,6 +317,10 @@ namespace X.Lpw.App
             return long.Parse(Tools.GetGreenTime("")); //(long)(DateTime.UtcNow - BaseTime).TotalMilliseconds;
         }
 
+        void Wc_OutLog(string log)
+        {
+            OutLog?.Invoke(log);
+        }
         /// <summary>
         /// 输出日志
         /// </summary>
@@ -423,137 +328,6 @@ namespace X.Lpw.App
         void outLog(string msg)
         {
             OutLog?.Invoke(msg);
-        }
-
-        /// <summary>
-        /// 加载二维码
-        /// </summary>
-        /// <returns></returns>
-        void loadQrcode()
-        {
-            var rsp = wc.GetStr("https://login.wx.qq.com/jslogin?appid=wx782c26e4c19acffb&fun=new&lang=zh_CN&_=" + getcurrentseconds());//&redirect_uri=https%3A%2F%2Fwx2.qq.com%2Fcgi-bin%2Fmmwebwx-bin%2Fwebwxnewloginpage
-            if (rsp.err) throw new Exception("uuid获取失败" + Serialize.ToJson(rsp));
-
-            var reg = new Regex("\"(\\S+?)\"");
-            var m = reg.Match(rsp.data + "");
-            if (rsp.err) throw new Exception("uuid获取失败->" + Serialize.ToJson(rsp));
-
-            uuid = m.Groups[1].Value;
-            outLog("uuid->" + uuid);
-
-            rsp = wc.GetFile(string.Format("https://login.wx.qq.com/qrcode/{0}?_={1}", uuid, getcurrentseconds()));
-
-            if (rsp.err) throw new Exception("qrcode获取失败->" + Serialize.ToJson(rsp));
-            var qrcode = Convert.ToBase64String(rsp.data as byte[]);
-
-            outLog("qrcode->" + qrcode);
-            LoadQr?.Invoke(qrcode);
-        }
-
-        /// <summary>
-        /// 等待中。。。
-        /// 1、扫描
-        /// 2、登陆
-        /// </summary>
-        /// <param name="t"></param>
-        /// <returns>
-        /// 0 超时
-        /// 1 已登陆
-        /// </returns>
-        void waitFor(int t, int c)
-        {
-
-            if (c >= 2 || isquit) throw new Exception("wait 已退出");
-
-            string url = string.Format("https://login.wx.qq.com/cgi-bin/mmwebwx-bin/login?loginicon=true&uuid={0}&tip=0&r={1}&_={2}", uuid, ~getcurrentseconds(), getcurrentseconds());
-            var rsp = wc.GetStr(url);
-
-            outLog("wait->" + t + "->" + c + "->" + Serialize.ToJson(rsp));
-
-            if (rsp.err) waitFor(t, c + 1);
-
-            var str = rsp.data + "";
-
-            if (str.Contains("code=201"))
-            {
-                var img = str.Split('\'')[1].TrimEnd('\'').Replace("data:img/jpg;base64,", "");
-                Scaned?.Invoke(img);
-                waitFor(2, 0);
-            }
-
-            if (str.Contains("code=200"))
-            {
-                var reg = new Regex("window.redirect_uri=\"(\\S+?)\"");
-                redirecturl = reg.Match(str).Groups[1].Value;
-                if (!String.IsNullOrEmpty(redirecturl)) gateway = "https://" + new Uri(redirecturl).Host;
-                return;
-            }
-
-            waitFor(t, c + 1);
-
-        }
-
-        /// <summary>
-        /// 获取用户登陆凭证
-        /// </summary>
-        void wxLogin()
-        {
-            var rsp = wc.GetStr(redirecturl + "&fun=new&version=v2");
-
-            outLog("login->" + Serialize.ToJson(rsp));
-
-            if (rsp.err) if (rsp.err) throw new Exception("登陆失败->" + Serialize.ToJson(rsp));
-
-            Regex reg = new Regex(@"<skey>(\S+?)</skey><wxsid>(\S+?)</wxsid><wxuin>(\d+)</wxuin><pass_ticket>(\S+?)</pass_ticket>");
-            passticket = String.Empty;
-            baseRequest = new BaseRequest();
-
-            var m = reg.Match(rsp.data + "");
-
-            baseRequest.Skey = m.Groups[1].Value;
-            baseRequest.Sid = m.Groups[2].Value;
-            passticket = HttpUtility.UrlDecode(m.Groups[4].Value, Encoding.UTF8);
-
-            baseRequest.Uin = Convert.ToInt64(m.Groups[3].Value);
-            outLog("loged->" + baseRequest.Uin);
-
-        }
-
-        /// <summary>
-        /// 登陆后初始化
-        /// </summary>
-        void wxInit()
-        {
-
-            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxinit?pass_ticket={1}&skey={2}&r={3}", gateway, passticket, baseRequest.Skey, getcurrentseconds());
-            var rsp = wc.PostStr(url, Serialize.ToJson(new { BaseRequest = baseRequest }));
-
-            outLog("init->" + Serialize.ToJson(rsp));
-
-            if (rsp.err) throw new Exception("初始化失败->" + Serialize.ToJson(rsp));
-
-            user = Serialize.FromJson<Contact>(rsp.data + "", "User");
-            _syncKey = Serialize.FromJson<SyncKey>(rsp.data + "", "SyncKey");
-
-            Loged?.Invoke(user);
-        }
-
-        /// <summary>
-        /// 更新状态提示
-        /// </summary>
-        void wxStatusNotify()
-        {
-            string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxstatusnotify?lang=zh_CN&pass_ticket={1}", gateway, passticket);
-            var o = new
-            {
-                BaseRequest = baseRequest,
-                Code = 3,
-                FromUserName = user.UserName,
-                ToUserName = user.UserName,
-                ClientMsgId = getcurrentseconds()
-            };
-            var rsp = wc.PostStr(url, Serialize.ToJson(o));
-            outLog("notify->" + Serialize.ToJson(rsp));
         }
 
         /// <summary>
@@ -603,7 +377,6 @@ namespace X.Lpw.App
                     if (i == pc) OutLog("群通讯录获取完成");
                     else outLog("群通讯录" + i + "/" + pc + "部份获取完成！");
                 }
-
             }
             else
             {
@@ -671,13 +444,12 @@ namespace X.Lpw.App
             if (msglist != null) foreach (var m in msglist) NewMsg?.Invoke(m);
         }
 
-        bool sendText(string ToUserName, string Content) { return sendText(ToUserName, Content, 1); }
         /// <summary>
         /// 发送消息
         /// </summary>
         /// <param name="ToUserName"></param>
         /// <param name="Content"></param>
-        bool sendText(string ToUserName, string Content, int type)
+        bool sendText(string ToUserName, string Content)
         {
             string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxsendmsg?pass_ticket={1}", gateway, passticket);
             Content = Content.Replace("<br/>", "\n");
@@ -797,11 +569,12 @@ namespace X.Lpw.App
             isquit = true;
             outLog("exit");
             logonOut();
-            if (c == 1) LogonOut?.Invoke();
+            if (c == 1) Logout?.Invoke();
         }
 
         #endregion
 
+        #region 公有类
         /// <summary>
         /// 消息
         /// </summary>
@@ -846,6 +619,8 @@ namespace X.Lpw.App
                 return (UserName[1] == '@' ? "(群)" : "") + NickName;
             }
         }
+        #endregion
+
         #region 私有类
         /// <summary>
         /// 请求基础参数

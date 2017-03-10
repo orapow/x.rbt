@@ -40,8 +40,11 @@ namespace X.Lpw.App
         public static void SaveUser()
         {
             if (user == null || string.IsNullOrEmpty(user.Uin)) return;
-            var text = Secret.Rc4.Encrypt(Serialize.ToJson(user));
-            File.WriteAllText(Application.StartupPath + "\\" + user.Uin + "_cfg.x", text);
+            lock (user)
+            {
+                var text = Secret.Rc4.Encrypt(Serialize.ToJson(user));
+                File.WriteAllText(Application.StartupPath + "\\" + user.Uin + "_cfg.x", text);
+            }
         }
 
         public static void SaveConfig()

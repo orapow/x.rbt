@@ -176,8 +176,8 @@ namespace X.Lpw
         {
             internal HttpResponse(string header, byte[] body)
             {
-                this.Header = header;
-                this.Body = body;
+                Header = header;
+                Body = body;
             }
             //暂未将回应HTTP协议头转换为HttpHeader类型
             public string Header { get; private set; }
@@ -247,30 +247,30 @@ namespace X.Lpw
             if (!tcp.Connected) return rsp;
 
             Stream ms = tcp.GetStream();
-
-            ms.WriteTimeout = 5 * 1000;
-            ms.ReadTimeout = timeOut * 1000;
-
-            if (url.StartsWith("https://"))
-            {
-                var ssl = new SslStream(tcp.GetStream(),
-                    false,
-                    new RemoteCertificateValidationCallback(ValidateServerCertificate),
-                    null);
-
-                ssl.AuthenticateAsClient(uri.Host, null, SslProtocols.Tls, false);
-
-                if (!ssl.IsAuthenticated) return rsp;
-                ms = ssl;
-            }
-
-            byte[] buff = getHeader(data == null ? "GET" : "POST", uri, content_type);  //生成协议包
-            ms.Write(buff, 0, buff.Length);
-            if (data != null) { ms.Write(data, 0, data.Length); ms.Write(Encoding.UTF8.GetBytes("\r\n"), 0, 2); }
-            ms.Flush();
-
             try
             {
+                ms.WriteTimeout = 5 * 1000;
+                ms.ReadTimeout = timeOut * 1000;
+
+                if (url.StartsWith("https://"))
+                {
+                    var ssl = new SslStream(tcp.GetStream(),
+                        false,
+                        new RemoteCertificateValidationCallback(ValidateServerCertificate),
+                        null);
+
+                    ssl.AuthenticateAsClient(uri.Host, null, SslProtocols.Tls, false);
+
+                    if (!ssl.IsAuthenticated) return rsp;
+                    ms = ssl;
+                }
+
+                byte[] buff = getHeader(data == null ? "GET" : "POST", uri, content_type);  //生成协议包
+                ms.Write(buff, 0, buff.Length);
+                if (data != null) { ms.Write(data, 0, data.Length); ms.Write(Encoding.UTF8.GetBytes("\r\n"), 0, 2); }
+                ms.Flush();
+
+
                 rsp = ReadResponse(ms);
                 OutLog?.Invoke("socket->" + url + "\r\n" + rsp.Header + Encoding.UTF8.GetString(rsp.Body));
             }

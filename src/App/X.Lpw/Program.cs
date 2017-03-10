@@ -18,10 +18,11 @@ namespace X.Lpw
         static string nickname;
         static string headimg;
         static string uin = "";
-        static Login lg = null;
-        static Main main = null;
         static bool stop = false;
         static bool ctdone = false;
+        static Login lg = null;
+        static Main main = null;
+
 
         static Queue<Msg> msg_qu = null;
 
