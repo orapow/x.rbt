@@ -97,10 +97,6 @@
       <Project>{AAB73D4E-97AC-45C8-8E33-FD4C975F330A}</Project>
       <Name>X.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Rbt\Svr\X.Svr.csproj">
-      <Project>{32aaf65e-cc2e-4b9f-91dd-b2ec33ec06a9}</Project>
-      <Name>X.Svr</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
