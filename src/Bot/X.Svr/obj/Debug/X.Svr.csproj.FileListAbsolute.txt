@@ -41,3 +41,7 @@ D:\Pro\x.rbt\src\Rbt\X.Svr\obj\Debug\Rbt.Svr.pdb
 D:\Pro\x.rbt\src\Bot\X.Svr\bin\Debug\Rbt.Svr.exe.config
 D:\Pro\x.rbt\src\Bot\X.Svr\obj\Debug\Rbt.Svr.exe
 D:\Pro\x.rbt\src\Bot\X.Svr\obj\Debug\Rbt.Svr.pdb
+D:\Pro\x.rbt\src\Bot\X.Svr\obj\Debug\X.Svr.csprojResolveAssemblyReference.cache
+D:\Pro\x.rbt\src\Bot\X.Svr\obj\Debug\Rbt.Svr.ProjectInstaller.resources
+D:\Pro\x.rbt\src\Bot\X.Svr\obj\Debug\Rbt.Svr.RbtServer.resources
+D:\Pro\x.rbt\src\Bot\X.Svr\obj\Debug\X.Svr.csproj.GenerateResource.Cache

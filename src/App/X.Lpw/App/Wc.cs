@@ -562,64 +562,71 @@ namespace X.Lpw.App
         public void LoadContact(List<object> gs, bool isdone)
         {
             var nt = new Http(wc.Cookies, 300);
-            if (gs == null || gs.Count() == 0)
+            try
             {
-                string url = String.Format("{0}/cgi-bin/mmwebwx-bin/webwxgetcontact?pass_ticket={1}&skey={2}&r={3}", gateway, passticket, baseRequest.Skey, getcurrentseconds());
-                var rsp = nt.GetStr(url);
-                if (rsp == null || rsp.data == null || rsp.err) { outLog("通讯录获取失败"); return; }
-                rsp.data = Tools.RemoveHtml(rsp.data + "");
-
-                contacts = Serialize.FromJson<List<Contact>>(rsp.data + "", "MemberList").Where(o => o.KeyWord != "gh_" && o.UserName[0] == '@').ToList();
-                if (contacts == null) return;
-
-                var nks = new Dictionary<string, int>();
-                foreach (var c in contacts.Where(o => string.IsNullOrEmpty(o.RemarkName) && o.UserName[1] != '@'))
+                if (gs == null || gs.Count() == 0)
                 {
-                    if (nks.ContainsKey(c.NickName)) { nks[c.NickName]++; c.RemarkName = c.NickName + nks[c.NickName].ToString("000"); SetRemark(c.UserName, c.RemarkName); }
-                    else nks.Add(c.NickName, 0);
-                }
+                    string url = string.Format("{0}/cgi-bin/mmwebwx-bin/webwxgetcontact?pass_ticket={1}&skey={2}&r={3}", gateway, passticket, baseRequest.Skey, getcurrentseconds());
+                    var rsp = nt.GetStr(url);
+                    if (rsp == null || rsp.data == null || rsp.err) { outLog("通讯录获取失败"); return; }
+                    rsp.data = Tools.RemoveHtml(rsp.data + "");
 
-                ContactLoaded?.Invoke(new Contact() { MemberList = contacts }, false);
-                outLog("主通讯录获取完成！");
+                    contacts = Serialize.FromJson<List<Contact>>(rsp.data + "", "MemberList").Where(o => o.KeyWord != "gh_" && o.UserName[0] == '@').ToList();
+                    if (contacts == null) return;
 
-                var qgps = contacts.Where(o => o.UserName[1] == '@');
-                var list = new List<Contact>();
-                var pc = Math.Ceiling(qgps.Count() / 50.0);
-
-                for (var i = 1; i <= pc; i++)
-                {
-                    var q = qgps.Skip((i - 1) * 50)
-                        .Take(50)
-                        .Select(o => new
-                        {
-                            EncryChatRoomId = o.EncryChatRoomId,
-                            UserName = o.UserName
-                        });
-
-                    if (q.Count() == 0) break;
-
-                    LoadContact(q.ToList<object>(), i == pc);
-
-                    if (i == pc) OutLog("群通讯录获取完成");
-                    else outLog("群通讯录" + i + "/" + pc + "部份获取完成！");
-                }
-
-            }
-            else
-            {
-                var rsp = nt.PostStr(gateway + "/cgi-bin/mmwebwx-bin/webwxbatchgetcontact?type=ex&r=" + getcurrentseconds(),//群组
-                    Serialize.ToJson(new
+                    var nks = new Dictionary<string, int>();
+                    foreach (var c in contacts.Where(o => string.IsNullOrEmpty(o.RemarkName) && o.UserName[1] != '@'))
                     {
-                        BaseRequest = baseRequest,
-                        Count = gs.Count(),
-                        List = gs
-                    }));
+                        if (nks.ContainsKey(c.NickName)) { nks[c.NickName]++; c.RemarkName = c.NickName + nks[c.NickName].ToString("000"); SetRemark(c.UserName, c.RemarkName); }
+                        else nks.Add(c.NickName, 0);
+                    }
 
-                if (rsp == null || rsp.data == null || rsp.err) { outLog("群组获取失败"); return; }
-                var gps = Serialize.FromJson<List<Contact>>(Tools.RemoveHtml(rsp.data + ""), "ContactList");
-                foreach (var c in gps) { ContactLoaded?.Invoke(c, isdone && c == gps[gps.Count() - 1]); Thread.Sleep(200); }
+                    ContactLoaded?.Invoke(new Contact() { MemberList = contacts }, false);
+                    outLog("主通讯录获取完成！");
+
+                    var qgps = contacts.Where(o => o.UserName[1] == '@');
+                    var list = new List<Contact>();
+                    var pc = Math.Ceiling(qgps.Count() / 50.0);
+
+                    for (var i = 1; i <= pc; i++)
+                    {
+                        var q = qgps.Skip((i - 1) * 50)
+                            .Take(50)
+                            .Select(o => new
+                            {
+                                EncryChatRoomId = o.EncryChatRoomId,
+                                UserName = o.UserName
+                            });
+
+                        if (q.Count() == 0) break;
+
+                        LoadContact(q.ToList<object>(), i == pc);
+
+                        if (i == pc) OutLog("群通讯录获取完成");
+                        else outLog("群通讯录" + i + "/" + pc + "部份获取完成！");
+                    }
+
+                }
+                else
+                {
+                    var rsp = nt.PostStr(gateway + "/cgi-bin/mmwebwx-bin/webwxbatchgetcontact?type=ex&r=" + getcurrentseconds(),//群组
+                        Serialize.ToJson(new
+                        {
+                            BaseRequest = baseRequest,
+                            Count = gs.Count(),
+                            List = gs
+                        }));
+
+                    if (rsp == null || rsp.data == null || rsp.err) { outLog("群组获取失败"); return; }
+                    var gps = Serialize.FromJson<List<Contact>>(Tools.RemoveHtml(rsp.data + ""), "ContactList");
+                    if (gps == null) return;
+                    foreach (var c in gps) { ContactLoaded?.Invoke(c, isdone && c == gps[gps.Count() - 1]); Thread.Sleep(200); }
+                }
             }
-
+            catch (Exception ex)
+            {
+                OutLog?.Invoke("通讯录获取失败，" + ex.Message + "\r\n" + ex.StackTrace);
+            }
         }
 
         /// <summary>
