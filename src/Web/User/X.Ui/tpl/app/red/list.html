@@ -41,10 +41,12 @@
     <div class="tpl" style="display:none;">
         <i class="icon-remove close" onclick="delmsg(this,{id})"></i>
         <span class="text">
+            名目：{title}<br/>
             类型：{tp}<br />
             金额：{amount}<br />
             个数：{geted}/{count}<br />
-            状态：{st}
+            状态：{st}<br />
+            日期：{dt}
         </span>
         <span class="text btns">
             <span class="btn" onclick="show_detail({id})">详情</span> <span class="btn" onclick="show_setad({id})">广告</span> <span class="btn" onclick="show_pub({id},{ad})">发布</span> <span class="btn" onclick="do_close({id})">关闭</span>

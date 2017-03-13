@@ -25,8 +25,10 @@ namespace X.App.Apis.red
                     id = o.red_id,
                     tp = o.mode == 1 ? "普通红包" : "手气红包",
                     o.amount,
+                    o.title,
                     o.count,
                     o.geted,
+                    dt = o.ctime.Value.ToString("yyyy-MM-dd HH:mm"),
                     ad = o.ad == null ? 0 : o.ad,
                     st = o.status == 1 ? "正常" : o.status == 2 ? "完成" : "停止"
                 }).ToList();

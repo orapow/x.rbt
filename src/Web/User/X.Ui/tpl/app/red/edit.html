@@ -11,6 +11,7 @@
 <body>
     <x:form api="red.save">
         <div class="tb">
+            <x:text title="红包名目" size="5" name="title" def="" chk="no" />
             <x:pick title="红包类型" src="loc:普通红包|手气红包" mode="2" def="1" name="type" />
             <x:row title="总金额"><x:text title="￥ " size="1" chk="t:nd|cp:1," name="amount" def="1" /></x:row>
             <x:text title="红包个数" size="1" chk="t:num|cp:1," name="count" def="1" />

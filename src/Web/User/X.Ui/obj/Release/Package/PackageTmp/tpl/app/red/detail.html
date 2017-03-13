@@ -29,6 +29,7 @@
         .btns { position: absolute; top: 5px; left: 5px; z-index: 99; }
         .btns i { display: block; margin-bottom: 5px; background: white; padding: 5px; font-size: 12px; cursor: pointer; }
         .detail { position: absolute; top: 10px; right: 10px; background: rgba(255, 255, 255, 0.82); border-radius: 5px; max-width: 460px; padding: 10px; text-align: left; line-height: 26px; font-size: 12px; }
+        li.cashed .item { background: #D2984B; color: white; }
     </style>
 </head>
 <body>
@@ -48,7 +49,7 @@
         开始时间：$st#if($et)，结束时间 $et，用时：$ut#end<br />
         领取情况：$gc个，<!--当前最大 $cmax，当前最小 $cmin，最多返现 ${rmax.uid}($rmax.sum.tostring("F2"))--><br />
         <!--裂变分析：深度 $dp，最多 ${pmax.uid}($pmax.ct)，最深 $dmax<br />-->
-        广告分析：广告点击 $adc，二维码点击 $qdc
+        广告分析：广告点击 $adc，二维码点击 $qdc<br />
         提现统计：共提现：$cashed人，提现金额：$cashsum元。
     </div>
     <script type="text/javascript">

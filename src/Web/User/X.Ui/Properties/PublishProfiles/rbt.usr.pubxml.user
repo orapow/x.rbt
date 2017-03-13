@@ -25,22 +25,22 @@
       <publishTime>10/13/2016 13:31:44</publishTime>
     </File>
     <File Include="bin/X.App.dll">
-      <publishTime>03/02/2017 08:50:53</publishTime>
+      <publishTime>03/13/2017 14:15:54</publishTime>
     </File>
     <File Include="bin/X.Core.dll">
-      <publishTime>03/01/2017 09:56:52</publishTime>
+      <publishTime>03/13/2017 14:09:26</publishTime>
     </File>
     <File Include="bin/X.Data.dll">
-      <publishTime>03/01/2017 09:56:53</publishTime>
+      <publishTime>03/13/2017 14:09:27</publishTime>
     </File>
     <File Include="bin/X.Json.dll">
       <publishTime>10/13/2016 13:31:44</publishTime>
     </File>
     <File Include="bin/X.Ui.dll">
-      <publishTime>03/02/2017 08:50:53</publishTime>
+      <publishTime>03/13/2017 14:15:54</publishTime>
     </File>
     <File Include="bin/X.Web.dll">
-      <publishTime>03/01/2017 12:30:06</publishTime>
+      <publishTime>03/13/2017 14:09:27</publishTime>
     </File>
     <File Include="dat/cfg.x">
       <publishTime>02/27/2017 09:48:31</publishTime>
@@ -253,13 +253,13 @@
       <publishTime>02/20/2017 21:18:02</publishTime>
     </File>
     <File Include="tpl/app/red/detail.html">
-      <publishTime>03/02/2017 08:46:24</publishTime>
+      <publishTime>03/02/2017 08:53:09</publishTime>
     </File>
     <File Include="tpl/app/red/edit.html">
-      <publishTime>02/17/2017 10:09:35</publishTime>
+      <publishTime>03/13/2017 14:07:23</publishTime>
     </File>
     <File Include="tpl/app/red/list.html">
-      <publishTime>02/23/2017 14:56:28</publishTime>
+      <publishTime>03/13/2017 14:15:58</publishTime>
     </File>
     <File Include="tpl/app/red/qrcode.html">
       <publishTime>02/15/2017 09:38:31</publishTime>
@@ -304,7 +304,7 @@
       <publishTime>03/01/2017 10:06:40</publishTime>
     </File>
     <File Include="tpl/rbt/chat.html">
-      <publishTime>02/27/2017 09:48:31</publishTime>
+      <publishTime>03/05/2017 12:00:17</publishTime>
     </File>
     <File Include="tpl/rbt/contact/list.html">
       <publishTime>02/18/2017 20:23:49</publishTime>

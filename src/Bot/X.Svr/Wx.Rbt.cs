@@ -73,9 +73,6 @@ namespace Rbt.Svr
                         p.WaitForExit();
                     }).Start(wxl.lgid);
                 }
-
-                db.Dispose();
-
             })).BeginInvoke(null, null);
             #endregion
 
