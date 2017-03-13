@@ -32,6 +32,7 @@ namespace X.Lpw
             //tb_tpl.Text = Rbt.user.Reply.Msg_Tpl;
             cb_debug.Checked = Rbt.user.IsDebug;
             tb_api.Text = Rbt.cfg.GateWay;
+            tb_succ.Text = Rbt.user.Reply.Succ;
             tb_warn.Text = Rbt.user.Reply.Warn_User;
             tb_fail.Text = Rbt.user.Reply.Fail;
         }

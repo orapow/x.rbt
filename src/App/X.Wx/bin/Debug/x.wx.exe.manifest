@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>EYbmL+Wh+XEGK+uUaxUPyOFx5iE=</dsig:DigestValue>
+        <dsig:DigestValue>USAEO1mX6Wj2pq+K2e2O4ceVieo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -91,14 +91,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="x.wx.exe" size="302592">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="x.wx.exe" size="303104">
       <assemblyIdentity name="x.wx" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Tw8mHY6+Zr4gO6R3NP6fagDSRG4=</dsig:DigestValue>
+        <dsig:DigestValue>PO2PoEdm0a8NKHGtNn1JF8uFnpU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
