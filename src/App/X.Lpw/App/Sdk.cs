@@ -130,16 +130,25 @@ namespace X.Lpw.App
 
     public class Msg
     {
+        /// <summary>
+        /// 城市id
+        /// </summary>
         public int city_id { get; set; }
+        /// <summary>
+        /// 楼盘名
+        /// </summary>
         public string build_name { get; set; }
-        public string company_name { get; set; }
-        public string customer_name { get; set; }
-        public string customer_mobile { get; set; }
-        public string agent_name { get; set; }
-        public string agent_mobile { get; set; }
-        public string look_date_str { get; set; }
-        public string look_date_ms { get; set; }
+        /// <summary>
+        /// 消息内容
+        /// </summary>
+        public string data { get; set; }
+        /// <summary>
+        /// 发送人
+        /// </summary>
         public string regist_user_id { get; set; }
+        /// <summary>
+        /// 报备id
+        /// </summary>
         public int regist_id { get; set; }
     }
 

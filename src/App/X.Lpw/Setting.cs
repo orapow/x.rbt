@@ -24,15 +24,15 @@ namespace X.Lpw
             foreach (var r in Rbt.user.Send) lb_rules.Items.Add(r);
             tb_keys.Text = Rbt.user.Collect.Keys;
             cb_c.SelectedText = Rbt.cfg.CityName;
-            tb_id_fail.Text = Rbt.user.Reply.Identify_Fail;
-            tb_id_succ.Text = Rbt.user.Reply.Identify_Succ;
-            tb_send_succ.Text = Rbt.user.Reply.Send_Succ;
-            tb_online.Text = Rbt.user.Reply.Rbt_Online;
-            cb_send_on_fail.Checked = Rbt.user.Reply.SendTpl_OnFail;
-            tb_tpl.Text = Rbt.user.Reply.Msg_Tpl;
+            //tb_id_fail.Text = Rbt.user.Reply.Identify_Fail;
+            //tb_id_succ.Text = Rbt.user.Reply.Identify_Succ;
+            //tb_send_succ.Text = Rbt.user.Reply.Send_Succ;
+            //tb_online.Text = Rbt.user.Reply.Rbt_Online;
+            //cb_send_on_fail.Checked = Rbt.user.Reply.SendTpl_OnFail;
+            //tb_tpl.Text = Rbt.user.Reply.Msg_Tpl;
             cb_debug.Checked = Rbt.user.IsDebug;
             tb_api.Text = Rbt.cfg.GateWay;
-            tb_sms.Text = Rbt.user.Tels;
+            tb_warn.Text = Rbt.user.Reply.Fail;
         }
 
         private void lb_rules_DrawItem(object sender, DrawItemEventArgs e)
@@ -74,14 +74,15 @@ namespace X.Lpw
             }
 
             Rbt.user.Collect.Keys = tb_keys.Text;
-            Rbt.user.Reply.Identify_Fail = tb_id_fail.Text;
-            Rbt.user.Reply.Identify_Succ = tb_id_succ.Text;
-            Rbt.user.Reply.Send_Succ = tb_send_succ.Text;
-            Rbt.user.Reply.Msg_Tpl = tb_tpl.Text;
-            Rbt.user.Reply.Rbt_Online = tb_online.Text;
-            Rbt.user.Reply.SendTpl_OnFail = cb_send_on_fail.Checked;
+            //Rbt.user.Reply.Identify_Fail = tb_id_fail.Text;
+            //Rbt.user.Reply.Identify_Succ = tb_id_succ.Text;
+            //Rbt.user.Reply.Send_Succ = tb_send_succ.Text;
+            //Rbt.user.Reply.Msg_Tpl = tb_tpl.Text;
+            //Rbt.user.Reply.Rbt_Online = tb_online.Text;
+            //Rbt.user.Reply.SendTpl_OnFail = cb_send_on_fail.Checked;
             Rbt.user.IsDebug = cb_debug.Checked;
-            Rbt.user.Tels = tb_sms.Text;
+            Rbt.user.Reply.Fail = tb_fail.Text;
+            Rbt.user.Reply.Succ = tb_succ.Text;
 
             Rbt.cfg.GateWay = tb_api.Text;
 
@@ -147,6 +148,15 @@ namespace X.Lpw
             e.DrawFocusRectangle();
             if (e.Index < 0) return;
             e.Graphics.DrawString(lb_looks.Items[e.Index].ToString(), e.Font, new SolidBrush(e.ForeColor), e.Bounds.Left + 5, e.Bounds.Top + 5);
+        }
+
+        private void tb_sms_Enter(object sender, EventArgs e)
+        {
+            var cot = new Contacts();
+            if (cot.ShowDialog() == DialogResult.OK)
+            {
+                tb_warn.Text = cot.SelectedContact.NickName;
+            }
         }
     }
 }
