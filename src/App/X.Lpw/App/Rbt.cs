@@ -66,7 +66,6 @@ namespace X.Lpw.App
         public class User
         {
             public string Uin { get; set; }
-            public string Tels { get; set; }
             public ReplyCfg Reply { get; set; }
             public List<SendRule> Send { get; set; }
             public CollectRule Collect { get; set; }
@@ -91,33 +90,14 @@ namespace X.Lpw.App
         public class ReplyCfg
         {
             /// <summary>
-            /// 识别失败
+            /// 提交成功
             /// </summary>
-            public string Identify_Fail { get; set; }
+            public string Succ { get; set; }
             /// <summary>
-            /// 识别成功
+            /// 提交失败
             /// </summary>
-            public string Identify_Succ { get; set; }
-            /// <summary>
-            /// 机器人上线
-            /// </summary>
-            public string Rbt_Online { get; set; }
-            /// <summary>
-            /// 报备成功
-            /// </summary>
-            public string Send_Succ { get; set; }
-            /// <summary>
-            /// 报备失败
-            /// </summary>
-            public string Send_Err { get; set; }
-            /// <summary>
-            /// 识别失败时发送模板
-            /// </summary>
-            public bool SendTpl_OnFail { get; set; }
-            /// <summary>
-            /// 消息模板
-            /// </summary>
-            public string Msg_Tpl { get; set; }
+            public string Fail { get; set; }
+            public string Warn_User { get; set; }
         }
 
         public class SendRule
