@@ -48,7 +48,7 @@
             this.lb_list.ItemHeight = 24;
             this.lb_list.Location = new System.Drawing.Point(12, 73);
             this.lb_list.Name = "lb_list";
-            this.lb_list.Size = new System.Drawing.Size(177, 284);
+            this.lb_list.Size = new System.Drawing.Size(249, 284);
             this.lb_list.TabIndex = 3;
             this.toolTip1.SetToolTip(this.lb_list, "双击选定当前项");
             this.lb_list.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.lb_list_DrawItem);
@@ -58,7 +58,7 @@
             // 
             this.lb_key.Location = new System.Drawing.Point(12, 46);
             this.lb_key.Name = "lb_key";
-            this.lb_key.Size = new System.Drawing.Size(177, 21);
+            this.lb_key.Size = new System.Drawing.Size(253, 21);
             this.lb_key.TabIndex = 4;
             this.toolTip1.SetToolTip(this.lb_key, "输入关键字进行检索");
             this.lb_key.KeyUp += new System.Windows.Forms.KeyEventHandler(this.lb_key_KeyUp);
@@ -67,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(201, 369);
+            this.ClientSize = new System.Drawing.Size(273, 369);
             this.Controls.Add(this.lb_key);
             this.Controls.Add(this.lb_list);
             this.Name = "Contacts";

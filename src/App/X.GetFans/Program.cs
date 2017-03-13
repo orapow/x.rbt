@@ -75,7 +75,7 @@ namespace X.GetFans
                     lock (msg_qu) m = msg_qu.Dequeue();
                     if (m == null) { Thread.Sleep(1500); continue; }
                     var r = wx.Send(m.username, m.tp, m.content);
-                    Thread.Sleep(Tools.GetRandNext(500, 2000));
+                    Thread.Sleep(Tools.GetRandNext(1500, 3000));
                 }
             }).Start();
         }
@@ -91,47 +91,45 @@ namespace X.GetFans
                 {
                     if (cts.Count() == 0) { Thread.Sleep(1500); continue; }
 
-                    lock (cts)
+                    Ct ct = null;
+                    lock (cts) ct = cts.FirstOrDefault(c => c.nicks > 0 && (c.nicks >= Rbt.cfg.newct || c.lst.AddSeconds(Rbt.cfg.tosec) <= DateTime.Now));
+                    if (ct == null) continue;
+
+                    var co = contacts.FirstOrDefault(c => c.UserName == ct.gname);
+                    if (co == null || co.MemberCount >= Rbt.cfg.full_ct) continue;
+
+                    lock (msg_qu)
                     {
-                        var ct = cts.FirstOrDefault(c => c.nicks > 0 && (c.nicks >= Rbt.cfg.newct || c.lst.AddSeconds(Rbt.cfg.tosec) <= DateTime.Now));
-                        if (ct == null) continue;
-
-                        var co = contacts.FirstOrDefault(c => c.UserName == ct.gname);
-                        if (co == null || co.MemberCount >= Rbt.cfg.full_ct) continue;
-
-                        lock (msg_qu)
+                        if (!string.IsNullOrEmpty(Rbt.cfg.in_txt))
                         {
-                            if (!string.IsNullOrEmpty(Rbt.cfg.in_txt))
+                            msg_qu.Enqueue(new Msg()
                             {
-                                msg_qu.Enqueue(new Msg()
-                                {
-                                    content = Rbt.cfg.in_txt,
-                                    tp = 1,
-                                    username = ct.gname
-                                });
-                            }
-                            if (!string.IsNullOrEmpty(Rbt.cfg.sh_txt))
-                            {
-                                msg_qu.Enqueue(new Msg()
-                                {
-                                    content = Rbt.cfg.sh_txt,
-                                    tp = 1,
-                                    username = ct.gname
-                                });
-                            }
-                            if (!string.IsNullOrEmpty(Rbt.cfg.sh_pic))
-                            {
-                                msg_qu.Enqueue(new Msg()
-                                {
-                                    content = Rbt.cfg.sh_pic,
-                                    tp = 2,
-                                    username = ct.gname
-                                });
-                            }
+                                content = Rbt.cfg.in_txt,
+                                tp = 1,
+                                username = ct.gname
+                            });
                         }
-                        ct.lst = DateTime.Now;
-                        ct.nicks = 0;
+                        if (!string.IsNullOrEmpty(Rbt.cfg.sh_txt))
+                        {
+                            msg_qu.Enqueue(new Msg()
+                            {
+                                content = Rbt.cfg.sh_txt,
+                                tp = 1,
+                                username = ct.gname
+                            });
+                        }
+                        if (!string.IsNullOrEmpty(Rbt.cfg.sh_pic))
+                        {
+                            msg_qu.Enqueue(new Msg()
+                            {
+                                content = Rbt.cfg.sh_pic,
+                                tp = 2,
+                                username = ct.gname
+                            });
+                        }
                     }
+                    ct.lst = DateTime.Now;
+                    ct.nicks = 0;
                 }
             }).Start();
         }
@@ -246,7 +244,7 @@ namespace X.GetFans
                     cot = cot.Replace(ct + ":", "");
                 }
 
-                if ((msg.MsgType == 10000 || ur == null) && (cot.Contains("加入了群聊") || cot.Contains("移出了群聊") || cot.Contains("修改群名为")))
+                if ((msg.MsgType == 10000 || ur == null) && (cot.Contains("加入群聊") || cot.Contains("加入了群聊") || cot.Contains("移出了群聊") || cot.Contains("修改群名为")))
                     wx.LoadContact(new List<object>(){
                         new {
                             EncryChatRoomId = u.EncryChatRoomId,
@@ -260,7 +258,7 @@ namespace X.GetFans
                     {
                         msg_qu.Enqueue(new Msg()
                         {
-                            content = Rbt.cfg.audit_txt.Replace("[发送人]", ur == null ? "" : ur.NickName),
+                            content = Rbt.cfg.audit_txt.Replace("[发送人]", ur == null ? u.NickName : ur.NickName),
                             tp = 1,
                             username = m.FromUserName
                         });

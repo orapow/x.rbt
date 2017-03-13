@@ -48,8 +48,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.cb_send_on_fail = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tb_succ = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -59,6 +57,8 @@
             this.tb_tpl = new System.Windows.Forms.TextBox();
             this.tb_send_succ = new System.Windows.Forms.TextBox();
             this.tb_id_fail = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tb_succ = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.bt_ok = new System.Windows.Forms.Button();
             this.cb_debug = new System.Windows.Forms.CheckBox();
@@ -66,9 +66,9 @@
             this.cb_c = new System.Windows.Forms.ComboBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tb_warn = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tb_fail = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.tb_fail = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -289,25 +289,6 @@
             this.toolTip1.SetToolTip(this.cb_send_on_fail, "识别失败时发送此模板");
             this.cb_send_on_fail.UseVisualStyleBackColor = true;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 105);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 12);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "提交成功：";
-            // 
-            // tb_succ
-            // 
-            this.tb_succ.Location = new System.Drawing.Point(6, 120);
-            this.tb_succ.Multiline = true;
-            this.tb_succ.Name = "tb_succ";
-            this.tb_succ.Size = new System.Drawing.Size(241, 43);
-            this.tb_succ.TabIndex = 9;
-            this.tb_succ.Text = "@[发送人] 您的客户 [客户姓名] 已经识别，正在报备。[胜利]";
-            this.toolTip1.SetToolTip(this.tb_succ, "内容识别成功时回复给经纪人，为空时不回复");
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -392,6 +373,25 @@
             this.tb_id_fail.Text = "@[发送人] 您的报备信息未能识别，请重新报备，错误信息：[错误信息]。[难过]";
             this.toolTip1.SetToolTip(this.tb_id_fail, "内容识别失败时回复给经纪人，为空时不回复");
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 105);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 12);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "提交成功：";
+            // 
+            // tb_succ
+            // 
+            this.tb_succ.Location = new System.Drawing.Point(6, 120);
+            this.tb_succ.Multiline = true;
+            this.tb_succ.Name = "tb_succ";
+            this.tb_succ.Size = new System.Drawing.Size(241, 43);
+            this.tb_succ.TabIndex = 9;
+            this.tb_succ.Text = "@[发送人] 收";
+            this.toolTip1.SetToolTip(this.tb_succ, "内容识别成功时回复给经纪人，为空时不回复");
+            // 
             // bt_ok
             // 
             this.bt_ok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -451,20 +451,20 @@
             // 
             // tb_warn
             // 
-            this.tb_warn.Enabled = false;
             this.tb_warn.Location = new System.Drawing.Point(65, 20);
             this.tb_warn.Name = "tb_warn";
             this.tb_warn.Size = new System.Drawing.Size(182, 21);
             this.tb_warn.TabIndex = 7;
+            this.tb_warn.Enter += new System.EventHandler(this.tb_warn_Enter);
             // 
-            // label10
+            // label11
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 24);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 12);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "接收人：";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 44);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(65, 12);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "提交失败：";
             // 
             // tb_fail
             // 
@@ -475,14 +475,14 @@
             this.tb_fail.TabIndex = 9;
             this.tb_fail.Text = "报备提交不能功，内容：<br/>[内容]";
             // 
-            // label11
+            // label10
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 44);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 12);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "提交失败：";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 24);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(53, 12);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "接收人：";
             // 
             // Setting
             // 
