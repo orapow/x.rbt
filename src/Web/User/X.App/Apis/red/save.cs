@@ -13,6 +13,7 @@ namespace X.App.Apis.red
     {
         [ParmsAttr(name = "红包类型", min = 1)]
         public int type { get; set; }
+        public string title { get; set; }
         public string remark { get; set; }
         public decimal amount { get; set; }
         public int count { get; set; }
@@ -34,6 +35,7 @@ namespace X.App.Apis.red
             m.remark = remark;
             m.qrcount = 0;
             m.adcount = 0;
+            m.title = title;
 
             DB.x_red.InsertOnSubmit(m);
 

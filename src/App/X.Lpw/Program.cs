@@ -382,7 +382,7 @@ namespace X.Lpw
                     foreach (var k in Rbt.user.Collect.Keys.Split(' ')) if (cot.Contains(k)) { c = true; break; }
                     if (c)
                     {
-                        var rsp = Sdk.Submit(cot, wx.user.Uin + "_" + u.NickName.Replace("_", "-") + (ur == null ? "" : "_" + ur.NickName.Replace("_", "-")));
+                        var rsp = Sdk.Submit(cot, wx.user.Uin + "_" + Tools.RemoveHtml(u.NickName).Replace("_", "-") + (ur == null ? "" : "_" + Tools.RemoveHtml(ur.NickName).Replace("_", "-")));
                         if (rsp.RCode != "200")
                             lock (msg_qu)
                             {
@@ -391,7 +391,7 @@ namespace X.Lpw
                                     msg_qu.Enqueue(new Msg()
                                     {
                                         content = Rbt.user.Reply.Identify_Fail
-                                            .Replace("[发送人]", ur == null ? u.NickName : ur.NickName).Replace("[错误信息]", rsp.RMessage),
+                                            .Replace("[发送人]", ur == null ? Tools.RemoveHtml(u.NickName) : Tools.RemoveHtml(ur.NickName)).Replace("[错误信息]", rsp.RMessage),
                                         username = u.UserName
                                     });
                                 }
@@ -414,7 +414,7 @@ namespace X.Lpw
                                         content = Rbt.user.Reply.Identify_Succ
                                             .Replace("[城市]", Rbt.cfg.CityName)
                                             .Replace("[楼盘]", rsp.Data.build_name)
-                                            .Replace("[发送人]", ur == null ? u.NickName : ur.NickName)
+                                            .Replace("[发送人]", ur == null ? Tools.RemoveHtml(u.NickName) : Tools.RemoveHtml(ur.NickName))
                                             .Replace("[经纪人]", rsp.Data.agent_name)
                                             .Replace("[经纪人电话]", rsp.Data.agent_mobile)
                                             .Replace("[客户姓名]", rsp.Data.customer_name)
