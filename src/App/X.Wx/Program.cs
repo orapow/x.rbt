@@ -283,6 +283,7 @@ namespace X.Wx
                         break;
                     case 43:
                         cot = "视频";
+                        wx.Send(new List<string>() { msg.FromUserName }, 3, System.Web.HttpUtility.HtmlDecode(m.Content));
                         break;
                     case 3:
                         cot = "图片";

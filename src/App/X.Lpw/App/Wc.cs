@@ -651,6 +651,7 @@ namespace X.Lpw.App
 
             if (isquit || rt != 0) exit(1);
             //else if (sel == 2 || sel == 4 || sel == 6 || sel == 7) wxSync();
+            else if (sel == 7) outLog("7");
             else if (sel != 0) wxSync();
 
         }

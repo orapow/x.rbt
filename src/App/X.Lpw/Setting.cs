@@ -32,7 +32,9 @@ namespace X.Lpw
             //tb_tpl.Text = Rbt.user.Reply.Msg_Tpl;
             cb_debug.Checked = Rbt.user.IsDebug;
             tb_api.Text = Rbt.cfg.GateWay;
-            tb_warn.Text = Rbt.user.Reply.Fail;
+            tb_succ.Text = Rbt.user.Reply.Succ;
+            tb_warn.Text = Rbt.user.Reply.Warn_User;
+            tb_fail.Text = Rbt.user.Reply.Fail;
         }
 
         private void lb_rules_DrawItem(object sender, DrawItemEventArgs e)
@@ -82,6 +84,7 @@ namespace X.Lpw
             //Rbt.user.Reply.SendTpl_OnFail = cb_send_on_fail.Checked;
             Rbt.user.IsDebug = cb_debug.Checked;
             Rbt.user.Reply.Fail = tb_fail.Text;
+            Rbt.user.Reply.Warn_User = tb_warn.Text;
             Rbt.user.Reply.Succ = tb_succ.Text;
 
             Rbt.cfg.GateWay = tb_api.Text;
@@ -150,7 +153,7 @@ namespace X.Lpw
             e.Graphics.DrawString(lb_looks.Items[e.Index].ToString(), e.Font, new SolidBrush(e.ForeColor), e.Bounds.Left + 5, e.Bounds.Top + 5);
         }
 
-        private void tb_sms_Enter(object sender, EventArgs e)
+        private void tb_warn_Enter(object sender, EventArgs e)
         {
             var cot = new Contacts();
             if (cot.ShowDialog() == DialogResult.OK)

@@ -144,4 +144,7 @@
 [弱]   [握手] [胜利] [抱拳] [勾引] [拳头] [OK]
 [跳跳] [发抖] [怄火] [转圈]</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

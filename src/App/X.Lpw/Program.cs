@@ -80,6 +80,21 @@ namespace X.Lpw
             Debug.WriteLine(log);
         }
 
+        static void sendMsgToWarn(string msg)
+        {
+            if (string.IsNullOrEmpty(Rbt.user.Reply.Warn_User)) return;
+            var w = Rbt.user.Contacts.FirstOrDefault(o => o.NickName == Rbt.user.Reply.Warn_User);
+            if (w == null) return;
+            lock (msg_qu)
+            {
+                msg_qu.Enqueue(new Msg()
+                {
+                    content = msg,
+                    username = w.UserName
+                });
+            }
+        }
+
         /// <summary>
         /// 消息处理
         /// </summary>
@@ -91,11 +106,21 @@ namespace X.Lpw
                 {
                     if (msg_qu.Count() == 0) { Thread.Sleep(1500); continue; }
                     Msg m = null;
-                    lock (msg_qu) m = msg_qu.Dequeue();
-                    if (m == null) { Thread.Sleep(1500); continue; }
-                    var r = wx.Send(m.username, 1, m.content);
-                    if (r && m.status > 0) Sdk.SetStatus(m.msg_id, m.status);
-                    Thread.Sleep(Tools.GetRandNext(100, 1000));
+                    try
+                    {
+                        lock (msg_qu) m = msg_qu.Dequeue();
+                        if (m == null || m.content == null) { Thread.Sleep(1500); continue; }
+                        var txt = m.content.TrimStart('\r').TrimStart('\n').Replace("\r\n", "<br/>");
+                        var r = wx.Send(m.username, 1, txt);
+                        if (r && m.status > 0) Sdk.SetStatus(m.msg_id, m.status);
+                        else if (m.status == 3) sendMsgToWarn("开发商报备失败，请处理：" + txt);
+                        else if (m.status == 2) sendMsgToWarn("数据提交失败，请处理：" + txt);
+                        Thread.Sleep(Tools.GetRandNext(400, 1000));
+                    }
+                    catch (Exception ex)
+                    {
+                        outLog("消息队列处理出错：" + ex.Message + "\r\n" + ex.StackTrace);
+                    }
                 }
             }).Start();
         }
@@ -114,7 +139,7 @@ namespace X.Lpw
 
                     if (Rbt.user.Send.Count() == 0)
                     {
-                        outLog("未配置转发规则，请先进行设置");
+                        outLog("未配置转发规则，请先进行设置", true);
                         continue;
                     }
 
@@ -134,18 +159,16 @@ namespace X.Lpw
                         var ps = m.regist_user_id.Split('_');
 
                         var u = Rbt.user.Contacts.FirstOrDefault(c => c.NickName == ps[1]);
-                        if (u == null) { outLog("回复@" + st + "->找不到发送人：" + ps[1]); }
-
-                        var txt = Rbt.user.Reply.Succ;
+                        if (u == null) { outLog("回复@" + st + "->找不到发送人：" + ps[1], true); continue; }
 
                         lock (msg_qu) msg_qu.Enqueue(new Msg()
                         {
                             msg_id = m.regist_id,
-                            content = txt,
+                            content = Rbt.user.Reply.Succ.Replace("[发送人]", ps.Length == 3 ? ps[2] : ps[1]),
                             username = u.UserName,
                             status = 3
                         });
-                        
+
                         Thread.Sleep(5 * 1000);
                     }
                     outLog("回复@" + st + "->结束");
@@ -169,7 +192,7 @@ namespace X.Lpw
 
                     if (Rbt.user.Send.Count() == 0)
                     {
-                        outLog("未配置转发规则，请先进行设置");
+                        outLog("未配置转发规则，请先进行设置", true);
                         continue;
                     }
 
@@ -189,7 +212,7 @@ namespace X.Lpw
                         var r = Rbt.user.Send.FirstOrDefault(rc => rc.BuildName == m.build_name);
                         if (r == null)
                         {
-                            outLog("缺少楼盘：" + m.build_name + "的转发规则，请添加");
+                            outLog("缺少楼盘：" + m.build_name + "的转发规则，请添加", true);
                             continue;
                         }
 
@@ -198,7 +221,7 @@ namespace X.Lpw
                         var ct = Rbt.user.Contacts.FirstOrDefault(c => c.NickName == r.NickName);
                         if (ct == null)
                         {
-                            outLog("楼盘：" + m.build_name + "的转发规则失效，找不到转发目标群，请更改");
+                            outLog("楼盘：" + m.build_name + "的转发规则失效，找不到转发目标群，请更改", true);
                             continue;
                         }
 
@@ -236,15 +259,17 @@ namespace X.Lpw
 
             }).Start();
         }
+        private static void outLog(string msg) { outLog(msg, false); }
         /// <summary>
         /// 输出日志
         /// </summary>
         /// <param name="msg"></param>
-        private static void outLog(string msg)
+        private static void outLog(string msg, bool iswarn)
         {
             ((Action)(() =>
             {
                 if (main != null) main.OutLog(msg);
+                if (iswarn) sendMsgToWarn(msg);
             })).BeginInvoke(null, null);
         }
 
@@ -302,6 +327,7 @@ namespace X.Lpw
                 }
                 catch { }
             }
+            if (log == "7") sendMsgToWarn("帐号：" + wx.user.NickName + "(" + wx.user.Uin + ") 微信返回7，可能要重新登陆");
             Debug.WriteLine("log@" + DateTime.Now.ToString("HH:mm:ss.fff") + "->" + log);
         }
         static void Wx_LogonOut()
@@ -367,18 +393,20 @@ namespace X.Lpw
                                 }
                             }
                         }
-                        else
-                        {
-                            if (!string.IsNullOrEmpty(Rbt.user.Reply.Succ))
-                            {
-                                lock (msg_qu)
-                                    msg_qu.Enqueue(new Msg()
-                                    {
-                                        content = Rbt.user.Reply.Succ,
-                                        username = u.UserName
-                                    });
-                            }
-                        }
+                        //else
+                        //{
+                        //    if (!string.IsNullOrEmpty(Rbt.user.Reply.Succ))
+                        //    {
+                        //        lock (msg_qu)
+                        //        {
+                        //            msg_qu.Enqueue(new Msg()
+                        //            {
+                        //                content = Rbt.user.Reply.Succ.Replace("[发送人]", ur == null ? u.NickName : ur.NickName),
+                        //                username = u.UserName
+                        //            });
+                        //        }
+                        //    }
+                        //}
                     }
                 }
 

@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>QY8IsoDPJbZob8LdaQi1/dUJv1o=</dsig:DigestValue>
+        <dsig:DigestValue>uaZkcqjvZkvhWrEeJeHf66fJGZg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -91,14 +91,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="x.lpw.exe" size="325120">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="x.lpw.exe" size="325632">
       <assemblyIdentity name="x.lpw" version="1.0.2.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>PDiE2UYN4NkDv29TnMBQuIb1W94=</dsig:DigestValue>
+        <dsig:DigestValue>AVu2+V8lGetr9X/l4akYK2cXjfU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

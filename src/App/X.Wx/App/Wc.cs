@@ -139,7 +139,7 @@ namespace X.Wx.App
                 var rt = false;
                 if (type == 1) rt = sendText(u, content);
                 else if (type == 2) rt = sendImg(u, mmid);
-                else if (type == 3) rt = sendText(u, content, 42);
+                else if (type == 3) rt = sendText(u, content, 43);
                 i++;
                 if (!rt) Thread.Sleep(Tools.GetRandNext(5000, 30000));
                 else if (i == 5) { Thread.Sleep(Tools.GetRandNext(3000, 8000)); i = 1; }
