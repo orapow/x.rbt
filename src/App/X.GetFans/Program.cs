@@ -272,6 +272,7 @@ namespace X.GetFans
                         var ct = cts.FirstOrDefault(o => o.gname == m.FromUserName);
                         if (ct == null) { ct = new Ct() { gname = m.FromUserName, nicks = 1, lst = DateTime.Now }; cts.Add(ct); }
                         ct.nicks++;
+                        if (ct.nicks == 1) ct.lst = DateTime.Now;
                     }
                 }
 
