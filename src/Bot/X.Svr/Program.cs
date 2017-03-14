@@ -4,7 +4,7 @@ using System.Linq;
 using System.ServiceProcess;
 using System.Text;
 
-namespace Rbt.Svr
+namespace X.Svr
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Rbt.Svr
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new RbtServer()
+                new Rbt()
             };
             ServiceBase.Run(ServicesToRun);
         }

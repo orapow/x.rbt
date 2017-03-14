@@ -1,0 +1,166 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Net;
+using System.IO;
+using System.Collections;
+using X.Core.Utility;
+using System.Linq;
+
+namespace Rbt.Svr.App
+{
+    /// <summary>
+    /// 访问http服务器类
+    /// </summary>
+    public class Wc
+    {
+        /// <summary>
+        /// 访问服务器时的cookies
+        /// </summary>
+        CookieContainer cookies;
+        public Wc()
+        {
+            cookies = new CookieContainer();
+        }
+        public Resp GetStr(string url)
+        {
+            var rsp = GetData(url);
+            return new Resp() { msg = Encoding.UTF8.GetString(rsp.data as byte[]) };
+        }
+        /// <summary>
+        /// 向服务器发送get请求  返回服务器回复数据
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public Resp GetData(string url)
+        {
+            try
+            {
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+                request.Method = "get";
+
+                request.CookieContainer = cookies;  //启用cookie
+
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                Stream response_stream = response.GetResponseStream();
+
+                int count = (int)response.ContentLength;
+                int offset = 0;
+                byte[] buf = new byte[count];
+                while (count > 0)  //读取返回数据
+                {
+                    int n = response_stream.Read(buf, offset, count);
+                    if (n == 0) break;
+                    count -= n;
+                    offset += n;
+                }
+                return new Resp() { data = buf };
+            }
+            catch (Exception ex)
+            {
+                return new Resp() { err = true, msg = ex.Message };
+            }
+        }
+
+        public Resp PostData(string url, Dictionary<string, string> dict, FileInfo fi)
+        {
+            var tk = "------WebKitFormBoundary" + Tools.GetRandRom(16, 3);
+            var body = new StringBuilder();
+            foreach (var k in dict.Keys)
+            {
+                body.Append(tk + "\r\n");
+                body.Append("Content - Disposition: form - data; name = \"id\"\r\n\r\n");
+                body.Append(dict[k] + "\r\n");
+            }
+            body.Append(tk + "\r\n");
+            body.Append("Content - Disposition: form - data; name = \"filename\"; filename = \"" + fi.Name + "\"\r\n");
+            body.Append("Content - Type: image / png\r\n");
+            body.Append("\r\n\r\n");
+            body.Append(tk + "\r\n");
+
+            return PostStr(url, body.ToString());
+        }
+
+        /// <summary>
+        /// 向服务器发送post请求 返回服务器回复数据
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="body"></param>
+        /// <returns></returns>
+        public Resp PostStr(string url, string body)
+        {
+            try
+            {
+                byte[] request_body = Encoding.UTF8.GetBytes(body);
+
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+                request.Method = "post";
+                request.ContentLength = request_body.Length;
+
+                Stream request_stream = request.GetRequestStream();
+
+                request_stream.Write(request_body, 0, request_body.Length);
+
+                request.CookieContainer = cookies;  //启用cookie
+
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                Stream response_stream = response.GetResponseStream();
+
+                int count = (int)response.ContentLength;
+                int offset = 0;
+                byte[] buf = new byte[count];
+                while (count > 0)  //读取返回数据
+                {
+                    int n = response_stream.Read(buf, offset, count);
+                    if (n == 0) break;
+                    count -= n;
+                    offset += n;
+                }
+                return new Resp() { data = buf };
+            }
+            catch (Exception ex)
+            {
+                return new Resp() { err = true, msg = ex.Message };
+            }
+        }
+        /// <summary>
+        /// 获取指定cookie
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public string GetCookie(string name)
+        {
+            var list = GetAllCookies(cookies);
+            var ck = list.FirstOrDefault(o => o.Name == name);
+            if (ck == null) return "";
+            else return ck.Value;
+        }
+
+        public class Resp
+        {
+            public bool err { get; set; }
+            public string msg { get; set; }
+            public object data { get; set; }
+
+        }
+
+        List<Cookie> GetAllCookies(CookieContainer cc)
+        {
+            List<Cookie> lstCookies = new List<Cookie>();
+
+            Hashtable table = (Hashtable)cc.GetType().InvokeMember("m_domainTable",
+                System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.GetField |
+                System.Reflection.BindingFlags.Instance, null, cc, new object[] { });
+
+            foreach (object pathList in table.Values)
+            {
+                SortedList lstCookieCol = (SortedList)pathList.GetType().InvokeMember("m_list",
+                    System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.GetField
+                    | System.Reflection.BindingFlags.Instance, null, pathList, new object[] { });
+                foreach (CookieCollection colCookies in lstCookieCol.Values)
+                    foreach (Cookie c in colCookies) lstCookies.Add(c);
+            }
+            return lstCookies;
+        }
+    }
+}
