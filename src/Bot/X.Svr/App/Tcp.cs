@@ -72,32 +72,21 @@ namespace Rbt.Svr.App
             if (tc.Client == null || tc.Client.Connected == false) { exit(1); return; }
 
             var data = new List<byte>();
-            if (code[0] == '@')
+            data.Add(128 | 1);
+            var b2 = 0 << 7;
+            var cot = Encoding.UTF8.GetBytes(m.ToString());
+            if (cot.Length <= 125) data.Add((byte)(b2 + cot.Length));
+            else if (cot.Length < 65535)
             {
-                if (string.IsNullOrEmpty(m.from)) m.from = code;
-                var body = Encoding.UTF8.GetBytes(m.ToString());
-                data.AddRange(Encoding.UTF8.GetBytes("x.rbt"));
-                data.AddRange(BitConverter.GetBytes((ushort)body.Length));
-                data.AddRange(body);
+                data.Add((byte)(b2 + 126));
+                data.AddRange(BitConverter.GetBytes((ushort)cot.Length).Reverse());
             }
             else
             {
-                data.Add(128 | 1);
-                var b2 = 0 << 7;
-                var cot = Encoding.UTF8.GetBytes(m.ToString());
-                if (cot.Length <= 125) data.Add((byte)(b2 + cot.Length));
-                else if (cot.Length < 65535)
-                {
-                    data.Add((byte)(b2 + 126));
-                    data.AddRange(BitConverter.GetBytes((ushort)cot.Length).Reverse());
-                }
-                else
-                {
-                    data.Add((byte)(b2 + 127));
-                    data.AddRange(BitConverter.GetBytes((ulong)cot.Length).Reverse());
-                }
-                data.AddRange(cot);
+                data.Add((byte)(b2 + 127));
+                data.AddRange(BitConverter.GetBytes((ulong)cot.Length).Reverse());
             }
+            data.AddRange(cot);
 
             try
             {
@@ -153,53 +142,37 @@ namespace Rbt.Svr.App
             while (!stop)
             {
                 if (data.Count == 0) { Thread.Sleep(500); continue; }
-                if (!string.IsNullOrEmpty(code) && code[0] == '@')
+
+                var dh = data.Take(2).ToArray();
+                lock (data) { data.RemoveRange(0, 2); }
+
+                var opcode = dh[0] & 15;
+
+                if (opcode == 8) { exit(1); return; }//断开
+
+                var mask = (dh[1] >> 7) == 1;
+
+                ulong len = (uint)dh[1] & 127;
+                if (len > 125)
                 {
-                    if (data.Count < 7) { Thread.Sleep(500); continue; }
-
-                    var head = data.Take(5).ToArray();
-                    if (Encoding.UTF8.GetString(head) != "x.rbt") continue;
-
-                    var len = BitConverter.ToUInt16(data.Skip(5).Take(2).ToArray(), 0);
-                    str = Encoding.UTF8.GetString(data.Skip(7).Take(len).ToArray());
-                    lock (data) data.RemoveRange(0, len + 7);
-
+                    var max = len == 126 ? 2 : 8;
+                    var dl = data.Take(max).Reverse().ToArray();
+                    lock (data) { data.RemoveRange(0, max); }
+                    len = (max == 2 ? BitConverter.ToUInt16(dl, 0) : BitConverter.ToUInt64(dl, 0));
                 }
-                else
+
+                var mkey = new byte[4];
+                if (mask)
                 {
-
-                    var dh = data.Take(2).ToArray();
-                    lock (data) { data.RemoveRange(0, 2); }
-
-                    var opcode = dh[0] & 15;
-
-                    if (opcode == 8) { exit(1); return; }//断开
-
-                    var mask = (dh[1] >> 7) == 1;
-
-                    ulong len = (uint)dh[1] & 127;
-                    if (len > 125)
-                    {
-                        var max = len == 126 ? 2 : 8;
-                        var dl = data.Take(max).Reverse().ToArray();
-                        lock (data) { data.RemoveRange(0, max); }
-                        len = (max == 2 ? BitConverter.ToUInt16(dl, 0) : BitConverter.ToUInt64(dl, 0));
-                    }
-
-                    var mkey = new byte[4];
-                    if (mask)
-                    {
-                        mkey = data.Take(4).ToArray();
-                        lock (data) { data.RemoveRange(0, 4); }
-                    }
-                    var dt = data.Take((int)len).ToArray();
-                    lock (data) { data.RemoveRange(0, (int)len); }
-
-                    if (mask) for (var i = 0; i < dt.Length; i++) dt[i] = (byte)(dt[i] ^ mkey[i % 4]);
-
-                    str = Encoding.UTF8.GetString(dt);
-
+                    mkey = data.Take(4).ToArray();
+                    lock (data) { data.RemoveRange(0, 4); }
                 }
+                var dt = data.Take((int)len).ToArray();
+                lock (data) { data.RemoveRange(0, (int)len); }
+
+                if (mask) for (var i = 0; i < dt.Length; i++) dt[i] = (byte)(dt[i] ^ mkey[i % 4]);
+
+                str = Encoding.UTF8.GetString(dt);
 
                 try
                 {
@@ -217,7 +190,6 @@ namespace Rbt.Svr.App
         /// <param name="data"></param>
         void Hands(byte[] data)
         {
-
             var body = Encoding.UTF8.GetString(data);
             if (body.IndexOf("WebSocket") > 0)
             {
@@ -237,15 +209,8 @@ namespace Rbt.Svr.App
                 rsp.Append("Sec-WebSocket-Accept: " + rspkey + Environment.NewLine + Environment.NewLine);
 
                 tc.Client.Send(Encoding.UTF8.GetBytes(rsp.ToString()));
+                ready = true;
             }
-            else
-            {
-                var ps = body.Split(':');
-                code = "@" + ps[1];
-                if (Secret.MD5(ps[0] + ps[1] + "x.rbt") != ps[2]) { exit(1); return; }
-            }
-
-            ready = true;
 
         }
         /// <summary>

@@ -109,7 +109,8 @@ namespace X.Lpw
                     try
                     {
                         lock (msg_qu) m = msg_qu.Dequeue();
-                        if (m == null || m.content == null) { Thread.Sleep(1500); continue; }
+                        if (m == null) { Thread.Sleep(1500); continue; }
+                        if (m.content == null && m.status > 0) Sdk.SetStatus(m.msg_id, m.status);
                         var txt = m.content.TrimStart('\r').TrimStart('\n').Replace("\r\n", "<br/>");
                         var r = wx.Send(m.username, 1, txt);
                         if (r && m.status > 0) Sdk.SetStatus(m.msg_id, m.status);

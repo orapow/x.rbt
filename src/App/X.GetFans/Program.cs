@@ -73,7 +73,7 @@ namespace X.GetFans
                     if (msg_qu.Count() == 0) { Thread.Sleep(1500); continue; }
                     Msg m = null;
                     lock (msg_qu) m = msg_qu.Dequeue();
-                    if (m == null) { Thread.Sleep(1500); continue; }
+                    if (m == null) { Thread.Sleep(1000 * 10); continue; }
                     var r = wx.Send(m.username, m.tp, m.content);
                     Thread.Sleep(Tools.GetRandNext(1500, 3000));
                 }
@@ -89,7 +89,7 @@ namespace X.GetFans
             {
                 while (!stop)
                 {
-                    if (cts.Count() == 0) { Thread.Sleep(1500); continue; }
+                    if (cts.Count() == 0) { Thread.Sleep(1000 * 10); continue; }
 
                     Ct ct = null;
                     lock (cts) ct = cts.FirstOrDefault(c => c.nicks > 0 && (c.nicks >= Rbt.cfg.newct || c.lst.AddSeconds(Rbt.cfg.tosec) <= DateTime.Now));
@@ -232,7 +232,7 @@ namespace X.GetFans
                 var name = m.FromUserName;
 
                 var u = contacts.FirstOrDefault(o => o.UserName == m.FromUserName);
-                if (u == null) { outLog("收到无法识别的消息：" + m.Content); wx.LoadContact(null, false); return; }
+                if (u == null) { outLog("收到无法识别的消息：" + m.Content); return; }//wx.LoadContact(null, false); 
 
                 var cot = m.Content;// Tools.RemoveHtml(m.Content);
                 Wc.Contact ur = null;

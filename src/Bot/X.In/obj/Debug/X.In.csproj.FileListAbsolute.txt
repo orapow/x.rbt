@@ -1,0 +1,11 @@
+D:\Pro\x.rbt\src\Bot\X.In\bin\Debug\X.In.exe.config
+D:\Pro\x.rbt\src\Bot\X.In\bin\Debug\X.In.exe
+D:\Pro\x.rbt\src\Bot\X.In\bin\Debug\X.In.pdb
+D:\Pro\x.rbt\src\Bot\X.In\bin\Debug\X.Core.dll
+D:\Pro\x.rbt\src\Bot\X.In\bin\Debug\log4net.dll
+D:\Pro\x.rbt\src\Bot\X.In\bin\Debug\X.Json.dll
+D:\Pro\x.rbt\src\Bot\X.In\bin\Debug\Enyim.Caching.dll
+D:\Pro\x.rbt\src\Bot\X.In\bin\Debug\X.Core.pdb
+D:\Pro\x.rbt\src\Bot\X.In\obj\Debug\X.In.csprojResolveAssemblyReference.cache
+D:\Pro\x.rbt\src\Bot\X.In\obj\Debug\X.In.exe
+D:\Pro\x.rbt\src\Bot\X.In\obj\Debug\X.In.pdb
