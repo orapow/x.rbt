@@ -714,7 +714,7 @@ namespace X.Wx.App
             dict.Add("type", Tools.GetMimeType(fn.Substring(fn.LastIndexOf('.') + 1)));
             dict.Add("lastModifiedDate", DateTime.Now.ToString("r"));//DateTime.Now.ToString("r")
             dict.Add("size", data.Length + "");
-            dict.Add("mediatype", "pic");
+            dict.Add("mediatype", "video");
             dict.Add("uploadmediarequest", Serialize.ToJson(o));
             dict.Add("webwx_data_ticket", wc.GetCookie("webwx_data_ticket"));
             dict.Add("pass_ticket", passticket);

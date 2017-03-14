@@ -190,7 +190,7 @@ namespace X.Wx
         private void bt_send_pic_Click(object sender, EventArgs e)
         {
             var ofd = new OpenFileDialog();
-            ofd.Filter = "图片文件|*.jpg;*.png;*.gif";
+            ofd.Filter = "所有文件|*.*";
             if (ofd.ShowDialog() != DialogResult.OK) return;
             Send(ofd.FileName, 2);
         }

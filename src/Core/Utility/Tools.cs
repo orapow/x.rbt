@@ -119,6 +119,7 @@ namespace X.Core.Utility
                 case "GIF": mimeType = "image/gif"; break;
                 case "PNG": mimeType = "image/png"; break;
                 case "BMP": mimeType = "image/bmp"; break;
+                case "MP4": mimeType = "video/mp4"; break;
                 default: mimeType = "application/octet-stream"; break;
             }
             return mimeType;
