@@ -69,6 +69,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.tb_fail = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -436,11 +439,14 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.textBox2);
             this.groupBox6.Controls.Add(this.tb_warn);
             this.groupBox6.Controls.Add(this.label11);
             this.groupBox6.Controls.Add(this.tb_fail);
             this.groupBox6.Controls.Add(this.label6);
             this.groupBox6.Controls.Add(this.tb_succ);
+            this.groupBox6.Controls.Add(this.label13);
+            this.groupBox6.Controls.Add(this.label12);
             this.groupBox6.Controls.Add(this.label10);
             this.groupBox6.Location = new System.Drawing.Point(12, 160);
             this.groupBox6.Name = "groupBox6";
@@ -453,7 +459,7 @@
             // 
             this.tb_warn.Location = new System.Drawing.Point(65, 20);
             this.tb_warn.Name = "tb_warn";
-            this.tb_warn.Size = new System.Drawing.Size(182, 21);
+            this.tb_warn.Size = new System.Drawing.Size(70, 21);
             this.tb_warn.TabIndex = 7;
             this.tb_warn.Enter += new System.EventHandler(this.tb_warn_Enter);
             // 
@@ -483,6 +489,33 @@
             this.label10.Size = new System.Drawing.Size(53, 12);
             this.label10.TabIndex = 5;
             this.label10.Text = "接收人：";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(141, 24);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(41, 12);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "间隔：";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(188, 21);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(36, 21);
+            this.textBox2.TabIndex = 7;
+            this.textBox2.Text = "30";
+            this.textBox2.Enter += new System.EventHandler(this.tb_warn_Enter);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(230, 24);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(17, 12);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "秒";
             // 
             // Setting
             // 
@@ -565,5 +598,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox tb_fail;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label13;
     }
 }
