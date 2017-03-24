@@ -97,6 +97,7 @@ namespace X.Lpw.App
             /// 提交失败
             /// </summary>
             public string Fail { get; set; }
+            public string Fail1 { get; set; }
             public string Warn_User { get; set; }
         }
 

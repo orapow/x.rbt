@@ -674,8 +674,11 @@ namespace X.Lpw.App
             if (rsp == null || string.IsNullOrEmpty(rsp.data + "") || rsp.err) { outLog("消息获取失败->" + Serialize.ToJson(rsp)); }
 
             _syncKey = Serialize.FromJson<SyncKey>(rsp.data + "", "SyncKey");
-            var msglist = Serialize.FromJson<List<Msg>>(rsp.data + "", "AddMsgList");
 
+            var modcots = Serialize.FromJson<List<Contact>>(rsp.data + "", "ModContactList");
+            if (modcots != null) foreach (var m in modcots) ContactLoaded?.Invoke(m, true);
+
+            var msglist = Serialize.FromJson<List<Msg>>(rsp.data + "", "AddMsgList");
             if (msglist != null) foreach (var m in msglist) NewMsg?.Invoke(m);
         }
 

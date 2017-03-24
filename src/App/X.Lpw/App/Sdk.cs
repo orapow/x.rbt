@@ -25,9 +25,9 @@ namespace X.Lpw.App
             wc.Encoding = Encoding.UTF8;
             string json = "";
             var r = Activator.CreateInstance<T>();
+            var post = Serialize.ToJson(o);
             try
             {
-                var post = Serialize.ToJson(o);
                 var ps = o as Dictionary<string, string>;
                 var url = api.StartsWith("http://") ? api : gateWay + api;
                 if (ps == null) json = wc.UploadString(url, scr ? Secret.Rc4.Encrypt(post) : post);
@@ -38,12 +38,14 @@ namespace X.Lpw.App
                     json = Encoding.UTF8.GetString(wc.UploadValues(url, parms));
                 }
                 if (string.IsNullOrEmpty(json)) throw new Exception("服务器返回空");
-                OutLog?.Invoke("sdk@" + api + "->" + post);
-                Debug.WriteLine("doapi.back@" + api + "->" + json);
+                OutLog?.Invoke("sdk@" + api + "\r\n->" + post + "\r\n->" + json);
             }
             catch (Exception ex)
             {
-                Console.WriteLine("sdk@" + api + "->错误：" + ex.Message);
+                var msg = ex.Message + "\r\n" + ex.StackTrace;
+                if (ex is WebException) using (var sr = new System.IO.StreamReader(((WebException)ex).Response.GetResponseStream())) msg = sr.ReadToEnd();
+                OutLog?.Invoke("sdk@" + api + "\r\n->" + post + "\r\n->" + msg);
+                r.RMessage = ex.Message;
             }
 
             var rp = Serialize.FromJson<T>(json);
@@ -81,9 +83,9 @@ namespace X.Lpw.App
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public static Resp SetStatus(int id, int stat)
+        public static StatusResp SetStatus(int id, int stat)
         {
-            return doapi<Resp>("/robot/regist/upstatus", new { regist_id = id + "", stat = stat });
+            return doapi<StatusResp>("/robot/regist/upstatus", new { regist_id = id + "", stat = stat });
         }
         /// <summary>
         /// 获取城市列表
@@ -95,6 +97,10 @@ namespace X.Lpw.App
         }
     }
 
+    public class StatusResp : Resp
+    {
+        public string url { get; set; }
+    }
     public class SubmitResp : Resp
     {
         public Msg Data { get; set; }
@@ -142,6 +148,10 @@ namespace X.Lpw.App
         /// 消息内容
         /// </summary>
         public string data { get; set; }
+        /// <summary>
+        /// 二维码地址
+        /// </summary>
+        public string short_url { get; set; }
         /// <summary>
         /// 发送人
         /// </summary>

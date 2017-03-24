@@ -12,7 +12,7 @@ namespace X.Lpw
 {
     public partial class Contacts : Base
     {
-        public Wc.Contact SelectedContact { get; set; }
+        public List<string> SelectedContact { get; set; }
         public Contacts()
         {
             InitializeComponent();
@@ -22,7 +22,11 @@ namespace X.Lpw
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            foreach (var c in Rbt.user.Contacts) lb_list.Items.Add(c);
+            foreach (var c in Rbt.user.Contacts)
+            {
+                var it = c.NickName;
+                if (SelectedContact == null || !SelectedContact.Contains(c.NickName)) lb_list.Items.Add(c);
+            }
         }
 
         private void lb_list_DrawItem(object sender, DrawItemEventArgs e)
@@ -35,9 +39,7 @@ namespace X.Lpw
 
         private void lb_list_DoubleClick(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            SelectedContact = lb_list.SelectedItem as Wc.Contact;
-            Close();
+            selectDone();
         }
 
         private void lb_key_KeyUp(object sender, KeyEventArgs e)
@@ -46,5 +48,19 @@ namespace X.Lpw
             lb_list.Items.Clear();
             foreach (var c in cs) lb_list.Items.Add(c);
         }
+
+        private void bt_ok_Click(object sender, EventArgs e)
+        {
+            selectDone();
+        }
+
+        void selectDone()
+        {
+            this.DialogResult = DialogResult.OK;
+            SelectedContact = new List<string>();
+            foreach (var it in lb_list.SelectedItems) SelectedContact.Add((it as Wc.Contact).NickName);
+            Close();
+        }
+
     }
 }

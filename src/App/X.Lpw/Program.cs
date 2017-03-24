@@ -110,12 +110,15 @@ namespace X.Lpw
                     {
                         lock (msg_qu) m = msg_qu.Dequeue();
                         if (m == null) { Thread.Sleep(1500); continue; }
-                        if (m.content == null && m.status > 0) Sdk.SetStatus(m.msg_id, m.status);
-                        var txt = m.content.TrimStart('\r').TrimStart('\n').Replace("\r\n", "<br/>");
-                        var r = wx.Send(m.username, 1, txt);
+                        var r = true;
+                        if (m.content != null)
+                        {
+                            var txt = m.content.TrimStart('\r').TrimStart('\n').Replace("\r\n", "<br/>");
+                            r = wx.Send(m.username, 1, txt);
+                        }
                         if (r && m.status > 0) Sdk.SetStatus(m.msg_id, m.status);
-                        else if (m.status == 3) sendMsgToWarn("开发商报备失败，请处理：" + txt);
-                        else if (m.status == 2) sendMsgToWarn("数据提交失败，请处理：" + txt);
+                        else if (m.status == 3) sendMsgToWarn("开发商报备失败，请处理：" + m.content);
+                        else if (m.status == 2) sendMsgToWarn("数据提交失败，请处理：" + m.content);
                         Thread.Sleep(Tools.GetRandNext(400, 1000));
                     }
                     catch (Exception ex)
@@ -165,7 +168,7 @@ namespace X.Lpw
                         lock (msg_qu) msg_qu.Enqueue(new Msg()
                         {
                             msg_id = m.regist_id,
-                            content = Rbt.user.Reply.Succ.Replace("[发送人]", ps.Length == 3 ? ps[2] : ps[1]),
+                            content = Rbt.user.Reply.Succ.Replace("[二维码地址]", m.short_url).Replace("[发送人]", ps.Length == 3 ? ps[2] : ps[1]),
                             username = u.UserName,
                             status = 3
                         });
@@ -372,42 +375,39 @@ namespace X.Lpw
                 if (msg.MsgType != 1) return;//  main.OutLog(cot);
 
                 //消息采集
-                if (Rbt.user.Collect.Ids.Contains(u.NickName) && new Regex("(\r\n)").Matches(cot).Count >= 4)
+                if (Rbt.user.Collect.Ids.Contains(u.NickName))
                 {
-                    var c = false;
-                    foreach (var k in Rbt.user.Collect.Keys.Split(' ')) if (cot.Contains(k)) { c = true; break; }
-                    if (c)
+                    var row = new Regex("(\r\n)").Matches(cot).Count;
+                    if (row < 4) outLog("行数小于4，当前" + row + "行，内容：" + cot);
+                    else
                     {
-                        var rsp = Sdk.Submit(cot, wx.user.Uin + "_" + u.NickName.Replace("_", "-") + (ur == null ? "" : "_" + ur.NickName.Replace("_", "-")));
-                        if (rsp.RCode != "200")
+                        var c = Rbt.user.Collect.Keys.Split(' ').Where(o => cot.Contains(o)).Count() > 0;
+                        if (c)
                         {
-                            lock (msg_qu)
+                            var rsp = Sdk.Submit(cot, wx.user.Uin + "_" + u.NickName.Replace("_", "-") + (ur == null ? "" : "_" + ur.NickName.Replace("_", "-")));
+                            if (rsp.RCode != "200")
                             {
                                 if (!string.IsNullOrEmpty(Rbt.user.Reply.Fail))
                                 {
-                                    var w = Rbt.user.Contacts.FirstOrDefault(o => o.NickName == Rbt.user.Reply.Warn_User);
-                                    msg_qu.Enqueue(new Msg()
+                                    sendMsgToWarn(Rbt.user.Reply.Fail.Replace("[发送人]", ur == null ? u.NickName : ur.NickName).Replace("[错误信息]", rsp.RMessage).Replace("[内容]", cot));
+                                }
+                                if (!string.IsNullOrEmpty(Rbt.user.Reply.Fail1) && rsp.RCode == "201")
+                                {
+                                    lock (msg_qu)
                                     {
-                                        content = Rbt.user.Reply.Fail.Replace("[内容]", cot),
-                                        username = w.UserName
-                                    });
+                                        msg_qu.Enqueue(new Msg()
+                                        {
+                                            content = Rbt.user.Reply.Fail1.Replace("[发送人]", ur == null ? u.NickName : ur.NickName).Replace("[错误信息]", rsp.RMessage),
+                                            username = u.UserName
+                                        });
+                                    }
                                 }
                             }
                         }
-                        //else
-                        //{
-                        //    if (!string.IsNullOrEmpty(Rbt.user.Reply.Succ))
-                        //    {
-                        //        lock (msg_qu)
-                        //        {
-                        //            msg_qu.Enqueue(new Msg()
-                        //            {
-                        //                content = Rbt.user.Reply.Succ.Replace("[发送人]", ur == null ? u.NickName : ur.NickName),
-                        //                username = u.UserName
-                        //            });
-                        //        }
-                        //    }
-                        //}
+                        else
+                        {
+                            outLog("内容不包含关键字，当前关键字：" + Rbt.user.Collect.Keys + "，采集内容：" + cot);
+                        }
                     }
                 }
 
@@ -433,7 +433,6 @@ namespace X.Lpw
                 }
 
                 main.SetMsg(mg);
-
             }).Start(m);
         }
         static void Wx_Scaned(string hdimg)

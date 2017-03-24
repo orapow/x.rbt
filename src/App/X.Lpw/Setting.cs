@@ -18,23 +18,21 @@ namespace X.Lpw
             Text = "软件配置";
             Rbt.LoadConfig();
             var rsp = Sdk.LoadCity();
-            rsp.Data.Add(new City() { name = "广州", id = 440100 });
-            foreach (var c in rsp.Data) cb_c.Items.Add(c);
+            if (rsp != null && rsp.Data != null)
+            {
+                rsp.Data.Add(new City() { name = "广州", id = 440100 });
+                foreach (var c in rsp.Data) cb_c.Items.Add(c);
+            }
             foreach (var c in Rbt.user.Collect.Ids) lb_looks.Items.Add(c);
             foreach (var r in Rbt.user.Send) lb_rules.Items.Add(r);
             tb_keys.Text = Rbt.user.Collect.Keys;
             cb_c.SelectedText = Rbt.cfg.CityName;
-            //tb_id_fail.Text = Rbt.user.Reply.Identify_Fail;
-            //tb_id_succ.Text = Rbt.user.Reply.Identify_Succ;
-            //tb_send_succ.Text = Rbt.user.Reply.Send_Succ;
-            //tb_online.Text = Rbt.user.Reply.Rbt_Online;
-            //cb_send_on_fail.Checked = Rbt.user.Reply.SendTpl_OnFail;
-            //tb_tpl.Text = Rbt.user.Reply.Msg_Tpl;
             cb_debug.Checked = Rbt.user.IsDebug;
             tb_api.Text = Rbt.cfg.GateWay;
             tb_succ.Text = Rbt.user.Reply.Succ;
             tb_warn.Text = Rbt.user.Reply.Warn_User;
             tb_fail.Text = Rbt.user.Reply.Fail;
+            tb_fail1.Text = Rbt.user.Reply.Fail1;
         }
 
         private void lb_rules_DrawItem(object sender, DrawItemEventArgs e)
@@ -51,10 +49,7 @@ namespace X.Lpw
             if (r == null) { r = new Rbt.SendRule() { }; }
 
             r.BuildName = tb_bname.Text;
-
-            var c = tb_gname.Tag as Wc.Contact;
-            r.NickName = c.NickName;
-            r.UserName = c.UserName;
+            r.NickName = tb_gname.Text;
 
             var idx = lb_rules.Items.IndexOf(r);
 
@@ -76,14 +71,9 @@ namespace X.Lpw
             }
 
             Rbt.user.Collect.Keys = tb_keys.Text;
-            //Rbt.user.Reply.Identify_Fail = tb_id_fail.Text;
-            //Rbt.user.Reply.Identify_Succ = tb_id_succ.Text;
-            //Rbt.user.Reply.Send_Succ = tb_send_succ.Text;
-            //Rbt.user.Reply.Msg_Tpl = tb_tpl.Text;
-            //Rbt.user.Reply.Rbt_Online = tb_online.Text;
-            //Rbt.user.Reply.SendTpl_OnFail = cb_send_on_fail.Checked;
             Rbt.user.IsDebug = cb_debug.Checked;
             Rbt.user.Reply.Fail = tb_fail.Text;
+            Rbt.user.Reply.Fail1 = tb_fail1.Text;
             Rbt.user.Reply.Warn_User = tb_warn.Text;
             Rbt.user.Reply.Succ = tb_succ.Text;
 
@@ -113,24 +103,31 @@ namespace X.Lpw
             if (r == null) return;
             tb_bname.Text = r.BuildName;
             tb_gname.Text = r.NickName;
+            tb_gname.Tag = Rbt.user.Contacts.FirstOrDefault(o => o.NickName == r.NickName);
+            if (tb_gname.Tag == null) tb_gname.Text = "";
         }
 
         private void bt_select_contact_Click(object sender, EventArgs e)
         {
             var cot = new Contacts();
+            cot.SelectedContact = Rbt.user.Collect.Ids;
             if (cot.ShowDialog() == DialogResult.OK)
             {
-                lb_looks.Items.Add(cot.SelectedContact.NickName);
-                Rbt.user.Collect.Ids.Add(cot.SelectedContact.NickName);
+                foreach (var c in cot.SelectedContact)
+                {
+                    lb_looks.Items.Add(c);
+                    Rbt.user.Collect.Ids.Add(c);
+                }
             }
         }
 
         private void tb_gname_Enter(object sender, EventArgs e)
         {
             var cot = new Contacts();
+            cot.SelectedContact = Rbt.user.Send.Select(o => o.NickName).ToList();
             if (cot.ShowDialog() == DialogResult.OK)
             {
-                tb_gname.Text = cot.SelectedContact.NickName;
+                tb_gname.Text = cot.SelectedContact[0];
                 tb_gname.Tag = cot.SelectedContact;
             }
         }
@@ -158,7 +155,17 @@ namespace X.Lpw
             var cot = new Contacts();
             if (cot.ShowDialog() == DialogResult.OK)
             {
-                tb_warn.Text = cot.SelectedContact.NickName;
+                tb_warn.Text = cot.SelectedContact[0];
+            }
+        }
+
+        private void bt_loadcity_Click(object sender, EventArgs e)
+        {
+            var rsp = Sdk.LoadCity();
+            if (rsp != null && rsp.Data != null)
+            {
+                rsp.Data.Add(new City() { name = "广州", id = 440100 });
+                foreach (var c in rsp.Data) cb_c.Items.Add(c);
             }
         }
     }

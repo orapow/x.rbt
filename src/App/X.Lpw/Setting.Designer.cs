@@ -65,13 +65,16 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.cb_c = new System.Windows.Forms.ComboBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tb_warn = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.tb_fail = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tb_fail1 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.bt_loadcity = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -119,7 +122,7 @@
             this.groupBox1.Controls.Add(this.bt_remove);
             this.groupBox1.Location = new System.Drawing.Point(529, 44);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(252, 286);
+            this.groupBox1.Size = new System.Drawing.Size(252, 348);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "转发规则";
@@ -133,7 +136,7 @@
             this.lb_rules.ItemHeight = 24;
             this.lb_rules.Location = new System.Drawing.Point(8, 74);
             this.lb_rules.Name = "lb_rules";
-            this.lb_rules.Size = new System.Drawing.Size(237, 205);
+            this.lb_rules.Size = new System.Drawing.Size(237, 268);
             this.lb_rules.TabIndex = 7;
             this.toolTip1.SetToolTip(this.lb_rules, "规则列表，双击可快速删除");
             this.lb_rules.Click += new System.EventHandler(this.lb_rules_Click);
@@ -201,7 +204,7 @@
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Location = new System.Drawing.Point(271, 44);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(252, 286);
+            this.groupBox3.Size = new System.Drawing.Size(252, 348);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "采集设置";
@@ -215,7 +218,7 @@
             this.lb_looks.ItemHeight = 24;
             this.lb_looks.Location = new System.Drawing.Point(6, 107);
             this.lb_looks.Name = "lb_looks";
-            this.lb_looks.Size = new System.Drawing.Size(240, 172);
+            this.lb_looks.Size = new System.Drawing.Size(240, 235);
             this.lb_looks.TabIndex = 7;
             this.toolTip1.SetToolTip(this.lb_looks, "只监控以下选中的群或好友的消息。\\r\\n双击可删除");
             this.lb_looks.Click += new System.EventHandler(this.lb_rules_Click);
@@ -379,7 +382,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 105);
+            this.label6.Location = new System.Drawing.Point(6, 166);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 12);
             this.label6.TabIndex = 8;
@@ -387,7 +390,7 @@
             // 
             // tb_succ
             // 
-            this.tb_succ.Location = new System.Drawing.Point(6, 120);
+            this.tb_succ.Location = new System.Drawing.Point(6, 181);
             this.tb_succ.Multiline = true;
             this.tb_succ.Name = "tb_succ";
             this.tb_succ.Size = new System.Drawing.Size(241, 43);
@@ -422,6 +425,7 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.cb_c);
+            this.groupBox5.Controls.Add(this.bt_loadcity);
             this.groupBox5.Location = new System.Drawing.Point(12, 102);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(253, 52);
@@ -443,6 +447,8 @@
             this.groupBox6.Controls.Add(this.tb_warn);
             this.groupBox6.Controls.Add(this.label11);
             this.groupBox6.Controls.Add(this.tb_fail);
+            this.groupBox6.Controls.Add(this.label14);
+            this.groupBox6.Controls.Add(this.tb_fail1);
             this.groupBox6.Controls.Add(this.label6);
             this.groupBox6.Controls.Add(this.tb_succ);
             this.groupBox6.Controls.Add(this.label13);
@@ -450,10 +456,20 @@
             this.groupBox6.Controls.Add(this.label10);
             this.groupBox6.Location = new System.Drawing.Point(12, 160);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(253, 170);
+            this.groupBox6.Size = new System.Drawing.Size(253, 232);
             this.groupBox6.TabIndex = 10;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "警报通知";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(188, 21);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(36, 21);
+            this.textBox2.TabIndex = 7;
+            this.textBox2.Text = "30";
+            this.textBox2.Enter += new System.EventHandler(this.tb_warn_Enter);
             // 
             // tb_warn
             // 
@@ -468,9 +484,9 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(6, 44);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 12);
+            this.label11.Size = new System.Drawing.Size(113, 12);
             this.label11.TabIndex = 8;
-            this.label11.Text = "提交失败：";
+            this.label11.Text = "提交失败(管理员)：";
             // 
             // tb_fail
             // 
@@ -481,32 +497,23 @@
             this.tb_fail.TabIndex = 9;
             this.tb_fail.Text = "报备提交不能功，内容：<br/>[内容]";
             // 
-            // label10
+            // label14
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 24);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 12);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "接收人：";
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 105);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(125, 12);
+            this.label14.TabIndex = 8;
+            this.label14.Text = "提交失败（经纪人）：";
             // 
-            // label12
+            // tb_fail1
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(141, 24);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 12);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "间隔：";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(188, 21);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(36, 21);
-            this.textBox2.TabIndex = 7;
-            this.textBox2.Text = "30";
-            this.textBox2.Enter += new System.EventHandler(this.tb_warn_Enter);
+            this.tb_fail1.Location = new System.Drawing.Point(6, 120);
+            this.tb_fail1.Multiline = true;
+            this.tb_fail1.Name = "tb_fail1";
+            this.tb_fail1.Size = new System.Drawing.Size(241, 43);
+            this.tb_fail1.TabIndex = 9;
+            this.tb_fail1.Text = "@[发送人] 收";
             // 
             // label13
             // 
@@ -517,11 +524,40 @@
             this.label13.TabIndex = 5;
             this.label13.Text = "秒";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(141, 24);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(41, 12);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "间隔：";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 24);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(53, 12);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "接收人：";
+            // 
+            // bt_loadcity
+            // 
+            this.bt_loadcity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_loadcity.Location = new System.Drawing.Point(132, 18);
+            this.bt_loadcity.Name = "bt_loadcity";
+            this.bt_loadcity.Size = new System.Drawing.Size(57, 25);
+            this.bt_loadcity.TabIndex = 4;
+            this.bt_loadcity.Text = "加载";
+            this.bt_loadcity.UseVisualStyleBackColor = true;
+            this.bt_loadcity.Click += new System.EventHandler(this.bt_loadcity_Click);
+            // 
             // Setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 338);
+            this.ClientSize = new System.Drawing.Size(790, 404);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.cb_debug);
             this.Controls.Add(this.groupBox4);
@@ -601,5 +637,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox tb_fail1;
+        private System.Windows.Forms.Button bt_loadcity;
     }
 }
